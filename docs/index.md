@@ -24,11 +24,11 @@ Contact info to come.
 
 ## Reporting Issues
 
-Refer to [Contributing](how/contributing)
+Refer to [Contributing](How/contributing)
 
 ## Contributing
 
-Refer to [Contributing](how/contributing)
+Refer to [Contributing](How/contributing)
 
 ## License
 
