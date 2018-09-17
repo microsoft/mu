@@ -1,2 +1,4 @@
 site_name: Project Mu
+repo_url: https://github.com/microsoft/mu
+copyright: Copyright (c) Microsoft.  All rights reserved
 theme: readthedocs
