@@ -2,7 +2,7 @@
 
 ### Project Organization
 
-This wiki is hosted on the main repository for Project Mu, which is used as a central collection point for community interaction and documentation. The bulk of the code for the project is hosted in a number of other repositories, grouped/divided by function and dependencies. Several of these repositories are brought together by the build system to create a FW project, but we'll get into those details later. ;)
+This documentation is hosted in the main repository for Project Mu, which is used as a central collection point for community interaction and documentation. The build system and firmware code for the project is hosted in a number of other repositories, grouped/divided by function, partner, license, and dependencies. Several of these repositories are brought together by the build system to create a FW project, but we'll get into those details later. ;)
 
 For now, an overview of the repositories and what code you'll find there...
 
