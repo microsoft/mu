@@ -13,6 +13,9 @@ Not entirely. It is our goal to continue to treat TianoCore as a true upstream. 
 Project Mu is a product of the Microsoft Core UEFI team and is the basis for the system firmware within a number of Microsoft products. It will continue to be maintained to reflect the FW practices and features leveraged for the best experience with Windows and other Microsoft products.
  
 A secondary purpose is to engage with the community, both in TianoCore and the industry at large. We hope that Project Mu serves as a concrete example for discussing different approaches to managing the challenges faced by the UEFI ecosystem.
+
+#### Is this really following "Less is More"?
+Yes.  The idea is lowering the entanglement of code, lowering the coupling, and allowing the product to pick and choose the code it needs.  This means when building any given product, you don't need all the Project Mu code.
  
 ## Usage
  
