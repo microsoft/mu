@@ -24,6 +24,6 @@ To understand the layering you must first understand the terminology.  There are
 2. A implementation of something.  Generally this is  A dependency is code that relies on a definition or prototype 
 
 
-![Dependency](img/dependency.png)
+![Dependency](../img/dependency.png)
 
  

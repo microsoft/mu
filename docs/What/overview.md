@@ -29,5 +29,5 @@ This repository contains only modules that were originally sourced from TianoCor
 
 
 ## Layout / Block diagram
-![Block Diagram](img/dependency-layering.png)
+![Block Diagram](../img/dependency-layering.png)
 
