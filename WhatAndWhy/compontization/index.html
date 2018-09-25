@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>Overview - Project Mu</title>
+  <title>Packages / Dependencies - Project Mu</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
@@ -17,8 +17,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Overview";
-    var mkdocs_page_input_path = "What\\overview.md";
+    var mkdocs_page_name = "Packages / Dependencies";
+    var mkdocs_page_input_path = "WhatAndWhy\\compontization.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -65,12 +65,19 @@
           
             <li class="toctree-l1">
 		
-    <span class="caption-text">How</span>
+    <span class="caption-text">DeveloperDocs</span>
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="../../How/building/">Building</a>
+    <a class="" href="../../DeveloperDocs/developerdocs/">Developer Docs</a>
                 </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">How</span>
+    <ul class="subnav">
                 <li class="">
                     
     <a class="" href="../../How/contributing/">How to contribute</a>
@@ -85,10 +92,6 @@
                 </li>
                 <li class="">
                     
-    <a class="" href="../../How/testing/">Testing</a>
-                </li>
-                <li class="">
-                    
     <a class="" href="../../How/upstream_integration/">Upsteam Integration</a>
                 </li>
     </ul>
@@ -96,30 +99,36 @@
           
             <li class="toctree-l1">
 		
-    <span class="caption-text">What</span>
+    <span class="caption-text">UsageDocs</span>
     <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../UsageDocs/usagedocs/">Usage Docs</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">WhatAndWhy</span>
+    <ul class="subnav">
+                <li class=" current">
+                    
+    <a class="current" href="./">Packages / Dependencies</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#packages-dependencies">Packages / Dependencies</a></li>
+    
+
+    </ul>
+                </li>
                 <li class="">
                     
     <a class="" href="../layers/">Conceptual Layers</a>
                 </li>
-                <li class=" current">
+                <li class="">
                     
-    <a class="current" href="./">Overview</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l3"><a href="#overview">Overview</a></li>
-    
-        <ul>
-        
-            <li><a class="toctree-l4" href="#project-organization">Project Organization</a></li>
-        
-        </ul>
-    
-
-    <li class="toctree-l3"><a href="#layout-block-diagram">Layout / Block diagram</a></li>
-    
-
-    </ul>
+    <a class="" href="../overview/">Overview</a>
                 </li>
     </ul>
 	    </li>
@@ -135,17 +144,6 @@
                 <li class="">
                     
     <a class="" href="../../Where/project_resources/">Project Resources</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Why</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../../Why/compontization/">Packages / Dependencies</a>
                 </li>
     </ul>
 	    </li>
@@ -172,14 +170,14 @@
     
       
         
-          <li>What &raquo;</li>
+          <li>WhatAndWhy &raquo;</li>
         
       
     
-    <li>Overview</li>
+    <li>Packages / Dependencies</li>
     <li class="wy-breadcrumbs-aside">
       
-        <a href="https://github.com/microsoft/mu/edit/master/docs/What/overview.md"
+        <a href="https://github.com/microsoft/mu/edit/master/docs/WhatAndWhy/compontization.md"
           class="icon icon-github"> Edit on GitHub</a>
       
     </li>
@@ -189,28 +187,8 @@
           <div role="main">
             <div class="section">
               
-                <h2 id="overview">Overview</h2>
-<h3 id="project-organization">Project Organization</h3>
-<p>This documentation is hosted in the main repository for Project Mu, which is used as a central collection point for community interaction and documentation. The build system and firmware code for the project is hosted in a number of other repositories, grouped/divided by function, partner, license, and dependencies. Several of these repositories are brought together by the build system to create a FW project, but we'll get into those details later. ;)</p>
-<p>For now, an overview of the repositories and what code you'll find there...</p>
-<h4 id="mu-basecore-link">Mu Basecore <a href="https://github.com/Microsoft/mu_basecore">[Link]</a></h4>
-<p>This repository is considered foundational and fundamental to Project Mu. The guiding philosophy is that this code should be one or more of the following:</p>
-<ul>
-<li>Part of the build system</li>
-<li>Common to any silicon architecture</li>
-<li>Part of the "API layer" that contains protocol and library definitions including</li>
-<li>Industry Standards</li>
-<li>UEFI Specifications</li>
-<li>ACPI Specifications</li>
-<li>Part of the "PI" layer that contains driver dispatch logic, event/signaling logic, or memory management logic</li>
-<li>This can also include central technologies like variable services</li>
-</ul>
-<h4 id="mu-common-plus-link">Mu Common Plus <a href="https://github.com/Microsoft/mu_plus">[Link]</a></h4>
-<p>The packages found in this repository are contributed entirely by Project Mu. They should be common to all silicon architectures and only depend on Mu Basecore. These packages provide features and functionality that are entirely optional, but may be recommended for PC platform FW.</p>
-<h4 id="mu-tiano-plus-link">Mu Tiano Plus <a href="https://github.com/Microsoft/mu_tiano_plus">[Link]</a></h4>
-<p>This repository contains only modules that were originally sourced from TianoCore. They are not essential for any particular platform, but are likely useful to many platforms. The versions contained in this repo are modified and/or improved to work with the rest of Project Mu.</p>
-<h2 id="layout-block-diagram">Layout / Block diagram</h2>
-<p><img alt="Block Diagram" src="../../img/dependency-layering.png" /></p>
+                <h1 id="packages-dependencies">Packages / Dependencies</h1>
+<p>TBD</p>
               
             </div>
           </div>
@@ -218,10 +196,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../../Where/external_resources/" class="btn btn-neutral float-right" title="External Resources">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../layers/" class="btn btn-neutral float-right" title="Conceptual Layers">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../layers/" class="btn btn-neutral" title="Conceptual Layers"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../UsageDocs/usagedocs/" class="btn btn-neutral" title="Usage Docs"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -251,10 +229,10 @@
           <a href="https://github.com/microsoft/mu/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../layers/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../../UsageDocs/usagedocs/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../../Where/external_resources/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../layers/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

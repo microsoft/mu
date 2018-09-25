@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>Conceptual Layers - Project Mu</title>
+  <title>Overview - Project Mu</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
@@ -17,8 +17,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Conceptual Layers";
-    var mkdocs_page_input_path = "What\\layers.md";
+    var mkdocs_page_name = "Overview";
+    var mkdocs_page_input_path = "WhatAndWhy\\overview.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -65,12 +65,19 @@
           
             <li class="toctree-l1">
 		
-    <span class="caption-text">How</span>
+    <span class="caption-text">DeveloperDocs</span>
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="../../How/building/">Building</a>
+    <a class="" href="../../DeveloperDocs/developerdocs/">Developer Docs</a>
                 </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">How</span>
+    <ul class="subnav">
                 <li class="">
                     
     <a class="" href="../../How/contributing/">How to contribute</a>
@@ -85,10 +92,6 @@
                 </li>
                 <li class="">
                     
-    <a class="" href="../../How/testing/">Testing</a>
-                </li>
-                <li class="">
-                    
     <a class="" href="../../How/upstream_integration/">Upsteam Integration</a>
                 </li>
     </ul>
@@ -96,27 +99,45 @@
           
             <li class="toctree-l1">
 		
-    <span class="caption-text">What</span>
+    <span class="caption-text">UsageDocs</span>
     <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../UsageDocs/usagedocs/">Usage Docs</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">WhatAndWhy</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../compontization/">Packages / Dependencies</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../layers/">Conceptual Layers</a>
+                </li>
                 <li class=" current">
                     
-    <a class="current" href="./">Conceptual Layers</a>
+    <a class="current" href="./">Overview</a>
     <ul class="subnav">
             
-    <li class="toctree-l3"><a href="#conceptual-layers">Conceptual Layers</a></li>
+    <li class="toctree-l3"><a href="#overview">Overview</a></li>
     
         <ul>
         
-            <li><a class="toctree-l4" href="#what-is-a-dependency">What is a dependency</a></li>
+            <li><a class="toctree-l4" href="#project-organization">Project Organization</a></li>
         
         </ul>
     
 
+    <li class="toctree-l3"><a href="#layout-block-diagram">Layout / Block diagram</a></li>
+    
+
     </ul>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../overview/">Overview</a>
                 </li>
     </ul>
 	    </li>
@@ -132,17 +153,6 @@
                 <li class="">
                     
     <a class="" href="../../Where/project_resources/">Project Resources</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Why</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../../Why/compontization/">Packages / Dependencies</a>
                 </li>
     </ul>
 	    </li>
@@ -169,14 +179,14 @@
     
       
         
-          <li>What &raquo;</li>
+          <li>WhatAndWhy &raquo;</li>
         
       
     
-    <li>Conceptual Layers</li>
+    <li>Overview</li>
     <li class="wy-breadcrumbs-aside">
       
-        <a href="https://github.com/microsoft/mu/edit/master/docs/What/layers.md"
+        <a href="https://github.com/microsoft/mu/edit/master/docs/WhatAndWhy/overview.md"
           class="icon icon-github"> Edit on GitHub</a>
       
     </li>
@@ -186,28 +196,28 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="conceptual-layers">Conceptual Layers</h1>
-<p>Today there is lots of types and sources of UEFI code in a full featured product.  Some examples: 
-<em> TianoCore EDK2 UEFI standard based code
-</em> TianoCore additional value add code
-<em> Silicon Vendor code
-</em> Silicon Vendor supplied value add code
-<em> Independent BIOS Vendor code
-</em> ODM/OEM Value add code
-<em> OS firmware support code
-</em> Legacy BIOS compatibility code
-<em> Platform Code
-</em> Board specific code
-* etc</p>
-<p>Then there is open source versions and closed source version.  There are overrides and bug fixes implemented by everyone across the stack.  Then there is bleeding edge vs last years version (or maybe 2 years ago).  Its no wonder that everyone does it differently.  Compound the version and source problem with the sheer size.  A common UEFI code base is generally well above 1 million LOC and only goes up from there.  </p>
-<p>Clearly there are a lot of problem that can stem from this.  Project Mu is an attempt to bring some sanity to the issue by creating a rigid layering concept and aligning our partners.  Layering wont fix everything but its a start. </p>
-<h2 id="what-is-a-dependency">What is a dependency</h2>
-<p>To understand the layering you must first understand the terminology.  There are two types of code assets.  </p>
-<ol>
-<li>A definition of something.  Generally this is defined in a accessible header file.  This is the API provided by some asset.  This API can be "depended" on to provide some capability.  </li>
-<li>A implementation of something.  Generally this is  A dependency is code that relies on a definition or prototype </li>
-</ol>
-<p><img alt="Dependency" src="../../img/dependency.png" /></p>
+                <h2 id="overview">Overview</h2>
+<h3 id="project-organization">Project Organization</h3>
+<p>This documentation is hosted in the main repository for Project Mu, which is used as a central collection point for community interaction and documentation. The build system and firmware code for the project is hosted in a number of other repositories, grouped/divided by function, partner, license, and dependencies. Several of these repositories are brought together by the build system to create a FW project, but we'll get into those details later. ;)</p>
+<p>For now, an overview of the repositories and what code you'll find there...</p>
+<h4 id="mu-basecore-link">Mu Basecore <a href="https://github.com/Microsoft/mu_basecore">[Link]</a></h4>
+<p>This repository is considered foundational and fundamental to Project Mu. The guiding philosophy is that this code should be one or more of the following:</p>
+<ul>
+<li>Part of the build system</li>
+<li>Common to any silicon architecture</li>
+<li>Part of the "API layer" that contains protocol and library definitions including</li>
+<li>Industry Standards</li>
+<li>UEFI Specifications</li>
+<li>ACPI Specifications</li>
+<li>Part of the "PI" layer that contains driver dispatch logic, event/signaling logic, or memory management logic</li>
+<li>This can also include central technologies like variable services</li>
+</ul>
+<h4 id="mu-common-plus-link">Mu Common Plus <a href="https://github.com/Microsoft/mu_plus">[Link]</a></h4>
+<p>The packages found in this repository are contributed entirely by Project Mu. They should be common to all silicon architectures and only depend on Mu Basecore. These packages provide features and functionality that are entirely optional, but may be recommended for PC platform FW.</p>
+<h4 id="mu-tiano-plus-link">Mu Tiano Plus <a href="https://github.com/Microsoft/mu_tiano_plus">[Link]</a></h4>
+<p>This repository contains only modules that were originally sourced from TianoCore. They are not essential for any particular platform, but are likely useful to many platforms. The versions contained in this repo are modified and/or improved to work with the rest of Project Mu.</p>
+<h2 id="layout-block-diagram">Layout / Block diagram</h2>
+<p><img alt="Block Diagram" src="../../img/dependency-layering.png" /></p>
               
             </div>
           </div>
@@ -215,10 +225,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../overview/" class="btn btn-neutral float-right" title="Overview">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../Where/external_resources/" class="btn btn-neutral float-right" title="External Resources">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../../How/upstream_integration/" class="btn btn-neutral" title="Upsteam Integration"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../layers/" class="btn btn-neutral" title="Conceptual Layers"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -248,10 +258,10 @@
           <a href="https://github.com/microsoft/mu/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../../How/upstream_integration/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../layers/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../overview/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../../Where/external_resources/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
