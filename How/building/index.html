@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>Developer Docs - Project Mu</title>
+  <title>Building - Project Mu</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
@@ -17,8 +17,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Developer Docs";
-    var mkdocs_page_input_path = "DeveloperDocs\\developerdocs.md";
+    var mkdocs_page_name = "Building";
+    var mkdocs_page_input_path = "How\\building.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -65,76 +65,52 @@
           
             <li class="toctree-l1">
 		
-    <span class="caption-text">DeveloperDocs</span>
+    <span class="caption-text">How</span>
     <ul class="subnav">
                 <li class=" current">
                     
-    <a class="current" href="./">Developer Docs</a>
+    <a class="current" href="./">Building</a>
     <ul class="subnav">
             
-    <li class="toctree-l3"><a href="#developer-docs">Developer Docs</a></li>
-    
-        <ul>
-        
-            <li><a class="toctree-l4" href="#details-coming-soon">Details Coming Soon!</a></li>
-        
-        </ul>
+    <li class="toctree-l3"><a href="#building">Building</a></li>
     
 
     </ul>
                 </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">How</span>
-    <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="../../How/contributing/">How to contribute</a>
+    <a class="" href="../contributing/">How to contribute</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../How/downstream_integration/">Downstream Project Integration</a>
+    <a class="" href="../downstream_integration/">Downstream Project Integration</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../How/release_process/">Release Process</a>
+    <a class="" href="../release_process/">Release Process</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../How/upstream_integration/">Upsteam Integration</a>
+    <a class="" href="../testing/">Testing</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../upstream_integration/">Upsteam Integration</a>
                 </li>
     </ul>
 	    </li>
           
             <li class="toctree-l1">
 		
-    <span class="caption-text">UsageDocs</span>
+    <span class="caption-text">What</span>
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="../../UsageDocs/usagedocs/">Usage Docs</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">WhatAndWhy</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../../WhatAndWhy/compontization/">Packages / Dependencies</a>
+    <a class="" href="../../What/layers/">Conceptual Layers</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../WhatAndWhy/layers/">Conceptual Layers</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../WhatAndWhy/overview/">Overview</a>
+    <a class="" href="../../What/overview/">Overview</a>
                 </li>
     </ul>
 	    </li>
@@ -150,6 +126,17 @@
                 <li class="">
                     
     <a class="" href="../../Where/project_resources/">Project Resources</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Why</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../Why/compontization/">Packages / Dependencies</a>
                 </li>
     </ul>
 	    </li>
@@ -176,14 +163,14 @@
     
       
         
-          <li>DeveloperDocs &raquo;</li>
+          <li>How &raquo;</li>
         
       
     
-    <li>Developer Docs</li>
+    <li>Building</li>
     <li class="wy-breadcrumbs-aside">
       
-        <a href="https://github.com/microsoft/mu/edit/master/docs/DeveloperDocs/developerdocs.md"
+        <a href="https://github.com/microsoft/mu/edit/master/docs/How/building.md"
           class="icon icon-github"> Edit on GitHub</a>
       
     </li>
@@ -193,10 +180,9 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="developer-docs">Developer Docs</h1>
-<p>This section of the docs will contain API and low level details directly pulled from the source of code modules.</p>
-<p>This should be auto generated from markdown files scattered throughout the Project Mu code tree.  </p>
-<h2 id="details-coming-soon">Details Coming Soon!</h2>
+                <h1 id="building">Building</h1>
+<p>The central build component for Project Mu is found in Mu Basecore. It is in the UefiBuild Python module in the UefiBuild directory. The easiest way to invoke the builder for testing is the leverage the CoreBuild script located in the same directory (NOTE: This functionality is being restored to work with the new structure of Project Mu. Stay tuned for updates.)</p>
+<p>More info to come. We hope to soon release a reference project that will provide a more concrete example of how to integrate the Project Mu build system with any UEFI project.</p>
               
             </div>
           </div>
@@ -204,7 +190,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../../How/contributing/" class="btn btn-neutral float-right" title="How to contribute">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../contributing/" class="btn btn-neutral float-right" title="How to contribute">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
         <a href="../../license/" class="btn btn-neutral" title="Licensing for Project Mu"><span class="icon icon-circle-arrow-left"></span> Previous</a>
@@ -240,7 +226,7 @@
         <span><a href="../../license/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../../How/contributing/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../contributing/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

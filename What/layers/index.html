@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>Packages / Dependencies - Project Mu</title>
+  <title>Conceptual Layers - Project Mu</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
@@ -17,8 +17,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Packages / Dependencies";
-    var mkdocs_page_input_path = "WhatAndWhy\\compontization.md";
+    var mkdocs_page_name = "Conceptual Layers";
+    var mkdocs_page_input_path = "What\\layers.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -65,19 +65,12 @@
           
             <li class="toctree-l1">
 		
-    <span class="caption-text">DeveloperDocs</span>
+    <span class="caption-text">How</span>
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="../../DeveloperDocs/developerdocs/">Developer Docs</a>
+    <a class="" href="../../How/building/">Building</a>
                 </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">How</span>
-    <ul class="subnav">
                 <li class="">
                     
     <a class="" href="../../How/contributing/">How to contribute</a>
@@ -92,6 +85,10 @@
                 </li>
                 <li class="">
                     
+    <a class="" href="../../How/testing/">Testing</a>
+                </li>
+                <li class="">
+                    
     <a class="" href="../../How/upstream_integration/">Upsteam Integration</a>
                 </li>
     </ul>
@@ -99,32 +96,23 @@
           
             <li class="toctree-l1">
 		
-    <span class="caption-text">UsageDocs</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../../UsageDocs/usagedocs/">Usage Docs</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">WhatAndWhy</span>
+    <span class="caption-text">What</span>
     <ul class="subnav">
                 <li class=" current">
                     
-    <a class="current" href="./">Packages / Dependencies</a>
+    <a class="current" href="./">Conceptual Layers</a>
     <ul class="subnav">
             
-    <li class="toctree-l3"><a href="#packages-dependencies">Packages / Dependencies</a></li>
+    <li class="toctree-l3"><a href="#conceptual-layers">Conceptual Layers</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#what-is-a-dependency">What is a dependency</a></li>
+        
+        </ul>
     
 
     </ul>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../layers/">Conceptual Layers</a>
                 </li>
                 <li class="">
                     
@@ -144,6 +132,17 @@
                 <li class="">
                     
     <a class="" href="../../Where/project_resources/">Project Resources</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Why</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../Why/compontization/">Packages / Dependencies</a>
                 </li>
     </ul>
 	    </li>
@@ -170,14 +169,14 @@
     
       
         
-          <li>WhatAndWhy &raquo;</li>
+          <li>What &raquo;</li>
         
       
     
-    <li>Packages / Dependencies</li>
+    <li>Conceptual Layers</li>
     <li class="wy-breadcrumbs-aside">
       
-        <a href="https://github.com/microsoft/mu/edit/master/docs/WhatAndWhy/compontization.md"
+        <a href="https://github.com/microsoft/mu/edit/master/docs/What/layers.md"
           class="icon icon-github"> Edit on GitHub</a>
       
     </li>
@@ -187,8 +186,29 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="packages-dependencies">Packages / Dependencies</h1>
-<p>TBD</p>
+                <h1 id="conceptual-layers">Conceptual Layers</h1>
+<p>Today there is lots of types and sources of UEFI code in a full featured product.  </p>
+<p>Some examples: 
+<em> TianoCore EDK2 UEFI standard based code
+</em> TianoCore additional value add code
+<em> Silicon Vendor code
+</em> Silicon Vendor supplied value add code
+<em> Independent BIOS Vendor code
+</em> ODM/OEM Value add code
+<em> OS firmware support code
+</em> Legacy BIOS compatibility code
+<em> Platform Code
+</em> Board specific code
+* etc</p>
+<p>Then there is open source versions and closed source version.  There are overrides and bug fixes implemented by everyone across the stack.  Then there is bleeding edge vs last years version (or maybe 2 years ago).  Its no wonder that everyone does it differently.  Compound the version and source problem with the sheer size.  A common UEFI code base is generally well above 1 million LOC and only goes up from there.  </p>
+<p>Clearly there are a lot of problem that can stem from this.  Project Mu is an attempt to bring some sanity to the issue by creating a rigid layering concept and aligning our partners.  Layering wont fix everything but its a start. </p>
+<h2 id="what-is-a-dependency">What is a dependency</h2>
+<p>To understand the layering you must first understand the terminology.  There are two types of code assets.  </p>
+<ol>
+<li>A definition of something.  Generally this is defined in a accessible header file.  This is the API provided by some asset.  This API can be "depended" on to provide some capability.  </li>
+<li>A implementation of something.  Generally this is  A dependency is code that relies on a definition or prototype </li>
+</ol>
+<p><img alt="Dependency" src="../../img/dependency.png" /></p>
               
             </div>
           </div>
@@ -196,10 +216,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../layers/" class="btn btn-neutral float-right" title="Conceptual Layers">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../overview/" class="btn btn-neutral float-right" title="Overview">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../../UsageDocs/usagedocs/" class="btn btn-neutral" title="Usage Docs"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../How/upstream_integration/" class="btn btn-neutral" title="Upsteam Integration"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -229,10 +249,10 @@
           <a href="https://github.com/microsoft/mu/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../../UsageDocs/usagedocs/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../../How/upstream_integration/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../layers/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../overview/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
