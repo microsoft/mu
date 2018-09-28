@@ -413,54 +413,18 @@
       
       
 
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
-    
-    <label class="md-nav__link" for="nav-5">
-      Usage Docs
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-5">
-        Usage Docs
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../UsageDocs/usagedocs/" title="Docs" class="md-nav__link">
-      Docs
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
   
 
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
     
-    <label class="md-nav__link" for="nav-6">
+    <label class="md-nav__link" for="nav-5">
       Developer Docs
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-6">
+      <label class="md-nav__title" for="nav-5">
         Developer Docs
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -499,8 +463,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#details-coming-soon" title="Details Coming Soon!" class="md-nav__link">
-    Details Coming Soon!
+  <a href="#philosophy" title="Philosophy" class="md-nav__link">
+    Philosophy
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#community-documentation" title="Community documentation" class="md-nav__link">
+    Community documentation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#developer-documentation" title="Developer documentation" class="md-nav__link">
+    Developer documentation
   </a>
   
 </li>
@@ -566,8 +544,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#details-coming-soon" title="Details Coming Soon!" class="md-nav__link">
-    Details Coming Soon!
+  <a href="#philosophy" title="Philosophy" class="md-nav__link">
+    Philosophy
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#community-documentation" title="Community documentation" class="md-nav__link">
+    Community documentation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#developer-documentation" title="Developer documentation" class="md-nav__link">
+    Developer documentation
   </a>
   
 </li>
@@ -592,9 +584,18 @@
                 
                 
                 <h1 id="developer-docs">Developer Docs</h1>
-<p>This section of the docs will contain API and low level details directly pulled from the source of code modules.</p>
-<p>This should be auto generated from markdown files scattered throughout the Project Mu code tree.  </p>
-<h2 id="details-coming-soon">Details Coming Soon!</h2>
+<h2 id="philosophy">Philosophy</h2>
+<p>Documentation is critical.  There is a steep learning curve in UEFI and no amount of documentation will change that, but at a minimum quick, clear, and easy documentation can help everyone adopt features faster and with higher confidence.  Our documentation system will focus on making this an easy, low friction, and collaborative process.  The pull request process will eventually compel developers to submit documentation whenever they submit new components and refactoring.</p>
+<h2 id="community-documentation">Community documentation</h2>
+<p>This content is documented in static markdown files within the Project Mu repository.  We leverage mkdocs to generate web-hosted content on every change and host these using github.io.   These static files focus on how the project and community interact.  We strongly encourage contribution and follow the standard PR model for all changes, big and small.  </p>
+<h2 id="developer-documentation">Developer documentation</h2>
+<p>This content is documented in a couple of ways.</p>
+<ol>
+<li>There are static markdown files in the Project Mu repository.  This contains details about high level concepts, howto articles, and features of the project and all repos within Project Mu.  Examples: Code layout, git usage, tools, building, packaging, etc.  </li>
+<li>There is repo or package level documentation for features.  These are also static markdown files but these are contained within the repo that contains the feature.  A “docs” folder for each repo and each package will host this content.   Changes will also follow the standard PR model for the containing repo.</li>
+<li>Next there is feature and instance documentation.  This should inform a developer interested in the implementation specifics of what this module is and what additional requirements it has including code dependencies and limitations.  This should be documented in markdown files located with the component.  These should be updated whenever the component is updated and should be part of a code PR.  </li>
+<li>Finally, for API and traditional functional documentation our current stance is this is required in code (public APIs) but the published documentation (doxygen html, pdf, etc) is not neccessary.  Code tools like vscode already provide a lower friction method to index, find def, and search that uses this content directly embedded in code.</li>
+</ol>
                 
                   
                 
@@ -615,7 +616,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../../UsageDocs/usagedocs/" title="Docs" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../How/upstream_integration/" title="Upstream Integration" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -624,7 +625,7 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Docs
+                Upstream Integration
               </span>
             </div>
           </a>
