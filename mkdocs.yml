@@ -6,3 +6,22 @@ site_description: "Project Mu Documentation"
 plugins:
     - search
     - macros
+
+nav:
+  - Home: 'index.md'
+  - FAQ: 'faq.md'
+  - License: 'license.md'
+  - What:
+    - Overview: 'What/overview.md'
+  - Why:
+    - Componentization: 'Why/componentization.md'
+  - Where:
+    - Project Resources: 'Where/project_resources.md'
+    - External Resources: 'Where/external_resources.md'
+  - How:
+    - Release Process: 'How/release_process.md'
+    - Building: 'How/building.md'
+    - Downstream Integration: 'How/downstream_integration.md'
+    - Testing: 'How/testing.md'
+    - Contributing: 'How/contributing.md'
+    - Upstream Integration: 'How/upstream_integration.md'
