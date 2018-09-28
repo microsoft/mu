@@ -1,4 +1,3 @@
-
 # Welcome to Project Mu
 
 ![Greek Mu](img/Project Mu.png)
