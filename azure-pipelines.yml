@@ -1,0 +1,23 @@
+variables:
+  Env.PythonVersion: "3.7.0"
+
+steps:
+- task: DeleteFiles@1
+  inputs:
+    sourceFolder: $(Build.SourcesDirectory)
+    contents: '**'
+
+- checkout: self
+  clean: true
+
+- task: CmdLine@1
+  displayName: 'Install Mkdocs'
+  inputs:
+    filename: python.exe
+    arguments: 'pip install mkdocs'
+
+- task: CmdLine@1
+  displayName: 'publish'
+  inputs:
+    filename: mkdocs
+    arguments: 'gh-deploy'
