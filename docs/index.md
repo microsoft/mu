@@ -9,32 +9,36 @@ Project Mu also tries to address the complex business relationships and legal ch
 Project Mu originated from building modern Windows PCs but its patterns and design allows it to be scaled down or up for whatever the final product's intent.  IoT, Server, PC, or any other form factor should be able to leverage the content.  
 
 ## Primary Goals
-Initially this project will focus on two central goals. 
 
-### &#x1F539; Share our active code tree to both solicit feedback and entice partners to collaborate.  
+Initially this project will focus on two central goals.
+
+### Share our active code tree to both solicit feedback and entice partners to collaborate
+
 Project Mu is an active project.  This is not a side project, mirror, clone, or example.  This is the same code used today on many of Microsoft's 1st party devices and it will be kept current because it must be to continue to enable shipping products.  
 
-### &#x1F539; Promote, evangelize, and support an industry shift to a more collaborative environment so we all can build and maintain products with lower costs and higher quality.  
-Today's open source projects although extremely valuable are very resource intensive to interact with.  This friction leads to major industry players avoiding public interaction thus diminishing the overall community’s value.  The modern era of open source projects has incorporated new tools and procedures to lower this friction and it is our goal to leverage those tools.  GitHub provides issue tracking, Pull Requests, Gated builds, tracked/required web-based code reviews, and CI/CD (Continuous builds and testing).   It is our belief that by leveraging and extending this automation and workflow we can lower the friction and foster a safe place for all contributors to work.  
+### Promote, evangelize, and support an industry shift to a more collaborative environment so we all can build and maintain products with lower costs and higher quality
 
+Today's open source projects although extremely valuable are very resource intensive to interact with.  This friction leads to major industry players avoiding public interaction thus diminishing the overall community’s value.  The modern era of open source projects has incorporated new tools and procedures to lower this friction and it is our goal to leverage those tools.  GitHub provides issue tracking, Pull Requests, Gated builds, tracked/required web-based code reviews, and CI/CD (Continuous builds and testing).   It is our belief that by leveraging and extending this automation and workflow we can lower the friction and foster a safe place for all contributors to work.  
 
 ## Guiding Principles
 
 * Less is More [*](faq)
 * Be open to change / flexible - Keep learning.  If it was easy this would have been solved before
-* Design for code reuse 
+* Design for code reuse
 * Leverage tools / invest in automation
 
 ## Navigation
 
-Have a look around this site to see what is Project Mu.  Start by reviewing details of the community and our process.  See how to interact and get involved, why it's different, how to work within or extend it, as well as where everything is located.  Next, dig thru the [Usage Docs](UsageDocs/usagedocs.md) section to see how to use the project assets and finally explore the [Developer Docs](DeveloperDocs/developerdocs.md) if you want to review APIs and individual modules.  
+Have a look around this site to see what is Project Mu.  Start by reviewing details of the community and our process.  See how to interact and get involved, why it's different, how to work within or extend it, as well as where everything is located.  Finally explore the [Developer Docs](DeveloperDocs/developerdocs.md) if you want to review more indepth details.  
 
 ## Having trouble?
 
 Skim the [FAQ](faq)
 
 ## Roadmap
+
 ### Days
+
 * Engaging with existing partners to collect feedback
 * Pull Request documentation & gates
 * Automated builds & compile tests of all repos
@@ -42,6 +46,7 @@ Skim the [FAQ](faq)
 * Determine communication venue (e.g. email list, Slack, Teams, ...), currently testing MS Teams
 
 ### Weeks
+
 * Update to latest, stable EDK2 release
 * Automated build & tests on a public platform
 * Automated build & tests on Surface devices
@@ -52,6 +57,7 @@ Skim the [FAQ](faq)
 * Announce project & evangelize
 
 ### Months
+
 * Containerized builds
 
 ## Join Us
