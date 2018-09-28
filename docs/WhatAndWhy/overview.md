@@ -11,11 +11,11 @@ This repository is considered foundational and fundamental to Project Mu. The gu
 * Part of the build system
 * Common to any silicon architecture
 * Part of the "API layer" that contains protocol and library definitions including
-    * Industry Standards
-    * UEFI Specifications
-    * ACPI Specifications
-* Part of the "PI" layer that contains driver dispatch logic, event/signaling logic, or memory management logic
-    * This can also include central technologies like variable services
+  * Industry Standards
+  * UEFI Specifications
+  * ACPI Specifications
+  * Part of the "PI" layer that contains driver dispatch logic, event/signaling logic, or memory management logic
+  * This can also include central technologies like variable services
 
 ## [Mu Common Plus](https://github.com/Microsoft/mu_plus)
 
@@ -25,6 +25,6 @@ The packages found in this repository are contributed entirely by Project Mu. Th
 
 This repository contains only modules that were originally sourced from TianoCore. They are not essential for any particular platform, but are likely useful to many platforms. The versions contained in this repo are modified and/or improved to work with the rest of Project Mu.
 
+## Layout / Block diagram
 
-# Layout / Block diagram
 ![Block Diagram](../img/dependency-layering.png)

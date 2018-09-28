@@ -1,18 +1,19 @@
-# Overview
-This project welcomes contributions and suggestions.  Most contributions require you to agree to a
+# How to contribute
+
+There are three common ways to contribute.
+ 
+1. Participate in discussions using GitHub issues. 
+1. Contribute code by opening a GitHub Pull Request
+1. Contribute documentation by opening a GitHub Pull Request. 
+
+## Contributor License Agreement (CLA)
+This project welcomes contributions and suggestions.  Most (code and documentation) contributions require you to agree to a
 Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
 the rights to use your contribution. For details, visit https://cla.microsoft.com.
 
 When you submit a pull request, a CLA-bot will automatically determine whether you need to provide
 a CLA and decorate the PR appropriately (e.g., label, comment). Simply follow the instructions
 provided by the bot. You will only need to do this once across all repos using our CLA.
-
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
-For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
-contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
-
-One of the easiest ways to contribute is to participate in discussions on issues. You can also contribute by submitting pull requests with code changes.
-
 
 ## General feedback and discussions?
 Please start a discussion on the [Project Mu repo issue tracker](https://github.com/Microsoft/mu/issues).
@@ -34,7 +35,9 @@ Providing a minimal project with steps to reproduce the problem is ideal.
 GitHub supports [markdown](https://help.github.com/articles/github-flavored-markdown/), so when filing bugs make sure you check the formatting before clicking submit.
 
 
-## Contributing code and content
+## Contributing code and documentation
+
+** *Process documentation coming soon* **
 
 ### Obtaining the source code
 
@@ -44,9 +47,7 @@ GitHub supports [markdown](https://help.github.com/articles/github-flavored-mark
 
 ### Submitting a pull request
 
-You will need to sign a [Contributor License Agreement](https://cla.dotnetfoundation.org/) when submitting your pull request. To complete the Contributor License Agreement (CLA), you will need to follow the instructions provided by the CLA bot when you send the pull request. This needs to only be done once for any .NET Foundation OSS project.
-
-If you don't know what a pull request is read this article: https://help.github.com/articles/using-pull-requests. Make sure the respository can build and all tests pass. Familiarize yourself with the project workflow and our coding conventions. 
+If you don't know what a pull request is read this article: https://help.github.com/articles/using-pull-requests . Make sure the respository can build and all tests pass. Familiarize yourself with the project workflow and our coding conventions. 
 
 
 ### Commit/Pull Request Format
@@ -55,8 +56,3 @@ If you don't know what a pull request is read this article: https://help.github.
 ### Tests
 
 -  Tests need to be provided for every bug/feature that is completed.
-
-
-## Code of conduct
-
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).  For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
