@@ -13,13 +13,10 @@ theme:
 
 nav:
   - Home: 'index.md'
-  - FAQ: 'faq.md'
-  - License: 'license.md'
   - What and Why:
     - Overview: 'WhatAndWhy/overview.md'
-    - Layering: 'WhatAndWhy/layers.md'
-    - Componentization: 'WhatAndWhy/componentization.md'
-    - Layout: 'WhatAndWhy/layout.md'
+    - Dependencies and Layout: 'WhatAndWhy/layout.md'
+    # - Componentization: 'WhatAndWhy/componentization.md'
   - Where:
     - Project Resources: 'Where/project_resources.md'
     - External Resources: 'Where/external_resources.md'
@@ -30,4 +27,6 @@ nav:
     - Upstream Integration: 'How/upstream_integration.md'
   - Developer Docs:
     - Docs: "DeveloperDocs/developerdocs.md"
+  - FAQ: 'faq.md'
+  - License: 'license.md'
 
