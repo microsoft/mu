@@ -1,3 +1,4 @@
+
 # Welcome to Project Mu
 
 ![Greek Mu](img/Project Mu.png)
@@ -32,6 +33,16 @@ Have a look around this site to see what is Project Mu.  Start by reviewing deta
 ## Having trouble?
 
 Skim the [FAQ](faq)
+
+## Roadmap
+### Days
+* Pull Request documentation & gates
+* Automated builds & compile tests
+* Documentation on building & testing
+
+### Weeks
+* Documentation on Governance
+* Automated build & tests on a product
 
 ## Join Us
 
