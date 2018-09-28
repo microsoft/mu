@@ -1,28 +1,39 @@
-# Conceptual Layers
+## Conceptual Layers
 
-Today there are lots of types and sources of UEFI code in a full featured product.  
-Some examples:
-* TianoCore EDK2 UEFI standard based code
-* TianoCore additional value add code
-* Silicon Vendor code
-* Silicon Vendor supplied value add code
+A modern, full-featured, product-ready UEFI firmware codebase combines code from a multitude of sources:
+
+* TianoCore EDK2 UEFI standard-based code  
+* Value-add code from TianoCore
+* Silicon vendor hardware initialization code
+* Silicon vendor value-add code
 * Independent BIOS Vendor code
-* ODM/OEM Value add code
+* ODM/OEM customization code
 * OS firmware support code
 * Legacy BIOS compatibility code
-* Platform Code
-* Board specific code
+* Board-specific code
 * etc.
 
-Then there are open source versions and closed source version.  There are overrides and bug fixes implemented by everyone across the stack.  Then there is bleeding edge vs last year's version (or maybe 2 years ago).  It's no wonder that everyone does it differently.  Compound the version and source problem with the sheer size.  A common UEFI code base is generally well above 1 million LOC and only goes up from there.  
-
-Clearly there is a lot of problems that can stem from this.  Project Mu is an attempt to bring some sanity to the issue by creating a rigid layering concept and aligning our partners.  Layering won't fix everything but it's a start.
+Some of the above components come from closed-source projects (silicon vendors, IBVs, OEMs), others are open source.  Each component is supported at its own schedule with new features and bugfixes, creating a problem of stale code if not synced up regularly. Compound the version and source problem with the sheer size: a common UEFI codebase is typically well above 1 million LOC and only goes up from there.  
 
 ## What is a dependency
 
 To understand the layering you must first understand the terminology.  There are two types of code assets.  
 
-1. A definition of something.  Generally, this is defined in an accessible header file.  This is the API provided by some asset.  This API can be "depended" on to provide some capability.  
-2. A implementation of something.  Generally this is  A dependency is code that relies on a definition or prototype
+  1. A definition of something.  Generally, this is defined in an accessible header file.  This is the API provided by some asset.  This API can be "depended" upon to provide some capability.
+  2. An implementation of something.
 
 <center>![Dependency](../img/dependency.png)</center>
+
+Example of a dependency: DxeCore in the Basecore layer includes a TimerLib interface.  TimerLib interface is defined in the same Basecore layer as DxeCore, so in this case a Basecore module is depending on a Basecore interface. This is allowed.
+
+Another example: Silicon-layer module implements a TimerLib interface defined in Basecore.  Here, a Silicon layer module depends on a Basecore interface. This is allowed.
+
+## Architecture
+
+Project Mu is an attempt to create a rigid layering scheme that defines the hierarchy of dependencies.  Architectural goal kept in mind when designing this layering scheme is a controlled, limited scope, and allowed dependecies for each module within a given layer.  It is important to know, when implementing a module, what the module is allowed to depend on. When creating an interface, it is important to identify the correct layer for it such that all the consuming modules are located in the layers below.
+
+Motivation and goals of the layering scheme:
+
+* Easy component integration
+* Code reuse
+* Only carry relevant code
