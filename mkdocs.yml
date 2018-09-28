@@ -11,10 +11,11 @@ nav:
   - Home: 'index.md'
   - FAQ: 'faq.md'
   - License: 'license.md'
-  - What And Why:
+  - What and Why:
     - Overview: 'WhatAndWhy/overview.md'
     - Layering: 'WhatAndWhy/layers.md'
     - Componentization: 'WhatAndWhy/componentization.md'
+    - Layout: 'WhatAndWhy/layout.md'
   - Where:
     - Project Resources: 'Where/project_resources.md'
     - External Resources: 'Where/external_resources.md'

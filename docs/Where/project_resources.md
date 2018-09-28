@@ -1,10 +1,8 @@
-# Project Resources
-
 ## Public Source Code Repositories
 
-1. https://github.com/Microsoft/mu_basecore  
-1. https://github.com/Microsoft/mu_tiano_plus   
-1. https://github.com/Microsoft/mu_plus  
+1. https://github.com/Microsoft/mu_basecore
+1. https://github.com/Microsoft/mu_tiano_plus
+1. https://github.com/Microsoft/mu_plus
 
 ## Issue/Bug/Feature Tracking
 

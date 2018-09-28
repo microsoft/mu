@@ -17,3 +17,8 @@ A secondary purpose is to engage with the community, both in TianoCore and the i
 #### Is this really following "Less is More"?
 Yes.  The idea is lowering the entanglement of code, lowering the coupling, and allowing the product to pick and choose the code it needs.  This means when building any given product, you don't need all the Project Mu code.
 
+#### Why are there so many repos?
+
+Project Mu makes liberal use of multiple repositories due to the mixture of requirements in the UEFI ecosystem. Some repos are split for technical reasons, some for organizational, and some for legal. 
+
+For details, see "Repo Philosophy" in [What and Why](WhatAndWhy/overview.md).
