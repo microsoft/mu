@@ -1,11 +1,15 @@
 site_name: Project Mu
 repo_url: https://github.com/microsoft/mu
 copyright: Copyright (c) Microsoft.  All rights reserved
-theme: readthedocs
 site_description: "Project Mu Documentation"
 plugins:
     - search
     - macros
+
+theme:
+  name: 'material'
+  custom_dir: 'theme'
+  logo: 'img/mu.png'
 
 nav:
   - Home: 'index.md'
