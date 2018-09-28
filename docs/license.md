@@ -2,7 +2,6 @@
 
 Project Mu has numerous repositories.  Each of these can have a different licenses depending on the content and partner but in general we want OSS friendly licenses.  For this documentation we use the following license.  
 
-
 ## License
 
 BSD 2-Clause License
