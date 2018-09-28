@@ -11,6 +11,12 @@ steps:
   clean: true
 
 - task: CmdLine@1
+  displayName: 'Python Version'
+  inputs:
+    filename: python.exe
+    arguments: '--version'
+
+- task: CmdLine@1
   displayName: 'Install Mkdocs'
   inputs:
     filename: python.exe
