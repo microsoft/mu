@@ -1,5 +1,5 @@
 variables:
-  Env.PythonVersion: "3.7.0"
+
 
 steps:
 - task: DeleteFiles@1
@@ -10,20 +10,34 @@ steps:
 - checkout: self
   clean: true
 
+- task: UsePythonVersion@0
+  inputs:
+    versionSpec: '3.7'
+    architecture: 'x64'
+
 - task: CmdLine@1
   displayName: 'Python Version'
   inputs:
     filename: python.exe
     arguments: '--version'
 
-- task: CmdLine@1
-  displayName: 'Install Mkdocs'
-  inputs:
-    filename: python.exe
-    arguments: 'pip install mkdocs'
+- script: python -m pip install --upgrade pip mkdocs
+  displayName: 'Install tools'
 
 - task: CmdLine@1
   displayName: 'publish'
   inputs:
     filename: mkdocs
     arguments: 'gh-deploy'
+
+
+#For more details checkout
+#https://docs.microsoft.com/en-us/azure/devops/pipelines/languages/python?view=vsts
+#- script: python src/example.py
+
+- task: PythonScript@0
+  inputs:
+    targetType: 'inline'
+    script: |
+      print('Hello world 1')
+      print('Hello world 2')
