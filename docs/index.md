@@ -42,8 +42,9 @@ Skim the [FAQ](faq)
 * Determine communication venue (e.g. email list, Slack, Teams, ...), currently testing MS Teams
 
 ### Weeks
-* Update to latest, stable EDK release
-* Automated build & tests on a product
+* Update to latest, stable EDK2 release
+* Automated build & tests on a public platform
+* Automated build & tests on Surface devices
 * Add support for partner-requested compilers 
 * Feature documentation
 * Draft process for security collaboration with partners & Tianocore
