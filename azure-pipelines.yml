@@ -21,7 +21,7 @@ steps:
     filename: python.exe
     arguments: '--version'
 
-- script: python -m pip install --upgrade pip mkdocs
+- script: python -m pip install --upgrade pip mkdocs mkdocs-macros-plugin
   displayName: 'Install tools'
 
 - task: CmdLine@1

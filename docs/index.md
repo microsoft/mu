@@ -46,3 +46,6 @@ Refer to [Contributing](How/contributing)
 ## License
 
 Refer to [License](license)
+
+Version: {{version}}  
+Build Time: {{buildtime()}}
