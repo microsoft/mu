@@ -616,30 +616,28 @@
                 
                 
                 <h1 id="conceptual-layers">Conceptual Layers</h1>
-<p>Today there is lots of types and sources of UEFI code in a full featured product.<br />
-Some examples:</p>
-<ul>
-<li>TianoCore EDK2 UEFI standard based code</li>
-<li>TianoCore additional value add code</li>
-<li>Silicon Vendor code</li>
-<li>Silicon Vendor supplied value add code</li>
-<li>Independent BIOS Vendor code</li>
-<li>ODM/OEM Value add code</li>
-<li>OS firmware support code</li>
-<li>Legacy BIOS compatibility code</li>
-<li>Platform Code</li>
-<li>Board specific code</li>
-<li>etc</li>
-</ul>
-<p>Then there is open source versions and closed source version.  There are overrides and bug fixes implemented by everyone across the stack.  Then there is bleeding edge vs last years version (or maybe 2 years ago).  Its no wonder that everyone does it differently.  Compound the version and source problem with the sheer size.  A common UEFI code base is generally well above 1 million LOC and only goes up from there.  </p>
-<p>Clearly there are a lot of problem that can stem from this.  Project Mu is an attempt to bring some sanity to the issue by creating a rigid layering concept and aligning our partners.  Layering wont fix everything but its a start.</p>
+<p>Today there are lots of types and sources of UEFI code in a full featured product.<br />
+Some examples:
+<em> TianoCore EDK2 UEFI standard based code
+</em> TianoCore additional value add code
+<em> Silicon Vendor code
+</em> Silicon Vendor supplied value add code
+<em> Independent BIOS Vendor code
+</em> ODM/OEM Value add code
+<em> OS firmware support code
+</em> Legacy BIOS compatibility code
+<em> Platform Code
+</em> Board specific code
+* etc.</p>
+<p>Then there are open source versions and closed source version.  There are overrides and bug fixes implemented by everyone across the stack.  Then there is bleeding edge vs last year's version (or maybe 2 years ago).  It's no wonder that everyone does it differently.  Compound the version and source problem with the sheer size.  A common UEFI code base is generally well above 1 million LOC and only goes up from there.  </p>
+<p>Clearly there is a lot of problems that can stem from this.  Project Mu is an attempt to bring some sanity to the issue by creating a rigid layering concept and aligning our partners.  Layering won't fix everything but it's a start.</p>
 <h2 id="what-is-a-dependency">What is a dependency</h2>
 <p>To understand the layering you must first understand the terminology.  There are two types of code assets.  </p>
 <ol>
-<li>A definition of something.  Generally this is defined in a accessible header file.  This is the API provided by some asset.  This API can be "depended" on to provide some capability.  </li>
+<li>A definition of something.  Generally, this is defined in an accessible header file.  This is the API provided by some asset.  This API can be "depended" on to provide some capability.  </li>
 <li>A implementation of something.  Generally this is  A dependency is code that relies on a definition or prototype</li>
 </ol>
-<p><img alt="Dependency" src="../../img/dependency.png" /></p>
+<p><center><img alt="Dependency" src="../../img/dependency.png" /></center></p>
                 
                   
                 

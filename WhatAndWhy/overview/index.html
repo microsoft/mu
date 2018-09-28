@@ -647,21 +647,15 @@
 <p>This documentation is hosted in the main repository for Project Mu, which is used as a central collection point for community interaction and documentation. The build system and firmware code for the project is hosted in a number of other repositories, grouped/divided by function, partner, license, and dependencies. Several of these repositories are brought together by the build system to create a FW project, but we'll get into those details later. ;)</p>
 <p>For now, an overview of the repositories and what code you'll find there...</p>
 <h2 id="mu-basecore"><a href="https://github.com/Microsoft/mu_basecore">Mu Basecore</a></h2>
-<p>This repository is considered foundational and fundamental to Project Mu. The guiding philosophy is that this code should be one or more of the following:</p>
-<ul>
-<li>Part of the build system</li>
-<li>Common to any silicon architecture</li>
-<li>Part of the "API layer" that contains protocol and library definitions including<ul>
-<li>Industry Standards</li>
-<li>UEFI Specifications</li>
-<li>ACPI Specifications</li>
-</ul>
-</li>
-<li>Part of the "PI" layer that contains driver dispatch logic, event/signaling logic, or memory management logic<ul>
-<li>This can also include central technologies like variable services</li>
-</ul>
-</li>
-</ul>
+<p>This repository is considered foundational and fundamental to Project Mu. The guiding philosophy is that this code should be one or more of the following:
+<em> Part of the build system
+</em> Common to any silicon architecture
+<em> Part of the "API layer" that contains protocol and library definitions including
+    * Industry Standards
+    * UEFI Specifications
+    * ACPI Specifications
+</em> Part of the "PI" layer that contains driver dispatch logic, event/signaling logic, or memory management logic
+    * This can also include central technologies like variable services</p>
 <h2 id="mu-common-plus"><a href="https://github.com/Microsoft/mu_plus">Mu Common Plus</a></h2>
 <p>The packages found in this repository are contributed entirely by Project Mu. They should be common to all silicon architectures and only depend on Mu Basecore. These packages provide features and functionality that are entirely optional, but may be recommended for PC platform FW.</p>
 <h2 id="mu-tiano-plus"><a href="https://github.com/Microsoft/mu_tiano_plus">Mu Tiano Plus</a></h2>
