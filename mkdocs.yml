@@ -3,3 +3,6 @@ repo_url: https://github.com/microsoft/mu
 copyright: Copyright (c) Microsoft.  All rights reserved
 theme: readthedocs
 site_description: "Project Mu Documentation"
+plugins:
+    - search
+    - macros

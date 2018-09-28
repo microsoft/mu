@@ -1,0 +1,23 @@
+
+steps:
+- task: DeleteFiles@1
+  inputs:
+    sourceFolder: $(Build.SourcesDirectory)
+    contents: '**'
+
+- checkout: self
+  clean: true
+
+- task: UsePythonVersion@0
+  inputs:
+    versionSpec: '3.7'
+    architecture: 'x64'
+
+- script: python -m pip install --upgrade pip mkdocs mkdocs-macros-plugin
+  displayName: 'Install tools'
+
+- task: CmdLine@1
+  displayName: 'build'
+  inputs:
+    filename: mkdocs
+    arguments: 'build -s -v '
