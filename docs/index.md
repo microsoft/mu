@@ -27,21 +27,29 @@ Today's open source projects although extremely valuable are very resource inten
 
 ## Navigation
 
-Have a look around this site to see what is Project Mu, why is it different, how to work within or extend it, as well as where everything is located.
+Have a look around this site to see what is Project Mu.  Start by reviewing details of the community and our process.  See how to interact and get involved, why it's different, how to work within or extend it, as well as where everything is located.  Next, dig thru the [Usage Docs](UsageDocs/usagedocs.md) section to see how to use the project assets and finally explore the [Developer Docs](DeveloperDocs/developerdocs.md) if you want to review APIs and individual modules.  
 
 ## Having trouble?
 
 Skim the [FAQ](faq)
 
-Contact info to come.
+## Join Us
+
+Contact info and additional methods to collaborate coming soon.
+
+## Code of conduct
+
+This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).  For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
 
 ## Reporting Issues
 
-Refer to [Contributing](How/contributing)
+Short answer: Open a github issue.  
+More details: [Contributing](How/contributing)
 
 ## Contributing
 
-Refer to [Contributing](How/contributing)
+Short answer: Open a pull request.  
+More details: [Contributing](How/contributing)
 
 ## License
 

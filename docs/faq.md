@@ -16,11 +16,4 @@ A secondary purpose is to engage with the community, both in TianoCore and the i
 
 #### Is this really following "Less is More"?
 Yes.  The idea is lowering the entanglement of code, lowering the coupling, and allowing the product to pick and choose the code it needs.  This means when building any given product, you don't need all the Project Mu code.
- 
-## Usage
- 
-#### * Coming Soon *
- 
-## Maintenance
- 
-#### * Coming Soon *
+
