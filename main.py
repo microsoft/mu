@@ -13,12 +13,12 @@ def declare_variables(variables, macro):
     - macro: a decorator function, to declare a macro.
     """
 
-    variables['version'] = "0.3"
+    variables['version'] = "0.4"
 
     import datetime
     @macro
     def buildtime():
-      return str(datetime.datetime.now().strftime("%Y-%m-%d %H:%M"))
+      return str(datetime.datetime.now().strftime("%d-%m-%Y %H:%M"))
 
 ''' 
 
