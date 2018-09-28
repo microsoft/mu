@@ -7,6 +7,7 @@ For now, an overview of the repositories and what code you'll find there...
 ## [Mu Basecore](https://github.com/Microsoft/mu_basecore)
 
 This repository is considered foundational and fundamental to Project Mu. The guiding philosophy is that this code should be one or more of the following:
+
 * Part of the build system
 * Common to any silicon architecture
 * Part of the "API layer" that contains protocol and library definitions including
