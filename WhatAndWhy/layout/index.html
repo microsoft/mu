@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>Docs - Project Mu</title>
+  <title>Layout - Project Mu</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
@@ -17,8 +17,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Docs";
-    var mkdocs_page_input_path = "DeveloperDocs\\developerdocs.md";
+    var mkdocs_page_name = "Layout";
+    var mkdocs_page_input_path = "WhatAndWhy\\layout.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -69,19 +69,28 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="../../WhatAndWhy/overview/">Overview</a>
+    <a class="" href="../overview/">Overview</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../WhatAndWhy/layers/">Layering</a>
+    <a class="" href="../layers/">Layering</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../WhatAndWhy/componentization/">Componentization</a>
+    <a class="" href="../componentization/">Componentization</a>
                 </li>
-                <li class="">
+                <li class=" current">
                     
-    <a class="" href="../../WhatAndWhy/layout/">Layout</a>
+    <a class="current" href="./">Layout</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#block-diagram">Block Diagram</a></li>
+    
+
+    <li class="toctree-l3"><a href="#file-layout">File Layout</a></li>
+    
+
+    </ul>
                 </li>
     </ul>
 	    </li>
@@ -139,21 +148,9 @@
 		
     <span class="caption-text">Developer Docs</span>
     <ul class="subnav">
-                <li class=" current">
+                <li class="">
                     
-    <a class="current" href="./">Docs</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l3"><a href="#developer-docs">Developer Docs</a></li>
-    
-        <ul>
-        
-            <li><a class="toctree-l4" href="#details-coming-soon">Details Coming Soon!</a></li>
-        
-        </ul>
-    
-
-    </ul>
+    <a class="" href="../../DeveloperDocs/developerdocs/">Docs</a>
                 </li>
     </ul>
 	    </li>
@@ -180,14 +177,14 @@
     
       
         
-          <li>Developer Docs &raquo;</li>
+          <li>What and Why &raquo;</li>
         
       
     
-    <li>Docs</li>
+    <li>Layout</li>
     <li class="wy-breadcrumbs-aside">
       
-        <a href="https://github.com/microsoft/mu/edit/master/docs/DeveloperDocs/developerdocs.md"
+        <a href="https://github.com/microsoft/mu/edit/master/docs/WhatAndWhy/layout.md"
           class="icon icon-github"> Edit on GitHub</a>
       
     </li>
@@ -197,10 +194,12 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="developer-docs">Developer Docs</h1>
-<p>This section of the docs will contain API and low level details directly pulled from the source of code modules.</p>
-<p>This should be auto generated from markdown files scattered throughout the Project Mu code tree.  </p>
-<h2 id="details-coming-soon">Details Coming Soon!</h2>
+                <h1 id="block-diagram">Block Diagram</h1>
+<p><img alt="Block Diagram" src="../../img/dependency-layering.png" /></p>
+<h1 id="file-layout">File Layout</h1>
+<p>To best preserve and delineate these concepts of componentization and unidirectional dependency, we have chosen to lay out our repository files in a structure that reinforces the same mentality.</p>
+<p>The underlying logic of this layout is to clearly distinguish each layer from the rest. As such, the Basecore -- which is considered foundational -- is broken out on its own, followed by the Common repos, followed by the Silicon, followed by the Platform. As mentioned elsewhere, Project Mu makes liberal use of multiple repositories due to the mixture of requirements in the firmware ecosystem. Some repos are split for technical reasons, some for organizational, and some for legal. One of the goals of Project Mu is to make this seemingly complicated layout easier to work with.</p>
+<p><strong><em>Add graphics and more details...</em></strong></p>
               
             </div>
           </div>
@@ -208,8 +207,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
+        <a href="../../Where/project_resources/" class="btn btn-neutral float-right" title="Project Resources">Next <span class="icon icon-circle-arrow-right"></span></a>
       
-        <a href="../../UsageDocs/usagedocs/" class="btn btn-neutral" title="Docs"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+        <a href="../componentization/" class="btn btn-neutral" title="Componentization"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -239,8 +240,10 @@
           <a href="https://github.com/microsoft/mu/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../../UsageDocs/usagedocs/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../componentization/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
+      
+        <span style="margin-left: 15px"><a href="../../Where/project_resources/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
