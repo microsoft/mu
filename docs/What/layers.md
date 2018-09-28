@@ -1,6 +1,8 @@
 # Conceptual Layers
 
-Today there is lots of types and sources of UEFI code in a full featured product.  Some examples: 
+Today there is lots of types and sources of UEFI code in a full featured product.  
+  
+  Some examples: 
 * TianoCore EDK2 UEFI standard based code
 * TianoCore additional value add code
 * Silicon Vendor code
