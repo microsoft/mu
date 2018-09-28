@@ -24,8 +24,6 @@ nav:
     - Downstream Integration: 'How/downstream_integration.md'
     - Contributing: 'How/contributing.md'
     - Upstream Integration: 'How/upstream_integration.md'
-  - Usage Docs:
-    - Docs: "UsageDocs/usagedocs.md"
   - Developer Docs:
     - Docs: "DeveloperDocs/developerdocs.md"
 
