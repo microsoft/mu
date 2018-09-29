@@ -42,7 +42,7 @@ Motivation and goals of the layering scheme:
 
 ## Dependency Block Diagram
 
-![Block Diagram](../img/dependency-layering.png)
+![Block Diagram](../img/dependency_layering.png)
 
 ## File Layout
 

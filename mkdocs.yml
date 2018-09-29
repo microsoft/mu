@@ -11,12 +11,35 @@ theme:
   custom_dir: 'theme'
   logo: 'img/mu.png'
 
+#
+# Material theme adds additional capabilities
+#
+markdown_extensions:
+  - admonition
+  #not enabled - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+  - toc:
+      permalink: true
+
 nav:
   - Home: 'index.md'
   - What and Why:
     - Overview: 'WhatAndWhy/overview.md'
     - Dependencies and Layout: 'WhatAndWhy/layout.md'
-    # - Componentization: 'WhatAndWhy/componentization.md'
   - Where:
     - Project Resources: 'Where/project_resources.md'
     - External Resources: 'Where/external_resources.md'
@@ -25,8 +48,13 @@ nav:
     - Downstream Integration: 'How/downstream_integration.md'
     - Contributing: 'How/contributing.md'
     - Upstream Integration: 'How/upstream_integration.md'
+    - Basic Pull Request: "How/basic_pull_request.md"
   - Developer Docs:
-    - Docs: "DeveloperDocs/developerdocs.md"
+    - Overview: "DeveloperDocs/developer_docs.md"
+    - How To Build: "DeveloperDocs/build_community_docs.md"
+    - Sample Syntax: "DeveloperDocs/doc_sample_test.md"
+    # Add Per repo pull request info dynmaicall here
+
   - FAQ: 'faq.md'
   - License: 'license.md'
 
