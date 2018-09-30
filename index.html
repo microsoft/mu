@@ -13,6 +13,8 @@
         <meta name="description" content="Project Mu Documentation">
       
       
+        <link rel="canonical" href="https://microsoft.github.io/mu/">
+      
       
       
         <meta name="lang:clipboard.copy" content="Copy to clipboard">
@@ -44,6 +46,12 @@
     
       <link rel="stylesheet" href="assets/stylesheets/application.451f80e5.css">
       
+        <link rel="stylesheet" href="assets/stylesheets/application-palette.22915126.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
       
     
     
@@ -61,7 +69,9 @@
     
   </head>
   
-    <body dir="ltr">
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     <svg class="md-svg">
       <defs>
@@ -101,7 +111,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="." title="Project Mu" class="md-header-nav__button md-logo">
+        <a href="https://microsoft.github.io/mu/" title="Project Mu" class="md-header-nav__button md-logo">
           
             <img src="img/mu.png" width="24" height="24">
           
@@ -197,7 +207,7 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="." title="Project Mu" class="md-nav__button md-logo">
+    <a href="https://microsoft.github.io/mu/" title="Project Mu" class="md-nav__button md-logo">
       
         <img src="img/mu.png" width="48" height="48">
       
@@ -552,6 +562,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="How/basic_pull_request/" title="Basic Pull Request" class="md-nav__link">
+      Basic Pull Request
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -582,8 +604,44 @@
 
 
   <li class="md-nav__item">
-    <a href="DeveloperDocs/developerdocs/" title="Docs" class="md-nav__link">
-      Docs
+    <a href="DeveloperDocs/developer_docs/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="DeveloperDocs/build_community_docs/" title="How To Build" class="md-nav__link">
+      How To Build
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="DeveloperDocs/doc_sample_test/" title="Sample Syntax" class="md-nav__link">
+      Sample Syntax
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="DeveloperDocs/docs_attribution/" title="Doc Framework Attribution" class="md-nav__link">
+      Doc Framework Attribution
     </a>
   </li>
 
@@ -773,66 +831,65 @@
                   <a href="https://github.com/microsoft/mu/edit/master/docs/index.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="welcome-to-project-mu">Welcome to Project Mu</h1>
-<p><img alt="Greek Mu" src="img/Project Mu.png" /></p>
+                <h1 id="welcome-to-project-mu">Welcome to Project Mu<a class="headerlink" href="#welcome-to-project-mu" title="Permanent link">&para;</a></h1>
+<p><img alt="Greek Mu" src="img/project_mu.png" /></p>
 <p>Project Mu is a modular adaptation of TianoCore's <a href="https://github.com/tianocore/edk2">edk2</a> tuned for building modern devices using a scalable, maintainable, and reusable pattern.  Mu is built around the idea that shipping and <strong>maintaining</strong> a UEFI product is an ongoing collaboration between numerous partners.  For too long the industry has built products using a "forking" model combined with copy/paste/rename and with each new product the maintenace burden grows to such a level that updates are near impossible due to cost and risk.  </p>
 <p>Project Mu also tries to address the complex business relationships and legal challenges facing partners today.  To build most products it often requires both closed-source, proprietary assets as well as open source and industry standard code.  The distributed build system and multi-repository design allows product teams to keep code separate and connected to their original source while respecting legal and business boundaries.  </p>
 <p>Project Mu originated from building modern Windows PCs but its patterns and design allows it to be scaled down or up for whatever the final product's intent.  IoT, Server, PC, or any other form factor should be able to leverage the content.  </p>
-<h2 id="primary-goals">Primary Goals</h2>
+<h2 id="primary-goals">Primary Goals<a class="headerlink" href="#primary-goals" title="Permanent link">&para;</a></h2>
 <p>Initially this project will focus on two central goals.</p>
-<h3 id="share-our-active-code-tree-to-both-solicit-feedback-and-entice-partners-to-collaborate">Share our active code tree to both solicit feedback and entice partners to collaborate</h3>
-<p>Project Mu is an active project.  This is not a side project, mirror, clone, or example.  This is the same code used today on many of Microsoft's 1st party devices and it will be kept current because it must be to continue to enable shipping products.  </p>
-<h3 id="promote-evangelize-and-support-an-industry-shift-to-a-more-collaborative-environment-so-we-all-can-build-and-maintain-products-with-lower-costs-and-higher-quality">Promote, evangelize, and support an industry shift to a more collaborative environment so we all can build and maintain products with lower costs and higher quality</h3>
+<h3 id="share-our-active-code-tree-to-both-solicit-feedback-and-entice-partners-to-collaborate">Share our active code tree to both solicit feedback and entice partners to collaborate<a class="headerlink" href="#share-our-active-code-tree-to-both-solicit-feedback-and-entice-partners-to-collaborate" title="Permanent link">&para;</a></h3>
+<p>Project Mu is an active project.  This is not a side project, mirror, clone, or example.  This is the same code used today on many of Microsoft's 1<sup>st</sup> party devices and it will be kept current because it must be to continue to enable shipping products.  </p>
+<h3 id="promote-evangelize-and-support-an-industry-shift-to-a-more-collaborative-environment-so-we-all-can-build-and-maintain-products-with-lower-costs-and-higher-quality">Promote, evangelize, and support an industry shift to a more collaborative environment so we all can build and maintain products with lower costs and higher quality<a class="headerlink" href="#promote-evangelize-and-support-an-industry-shift-to-a-more-collaborative-environment-so-we-all-can-build-and-maintain-products-with-lower-costs-and-higher-quality" title="Permanent link">&para;</a></h3>
 <p>Today's open source projects although extremely valuable are very resource intensive to interact with.  This friction leads to major industry players avoiding public interaction thus diminishing the overall community’s value.  The modern era of open source projects has incorporated new tools and procedures to lower this friction and it is our goal to leverage those tools.  GitHub provides issue tracking, Pull Requests, Gated builds, tracked/required web-based code reviews, and CI/CD (Continuous builds and testing).   It is our belief that by leveraging and extending this automation and workflow we can lower the friction and foster a safe place for all contributors to work.  </p>
-<h2 id="guiding-principles">Guiding Principles</h2>
+<h2 id="guiding-principles">Guiding Principles<a class="headerlink" href="#guiding-principles" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Less is More <a href="faq">*</a></li>
+<li>Less is More <a href="faq#is-this-really-following-less-is-more">*</a></li>
 <li>Be open to change / flexible - Keep learning.  If it was easy this would have been solved before</li>
 <li>Design for code reuse</li>
 <li>Leverage tools / invest in automation</li>
 </ul>
-<h2 id="navigation">Navigation</h2>
-<p>Have a look around this site to see what is Project Mu.  Start by reviewing details of the community and our process.  See how to interact and get involved, why it's different, how to work within or extend it, as well as where everything is located.  Finally explore the <a href="DeveloperDocs/developerdocs/">Developer Docs</a> if you want to review more indepth details.  </p>
-<h2 id="having-trouble">Having trouble?</h2>
+<h2 id="navigation">Navigation<a class="headerlink" href="#navigation" title="Permanent link">&para;</a></h2>
+<p>Have a look around this site to see what is Project Mu.  Start by reviewing details of the community and our process.  See how to interact and get involved, why it's different, how to work within or extend it, as well as where everything is located.  Finally explore the <a href="DeveloperDocs/developer_docs/">Developer Docs</a> if you want to review more indepth details.  </p>
+<h2 id="having-trouble">Having trouble?<a class="headerlink" href="#having-trouble" title="Permanent link">&para;</a></h2>
 <p>Skim the <a href="faq">FAQ</a></p>
-<h2 id="roadmap">Roadmap</h2>
-<h3 id="days">Days</h3>
-<ul>
-<li>Engaging with existing partners to collect feedback</li>
-<li>Pull Request documentation &amp; gates</li>
-<li>Automated builds &amp; compile tests of all repos</li>
-<li>Developer documentation on building &amp; testing</li>
-<li>Determine communication venue (e.g. email list, Slack, Teams, ...), currently testing MS Teams</li>
+<h2 id="roadmap">Roadmap<a class="headerlink" href="#roadmap" title="Permanent link">&para;</a></h2>
+<h3 id="days">Days<a class="headerlink" href="#days" title="Permanent link">&para;</a></h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Engaging with existing partners to collect feedback</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Pull Request documentation &amp; gates</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Automated builds &amp; compile tests of all repos</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Developer documentation on building &amp; testing</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Determine communication venue (e.g. email list, Slack, Teams, ...), currently testing MS Teams</li>
 </ul>
-<h3 id="weeks">Weeks</h3>
-<ul>
-<li>Update to latest, stable EDK2 release</li>
-<li>Automated build &amp; tests on a public platform</li>
-<li>Automated build &amp; tests on Surface devices</li>
-<li>Add support for partner-requested compilers </li>
-<li>Feature documentation</li>
-<li>Draft process for security collaboration with partners &amp; Tianocore</li>
-<li>Documentation on Governance</li>
-<li>Announce project &amp; evangelize</li>
+<h3 id="weeks">Weeks<a class="headerlink" href="#weeks" title="Permanent link">&para;</a></h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Update to latest, stable EDK2 release</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Automated build &amp; tests on a public platform</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Automated build &amp; tests on Surface devices</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Feature documentation</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Draft process for security collaboration with partners &amp; Tianocore</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Documentation on Governance</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Announce project &amp; evangelize</li>
 </ul>
-<h3 id="months">Months</h3>
-<ul>
-<li>Containerized builds</li>
+<h3 id="months">Months<a class="headerlink" href="#months" title="Permanent link">&para;</a></h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Add support for partner-requested compilers and Containerized builds</li>
 </ul>
-<h2 id="join-us">Join Us</h2>
+<h2 id="join-us">Join Us<a class="headerlink" href="#join-us" title="Permanent link">&para;</a></h2>
 <p>Contact info and additional methods to collaborate coming soon.</p>
-<h2 id="code-of-conduct">Code of conduct</h2>
+<h2 id="code-of-conduct">Code of conduct<a class="headerlink" href="#code-of-conduct" title="Permanent link">&para;</a></h2>
 <p>This project has adopted the <a href="https://opensource.microsoft.com/codeofconduct/">Microsoft Open Source Code of Conduct</a>.  For more information see the <a href="https://opensource.microsoft.com/codeofconduct/faq/">Code of Conduct FAQ</a> or contact <a href="mailto:opencode@microsoft.com">opencode@microsoft.com</a> with any additional questions or comments.</p>
-<h2 id="reporting-issues">Reporting Issues</h2>
+<h2 id="reporting-issues">Reporting Issues<a class="headerlink" href="#reporting-issues" title="Permanent link">&para;</a></h2>
 <p>Short answer: Open a github issue.<br />
 More details: <a href="How/contributing">Contributing</a></p>
-<h2 id="contributing">Contributing</h2>
+<h2 id="contributing">Contributing<a class="headerlink" href="#contributing" title="Permanent link">&para;</a></h2>
 <p>Short answer: Open a pull request.<br />
 More details: <a href="How/contributing">Contributing</a></p>
-<h2 id="license">License</h2>
+<h2 id="license">License<a class="headerlink" href="#license" title="Permanent link">&para;</a></h2>
 <p>Refer to <a href="license">License</a></p>
 <p>Version: 0.4<br />
-Build Time: 28-09-2018 23:05</p>
+Build Time: 09-30-2018 23:45</p>
                 
                   
                 
@@ -887,6 +944,13 @@ Build Time: 28-09-2018 23:05</p>
       </div>
       
         
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="./assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/microsoft/mu" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
       
     </div>
   </div>

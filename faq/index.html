@@ -13,6 +13,8 @@
         <meta name="description" content="Project Mu Documentation">
       
       
+        <link rel="canonical" href="https://microsoft.github.io/mu/faq/">
+      
       
       
         <meta name="lang:clipboard.copy" content="Copy to clipboard">
@@ -44,6 +46,12 @@
     
       <link rel="stylesheet" href="../assets/stylesheets/application.451f80e5.css">
       
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.22915126.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
       
     
     
@@ -61,7 +69,9 @@
     
   </head>
   
-    <body dir="ltr">
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     <svg class="md-svg">
       <defs>
@@ -101,7 +111,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href=".." title="Project Mu" class="md-header-nav__button md-logo">
+        <a href="https://microsoft.github.io/mu/" title="Project Mu" class="md-header-nav__button md-logo">
           
             <img src="../img/mu.png" width="24" height="24">
           
@@ -197,7 +207,7 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href=".." title="Project Mu" class="md-nav__button md-logo">
+    <a href="https://microsoft.github.io/mu/" title="Project Mu" class="md-nav__button md-logo">
       
         <img src="../img/mu.png" width="48" height="48">
       
@@ -404,6 +414,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../How/basic_pull_request/" title="Basic Pull Request" class="md-nav__link">
+      Basic Pull Request
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -434,8 +456,44 @@
 
 
   <li class="md-nav__item">
-    <a href="../DeveloperDocs/developerdocs/" title="Docs" class="md-nav__link">
-      Docs
+    <a href="../DeveloperDocs/developer_docs/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../DeveloperDocs/build_community_docs/" title="How To Build" class="md-nav__link">
+      How To Build
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../DeveloperDocs/doc_sample_test/" title="Sample Syntax" class="md-nav__link">
+      Sample Syntax
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../DeveloperDocs/docs_attribution/" title="Doc Framework Attribution" class="md-nav__link">
+      Doc Framework Attribution
     </a>
   </li>
 
@@ -661,19 +719,19 @@
                   <a href="https://github.com/microsoft/mu/edit/master/docs/faq.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="faq">FAQ</h1>
-<h2 id="purposegoals">Purpose/Goals</h2>
-<h3 id="how-is-this-related-to-tianocore">How is this related to TianoCore?</h3>
+                <h1 id="faq">FAQ<a class="headerlink" href="#faq" title="Permanent link">&para;</a></h1>
+<h2 id="purposegoals">Purpose/Goals<a class="headerlink" href="#purposegoals" title="Permanent link">&para;</a></h2>
+<h3 id="how-is-this-related-to-tianocore">How is this related to TianoCore?<a class="headerlink" href="#how-is-this-related-to-tianocore" title="Permanent link">&para;</a></h3>
 <p>As you can probably tell, Project Mu is based on <a href="https://www.tianocore.org">TianoCore</a>. It represents a variant of TianoCore that was customized within Microsoft for scaling and maintainability. It's not exactly a staging branch for TianoCore, as there are some changes that may not have application within or meet the explicit goals of that project, but it is a place where features and changes can be publicly featured and discussed.</p>
-<h3 id="so-is-this-a-fork">So, is this a fork?</h3>
+<h3 id="so-is-this-a-fork">So, is this a fork?<a class="headerlink" href="#so-is-this-a-fork" title="Permanent link">&para;</a></h3>
 <p>Not entirely. It is our goal to continue to treat TianoCore as a true upstream. Our release branches will always be based on the latest stable TianoCore release, and we will always try to PR viable fixes and features into the TianoCore project.</p>
-<h3 id="what-is-it-where-is-it-going">What is it? Where is it going?</h3>
+<h3 id="what-is-it-where-is-it-going">What is it? Where is it going?<a class="headerlink" href="#what-is-it-where-is-it-going" title="Permanent link">&para;</a></h3>
 <p>Project Mu is a product of the Microsoft Core UEFI team and is the basis for the system firmware within a number of Microsoft products. It will continue to be maintained to reflect the FW practices and features leveraged for the best experience with Windows and other Microsoft products.</p>
 <p>A secondary purpose is to engage with the community, both in TianoCore and the industry at large. We hope that Project Mu serves as a concrete example for discussing different approaches to managing the challenges faced by the UEFI ecosystem.</p>
-<h2 id="contentstructure">Content/Structure</h2>
-<h3 id="is-this-really-following-less-is-more">Is this really following "Less is More"?</h3>
+<h2 id="contentstructure">Content/Structure<a class="headerlink" href="#contentstructure" title="Permanent link">&para;</a></h2>
+<h3 id="is-this-really-following-less-is-more">Is this really following "Less is More"?<a class="headerlink" href="#is-this-really-following-less-is-more" title="Permanent link">&para;</a></h3>
 <p>Yes.  The idea is lowering the entanglement of code, lowering the coupling, and allowing the product to pick and choose the code it needs.  This means when building any given product, you don't need all the Project Mu code.</p>
-<h3 id="why-are-there-so-many-repos">Why are there so many repos?</h3>
+<h3 id="why-are-there-so-many-repos">Why are there so many repos?<a class="headerlink" href="#why-are-there-so-many-repos" title="Permanent link">&para;</a></h3>
 <p>Project Mu makes liberal use of multiple repositories due to the mixture of requirements in the UEFI ecosystem. Some repos are split for technical reasons, some for organizational, and some for legal.</p>
 <p>For details, see "Repo Philosophy" in <a href="../WhatAndWhy/overview/">What and Why</a>.</p>
                 
@@ -696,7 +754,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../DeveloperDocs/developerdocs/" title="Docs" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../DeveloperDocs/docs_attribution/" title="Doc Framework Attribution" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -705,7 +763,7 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Docs
+                Doc Framework Attribution
               </span>
             </div>
           </a>
@@ -744,6 +802,13 @@
       </div>
       
         
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/microsoft/mu" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
       
     </div>
   </div>

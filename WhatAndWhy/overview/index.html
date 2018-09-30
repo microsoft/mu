@@ -13,6 +13,8 @@
         <meta name="description" content="Project Mu Documentation">
       
       
+        <link rel="canonical" href="https://microsoft.github.io/mu/WhatAndWhy/overview/">
+      
       
       
         <meta name="lang:clipboard.copy" content="Copy to clipboard">
@@ -44,6 +46,12 @@
     
       <link rel="stylesheet" href="../../assets/stylesheets/application.451f80e5.css">
       
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.22915126.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
       
     
     
@@ -61,7 +69,9 @@
     
   </head>
   
-    <body dir="ltr">
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     <svg class="md-svg">
       <defs>
@@ -101,7 +111,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="../.." title="Project Mu" class="md-header-nav__button md-logo">
+        <a href="https://microsoft.github.io/mu/" title="Project Mu" class="md-header-nav__button md-logo">
           
             <img src="../../img/mu.png" width="24" height="24">
           
@@ -197,7 +207,7 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="../.." title="Project Mu" class="md-nav__button md-logo">
+    <a href="https://microsoft.github.io/mu/" title="Project Mu" class="md-nav__button md-logo">
       
         <img src="../../img/mu.png" width="48" height="48">
       
@@ -472,6 +482,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../How/basic_pull_request/" title="Basic Pull Request" class="md-nav__link">
+      Basic Pull Request
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -502,8 +524,44 @@
 
 
   <li class="md-nav__item">
-    <a href="../../DeveloperDocs/developerdocs/" title="Docs" class="md-nav__link">
-      Docs
+    <a href="../../DeveloperDocs/developer_docs/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../DeveloperDocs/build_community_docs/" title="How To Build" class="md-nav__link">
+      How To Build
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../DeveloperDocs/doc_sample_test/" title="Sample Syntax" class="md-nav__link">
+      Sample Syntax
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../DeveloperDocs/docs_attribution/" title="Doc Framework Attribution" class="md-nav__link">
+      Doc Framework Attribution
     </a>
   </li>
 
@@ -611,11 +669,11 @@
                   <a href="https://github.com/microsoft/mu/edit/master/docs/WhatAndWhy/overview.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="overview">Overview</h1>
-<h2 id="project-organization">Project Organization</h2>
+                <h1 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h1>
+<h2 id="project-organization">Project Organization<a class="headerlink" href="#project-organization" title="Permanent link">&para;</a></h2>
 <p>This documentation is hosted in the main repository for Project Mu, which is used as a central collection point for community interaction and documentation. The build system and firmware code for the project is hosted in a number of other repositories, grouped/divided by function, partner, license, and dependencies. Several of these repositories are brought together by the build system to create a FW project, but we'll get into those details later. ;)</p>
 <p>For now, an overview of the repositories and what code you'll find there...</p>
-<h2 id="mu-basecore"><a href="https://github.com/Microsoft/mu_basecore">Mu Basecore</a></h2>
+<h2 id="mu-basecore"><a href="https://github.com/Microsoft/mu_basecore">Mu Basecore</a><a class="headerlink" href="#mu-basecore" title="Permanent link">&para;</a></h2>
 <p>This repository is considered foundational and fundamental to Project Mu. The guiding philosophy is that this code should be one or more of the following:</p>
 <ul>
 <li>Part of the build system</li>
@@ -631,11 +689,11 @@
 </ul>
 </li>
 </ul>
-<h2 id="mu-common-plus"><a href="https://github.com/Microsoft/mu_plus">Mu Common Plus</a></h2>
+<h2 id="mu-common-plus"><a href="https://github.com/Microsoft/mu_plus">Mu Common Plus</a><a class="headerlink" href="#mu-common-plus" title="Permanent link">&para;</a></h2>
 <p>The packages found in this repository are contributed entirely by Project Mu. They should be common to all silicon architectures and only depend on Mu Basecore. These packages provide features and functionality that are entirely optional, but may be recommended for PC platform FW.</p>
-<h2 id="mu-tiano-plus"><a href="https://github.com/Microsoft/mu_tiano_plus">Mu Tiano Plus</a></h2>
+<h2 id="mu-tiano-plus"><a href="https://github.com/Microsoft/mu_tiano_plus">Mu Tiano Plus</a><a class="headerlink" href="#mu-tiano-plus" title="Permanent link">&para;</a></h2>
 <p>This repository contains only modules that were originally sourced from TianoCore. They are not essential for any particular platform, but are likely useful to many platforms. The versions contained in this repo are modified and/or improved to work with the rest of Project Mu.</p>
-<h2 id="repo-philosophy">Repo Philosophy</h2>
+<h2 id="repo-philosophy">Repo Philosophy<a class="headerlink" href="#repo-philosophy" title="Permanent link">&para;</a></h2>
 <p>Project Mu makes liberal use of multiple repositories due to the mixture of requirements in the UEFI ecosystem. Some repos are split for technical reasons, some for organizational, and some for legal. Examples of this are:</p>
 <ul>
 <li>A downstream contributor wants to add a generic feature with a silicon-specific implementation. This feature would be leveraged by Common code. If all code were in one repository, no barries would be in place to prevent the contributor from directly calling from Common code into the Silicon implementation. By forcing the API/interface to be published in a separate repository, we can ensure that the unidirectional dependency relationship is maintained.</li>
@@ -710,6 +768,13 @@
       </div>
       
         
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/microsoft/mu" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
       
     </div>
   </div>

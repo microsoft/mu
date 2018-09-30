@@ -13,6 +13,8 @@
         <meta name="description" content="Project Mu Documentation">
       
       
+        <link rel="canonical" href="https://microsoft.github.io/mu/WhatAndWhy/layout/">
+      
       
       
         <meta name="lang:clipboard.copy" content="Copy to clipboard">
@@ -44,6 +46,12 @@
     
       <link rel="stylesheet" href="../../assets/stylesheets/application.451f80e5.css">
       
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.22915126.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
       
     
     
@@ -61,7 +69,9 @@
     
   </head>
   
-    <body dir="ltr">
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     <svg class="md-svg">
       <defs>
@@ -101,7 +111,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="../.." title="Project Mu" class="md-header-nav__button md-logo">
+        <a href="https://microsoft.github.io/mu/" title="Project Mu" class="md-header-nav__button md-logo">
           
             <img src="../../img/mu.png" width="24" height="24">
           
@@ -197,7 +207,7 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="../.." title="Project Mu" class="md-nav__button md-logo">
+    <a href="https://microsoft.github.io/mu/" title="Project Mu" class="md-nav__button md-logo">
       
         <img src="../../img/mu.png" width="48" height="48">
       
@@ -492,6 +502,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../How/basic_pull_request/" title="Basic Pull Request" class="md-nav__link">
+      Basic Pull Request
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -522,8 +544,44 @@
 
 
   <li class="md-nav__item">
-    <a href="../../DeveloperDocs/developerdocs/" title="Docs" class="md-nav__link">
-      Docs
+    <a href="../../DeveloperDocs/developer_docs/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../DeveloperDocs/build_community_docs/" title="How To Build" class="md-nav__link">
+      How To Build
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../DeveloperDocs/doc_sample_test/" title="Sample Syntax" class="md-nav__link">
+      Sample Syntax
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../DeveloperDocs/docs_attribution/" title="Doc Framework Attribution" class="md-nav__link">
+      Doc Framework Attribution
     </a>
   </li>
 
@@ -651,8 +709,8 @@
                   <a href="https://github.com/microsoft/mu/edit/master/docs/WhatAndWhy/layout.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="dependencies-and-layout">Dependencies and Layout</h1>
-<h2 id="conceptual-layers">Conceptual Layers</h2>
+                <h1 id="dependencies-and-layout">Dependencies and Layout<a class="headerlink" href="#dependencies-and-layout" title="Permanent link">&para;</a></h1>
+<h2 id="conceptual-layers">Conceptual Layers<a class="headerlink" href="#conceptual-layers" title="Permanent link">&para;</a></h2>
 <p>A modern, full-featured, product-ready UEFI firmware codebase combines code from a multitude of sources:</p>
 <ul>
 <li>TianoCore EDK2 UEFI standard-based code</li>
@@ -667,7 +725,7 @@
 <li>etc.</li>
 </ul>
 <p>Some of the above components come from closed-source projects (silicon vendors, IBVs, OEMs), others are open source.  Each component is supported at its own schedule with new features and bugfixes, creating a problem of stale code if not synced up regularly. Compound the version and source problem with the sheer size: a common UEFI codebase is typically well above 1 million LOC and only goes up from there.  </p>
-<h2 id="what-is-a-dependency">What is a dependency</h2>
+<h2 id="what-is-a-dependency">What is a dependency<a class="headerlink" href="#what-is-a-dependency" title="Permanent link">&para;</a></h2>
 <p>To understand the layering you must first understand the terminology.  There are two types of code assets.  </p>
 <ol>
 <li>A definition of something.  Generally, this is defined in an accessible header file.  This is the API provided by some asset.  This API can be "depended" upon to provide some capability.</li>
@@ -676,7 +734,7 @@
 <p><center><img alt="Dependency" src="../../img/dependency.png" /></center></p>
 <p>Example of a dependency: DxeCore in the Basecore layer includes a TimerLib interface.  TimerLib interface is defined in the same Basecore layer as DxeCore, so in this case a Basecore module is depending on a Basecore interface. This is allowed.</p>
 <p>Another example: Silicon-layer module implements a TimerLib interface defined in Basecore.  Here, a Silicon layer module depends on a Basecore interface. This is allowed.</p>
-<h2 id="architecture">Architecture</h2>
+<h2 id="architecture">Architecture<a class="headerlink" href="#architecture" title="Permanent link">&para;</a></h2>
 <p>Project Mu is an attempt to create a rigid layering scheme that defines the hierarchy of dependencies.  Architectural goal kept in mind when designing this layering scheme is a controlled, limited scope, and allowed dependecies for each module within a given layer.  It is important to know, when implementing a module, what the module is allowed to depend on. When creating an interface, it is important to identify the correct layer for it such that all the consuming modules are located in the layers below.</p>
 <p>Motivation and goals of the layering scheme:</p>
 <ul>
@@ -684,14 +742,14 @@
 <li>Code reuse</li>
 <li>Only carry relevant code</li>
 </ul>
-<h2 id="dependency-block-diagram">Dependency Block Diagram</h2>
-<p><img alt="Block Diagram" src="../../img/dependency-layering.png" /></p>
-<h2 id="file-layout">File Layout</h2>
+<h2 id="dependency-block-diagram">Dependency Block Diagram<a class="headerlink" href="#dependency-block-diagram" title="Permanent link">&para;</a></h2>
+<p><img alt="Block Diagram" src="../../img/dependency_layering.png" /></p>
+<h2 id="file-layout">File Layout<a class="headerlink" href="#file-layout" title="Permanent link">&para;</a></h2>
 <p>To best preserve and delineate these concepts of componentization and unidirectional dependency, we have chosen to lay out our repository files in a structure that reinforces the same mentality.</p>
 <p>The underlying logic of this layout is to clearly distinguish each layer from the rest. As such, the Basecore -- which is considered foundational -- is broken out on its own, followed by the Common repos, followed by the Silicon, followed by the Platform. As mentioned elsewhere, Project Mu makes liberal use of multiple repositories due to the mixture of requirements in the firmware ecosystem. Some repos are split for technical reasons, some for organizational, and some for legal. One of the goals of Project Mu is to make this seemingly complicated layout easier to work with.</p>
-<h3 id="min-platform-example">Min Platform Example</h3>
+<h3 id="min-platform-example">Min Platform Example<a class="headerlink" href="#min-platform-example" title="Permanent link">&para;</a></h3>
 <p>A simple tree might look like this...</p>
-<pre><code>project_mu/
+<div class="highlight"><pre><span></span>project_mu/
 ├── Build/
 ├── Common/
 │   └── ...                     # Common code optional, but probably not required
@@ -707,12 +765,12 @@
 ├── .gitignore
 ├── .gitmodules
 └── bootstrap_repo.py
-</code></pre>
+</pre></div>
 
 <p>Note that this file structure is likely located in a Git repository, and every "ALL CAPS" directory in this example is a Git submodule/nested repository.</p>
-<h3 id="surface-laptop-example">Surface Laptop Example</h3>
+<h3 id="surface-laptop-example">Surface Laptop Example<a class="headerlink" href="#surface-laptop-example" title="Permanent link">&para;</a></h3>
 <p>For a real-world example, this is a tree that could build the Surface Laptop product, including both open- and closed-source repositories:</p>
-<pre><code>project_mu/
+<div class="highlight"><pre><span></span>project_mu/
 ├── Build/
 ├── Common/
 │   ├── MSCORE_INTERNAL/        # Proprietary code and code not yet approved for public distribution
@@ -739,7 +797,7 @@
 ├── .gitignore
 ├── .gitmodules
 └── bootstrap_repo.py
-</code></pre>
+</pre></div>
 
 <p>Once again, the "ALL CAPS" directories are submodules.</p>
                 
@@ -810,6 +868,13 @@
       </div>
       
         
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/microsoft/mu" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
       
     </div>
   </div>
