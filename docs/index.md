@@ -1,6 +1,6 @@
 # Welcome to Project Mu
 
-![Greek Mu](img/Project Mu.png)
+![Greek Mu](img/project_mu.png)
 
 Project Mu is a modular adaptation of TianoCore's [edk2](https://github.com/tianocore/edk2) tuned for building modern devices using a scalable, maintainable, and reusable pattern.  Mu is built around the idea that shipping and **maintaining** a UEFI product is an ongoing collaboration between numerous partners.  For too long the industry has built products using a "forking" model combined with copy/paste/rename and with each new product the maintenace burden grows to such a level that updates are near impossible due to cost and risk.  
 
@@ -22,14 +22,14 @@ Today's open source projects although extremely valuable are very resource inten
 
 ## Guiding Principles
 
-* Less is More [*](faq)
+* Less is More [*](faq#is-this-really-following-less-is-more)
 * Be open to change / flexible - Keep learning.  If it was easy this would have been solved before
 * Design for code reuse
 * Leverage tools / invest in automation
 
 ## Navigation
 
-Have a look around this site to see what is Project Mu.  Start by reviewing details of the community and our process.  See how to interact and get involved, why it's different, how to work within or extend it, as well as where everything is located.  Finally explore the [Developer Docs](DeveloperDocs/developerdocs.md) if you want to review more indepth details.  
+Have a look around this site to see what is Project Mu.  Start by reviewing details of the community and our process.  See how to interact and get involved, why it's different, how to work within or extend it, as well as where everything is located.  Finally explore the [Developer Docs](DeveloperDocs/developer_docs.md) if you want to review more indepth details.  
 
 ## Having trouble?
 
@@ -39,26 +39,25 @@ Skim the [FAQ](faq)
 
 ### Days
 
-* Engaging with existing partners to collect feedback
-* Pull Request documentation & gates
-* Automated builds & compile tests of all repos
-* Developer documentation on building & testing
-* Determine communication venue (e.g. email list, Slack, Teams, ...), currently testing MS Teams
+* [ ] Engaging with existing partners to collect feedback
+* [ ] Pull Request documentation & gates
+* [ ] Automated builds & compile tests of all repos
+* [ ] Developer documentation on building & testing
+* [ ] Determine communication venue (e.g. email list, Slack, Teams, ...), currently testing MS Teams
 
 ### Weeks
 
-* Update to latest, stable EDK2 release
-* Automated build & tests on a public platform
-* Automated build & tests on Surface devices
-* Add support for partner-requested compilers 
-* Feature documentation
-* Draft process for security collaboration with partners & Tianocore
-* Documentation on Governance
-* Announce project & evangelize
+* [ ] Update to latest, stable EDK2 release
+* [ ] Automated build & tests on a public platform
+* [ ] Automated build & tests on Surface devices
+* [ ] Feature documentation
+* [ ] Draft process for security collaboration with partners & Tianocore
+* [ ] Documentation on Governance
+* [ ] Announce project & evangelize
 
 ### Months
 
-* Containerized builds
+* [ ] Add support for partner-requested compilers and Containerized builds
 
 ## Join Us
 

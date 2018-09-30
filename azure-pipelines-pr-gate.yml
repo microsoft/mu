@@ -13,7 +13,7 @@ steps:
     versionSpec: '3.7'
     architecture: 'x64'
 
-- script: python -m pip install --upgrade pip mkdocs mkdocs-macros-plugin mkdocs-material
+- script: python -m pip install --upgrade pip mkdocs mkdocs-macros-plugin mkdocs-material pymdown-extensions
   displayName: 'Install tools'
 
 - task: CmdLine@1
