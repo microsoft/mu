@@ -37,4 +37,10 @@ One example:
 Who doesn't love using emojis. Icon usage has shown to help communicate directions and cross language barriers.  
 https://facelessuser.github.io/pymdown-extensions/extensions/emoji/
 
-:smile: :heart: :thumbsup:
+:smile: :alien:
+
+Twitter, github, and emojione tags available.  
+
+### Others
+
+Check out the mkdocs.yml file for other extensions and details can be found in the links above. 

@@ -40,7 +40,7 @@ One great feature of mkdocs is how easy it is to locally serve the docs to valid
 
 ## Conventions and lessons learned
 
-Please update this list as you learn more. 
+Please update this list as you learn more.
 
 1. filenames should all be lowercase.  
 2. filenames should use "_" to separate words and should not have spaces.  

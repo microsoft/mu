@@ -2,6 +2,7 @@ site_name: Project Mu
 repo_url: https://github.com/microsoft/mu
 copyright: Copyright (c) Microsoft.  All rights reserved
 site_description: "Project Mu Documentation"
+site_url: 'https://microsoft.github.io/mu/'
 plugins:
     - search
     - macros
@@ -10,6 +11,17 @@ theme:
   name: 'material'
   custom_dir: 'theme'
   logo: 'img/mu.png'
+  palette:
+    primary: 'indigo'
+    accent: 'indigo'
+
+# Customization
+extra:
+  social:
+    - type: 'github'
+      link: 'https://github.com/microsoft/mu'
+    #- type: 'twitter'
+    #  link: 'https://twitter.com/squidfunk'
 
 #
 # Material theme adds additional capabilities
@@ -23,7 +35,7 @@ markdown_extensions:
   - pymdownx.critic
   - pymdownx.details
   - pymdownx.emoji:
-      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+      emoji_generator: !!python/name:pymdownx.emoji.to_png
   - pymdownx.inlinehilite
   - pymdownx.magiclink
   - pymdownx.mark
@@ -53,6 +65,7 @@ nav:
     - Overview: "DeveloperDocs/developer_docs.md"
     - How To Build: "DeveloperDocs/build_community_docs.md"
     - Sample Syntax: "DeveloperDocs/doc_sample_test.md"
+    - Doc Framework Attribution: "DeveloperDocs/docs_attribution.md"
     # Add Per repo pull request info dynmaicall here
 
   - FAQ: 'faq.md'

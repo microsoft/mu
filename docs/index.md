@@ -39,26 +39,25 @@ Skim the [FAQ](faq)
 
 ### Days
 
-* Engaging with existing partners to collect feedback
-* Pull Request documentation & gates
-* Automated builds & compile tests of all repos
-* Developer documentation on building & testing
-* Determine communication venue (e.g. email list, Slack, Teams, ...), currently testing MS Teams
+* [ ] Engaging with existing partners to collect feedback
+* [ ] Pull Request documentation & gates
+* [ ] Automated builds & compile tests of all repos
+* [ ] Developer documentation on building & testing
+* [ ] Determine communication venue (e.g. email list, Slack, Teams, ...), currently testing MS Teams
 
 ### Weeks
 
-* Update to latest, stable EDK2 release
-* Automated build & tests on a public platform
-* Automated build & tests on Surface devices
-* Add support for partner-requested compilers 
-* Feature documentation
-* Draft process for security collaboration with partners & Tianocore
-* Documentation on Governance
-* Announce project & evangelize
+* [ ] Update to latest, stable EDK2 release
+* [ ] Automated build & tests on a public platform
+* [ ] Automated build & tests on Surface devices
+* [ ] Feature documentation
+* [ ] Draft process for security collaboration with partners & Tianocore
+* [ ] Documentation on Governance
+* [ ] Announce project & evangelize
 
 ### Months
 
-* Containerized builds
+* [ ] Add support for partner-requested compilers and Containerized builds
 
 ## Join Us
 
