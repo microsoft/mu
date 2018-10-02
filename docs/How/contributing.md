@@ -26,7 +26,7 @@ Security issues and bugs should be reported privately, via email, to the Microso
 
 ### Pull Requests
 
-If you don't know what a pull request is read this article: https://help.github.com/articles/using-pull-requests . Make sure the respository can build and all tests pass. Familiarize yourself with the project workflow and our coding conventions.
+If you don't know what a pull request is read this article: https://help.github.com/articles/about-pull-requests . Make sure the repository can build and all tests pass. Familiarize yourself with the project workflow and our coding conventions.
 
 ### Contributor License Agreement (CLA)
 
