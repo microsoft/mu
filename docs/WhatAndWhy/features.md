@@ -12,6 +12,8 @@ What major features does Project Mu bring to the table above/beyond EDK2?
 * PBKDF2-based BIOS password example
 * Microsoft unit test framework
 * Audit, function, & performance tests for platform features
+* Scalable Python build environment
+* Up-to-date Visual Studio compiler support
 * XML Support Package
 
 ### Features Coming Soon
@@ -27,3 +29,6 @@ What major features does Project Mu bring to the table above/beyond EDK2?
 * Heap Guard support
 * Scalable device FMP framework
 * Progress bar for Capsule Updates
+* TCG FV pre hashing optimization
+* NVME shutdown fix
+
