@@ -9,18 +9,21 @@ What major features does Project Mu bring to the table above/beyond EDK2?
 
 * Cross-device, performance-optimized BDS
 * Device Firmware Configuration Interface - enables practical MDM management
+* PBKDF2-based BIOS password example
+* Microsoft unit test framework
+* Audit, function, & performance tests for platform features
 * XML Support Package
-* Microsoft Unit Test Framework
 
 ### Features Coming Soon
 
 * Modern BIOS menu example (Surface inspired)
-* PBKDF2-based BIOS password example
 * On screen keyboard (OSK) with mouse, touch support
 * Infineon TPM firmware update via Capsule
+* On screen notifications: color bars to inform users that a device is not in a production configuration
 
 ### Features integrated into Tiano
 
+* Safe Integer library
+* Heap Guard support
 * Scalable device FMP framework
 * Progress bar for Capsule Updates
-* On screen notifications: color bars to inform users that a device is not in a production configuration
