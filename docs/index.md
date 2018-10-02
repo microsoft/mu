@@ -2,15 +2,15 @@
 
 ![Greek Mu](img/project_mu.png)
 
-Project Mu is a modular adaptation of TianoCore's [edk2](https://github.com/tianocore/edk2) tuned for building modern devices using a scalable, maintainable, and reusable pattern.  Mu is built around the idea that shipping and **maintaining** a UEFI product is an ongoing collaboration between numerous partners.  For too long the industry has built products using a "forking" model combined with copy/paste/rename and with each new product the maintenace burden grows to such a level that updates are near impossible due to cost and risk.  
+Project Mu is a modular adaptation of TianoCore's [edk2](https://github.com/tianocore/edk2) tuned for building modern devices using a scalable, maintainable, and reusable pattern.  Mu is built around the idea that shipping and **maintaining** a UEFI product is an ongoing collaboration between numerous partners.  For too long the industry has built products using a "forking" model combined with copy/paste/rename and with each new product the maintenance burden grows to such a level that updates are near impossible due to cost and risk.  
 
-Project Mu also tries to address the complex business relationships and legal challenges facing partners today.  To build most products it often requires both closed-source, proprietary assets as well as open source and industry standard code.  The distributed build system and multi-repository design allows product teams to keep code separate and connected to their original source while respecting legal and business boundaries.  
+Project Mu also tries to address the complex business relationships and legal challenges facing partners today.  To build most products it often requires both closed-source, proprietary assets as well as open source and industry standard code.  The distributed build system and multi-repository design allow product teams to keep code separate and connected to their original source while respecting legal and business boundaries.  
 
-Project Mu originated from building modern Windows PCs but its patterns and design allows it to be scaled down or up for whatever the final product's intent.  IoT, Server, PC, or any other form factor should be able to leverage the content.  
+Project Mu originated from building modern Windows PCs but its patterns and design allow it to be scaled down or up for whatever the final product's intent.  IoT, Server, PC, or any other form factor should be able to leverage the content.  
 
 ## Primary Goals
 
-Initially this project will focus on two central goals.
+Initially, this project will focus on two central goals.
 
 ### Share our active code tree to both solicit feedback and entice partners to collaborate
 
@@ -29,7 +29,7 @@ Today's open source projects although extremely valuable are very resource inten
 
 ## Navigation
 
-Have a look around this site to see what is Project Mu.  Start by reviewing details of the community and our process.  See how to interact and get involved, why it's different, how to work within or extend it, as well as where everything is located.  Finally explore the [Developer Docs](DeveloperDocs/developer_docs.md) if you want to review more indepth details.  
+Have a look around this site to see what is Project Mu.  Start by reviewing the details of the community and our process.  See how to interact and get involved, why it's different, how to work within or extend it, as well as where everything is located.  Finally, explore the [Developer Docs](DeveloperDocs/developer_docs.md) if you want to review more in-depth details.  
 
 ## Having trouble?
 
