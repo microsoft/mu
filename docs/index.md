@@ -2,7 +2,7 @@
 
 ![Greek Mu](img/project_mu.png)
 
-Project Mu is a modular adaptation of TianoCore's [edk2](https://github.com/tianocore/edk2) tuned for building modern devices using a scalable, maintainable, and reusable pattern.  Mu is built around the idea that shipping and **maintaining** a UEFI product is an ongoing collaboration between numerous partners.  For too long the industry has built products using a "forking" model combined with copy/paste/rename and with each new product the maintenace burden grows to such a level that updates are near impossible due to cost and risk.  
+Project Mu is a modular adaptation of TianoCore's [edk2](https://github.com/tianocore/edk2) tuned for building modern devices using a scalable, maintainable, and reusable pattern.  Mu is built around the idea that shipping and **maintaining** a UEFI product is an ongoing collaboration between numerous partners.  For too long the industry has built products using a "forking" model combined with copy/paste/rename and with each new product the maintenance burden grows to such a level that updates are near impossible due to cost and risk.  
 
 Project Mu also tries to address the complex business relationships and legal challenges facing partners today.  To build most products it often requires both closed-source, proprietary assets as well as open source and industry standard code.  The distributed build system and multi-repository design allows product teams to keep code separate and connected to their original source while respecting legal and business boundaries.  
 
