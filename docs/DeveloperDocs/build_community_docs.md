@@ -11,7 +11,7 @@ First you need to clone the project mu docs repo.
 
 ## Install required tools
 
-1. Install python (Current suggeted version is 3.7.x).  Current min requirement is python 3.4+.  Checkout python.org for directions.
+1. Install python (Current suggested version is 3.7.x).  Current min requirement is python 3.4+.  Checkout python.org for directions.
 2. Install pip.  Generally this is done when installing python but can also be done as its own process.  Details here https://pip.pypa.io/en/stable/installing/#do-i-need-to-install-pip
 3. Update pip. `python -m pip install --upgrade pip`
 4. Install dependencies.
@@ -25,7 +25,7 @@ First you need to clone the project mu docs repo.
 
 ## Build the docs
 
-1. naviage to root of repository (should see a docs folder, the mkdocs.yml file, and a few other things)
+1. navigate to root of repository (should see a docs folder, the mkdocs.yml file, and a few other things)
 2. open command window
 3. run `mkdocs build -s -v`
 4. should complete with no errors
