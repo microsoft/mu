@@ -747,7 +747,7 @@
 <p>Example of a dependency: DxeCore in the Basecore layer includes a TimerLib interface.  TimerLib interface is defined in the same Basecore layer as DxeCore, so in this case a Basecore module is depending on a Basecore interface. This is allowed.</p>
 <p>Another example: Silicon-layer module implements a TimerLib interface defined in Basecore.  Here, a Silicon layer module depends on a Basecore interface. This is allowed.</p>
 <h2 id="architecture">Architecture<a class="headerlink" href="#architecture" title="Permanent link">&para;</a></h2>
-<p>Project Mu is an attempt to create a rigid layering scheme that defines the hierarchy of dependencies.  Architectural goal kept in mind when designing this layering scheme is a controlled, limited scope, and allowed dependecies for each module within a given layer.  It is important to know, when implementing a module, what the module is allowed to depend on. When creating an interface, it is important to identify the correct layer for it such that all the consuming modules are located in the layers below.</p>
+<p>Project Mu is an attempt to create a rigid layering scheme that defines the hierarchy of dependencies.  Architectural goal kept in mind when designing this layering scheme is a controlled, limited scope, and allowed dependencies for each module within a given layer.  It is important to know, when implementing a module, what the module is allowed to depend on. When creating an interface, it is important to identify the correct layer for it such that all the consuming modules are located in the layers below.</p>
 <p>Motivation and goals of the layering scheme:</p>
 <ul>
 <li>Easy component integration</li>
