@@ -16,17 +16,17 @@ First you need to clone the project mu docs repo.
 3. Update pip. `python -m pip install --upgrade pip`
 4. Install dependencies.
 
-``` cmd
-    pip install mkdocs
-    pip install mkdocs-material
-    pip install mkdocs-macros-plugin
-    pip install pymdown-extensions
-```
+    ``` cmd
+        pip install mkdocs
+        pip install mkdocs-material
+        pip install mkdocs-macros-plugin
+        pip install pymdown-extensions
+    ```
 
-5. if wanting to spell check
+5. if wanting to use spell check
 
-  1. Install nodejs from https://nodejs.org/en/
-  2. `npm install -g cspell`
+    1. Install nodejs from https://nodejs.org/en/
+    2. `npm install -g cspell`
 
 ## Build the docs
 
