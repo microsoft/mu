@@ -35,7 +35,7 @@ Have a look around this site to see what is Project Mu.  Start by reviewing deta
 
 Skim the [FAQ](faq)
 
-## Roadmap
+## Road map
 
 ### Days
 
