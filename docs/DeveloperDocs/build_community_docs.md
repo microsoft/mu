@@ -22,6 +22,7 @@ First you need to clone the project mu docs repo.
     pip install mkdocs-macros-plugin
     pip install pymdown-extensions
 ```
+
 5. if wanting to spell check
 
   1. Install nodejs from https://nodejs.org/en/
@@ -34,12 +35,19 @@ First you need to clone the project mu docs repo.
 3. run `mkdocs build -s -v`
 4. should complete with no errors
 
-## Spell check the docs 
+## Spell check the docs
 
 1. navigate to root of repository (should see a docs folder, the mkdocs.yml file, and a few other things)
 2. open command window
 3. run `cspell docs/**/*.md`
 4. should complete with no errors
+
+??? bug "False Spelling Errors"
+    If the spelling error is a false positive there are three solutions:
+
+    1. If its a firmware or UEFI word:  Add the word to the **uefi-words.txt** file
+    2. Add the word to the **cspell.json** config file `words` section
+    3. Update the **cspell.json** file `ignorePaths` element to ignore the entire file.
 
 ## Locally serve the docs
 

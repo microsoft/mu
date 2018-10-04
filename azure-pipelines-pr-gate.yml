@@ -16,8 +16,10 @@ steps:
     #checkLatest: false # Optional
 
 - script: npm install -g cspell
+  displayName: 'Install cspell npm'
 
 - script: cspell docs/**/*.md
+  displayName: 'Spell Check md files'
   
 - task: UsePythonVersion@0
   inputs:
