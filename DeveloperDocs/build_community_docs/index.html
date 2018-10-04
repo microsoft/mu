@@ -530,6 +530,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#spell-check-the-docs" title="Spell check the docs" class="md-nav__link">
+    Spell check the docs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#locally-serve-the-docs" title="Locally serve the docs" class="md-nav__link">
     Locally serve the docs
   </a>
@@ -656,6 +663,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#spell-check-the-docs" title="Spell check the docs" class="md-nav__link">
+    Spell check the docs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#locally-serve-the-docs" title="Locally serve the docs" class="md-nav__link">
     Locally serve the docs
   </a>
@@ -717,6 +731,15 @@ and none of the actual documentation source or tools should have any OS dependen
     pip install pymdown-extensions
 </pre></div>
 
+<ol>
+<li>
+<p>if wanting to spell check</p>
+</li>
+<li>
+<p>Install nodejs from <a href="https://nodejs.org/en/">https://nodejs.org/en/</a></p>
+</li>
+<li><code>npm install -g cspell</code></li>
+</ol>
 <h2 id="build-the-docs">Build the docs<a class="headerlink" href="#build-the-docs" title="Permanent link">&para;</a></h2>
 <ol>
 <li>navigate to root of repository (should see a docs folder, the mkdocs.yml file, and a few other things)</li>
@@ -724,6 +747,20 @@ and none of the actual documentation source or tools should have any OS dependen
 <li>run <code>mkdocs build -s -v</code></li>
 <li>should complete with no errors</li>
 </ol>
+<h2 id="spell-check-the-docs">Spell check the docs<a class="headerlink" href="#spell-check-the-docs" title="Permanent link">&para;</a></h2>
+<ol>
+<li>navigate to root of repository (should see a docs folder, the mkdocs.yml file, and a few other things)</li>
+<li>open command window</li>
+<li>run <code>cspell docs/**/*.md</code></li>
+<li>should complete with no errors</li>
+</ol>
+<details class="bug"><summary>False Spelling Errors</summary><p>If the spelling error is a false positive there are three solutions:</p>
+<ol>
+<li>If its a firmware or UEFI word:  Add the word to the <strong>uefi-words.txt</strong> file</li>
+<li>Add the word to the <strong>cspell.json</strong> config file <code>words</code> section</li>
+<li>Update the <strong>cspell.json</strong> file <code>ignorePaths</code> element to ignore the entire file.</li>
+</ol>
+</details>
 <h2 id="locally-serve-the-docs">Locally serve the docs<a class="headerlink" href="#locally-serve-the-docs" title="Permanent link">&para;</a></h2>
 <p>One great feature of mkdocs is how easy it is to locally serve the docs to validate your changes.</p>
 <ol>
