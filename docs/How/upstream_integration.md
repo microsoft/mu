@@ -1,3 +1,3 @@
-# Upsteam Integration
+# Upstream Integration
 
 ## Tianocore integration

@@ -15,7 +15,7 @@ A modern, full-featured, product-ready UEFI firmware codebase combines code from
 * Board-specific code
 * etc.
 
-Some of the above components come from closed-source projects (silicon vendors, IBVs, OEMs), others are open source.  Each component is supported at its own schedule with new features and bugfixes, creating a problem of stale code if not synced up regularly. Compound the version and source problem with the sheer size: a common UEFI codebase is typically well above 1 million LOC and only goes up from there.  
+Some of the above components come from closed-source projects (silicon vendors, IBVs, OEMs), others are open source.  Each component is supported at its own schedule with new features and bug fixes, creating a problem of stale code if not synced up regularly. Compound the version and source problem with the sheer size: a common UEFI codebase is typically well above 1 million LOC and only goes up from there.  
 
 ## What is a dependency
 
