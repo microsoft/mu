@@ -1,0 +1,14 @@
+uefi
+tiano
+ibv
+ibvs
+oem
+oems
+ACPI
+MSRC
+tianocore
+doxygen
+nvme
+esrt
+Infineon
+pbkdf

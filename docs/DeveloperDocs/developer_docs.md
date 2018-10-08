@@ -4,7 +4,7 @@
 
 Documentation is critical.  There is a steep learning curve in UEFI and no amount of documentation will change that, but at a minimum quick, clear, and easy documentation can help everyone adopt features faster and with higher confidence.  Our documentation system will focus on making this an easy, low friction, and collaborative process.  The pull request process will eventually compel developers to submit documentation whenever they submit new components and refactoring.
 
-Documentation will be done in markdown as this has the benefit of being easily readable in both plain text as well as transformed into a more rich experience. It also is quick to learn and to write. Currently, we leverage mkdocs as our publishing engine but since all content is in markdown it could be transitioned to another engine without significant reinvestment.  
+Documentation will be done in markdown as this has the benefit of being easily readable in both plain text as well as transformed into a richer experience. It also is quick to learn and to write. Currently, we leverage mkdocs as our publishing engine but since all content is in markdown it could be transitioned to another engine without significant reinvestment.  
 
 ## Community documentation
 
