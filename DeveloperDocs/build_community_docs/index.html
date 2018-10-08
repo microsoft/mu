@@ -716,55 +716,66 @@
 and none of the actual documentation source or tools should have any OS dependency.</p>
 </div>
 <h2 id="get-the-docs">Get the docs<a class="headerlink" href="#get-the-docs" title="Permanent link">&para;</a></h2>
-<p>First you need to clone the project mu docs repo.
-  <code>git clone https://github.com/Microsoft/mu.git</code></p>
+<p>First you need to clone the project mu docs repo.</p>
+<div class="codehilite"><pre><span></span>git clone https://github.com/Microsoft/mu.git
+</pre></div>
+
 <h2 id="install-required-tools">Install required tools<a class="headerlink" href="#install-required-tools" title="Permanent link">&para;</a></h2>
 <ol>
 <li>Install python (Current suggested version is 3.7.x).  Current min requirement is python 3.4+.  Checkout python.org for directions.</li>
 <li>Install pip.  Generally this is done when installing python but can also be done as its own process.  Details here <a href="https://pip.pypa.io/en/stable/installing/#do-i-need-to-install-pip">https://pip.pypa.io/en/stable/installing/#do-i-need-to-install-pip</a></li>
-<li>Update pip. <code>python -m pip install --upgrade pip</code></li>
-<li>Install dependencies.</li>
-</ol>
-<div class="highlight"><pre><span></span>    pip install mkdocs
-    pip install mkdocs-material
-    pip install mkdocs-macros-plugin
-    pip install pymdown-extensions
-</pre></div>
-
+<li>Update pip.
+    <div class="codehilite"><pre><span></span>python -m pip install --upgrade pip
+</pre></div></li>
+<li>
+<p>Install dependencies.
+    <div class="codehilite"><pre><span></span>pip install mkdocs
+pip install mkdocs-material
+pip install mkdocs-macros-plugin
+pip install pymdown-extensions
+</pre></div></p>
+</li>
+<li>
+<p>if wanting to use spell check</p>
 <ol>
-<li>
-<p>if wanting to spell check</p>
+<li>Install nodejs from <a href="https://nodejs.org/en/">https://nodejs.org/en/</a></li>
+<li>Install cspell
+    <div class="codehilite"><pre><span></span>npm install -g cspell
+</pre></div></li>
+</ol>
 </li>
-<li>
-<p>Install nodejs from <a href="https://nodejs.org/en/">https://nodejs.org/en/</a></p>
-</li>
-<li><code>npm install -g cspell</code></li>
 </ol>
 <h2 id="build-the-docs">Build the docs<a class="headerlink" href="#build-the-docs" title="Permanent link">&para;</a></h2>
 <ol>
 <li>navigate to root of repository (should see a docs folder, the mkdocs.yml file, and a few other things)</li>
 <li>open command window</li>
-<li>run <code>mkdocs build -s -v</code></li>
+<li>run the build
+    <div class="codehilite"><pre><span></span>mkdocs build -s -v
+</pre></div></li>
 <li>should complete with no errors</li>
 </ol>
 <h2 id="spell-check-the-docs">Spell check the docs<a class="headerlink" href="#spell-check-the-docs" title="Permanent link">&para;</a></h2>
 <ol>
 <li>navigate to root of repository (should see a docs folder, the mkdocs.yml file, and a few other things)</li>
 <li>open command window</li>
-<li>run <code>cspell docs/**/*.md</code></li>
+<li>run command to spell check
+    <div class="codehilite"><pre><span></span>cspell docs/**/*.md
+</pre></div></li>
 <li>should complete with no errors</li>
 </ol>
 <details class="bug"><summary>False Spelling Errors</summary><p>If the spelling error is a false positive there are three solutions:</p>
 <ol>
 <li>If its a firmware or UEFI word:  Add the word to the <strong>uefi-words.txt</strong> file</li>
-<li>Add the word to the <strong>cspell.json</strong> config file <code>words</code> section</li>
-<li>Update the <strong>cspell.json</strong> file <code>ignorePaths</code> element to ignore the entire file.</li>
+<li>Add the word to the <strong>cspell.json</strong> config file <code class="codehilite">words</code> section</li>
+<li>Update the <strong>cspell.json</strong> file <code class="codehilite">ignorePaths</code> element to ignore the entire file.</li>
 </ol>
 </details>
 <h2 id="locally-serve-the-docs">Locally serve the docs<a class="headerlink" href="#locally-serve-the-docs" title="Permanent link">&para;</a></h2>
 <p>One great feature of mkdocs is how easy it is to locally serve the docs to validate your changes.</p>
 <ol>
-<li><code>mkdocs serve</code></li>
+<li>Use mkdocs to serve your local copy
+    <div class="codehilite"><pre><span></span>mkdocs serve
+</pre></div></li>
 <li>navigate to 127.0.0.1:8000 in web browser</li>
 </ol>
 <h2 id="conventions-and-lessons-learned">Conventions and lessons learned<a class="headerlink" href="#conventions-and-lessons-learned" title="Permanent link">&para;</a></h2>

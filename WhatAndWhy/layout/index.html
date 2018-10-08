@@ -761,7 +761,7 @@
 <p>The underlying logic of this layout is to clearly distinguish each layer from the rest. As such, the Basecore -- which is considered foundational -- is broken out on its own, followed by the Common repos, followed by the Silicon, followed by the Platform. As mentioned elsewhere, Project Mu makes liberal use of multiple repositories due to the mixture of requirements in the firmware ecosystem. Some repos are split for technical reasons, some for organizational, and some for legal. One of the goals of Project Mu is to make this seemingly complicated layout easier to work with.</p>
 <h3 id="min-platform-example">Min Platform Example<a class="headerlink" href="#min-platform-example" title="Permanent link">&para;</a></h3>
 <p>A simple tree might look like this...</p>
-<div class="highlight"><pre><span></span>project_mu/
+<div class="codehilite"><pre><span></span>project_mu/
 ├── Build/
 ├── Common/
 │   └── ...                     # Common code optional, but probably not required
@@ -782,7 +782,7 @@
 <p>Note that this file structure is likely located in a Git repository, and every "ALL CAPS" directory in this example is a Git submodule/nested repository.</p>
 <h3 id="surface-laptop-example">Surface Laptop Example<a class="headerlink" href="#surface-laptop-example" title="Permanent link">&para;</a></h3>
 <p>For a real-world example, this is a tree that could build the Surface Laptop product, including both open- and closed-source repositories:</p>
-<div class="highlight"><pre><span></span>project_mu/
+<div class="codehilite"><pre><span></span>project_mu/
 ├── Build/
 ├── Common/
 │   ├── MSCORE_INTERNAL/        # Proprietary code and code not yet approved for public distribution
