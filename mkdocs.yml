@@ -28,6 +28,7 @@ extra:
 #
 markdown_extensions:
   - admonition
+  - codehilite
   #not enabled - pymdownx.arithmatex
   - pymdownx.betterem:
       smart_enable: all

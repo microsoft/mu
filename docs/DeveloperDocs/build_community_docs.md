@@ -7,39 +7,59 @@
 ## Get the docs
 
 First you need to clone the project mu docs repo.
-  `git clone https://github.com/Microsoft/mu.git`
+
+``` cmd
+git clone https://github.com/Microsoft/mu.git
+```
 
 ## Install required tools
 
 1. Install python (Current suggested version is 3.7.x).  Current min requirement is python 3.4+.  Checkout python.org for directions.
 2. Install pip.  Generally this is done when installing python but can also be done as its own process.  Details here https://pip.pypa.io/en/stable/installing/#do-i-need-to-install-pip
-3. Update pip. `python -m pip install --upgrade pip`
+3. Update pip.
+    ``` cmd
+    python -m pip install --upgrade pip
+    ```
 4. Install dependencies.
 
     ``` cmd
-        pip install mkdocs
-        pip install mkdocs-material
-        pip install mkdocs-macros-plugin
-        pip install pymdown-extensions
+    pip install mkdocs
+    pip install mkdocs-material
+    pip install mkdocs-macros-plugin
+    pip install pymdown-extensions
     ```
 
 5. if wanting to use spell check
 
     1. Install nodejs from https://nodejs.org/en/
-    2. `npm install -g cspell`
+    2. Install cspell
+
+        ``` cmd
+        npm install -g cspell
+        ```
 
 ## Build the docs
 
 1. navigate to root of repository (should see a docs folder, the mkdocs.yml file, and a few other things)
 2. open command window
-3. run `mkdocs build -s -v`
+3. run the build
+
+    ``` cmd
+    mkdocs build -s -v
+    ```
+
 4. should complete with no errors
 
 ## Spell check the docs
 
 1. navigate to root of repository (should see a docs folder, the mkdocs.yml file, and a few other things)
 2. open command window
-3. run `cspell docs/**/*.md`
+3. run command to spell check
+
+    ``` cmd
+    cspell docs/**/*.md
+    ```
+
 4. should complete with no errors
 
 ??? bug "False Spelling Errors"
@@ -53,7 +73,12 @@ First you need to clone the project mu docs repo.
 
 One great feature of mkdocs is how easy it is to locally serve the docs to validate your changes.
 
-1. `mkdocs serve`
+1. Use mkdocs to serve your local copy
+
+    ``` cmd
+    mkdocs serve
+    ```
+    
 2. navigate to 127.0.0.1:8000 in web browser
 
 ## Conventions and lessons learned
