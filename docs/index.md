@@ -33,7 +33,7 @@ Have a look around this site to see what is Project Mu.  Start by reviewing deta
 
 ## Having trouble?
 
-Skim the [FAQ](faq)
+Skim the [FAQ](faq.md)
 
 ## Road map
 
