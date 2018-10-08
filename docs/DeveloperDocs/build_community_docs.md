@@ -21,7 +21,6 @@ git clone https://github.com/Microsoft/mu.git
     python -m pip install --upgrade pip
     ```
 4. Install dependencies.
-
     ``` cmd
     pip install mkdocs
     pip install mkdocs-material
@@ -33,7 +32,6 @@ git clone https://github.com/Microsoft/mu.git
 
     1. Install nodejs from https://nodejs.org/en/
     2. Install cspell
-
         ``` cmd
         npm install -g cspell
         ```
@@ -43,11 +41,9 @@ git clone https://github.com/Microsoft/mu.git
 1. navigate to root of repository (should see a docs folder, the mkdocs.yml file, and a few other things)
 2. open command window
 3. run the build
-
     ``` cmd
     mkdocs build -s -v
     ```
-
 4. should complete with no errors
 
 ## Spell check the docs
@@ -55,11 +51,9 @@ git clone https://github.com/Microsoft/mu.git
 1. navigate to root of repository (should see a docs folder, the mkdocs.yml file, and a few other things)
 2. open command window
 3. run command to spell check
-
     ``` cmd
     cspell docs/**/*.md
     ```
-
 4. should complete with no errors
 
 ??? bug "False Spelling Errors"
@@ -74,11 +68,9 @@ git clone https://github.com/Microsoft/mu.git
 One great feature of mkdocs is how easy it is to locally serve the docs to validate your changes.
 
 1. Use mkdocs to serve your local copy
-
     ``` cmd
     mkdocs serve
-    ```
-    
+    ``` 
 2. navigate to 127.0.0.1:8000 in web browser
 
 ## Conventions and lessons learned
