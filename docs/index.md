@@ -39,7 +39,7 @@ Skim the [FAQ](faq)
 
 ### Days
 
-* [ ] Engaging with existing partners to collect feedback
+* [x] Engaging with existing partners to collect feedback
 * [ ] Pull Request documentation & gates
 * [ ] Automated builds & compile tests of all repos
 * [ ] Developer documentation on building & testing
