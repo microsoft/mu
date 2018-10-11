@@ -21,10 +21,7 @@ git clone https://github.com/Microsoft/mu.git
     ```
 4. Install dependencies.
     ``` cmd
-    pip install mkdocs
-    pip install mkdocs-material
-    pip install mkdocs-macros-plugin
-    pip install pymdown-extensions
+    pip install -r requirements.txt
     ```
 
 5. if wanting to use spell check
@@ -69,7 +66,7 @@ One great feature of mkdocs is how easy it is to locally serve the docs to valid
 1. Use mkdocs to serve your local copy
     ``` cmd
     mkdocs serve
-    ``` 
+    ```
 2. navigate to 127.0.0.1:8000 in web browser
 
 ## Conventions and lessons learned
