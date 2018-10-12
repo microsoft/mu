@@ -9,7 +9,6 @@ You can find the documentation at https://microsoft.github.io/mu/.
 We are using [**MkDocs**](https://www.mkdocs.org) to build the documentation.
 
 The following gives you a rough overview how to serve it locally:
-* [Install MkDocs](https://www.mkdocs.org/#installation)
 * Run `pip install -r requirements.txt`
 * Execute `mkbuild serve`
 
