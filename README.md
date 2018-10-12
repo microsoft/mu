@@ -10,7 +10,7 @@ We are using [**MkDocs**](https://www.mkdocs.org) to build the documentation.
 
 The following gives you a rough overview how to serve it locally:
 * Run `pip install -r requirements.txt`
-* Execute `mkbuild serve`
+* Execute `mkdocs serve`
 
 Now you should be able to open http://127.0.0.1:8000 on your machine.
 
