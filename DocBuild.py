@@ -38,52 +38,6 @@ import time
 
 SCRIPT_PATH = os.path.abspath(os.path.dirname(__file__))
 
-yml_template = '''
-site_name: {SiteName}
-repo_url: {RepoUrl}
-copyright: Copyright (c) Microsoft.  All rights reserved
-site_description: Project Mu Documentation
-site_url: {SiteUrl}
-plugins:
-    - search
-    - macros
-
-theme:
-  name: 'material'
-  #custom_dir: 'theme'
- #remove for now logo: 'img/mu.png'
-  palette:
-    primary: 'blue'
-    accent: 'grey'
-
-#
-# Material theme adds additional capabilities
-#
-markdown_extensions:
-  - admonition
-  - codehilite
-  #not enabled - pymdownx.arithmatex
-  - pymdownx.betterem:
-      smart_enable: all
-  - pymdownx.caret
-  - pymdownx.critic
-  - pymdownx.details
-  - pymdownx.emoji:
-      emoji_generator: !!python/name:pymdownx.emoji.to_png
-  - pymdownx.inlinehilite
-  - pymdownx.magiclink
-  - pymdownx.mark
-  - pymdownx.smartsymbols
-  - pymdownx.superfences
-  - pymdownx.tasklist:
-      custom_checkbox: true
-  - pymdownx.tilde
-  - toc:
-      permalink: true
-
-nav:{Nav}
-'''
-
 class MyTree(object):
 
     def __init__(self, Leaf=None):
@@ -111,7 +65,9 @@ class MyTree(object):
         self.Children[name] = t
         return t
 
-
+    #
+    # Make Tree nodes for a given path
+    #
     def AddToTree(self, path, leafvalue):
         if(path == None):
             return
@@ -126,6 +82,9 @@ class MyTree(object):
         
         return
 
+    #
+    # Output yaml for the tree
+    #
     def GetNavYml(self, string, prefix):
         if self.Leaf is not None:
             return string + ' "' + self.Leaf + '"'
@@ -134,14 +93,31 @@ class MyTree(object):
             string1 = "\n" + prefix + "- " + name + ":"
             string2 += cnode.GetNavYml(string1, prefix + "  ")
         return string + string2
-            
+
+    #
+    # Collapse when there is only a single node with a leaf
+    #
+    def Collapse(self):
+        if self.Leaf is not None:
+            return self
+
+        if(len(self.Children) == 1):
+            for (name, cnode) in self.Children.items():
+                l = cnode.Collapse()
+                if(l is not None):
+                    self.Leaf = l.Leaf
+                    self.Children = {}
+        else:
+            for (name, cnode) in self.Children.items():
+                cnode.Collapse()
+        return
         
 
 class DocBuild(object):
     #
     # constructor that creates the DocBuild object 
     #
-    def __init__(self, RootDir, OutputDir):
+    def __init__(self, RootDir, OutputDir, YmlFile):
 
         #Convert RootDir to abs and confirm valid
         if(os.path.isabs(RootDir)):
@@ -152,6 +128,15 @@ class DocBuild(object):
         if(not os.path.isdir(self.RootDirectory)):
             raise Exception("Invalid Path for RootDir: {0}".format(self.RootDirectory))
 
+        #Convert YmlFile to abs and confirm valid
+        if(os.path.isabs(YmlFile)):
+            self.YmlFilePath = YmlFile
+        else:
+            self.YmlFilePath = os.path.join(os.path.abspath(os.getcwd()), YmlFile)
+        self.YmlFilePath = os.path.realpath(self.YmlFilePath)
+        if(not os.path.isfile(self.YmlFilePath)):
+            raise Exception("Invalid Path for YmlFile: {0}".format(self.YmlFilePath))
+
         #Convert OutputDir to abs and then mkdir if necessary
         if(os.path.isabs(OutputDir)):
             self.OutputDirectory = RootDir
@@ -160,10 +145,9 @@ class DocBuild(object):
         self.OutputDirectory = os.path.realpath(self.OutputDirectory)
         if(not os.path.isdir(self.OutputDirectory)):
             logging.debug("Output directory doesn't exist.  Making... {0}".format(self.OutputDirectory))
-            os.mkdir(self.OutputDirectory)
+            os.makedirs(self.OutputDirectory)
         
         self.MdFiles = list()
-        self.MdOutputDirectory = os.path.join(self.OutputDirectory, "docs")
 
 
     def Clean(self):
@@ -192,17 +176,29 @@ class DocBuild(object):
         #Copy Markdown files
         for a in self.MdFiles:
             s = os.path.join(self.RootDirectory, a)
-            p = os.path.join(self.MdOutputDirectory, a)
+            p = os.path.join(self.OutputDirectory, a)
             os.makedirs(os.path.dirname(p), exist_ok=True)
             shutil.copy2(s, p) 
         return 0
 
     def MakeNav(self):
-        navstring = self.__MakeNavTree().GetNavYml("", "  ")
-        ymlfile = os.path.join(self.OutputDirectory, "mkdocs.yml")
-        f = open(ymlfile, "w")
-        f.write(yml_template.format(SiteName="Site Name", RepoUrl="http://test.com", SiteUrl="http://test.com", Nav=navstring))
+        navstring = self.__MakeNavTree().GetNavYml("", "    ")
+        logging.debug("NavString: " + navstring)
+        root = self.__MakeNavTree()
+        root.Collapse()
+        navstring = root.GetNavYml("", "    ")
+        logging.debug("NavString: " + navstring)
+
+        f = open(self.YmlFilePath, "r")
+        ypath = os.path.join(os.path.dirname(self.YmlFilePath), "mkdocs.yml")
+        f2 = open(ypath, 'w')
+        for l in f:
+            f2.write(l)
         f.close()
+        f2.write("\n  - Code Repositories:")
+
+        f2.write(navstring)
+        f2.close()
 
     def __MakeNavTree(self):
 
@@ -210,7 +206,10 @@ class DocBuild(object):
         for a in self.MdFiles:
             string1 = a.replace(os.sep, "/")
             string2 = string1.partition(".")[0]
-            root.AddToTree(string2, string1)
+            root.AddToTree(string2, "dyn/"+ string1)
+        logging.debug(root)
+
+
         return root
 
 def GatherArguments():
@@ -218,6 +217,7 @@ def GatherArguments():
   parser = argparse.ArgumentParser(description='DocBuild ')
   parser.add_argument("--Clean", "--clean", dest="Clean", action="store_true", help="Delete Output Directory", default=False)
   parser.add_argument('--OutputDir', dest="OutputDir", help="<Required>Path to output folder for all docs", required=True)
+  parser.add_argument('--yml', dest="YmlFilePath", help="<Required>Path to yml base file", required=True)
   parser.add_argument('--RootDir', dest="RootDir", help="<Required>Path to Root Directory to search for doc files", required=True)
   parser.add_argument("--OutputLog", dest="OutputLog", help="Create an output log file")
   return parser.parse_args()
@@ -242,7 +242,7 @@ def main():
     logging.info("Log Started: " + datetime.datetime.strftime(datetime.datetime.now(), "%A, %B %d, %Y %I:%M%p" ))
 
     #logging.debug("Script Path is %s" % SCRIPT_PATH)
-    Build = DocBuild(args.RootDir, args.OutputDir)
+    Build = DocBuild(args.RootDir, args.OutputDir, args.YmlFilePath)
     logging.info("Root Directory For Doc Scanning: {0}".format(Build.RootDirectory))
     logging.info("Output Directory For Docs: {0}".format(Build.OutputDirectory))
 

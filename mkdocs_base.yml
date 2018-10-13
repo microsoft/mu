@@ -68,7 +68,5 @@ nav:
     - How To Build: "DeveloperDocs/build_community_docs.md"
     - Sample Syntax: "DeveloperDocs/doc_sample_test.md"
     - Doc Framework Attribution: "DeveloperDocs/docs_attribution.md"
-    # Add Per repo pull request info dynmaicall here
-
   - FAQ: 'faq.md'
   - License: 'license.md'
