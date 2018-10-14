@@ -13,7 +13,7 @@ def declare_variables(variables, macro):
     - macro: a decorator function, to declare a macro.
     """
 
-    variables['version'] = "0.4"
+    variables['version'] = "0.6"
 
     import datetime
     @macro

@@ -9,3 +9,9 @@ __pycache__/
 
 # MkDocs published site
 /site/*
+
+# dynamic markdown
+/docs/dyn
+
+# yml file - build process builds it
+/mkdocs.yml

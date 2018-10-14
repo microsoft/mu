@@ -81,5 +81,6 @@ More details: [Contributing](How/contributing)
 
 Refer to [License](license)
 
-Version: {{version}}  
-Build Time: {{buildtime()}}
+!!! info "Documentation Build Information"
+    Version: {{version}}  
+    Build Time: {{buildtime()}}

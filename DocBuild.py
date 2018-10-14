@@ -35,10 +35,59 @@ import logging
 import shutil
 import datetime
 import time
+import subprocess
+
 
 SCRIPT_PATH = os.path.abspath(os.path.dirname(__file__))
 
-class MyTree(object):
+#
+# Class with basic git support.  Allow data collection from git repo
+#
+class GitSupport(object):
+
+    def get_url(self, path):
+        cmd = "git config --get remote.origin.url"
+        pipe = subprocess.Popen(cmd, shell=True, cwd=path,stdout = subprocess.PIPE,stderr = subprocess.PIPE )
+        (out, error) = pipe.communicate()
+        pipe.wait()
+        return out.decode().strip()
+
+    def get_branch(self, path):        
+        cmd = "git rev-parse --abbrev-ref HEAD"
+        pipe = subprocess.Popen(cmd, shell=True, cwd=path,stdout = subprocess.PIPE,stderr = subprocess.PIPE )
+        (out, error) = pipe.communicate()
+        pipe.wait()
+        return out.decode().strip()
+    
+    def get_commit(self, path):        
+        cmd = "git rev-parse HEAD"
+        pipe = subprocess.Popen(cmd, shell=True, cwd=path,stdout = subprocess.PIPE,stderr = subprocess.PIPE )
+        (out, error) = pipe.communicate()
+        pipe.wait()
+        return out.decode().strip()
+
+    def get_date(self, path, commit):
+        cmd = "git show -s --format=%ci " + commit
+        d = "????"
+        pipe = subprocess.Popen(cmd, shell=True, cwd=path,stdout = subprocess.PIPE,stderr = subprocess.PIPE )
+        (out, error) = pipe.communicate()
+        pipe.wait()
+        return out.decode().strip()
+
+    def make_commit_url(self, commit, url):
+        cl = url
+        if(url.endswith(".git")): #github address scheme
+            cl = url[:-4]
+        return cl + "/commit/" + commit
+
+
+
+
+#
+# Simple Tree object for collecting navigation
+# and outputing in YML format.
+#
+class NavTree(object):
 
     def __init__(self, Leaf=None):
         self.Leaf = Leaf
@@ -53,6 +102,14 @@ class MyTree(object):
                 st += "[" + k + ":" + str(v) + "]" + "\n"
             return st
 
+    #
+    # to support node iteration create function
+    # to return the node.  The returned node could
+    # be a new node or an existing node. 
+    #
+    # name is node name
+    # leaf is md path.  None if intermediate node
+    #
     def GetOrMakeChildNode(self, name, leaf=None):
         if name in self.Children.keys():
             if leaf is not None:
@@ -61,7 +118,7 @@ class MyTree(object):
                 return self.Children[name]
 
         #This is the Make Path
-        t = MyTree(leaf)
+        t = NavTree(leaf)
         self.Children[name] = t
         return t
 
@@ -71,15 +128,11 @@ class MyTree(object):
     def AddToTree(self, path, leafvalue):
         if(path == None):
             return
-        
         p = path.partition("/")  # p[0] = name p[2] = remaining
-
         if( len(p[2]) > 0):
             self.GetOrMakeChildNode(p[0]).AddToTree(p[2], leafvalue)
-
         else:
             self.GetOrMakeChildNode(p[0], leafvalue)
-        
         return
 
     #
@@ -112,8 +165,20 @@ class MyTree(object):
                 cnode.Collapse()
         return
         
-
+#
+# Main class which runs Documentation build work
+# This helps find all markdown files in source trees
+# and copys them to the mkdocs project
+#
+# This also collects repo information and adds to yml
+# file so markdown pages can use the data for display
+#
+# Finally it must create the complex nav structure
+# required for mkdocs
+#
+#
 class DocBuild(object):
+    DYNFOLDER = "dyn"
     #
     # constructor that creates the DocBuild object 
     #
@@ -137,19 +202,26 @@ class DocBuild(object):
         if(not os.path.isfile(self.YmlFilePath)):
             raise Exception("Invalid Path for YmlFile: {0}".format(self.YmlFilePath))
 
-        #Convert OutputDir to abs and then mkdir if necessary
+        #Convert OutputDir to abs and then mkdir if necessary          
         if(os.path.isabs(OutputDir)):
-            self.OutputDirectory = RootDir
+            self.OutputDirectory = OutputDir
         else:
             self.OutputDirectory = os.path.join(os.path.abspath(os.getcwd()), OutputDir)
         self.OutputDirectory = os.path.realpath(self.OutputDirectory)
+
+        if(os.path.basename(self.OutputDirectory) != "docs"):
+            raise Exception("For mkdocs we only support output dir of docs. OutputDir: %s" % self.OutputDirectory)
+        self.OutputDirectory = os.path.join(OutputDir, DocBuild.DYNFOLDER) #set output to the dynamic folder
         if(not os.path.isdir(self.OutputDirectory)):
             logging.debug("Output directory doesn't exist.  Making... {0}".format(self.OutputDirectory))
             os.makedirs(self.OutputDirectory)
         
         self.MdFiles = list()
+        self.Repos = dict()
 
-
+    #
+    # delete the outputdirectory
+    #
     def Clean(self):
         retry = 1  #hack to make rmtree more successful
         while True:
@@ -164,6 +236,14 @@ class DocBuild(object):
                 continue
             break
 
+    #
+    # walk the RootDirectory looking for md files
+    #  #Copy the md files to OutputDirectory
+    #
+    # Also look for git repository roots
+    #  #Collect more data about repos
+    #
+    #
     def CollectDocs(self):
         for top, dirs, files in os.walk(self.RootDirectory):
             dirs = dirs # just for pylint
@@ -172,22 +252,38 @@ class DocBuild(object):
                     rpath = os.path.relpath(os.path.join(top, f), self.RootDirectory)
                     self.MdFiles.append(rpath)
                     logging.debug("md file found: {0}".format(rpath))
+            
+            if(".git" in dirs):
+                #root of git repo
+                name = os.path.basename(top)
+                u = GitSupport().get_url(top)
+                b = GitSupport().get_branch(top)
+                c = GitSupport().get_commit(top)
+                d = GitSupport().get_date(top, c)
+                cl= GitSupport().make_commit_url(c,u)
+                obj = { "url": u, "branch": b, "commit": c, "date": d, "commitlink": cl}
+                self.Repos[name] = obj
+                
 
         #Copy Markdown files
         for a in self.MdFiles:
             s = os.path.join(self.RootDirectory, a)
-            p = os.path.join(self.OutputDirectory, a)
-            os.makedirs(os.path.dirname(p), exist_ok=True)
-            shutil.copy2(s, p) 
+            d = os.path.join(self.OutputDirectory, a)
+            os.makedirs(os.path.dirname(d), exist_ok=True)
+            shutil.copy2(s, d) 
         return 0
 
+    #
+    # Make yml nav output for the dynamic content
+    # Write it to the yml file
+    #
     def MakeNav(self):
-        navstring = self.__MakeNavTree().GetNavYml("", "    ")
-        logging.debug("NavString: " + navstring)
+        #navstring = self.__MakeNavTree().GetNavYml("", "    ")
+        #logging.debug("NavString: " + navstring)
         root = self.__MakeNavTree()
         root.Collapse()
         navstring = root.GetNavYml("", "    ")
-        logging.debug("NavString: " + navstring)
+        #logging.debug("NavString: " + navstring)
 
         f = open(self.YmlFilePath, "r")
         ypath = os.path.join(os.path.dirname(self.YmlFilePath), "mkdocs.yml")
@@ -198,25 +294,47 @@ class DocBuild(object):
         f2.write("\n  - Code Repositories:")
 
         f2.write(navstring)
-        f2.close()
+        self.Yml = f2
 
+    #
+    # Make yml config data for each repo
+    # Write it to the yml file
+    #
+    def MakeRepoInfo(self):
+
+        self.Yml.write("\nextra:\n")
+
+        for (k,v) in self.Repos.items():
+            logging.debug(k + str(v))
+            self.Yml.write("  " + k + ":\n")
+            self.Yml.write("    url: " + v["url"] + "\n")
+            self.Yml.write("    commit: " + v["commit"] + "\n")
+            self.Yml.write("    branch: " + v["branch"] + "\n")
+            self.Yml.write("    commitlink: " + v["commitlink"] + "\n")
+            self.Yml.write("    date: " + v["date"] + "\n")
+        self.Yml.close()
+
+    #
+    # Internal function 
     def __MakeNavTree(self):
-
-        root = MyTree()
+        root = NavTree()
         for a in self.MdFiles:
             string1 = a.replace(os.sep, "/")
             string2 = string1.partition(".")[0]
-            root.AddToTree(string2, "dyn/"+ string1)
+            root.AddToTree(string2, DocBuild.DYNFOLDER+ "/"+ string1)
         logging.debug(root)
-
-
         return root
+
+
+####################################################################################################################################
+### GLOBAL ###
+####################################################################################################################################
 
 def GatherArguments():
   #Arg Parse
   parser = argparse.ArgumentParser(description='DocBuild ')
   parser.add_argument("--Clean", "--clean", dest="Clean", action="store_true", help="Delete Output Directory", default=False)
-  parser.add_argument('--OutputDir', dest="OutputDir", help="<Required>Path to output folder for all docs", required=True)
+  parser.add_argument('--OutputDir', dest="OutputDir", help="<Required>Path to output folder for the mkdocs docs directory", required=True)
   parser.add_argument('--yml', dest="YmlFilePath", help="<Required>Path to yml base file", required=True)
   parser.add_argument('--RootDir', dest="RootDir", help="<Required>Path to Root Directory to search for doc files", required=True)
   parser.add_argument("--OutputLog", dest="OutputLog", help="Create an output log file")
@@ -253,8 +371,9 @@ def main():
     ret = Build.CollectDocs()
     if(ret != 0):
         logging.critical("Failed to collect docs.  Return Code: {0x%x}".format(ret))
-
     Build.MakeNav()
+    Build.MakeRepoInfo()
+
     return 0
 
 if __name__ == '__main__':
