@@ -27,10 +27,10 @@ steps:
     architecture: 'x64'
 
 - script: python -m pip install --upgrade pip
-  displayName: 'Install/Upgrade tools'
+  displayName: 'Install/Upgrade pip'
 
-- script: python -m pip install -r requirements.txt
-  displayName: 'Install dependencies'
+- script: python -m pip install --upgrade -r requirements.txt
+  displayName: 'Install/upgrade dependencies'
 
 - task: CmdLine@1
   displayName: 'build'

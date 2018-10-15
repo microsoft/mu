@@ -81,8 +81,6 @@ class GitSupport(object):
         return cl + "/commit/" + commit
 
 
-
-
 #
 # Simple Tree object for collecting navigation
 # and outputing in YML format.
@@ -143,9 +141,30 @@ class NavTree(object):
             return string + ' "' + self.Leaf + '"'
         string2 = ""
         for (name, cnode) in self.Children.items():
-            string1 = "\n" + prefix + "- " + name + ":"
+            string1 = "\n" + prefix + "- " + self.MakeFriendly(name) + ":"
             string2 += cnode.GetNavYml(string1, prefix + "  ")
         return string + string2
+
+    #
+    # When generating the nav convert visible names
+    # to something more human readable
+    #
+    # Currently support changing snake_case and CamelCase
+    #
+    def MakeFriendly(self, string):
+        string = string.replace("_", " ").strip()
+
+        newstring = ""
+        for i in string:
+            #don't mess with first char
+            if(newstring == ""):
+                newstring += i
+            elif(i.isupper()):
+                newstring += " " + i
+            else:
+                newstring += i
+
+        return newstring
 
     #
     # Collapse when there is only a single node with a leaf
@@ -184,40 +203,49 @@ class DocBuild(object):
     #
     def __init__(self, RootDir, OutputDir, YmlFile):
 
-        #Convert RootDir to abs and confirm valid
-        if(os.path.isabs(RootDir)):
-            self.RootDirectory = RootDir
-        else:
-            self.RootDirectory = os.path.join(os.path.abspath(os.getcwd()), RootDir)
-        self.RootDirectory = os.path.realpath(self.RootDirectory)
-        if(not os.path.isdir(self.RootDirectory)):
-            raise Exception("Invalid Path for RootDir: {0}".format(self.RootDirectory))
-
-        #Convert YmlFile to abs and confirm valid
-        if(os.path.isabs(YmlFile)):
-            self.YmlFilePath = YmlFile
-        else:
-            self.YmlFilePath = os.path.join(os.path.abspath(os.getcwd()), YmlFile)
-        self.YmlFilePath = os.path.realpath(self.YmlFilePath)
-        if(not os.path.isfile(self.YmlFilePath)):
-            raise Exception("Invalid Path for YmlFile: {0}".format(self.YmlFilePath))
-
-        #Convert OutputDir to abs and then mkdir if necessary          
-        if(os.path.isabs(OutputDir)):
-            self.OutputDirectory = OutputDir
-        else:
-            self.OutputDirectory = os.path.join(os.path.abspath(os.getcwd()), OutputDir)
-        self.OutputDirectory = os.path.realpath(self.OutputDirectory)
-
-        if(os.path.basename(self.OutputDirectory) != "docs"):
-            raise Exception("For mkdocs we only support output dir of docs. OutputDir: %s" % self.OutputDirectory)
-        self.OutputDirectory = os.path.join(OutputDir, DocBuild.DYNFOLDER) #set output to the dynamic folder
-        if(not os.path.isdir(self.OutputDirectory)):
-            logging.debug("Output directory doesn't exist.  Making... {0}".format(self.OutputDirectory))
-            os.makedirs(self.OutputDirectory)
-        
+        self.RootDirectory = None
+        self.YmlFilePathBase = None
+        self.YmlFilePathOut = None
+        self.OutputDirectory = None
         self.MdFiles = list()
         self.Repos = dict()
+
+        #Convert RootDir to abs and confirm valid
+        if(RootDir is not None):
+            if(os.path.isabs(RootDir)):
+                self.RootDirectory = RootDir
+            else:
+                self.RootDirectory = os.path.join(os.path.abspath(os.getcwd()), RootDir)
+            self.RootDirectory = os.path.realpath(self.RootDirectory)
+            if(not os.path.isdir(self.RootDirectory)):
+                raise Exception("Invalid Path for RootDir: {0}".format(self.RootDirectory))
+
+        #Convert YmlFile to abs and confirm valid
+        if(YmlFile is not None):
+            if(os.path.isabs(YmlFile)):
+                self.YmlFilePathBase = YmlFile
+            else:
+                self.YmlFilePathBase = os.path.join(os.path.abspath(os.getcwd()), YmlFile)
+            self.YmlFilePathBase = os.path.realpath(self.YmlFilePathBase)
+            if(not os.path.isfile(self.YmlFilePathBase)):
+                raise Exception("Invalid Path for YmlFile: {0}".format(self.YmlFilePathBase))
+            
+            self.YmlFilePathOut = os.path.join(os.path.dirname(self.YmlFilePathBase), "mkdocs.yml")
+
+        #Convert OutputDir to abs and then mkdir if necessary
+        if(OutputDir is not None):        
+            if(os.path.isabs(OutputDir)):
+                self.OutputDirectory = OutputDir
+            else:
+                self.OutputDirectory = os.path.join(os.path.abspath(os.getcwd()), OutputDir)
+            self.OutputDirectory = os.path.realpath(self.OutputDirectory)
+
+            if(os.path.basename(self.OutputDirectory) != "docs"):
+                raise Exception("For mkdocs we only support output dir of docs. OutputDir: %s" % self.OutputDirectory)
+            self.OutputDirectory = os.path.join(OutputDir, DocBuild.DYNFOLDER) #set output to the dynamic folder
+            if(not os.path.isdir(self.OutputDirectory)):
+                logging.debug("Output directory doesn't exist.  Making... {0}".format(self.OutputDirectory))
+                os.makedirs(self.OutputDirectory)
 
     #
     # delete the outputdirectory
@@ -226,7 +254,8 @@ class DocBuild(object):
         retry = 1  #hack to make rmtree more successful
         while True:
             try:
-                shutil.rmtree(self.OutputDirectory)
+                if(self.OutputDirectory is not None and os.path.isdir(self.OutputDirectory)):
+                    shutil.rmtree(self.OutputDirectory)
             except OSError:
                 if not retry:
                     # If we're out of retries, bail.
@@ -236,6 +265,59 @@ class DocBuild(object):
                 continue
             break
 
+        if(os.path.isfile(self.YmlFilePathOut)):
+            os.remove(self.YmlFilePathOut)
+        
+    
+    ###########################################################################################
+    ## Process functions - Start
+    ###########################################################################################
+
+    #
+    # Process md files.  Make folders in output and copy
+    # 
+    # @apath - absolute path to md file
+    #
+    def _ProcessMarkdownFile(self, apath):
+        # Add relative path to list of md files
+        rpath = os.path.relpath(apath, self.RootDirectory)
+        self.MdFiles.append(rpath)
+        logging.debug("md file found: {0}".format(rpath))
+
+        #Copy to output dir
+        s = apath
+        d = os.path.join(self.OutputDirectory, rpath)
+        os.makedirs(os.path.dirname(d), exist_ok=True)
+        shutil.copy2(s, d) 
+
+    #
+    # Process Dec files.  Collect info add add to list
+    #
+    # @apath - absolute path to dec file
+    #
+    def _ProcessEdk2DecFile(self, apath):
+        pass
+
+    #
+    # Process git repo.  Collect git stats
+    #
+    # dirpath - absolute path for root of git directory
+    #
+    def _ProcessGitRepo(self, dirpath):
+        name = os.path.basename(dirpath)
+        u = GitSupport().get_url(dirpath)
+        b = GitSupport().get_branch(dirpath)
+        c = GitSupport().get_commit(dirpath)
+        d = GitSupport().get_date(dirpath, c)
+        cl= GitSupport().make_commit_url(c,u)
+        obj = { "url": u, "branch": b, "commit": c, "date": d, "commitlink": cl}
+        self.Repos[name] = obj
+
+    ###########################################################################################
+    ## Process functions - End
+    ###########################################################################################
+
+
     #
     # walk the RootDirectory looking for md files
     #  #Copy the md files to OutputDirectory
@@ -244,57 +326,52 @@ class DocBuild(object):
     #  #Collect more data about repos
     #
     #
-    def CollectDocs(self):
+    def ProcessRootDir(self):
+        if(self.RootDirectory is None):
+            return
+
         for top, dirs, files in os.walk(self.RootDirectory):
-            dirs = dirs # just for pylint
             for f in files:
                 if f.lower().endswith(".md"):
-                    rpath = os.path.relpath(os.path.join(top, f), self.RootDirectory)
-                    self.MdFiles.append(rpath)
-                    logging.debug("md file found: {0}".format(rpath))
+                    self._ProcessMarkdownFile(os.path.join(top, f))
+                elif f.lower().endswith(".dec"):
+                    self._ProcessEdk2DecFile(os.path.join(top, f))
             
             if(".git" in dirs):
                 #root of git repo
-                name = os.path.basename(top)
-                u = GitSupport().get_url(top)
-                b = GitSupport().get_branch(top)
-                c = GitSupport().get_commit(top)
-                d = GitSupport().get_date(top, c)
-                cl= GitSupport().make_commit_url(c,u)
-                obj = { "url": u, "branch": b, "commit": c, "date": d, "commitlink": cl}
-                self.Repos[name] = obj
-                
-
-        #Copy Markdown files
-        for a in self.MdFiles:
-            s = os.path.join(self.RootDirectory, a)
-            d = os.path.join(self.OutputDirectory, a)
-            os.makedirs(os.path.dirname(d), exist_ok=True)
-            shutil.copy2(s, d) 
+                self._ProcessGitRepo(top)
         return 0
+
+    def MakeYml(self):
+        f = open(self.YmlFilePathBase, "r")
+        f2 = open(self.YmlFilePathOut, 'w')
+        for l in f:
+            f2.write(l)
+        f.close()
+        self.Yml = f2
+
+    def CloseYml(self):
+        if self.Yml is not None:
+            self.Yml.close()
 
     #
     # Make yml nav output for the dynamic content
     # Write it to the yml file
     #
     def MakeNav(self):
+
+        if self.YmlFilePathBase is None:
+            return
+
         #navstring = self.__MakeNavTree().GetNavYml("", "    ")
         #logging.debug("NavString: " + navstring)
-        root = self.__MakeNavTree()
+        root = self._MakeNavTree()
         root.Collapse()
         navstring = root.GetNavYml("", "    ")
         #logging.debug("NavString: " + navstring)
 
-        f = open(self.YmlFilePath, "r")
-        ypath = os.path.join(os.path.dirname(self.YmlFilePath), "mkdocs.yml")
-        f2 = open(ypath, 'w')
-        for l in f:
-            f2.write(l)
-        f.close()
-        f2.write("\n  - Code Repositories:")
-
-        f2.write(navstring)
-        self.Yml = f2
+        self.Yml.write("\n  - Code Repositories:")
+        self.Yml.write(navstring)
 
     #
     # Make yml config data for each repo
@@ -312,11 +389,10 @@ class DocBuild(object):
             self.Yml.write("    branch: " + v["branch"] + "\n")
             self.Yml.write("    commitlink: " + v["commitlink"] + "\n")
             self.Yml.write("    date: " + v["date"] + "\n")
-        self.Yml.close()
 
     #
     # Internal function 
-    def __MakeNavTree(self):
+    def _MakeNavTree(self):
         root = NavTree()
         for a in self.MdFiles:
             string1 = a.replace(os.sep, "/")
@@ -333,11 +409,12 @@ class DocBuild(object):
 def GatherArguments():
   #Arg Parse
   parser = argparse.ArgumentParser(description='DocBuild ')
-  parser.add_argument("--Clean", "--clean", dest="Clean", action="store_true", help="Delete Output Directory", default=False)
-  parser.add_argument('--OutputDir', dest="OutputDir", help="<Required>Path to output folder for the mkdocs docs directory", required=True)
+  parser.add_argument("--Build", "--build", dest="Build", action="store_true", help="Build", default=False)
+  parser.add_argument("--Clean", "--clean", dest="Clean", action="store_true", help="Delete Dynamic Output Directory and Clean Yml", default=False)
+  parser.add_argument('--OutputDir', "--outputdir", "--Outputdir", dest="OutputDir", help="Path to output folder. The mkdocs docs directory.")
   parser.add_argument('--yml', dest="YmlFilePath", help="<Required>Path to yml base file", required=True)
-  parser.add_argument('--RootDir', dest="RootDir", help="<Required>Path to Root Directory to search for doc files", required=True)
-  parser.add_argument("--OutputLog", dest="OutputLog", help="Create an output log file")
+  parser.add_argument('--RootDir', '--rootdir', '--Rootdir', dest="RootDir", help="Path to Root Directory to search for repos and md files.  Only set for dynamic content builds")
+  parser.add_argument('-o', "--OutputLog", '--outputlog', dest="OutputLog", help="Create an output log file")
   return parser.parse_args()
 
 
@@ -365,14 +442,20 @@ def main():
     logging.info("Output Directory For Docs: {0}".format(Build.OutputDirectory))
 
     if(args.Clean):
-        logging.debug("Clean Called.  Deleting all Output Files")
+        logging.critical("Clean")
         Build.Clean()
+    
+    if(not args.Build):
+        return 0
 
-    ret = Build.CollectDocs()
-    if(ret != 0):
-        logging.critical("Failed to collect docs.  Return Code: {0x%x}".format(ret))
-    Build.MakeNav()
-    Build.MakeRepoInfo()
+    logging.critical("Build")
+
+    Build.MakeYml()
+    if(args.OutputDir is not None):
+        Build.ProcessRootDir()
+        Build.MakeNav()
+        Build.MakeRepoInfo()
+    Build.CloseYml()
 
     return 0
 
