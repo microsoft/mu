@@ -354,6 +354,10 @@ class DocBuild(object):
         if self.Yml is not None:
             self.Yml.close()
 
+        with open(self.YmlFilePathOut, 'r') as a:
+            logging.debug("FINAL YML file")
+            logging.debug(a.read())
+
     #
     # Make yml nav output for the dynamic content
     # Write it to the yml file
