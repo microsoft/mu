@@ -328,6 +328,11 @@ class DocBuild(object):
     #
     def ProcessRootDir(self):
         if(self.RootDirectory is None):
+            logging.debug("ProcessRootDir: No RootDirectory set.")
+            return
+
+        if self.OutputDirectory is None:
+            logging.debug("ProcessRootDir: No OutputDirectory set.")
             return
 
         for top, dirs, files in os.walk(self.RootDirectory):
@@ -365,14 +370,20 @@ class DocBuild(object):
     def MakeNav(self):
 
         if self.YmlFilePathBase is None:
+            logging.debug("MakeNav: No YmlFilePathBase set.")
             return
 
-        #navstring = self.__MakeNavTree().GetNavYml("", "    ")
-        #logging.debug("NavString: " + navstring)
+        if self.RootDirectory is None:
+            logging.debug("MakeNav: No RootDirectory set.")
+            return
+
+        if self.OutputDirectory is None:
+            logging.debug("MakeNav: No OutputDirectory set.")
+            return
+
         root = self._MakeNavTree()
         root.Collapse()
         navstring = root.GetNavYml("", "    ")
-        #logging.debug("NavString: " + navstring)
 
         self.Yml.write("\n  - Code Repositories:")
         self.Yml.write(navstring)
@@ -382,6 +393,18 @@ class DocBuild(object):
     # Write it to the yml file
     #
     def MakeRepoInfo(self):
+
+        if self.Yml is None:
+            logging.debug("MakeRepoInfo: No open Yml file.")
+            return
+
+        if self.RootDirectory is None:
+            logging.debug("MakeRepoInfo: No RootDirectory set.")
+            return
+
+        if self.OutputDirectory is None:
+            logging.debug("MakeRepoInfo: No OutputDirectory set.")
+            return
 
         self.Yml.write("\nextra:\n")
 
