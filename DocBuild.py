@@ -68,7 +68,6 @@ class GitSupport(object):
 
     def get_date(self, path, commit):
         cmd = "git show -s --format=%ci " + commit
-        d = "????"
         pipe = subprocess.Popen(cmd, shell=True, cwd=path,stdout = subprocess.PIPE,stderr = subprocess.PIPE )
         (out, error) = pipe.communicate()
         pipe.wait()
