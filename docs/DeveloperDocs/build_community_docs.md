@@ -103,7 +103,6 @@ One great feature of mkdocs is how easy it is to locally serve the docs to valid
     ```
 2. navigate to 127.0.0.1:8000 in web browser
 
-
 ## Conventions and lessons learned
 
 Please update this list as you learn more.
