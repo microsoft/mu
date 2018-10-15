@@ -33,7 +33,7 @@ steps:
   displayName: 'Install/upgrade dependencies'
 
 # For CI build don't use remote repos
-- script: DocBuild.py --clean --build --OutputDir docs --yml mkdocs_base.yml
+- script: python DocBuild.py --clean --build --OutputDir docs --yml mkdocs_base.yml
   displayName: 'Run Preprocess'
 
 - task: CmdLine@1
