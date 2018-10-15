@@ -4,9 +4,9 @@
     Today this process has been validated for use on Windows 10. This setup process is expected to roughly the same on other operating systems
     and none of the actual documentation source or tools should have any OS dependency.
 
-## Get the docs
+## Get the docs repository
 
-First, you need to clone the project mu docs repo.
+First, you need to clone the project mu docs repository.
 ``` cmd
 git clone https://github.com/Microsoft/mu.git
 ```
@@ -21,22 +21,56 @@ git clone https://github.com/Microsoft/mu.git
     ```
 4. Install dependencies.
     ``` cmd
-    pip install -r requirements.txt
+    pip install --upgrade -r requirements.txt
     ```
 
 5. if wanting to use spell check
-
-    1. Install nodejs from https://nodejs.org/en/
-    2. Install cspell
+    * Install nodejs from https://nodejs.org/en/
+    * Install cspell
         ``` cmd
         npm install -g cspell
         ```
+6. Install Git on your path (Required for generating dynamic repo based content during preprocess)
 
-## Build the docs
+## General Suggested documentation workflow
 
-1. navigate to root of repository (should see a docs folder, the mkdocs.yml file, and a few other things)
+1. open two command windows at the root of docs repository  
+    1. Window 1: Use to serve files locally
+        * Use ```mkdocs serve``` 
+        * Any changes from the *DocBuild* process will be picked up and served
+    2. Window 2: Use to preprocess the source repo files
+        * Run the DocBuild.py command from this window
+2. Make changes to the docs in source repos or this repo and then re-run the DocBuild.py build command
+
+## Pre-process with dynamic content from source repo(s)
+
+1. Create "repos" folder (somewhere outside of workspace)
+2. Clone all repositories for dynamic content here
+3. Set each repo to the branch/commit that you want to document
+4. run the *DocBuild.py* command supplying the parameters
+    ```cmd
+    DocBuild.py --clean --build --OutputDir docs --yml mkdocs_base.yml --RootDir ..\repos
+    ```
+
+## Pre-process with no source repo(s) content
+
+1. run the DocBuild.py command supplying minimal parameters
+    ```cmd
+    DocBuild.py --clean --build --yml mkdocs_base.yml
+    ```
+
+## Clean / Remove all pre-processed content
+
+1. use *DocBuild.py* command
+    ```cmd
+    DocBuild.py --clean --yml <path to yml base file> --OutputDir <docs folder>
+    ```
+
+## Use mkdocs to build the docs
+
+1. navigate to root of repository (should see a *docs* folder, the *mkdocs_base.yml* file, and a few other things)
 2. open command window
-3. run the build
+3. run  mkdocs build from cmd prompt at root
     ``` cmd
     mkdocs build -s -v
     ```
@@ -44,7 +78,7 @@ git clone https://github.com/Microsoft/mu.git
 
 ## Spell check the docs
 
-1. navigate to root of repository (should see a docs folder, the mkdocs.yml file, and a few other things)
+1. navigate to root of repository (should see a *docs* folder, the *mkdocs_base.yml* file, and a few other things)
 2. open command window
 3. run command to spell check
     ``` cmd
@@ -75,7 +109,7 @@ Please update this list as you learn more.
 
 1. filenames should all be lowercase.  
 2. filenames should use "_" to separate words and should not have spaces.  
-3. all links to pages are case sensitive (when published to github the server is case sensitive)
+3. all links to pages are case sensitive (when published to GitHub the server is case sensitive)
 4. use a code editor like vscode for markdown.  It has linting support and will identify issues prior to build.
 
 ## Advanced doc features

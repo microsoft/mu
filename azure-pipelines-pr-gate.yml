@@ -27,13 +27,33 @@ steps:
     architecture: 'x64'
 
 - script: python -m pip install --upgrade pip
-  displayName: 'Install/Upgrade tools'
+  displayName: 'Install/Upgrade pip'
 
-- script: python -m pip install -r requirements.txt
-  displayName: 'Install dependencies'
+- script: python -m pip install --upgrade -r requirements.txt
+  displayName: 'Install/upgrade dependencies'
+
+# For CI build don't use remote repos
+- script: python DocBuild.py --clean --build --OutputDir docs --yml mkdocs_base.yml -o pr-gate.log
+  displayName: 'Run Preprocess'
+
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish Artifact: Generated Yml File'
+  inputs:
+    PathtoPublish: 'mkdocs.yml'
+    ArtifactName: 'mkdocs.yml'
+  continueOnError: true
+  condition: succeededOrFailed()
 
 - task: CmdLine@1
   displayName: 'build'
   inputs:
     filename: mkdocs
     arguments: 'build -s -v '
+
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish DocBuild Log'
+  inputs:
+    PathtoPublish: 'pr-gate.log'
+    ArtifactName: 'DocBuild_Pr-Gate.log'
+  continueOnError: true
+  condition: failed()

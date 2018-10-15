@@ -26,4 +26,4 @@ Yes.  The idea is lowering the entanglement of code, lowering the coupling, and 
 
 Project Mu makes liberal use of multiple repositories due to the mixture of requirements in the UEFI ecosystem. Some repos are split for technical reasons, some for organizational, and some for legal.
 
-For details, see "Repo Philosophy" in [What and Why](WhatAndWhy/overview.md).
+For details, see "Repo Philosophy" in [What and Why](WhatAndWhy/overview.md#repo-philosophy).
