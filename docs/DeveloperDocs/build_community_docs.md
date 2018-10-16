@@ -66,6 +66,21 @@ git clone https://github.com/Microsoft/mu.git
     DocBuild.py --clean --yml <path to yml base file> --OutputDir <docs folder>
     ```
 
+## Check for character encoding issues
+
+1. navigate to root of repository (should see a *docs* folder, the *mkdocs_base.yml* file, and a few other things)
+2. open command window
+3. run  Utf8Test python script cmd prompt
+    ``` cmd
+    Utf8Test.py --RootDir docs
+    ```
+4. should complete with no errors
+
+!!! Note
+
+    * Note you can also run it on any dynamic content by using a different *RootDir* parameter.  
+    * Use *-h* for usage to get more detailed information of any failures
+
 ## Use mkdocs to build the docs
 
 1. navigate to root of repository (should see a *docs* folder, the *mkdocs_base.yml* file, and a few other things)
@@ -102,6 +117,9 @@ One great feature of mkdocs is how easy it is to locally serve the docs to valid
     mkdocs serve
     ```
 2. navigate to 127.0.0.1:8000 in web browser
+
+!!! important
+    If you get an error like ```Config file 'mkdocs.yml' does not exist``` you must run the preprocess step.
 
 ## Conventions and lessons learned
 
