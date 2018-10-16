@@ -1,0 +1,2039 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Project Mu Documentation">
+      
+      
+        <link rel="canonical" href="https://microsoft.github.io/mu/dyn/mu_plus/MsCapsuleUpdatePkg/readme/">
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.0.4">
+    
+    
+      
+        <title>Ms Capsule Update Pkg - Project Mu</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/application.451f80e5.css">
+      
+        <link rel="stylesheet" href="../../../../assets/stylesheets/application-palette.22915126.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../../../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../../../assets/fonts/material-icons.css">
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="../../../../#capsule-update-feature" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://microsoft.github.io/mu/" title="Project Mu" class="md-header-nav__button md-logo">
+          
+            <img src="../../../../img/mu.png" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Project Mu
+              </span>
+              <span class="md-header-nav__topic">
+                Ms Capsule Update Pkg
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/microsoft/mu/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://microsoft.github.io/mu/" title="Project Mu" class="md-nav__button md-logo">
+      
+        <img src="../../../../img/mu.png" width="48" height="48">
+      
+    </a>
+    Project Mu
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/microsoft/mu/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      What and Why
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        What and Why
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../WhatAndWhy/overview/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../WhatAndWhy/layout/" title="Dependencies and Layout" class="md-nav__link">
+      Dependencies and Layout
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../WhatAndWhy/features/" title="Features" class="md-nav__link">
+      Features
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Where
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Where
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../Where/project_resources/" title="Project Resources" class="md-nav__link">
+      Project Resources
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../Where/external_resources/" title="External Resources" class="md-nav__link">
+      External Resources
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      How
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        How
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../How/release_process/" title="Release Process" class="md-nav__link">
+      Release Process
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../How/downstream_integration/" title="Downstream Integration" class="md-nav__link">
+      Downstream Integration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../How/contributing/" title="Contributing" class="md-nav__link">
+      Contributing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../How/upstream_integration/" title="Upstream Integration" class="md-nav__link">
+      Upstream Integration
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Developer Docs
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Developer Docs
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../DeveloperDocs/developer_docs/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../DeveloperDocs/build_community_docs/" title="How To Build" class="md-nav__link">
+      How To Build
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../DeveloperDocs/doc_sample_test/" title="Sample Syntax" class="md-nav__link">
+      Sample Syntax
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../DeveloperDocs/docs_attribution/" title="Doc Framework Attribution" class="md-nav__link">
+      Doc Framework Attribution
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../DeveloperDocs/code_requirements/" title="Code Requirements" class="md-nav__link">
+      Code Requirements
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../DeveloperDocs/doc_requirements/" title="Documentation Requirements" class="md-nav__link">
+      Documentation Requirements
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../../faq/" title="FAQ" class="md-nav__link">
+      FAQ
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../../license/" title="License" class="md-nav__link">
+      License
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8" checked>
+    
+    <label class="md-nav__link" for="nav-8">
+      Code Repositories
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        Code Repositories
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-1" type="checkbox" id="nav-8-1">
+    
+    <label class="md-nav__link" for="nav-8-1">
+      mu basecore
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-8-1">
+        mu basecore
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../mu_basecore/Readme/" title="Readme" class="md-nav__link">
+      Readme
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-1-2" type="checkbox" id="nav-8-1-2">
+    
+    <label class="md-nav__link" for="nav-8-1-2">
+      Base Tools
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-8-1-2">
+        Base Tools
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-1-2-1" type="checkbox" id="nav-8-1-2-1">
+    
+    <label class="md-nav__link" for="nav-8-1-2-1">
+      Scripts
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-8-1-2-1">
+        Scripts
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../mu_basecore/BaseTools/Scripts/PackageDocumentTools/Readme/" title="Package Document Tools" class="md-nav__link">
+      Package Document Tools
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-1-2-2" type="checkbox" id="nav-8-1-2-2">
+    
+    <label class="md-nav__link" for="nav-8-1-2-2">
+      Source
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-8-1-2-2">
+        Source
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-1-2-2-1" type="checkbox" id="nav-8-1-2-2-1">
+    
+    <label class="md-nav__link" for="nav-8-1-2-2-1">
+      C
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+      <label class="md-nav__title" for="nav-8-1-2-2-1">
+        C
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../mu_basecore/BaseTools/Source/C/BrotliCompress/" title="Brotli Compress" class="md-nav__link">
+      Brotli Compress
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-1-2-2-2" type="checkbox" id="nav-8-1-2-2-2">
+    
+    <label class="md-nav__link" for="nav-8-1-2-2-2">
+      Python
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+      <label class="md-nav__title" for="nav-8-1-2-2-2">
+        Python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../mu_basecore/BaseTools/Source/Python/Pkcs7Sign/Readme/" title="Pkcs7 Sign" class="md-nav__link">
+      Pkcs7 Sign
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-1-3" type="checkbox" id="nav-8-1-3">
+    
+    <label class="md-nav__link" for="nav-8-1-3">
+      Mde Module Pkg
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-8-1-3">
+        Mde Module Pkg
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-1-3-1" type="checkbox" id="nav-8-1-3-1">
+    
+    <label class="md-nav__link" for="nav-8-1-3-1">
+      Library
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-8-1-3-1">
+        Library
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../mu_basecore/MdeModulePkg/Library/BrotliCustomDecompressLib/" title="Brotli Custom Decompress Lib" class="md-nav__link">
+      Brotli Custom Decompress Lib
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../mu_basecore/MsUnitTestPkg/ReadMe/" title="Ms Unit Test Pkg" class="md-nav__link">
+      Ms Unit Test Pkg
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-1-5" type="checkbox" id="nav-8-1-5">
+    
+    <label class="md-nav__link" for="nav-8-1-5">
+      Uefi Build
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-8-1-5">
+        Uefi Build
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-1-5-1" type="checkbox" id="nav-8-1-5-1">
+    
+    <label class="md-nav__link" for="nav-8-1-5-1">
+      Nuget Publishing
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-8-1-5-1">
+        Nuget Publishing
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../mu_basecore/UefiBuild/NugetPublishing/iasl/" title="iasl" class="md-nav__link">
+      iasl
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../mu_basecore/UefiBuild/NugetPublishing/Mu-Basetools-Win32/" title="Mu- Basetools- Win32" class="md-nav__link">
+      Mu- Basetools- Win32
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../mu_basecore/UefiBuild/NugetPublishing/Mu-Nasm/" title="Mu- Nasm" class="md-nav__link">
+      Mu- Nasm
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../mu_basecore/UefiBuild/NugetPublishing/ReadMe/" title="Read Me" class="md-nav__link">
+      Read Me
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-1-5-2" type="checkbox" id="nav-8-1-5-2">
+    
+    <label class="md-nav__link" for="nav-8-1-5-2">
+      plugin
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-8-1-5-2">
+        plugin
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../mu_basecore/UefiBuild/plugin/FdSizeReport/ReadMe/" title="Fd Size Report" class="md-nav__link">
+      Fd Size Report
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../mu_basecore/UefiBuild/plugin/OverrideValidation/ReadMe/" title="Override Validation" class="md-nav__link">
+      Override Validation
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-2" type="checkbox" id="nav-8-2" checked>
+    
+    <label class="md-nav__link" for="nav-8-2">
+      mu plus
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-8-2">
+        mu plus
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Readme/" title="Readme" class="md-nav__link">
+      Readme
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-2-2" type="checkbox" id="nav-8-2-2">
+    
+    <label class="md-nav__link" for="nav-8-2-2">
+      Dfci Pkg
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-8-2-2">
+        Dfci Pkg
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../DfciPkg/docs/feature/" title="docs" class="md-nav__link">
+      docs
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Ms Capsule Update Pkg
+      </label>
+    
+    <a href="./" title="Ms Capsule Update Pkg" class="md-nav__link md-nav__link--active">
+      Ms Capsule Update Pkg
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#copyright" title="Copyright" class="md-nav__link">
+    Copyright
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#about" title="About" class="md-nav__link">
+    About
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modulesdrivers" title="Modules/Drivers" class="md-nav__link">
+    Modules/Drivers
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#efisystemresourcetabledxeinf" title="EfiSystemResourceTableDxe.inf" class="md-nav__link">
+    EfiSystemResourceTableDxe.inf
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#libraries" title="Libraries" class="md-nav__link">
+    Libraries
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fmpwrapperdevicelibinf" title="FmpWrapperDeviceLib.inf" class="md-nav__link">
+    FmpWrapperDeviceLib.inf
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dxecapsulelibinf" title="DxeCapsuleLib.inf" class="md-nav__link">
+    DxeCapsuleLib.inf
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#displayupdateprogresstextlibinf" title="DisplayUpdateProgressTextLib.inf" class="md-nav__link">
+    DisplayUpdateProgressTextLib.inf
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#displayupdateprogressgraphicslibinf" title="DisplayUpdateProgressGraphicsLib.inf" class="md-nav__link">
+    DisplayUpdateProgressGraphicsLib.inf
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capsuleupdatepolicylibnullinf" title="CapsuleUpdatePolicyLibNull.inf" class="md-nav__link">
+    CapsuleUpdatePolicyLibNull.inf
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fmppolicydxelibinf" title="FmpPolicyDxeLib.inf" class="md-nav__link">
+    FmpPolicyDxeLib.inf
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#basebmpsupportlibinf" title="BaseBmpSupportLib.inf" class="md-nav__link">
+    BaseBmpSupportLib.inf
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fmphelperdxelibinf" title="FmpHelperDxeLib.inf" class="md-nav__link">
+    FmpHelperDxeLib.inf
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#msfmppayloadheaderv1dxelibinf" title="MsFmpPayloadHeaderV1DxeLib.inf" class="md-nav__link">
+    MsFmpPayloadHeaderV1DxeLib.inf
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mscapsuleupdatepkgmscapsuleupdatepkgdsc-mscapsuleupdatepkgmscapsuleupdatepkgdec" title="MsCapsuleUpdatePkg\MsCapsuleUpdatePkg.dsc &amp; MsCapsuleUpdatePkg\MsCapsuleUpdatePkg.dec" class="md-nav__link">
+    MsCapsuleUpdatePkg\MsCapsuleUpdatePkg.dsc &amp; MsCapsuleUpdatePkg\MsCapsuleUpdatePkg.dec
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitations" title="Limitations" class="md-nav__link">
+    Limitations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feedback" title="Feedback" class="md-nav__link">
+    Feedback
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MsCorePkg/ReadMe/" title="Ms Core Pkg" class="md-nav__link">
+      Ms Core Pkg
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-2-5" type="checkbox" id="nav-8-2-5">
+    
+    <label class="md-nav__link" for="nav-8-2-5">
+      Uefi Testing Pkg
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-8-2-5">
+        Uefi Testing Pkg
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../UefiTestingPkg/Readme/" title="Readme" class="md-nav__link">
+      Readme
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-2-5-2" type="checkbox" id="nav-8-2-5-2">
+    
+    <label class="md-nav__link" for="nav-8-2-5-2">
+      Audit Tests
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-8-2-5-2">
+        Audit Tests
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../UefiTestingPkg/AuditTests/PagingAudit/" title="Paging Audit" class="md-nav__link">
+      Paging Audit
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-2-5-3" type="checkbox" id="nav-8-2-5-3">
+    
+    <label class="md-nav__link" for="nav-8-2-5-3">
+      Functional System Tests
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-8-2-5-3">
+        Functional System Tests
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../UefiTestingPkg/FunctionalSystemTests/HeapGuardTest/Readme/" title="Heap Guard Test" class="md-nav__link">
+      Heap Guard Test
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../UefiTestingPkg/FunctionalSystemTests/SmmPagingProtectionsTest/Readme/" title="Smm Paging Protections Test" class="md-nav__link">
+      Smm Paging Protections Test
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../XmlSupportPkg/ReadMe/" title="Xml Support Pkg" class="md-nav__link">
+      Xml Support Pkg
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../mu_silicon_arm_tiano/Readme/" title="mu silicon arm tiano" class="md-nav__link">
+      mu silicon arm tiano
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-4" type="checkbox" id="nav-8-4">
+    
+    <label class="md-nav__link" for="nav-8-4">
+      mu silicon intel tiano
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-8-4">
+        mu silicon intel tiano
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../mu_silicon_intel_tiano/Readme/" title="Readme" class="md-nav__link">
+      Readme
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-4-2" type="checkbox" id="nav-8-4-2">
+    
+    <label class="md-nav__link" for="nav-8-4-2">
+      Intel Silicon Pkg
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-8-4-2">
+        Intel Silicon Pkg
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-4-2-1" type="checkbox" id="nav-8-4-2-1">
+    
+    <label class="md-nav__link" for="nav-8-4-2-1">
+      Feature
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-8-4-2-1">
+        Feature
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-4-2-1-1" type="checkbox" id="nav-8-4-2-1-1">
+    
+    <label class="md-nav__link" for="nav-8-4-2-1-1">
+      Capsule
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+      <label class="md-nav__title" for="nav-8-4-2-1-1">
+        Capsule
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../mu_silicon_intel_tiano/IntelSiliconPkg/Feature/Capsule/MicrocodeCapsulePdb/Readme/" title="Microcode Capsule Pdb" class="md-nav__link">
+      Microcode Capsule Pdb
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../mu_silicon_intel_tiano/IntelSiliconPkg/Feature/Capsule/MicrocodeCapsuleTxt/Readme/" title="Microcode Capsule Txt" class="md-nav__link">
+      Microcode Capsule Txt
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-5" type="checkbox" id="nav-8-5">
+    
+    <label class="md-nav__link" for="nav-8-5">
+      mu tiano plus
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-8-5">
+        mu tiano plus
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../mu_tiano_plus/Readme/" title="Readme" class="md-nav__link">
+      Readme
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-5-2" type="checkbox" id="nav-8-5-2">
+    
+    <label class="md-nav__link" for="nav-8-5-2">
+      Crypto Pkg
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-8-5-2">
+        Crypto Pkg
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-5-2-1" type="checkbox" id="nav-8-5-2-1">
+    
+    <label class="md-nav__link" for="nav-8-5-2-1">
+      Library
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-8-5-2-1">
+        Library
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-5-2-1-1" type="checkbox" id="nav-8-5-2-1-1">
+    
+    <label class="md-nav__link" for="nav-8-5-2-1-1">
+      Openssl Lib
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+      <label class="md-nav__title" for="nav-8-5-2-1-1">
+        Openssl Lib
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-5-2-1-1-1" type="checkbox" id="nav-8-5-2-1-1-1">
+    
+    <label class="md-nav__link" for="nav-8-5-2-1-1-1">
+      openssl
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="6">
+      <label class="md-nav__title" for="nav-8-5-2-1-1-1">
+        openssl
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/fuzz/" title="fuzz" class="md-nav__link">
+      fuzz
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/test/README.ssltest/" title="test" class="md-nav__link">
+      test
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../mu_tiano_plus/SignedCapsulePkg/Readme/" title="Signed Capsule Pkg" class="md-nav__link">
+      Signed Capsule Pkg
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#copyright" title="Copyright" class="md-nav__link">
+    Copyright
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#about" title="About" class="md-nav__link">
+    About
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modulesdrivers" title="Modules/Drivers" class="md-nav__link">
+    Modules/Drivers
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#efisystemresourcetabledxeinf" title="EfiSystemResourceTableDxe.inf" class="md-nav__link">
+    EfiSystemResourceTableDxe.inf
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#libraries" title="Libraries" class="md-nav__link">
+    Libraries
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fmpwrapperdevicelibinf" title="FmpWrapperDeviceLib.inf" class="md-nav__link">
+    FmpWrapperDeviceLib.inf
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dxecapsulelibinf" title="DxeCapsuleLib.inf" class="md-nav__link">
+    DxeCapsuleLib.inf
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#displayupdateprogresstextlibinf" title="DisplayUpdateProgressTextLib.inf" class="md-nav__link">
+    DisplayUpdateProgressTextLib.inf
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#displayupdateprogressgraphicslibinf" title="DisplayUpdateProgressGraphicsLib.inf" class="md-nav__link">
+    DisplayUpdateProgressGraphicsLib.inf
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capsuleupdatepolicylibnullinf" title="CapsuleUpdatePolicyLibNull.inf" class="md-nav__link">
+    CapsuleUpdatePolicyLibNull.inf
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fmppolicydxelibinf" title="FmpPolicyDxeLib.inf" class="md-nav__link">
+    FmpPolicyDxeLib.inf
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#basebmpsupportlibinf" title="BaseBmpSupportLib.inf" class="md-nav__link">
+    BaseBmpSupportLib.inf
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fmphelperdxelibinf" title="FmpHelperDxeLib.inf" class="md-nav__link">
+    FmpHelperDxeLib.inf
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#msfmppayloadheaderv1dxelibinf" title="MsFmpPayloadHeaderV1DxeLib.inf" class="md-nav__link">
+    MsFmpPayloadHeaderV1DxeLib.inf
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mscapsuleupdatepkgmscapsuleupdatepkgdsc-mscapsuleupdatepkgmscapsuleupdatepkgdec" title="MsCapsuleUpdatePkg\MsCapsuleUpdatePkg.dsc &amp; MsCapsuleUpdatePkg\MsCapsuleUpdatePkg.dec" class="md-nav__link">
+    MsCapsuleUpdatePkg\MsCapsuleUpdatePkg.dsc &amp; MsCapsuleUpdatePkg\MsCapsuleUpdatePkg.dec
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitations" title="Limitations" class="md-nav__link">
+    Limitations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feedback" title="Feedback" class="md-nav__link">
+    Feedback
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/microsoft/mu/edit/master/docs/dyn/mu_plus/MsCapsuleUpdatePkg/readme.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="capsule-update-feature">Capsule Update Feature<a class="headerlink" href="#capsule-update-feature" title="Permanent link">&para;</a></h1>
+<h2 id="copyright">Copyright<a class="headerlink" href="#copyright" title="Permanent link">&para;</a></h2>
+<p>Copyright &copy; 2016, Microsoft Corporation</p>
+<p>All rights reserved. Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</p>
+<p>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</p>
+<h2 id="about">About<a class="headerlink" href="#about" title="Permanent link">&para;</a></h2>
+<p><strong>MsCapsuleUpdatePkg</strong> Package is an environment that implements:
+1.  Processing of (signed) UEFI capsules at boot time and runtime
+2.  Scalable FMP architecture
+3.  Support for FMP capsules
+4.  Support for Windows Firmware Update Display capsules
+5.  Firmware update progress display (text or graphical)
+6.  Capsule update and FMP policies
+7.  Support for multiple capsule verification certificates
+8.  ESRT support</p>
+<p>Note: this package provides the entire framework for updating device firmwares via capsules.  No actual device firmware is updated or attempted to be updated by this implementation.</p>
+<h2 id="modulesdrivers">Modules/Drivers<a class="headerlink" href="#modulesdrivers" title="Permanent link">&para;</a></h2>
+<h3 id="efisystemresourcetabledxeinf">EfiSystemResourceTableDxe.inf<a class="headerlink" href="#efisystemresourcetabledxeinf" title="Permanent link">&para;</a></h3>
+<p>Implementation: MsCapsuleUpdatePkg\Universal\EsrtDxe</p>
+<p>This driver adds EFI System Resource Table (ESRT) to the System Configuration Tables.  It prints the entire ESRT table at debug output.  This driver is added to the DSC and FDF files.</p>
+<p>This driver implementation differs from EDK2's implementation in that it simply cosumes all FMP instances (<code class="codehilite">gEfiFirmwareManagementProtocolGuid</code>) and creates an ESRT entry for each FMP instance.</p>
+<h2 id="libraries">Libraries<a class="headerlink" href="#libraries" title="Permanent link">&para;</a></h2>
+<h3 id="fmpwrapperdevicelibinf">FmpWrapperDeviceLib.inf<a class="headerlink" href="#fmpwrapperdevicelibinf" title="Permanent link">&para;</a></h3>
+<p>LIBRARY_CLASS: <code class="codehilite">FmpWrapperDeviceLib</code></p>
+<p>Definition: MsCapsuleUpdatePkg\Include\Library\FmpWrapperDeviceLib.h</p>
+<p>Implementation: MsCapsuleUpdatePkg\Library\FmpWrapperDeviceLib.inf</p>
+<p>Implements common code included by all FMP wrapper drivers.</p>
+<p>In a scalable FMP architecture, there are one or more FMP wrapper drivers (e.g., for UEFI, ME, FW, etc.), each referring to its own FMP library instance, Device GUID, Device Name, Lowest Supported Version and update progress display color in the DSC file.</p>
+<p>Following is an example of relationship between an FMP driver and libraries:</p>
+<div class="codehilite"><pre><span></span><span class="n">SampleDeviceLibWrapperFMP</span><span class="p">.</span><span class="n">inf</span>   <span class="p">(</span><span class="n">FMP</span> <span class="n">driver</span> <span class="n">which</span> <span class="n">is</span> <span class="n">just</span> <span class="n">a</span> <span class="n">wrapper</span><span class="p">)</span>
+           <span class="o">|</span>
+           <span class="n">v</span>
+<span class="n">FmpWrapperDeviceLib</span><span class="p">.</span><span class="n">inf</span>         <span class="p">(</span><span class="n">this</span> <span class="n">common</span><span class="o">-</span><span class="n">code</span> <span class="n">library</span> <span class="n">included</span> <span class="n">by</span> <span class="n">the</span> <span class="n">FMP</span> <span class="n">driver</span><span class="p">)</span>
+           <span class="o">|</span>
+           <span class="n">v</span>
+<span class="n">SampleFmpDeviceLib</span><span class="p">.</span><span class="n">inf</span>          <span class="p">(</span><span class="n">FMP</span> <span class="n">instance</span> <span class="n">unique</span> <span class="n">to</span> <span class="n">this</span> <span class="n">FMP</span> <span class="n">driver</span> <span class="n">and</span> <span class="n">implements</span> <span class="n">all</span> <span class="n">the</span> <span class="n">required</span> <span class="n">hooks</span><span class="p">)</span>
+</pre></div>
+
+<h3 id="dxecapsulelibinf">DxeCapsuleLib.inf<a class="headerlink" href="#dxecapsulelibinf" title="Permanent link">&para;</a></h3>
+<p>LIBRARY_CLASS: <code class="codehilite">CapsuleLib</code></p>
+<p>Definition: MdeModulePkg\Include\Library\CapsuleLib.h</p>
+<p>Implementation: MsCapsuleUpdatePkg\Library\DxeCapsuleLib</p>
+<p>Implements entry points for processing capsules at boot time and runtime.</p>
+<p><code class="codehilite">ProcessCapsules()</code> is an entry point for processing FMP and Windows Firmware Update Display capsules at boot time.</p>
+<p><code class="codehilite">ProcessCapsuleImage()</code> is an entry point for processing FMP and Windows Firmware Update Display capsules at runtime.</p>
+<p>This library implementation is similar to EDK2's implementation, but with following differences/additions: not supporting drivers embedded in the capsule and only supporting one payload per capsule.</p>
+<h3 id="displayupdateprogresstextlibinf">DisplayUpdateProgressTextLib.inf<a class="headerlink" href="#displayupdateprogresstextlibinf" title="Permanent link">&para;</a></h3>
+<p>LIBRARY_CLASS: <code class="codehilite">DisplayUpdateProgressLib</code></p>
+<p>Definition: MsCapsuleUpdatePkg\Include\Library\DisplayUpdateProgressLib.h</p>
+<p>Implementation: MsCapsuleUpdatePkg\Library\DisplayUpdateProgressTextLib</p>
+<p>Implements <code class="codehilite">DisplayUpdateProgress()</code> to display firmware update progress in text at console out.  It is called from DxeCapsuleLib.inf.</p>
+<h3 id="displayupdateprogressgraphicslibinf">DisplayUpdateProgressGraphicsLib.inf<a class="headerlink" href="#displayupdateprogressgraphicslibinf" title="Permanent link">&para;</a></h3>
+<p>LIBRARY_CLASS: <code class="codehilite">DisplayUpdateProgressLib</code></p>
+<p>Definition: MsCapsuleUpdatePkg\Include\Library\DisplayUpdateProgressLib.h</p>
+<p>Implementation: MsCapsuleUpdatePkg\Library\DisplayUpdateProgressGraphicsLib</p>
+<p>Implements <code class="codehilite">DisplayUpdateProgress()</code> to display firmware update progress in graphics (progress bar) at console out.  It is called from DxeCapsuleLib.inf.</p>
+<p>This library requires a new protocol <code class="codehilite">gEfiBootLogoProtocol2Guid</code>, which is defined by this implementation in MdeModulePkg\Include\Protocol\BootLogo2.h.  MdeModulePkg\Universal\Acpi\BootGraphicsResourceTableDxe\BootGraphicsResourceTableDxe.inf driver has been changed to publish this new protocol and consequently is added to the DSC and FDF file.  MdeModulePkg\Library\BootLogoLib\BootLogoLib.inf driver has been changed to set boot logo data, which is then consumed by this library.</p>
+<h3 id="capsuleupdatepolicylibnullinf">CapsuleUpdatePolicyLibNull.inf<a class="headerlink" href="#capsuleupdatepolicylibnullinf" title="Permanent link">&para;</a></h3>
+<p>LIBRARY_CLASS: <code class="codehilite">CapsuleUpdatePolicyLib</code></p>
+<p>Definition: MsCapsuleUpdatePkg\Include\Library\CapsuleUpdatePolicyLib.h</p>
+<p>Implementation: MsCapsuleUpdatePkg\Library\CapsuleUpdatePolicyLibNull</p>
+<p>Implements (null) interface for checking update policies such as power, thermal and system environment while updating device firmware.  It is called from FmpWrapperDeviceLib.inf library.</p>
+<h3 id="fmppolicydxelibinf">FmpPolicyDxeLib.inf<a class="headerlink" href="#fmppolicydxelibinf" title="Permanent link">&para;</a></h3>
+<p>LIBRARY_CLASS: <code class="codehilite">FmpPolicyLib</code></p>
+<p>Definition: MsCapsuleUpdatePkg\Include\Library\FmpPolicyLib.h</p>
+<p>Implementation: MsCapsuleUpdatePkg\Library\FmpPolicyLib</p>
+<p>Implements (null) interface for FMP policies such as whether to check for Lowest Supported Version (LSV) or to lock FMP device at ReadyToBoot event.  This sample implementation will be replaced by platform specific implementation.</p>
+<h3 id="basebmpsupportlibinf">BaseBmpSupportLib.inf<a class="headerlink" href="#basebmpsupportlibinf" title="Permanent link">&para;</a></h3>
+<p>LIBRARY_CLASS: <code class="codehilite">BmpSupportLib</code></p>
+<p>Definition: MdeModulePkg\Include\Library\BmpSupportLib.h</p>
+<p>Implementation: MsCapsuleUpdatePkg\Library\BaseBmpSupportLib</p>
+<p>Converts BMP graphics image to GOP blt.  It is called from DxeCapsuleLib.inf when processing Windows Firmware Update Display capsules.</p>
+<h3 id="fmphelperdxelibinf">FmpHelperDxeLib.inf<a class="headerlink" href="#fmphelperdxelibinf" title="Permanent link">&para;</a></h3>
+<p>LIBRARY_CLASS: <code class="codehilite">FmpHelperLib</code></p>
+<p>Definition: MsCapsuleUpdatePkg\Include\Library\FmpHelperLib.h</p>
+<p>Implementation: MsCapsuleUpdatePkg\Library\FmpHelperLib</p>
+<p>Implements helper functions.</p>
+<h3 id="msfmppayloadheaderv1dxelibinf">MsFmpPayloadHeaderV1DxeLib.inf<a class="headerlink" href="#msfmppayloadheaderv1dxelibinf" title="Permanent link">&para;</a></h3>
+<p>LIBRARY_CLASS: <code class="codehilite">MsFmpPayloadHeaderLib</code></p>
+<p>Definition: MsCapsuleUpdatePkg\Include\Library\MsFmpPayloadHeaderLib.h</p>
+<p>Implementation: MsCapsuleUpdatePkg\Library\MsFmpPayloadHeaderV1DxeLib</p>
+<p>Implements helper functions used by FmpWrapperDeviceLib library.  It implements a (platform specific) header <code class="codehilite">MS_FMP_PAYLOAD_HEADER</code> above FMP payload containing version, LSV, etc.</p>
+<h2 id="mscapsuleupdatepkgmscapsuleupdatepkgdsc-mscapsuleupdatepkgmscapsuleupdatepkgdec">MsCapsuleUpdatePkg\MsCapsuleUpdatePkg.dsc &amp; MsCapsuleUpdatePkg\MsCapsuleUpdatePkg.dec<a class="headerlink" href="#mscapsuleupdatepkgmscapsuleupdatepkgdsc-mscapsuleupdatepkgmscapsuleupdatepkgdec" title="Permanent link">&para;</a></h2>
+<p>MsCapsuleUpdatePkg.dsc links all the required libraries for <code class="codehilite">MsCapsuleUpdatePkg</code> and compiles EfiSystemResourceTableDxe.inf driver.</p>
+<p>MsCapsuleUpdatePkg.dec lists of the libraries, GUIDs and PCDs used in the <code class="codehilite">MsCapsuleUpdatePkg</code>.</p>
+<h2 id="limitations">Limitations<a class="headerlink" href="#limitations" title="Permanent link">&para;</a></h2>
+<p>Following are the limitations of this implementation:
+1.  Drivers embedded in the capsule are not supported/run.  The reason for not supporting it is that this design assumes closed-system architecture where these drivers would run within trusted boundaries and the firmware is unprotected.  So, any such driver approved by secure boot (or when secure boot is off), if allowed to run, can jeopardize the security of the system.
+2.  Only one payload per capsule is supported.</p>
+<h2 id="feedback">Feedback<a class="headerlink" href="#feedback" title="Permanent link">&para;</a></h2>
+<p><strong>TBD</strong></p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../../DfciPkg/docs/feature/" title="docs" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                docs
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../MsCorePkg/ReadMe/" title="Ms Core Pkg" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Ms Core Pkg
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright (c) Microsoft.  All rights reserved
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../../assets/javascripts/application.583bbe55.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../../../.."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>
