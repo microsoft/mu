@@ -36,6 +36,7 @@ import shutil
 import datetime
 import time
 import subprocess
+from Utf8Test import EncodingCheck
 
 
 SCRIPT_PATH = os.path.abspath(os.path.dirname(__file__))
@@ -183,6 +184,7 @@ class NavTree(object):
                 cnode.Collapse()
         return
         
+
 #
 # Main class which runs Documentation build work
 # This helps find all markdown files in source trees
@@ -208,6 +210,7 @@ class DocBuild(object):
         self.OutputDirectory = None
         self.MdFiles = list()
         self.Repos = dict()
+        self.EncodingChecker = EncodingCheck()
 
         #Convert RootDir to abs and confirm valid
         if(RootDir is not None):
@@ -337,7 +340,10 @@ class DocBuild(object):
         for top, dirs, files in os.walk(self.RootDirectory):
             for f in files:
                 if f.lower().endswith(".md"):
-                    self._ProcessMarkdownFile(os.path.join(top, f))
+                    if( not self.EncodingChecker.TestMdEncodingOk(os.path.join(top, f))):
+                        logging.error("Ignore Invalid markdown file: {0}".format(os.path.join(top, f)))
+                    else:
+                        self._ProcessMarkdownFile(os.path.join(top, f))
                 elif f.lower().endswith(".dec"):
                     self._ProcessEdk2DecFile(os.path.join(top, f))
             
