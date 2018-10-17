@@ -37,5 +37,8 @@
     "dictionaries": ["companies ", "softwareTerms", "uefi"],
 
     //Attribution file has lots of external content
-    "ignorePaths": ["docs/DeveloperDocs/docs_attribution.md"]
+    "ignorePaths": [
+        "docs/DeveloperDocs/docs_attribution.md",
+        "docs/dyn/mu_basecore/BaseTools/Scripts/PackageDocumentTools/Readme.md"
+    ]
 }
