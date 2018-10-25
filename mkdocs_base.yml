@@ -3,6 +3,7 @@ repo_url: https://github.com/microsoft/mu
 copyright: Copyright (c) Microsoft.  All rights reserved
 site_description: "Project Mu Documentation"
 site_url: 'https://microsoft.github.io/mu/'
+edit_uri: ''
 plugins:
     - search
     - macros
