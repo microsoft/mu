@@ -20,13 +20,11 @@
 
 ## Collaborate
 
-Feel free to submit [issues](https://github.com/Microsoft/mu/issues) to the central Mu repo, or Pull Requests to their corresponding code repo.
-
-Or, for faster communication and deeper collaboration, [send an email request](mailto:join-projectmu@microsoft.com?subject=Request%20to%20join%20ProjectMu&body=Please%20invite%20me%20to%20the%20Project%20Mu%20collaboration%20portal) to join our Teams channel.
+[Send an email request](mailto:join-projectmu@microsoft.com?subject=Request%20to%20join%20ProjectMu&body=Please%20invite%20me%20to%20the%20Project%20Mu%20collaboration%20portal) to join the discussion on our Teams channels.
 
 ## Help
 
-Open an Issue with the "question" tag  
+For one-off questions, feel free to open an Issue against the Mu repo with the "question" tag  
 [https://github.com/Microsoft/mu/issues](https://github.com/Microsoft/mu/issues)
 
-Or [send an email request](mailto:join-projectmu@microsoft.com?subject=Request%20to%20join%20ProjectMu&body=Please%20invite%20me%20to%20the%20Project%20Mu%20collaboration%20portal) to join our Teams channel.
+For deeper discussion & faster communication, [send an email request](mailto:join-projectmu@microsoft.com?subject=Request%20to%20join%20ProjectMu&body=Please%20invite%20me%20to%20the%20Project%20Mu%20collaboration%20portal) to join our Teams channels.
