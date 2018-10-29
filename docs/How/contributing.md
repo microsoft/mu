@@ -10,10 +10,6 @@ There are three common ways to contribute.
 
 https://github.com/Microsoft/mu/issues
 
-### General feedback and discussions
-
-Please start a discussion on the issue tracker.
-
 ### Bugs and feature requests
 
 For non-security related bugs please log a new issue on the [Project Mu repo issue tracker](https://github.com/Microsoft/mu/issues). The best way to get your bug fixed is to be as detailed as you can be about the problem. Providing a code snippet or sample driver that exposes the issue with steps to reproduce the problem is ideal.  
@@ -46,6 +42,10 @@ If you don't know what a pull request is read this article: https://help.github.
 10. Once the the PR status is all passing it can be squashed and merged (just press the button in the PR).  If the PR is ready the maintainers may complete it for you.  
 
 That is it.  Thanks for contributing.  
+
+### General feedback and discussions
+
+Please start a discussion on the issue tracker.
 
 ### Contributor License Agreement (CLA)
 
