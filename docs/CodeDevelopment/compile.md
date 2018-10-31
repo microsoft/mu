@@ -1,8 +1,10 @@
 # How to Build/Compile
 
-The repository/product/project should describe any unique steps required.  Project Mu currently has two supported patterns.  Those will be described here to encourage pattern/code reuse and limit the required repository specific documentation.  
+The repository/product/project should describe any unique steps required.  Project Mu currently supports two methods of building.  Those will be described here to encourage pattern/code reuse and limit the required repository specific documentation.  
 
 ## Compile Testing aka __MuBuild__
+
+MuBuild is a framework for running a battery of tests against a single Mu repository (and its dependencies).  A plugin model is used for adding additional tests.  Today one such plugin is a basic compile test.  The repository maintainer may add additional tests such as linters, etc.
 
 It is often desirable to compile test code and at times there might not be a product to test with.  This is also how the Pull Requests gates are implemented and enforced.
 
@@ -12,7 +14,7 @@ It is often desirable to compile test code and at times there might not be a pro
     Assumption is that the repository to compile has been cloned to your filesystem and is in the state ready to compile. 
 
 1. Open cmd prompt at workspace root
-2. Run bootstrapper to get necessary build components
+2. Run 'mu_bootstrap` to get the necessary build components
 3. Run MuBuild to:
     * Clone code dependencies
     * Download binary dependencies
@@ -29,7 +31,9 @@ MU_BUILD\UefiBuild\MuBuild\MuBuild.py -c <Mu Repo Build Config File> -p <1st Mu 
 
 When you actually want to compile for a platform that will create a firmware binary which can be flashed and execute on a platform this process is necessary.  
 
-1. Locate the __PlatformBuild.py__ file
+1. open cmd prompt at workspace root
+2. Run 'mu_bootstrap` to get the necessary build components
+2. Locate the __PlatformBuild.py__ file (generally in the patform build dir)
 2. Run __PlatformBuild.py__
 
 _TODO_ describe common features and options of PlatformBuild
