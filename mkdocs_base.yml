@@ -61,7 +61,7 @@ nav:
     - Downstream Integration: 'How/downstream_integration.md'
     - Contributing: 'How/contributing.md'
     - Upstream Integration: 'How/upstream_integration.md'
-  - Developering Docs:
+  - Developing Docs:
     - Overview: "DeveloperDocs/developer_docs.md"
     - How To Build: "DeveloperDocs/build_community_docs.md"
     - Sample Syntax: "DeveloperDocs/doc_sample_test.md"
