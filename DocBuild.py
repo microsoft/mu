@@ -300,6 +300,17 @@ class DocBuild(object):
     def _ProcessEdk2DecFile(self, apath):
         pass
 
+
+    def _ProcessImageFile(self, apath):
+        rpath = os.path.relpath(apath, self.RootDirectory)
+        logging.debug("image file found: {0}".format(rpath))
+        #Copy to output dir
+        s = apath
+        d = os.path.join(self.OutputDirectory, rpath)
+        os.makedirs(os.path.dirname(d), exist_ok=True)
+        shutil.copy2(s, d) 
+
+
     #
     # Process git repo.  Collect git stats
     #
@@ -344,8 +355,12 @@ class DocBuild(object):
                         logging.error("Ignore Invalid markdown file: {0}".format(os.path.join(top, f)))
                     else:
                         self._ProcessMarkdownFile(os.path.join(top, f))
+
                 elif f.lower().endswith(".dec"):
                     self._ProcessEdk2DecFile(os.path.join(top, f))
+
+                elif f.lower().endswith(("_mu.gif", "_mu.png", "_mu.jpg")):
+                    self._ProcessImageFile(os.path.join(top, f))
             
             if(".git" in dirs):
                 #root of git repo

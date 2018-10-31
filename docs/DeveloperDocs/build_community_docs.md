@@ -121,15 +121,6 @@ One great feature of mkdocs is how easy it is to locally serve the docs to valid
 !!! important
     If you get an error like ```Config file 'mkdocs.yml' does not exist``` you must run the preprocess step.
 
-## Conventions and lessons learned
-
-Please update this list as you learn more.
-
-1. filenames should all be lowercase.  
-2. filenames should use "_" to separate words and should not have spaces.  
-3. all links to pages are case sensitive (when published to GitHub the server is case sensitive)
-4. use a code editor like vscode for markdown.  It has linting support and will identify issues prior to build.
-
 ## Advanced doc features
 
 We do turn on a few advanced/extension features.  Please use these carefully as they may break compatibility if the publishing engine is changed.  Checkout the [sample syntax / test page](doc_sample_test.md) for syntax and information.

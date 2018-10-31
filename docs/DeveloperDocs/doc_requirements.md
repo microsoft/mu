@@ -1,1 +1,0 @@
-# Requirements for contributing documentation
