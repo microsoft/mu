@@ -8,7 +8,7 @@ There are three common ways to contribute.
 
 ## Issue Tracker Usage
 
-https://github.com/Microsoft/mu/issues
+Link to issue tracker: https://github.com/Microsoft/mu/issues
 
 ### General feedback and discussions
 
