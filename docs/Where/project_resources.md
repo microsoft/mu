@@ -27,4 +27,4 @@
 For one-off questions, feel free to open an Issue against the Mu repo with the "question" tag  
 [https://github.com/Microsoft/mu/issues](https://github.com/Microsoft/mu/issues)
 
-For deeper discussion & faster communication, [send an email request](mailto:join-projectmu@microsoft.com?subject=Request%20to%20join%20ProjectMu&body=Please%20invite%20me%20to%20the%20Project%20Mu%20collaboration%20portal) to join our Teams channels.
+For deeper discussion & faster communication, join our Microsoft Teams channels.  To join [send an email request](mailto:join-projectmu@microsoft.com?subject=Request%20to%20join%20ProjectMu&body=Please%20invite%20me%20to%20the%20Project%20Mu%20collaboration%20portal).
