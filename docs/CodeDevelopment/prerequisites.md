@@ -40,11 +40,6 @@ See component list here for more options. https://docs.microsoft.com/en-us/visua
 ```
 python -m pip install --upgrade mu_bootstrap
 ```
-
 ## Windows Subsystem For Linux (WSL)
-
-_Coming soon_
-
-## Container Build
 
 _Coming soon_

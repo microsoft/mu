@@ -36,4 +36,32 @@ When you actually want to compile for a platform that will create a firmware bin
 2. Locate the __PlatformBuild.py__ file (generally in the patform build dir)
 2. Run __PlatformBuild.py__
 
-_TODO_ describe common features and options of PlatformBuild
+### Other features
+
+__PlatformBuild.py__ leverages a common _UefiBuild_ python component.  This component provides a common set of features.  The UefiBuild component documentation is published from the mu_build repository but here are a few of the common features developers find useful. 
+
+* Control the target of the build.  Pass ```Target=RELEASE```
+* Build a single module: ```BuildModule=MdePkg/ModuleToBuild.inf```
+* Build with reporting:
+    * Single report type ```BUILDREPORTING=TRUE BUILDREPORT_TYPES="PCD"```
+    * Change report file  ```BUILDREPORT_FILE=filename.txt``` default is __BUILD_REPORT.TXT__
+    * All report types.  ```BUILDREPORTING=TRUE BUILDREPORT_TYPES="PCD DEPEX FLASH BUILD_FLAGS LIBRARY"```
+* Clean build: ```--clean```
+* Clean only (no compile): ```--cleanonly```
+* Skip some of the build steps:
+    * Skip the Edk2 build step:  ```--skipbuild```
+    * Skip pre or post build steps:  ```--skipprebuild``` or ```--skippostbuild```
+* Change a Build variable that is used in Edk2 build process:
+    * ```BLD_*_DEBUG_OUTPUT_LEVEL=0x80000004 ``` will be passed to DSC/FDF as __DEBUG_OUTPUT_LEVEL__.  These variable names and behavior are platform defined.  
+    * ```BLD_*_<var name>``` is used for builds of any target type unless there is a more specific version for the given target type.
+    * ```BLD_DEBUG_<var name>``` is used for debug builds only
+    * ```BLD_RELEASE_<var name>``` is used for release builds only
+* Using a config file.  To simplify calling of __PlatformBuild.py__ if there is a __BuildConfig.conf__ in the root of your UEFI workspace those parameters will be used as well.  The command line overrides anything from the conf file.  
+
+
+### Example BuildConfig.conf
+```yml
+# Turn on full build reports
+BUILDREPORTING=TRUE
+BUILDREPORT_TYPES="PCD DEPEX FLASH BUILD_FLAGS LIBRARY"
+```

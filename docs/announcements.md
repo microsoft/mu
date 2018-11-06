@@ -1,14 +1,22 @@
 # Announcements
 
-## 2018/10/30
+## 2018/11/05
 
 * Docs
-  * Announcment page created to give high level view of activity
-  * Added Docs for code development (setup, compile, test)
+  * Announcement page created to give high level view of Project Mu activity
+  * Added Docs for code development (prereqs, compile, test)
   * Added support for images in Multi-Repo documentation
 
 * Mu BaseCore
+  * New TianoCore integration from Aug 2018 stable point. 
+  * _release/201808_ branch created.
+  * Basetools and UefiBuild moved to Mu Build repo
+  * Work in progress to finish integration and validation. 
+
+* Mu Build
+  * Repository created to isolate build tools from UEFI source code
   * MuBuild plugin added to test for invalid character encoding
+  * Python 3.7 Version supported. No more python binaries.  
 
 * Mu Plus
   * MsGraphicsPkg open sourced adding features like:
