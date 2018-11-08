@@ -4,6 +4,10 @@ The repository/product/project should describe any unique steps required.  Proje
 
 ## Compile Testing aka __MuBuild__
 
+??? danger "BETA feature"
+    This feature may change.  Build Env work is ongoing and in an effort to make more portable
+    this might change.  
+
 MuBuild is a framework for running a battery of tests against a single Mu repository (and its dependencies).  A plugin model is used for adding additional tests.  Today one such plugin is a basic compile test.  The repository maintainer may add additional tests such as linters, etc.
 
 It is often desirable to compile test code and at times there might not be a product to test with.  This is also how the Pull Requests gates are implemented and enforced.
@@ -28,6 +32,9 @@ MU_BUILD\UefiBuild\MuBuild\MuBuild.py -c <Mu Repo Build Config File> -p <1st Mu 
 
 
 ## Project Build aka __PlatformBuild__
+
+??? info
+    There is currently no example in Project Mu. An example platform is in the works!
 
 When you actually want to compile for a platform that will create a firmware binary which can be flashed and execute on a platform this process is necessary.  
 

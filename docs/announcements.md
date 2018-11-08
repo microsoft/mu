@@ -1,6 +1,6 @@
 # Announcements
 
-## 2018/11/05
+## 2018/11/07
 
 * Docs
   * Announcement page created to give high level view of Project Mu activity
@@ -12,6 +12,10 @@
   * _release/201808_ branch created.
   * Basetools and UefiBuild moved to Mu Build repo
   * Work in progress to finish integration and validation. 
+
+* Mu Tiano Plus
+  * New TianoCore integration from Aug 2018 stable point. 
+  * _release/201808_ branch created.
 
 * Mu Build
   * Repository created to isolate build tools from UEFI source code

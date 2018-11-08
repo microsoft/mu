@@ -36,6 +36,11 @@ See component list here for more options. https://docs.microsoft.com/en-us/visua
 
 ### Get the  Project Mu Build Bootstrapper
 
+??? danger "BETA feature"
+    This feature may change.  Build Env work is ongoing and in an effort to make more portable
+    this might change.  
+     
+
 1. Project Mu Bootstrapper
 ```
 python -m pip install --upgrade mu_bootstrap
