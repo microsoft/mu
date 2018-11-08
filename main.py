@@ -18,7 +18,7 @@ def declare_variables(variables, macro):
     import datetime
     @macro
     def buildtime():
-      return str(datetime.datetime.now().strftime("%m-%d-%Y %H:%M"))
+      return str(datetime.datetime.now().strftime("%Y-%m-%d %H:%M"))
 
 ''' 
 
