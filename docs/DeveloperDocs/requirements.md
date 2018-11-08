@@ -12,6 +12,6 @@ Please update this list as you learn more.
     1. Awesome.  Images help make docs more informative and easier to understand
     2. Path in markdown to image must be relative 
     3. Suggested to put in same directory as md file
-    4. image filename must end with **_mu.*extension***.  Example **myimagename_mu.png**
+    4. image filename must end with **_mu.*extension***.  Example **my_image_name_mu.png**
     5. Supported image extensions are **gif, jpg, png**
 

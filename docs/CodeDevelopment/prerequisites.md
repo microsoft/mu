@@ -1,7 +1,7 @@
 # Prerequisites for building Code
 
 Generally there are a set of tools required on the platform.  Project Mu tries to minimize the number of global tools but there are a few.  There could be more depending on the repository/product/platform you are building but this should get you started.  If the repo requires other tools those should be documented within the repo.  
-The tools also vary by Operating System and Compiler choice.  Project Mu will docuemnt what is currently supported but the expectation is that between Project Mu and TianoCore Edk2 you could use any of those tool sets.
+The tools also vary by Operating System and Compiler choice.  Project Mu will document what is currently supported but the expectation is that between Project Mu and TianoCore Edk2 you could use any of those tool sets.
 
 ## Windows
 

@@ -69,3 +69,15 @@ overrider
 buildsha
 corebuild
 lzturbo
+depex
+skippostbuild
+cleanonly
+skipbuild
+skipprebuild
+mathlib
+norestart
+nocache
+buildtools
+bootstrapper
+
+

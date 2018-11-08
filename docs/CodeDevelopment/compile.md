@@ -40,7 +40,7 @@ When you actually want to compile for a platform that will create a firmware bin
 
 1. open cmd prompt at workspace root
 2. Run 'mu_bootstrap` to get the necessary build components
-2. Locate the __PlatformBuild.py__ file (generally in the patform build dir)
+2. Locate the __PlatformBuild.py__ file (generally in the platform build dir)
 2. Run __PlatformBuild.py__
 
 ### Other features
