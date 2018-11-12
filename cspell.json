@@ -28,7 +28,8 @@
         "enablement",
         "pluggable",
         "upstreams",
-        "upstream"
+        "upstream",
+        "projectmu"
     ],
     "dictionaryDefinitions": [
         { "name": "uefi", "path": "./uefi-words.txt"}
