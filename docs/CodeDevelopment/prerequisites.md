@@ -41,10 +41,37 @@ See component list here for more options. https://docs.microsoft.com/en-us/visua
     this might change.  
      
 
-1. Project Mu Bootstrapper
+1. Project Mu Pip Modules
+
+There are three pip modules:
+
+#### mu_python_library
+
+UEFI and TPM spec definitions implemented in Python with some miscellaneous, generic Python functions.
+
+`python -m pip install mu_python_library`
+
+#### mu_environment
+
+Self Describing Environment (SDE) code which is used to organize and coordinate UEFI builds
+
+`python -m pip install mu_environment`
+
+#### mu_build
+
+Takes a config file which describes the workspace packages and the dependencies those packages require, clones the dependencies, and builds each package.
+
+`python -m pip install mu_build`
+
+
+#### Troubleshooting
+
+This command will uninstall all three pip packages and reinstall them from the pip server, discarding whatever versions have been cached locally.
+
 ```
-python -m pip install --upgrade mu_bootstrap
+python -m pip install --upgrade mu_build --force-reinstall --no-cache-dir
 ```
+
 ## Windows Subsystem For Linux (WSL)
 
 _Coming soon_

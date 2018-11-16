@@ -18,14 +18,13 @@ It is often desirable to compile test code and at times there might not be a pro
     Assumption is that the repository to compile has been cloned to your filesystem and is in the state ready to compile. 
 
 1. Open cmd prompt at workspace root
-2. Run 'mu_bootstrap` to get the necessary build components
 3. Run MuBuild to:
     * Clone code dependencies
     * Download binary dependencies
     * Statically test code
     * Compile test code
 ```cmd
-MU_BUILD\UefiBuild\MuBuild\MuBuild.py -c <Mu Repo Build Config File> -p <1st Mu Pkg Build Config File> <2nd Mu Pkg Build Config File...>
+mu_build-c <Mu Repo Build Config File> -p <1st Mu Pkg Build Config File> <2nd Mu Pkg Build Config File...>
 ```
 4. Open __TestResults.xml__ for results 
 5. Open log files to debug any errors
@@ -39,7 +38,6 @@ MU_BUILD\UefiBuild\MuBuild\MuBuild.py -c <Mu Repo Build Config File> -p <1st Mu 
 When you actually want to compile for a platform that will create a firmware binary which can be flashed and execute on a platform this process is necessary.  
 
 1. open cmd prompt at workspace root
-2. Run 'mu_bootstrap` to get the necessary build components
 2. Locate the __PlatformBuild.py__ file (generally in the platform build dir)
 2. Run __PlatformBuild.py__
 
