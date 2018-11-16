@@ -24,7 +24,7 @@ It is often desirable to compile test code and at times there might not be a pro
     * Statically test code
     * Compile test code
 ```cmd
-mu_build-c <Mu Repo Build Config File> -p <1st Mu Pkg Build Config File> <2nd Mu Pkg Build Config File...>
+mu_build -c <Mu Repo Build Config File> -p <1st Mu Pkg Build Config File> <2nd Mu Pkg Build Config File...>
 ```
 4. Open __TestResults.xml__ for results 
 5. Open log files to debug any errors
