@@ -11,6 +11,12 @@ In general, the life-cycle of a branch looks like:
 
 Also, in general, stable release branches will live in the `stable/*` namespace and development branches will live in the `dev/*` namespace. All other branches are used for feature sharing, demonstration, and collaboration.
 
+<center>![James Brown](../img/repo_release_graph.png)</center>
+
+More words here.
+
+<center>![Stable Release, Upsteam Rebase, Build/Boot Fixes, Active Development, Stabilization, Stable Release](../img/branch_release_graph.png)</center>
+
 !!! important
     Due to the impacts of the rebase process on the history of Mu release branches, any downstream consumers will have to follow a similar integration process when upgrading to a new release. Any custom changes made within the Project Mu repos will have to be rebased from one release to the next.
     
