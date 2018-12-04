@@ -54,9 +54,9 @@ In each of these cases, the `*` will be replaced with a corresponding branch nam
 
 ## Active Development Phase
 
-Direct mirror internal and external.
+During the active development phase, the release branch is open for comment and contribution both internally and publicly. The Project Mu team strives to do as much of its work in the open as possible, but there are still times when it will be necessary to 
 
-Transition branches.
+Direct mirror internal and external.
 
 ### Public Contribution/Commentary
 
@@ -64,6 +64,10 @@ Transition branches.
 
 ## Stabilization Phase
 
+Transition branches.
+
 ### Long-Term Support (LTS)
 
 ## Lifetime of a Single Integration
+
+***TBD***
