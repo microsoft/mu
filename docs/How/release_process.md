@@ -15,7 +15,7 @@ All active work in Project Mu is performed on a `release/*` branch, usually name
 
 <center>![Multiple, staggared branches from EDK2, with rebased changes](../img/repo_release_graph.png)</center>
 
-The below diagram illustrates the life-cycle of a single branch and indicates the critical points in its lifetime. These critical points will be applied as tags for reference and documentation. The tags are given a name relative to the target branch and consist of: Upstream base, Rebase complete, Rebase builds, Rebase boots, RC _N_, and Stable. These tags are discussed in more detail below.
+The below diagram illustrates the life-cycle of a single branch and indicates the critical points in its lifetime. These critical points will be applied as tags for reference and documentation. The tags are given a name relative to the target branch and consist of: Upstream base, Rebase complete, Rebase builds, Rebase boots, RCn, and Stable. These tags are discussed in more detail below.
 
 <center>![The phases of a release branch: integration, active dev, stabilization, LTS](../img/branch_release_graph.png)</center>
 
@@ -54,19 +54,34 @@ In each of these cases, the `*` will be replaced with a corresponding branch nam
 
 ## Active Development Phase
 
-During the active development phase, the release branch is open for comment and contribution both internally and publicly. The Project Mu team strives to do as much of its work in the open as possible, but there are still times when it will be necessary to 
-
-Direct mirror internal and external.
+During the active development phase, the release branch is open for comment and contribution both internally and publicly. All work contributed by the Project Mu team will be publicly available after an internal PR review. This commits will automatically be mirrored to the public repos. Similarly, all completed public PRs are mirrored in internal review repos (with preference being given to the public PR in event of a conflict). While this means that there will be times where Project Mu team will make contributions without going through a full public PR review, all code is open to comment and contribution, up to and including a full revert of the internal Mu team contribution.
 
 ### Public Contribution/Commentary
 
+For information on the contribution policies and steps, see the [How to Contribute](/How/contributing) document.
+
 ### Upstream Cherry-Picks
+
+In the event that a critical change is made in the TianoCore upstream during the Active Development phase, the Project Mu team (with any suggestions or comment from downstream contributors) will evaluate the change for a mid-release cherry pick. If warranted, the commit(s) will be cherry-picked directly from TianoCore and prefixed with a "CHERRY-PICK" tag in the commit message to they can be cleaned up in the next rebase.
 
 ## Stabilization Phase
 
-Transition branches.
+When warranted, active development on the active `release/*` branch will be halted so that it may enter a period of rigorous testing and stabilization. Upon entering the Stabilization phase, the branch will be tagged with a `*_RC1` tag and only bugfixes will be accepted from then on. Any defects or regressions found during stabilization will be fixed and documented. Once confidence is built in the stability of the code, the branch will be tagged as `*_Stable` and it will enter LTS.
+
+It is Project Mu's goal that this cadence be aligned with the TianoCore release cadence, with the previous branch stabilizing at the same time a new TianoCore release is available. In this way, development can seamlessly move to the next `release/*` branch without lapse in availability.
+
+!!! note
+    It is possible that the `*_RC1` tag be applied to the same commit as `*_Stable` if there are no defects found in the branch. (Because that happens all the time.)
+
+    It is also possible that multiple `*_RCn` tags may be useful to distinguish between milestones of a particularly protracted Stabilization phase.
+
+### Transition Branches
+
+In the event that it becomes necessary to stabilize a `release/*` branch prior to the availability of a suitable TianoCore commit for rebasing, all active development will move to a `dev/*` branch that will branch from the previous `*_RC1` tag. If bugs are discovered in the Stabilization phase for the `release/*` branch, they will also be fixed in the `dev/*` branch and all chnages made in the `dev/*` branch will be rebased as part of the next `release/*` branch when it is ready.
 
 ### Long-Term Support (LTS)
+
+It is Project Mu's goal that all `release/*` branches continue to be maintained with active bug fixes -- as necessary -- for at least two full releases after the branch becomes stable.
 
 ## Lifetime of a Single Integration
 
