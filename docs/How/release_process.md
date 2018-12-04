@@ -7,13 +7,13 @@ In the interest of maintaining a close, well-defined relationship with the upstr
 
 In general, the life-cycle of active code follows the following path:
 
-<center>![Stable Release, Upsteam Rebase, Build/Boot Fixes, Active Development, Stabilization, Stable Release](../img/release_cycle.png)</center>
+<center>![Stable Release, Upstream Rebase, Build/Boot Fixes, Active Development, Stabilization, Stable Release](../img/release_cycle.png)</center>
 
 All active work in Project Mu is performed on a `release/*` branch, usually named sequentially according to the date of TianoCore commit that it's based on (eg. `release/201808` is based on the `edk2-stable201808` branch in TianoCore). Work proceeds on that branch until a new TianoCore integration is targeted, at which point a new branch in created and all existing changes are rebased onto the new branch and the new branch is used for all active development going forward. At this point, the previous branch enters a stabilization period where further tests are performed and only bug fixes are allowed to be committed. After stabilization, the branch is labeled as `stable` and will only receive critical bug fixes either directly to the branch or backported from a more recent release.
 
 `release/*` branches will be maintained in LTS for at least the next two releases.
 
-<center>![Multiple, staggared branches from EDK2, with rebased changes](../img/repo_release_graph.png)</center>
+<center>![Multiple, staggered branches from EDK2, with rebased changes](../img/repo_release_graph.png)</center>
 
 The below diagram illustrates the life-cycle of a single branch and indicates the critical points in its lifetime. These critical points will be applied as tags for reference and documentation. The tags are given a name relative to the target branch and consist of: Upstream base, Rebase complete, Rebase builds, Rebase boots, RCn, and Stable. These tags are discussed in more detail below.
 
@@ -66,7 +66,7 @@ In the event that a critical change is made in the TianoCore upstream during the
 
 ## Stabilization Phase
 
-When warranted, active development on the active `release/*` branch will be halted so that it may enter a period of rigorous testing and stabilization. Upon entering the Stabilization phase, the branch will be tagged with a `*_RC1` tag and only bugfixes will be accepted from then on. Any defects or regressions found during stabilization will be fixed and documented. Once confidence is built in the stability of the code, the branch will be tagged as `*_Stable` and it will enter LTS.
+When warranted, active development on the active `release/*` branch will be halted so that it may enter a period of rigorous testing and stabilization. Upon entering the Stabilization phase, the branch will be tagged with a `*_RC1` tag and only bug fixes will be accepted from then on. Any defects or regressions found during stabilization will be fixed and documented. Once confidence is built in the stability of the code, the branch will be tagged as `*_Stable` and it will enter LTS.
 
 It is Project Mu's goal that this cadence be aligned with the TianoCore release cadence, with the previous branch stabilizing at the same time a new TianoCore release is available. In this way, development can seamlessly move to the next `release/*` branch without lapse in availability.
 
@@ -77,7 +77,7 @@ It is Project Mu's goal that this cadence be aligned with the TianoCore release 
 
 ### Transition Branches
 
-In the event that it becomes necessary to stabilize a `release/*` branch prior to the availability of a suitable TianoCore commit for rebasing, all active development will move to a `dev/*` branch that will branch from the previous `*_RC1` tag. If bugs are discovered in the Stabilization phase for the `release/*` branch, they will also be fixed in the `dev/*` branch and all chnages made in the `dev/*` branch will be rebased as part of the next `release/*` branch when it is ready.
+In the event that it becomes necessary to stabilize a `release/*` branch prior to the availability of a suitable TianoCore commit for rebasing, all active development will move to a `dev/*` branch that will branch from the previous `*_RC1` tag. If bugs are discovered in the Stabilization phase for the `release/*` branch, they will also be fixed in the `dev/*` branch and all changes made in the `dev/*` branch will be rebased as part of the next `release/*` branch when it is ready.
 
 ### Long-Term Support (LTS)
 
