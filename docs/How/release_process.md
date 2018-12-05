@@ -3,7 +3,7 @@
 !!! warning "Contents and Process Under Active Development"
     The basics of this process are identical to those followed by the Project Mu firmware integration and release process internal to Microsoft, but the formal documentation, branch naming, and tagging process is a work in progress. While this is how we expect things to work, there may be changes within the the first few releases driven by feedback within the team and any external consumers/contributors.
 
-In the interest of maintaining a close, well-defined relationship with the upstream project, TianoCore, the active release branch of Project Mu is periodically deprecated and all Mu-related changes are rebased onto a selected commit of TianoCore. This keeps Project Mu up to date with TianoCore while highlighting all Project Mu differences in the most recent commits and encouraging the reverse integration of all universal changes/fixes back into TianoCore.
+In the interest of maintaining a close, well-defined relationship with the upstream project, TianoCore, the active release branch of Project Mu is periodically deprecated and all Mu-related changes are rebased onto a selected commit of TianoCore. This keeps Project Mu up to date with TianoCore while highlighting all Project Mu differences in the most recent commits and encouraging the reverse integration of all changes/fixes back into TianoCore
 
 In general, the life-cycle of active code follows the following path:
 
