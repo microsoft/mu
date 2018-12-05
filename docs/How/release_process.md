@@ -62,7 +62,7 @@ For information on the contribution policies and steps, see the [How to Contribu
 
 ### Upstream Cherry-Picks
 
-In the event that a critical change is made in the TianoCore upstream during the Active Development phase, the Project Mu team (with any suggestions or comment from downstream contributors) will evaluate the change for a mid-release cherry pick. If warranted, the commit(s) will be cherry-picked directly from TianoCore and prefixed with a "CHERRY-PICK" tag in the commit message to they can be cleaned up in the next rebase.
+In the event that a critical change is made in the TianoCore upstream during the Active Development phase, the Project Mu team (with any suggestions or comment from downstream contributors) will evaluate the change for a mid-release cherry pick. If warranted, the commit(s) will be cherry-picked directly from TianoCore and prefixed with a "CHERRY-PICK" tag in the commit message so they can be cleaned up in the next rebase.
 
 ## Stabilization Phase
 
