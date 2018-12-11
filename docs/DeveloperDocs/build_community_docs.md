@@ -102,11 +102,10 @@ git clone https://github.com/Microsoft/mu.git
 4. should complete with no errors
 
 ??? bug "False Spelling Errors"
-    If the spelling error is a false positive there are three solutions:
+    If the spelling error is a false positive there are two solutions:
 
-    1. If its a firmware or UEFI word:  Add the word to the **uefi-words.txt** file
-    2. Add the word to the **cspell.json** config file `words` section
-    3. Update the **cspell.json** file `ignorePaths` element to ignore the entire file.
+    1. If it is a valid word or commonly understood term then add the word to the **cspell.json** config file `words` section
+    2. Update the **cspell.json** file `ignorePaths` element to ignore the entire file.
 
 ## Locally serve the docs
 
@@ -120,15 +119,6 @@ One great feature of mkdocs is how easy it is to locally serve the docs to valid
 
 !!! important
     If you get an error like ```Config file 'mkdocs.yml' does not exist``` you must run the preprocess step.
-
-## Conventions and lessons learned
-
-Please update this list as you learn more.
-
-1. filenames should all be lowercase.  
-2. filenames should use "_" to separate words and should not have spaces.  
-3. all links to pages are case sensitive (when published to GitHub the server is case sensitive)
-4. use a code editor like vscode for markdown.  It has linting support and will identify issues prior to build.
 
 ## Advanced doc features
 

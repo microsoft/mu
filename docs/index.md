@@ -40,17 +40,17 @@ Skim the [FAQ](faq)
 ### Days
 
 * [x] Engaging with existing partners to collect feedback
-* [ ] Pull Request documentation & gates
-* [ ] Automated builds & compile tests of all repos
-* [ ] Developer documentation on building & testing
-* [ ] Determine communication venue (e.g. email list, Slack, Teams, ...), currently testing MS Teams
+* [x] Pull Request documentation & gates
+* [x] Automated builds & compile tests of all repos
+* [x] Developer documentation on building & testing
+* [x] Determine communication venue (e.g. email list, Slack, Teams, ...), currently testing MS Teams
 
 ### Weeks
 
 * [ ] Update to latest, stable EDK2 release
 * [ ] Automated build & tests on a public platform
 * [ ] Automated build & tests on Surface devices
-* [ ] Feature documentation
+* [x] Feature documentation (Process defined.  Docs development ongoing)
 * [ ] Draft process for security collaboration with partners & Tianocore
 * [ ] Documentation on Governance
 * [ ] Announce project & evangelize
@@ -83,4 +83,4 @@ Refer to [License](license)
 
 !!! info "Documentation Build Information"
     Version: {{version}}  
-    Build Time: {{buildtime()}}
+    Build Time: {{buildtime}}

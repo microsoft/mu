@@ -31,12 +31,8 @@ If you don't know what a pull request is read this article: https://help.github.
 ### General workflow
 
 1. Fork Repository in GitHub
-2. Make code changes.  [More Details](../DeveloperDocs/code_requirements.md)
+2. Make desired changes.
 3. Build it, test it, document it
-    * Do a package build to confirm it compiles and passes code analysis tests
-    * Build it into a platform which you can test the functionality
-    * Build a unit test.  Project Mu (and UEFI) needs more automated/regression testing.
-    * Document it.  Add to an existing or create a new markdown file. [More Details](../DeveloperDocs/doc_requirements.md)
 4. Submit a Pull Request back to the development branch you would like to target.
 5. You will be asked to digitally sign a CLA
 6. The server will run some builds and tests and report status
@@ -45,7 +41,13 @@ If you don't know what a pull request is read this article: https://help.github.
 9. Keep your PR branch in-sync with the branch you are targeting and resolve any merge conflicts
 10. Once the the PR status is all passing it can be squashed and merged (just press the button in the PR).  If the PR is ready the maintainers may complete it for you.  
 
-That is it.  Thanks for contributing.  
+That is it.  Thanks for contributing. 
+
+**More details on**:
+
+1. [Code Development](../CodeDevelopment/overview.md)
+2. [Tests Development](../CodeDevelopment/test.md)
+3. [Documentation Development](../DeveloperDocs/developer_docs.md)
 
 ### Contributor License Agreement (CLA)
 
