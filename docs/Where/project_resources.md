@@ -4,7 +4,6 @@
 
 Listed here:  [GitHub Project Mu Repo List](https://github.com/topics/projectmu)
 
-
 ## Issue/Bug/Feature Tracking
 
 [https://github.com/Microsoft/mu/issues](https://github.com/Microsoft/mu/issues)

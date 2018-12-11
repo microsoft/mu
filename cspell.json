@@ -101,6 +101,7 @@
         "componentization", "customizations", "enablement", "pluggable", "upstreams", "upstream", "projectmu", "jinja",
         "lzturbo",
         "rebased",
-        "backported"
+        "backported",
+        "pytest", "pip", "flake8"
     ]
 }

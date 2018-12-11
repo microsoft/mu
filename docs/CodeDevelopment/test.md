@@ -11,3 +11,8 @@ Testing firmware is hard.  Lets just stop there. :poop: If you want to read on p
 ## UEFI Shell Based Functional Tests
 
 ## UEFI Shell Based Audit Tests
+
+## Testing Python
+
+* Create pytest and/or python unit-test compatible tests.
+* Make sure the python code passes the `flake8` "linter"
