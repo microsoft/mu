@@ -81,7 +81,9 @@ In the event that it becomes necessary to stabilize a `release/*` branch prior t
 
 ### Long-Term Support (LTS)
 
-It is Project Mu's goal that all `release/*` branches continue to be maintained with active bug fixes -- as necessary -- for at least two full releases after the branch becomes stable.
+It is Project Mu's goal that all `release/*` branches continue to be maintained with active bug fixes -- as necessary -- for at least two full releases after the branch becomes stable. The Project Mu team will serve as the primary deciding body for whether a bug fix to the current `release/*` branch merits porting back to the prior two branches, but community input or suggestions are always welcome.
+
+All release branches that make it to the Stabilization phase will be hosted and kept in the repository in perpetuity. If any change was required to this policy (perhaps for server considerations), the branches will remain archived for posterity and should be available by request.
 
 ## Lifetime of a Single Integration
 
