@@ -1,0 +1,5 @@
+[flake8]
+#E501 line too long
+#E266 too many leading '#' for block comment
+#E722 do not use bare 'except'
+ignore = E501,E266,E722

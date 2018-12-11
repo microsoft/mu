@@ -69,8 +69,7 @@ project_mu/
 │       └── REF_CODE/           # Enablement code for your architecture
 ├── .gitattributes
 ├── .gitignore
-├── .gitmodules
-└── bootstrap_repo.py
+└── .gitmodules
 ```
 
 Note that this file structure is likely located in a Git repository, and every "ALL CAPS" directory in this example is a Git submodule/nested repository.
@@ -105,8 +104,7 @@ project_mu/
 │   └── SURFACE/                # Shared code to enable common HW like ECs
 ├── .gitattributes
 ├── .gitignore
-├── .gitmodules
-└── bootstrap_repo.py
+└── .gitmodules
 ```
 
 Once again, the "ALL CAPS" directories are submodules.

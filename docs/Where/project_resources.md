@@ -2,9 +2,7 @@
 
 ## Public Source Code Repositories
 
-1. [https://github.com/Microsoft/mu_basecore](https://github.com/Microsoft/mu_basecore)
-1. [https://github.com/Microsoft/mu_tiano_plus](https://github.com/Microsoft/mu_tiano_plus)
-1. [https://github.com/Microsoft/mu_plus](https://github.com/Microsoft/mu_plus)
+Listed here:  [GitHub Project Mu Repo List](https://github.com/topics/projectmu)
 
 ## Issue/Bug/Feature Tracking
 

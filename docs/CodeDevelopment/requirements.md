@@ -1,0 +1,42 @@
+# Requirements for contributing Source Code
+
+## Basics
+
+1. Make sure it follows the package, repo, and codebase rules
+2. Make sure it builds
+3. Write a unit test for it.  Test positive cases as well as negative cases.
+4. Make sure it has docs.  Even a minimal readme.md will get collected and added to the docs.  
+5. Make sure it has only valid characters encoded (often copy paste from Microsoft Word docs or the internet will lead to invalid characters)
+6. If it is a small change/tweak to existing code that originates outside of Project Mu please mark it with //MUCHANGE 
+
+## Uefi Package
+
+## UEFI Components
+
+1. All new modules must be listed in their containing package DSC in the components section
+2. All modules must follow the dependency rules of their containing package
+3. All modules within common layers should avoid silicon or architecture dependencies.  
+    * Use existing libraries and functionality when possible
+    * Build out minimal required abstraction to allow other silicon or architectures to leverage common capabilities
+
+## Public Header files
+
+1. Don't include other header files
+2. Don't mix public and private information in the same header file
+    * Implementation details should be contained to the instance
+3. Use "doxygen" style function header comments to clearly specify parameters and return results.
+4. Use a guidgen tool to define any guids
+5. For libraries:
+    * Library class should be listed in Package DEC file
+    * A NULL instance must be created that allows compiling and linking with minimal dependencies.
+
+## Library Instance
+
+1. The supported module types in the INFs must be accurate. 
+    ``` inf
+    LIBRARY_CLASS: <Library Class Name>|<Module types supported by this instance> 
+    ```
+2. Use STATIC on each non-public function and non-public global to avoid conflicts with other modules.
+3. Use EFIAPI on all public library class functions.
+
+

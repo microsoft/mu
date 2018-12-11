@@ -1,3 +1,5 @@
+workspace:
+  clean: all
 
 steps:
 - task: DeleteFiles@1
@@ -34,6 +36,49 @@ steps:
 
 - script: python Utf8Test.py --RootDir docs
   displayName: Check character encoding
+
+- script: pytest -v --junitxml=test.junit.xml --html=pytest_report.html --self-contained-html --cov=. --cov-report html:cov_html --cov-report xml:cov.xml
+  displayName: 'Run UnitTests'
+
+# Publish Test Results to Azure Pipelines/TFS
+- task: PublishTestResults@2
+  displayName: 'Publish junit test results'
+  continueOnError: true
+  condition: succeededOrFailed()
+  inputs:
+    testResultsFormat: 'JUnit' # Options: JUnit, NUnit, VSTest, xUnit
+    testResultsFiles: 'test.junit.xml' 
+    mergeTestResults: true # Optional
+    publishRunAttachments: true # Optional
+
+# Publish Build Artifacts
+# Publish build artifacts to Azure Pipelines/TFS or a file share
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathtoPublish: 'pytest_report.html' 
+    artifactName: 'python unit test report' 
+  continueOnError: true
+  condition: succeededOrFailed()
+
+# Publish Code Coverage Results
+# Publish Cobertura code coverage results
+- task: PublishCodeCoverageResults@1
+  inputs:
+    codeCoverageTool: 'cobertura' # Options: cobertura, jaCoCo
+    summaryFileLocation: $(System.DefaultWorkingDirectory)/cov.xml
+    reportDirectory: $(System.DefaultWorkingDirectory)/cov_html
+  condition: succeededOrFailed()
+
+- script: flake8 . > flake8.err.log
+  displayName: 'Run flake8'
+  condition: succeededOrFailed()
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathtoPublish: 'flake8.err.log' 
+    artifactName: 'Flake8 Error log file'
+  continueOnError: true
+  condition: Failed() 
 
 # For CI build don't use remote repos
 - script: python DocBuild.py --clean --build --OutputDir docs --yml mkdocs_base.yml -o pr-gate.log
