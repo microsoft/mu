@@ -8,68 +8,72 @@ The tools also vary by Operating System and Compiler choice.  Project Mu will do
 ### Python
 
 1. Download latest Python from https://www.python.org/downloads
-```cmd
- https://www.python.org/ftp/python/3.7.1/python-3.7.1-amd64.exe
-```
-2. It is recommended you use the following options:
+    ``` cmd
+    https://www.python.org/ftp/python/3.7.1/python-3.7.1-amd64.exe
+    ```
+2. It is recommended you use the following options when installing python:
     1. include pip support
     2. include test support
 
 ### Git
+
 1. Download latest Git For Windows from https://git-scm.com/download/win 
-```
-https://github.com/git-for-windows/git/releases/download/v2.19.1.windows.1/Git-2.19.1-64-bit.exe
-```
+    ``` cmd
+    https://github.com/git-for-windows/git/releases/download/v2.19.1.windows.1/Git-2.19.1-64-bit.exe
+    ```
 2. It is recommended you use the following options:
-    1. Checkout as it, commit as is.
+    1. Checkout as is, commit as is.
     2. Native Channel support (this will help in corp environments)
 
-### Visual Studio 2017 
+### Visual Studio 2017
 
-1. Download latest version of VS build Tools
-https://aka.ms/vs/15/release/vs_buildtools.exe to c:\TEMP
-2. Install from cmd line with required features (this set will change overtime). 
-```
-C:\TEMP\vs_buildtools.exe --quiet --wait --norestart --nocache --installPath C:\BuildTools --add Microsoft.VisualStudio.Component.VC.CoreBuildTools --add Microsoft.VisualStudio.Component.VC.Tools.x86.x64 --add Microsoft.VisualStudio.Component.Windows10SDK.17134 --add Microsoft.VisualStudio.Component.VC.Tools.ARM --add Microsoft.VisualStudio.Component.VC.Tools.ARM64
-```
+1. Download latest version of VS build Tools to c:\TEMP
+    ``` cmd
+    https://aka.ms/vs/15/release/vs_buildtools.exe
+    ```
+2. Install from cmd line with required features (this set will change overtime).
+    ``` cmd
+    C:\TEMP\vs_buildtools.exe --quiet --wait --norestart --nocache --installPath C:\BuildTools --add Microsoft.VisualStudio.Component.VC.CoreBuildTools --add Microsoft.VisualStudio.Component.VC.Tools.x86.x64 --add Microsoft.VisualStudio.Component.Windows10SDK.17134 --add Microsoft.VisualStudio.Component.VC.Tools.ARM --add Microsoft.VisualStudio.Component.VC.Tools.ARM64
+    ```
 See component list here for more options. https://docs.microsoft.com/en-us/visualstudio/install/workload-component-id-vs-build-tools?view=vs-2017 
 
-### Get the  Project Mu Build Bootstrapper
+### Get the Project Mu Build tools using Pip
 
-??? danger "BETA feature"
-    This feature may change.  Build Env work is ongoing and in an effort to make more portable
-    this might change.  
-     
+Usually this can be done by looking for the __requirements.txt__ file.  Each repo generally has one to describe the required modules.  
 
-1. Project Mu Pip Modules
+This can be installed by doing:
 
-There are three pip modules:
+ ```cmd
+pip install --upgrade -r requirements.txt
+```
+
+!!! note "Virtual Environments"
+    In more active development environments or on PCs where you might want to have different versions of these tools to support older/newer platforms it is recommended to leverage python virtual environments to avoid any global dependencies.  
+
+Project Mu currently has 3 pip modules:
 
 #### mu_python_library
 
-UEFI and TPM spec definitions implemented in Python with some miscellaneous, generic Python functions.
+UEFI, Edk2, Acpi, and TPM common library functions.
 
-`python -m pip install mu_python_library`
+``` cmd
+python -m pip install --upgrade mu_python_library
+```
 
 #### mu_environment
 
-Self Describing Environment (SDE) code which is used to organize and coordinate UEFI builds
+Self Describing Environment (SDE) code which is used to organize and coordinate UEFI builds.  This is the Project Mu Build system, plugin manager, edk2 build wrapper, logging, etc.  
 
-`python -m pip install mu_environment`
+``` cmd
+python -m pip install --upgrade mu_environment
+```
 
 #### mu_build
 
-Takes a config file which describes the workspace packages and the dependencies those packages require, clones the dependencies, and builds each package.
+CI and package test scripts.  Supports compiling as well as running other build test plugins.
 
-`python -m pip install mu_build`
-
-
-#### Troubleshooting
-
-This command will uninstall all three pip packages and reinstall them from the pip server, discarding whatever versions have been cached locally.
-
-```
-python -m pip install --upgrade mu_build --force-reinstall --no-cache-dir
+``` cmd
+python -m pip install --upgrade mu_build
 ```
 
 ## Windows Subsystem For Linux (WSL)
