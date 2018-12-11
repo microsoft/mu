@@ -1,4 +1,9 @@
 mkdocs
 mkdocs-material
 mkdocs-macros-plugin
+Markdown
 pymdown-extensions
+pytest
+pytest-html
+pytest-cov
+flake8

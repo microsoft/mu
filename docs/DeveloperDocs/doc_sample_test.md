@@ -2,8 +2,7 @@
 
 ## mkdocs macros plugin
 
-This plugin allows providing some variables in mkdocs.yml file as well as python functions interpreted during the build process.  Today this handles
-our version and build date and time. In the near future we expect to use this to compute at build time the commit hash of the other Mu repositories.  See main.py for function usage.  
+This plugin allows providing some variables in mkdocs.yml file and then reference those variables using jinja2 syntax in md files.  Most of these variables are populated and created during the DocBuild step and inserted into the yml file.
 
 https://github.com/fralau/mkdocs_macros_plugin
 
@@ -28,7 +27,7 @@ Please check out: https://squidfunk.github.io/mkdocs-material/extensions/admonit
 One example:
 
 !!! note
-    Sample note here. 
+    Sample note here.
 
 ### emoji support
 
@@ -41,4 +40,4 @@ Twitter, github, and emojione tags available.
 
 ### Others
 
-Check out the mkdocs.yml file for other extensions and details can be found in the links above. 
+Check out the mkdocs.yml file for other extensions and details can be found in the links above.
