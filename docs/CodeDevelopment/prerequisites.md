@@ -41,9 +41,9 @@ See component list here for more options. https://docs.microsoft.com/en-us/visua
 
 Usually this can be done by looking for the __requirements.txt__ file.  Each repo generally has one to describe the required modules.  
 
-This can be installed by doing:
+This can be installed by installing the entire requirements.txt file
 
- ```cmd
+``` cmd
 pip install --upgrade -r requirements.txt
 ```
 
