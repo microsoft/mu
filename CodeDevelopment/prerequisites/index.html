@@ -619,6 +619,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#mu_python_library" title="mu_python_library" class="md-nav__link">
+    mu_python_library
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#mu_environment" title="mu_environment" class="md-nav__link">
     mu_environment
   </a>
@@ -2235,6 +2242,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#mu_python_library" title="mu_python_library" class="md-nav__link">
+    mu_python_library
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#mu_environment" title="mu_environment" class="md-nav__link">
     mu_environment
   </a>
@@ -2322,21 +2336,20 @@ See component list here for more options. <a href="https://docs.microsoft.com/en
 </ol>
 <h3 id="get-the-project-mu-build-tools-using-pip">Get the Project Mu Build tools using Pip<a class="headerlink" href="#get-the-project-mu-build-tools-using-pip" title="Permanent link">&para;</a></h3>
 <p>Usually this can be done by looking for the <strong>requirements.txt</strong> file.  Each repo generally has one to describe the required modules.  </p>
-<p>This can be installed by doing:</p>
-<p>```cmd
-pip install --upgrade -r requirements.txt
-<div class="codehilite"><pre><span></span>!!! note &quot;Virtual Environments&quot;
-    In more active development environments or on PCs where you might want to have different versions of these tools to support older/newer platforms it is recommended to leverage python virtual environments to avoid any global dependencies.  
+<p>This can be installed by installing the entire requirements.txt file</p>
+<div class="codehilite"><pre><span></span>pip install --upgrade -r requirements.txt
+</pre></div>
 
-Project Mu currently has 3 pip modules:
+<div class="admonition note">
+<p class="admonition-title">Virtual Environments</p>
+<p>In more active development environments or on PCs where you might want to have different versions of these tools to support older/newer platforms it is recommended to leverage python virtual environments to avoid any global dependencies.  </p>
+</div>
+<p>Project Mu currently has 3 pip modules:</p>
+<h4 id="mu_python_library">mu_python_library<a class="headerlink" href="#mu_python_library" title="Permanent link">&para;</a></h4>
+<p>UEFI, Edk2, Acpi, and TPM common library functions.</p>
+<div class="codehilite"><pre><span></span>python -m pip install --upgrade mu_python_library
+</pre></div>
 
-#### mu_python_library
-
-UEFI, Edk2, Acpi, and TPM common library functions.
-
-``` cmd
-python -m pip install --upgrade mu_python_library
-</pre></div></p>
 <h4 id="mu_environment">mu_environment<a class="headerlink" href="#mu_environment" title="Permanent link">&para;</a></h4>
 <p>Self Describing Environment (SDE) code which is used to organize and coordinate UEFI builds.  This is the Project Mu Build system, plugin manager, edk2 build wrapper, logging, etc.  </p>
 <div class="codehilite"><pre><span></span>python -m pip install --upgrade mu_environment
