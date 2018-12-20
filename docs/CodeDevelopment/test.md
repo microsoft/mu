@@ -1,6 +1,6 @@
 # Tests
 
-Testing firmware is hard.  Lets just stop there. :poop: If you want to read on please do at your own risk.  Project Mu supports a few types of testing and this page will help provide some high level info and links for more information.  
+Testing firmware is hard.  Lets just stop there. :sob: If you want to read on please do at your own risk.  Project Mu supports a few types of testing and this page will help provide some high level info and links for more information.  
 
 ## Static Code Tests (analysis)
 

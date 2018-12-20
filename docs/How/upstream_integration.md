@@ -1,3 +1,0 @@
-# Upstream Integration
-
-## Tianocore integration

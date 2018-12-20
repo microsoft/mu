@@ -39,4 +39,6 @@
 2. Use STATIC on each non-public function and non-public global to avoid conflicts with other modules.
 3. Use EFIAPI on all public library class functions.
 
+## More info
 
+For general Edk2 and UEFI development additional information can be found at the [TianoCore.org](https://www.tianocore.org/) website.  
