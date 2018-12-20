@@ -7,6 +7,7 @@
 ## Get the docs repository
 
 First, you need to clone the project mu docs repository.
+
 ``` cmd
 git clone https://github.com/Microsoft/mu.git
 ```
