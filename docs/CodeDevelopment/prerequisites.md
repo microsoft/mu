@@ -9,7 +9,7 @@ The tools also vary by Operating System and Compiler choice.  Project Mu will do
 
 1. Download latest Python from https://www.python.org/downloads
     ``` cmd
-    https://www.python.org/ftp/python/3.7.1/python-3.7.1-amd64.exe
+    https://www.python.org/ftp/python/3.7.2/python-3.7.2-amd64.exe
     ```
 2. It is recommended you use the following options when installing python:
     1. include pip support
@@ -19,7 +19,7 @@ The tools also vary by Operating System and Compiler choice.  Project Mu will do
 
 1. Download latest Git For Windows from https://git-scm.com/download/win 
     ``` cmd
-    https://github.com/git-for-windows/git/releases/download/v2.19.1.windows.1/Git-2.19.1-64-bit.exe
+    https://github.com/git-for-windows/git/releases/download/v2.20.1.windows.1/Git-2.20.1-64-bit.exe
     ```
 2. It is recommended you use the following options:
     1. Checkout as is, commit as is.
@@ -37,20 +37,51 @@ The tools also vary by Operating System and Compiler choice.  Project Mu will do
     ```
 See component list here for more options. https://docs.microsoft.com/en-us/visualstudio/install/workload-component-id-vs-build-tools?view=vs-2017 
 
-### Get the Project Mu Build tools using Pip
 
-Usually this can be done by looking for the __requirements.txt__ file.  Each repo generally has one to describe the required modules.  
+## Windows Subsystem For Linux (WSL)
 
-This can be installed by installing the entire requirements.txt file
+_Coming soon_
 
-``` cmd
-pip install --upgrade -r requirements.txt
-```
 
-!!! note "Virtual Environments"
-    In more active development environments or on PCs where you might want to have different versions of these tools to support older/newer platforms it is recommended to leverage python virtual environments to avoid any global dependencies.  
+## All Operating Systems - Python Virtual Environment and Mu Build Tools
 
-Project Mu currently has 3 pip modules:
+In all Operating Systems environments the Project Mu Build tools are needed. 
+
+Python virtual environments are strongly suggested especially when doing development in multiple workspaces.  Each workspace should have its own virtual environment as to not modify the global system state. Since Project Mu uses Pip modules this allows each workspace to keep the versions insync with the workspace requirements.
+
+More info on Python Virtual Environments: https://docs.python.org/3/library/venv.html
+
+### Workspace Virtual Environment Setup Process 
+
+Do this one time per workspace
+
+1. Open Cmd Prompt in the root directory where you want to store your virtual environment
+2. run python cmd
+    ``` cmd
+    python -m venv <your virtual env name>
+    ```
+3. Activate it for your session.  
+
+### Activate Virtual Environment
+
+Do this each time you open a new command window to build your workspace.
+
+1. Open Cmd Prompt
+2. run activate script - for windows cmd prompt (cmd.exe) do this
+    ``` cmd
+    <your virtual env name>\Script\activate
+    ```
+3. cd into your workspace directory
+4. Update/Install your python pip requirments.  This is generally at the workspace root.
+    ``` cmd
+    pip install --upgrade -r requirements.txt
+    ```
+5. Do dev work and run your builds!
+
+
+### More About Project Mu tools using Pip
+
+Project Mu currently has 3 pip modules
 
 #### mu_python_library
 
@@ -75,7 +106,3 @@ CI and package test scripts.  Supports compiling as well as running other build 
 ``` cmd
 python -m pip install --upgrade mu_build
 ```
-
-## Windows Subsystem For Linux (WSL)
-
-_Coming soon_
