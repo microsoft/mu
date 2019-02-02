@@ -104,6 +104,7 @@
         "backported",
         "pytest", "pip", "flake8",
         "workspaces",
-        "venv"
+        "venv",
+        "omnicache"
     ]
 }

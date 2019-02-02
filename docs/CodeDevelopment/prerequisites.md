@@ -24,6 +24,7 @@ The tools also vary by Operating System and Compiler choice.  Project Mu will do
 2. It is recommended you use the following options:
     1. Checkout as is, commit as is.
     2. Native Channel support (this will help in corp environments)
+    3. Check the box to "Enable Git Credential Manager"
 
 ### Visual Studio 2017
 
@@ -35,7 +36,11 @@ The tools also vary by Operating System and Compiler choice.  Project Mu will do
     ``` cmd
     C:\TEMP\vs_buildtools.exe --quiet --wait --norestart --nocache --installPath C:\BuildTools --add Microsoft.VisualStudio.Component.VC.CoreBuildTools --add Microsoft.VisualStudio.Component.VC.Tools.x86.x64 --add Microsoft.VisualStudio.Component.Windows10SDK.17134 --add Microsoft.VisualStudio.Component.VC.Tools.ARM --add Microsoft.VisualStudio.Component.VC.Tools.ARM64
     ```
-See component list here for more options. https://docs.microsoft.com/en-us/visualstudio/install/workload-component-id-vs-build-tools?view=vs-2017 
+See component list here for more options. https://docs.microsoft.com/en-us/visualstudio/install/workload-component-id-vs-build-tools?view=vs-2017
+
+### Optional - Create an Omnicache
+
+An Omnicache is a Project Mu tool that leverages git features to speed up git update operations.  This helps speed up git operations if you have multiple workspaces by using the git "--reference" feature.  Omnicache is documented in the Mu Pip Environment section of this site. 
 
 
 ## Windows Subsystem For Linux (WSL)
