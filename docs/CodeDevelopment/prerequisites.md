@@ -47,7 +47,7 @@ _Coming soon_
 
 In all Operating Systems environments the Project Mu Build tools are needed. 
 
-Python virtual environments are strongly suggested especially when doing development in multiple workspaces.  Each workspace should have its own virtual environment as to not modify the global system state. Since Project Mu uses Pip modules this allows each workspace to keep the versions insync with the workspace requirements.
+Python virtual environments are strongly suggested especially when doing development in multiple workspaces.  Each workspace should have its own virtual environment as to not modify the global system state. Since Project Mu uses Pip modules this allows each workspace to keep the versions in sync with the workspace requirements.
 
 More info on Python Virtual Environments: https://docs.python.org/3/library/venv.html
 
@@ -72,7 +72,7 @@ Do this each time you open a new command window to build your workspace.
     <your virtual env name>\Script\activate
     ```
 3. cd into your workspace directory
-4. Update/Install your python pip requirments.  This is generally at the workspace root.
+4. Update/Install your python pip requirements.  This is generally at the workspace root.
     ``` cmd
     pip install --upgrade -r requirements.txt
     ```

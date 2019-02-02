@@ -14,7 +14,7 @@ It is often desirable to compile test code and at times there might not be a pro
     Assumption is that the repository to compile has been cloned to your filesystem and is in the state ready to compile.
 
 1. Open cmd prompt at workspace root
-2. __Suggesttion:__ Activate your python virtual environment
+2. __Suggestion:__ Activate your python virtual environment
 3. Install or update Python dependencies using pip
 4. Run Mu_Build to:
     * Clone code dependencies
