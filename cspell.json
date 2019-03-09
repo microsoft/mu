@@ -102,6 +102,9 @@
         "lzturbo",
         "rebased",
         "backported",
-        "pytest", "pip", "flake8"
+        "pytest", "pip", "flake8",
+        "workspaces",
+        "venv",
+        "omnicache"
     ]
 }

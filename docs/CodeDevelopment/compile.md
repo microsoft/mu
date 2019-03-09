@@ -14,8 +14,9 @@ It is often desirable to compile test code and at times there might not be a pro
     Assumption is that the repository to compile has been cloned to your filesystem and is in the state ready to compile.
 
 1. Open cmd prompt at workspace root
-2. Install Python dependencies using pip
-3. Run Mu_Build to:
+2. __Suggestion:__ Activate your python virtual environment
+3. Install or update Python dependencies using pip
+4. Run Mu_Build to:
     * Clone code dependencies
     * Download binary dependencies
     * Statically test code
@@ -23,8 +24,8 @@ It is often desirable to compile test code and at times there might not be a pro
     ```cmd
     mu_build -c <Mu Repo Build Config File> -p <1st Mu Pkg Build Config File> <2nd Mu Pkg Build Config File...>
     ```
-4. Open __TestResults.xml__ for results
-5. Open log files to debug any errors
+5. Open __TestResults.xml__ for results
+6. Open log files to debug any errors
 
 ## Project Build aka __PlatformBuild__
 
@@ -34,8 +35,10 @@ It is often desirable to compile test code and at times there might not be a pro
 When you actually want to compile for a platform that will create a firmware binary which can be flashed and execute on a platform this process is necessary.  
 
 1. open cmd prompt at workspace root
-2. Locate the __PlatformBuild.py__ file (generally in the platform build dir)
-3. Run __PlatformBuild.py__
+2. __Suggestion:__ Activate your python virtual environment
+3. Install or update Python dependencies using pip
+4. Locate the __PlatformBuild.py__ file (generally in the platform build dir)
+5. Run __PlatformBuild.py__
 
 ### Other features
 
