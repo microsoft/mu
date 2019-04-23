@@ -408,7 +408,9 @@ class DocBuild(object):
         # now parse as yaml
         f.seek(0)
         # yaml.load(f)
-        if "extra" in yaml.load(f):
+        # IMPORTANT NOTE: This call to "unsafe_load()" is only acceptable because we control the yml file being loaded.
+        #                   Unsafe load is required to support some configuration options for pymdownx.
+        if "extra" in yaml.unsafe_load(f):
             raise Exception(
                 "extra: member not allowed in mkdocs_base.yml.  Please add the contents to DocBuild constructor instead.  ")
         f.close()
