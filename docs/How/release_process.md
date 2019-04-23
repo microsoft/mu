@@ -26,7 +26,20 @@ The below diagram illustrates the life-cycle of a single branch and indicates th
 
 ## Current Branch Status
 
-While the first release branches may be a little out of date, going forwards the status of each branch will be recorded in the README.rst file at the root of the branch. In general, the README found in 
+While the earliest release branches may not be included in this process, starting with `release/201903` and going forwards the status of each branch will be recorded in the README.rst file at the root of the branch. In general, the README found in Basecore will contain information that is common to all of the Mu submodules, but each submodule will also have its own README for each release branch that contains notes specific to the development that occurs in that submodule during a release cycle.
+
+The README will also contain a summary of the branch status at a given time. For example, here is the status of Basecore `release/201903` as of the time of this writing:
+
+```text
+Status:
+  In Development
+
+Entered Development:
+  2019/03/25
+
+Anticipated Stabilization:
+  May 2019
+```
 
 ## Upstream Integration Phase
 
