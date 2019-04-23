@@ -105,6 +105,7 @@
         "pytest", "pip", "flake8",
         "workspaces",
         "venv",
-        "omnicache"
+        "omnicache",
+        "roadmap","roadmaps"
     ]
 }
