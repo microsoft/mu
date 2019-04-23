@@ -24,6 +24,10 @@ The below diagram illustrates the life-cycle of a single branch and indicates th
     
     This is why we strongly discourage forking Project Mu for direct modification (ie. consumption, not contribution). Instead, leverage the distributed repo management system and override management system to integrate proprietary code/modules.
 
+## Current Branch Status
+
+While the first release branches may be a little out of date, going forwards the status of each branch will be recorded in the README.rst file at the root of the branch. In general, the README found in 
+
 ## Upstream Integration Phase
 
 At this time, we are targeting upstream integrations for roughly once a quarter, attempting to align 1:1 with the TianoCore stable release cadence. Prior to an integration, the status dashboard (not yet created) will be updated with the target date of completion and the target TianoCore commit and/or release. For example, a plan was made to transition off of `release/20180529` when TianoCore announced the `edk2-stable201808` release.
