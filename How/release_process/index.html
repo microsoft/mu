@@ -412,6 +412,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#current-branch-status" title="Current Branch Status" class="md-nav__link">
+    Current Branch Status
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#upstream-integration-phase" title="Upstream Integration Phase" class="md-nav__link">
     Upstream Integration Phase
   </a>
@@ -2358,6 +2365,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#current-branch-status" title="Current Branch Status" class="md-nav__link">
+    Current Branch Status
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#upstream-integration-phase" title="Upstream Integration Phase" class="md-nav__link">
     Upstream Integration Phase
   </a>
@@ -2477,6 +2491,19 @@
 <p>Due to the impacts of the rebase process on the history of Mu release branches, any downstream consumers will have to follow a similar integration process when upgrading to a new release. Any custom changes made within the Project Mu repos will have to be rebased from one release to the next.</p>
 <p>This is why we strongly discourage forking Project Mu for direct modification (ie. consumption, not contribution). Instead, leverage the distributed repo management system and override management system to integrate proprietary code/modules.</p>
 </div>
+<h2 id="current-branch-status">Current Branch Status<a class="headerlink" href="#current-branch-status" title="Permanent link">&para;</a></h2>
+<p>While the earliest release branches may not be included in this process, starting with <code class="codehilite">release/201903</code> and going forwards the status of each branch will be recorded in the README.rst file at the root of the branch. In general, the README found in Basecore will contain information that is common to all of the Mu submodules, but each submodule will also have its own README for each release branch that contains notes specific to the development that occurs in that submodule during a release cycle.</p>
+<p>The README will also contain a summary of the branch status at a given time. For example, here is a sample status for Basecore <code class="codehilite">release/201903</code> as of the time of this writing:</p>
+<div class="codehilite"><pre><span></span>Current Phase:
+  Development
+
+Entered Current Phase:
+  2019/03/25
+
+Planned Exit Date:
+  May 2019
+</pre></div>
+
 <h2 id="upstream-integration-phase">Upstream Integration Phase<a class="headerlink" href="#upstream-integration-phase" title="Permanent link">&para;</a></h2>
 <p>At this time, we are targeting upstream integrations for roughly once a quarter, attempting to align 1:1 with the TianoCore stable release cadence. Prior to an integration, the status dashboard (not yet created) will be updated with the target date of completion and the target TianoCore commit and/or release. For example, a plan was made to transition off of <code class="codehilite">release/20180529</code> when TianoCore announced the <code class="codehilite">edk2-stable201808</code> release.</p>
 <p>Once a commit is selected, a set of rebase commits will be chosen from the active (previous) <code class="codehilite">release/*</code> branch. Ideally, these commits would include everything from the previous rebase through the most recent <code class="codehilite">*_RC</code> tag. For example, when moving from the <code class="codehilite">release/201808</code> branch, the commits will be selected from <code class="codehilite">1808_Upstream</code> (not inclusive) tag to <code class="codehilite">1808_RC1</code>.</p>
