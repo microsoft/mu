@@ -36,7 +36,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.1.2">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.2.0">
     
     
       
@@ -44,7 +44,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/application.3020aac5.css">
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/application.750b69bd.css">
       
         <link rel="stylesheet" href="../../../../../assets/stylesheets/application-palette.224b79ff.css">
       
@@ -55,7 +55,7 @@
       
     
     
-      <script src="../../../../../assets/javascripts/modernizr.01ccdecf.js"></script>
+      <script src="../../../../../assets/javascripts/modernizr.74668098.js"></script>
     
     
       
@@ -1235,10 +1235,70 @@
           
 
 
-  <li class="md-nav__item">
-    <a href="../../../../mu_pip_environment/MuEnvironment/docs/feature_omnicache/" title="docs" class="md-nav__link">
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-4-5-3" type="checkbox" id="nav-9-4-5-3">
+    
+    <label class="md-nav__link" for="nav-9-4-5-3">
       docs
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-9-4-5-3">
+        docs
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../mu_pip_environment/MuEnvironment/docs/feature_extdep/" title="feature extdep" class="md-nav__link">
+      feature extdep
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../mu_pip_environment/MuEnvironment/docs/feature_omnicache/" title="feature omnicache" class="md-nav__link">
+      feature omnicache
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../mu_pip_environment/MuEnvironment/docs/feature_pluginmanager/" title="feature pluginmanager" class="md-nav__link">
+      feature pluginmanager
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../mu_pip_environment/MuEnvironment/docs/feature_sde/" title="feature sde" class="md-nav__link">
+      feature sde
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
         
@@ -1324,10 +1384,46 @@
           
 
 
-  <li class="md-nav__item">
-    <a href="../../../../mu_pip_python_library/MuPythonLibrary/feature_GetHostInfo/" title="Mu Python Library" class="md-nav__link">
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-5-5" type="checkbox" id="nav-9-5-5">
+    
+    <label class="md-nav__link" for="nav-9-5-5">
       Mu Python Library
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-5-5">
+        Mu Python Library
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../mu_pip_python_library/MuPythonLibrary/feature_GetHostInfo/" title="feature Get Host Info" class="md-nav__link">
+      feature Get Host Info
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../mu_pip_python_library/MuPythonLibrary/feature_MuAnsiHandler/" title="feature Mu Ansi Handler" class="md-nav__link">
+      feature Mu Ansi Handler
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
         
@@ -2364,23 +2460,23 @@ OF THE POSSIBILITY OF SUCH DAMAGE.</p>
 <h3 id="hashpassword"><strong>HashPassword</strong><a class="headerlink" href="#hashpassword" title="Permanent link">&para;</a></h3>
 <p>Hashes a password by passing through to the BaseCryptLib. Returns EFI_STATUS</p>
 <p>NOTE: DigestSize will be used to determine the hash algorithm and must correspond to a known hash digest size. Use standards.</p>
-<div class="codehilite"><pre><span></span>@retval     EFI_SUCCESS             Congratulations! Your hash is in the output buffer.
-@retval     EFI_INVALID_PARAMETER   One of the pointers was NULL or one of the sizes was too large.
-@retval     EFI_INVALID_PARAMETER   The hash algorithm could not be determined from the digest size.
-@retval     EFI_ABORTED             An error occurred in the OpenSSL subroutines.
+<div class="codehilite"><pre><span></span><span class="nv">@retval</span><span class="w">     </span><span class="n">EFI_SUCCESS</span><span class="w">             </span><span class="n">Congratulations</span><span class="err">!</span><span class="w"> </span><span class="n">Your</span><span class="w"> </span><span class="n">hash</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">output</span><span class="w"> </span><span class="n">buffer</span><span class="p">.</span><span class="w"></span>
+<span class="nv">@retval</span><span class="w">     </span><span class="n">EFI_INVALID_PARAMETER</span><span class="w">   </span><span class="n">One</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">pointers</span><span class="w"> </span><span class="n">was</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">one</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">sizes</span><span class="w"> </span><span class="n">was</span><span class="w"> </span><span class="n">too</span><span class="w"> </span><span class="k">large</span><span class="p">.</span><span class="w"></span>
+<span class="nv">@retval</span><span class="w">     </span><span class="n">EFI_INVALID_PARAMETER</span><span class="w">   </span><span class="n">The</span><span class="w"> </span><span class="n">hash</span><span class="w"> </span><span class="n">algorithm</span><span class="w"> </span><span class="n">could</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">determined</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">digest</span><span class="w"> </span><span class="k">size</span><span class="p">.</span><span class="w"></span>
+<span class="nv">@retval</span><span class="w">     </span><span class="n">EFI_ABORTED</span><span class="w">             </span><span class="n">An</span><span class="w"> </span><span class="n">error</span><span class="w"> </span><span class="n">occurred</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">OpenSSL</span><span class="w"> </span><span class="n">subroutines</span><span class="p">.</span><span class="w"></span>
 </pre></div>
 
 
 <p><strong>Inputs</strong>:</p>
-<div class="codehilite"><pre><span></span>IN CONST MU_PKCS5_PASSWORD_HASH_PROTOCOL
-IN UINTN                                      PasswordSize
-IN CONST  CHAR8                              *Password
-IN UINTN                                      SaltSize
-IN CONST  UINT8                              *Salt
-IN UINTN                                      IterationCount
-IN UINTN                                      DigestSize
-IN UINTN                                      OutputSize
-OUT UINT8                                    *Output
+<div class="codehilite"><pre><span></span><span class="k">IN</span> <span class="n">CONST</span> <span class="n">MU_PKCS5_PASSWORD_HASH_PROTOCOL</span>
+<span class="k">IN</span> <span class="n">UINTN</span>                                      <span class="n">PasswordSize</span>
+<span class="k">IN</span> <span class="n">CONST</span>  <span class="n">CHAR8</span>                              <span class="o">*</span><span class="n">Password</span>
+<span class="k">IN</span> <span class="n">UINTN</span>                                      <span class="n">SaltSize</span>
+<span class="k">IN</span> <span class="n">CONST</span>  <span class="n">UINT8</span>                              <span class="o">*</span><span class="n">Salt</span>
+<span class="k">IN</span> <span class="n">UINTN</span>                                      <span class="n">IterationCount</span>
+<span class="k">IN</span> <span class="n">UINTN</span>                                      <span class="n">DigestSize</span>
+<span class="k">IN</span> <span class="n">UINTN</span>                                      <span class="n">OutputSize</span>
+<span class="k">OUT</span> <span class="n">UINT8</span>                                    <span class="o">*</span><span class="k">Output</span>
 </pre></div>
 
 
@@ -2390,20 +2486,20 @@ OUT UINT8                                    *Output
 <p>If P7Data, TrustedCert or InData is NULL, then return EFI_INVALID_PARAMETER.
 If P7Length, CertLength or DataLength overflow, then return EFI_INVALID_PARAMETER.
 If this interface is not supported, then return EFI_UNSUPPORTED.</p>
-<div class="codehilite"><pre><span></span>@retval  EFI_SUCCESS  The specified PKCS#7 signed data is valid.
-@retval  EFI_SECURITY_VIOLATION Invalid PKCS#7 signed data.
-@retval  EFI_UNSUPPORTED This interface is not supported.
+<div class="codehilite"><pre><span></span><span class="nv">@retval</span><span class="w">  </span><span class="n">EFI_SUCCESS</span><span class="w">  </span><span class="n">The</span><span class="w"> </span><span class="n">specified</span><span class="w"> </span><span class="n">PKCS#7</span><span class="w"> </span><span class="n">signed</span><span class="w"> </span><span class="k">data</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">valid</span><span class="p">.</span><span class="w"></span>
+<span class="nv">@retval</span><span class="w">  </span><span class="n">EFI_SECURITY_VIOLATION</span><span class="w"> </span><span class="n">Invalid</span><span class="w"> </span><span class="n">PKCS#7</span><span class="w"> </span><span class="n">signed</span><span class="w"> </span><span class="k">data</span><span class="p">.</span><span class="w"></span>
+<span class="nv">@retval</span><span class="w">  </span><span class="n">EFI_UNSUPPORTED</span><span class="w"> </span><span class="n">This</span><span class="w"> </span><span class="n">interface</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">supported</span><span class="p">.</span><span class="w"></span>
 </pre></div>
 
 
 <p><strong>Inputs:</strong></p>
-<div class="codehilite"><pre><span></span>IN  CONST MU_PKCS7_PROTOCOL       
-IN  CONST UINT8                   *P7Data,
-IN  UINTN                          P7DataLength,
-IN  CONST UINT8                   *TrustedCert,
-IN  UINTN                          TrustedCertLength,
-IN  CONST UINT8                   *Data,
-IN  UINTN                          DataLength (in bytes)
+<div class="codehilite"><pre><span></span><span class="k">IN</span>  <span class="n">CONST</span> <span class="n">MU_PKCS7_PROTOCOL</span>       
+<span class="k">IN</span>  <span class="n">CONST</span> <span class="n">UINT8</span>                   <span class="o">*</span><span class="n">P7Data</span><span class="p">,</span>
+<span class="k">IN</span>  <span class="n">UINTN</span>                          <span class="n">P7DataLength</span><span class="p">,</span>
+<span class="k">IN</span>  <span class="n">CONST</span> <span class="n">UINT8</span>                   <span class="o">*</span><span class="n">TrustedCert</span><span class="p">,</span>
+<span class="k">IN</span>  <span class="n">UINTN</span>                          <span class="n">TrustedCertLength</span><span class="p">,</span>
+<span class="k">IN</span>  <span class="n">CONST</span> <span class="n">UINT8</span>                   <span class="o">*</span><span class="k">Data</span><span class="p">,</span>
+<span class="k">IN</span>  <span class="n">UINTN</span>                          <span class="n">DataLength</span> <span class="p">(</span><span class="k">in</span> <span class="n">bytes</span><span class="p">)</span>
 </pre></div>
 
 
@@ -2411,19 +2507,19 @@ IN  UINTN                          DataLength (in bytes)
 <p>This function receives a PKCS7 formatted signature, and then verifies that the specified Enhanced or Extended Key Usages (EKU's) are present in the end-entity leaf signing certificate.</p>
 <p>Note that this function does not validate the certificate chain.</p>
 <p>Applications for custom EKU's are quite flexible.  For example, a policy EKU may be present in an Issuing Certificate Authority (CA), and any sub-ordinate certificate issued might also contain this EKU, thus constraining the sub-ordinate certificate.  Other applications might allow a certificate embedded in a device to specify that other Object Identifiers (OIDs) are present which contains binary data specifying custom capabilities that the device is able to do.</p>
-<div class="codehilite"><pre><span></span>@retval EFI_SUCCESS            - The required EKUs were found in the signature.
-@retval EFI_INVALID_PARAMETER  - A parameter was invalid.
-@retval EFI_NOT_FOUND          - One or more EKU&#39;s were not found in the signature.
+<div class="codehilite"><pre><span></span><span class="nv">@retval</span><span class="w"> </span><span class="n">EFI_SUCCESS</span><span class="w">            </span><span class="o">-</span><span class="w"> </span><span class="n">The</span><span class="w"> </span><span class="n">required</span><span class="w"> </span><span class="n">EKUs</span><span class="w"> </span><span class="n">were</span><span class="w"> </span><span class="k">found</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">signature</span><span class="p">.</span><span class="w"></span>
+<span class="nv">@retval</span><span class="w"> </span><span class="n">EFI_INVALID_PARAMETER</span><span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="k">parameter</span><span class="w"> </span><span class="n">was</span><span class="w"> </span><span class="n">invalid</span><span class="p">.</span><span class="w"></span>
+<span class="nv">@retval</span><span class="w"> </span><span class="n">EFI_NOT_FOUND</span><span class="w">          </span><span class="o">-</span><span class="w"> </span><span class="n">One</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">more</span><span class="w"> </span><span class="n">EKU</span><span class="err">&#39;</span><span class="n">s</span><span class="w"> </span><span class="n">were</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="k">found</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">signature</span><span class="p">.</span><span class="w"></span>
 </pre></div>
 
 
 <p><strong>Inputs:</strong></p>
-<div class="codehilite"><pre><span></span>IN CONST MU_PKCS7_PROTOCOL    
-IN CONST UINT8                *Pkcs7Signature,
-IN CONST UINT32                SignatureSize,  (in bytes)
-IN CONST CHAR8                *RequiredEKUs[], null-terminated strings listing OIDs of required EKUs
-IN CONST UINT32                RequiredEKUsSize,
-IN BOOLEAN                     RequireAllPresent
+<div class="codehilite"><pre><span></span><span class="k">IN</span> <span class="n">CONST</span> <span class="n">MU_PKCS7_PROTOCOL</span>    
+<span class="k">IN</span> <span class="n">CONST</span> <span class="n">UINT8</span>                <span class="o">*</span><span class="n">Pkcs7Signature</span><span class="p">,</span>
+<span class="k">IN</span> <span class="n">CONST</span> <span class="n">UINT32</span>                <span class="n">SignatureSize</span><span class="p">,</span>  <span class="p">(</span><span class="k">in</span> <span class="n">bytes</span><span class="p">)</span>
+<span class="k">IN</span> <span class="n">CONST</span> <span class="n">CHAR8</span>                <span class="o">*</span><span class="n">RequiredEKUs</span><span class="p">[],</span> <span class="k">null</span><span class="o">-</span><span class="n">terminated</span> <span class="n">strings</span> <span class="n">listing</span> <span class="k">OIDs</span> <span class="k">of</span> <span class="n">required</span> <span class="n">EKUs</span>
+<span class="k">IN</span> <span class="n">CONST</span> <span class="n">UINT32</span>                <span class="n">RequiredEKUsSize</span><span class="p">,</span>
+<span class="k">IN</span> <span class="nb">BOOLEAN</span>                     <span class="n">RequireAllPresent</span>
 </pre></div>
 
 
@@ -2522,7 +2618,7 @@ IN BOOLEAN                     RequireAllPresent
       
     </div>
     
-      <script src="../../../../../assets/javascripts/application.267712eb.js"></script>
+      <script src="../../../../../assets/javascripts/application.39abc4af.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../../../../.."}})</script>
       

@@ -36,7 +36,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.1.2">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.2.0">
     
     
       
@@ -44,7 +44,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.3020aac5.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.750b69bd.css">
       
         <link rel="stylesheet" href="../../assets/stylesheets/application-palette.224b79ff.css">
       
@@ -55,7 +55,7 @@
       
     
     
-      <script src="../../assets/javascripts/modernizr.01ccdecf.js"></script>
+      <script src="../../assets/javascripts/modernizr.74668098.js"></script>
     
     
       
@@ -1300,10 +1300,70 @@
           
 
 
-  <li class="md-nav__item">
-    <a href="../../dyn/mu_pip_environment/MuEnvironment/docs/feature_omnicache/" title="docs" class="md-nav__link">
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-4-5-3" type="checkbox" id="nav-9-4-5-3">
+    
+    <label class="md-nav__link" for="nav-9-4-5-3">
       docs
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-9-4-5-3">
+        docs
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dyn/mu_pip_environment/MuEnvironment/docs/feature_extdep/" title="feature extdep" class="md-nav__link">
+      feature extdep
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dyn/mu_pip_environment/MuEnvironment/docs/feature_omnicache/" title="feature omnicache" class="md-nav__link">
+      feature omnicache
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dyn/mu_pip_environment/MuEnvironment/docs/feature_pluginmanager/" title="feature pluginmanager" class="md-nav__link">
+      feature pluginmanager
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dyn/mu_pip_environment/MuEnvironment/docs/feature_sde/" title="feature sde" class="md-nav__link">
+      feature sde
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
         
@@ -1389,10 +1449,46 @@
           
 
 
-  <li class="md-nav__item">
-    <a href="../../dyn/mu_pip_python_library/MuPythonLibrary/feature_GetHostInfo/" title="Mu Python Library" class="md-nav__link">
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-5-5" type="checkbox" id="nav-9-5-5">
+    
+    <label class="md-nav__link" for="nav-9-5-5">
       Mu Python Library
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-5-5">
+        Mu Python Library
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dyn/mu_pip_python_library/MuPythonLibrary/feature_GetHostInfo/" title="feature Get Host Info" class="md-nav__link">
+      feature Get Host Info
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dyn/mu_pip_python_library/MuPythonLibrary/feature_MuAnsiHandler/" title="feature Mu Ansi Handler" class="md-nav__link">
+      feature Mu Ansi Handler
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
         
@@ -2374,7 +2470,7 @@
 <li>Download binary dependencies</li>
 <li>Statically test code</li>
 <li>Compile test code
-<div class="codehilite"><pre><span></span>mu_build -c &lt;Mu Repo Build Config File&gt; -p &lt;1st Mu Pkg Build Config File&gt; &lt;2nd Mu Pkg Build Config File...&gt;
+<div class="codehilite"><pre><span></span><span class="n">mu_build</span> <span class="o">-</span><span class="k">c</span> <span class="o">&lt;</span><span class="n">Mu</span> <span class="n">Repo</span> <span class="n">Build</span> <span class="n">Config</span> <span class="n">File</span><span class="o">&gt;</span> <span class="o">-</span><span class="n">p</span> <span class="o">&lt;</span><span class="mi">1</span><span class="n">st</span> <span class="n">Mu</span> <span class="n">Pkg</span> <span class="n">Build</span> <span class="n">Config</span> <span class="n">File</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="mi">2</span><span class="n">nd</span> <span class="n">Mu</span> <span class="n">Pkg</span> <span class="n">Build</span> <span class="n">Config</span> <span class="n">File</span><span class="p">...</span><span class="o">&gt;</span>
 </pre></div></li>
 </ul>
 </li>
@@ -2395,28 +2491,28 @@
 <h3 id="other-features">Other features<a class="headerlink" href="#other-features" title="Permanent link">&para;</a></h3>
 <p><strong>PlatformBuild.py</strong> leverages a common <em>UefiBuild</em> python component.  This component provides a common set of features.  The UefiBuild component documentation is published from the mu_pip_environment repository but here are a few of the common features developers find useful.</p>
 <ul>
-<li>Control the target of the build.  Pass <code class="codehilite">Target=RELEASE</code></li>
-<li>Build a single module: <code class="codehilite">BuildModule=MdePkg/ModuleToBuild.inf</code></li>
+<li>Control the target of the build.  Pass <code class="codehilite"><span class="n">Target</span><span class="o">=</span><span class="n">RELEASE</span></code></li>
+<li>Build a single module: <code class="codehilite"><span class="n">BuildModule</span><span class="o">=</span><span class="n">MdePkg</span><span class="o">/</span><span class="n">ModuleToBuild</span><span class="p">.</span><span class="n">inf</span></code></li>
 <li>Build with reporting:</li>
-<li>Single report type <code class="codehilite">BUILDREPORTING=TRUE BUILDREPORT_TYPES=&quot;PCD&quot;</code></li>
-<li>Change report file <code class="codehilite">BUILDREPORT_FILE=filename.txt</code> default is <strong>BUILD_REPORT.TXT</strong></li>
-<li>All report types. <code class="codehilite">BUILDREPORTING=TRUE BUILDREPORT_TYPES=&quot;PCD DEPEX FLASH BUILD_FLAGS LIBRARY&quot;</code></li>
-<li>Clean build: <code class="codehilite">--clean</code></li>
-<li>Clean only (no compile): <code class="codehilite">--cleanonly</code></li>
+<li>Single report type <code class="codehilite"><span class="n">BUILDREPORTING</span><span class="o">=</span><span class="k">TRUE</span> <span class="n">BUILDREPORT_TYPES</span><span class="o">=</span><span class="ss">&quot;PCD&quot;</span></code></li>
+<li>Change report file <code class="codehilite"><span class="n">BUILDREPORT_FILE</span><span class="o">=</span><span class="n">filename</span><span class="p">.</span><span class="n">txt</span></code> default is <strong>BUILD_REPORT.TXT</strong></li>
+<li>All report types. <code class="codehilite"><span class="n">BUILDREPORTING</span><span class="o">=</span><span class="k">TRUE</span> <span class="n">BUILDREPORT_TYPES</span><span class="o">=</span><span class="ss">&quot;PCD DEPEX FLASH BUILD_FLAGS LIBRARY&quot;</span></code></li>
+<li>Clean build: <code class="codehilite"><span class="c1">--clean</span></code></li>
+<li>Clean only (no compile): <code class="codehilite"><span class="c1">--cleanonly</span></code></li>
 <li>Skip some of the build steps:</li>
-<li>Skip the Edk2 build step: <code class="codehilite">--skipbuild</code></li>
-<li>Skip pre or post build steps: <code class="codehilite">--skipprebuild</code> or <code class="codehilite">--skippostbuild</code></li>
+<li>Skip the Edk2 build step: <code class="codehilite"><span class="c1">--skipbuild</span></code></li>
+<li>Skip pre or post build steps: <code class="codehilite"><span class="c1">--skipprebuild</span></code> or <code class="codehilite"><span class="c1">--skippostbuild</span></code></li>
 <li>Change a Build variable that is used in Edk2 build process:</li>
-<li><code class="codehilite">BLD_*_DEBUG_OUTPUT_LEVEL=0x80000004</code> will be passed to DSC/FDF as <strong>DEBUG_OUTPUT_LEVEL</strong>.  These variable names and behavior are platform defined.  </li>
-<li><code class="codehilite">BLD_*_&lt;var name&gt;</code> is used for builds of any target type unless there is a more specific version for the given target type.</li>
-<li><code class="codehilite">BLD_DEBUG_&lt;var name&gt;</code> is used for debug builds only</li>
-<li><code class="codehilite">BLD_RELEASE_&lt;var name&gt;</code> is used for release builds only</li>
+<li><code class="codehilite"><span class="n">BLD_</span><span class="o">*</span><span class="n">_DEBUG_OUTPUT_LEVEL</span><span class="o">=</span><span class="mi">0</span><span class="n">x80000004</span></code> will be passed to DSC/FDF as <strong>DEBUG_OUTPUT_LEVEL</strong>.  These variable names and behavior are platform defined.  </li>
+<li><code class="codehilite"><span class="n">BLD_</span><span class="o">*</span><span class="n">_</span><span class="o">&lt;</span><span class="n">var</span> <span class="n">name</span><span class="o">&gt;</span></code> is used for builds of any target type unless there is a more specific version for the given target type.</li>
+<li><code class="codehilite"><span class="n">BLD_DEBUG_</span><span class="o">&lt;</span><span class="n">var</span> <span class="n">name</span><span class="o">&gt;</span></code> is used for debug builds only</li>
+<li><code class="codehilite"><span class="n">BLD_RELEASE_</span><span class="o">&lt;</span><span class="n">var</span> <span class="n">name</span><span class="o">&gt;</span></code> is used for release builds only</li>
 <li>Using a config file.  To simplify calling of <strong>PlatformBuild.py</strong> if there is a <strong>BuildConfig.conf</strong> in the root of your UEFI workspace those parameters will be used as well.  The command line overrides anything from the conf file.  </li>
 </ul>
 <h3 id="example-buildconfigconf">Example BuildConfig.conf<a class="headerlink" href="#example-buildconfigconf" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span># Turn on full build reports
-BUILDREPORTING=TRUE
-BUILDREPORT_TYPES=&quot;PCD DEPEX FLASH BUILD_FLAGS LIBRARY&quot;
+<div class="codehilite"><pre><span></span><span class="o">#</span> <span class="n">Turn</span> <span class="k">on</span> <span class="k">full</span> <span class="n">build</span> <span class="n">reports</span>
+<span class="n">BUILDREPORTING</span><span class="o">=</span><span class="k">TRUE</span>
+<span class="n">BUILDREPORT_TYPES</span><span class="o">=</span><span class="ss">&quot;PCD DEPEX FLASH BUILD_FLAGS LIBRARY&quot;</span>
 </pre></div>
                 
                   
@@ -2498,7 +2594,7 @@ BUILDREPORT_TYPES=&quot;PCD DEPEX FLASH BUILD_FLAGS LIBRARY&quot;
       
     </div>
     
-      <script src="../../assets/javascripts/application.267712eb.js"></script>
+      <script src="../../assets/javascripts/application.39abc4af.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       

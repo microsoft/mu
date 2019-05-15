@@ -36,7 +36,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../../../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.1.2">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.2.0">
     
     
       
@@ -44,7 +44,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../../../assets/stylesheets/application.3020aac5.css">
+      <link rel="stylesheet" href="../../../../../../../assets/stylesheets/application.750b69bd.css">
       
         <link rel="stylesheet" href="../../../../../../../assets/stylesheets/application-palette.224b79ff.css">
       
@@ -55,7 +55,7 @@
       
     
     
-      <script src="../../../../../../../assets/javascripts/modernizr.01ccdecf.js"></script>
+      <script src="../../../../../../../assets/javascripts/modernizr.74668098.js"></script>
     
     
       
@@ -1288,10 +1288,70 @@
           
 
 
-  <li class="md-nav__item">
-    <a href="../../../../../../mu_pip_environment/MuEnvironment/docs/feature_omnicache/" title="docs" class="md-nav__link">
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-4-5-3" type="checkbox" id="nav-9-4-5-3">
+    
+    <label class="md-nav__link" for="nav-9-4-5-3">
       docs
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-9-4-5-3">
+        docs
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../mu_pip_environment/MuEnvironment/docs/feature_extdep/" title="feature extdep" class="md-nav__link">
+      feature extdep
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../mu_pip_environment/MuEnvironment/docs/feature_omnicache/" title="feature omnicache" class="md-nav__link">
+      feature omnicache
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../mu_pip_environment/MuEnvironment/docs/feature_pluginmanager/" title="feature pluginmanager" class="md-nav__link">
+      feature pluginmanager
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../mu_pip_environment/MuEnvironment/docs/feature_sde/" title="feature sde" class="md-nav__link">
+      feature sde
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
         
@@ -1377,10 +1437,46 @@
           
 
 
-  <li class="md-nav__item">
-    <a href="../../../../../../mu_pip_python_library/MuPythonLibrary/feature_GetHostInfo/" title="Mu Python Library" class="md-nav__link">
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-5-5" type="checkbox" id="nav-9-5-5">
+    
+    <label class="md-nav__link" for="nav-9-5-5">
       Mu Python Library
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-5-5">
+        Mu Python Library
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../mu_pip_python_library/MuPythonLibrary/feature_GetHostInfo/" title="feature Get Host Info" class="md-nav__link">
+      feature Get Host Info
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../mu_pip_python_library/MuPythonLibrary/feature_MuAnsiHandler/" title="feature Mu Ansi Handler" class="md-nav__link">
+      feature Mu Ansi Handler
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
         
@@ -2330,8 +2426,8 @@
 <li>Set OPENSSL environment.</li>
 </ul>
 <p>NOTE: Below steps are required for Windows. Linux may already have the OPENSSL environment correctly.</p>
-<div class="codehilite"><pre><span></span>set OPENSSL_HOME=c:\home\openssl\openssl-[version]
-set OPENSSL_CONF=%OPENSSL_HOME%\apps\openssl.cnf
+<div class="codehilite"><pre><span></span><span class="k">set</span><span class="w"> </span><span class="n">OPENSSL_HOME</span><span class="o">=</span><span class="nl">c</span><span class="p">:</span><span class="err">\</span><span class="n">home</span><span class="err">\</span><span class="n">openssl</span><span class="err">\</span><span class="n">openssl</span><span class="o">-[</span><span class="n">version</span><span class="o">]</span><span class="w"></span>
+<span class="k">set</span><span class="w"> </span><span class="n">OPENSSL_CONF</span><span class="o">=%</span><span class="n">OPENSSL_HOME</span><span class="o">%</span><span class="err">\</span><span class="n">apps</span><span class="err">\</span><span class="n">openssl</span><span class="p">.</span><span class="n">cnf</span><span class="w"></span>
 </pre></div>
 
 
@@ -2343,11 +2439,11 @@ set OPENSSL_CONF=%OPENSSL_HOME%\apps\openssl.cnf
 
 
 <p>You may need the following steps for initialization:</p>
-<div class="codehilite"><pre><span></span>rd ./demoCA /S/Q
-mkdir ./demoCA
-echo.&gt;./demoCA/index.txt
-echo 01 &gt; ./demoCA/serial
-mkdir ./demoCA/newcerts
+<div class="codehilite"><pre><span></span><span class="n">rd</span> <span class="p">.</span><span class="o">/</span><span class="n">demoCA</span> <span class="o">/</span><span class="n">S</span><span class="o">/</span><span class="n">Q</span>
+<span class="n">mkdir</span> <span class="p">.</span><span class="o">/</span><span class="n">demoCA</span>
+<span class="n">echo</span><span class="p">.</span><span class="o">&gt;</span><span class="p">.</span><span class="o">/</span><span class="n">demoCA</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">txt</span>
+<span class="n">echo</span> <span class="mi">01</span> <span class="o">&gt;</span> <span class="p">.</span><span class="o">/</span><span class="n">demoCA</span><span class="o">/</span><span class="nb">serial</span>
+<span class="n">mkdir</span> <span class="p">.</span><span class="o">/</span><span class="n">demoCA</span><span class="o">/</span><span class="n">newcerts</span>
 </pre></div>
 
 
@@ -2390,48 +2486,48 @@ The following sample sections were used when generating test certificates in thi
 <p>NOTE: User MUST set a UNIQUE "Common Name" on the different certificate</p>
 <p>1) Generate the Root Pair:</p>
 <p>Generate a root key:</p>
-<div class="codehilite"><pre><span></span>openssl genrsa -aes256 -out TestRoot.key 2048
+<div class="codehilite"><pre><span></span><span class="n">openssl</span> <span class="n">genrsa</span> <span class="o">-</span><span class="n">aes256</span> <span class="o">-</span><span class="k">out</span> <span class="n">TestRoot</span><span class="p">.</span><span class="k">key</span> <span class="mi">2048</span>
 </pre></div>
 
 
 <p>Generate a self-signed root certificate:</p>
-<div class="codehilite"><pre><span></span>openssl req -extensions v3_ca -new -x509 -days 3650 -key TestRoot.key -out TestRoot.crt
-openssl x509 -in TestRoot.crt -out TestRoot.cer -outform DER
-openssl x509 -inform DER -in TestRoot.cer -outform PEM -out TestRoot.pub.pem
+<div class="codehilite"><pre><span></span><span class="n">openssl</span> <span class="n">req</span> <span class="o">-</span><span class="n">extensions</span> <span class="n">v3_ca</span> <span class="o">-</span><span class="k">new</span> <span class="o">-</span><span class="n">x509</span> <span class="o">-</span><span class="n">days</span> <span class="mi">3650</span> <span class="o">-</span><span class="k">key</span> <span class="n">TestRoot</span><span class="p">.</span><span class="k">key</span> <span class="o">-</span><span class="k">out</span> <span class="n">TestRoot</span><span class="p">.</span><span class="n">crt</span>
+<span class="n">openssl</span> <span class="n">x509</span> <span class="o">-</span><span class="k">in</span> <span class="n">TestRoot</span><span class="p">.</span><span class="n">crt</span> <span class="o">-</span><span class="k">out</span> <span class="n">TestRoot</span><span class="p">.</span><span class="n">cer</span> <span class="o">-</span><span class="n">outform</span> <span class="n">DER</span>
+<span class="n">openssl</span> <span class="n">x509</span> <span class="o">-</span><span class="n">inform</span> <span class="n">DER</span> <span class="o">-</span><span class="k">in</span> <span class="n">TestRoot</span><span class="p">.</span><span class="n">cer</span> <span class="o">-</span><span class="n">outform</span> <span class="n">PEM</span> <span class="o">-</span><span class="k">out</span> <span class="n">TestRoot</span><span class="p">.</span><span class="n">pub</span><span class="p">.</span><span class="n">pem</span>
 </pre></div>
 
 
 <p>2) Generate the Intermediate Pair:</p>
 <p>Generate the intermediate key:</p>
-<div class="codehilite"><pre><span></span>openssl genrsa -aes256 -out TestSub.key 2048
+<div class="codehilite"><pre><span></span><span class="n">openssl</span> <span class="n">genrsa</span> <span class="o">-</span><span class="n">aes256</span> <span class="o">-</span><span class="k">out</span> <span class="n">TestSub</span><span class="p">.</span><span class="k">key</span> <span class="mi">2048</span>
 </pre></div>
 
 
 <p>Generate the intermediate certificate:</p>
-<div class="codehilite"><pre><span></span>openssl req -new -days 3650 -key TestSub.key -out TestSub.csr
-openssl ca -extensions v3_intermediate_ca -in TestSub.csr -days 3650 -out TestSub.crt -cert TestRoot.crt -keyfile TestRoot.key
-openssl x509 -in TestSub.crt -out TestSub.cer -outform DER
-openssl x509 -inform DER -in TestSub.cer -outform PEM -out TestSub.pub.pem
+<div class="codehilite"><pre><span></span><span class="n">openssl</span> <span class="n">req</span> <span class="o">-</span><span class="k">new</span> <span class="o">-</span><span class="n">days</span> <span class="mi">3650</span> <span class="o">-</span><span class="k">key</span> <span class="n">TestSub</span><span class="p">.</span><span class="k">key</span> <span class="o">-</span><span class="k">out</span> <span class="n">TestSub</span><span class="p">.</span><span class="n">csr</span>
+<span class="n">openssl</span> <span class="n">ca</span> <span class="o">-</span><span class="n">extensions</span> <span class="n">v3_intermediate_ca</span> <span class="o">-</span><span class="k">in</span> <span class="n">TestSub</span><span class="p">.</span><span class="n">csr</span> <span class="o">-</span><span class="n">days</span> <span class="mi">3650</span> <span class="o">-</span><span class="k">out</span> <span class="n">TestSub</span><span class="p">.</span><span class="n">crt</span> <span class="o">-</span><span class="n">cert</span> <span class="n">TestRoot</span><span class="p">.</span><span class="n">crt</span> <span class="o">-</span><span class="n">keyfile</span> <span class="n">TestRoot</span><span class="p">.</span><span class="k">key</span>
+<span class="n">openssl</span> <span class="n">x509</span> <span class="o">-</span><span class="k">in</span> <span class="n">TestSub</span><span class="p">.</span><span class="n">crt</span> <span class="o">-</span><span class="k">out</span> <span class="n">TestSub</span><span class="p">.</span><span class="n">cer</span> <span class="o">-</span><span class="n">outform</span> <span class="n">DER</span>
+<span class="n">openssl</span> <span class="n">x509</span> <span class="o">-</span><span class="n">inform</span> <span class="n">DER</span> <span class="o">-</span><span class="k">in</span> <span class="n">TestSub</span><span class="p">.</span><span class="n">cer</span> <span class="o">-</span><span class="n">outform</span> <span class="n">PEM</span> <span class="o">-</span><span class="k">out</span> <span class="n">TestSub</span><span class="p">.</span><span class="n">pub</span><span class="p">.</span><span class="n">pem</span>
 </pre></div>
 
 
 <p>3) Generate User Key Pair for Data Signing:</p>
 <p>Generate User key:</p>
-<div class="codehilite"><pre><span></span>openssl genrsa -aes256 -out TestCert.key 2048
+<div class="codehilite"><pre><span></span><span class="n">openssl</span> <span class="n">genrsa</span> <span class="o">-</span><span class="n">aes256</span> <span class="o">-</span><span class="k">out</span> <span class="n">TestCert</span><span class="p">.</span><span class="k">key</span> <span class="mi">2048</span>
 </pre></div>
 
 
 <p>Generate User certificate:</p>
-<div class="codehilite"><pre><span></span>openssl req -new -days 3650 -key TestCert.key -out TestCert.csr
-openssl ca -extensions usr_cert -in TestCert.csr -days 3650 -out TestCert.crt -cert TestSub.crt -keyfile TestSub.key
-openssl x509 -in TestCert.crt -out TestCert.cer -outform DER
-openssl x509 -inform DER -in TestCert.cer -outform PEM -out TestCert.pub.pem
+<div class="codehilite"><pre><span></span><span class="n">openssl</span> <span class="n">req</span> <span class="o">-</span><span class="k">new</span> <span class="o">-</span><span class="n">days</span> <span class="mi">3650</span> <span class="o">-</span><span class="k">key</span> <span class="n">TestCert</span><span class="p">.</span><span class="k">key</span> <span class="o">-</span><span class="k">out</span> <span class="n">TestCert</span><span class="p">.</span><span class="n">csr</span>
+<span class="n">openssl</span> <span class="n">ca</span> <span class="o">-</span><span class="n">extensions</span> <span class="n">usr_cert</span> <span class="o">-</span><span class="k">in</span> <span class="n">TestCert</span><span class="p">.</span><span class="n">csr</span> <span class="o">-</span><span class="n">days</span> <span class="mi">3650</span> <span class="o">-</span><span class="k">out</span> <span class="n">TestCert</span><span class="p">.</span><span class="n">crt</span> <span class="o">-</span><span class="n">cert</span> <span class="n">TestSub</span><span class="p">.</span><span class="n">crt</span> <span class="o">-</span><span class="n">keyfile</span> <span class="n">TestSub</span><span class="p">.</span><span class="k">key</span>
+<span class="n">openssl</span> <span class="n">x509</span> <span class="o">-</span><span class="k">in</span> <span class="n">TestCert</span><span class="p">.</span><span class="n">crt</span> <span class="o">-</span><span class="k">out</span> <span class="n">TestCert</span><span class="p">.</span><span class="n">cer</span> <span class="o">-</span><span class="n">outform</span> <span class="n">DER</span>
+<span class="n">openssl</span> <span class="n">x509</span> <span class="o">-</span><span class="n">inform</span> <span class="n">DER</span> <span class="o">-</span><span class="k">in</span> <span class="n">TestCert</span><span class="p">.</span><span class="n">cer</span> <span class="o">-</span><span class="n">outform</span> <span class="n">PEM</span> <span class="o">-</span><span class="k">out</span> <span class="n">TestCert</span><span class="p">.</span><span class="n">pub</span><span class="p">.</span><span class="n">pem</span>
 </pre></div>
 
 
 <p>Convert Key and Certificate for signing. Password is removed with -nodes flag for convenience in this sample.</p>
-<div class="codehilite"><pre><span></span>openssl pkcs12 -export -out TestCert.pfx -inkey TestCert.key -in TestCert.crt
-openssl pkcs12 -in TestCert.pfx -nodes -out TestCert.pem
+<div class="codehilite"><pre><span></span><span class="n">openssl</span> <span class="n">pkcs12</span> <span class="o">-</span><span class="n">export</span> <span class="o">-</span><span class="k">out</span> <span class="n">TestCert</span><span class="p">.</span><span class="n">pfx</span> <span class="o">-</span><span class="n">inkey</span> <span class="n">TestCert</span><span class="p">.</span><span class="k">key</span> <span class="o">-</span><span class="k">in</span> <span class="n">TestCert</span><span class="p">.</span><span class="n">crt</span>
+<span class="n">openssl</span> <span class="n">pkcs12</span> <span class="o">-</span><span class="k">in</span> <span class="n">TestCert</span><span class="p">.</span><span class="n">pfx</span> <span class="o">-</span><span class="n">nodes</span> <span class="o">-</span><span class="k">out</span> <span class="n">TestCert</span><span class="p">.</span><span class="n">pem</span>
 </pre></div>
 
 
@@ -2439,29 +2535,29 @@ openssl pkcs12 -in TestCert.pfx -nodes -out TestCert.pem
 <li>Verify Data Signing &amp; Verification with new X.509 Certificate Chain</li>
 </ul>
 <p>1) Sign a Binary File to generate a detached PKCS7 signature:</p>
-<div class="codehilite"><pre><span></span>openssl smime -sign -binary -signer TestCert.pem -outform DER -md sha256 -certfile TestSub.pub.pem -out test.bin.p7 -in test.bin
+<div class="codehilite"><pre><span></span><span class="n">openssl</span> <span class="n">smime</span> <span class="o">-</span><span class="n">sign</span> <span class="o">-</span><span class="nb">binary</span> <span class="o">-</span><span class="n">signer</span> <span class="n">TestCert</span><span class="p">.</span><span class="n">pem</span> <span class="o">-</span><span class="n">outform</span> <span class="n">DER</span> <span class="o">-</span><span class="n">md</span> <span class="n">sha256</span> <span class="o">-</span><span class="n">certfile</span> <span class="n">TestSub</span><span class="p">.</span><span class="n">pub</span><span class="p">.</span><span class="n">pem</span> <span class="o">-</span><span class="k">out</span> <span class="n">test</span><span class="p">.</span><span class="n">bin</span><span class="p">.</span><span class="n">p7</span> <span class="o">-</span><span class="k">in</span> <span class="n">test</span><span class="p">.</span><span class="n">bin</span>
 </pre></div>
 
 
 <p>2) Verify PKCS7 Signature of a Binary File:</p>
-<div class="codehilite"><pre><span></span>openssl smime -verify -inform DER -in test.bin.p7 -content test.bin -CAfile TestRoot.pub.pem -out test.org.bin
+<div class="codehilite"><pre><span></span><span class="n">openssl</span> <span class="n">smime</span> <span class="o">-</span><span class="n">verify</span> <span class="o">-</span><span class="n">inform</span> <span class="n">DER</span> <span class="o">-</span><span class="k">in</span> <span class="n">test</span><span class="p">.</span><span class="n">bin</span><span class="p">.</span><span class="n">p7</span> <span class="o">-</span><span class="n">content</span> <span class="n">test</span><span class="p">.</span><span class="n">bin</span> <span class="o">-</span><span class="n">CAfile</span> <span class="n">TestRoot</span><span class="p">.</span><span class="n">pub</span><span class="p">.</span><span class="n">pem</span> <span class="o">-</span><span class="k">out</span> <span class="n">test</span><span class="p">.</span><span class="n">org</span><span class="p">.</span><span class="n">bin</span>
 </pre></div>
 
 
 <h2 id="generate-dsc-pcd-include-files-for-certificate">Generate DSC PCD include files for Certificate<a class="headerlink" href="#generate-dsc-pcd-include-files-for-certificate" title="Permanent link">&para;</a></h2>
-<p>The <code class="codehilite">BinToPcd</code> utility can be used to convert the binary Certificate file to a
+<p>The <code class="codehilite"><span class="n">BinToPcd</span></code> utility can be used to convert the binary Certificate file to a
 text file can be included from a DSC file to set a PCD to the contents of the
 Certificate file.</p>
 <p>The following 2 PCDs can be set to the PKCS7 Certificate value.  The first one
 supports a single certificate.  The second one supports multiple certificate
 values using the XDR format.
-* <code class="codehilite">gEfiSecurityPkgTokenSpaceGuid.PcdPkcs7CertBuffer</code>
-* <code class="codehilite">gFmpDevicePkgTokenSpaceGuid.PcdFmpDevicePkcs7CertBufferXdr</code></p>
+* <code class="codehilite"><span class="n">gEfiSecurityPkgTokenSpaceGuid</span><span class="p">.</span><span class="n">PcdPkcs7CertBuffer</span></code>
+* <code class="codehilite"><span class="n">gFmpDevicePkgTokenSpaceGuid</span><span class="p">.</span><span class="n">PcdFmpDevicePkcs7CertBufferXdr</span></code></p>
 <p>Generate DSC PCD include files:
-<div class="codehilite"><pre><span></span>BinToPcd.py -i TestRoot.cer -p gEfiSecurityPkgTokenSpaceGuid.PcdPkcs7CertBuffer -o TestRoot.cer.gEfiSecurityPkgTokenSpaceGuid.PcdPkcs7CertBuffer.inc
-BinToPcd.py -i TestRoot.cer -p gFmpDevicePkgTokenSpaceGuid.PcdFmpDevicePkcs7CertBufferXdr -x -o TestRoot.cer.gFmpDevicePkgTokenSpaceGuid.PcdFmpDevicePkcs7CertBufferXdr.inc
+<div class="codehilite"><pre><span></span><span class="n">BinToPcd</span><span class="p">.</span><span class="n">py</span> <span class="o">-</span><span class="n">i</span> <span class="n">TestRoot</span><span class="p">.</span><span class="n">cer</span> <span class="o">-</span><span class="n">p</span> <span class="n">gEfiSecurityPkgTokenSpaceGuid</span><span class="p">.</span><span class="n">PcdPkcs7CertBuffer</span> <span class="o">-</span><span class="n">o</span> <span class="n">TestRoot</span><span class="p">.</span><span class="n">cer</span><span class="p">.</span><span class="n">gEfiSecurityPkgTokenSpaceGuid</span><span class="p">.</span><span class="n">PcdPkcs7CertBuffer</span><span class="p">.</span><span class="n">inc</span>
+<span class="n">BinToPcd</span><span class="p">.</span><span class="n">py</span> <span class="o">-</span><span class="n">i</span> <span class="n">TestRoot</span><span class="p">.</span><span class="n">cer</span> <span class="o">-</span><span class="n">p</span> <span class="n">gFmpDevicePkgTokenSpaceGuid</span><span class="p">.</span><span class="n">PcdFmpDevicePkcs7CertBufferXdr</span> <span class="o">-</span><span class="n">x</span> <span class="o">-</span><span class="n">o</span> <span class="n">TestRoot</span><span class="p">.</span><span class="n">cer</span><span class="p">.</span><span class="n">gFmpDevicePkgTokenSpaceGuid</span><span class="p">.</span><span class="n">PcdFmpDevicePkcs7CertBufferXdr</span><span class="p">.</span><span class="n">inc</span>
 </pre></div></p>
-<p>These files can be used in <code class="codehilite"><span class="sx">!include</span></code> statements in DSC file PCD sections.  For example:</p>
+<p>These files can be used in <code class="codehilite"><span class="o">!</span><span class="k">include</span></code> statements in DSC file PCD sections.  For example:</p>
 <ul>
 <li>
 <p>Platform scoped fixed at build PCD section
@@ -2565,7 +2661,7 @@ BinToPcd.py -i TestRoot.cer -p gFmpDevicePkgTokenSpaceGuid.PcdFmpDevicePkcs7Cert
       
     </div>
     
-      <script src="../../../../../../../assets/javascripts/application.267712eb.js"></script>
+      <script src="../../../../../../../assets/javascripts/application.39abc4af.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../../../../../../.."}})</script>
       

@@ -36,7 +36,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.1.2">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.2.0">
     
     
       
@@ -44,7 +44,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../../assets/stylesheets/application.3020aac5.css">
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/application.750b69bd.css">
       
         <link rel="stylesheet" href="../../../../../../assets/stylesheets/application-palette.224b79ff.css">
       
@@ -55,7 +55,7 @@
       
     
     
-      <script src="../../../../../../assets/javascripts/modernizr.01ccdecf.js"></script>
+      <script src="../../../../../../assets/javascripts/modernizr.74668098.js"></script>
     
     
       
@@ -1235,10 +1235,70 @@
           
 
 
-  <li class="md-nav__item">
-    <a href="../../../../../mu_pip_environment/MuEnvironment/docs/feature_omnicache/" title="docs" class="md-nav__link">
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-4-5-3" type="checkbox" id="nav-9-4-5-3">
+    
+    <label class="md-nav__link" for="nav-9-4-5-3">
       docs
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-9-4-5-3">
+        docs
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../mu_pip_environment/MuEnvironment/docs/feature_extdep/" title="feature extdep" class="md-nav__link">
+      feature extdep
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../mu_pip_environment/MuEnvironment/docs/feature_omnicache/" title="feature omnicache" class="md-nav__link">
+      feature omnicache
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../mu_pip_environment/MuEnvironment/docs/feature_pluginmanager/" title="feature pluginmanager" class="md-nav__link">
+      feature pluginmanager
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../mu_pip_environment/MuEnvironment/docs/feature_sde/" title="feature sde" class="md-nav__link">
+      feature sde
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
         
@@ -1324,10 +1384,46 @@
           
 
 
-  <li class="md-nav__item">
-    <a href="../../../../../mu_pip_python_library/MuPythonLibrary/feature_GetHostInfo/" title="Mu Python Library" class="md-nav__link">
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-5-5" type="checkbox" id="nav-9-5-5">
+    
+    <label class="md-nav__link" for="nav-9-5-5">
       Mu Python Library
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-5-5">
+        Mu Python Library
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../mu_pip_python_library/MuPythonLibrary/feature_GetHostInfo/" title="feature Get Host Info" class="md-nav__link">
+      feature Get Host Info
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../mu_pip_python_library/MuPythonLibrary/feature_MuAnsiHandler/" title="feature Mu Ansi Handler" class="md-nav__link">
+      feature Mu Ansi Handler
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
         
@@ -2340,10 +2436,10 @@
 <p>These libraries implement a method to disable the network stack unless there is a reason to use the network.  Not starting the network improves boot performance and causes fewer issues during manufacturing.</p>
 <h2 id="how-to-use-these-libraries">How to use these libraries<a class="headerlink" href="#how-to-use-these-libraries" title="Permanent link">&para;</a></h2>
 <p>Add the NetworkDelayLib as a NULL library reference.  All this library does is introduce a [Depex] on a NetworkDelay protocol.  </p>
-<div class="codehilite"><pre><span></span>  MdeModulePkg/Universal/Network/SnpDxe/SnpDxe.inf {
-    &lt;LibraryClasses&gt;
-      NULL|PcBdsPkg/Library/MsNetworkDelayLib/MsNetworkDelayLib.inf
-  }
+<div class="codehilite"><pre><span></span>  <span class="n">MdeModulePkg</span><span class="o">/</span><span class="n">Universal</span><span class="o">/</span><span class="n">Network</span><span class="o">/</span><span class="n">SnpDxe</span><span class="o">/</span><span class="n">SnpDxe</span><span class="p">.</span><span class="n">inf</span> <span class="err">{</span>
+    <span class="o">&lt;</span><span class="n">LibraryClasses</span><span class="o">&gt;</span>
+      <span class="k">NULL</span><span class="o">|</span><span class="n">PcBdsPkg</span><span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">MsNetworkDelayLib</span><span class="o">/</span><span class="n">MsNetworkDelayLib</span><span class="p">.</span><span class="n">inf</span>
+  <span class="err">}</span>
 </pre></div>
 
 <p>The NetworkDependencylib implements a StartNetwork() interface that will publish the NetworkDelay protocol.  </p>
@@ -2435,7 +2531,7 @@
       
     </div>
     
-      <script src="../../../../../../assets/javascripts/application.267712eb.js"></script>
+      <script src="../../../../../../assets/javascripts/application.39abc4af.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../../../../../.."}})</script>
       

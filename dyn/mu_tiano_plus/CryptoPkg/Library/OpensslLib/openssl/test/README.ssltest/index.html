@@ -36,7 +36,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../../../../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.1.2">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.2.0">
     
     
       
@@ -44,7 +44,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../../../../assets/stylesheets/application.3020aac5.css">
+      <link rel="stylesheet" href="../../../../../../../../assets/stylesheets/application.750b69bd.css">
       
         <link rel="stylesheet" href="../../../../../../../../assets/stylesheets/application-palette.224b79ff.css">
       
@@ -55,7 +55,7 @@
       
     
     
-      <script src="../../../../../../../../assets/javascripts/modernizr.01ccdecf.js"></script>
+      <script src="../../../../../../../../assets/javascripts/modernizr.74668098.js"></script>
     
     
       
@@ -1235,10 +1235,70 @@
           
 
 
-  <li class="md-nav__item">
-    <a href="../../../../../../../mu_pip_environment/MuEnvironment/docs/feature_omnicache/" title="docs" class="md-nav__link">
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-4-5-3" type="checkbox" id="nav-9-4-5-3">
+    
+    <label class="md-nav__link" for="nav-9-4-5-3">
       docs
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-9-4-5-3">
+        docs
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../mu_pip_environment/MuEnvironment/docs/feature_extdep/" title="feature extdep" class="md-nav__link">
+      feature extdep
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../mu_pip_environment/MuEnvironment/docs/feature_omnicache/" title="feature omnicache" class="md-nav__link">
+      feature omnicache
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../mu_pip_environment/MuEnvironment/docs/feature_pluginmanager/" title="feature pluginmanager" class="md-nav__link">
+      feature pluginmanager
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../mu_pip_environment/MuEnvironment/docs/feature_sde/" title="feature sde" class="md-nav__link">
+      feature sde
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
         
@@ -1324,10 +1384,46 @@
           
 
 
-  <li class="md-nav__item">
-    <a href="../../../../../../../mu_pip_python_library/MuPythonLibrary/feature_GetHostInfo/" title="Mu Python Library" class="md-nav__link">
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-5-5" type="checkbox" id="nav-9-5-5">
+    
+    <label class="md-nav__link" for="nav-9-5-5">
       Mu Python Library
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-5-5">
+        Mu Python Library
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../mu_pip_python_library/MuPythonLibrary/feature_GetHostInfo/" title="feature Get Host Info" class="md-nav__link">
+      feature Get Host Info
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../mu_pip_python_library/MuPythonLibrary/feature_MuAnsiHandler/" title="feature Mu Ansi Handler" class="md-nav__link">
+      feature Mu Ansi Handler
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
         
@@ -2502,24 +2598,24 @@
                 
                 
                 <h1 id="ssl-tests">SSL tests<a class="headerlink" href="#ssl-tests" title="Permanent link">&para;</a></h1>
-<p>SSL testcases are configured in the <code class="codehilite">ssl-tests</code> directory.</p>
-<p>Each <code class="codehilite">ssl_*.conf.in</code> file contains a number of test configurations. These files
+<p>SSL testcases are configured in the <code class="codehilite"><span class="n">ssl</span><span class="o">-</span><span class="n">tests</span></code> directory.</p>
+<p>Each <code class="codehilite"><span class="n">ssl_</span><span class="o">*</span><span class="p">.</span><span class="n">conf</span><span class="p">.</span><span class="k">in</span></code> file contains a number of test configurations. These files
 are used to generate testcases in the OpenSSL CONF format.</p>
 <p>The precise test output can be dependent on the library configuration. The test
 harness generates the output files on the fly.</p>
 <p>However, for verification, we also include checked-in configuration outputs
 corresponding to the default configuration. These testcases live in
-<code class="codehilite">test/ssl-tests/*.conf</code> files.</p>
-<p>For more details, see <code class="codehilite">ssl-tests/01-simple.conf.in</code> for an example.</p>
+<code class="codehilite"><span class="n">test</span><span class="o">/</span><span class="n">ssl</span><span class="o">-</span><span class="n">tests</span><span class="cm">/*.conf</span></code> files.</p>
+<p>For more details, see <code class="codehilite"><span class="n">ssl</span><span class="o">-</span><span class="n">tests</span><span class="o">/</span><span class="mi">01</span><span class="o">-</span><span class="k">simple</span><span class="p">.</span><span class="n">conf</span><span class="p">.</span><span class="k">in</span></code> for an example.</p>
 <h2 id="configuring-the-test">Configuring the test<a class="headerlink" href="#configuring-the-test" title="Permanent link">&para;</a></h2>
 <p>First, give your test a name. The names do not have to be unique.</p>
 <p>An example test input looks like this:</p>
-<div class="codehilite"><pre><span></span>    {
-        name =&gt; &quot;test-default&quot;,
-        server =&gt; { &quot;CipherString&quot; =&gt; &quot;DEFAULT&quot; },
-        client =&gt; { &quot;CipherString&quot; =&gt; &quot;DEFAULT&quot; },
-        test   =&gt; { &quot;ExpectedResult&quot; =&gt; &quot;Success&quot; },
-    }
+<div class="codehilite"><pre><span></span>    <span class="err">{</span>
+        <span class="n">name</span> <span class="o">=&gt;</span> <span class="ss">&quot;test-default&quot;</span><span class="p">,</span>
+        <span class="n">server</span> <span class="o">=&gt;</span> <span class="err">{</span> <span class="ss">&quot;CipherString&quot;</span> <span class="o">=&gt;</span> <span class="ss">&quot;DEFAULT&quot;</span> <span class="err">}</span><span class="p">,</span>
+        <span class="n">client</span> <span class="o">=&gt;</span> <span class="err">{</span> <span class="ss">&quot;CipherString&quot;</span> <span class="o">=&gt;</span> <span class="ss">&quot;DEFAULT&quot;</span> <span class="err">}</span><span class="p">,</span>
+        <span class="n">test</span>   <span class="o">=&gt;</span> <span class="err">{</span> <span class="ss">&quot;ExpectedResult&quot;</span> <span class="o">=&gt;</span> <span class="ss">&quot;Success&quot;</span> <span class="err">}</span><span class="p">,</span>
+    <span class="err">}</span>
 </pre></div>
 
 <p>The test section supports the following options</p>
@@ -2548,9 +2644,9 @@ handshake.</p>
 </li>
 <li>
 <p>MaxFragmentSize - maximum send fragment size (integer, defaults to 512 in
-  tests - see <code class="codehilite">SSL_CTX_set_max_send_fragment</code> for documentation). Applies to
+  tests - see <code class="codehilite"><span class="n">SSL_CTX_set_max_send_fragment</span></code> for documentation). Applies to
   both client and server. Lowering the fragment size will split handshake and
-  application data up between more <code class="codehilite">SSL_write</code> calls, thus allowing to exercise
+  application data up between more <code class="codehilite"><span class="n">SSL_write</span></code> calls, thus allowing to exercise
   different code paths. In particular, if the buffer size (64kB) is at least
   four times as large as the maximum fragment, interleaved multi-buffer crypto
   implementations may be used on some platforms.</p>
@@ -2567,10 +2663,10 @@ handshake.</p>
 </li>
 <li>
 <p>ExpectedClientAlert, ExpectedServerAlert - expected alert. See
-  <code class="codehilite">ssl_test_ctx.c</code> for known values. Note: the expected alert is currently
+  <code class="codehilite"><span class="n">ssl_test_ctx</span><span class="p">.</span><span class="k">c</span></code> for known values. Note: the expected alert is currently
   matched against the <em>last</em> received alert (i.e., a fatal alert or a
-  <code class="codehilite">close_notify</code>). Warning alert expectations are not yet supported. (A warning
-  alert will not be correctly matched, if followed by a <code class="codehilite">close_notify</code> or
+  <code class="codehilite"><span class="n">close_notify</span></code>). Warning alert expectations are not yet supported. (A warning
+  alert will not be correctly matched, if followed by a <code class="codehilite"><span class="n">close_notify</span></code> or
   another alert.)</p>
 </li>
 <li>
@@ -2600,13 +2696,13 @@ handshake.</p>
 </li>
 </ul>
 <h2 id="configuring-the-client-and-server">Configuring the client and server<a class="headerlink" href="#configuring-the-client-and-server" title="Permanent link">&para;</a></h2>
-<p>The client and server configurations can be any valid <code class="codehilite">SSL_CTX</code>
-configurations. For details, see the manpages for <code class="codehilite">SSL_CONF_cmd</code>.</p>
+<p>The client and server configurations can be any valid <code class="codehilite"><span class="n">SSL_CTX</span></code>
+configurations. For details, see the manpages for <code class="codehilite"><span class="n">SSL_CONF_cmd</span></code>.</p>
 <p>Give your configurations as a dictionary of CONF commands, e.g.</p>
-<div class="codehilite"><pre><span></span>server =&gt; {
-    &quot;CipherString&quot; =&gt; &quot;DEFAULT&quot;,
-    &quot;MinProtocol&quot; =&gt; &quot;TLSv1&quot;,
-}
+<div class="codehilite"><pre><span></span><span class="n">server</span> <span class="o">=&gt;</span> <span class="err">{</span>
+    <span class="ss">&quot;CipherString&quot;</span> <span class="o">=&gt;</span> <span class="ss">&quot;DEFAULT&quot;</span><span class="p">,</span>
+    <span class="ss">&quot;MinProtocol&quot;</span> <span class="o">=&gt;</span> <span class="ss">&quot;TLSv1&quot;</span><span class="p">,</span>
+<span class="err">}</span>
 </pre></div>
 
 <p>The following sections may optionally be defined:</p>
@@ -2626,14 +2722,14 @@ configurations. For details, see the manpages for <code class="codehilite">SSL_C
   then the configuration matches client.</li>
 </ul>
 <h3 id="configuring-callbacks-and-additional-options">Configuring callbacks and additional options<a class="headerlink" href="#configuring-callbacks-and-additional-options" title="Permanent link">&para;</a></h3>
-<p>Additional handshake settings can be configured in the <code class="codehilite">extra</code> section of each
+<p>Additional handshake settings can be configured in the <code class="codehilite"><span class="n">extra</span></code> section of each
 client and server:</p>
-<div class="codehilite"><pre><span></span>client =&gt; {
-    &quot;CipherString&quot; =&gt; &quot;DEFAULT&quot;,
-    extra =&gt; {
-        &quot;ServerName&quot; =&gt; &quot;server2&quot;,
-    }
-}
+<div class="codehilite"><pre><span></span><span class="n">client</span> <span class="o">=&gt;</span> <span class="err">{</span>
+    <span class="ss">&quot;CipherString&quot;</span> <span class="o">=&gt;</span> <span class="ss">&quot;DEFAULT&quot;</span><span class="p">,</span>
+    <span class="n">extra</span> <span class="o">=&gt;</span> <span class="err">{</span>
+        <span class="ss">&quot;ServerName&quot;</span> <span class="o">=&gt;</span> <span class="ss">&quot;server2&quot;</span><span class="p">,</span>
+    <span class="err">}</span>
+<span class="err">}</span>
 </pre></div>
 
 <h4 id="supported-client-side-options">Supported client-side options<a class="headerlink" href="#supported-client-side-options" title="Permanent link">&para;</a></h4>
@@ -2686,26 +2782,26 @@ client and server:</p>
 <p>The default server certificate and CA files are added to the configurations
 automatically. Server certificate verification is requested by default.</p>
 <p>You can override these options by redefining them:</p>
-<div class="codehilite"><pre><span></span>client =&gt; {
-    &quot;VerifyCAFile&quot; =&gt; &quot;/path/to/custom/file&quot;
-}
+<div class="codehilite"><pre><span></span><span class="n">client</span> <span class="o">=&gt;</span> <span class="err">{</span>
+    <span class="ss">&quot;VerifyCAFile&quot;</span> <span class="o">=&gt;</span> <span class="ss">&quot;/path/to/custom/file&quot;</span>
+<span class="err">}</span>
 </pre></div>
 
 <p>or by deleting them</p>
-<div class="codehilite"><pre><span></span>client =&gt; {
-    &quot;VerifyCAFile&quot; =&gt; undef
-}
+<div class="codehilite"><pre><span></span><span class="n">client</span> <span class="o">=&gt;</span> <span class="err">{</span>
+    <span class="ss">&quot;VerifyCAFile&quot;</span> <span class="o">=&gt;</span> <span class="n">undef</span>
+<span class="err">}</span>
 </pre></div>
 
 <h2 id="adding-a-test-to-the-test-harness">Adding a test to the test harness<a class="headerlink" href="#adding-a-test-to-the-test-harness" title="Permanent link">&para;</a></h2>
 <ol>
 <li>
-<p>Add a new test configuration to <code class="codehilite">test/ssl-tests</code>, following the examples of
-   existing <code class="codehilite">*.conf.in</code> files (for example, <code class="codehilite">01-simple.conf.in</code>).</p>
+<p>Add a new test configuration to <code class="codehilite"><span class="n">test</span><span class="o">/</span><span class="n">ssl</span><span class="o">-</span><span class="n">tests</span></code>, following the examples of
+   existing <code class="codehilite"><span class="o">*</span><span class="p">.</span><span class="n">conf</span><span class="p">.</span><span class="k">in</span></code> files (for example, <code class="codehilite"><span class="mi">01</span><span class="o">-</span><span class="k">simple</span><span class="p">.</span><span class="n">conf</span><span class="p">.</span><span class="k">in</span></code>).</p>
 </li>
 <li>
-<p>Generate the generated <code class="codehilite">*.conf</code> test input file. You can do so by running
-   <code class="codehilite">generate_ssl_tests.pl</code>:</p>
+<p>Generate the generated <code class="codehilite"><span class="o">*</span><span class="p">.</span><span class="n">conf</span></code> test input file. You can do so by running
+   <code class="codehilite"><span class="n">generate_ssl_tests</span><span class="p">.</span><span class="n">pl</span></code>:</p>
 </li>
 </ol>
 <div class="codehilite"><pre><span></span>$ ./config
@@ -2714,33 +2810,33 @@ $ <span class="nv">TOP</span><span class="o">=</span>.. perl -I testlib/ generat
   &gt; ssl-tests/my.conf
 </pre></div>
 
-<p>where <code class="codehilite">my.conf.in</code> is your test input file.</p>
-<p>For example, to generate the test cases in <code class="codehilite">ssl-tests/01-simple.conf.in</code>, do</p>
+<p>where <code class="codehilite"><span class="n">my</span><span class="p">.</span><span class="n">conf</span><span class="p">.</span><span class="k">in</span></code> is your test input file.</p>
+<p>For example, to generate the test cases in <code class="codehilite"><span class="n">ssl</span><span class="o">-</span><span class="n">tests</span><span class="o">/</span><span class="mi">01</span><span class="o">-</span><span class="k">simple</span><span class="p">.</span><span class="n">conf</span><span class="p">.</span><span class="k">in</span></code>, do</p>
 <div class="codehilite"><pre><span></span>$ <span class="nv">TOP</span><span class="o">=</span>.. perl -I testlib/ generate_ssl_tests.pl ssl-tests/01-simple.conf.in &gt; ssl-tests/01-simple.conf
 </pre></div>
 
 <p>Alternatively (hackish but simple), you can comment out</p>
-<div class="codehilite"><pre><span></span>unlink glob $tmp_file;
+<div class="codehilite"><pre><span></span><span class="k">unlink</span> <span class="nv">glob</span> $<span class="nv">tmp_file</span><span class="c1">;</span>
 </pre></div>
 
-<p>in <code class="codehilite">test/recipes/80-test_ssl_new.t</code> and run</p>
+<p>in <code class="codehilite"><span class="n">test</span><span class="o">/</span><span class="n">recipes</span><span class="o">/</span><span class="mi">80</span><span class="o">-</span><span class="n">test_ssl_new</span><span class="p">.</span><span class="n">t</span></code> and run</p>
 <div class="codehilite"><pre><span></span>$ make <span class="nv">TESTS</span><span class="o">=</span>test_ssl_new <span class="nb">test</span>
 </pre></div>
 
-<p>This will save the generated output in a <code class="codehilite">*.tmp</code> file in the build directory.</p>
+<p>This will save the generated output in a <code class="codehilite"><span class="o">*</span><span class="p">.</span><span class="n">tmp</span></code> file in the build directory.</p>
 <ol>
-<li>Update the number of tests planned in <code class="codehilite">test/recipes/80-test_ssl_new.t</code>. If
+<li>Update the number of tests planned in <code class="codehilite"><span class="n">test</span><span class="o">/</span><span class="n">recipes</span><span class="o">/</span><span class="mi">80</span><span class="o">-</span><span class="n">test_ssl_new</span><span class="p">.</span><span class="n">t</span></code>. If
    the test suite has any skip conditions, update those too (see
-   <code class="codehilite">test/recipes/80-test_ssl_new.t</code> for details).</li>
+   <code class="codehilite"><span class="n">test</span><span class="o">/</span><span class="n">recipes</span><span class="o">/</span><span class="mi">80</span><span class="o">-</span><span class="n">test_ssl_new</span><span class="p">.</span><span class="n">t</span></code> for details).</li>
 </ol>
 <h2 id="running-the-tests-with-the-test-harness">Running the tests with the test harness<a class="headerlink" href="#running-the-tests-with-the-test-harness" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span>HARNESS_VERBOSE=yes make TESTS=test_ssl_new test
+<div class="codehilite"><pre><span></span><span class="n">HARNESS_VERBOSE</span><span class="o">=</span><span class="n">yes</span> <span class="n">make</span> <span class="n">TESTS</span><span class="o">=</span><span class="n">test_ssl_new</span> <span class="n">test</span>
 </pre></div>
 
 <h2 id="running-a-test-manually">Running a test manually<a class="headerlink" href="#running-a-test-manually" title="Permanent link">&para;</a></h2>
-<p>These steps are only needed during development. End users should run <code class="codehilite">make test</code>
+<p>These steps are only needed during development. End users should run <code class="codehilite"><span class="n">make</span> <span class="n">test</span></code>
 or follow the instructions above to run the SSL test suite.</p>
-<p>To run an SSL test manually from the command line, the <code class="codehilite">TEST_CERTS_DIR</code>
+<p>To run an SSL test manually from the command line, the <code class="codehilite"><span class="n">TEST_CERTS_DIR</span></code>
 environment variable to point to the location of the certs. E.g., from the root
 OpenSSL directory, do</p>
 <div class="codehilite"><pre><span></span>$ <span class="nv">CTLOG_FILE</span><span class="o">=</span>test/ct/log_list.conf <span class="nv">TEST_CERTS_DIR</span><span class="o">=</span>test/certs test/ssl_test <span class="se">\</span>
@@ -2754,15 +2850,15 @@ OpenSSL directory, do</p>
 
 <p>Note that the test expectations sometimes depend on the Configure settings. For
 example, the negotiated protocol depends on the set of available (enabled)
-protocols: a build with <code class="codehilite">enable-ssl3</code> has different test expectations than a
-build with <code class="codehilite">no-ssl3</code>.</p>
+protocols: a build with <code class="codehilite"><span class="n">enable</span><span class="o">-</span><span class="n">ssl3</span></code> has different test expectations than a
+build with <code class="codehilite"><span class="k">no</span><span class="o">-</span><span class="n">ssl3</span></code>.</p>
 <p>The Perl test harness automatically generates expected outputs, so users who
-just run <code class="codehilite">make test</code> do not need any extra steps.</p>
+just run <code class="codehilite"><span class="n">make</span> <span class="n">test</span></code> do not need any extra steps.</p>
 <p>However, when running a test manually, keep in mind that the repository version
-of the generated <code class="codehilite">test/ssl-tests/*.conf</code> correspond to expected outputs in with
-the default Configure options. To run <code class="codehilite">ssl_test</code> manually from the command line
+of the generated <code class="codehilite"><span class="n">test</span><span class="o">/</span><span class="n">ssl</span><span class="o">-</span><span class="n">tests</span><span class="cm">/*.conf</span></code> correspond to expected outputs in with
+the default Configure options. To run <code class="codehilite"><span class="n">ssl_test</span></code> manually from the command line
 in a build with a different configuration, you may need to generate the right
-<code class="codehilite">*.conf</code> file from the <code class="codehilite">*.conf.in</code> input first.</p>
+<code class="codehilite"><span class="o">*</span><span class="p">.</span><span class="n">conf</span></code> file from the <code class="codehilite"><span class="o">*</span><span class="p">.</span><span class="n">conf</span><span class="p">.</span><span class="k">in</span></code> input first.</p>
                 
                   
                 
@@ -2843,7 +2939,7 @@ in a build with a different configuration, you may need to generate the right
       
     </div>
     
-      <script src="../../../../../../../../assets/javascripts/application.267712eb.js"></script>
+      <script src="../../../../../../../../assets/javascripts/application.39abc4af.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../../../../../../../.."}})</script>
       

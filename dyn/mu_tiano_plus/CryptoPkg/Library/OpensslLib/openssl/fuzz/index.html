@@ -36,7 +36,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../../../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.1.2">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.2.0">
     
     
       
@@ -44,7 +44,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../../../assets/stylesheets/application.3020aac5.css">
+      <link rel="stylesheet" href="../../../../../../../assets/stylesheets/application.750b69bd.css">
       
         <link rel="stylesheet" href="../../../../../../../assets/stylesheets/application-palette.224b79ff.css">
       
@@ -55,7 +55,7 @@
       
     
     
-      <script src="../../../../../../../assets/javascripts/modernizr.01ccdecf.js"></script>
+      <script src="../../../../../../../assets/javascripts/modernizr.74668098.js"></script>
     
     
       
@@ -1235,10 +1235,70 @@
           
 
 
-  <li class="md-nav__item">
-    <a href="../../../../../../mu_pip_environment/MuEnvironment/docs/feature_omnicache/" title="docs" class="md-nav__link">
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-4-5-3" type="checkbox" id="nav-9-4-5-3">
+    
+    <label class="md-nav__link" for="nav-9-4-5-3">
       docs
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-9-4-5-3">
+        docs
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../mu_pip_environment/MuEnvironment/docs/feature_extdep/" title="feature extdep" class="md-nav__link">
+      feature extdep
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../mu_pip_environment/MuEnvironment/docs/feature_omnicache/" title="feature omnicache" class="md-nav__link">
+      feature omnicache
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../mu_pip_environment/MuEnvironment/docs/feature_pluginmanager/" title="feature pluginmanager" class="md-nav__link">
+      feature pluginmanager
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../mu_pip_environment/MuEnvironment/docs/feature_sde/" title="feature sde" class="md-nav__link">
+      feature sde
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
         
@@ -1324,10 +1384,46 @@
           
 
 
-  <li class="md-nav__item">
-    <a href="../../../../../../mu_pip_python_library/MuPythonLibrary/feature_GetHostInfo/" title="Mu Python Library" class="md-nav__link">
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-5-5" type="checkbox" id="nav-9-5-5">
+    
+    <label class="md-nav__link" for="nav-9-5-5">
       Mu Python Library
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-5-5">
+        Mu Python Library
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../mu_pip_python_library/MuPythonLibrary/feature_GetHostInfo/" title="feature Get Host Info" class="md-nav__link">
+      feature Get Host Info
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../mu_pip_python_library/MuPythonLibrary/feature_MuAnsiHandler/" title="feature Mu Ansi Handler" class="md-nav__link">
+      feature Mu Ansi Handler
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
         
@@ -2299,19 +2395,19 @@ $ ranlib libFuzzer.a
 
 
 <p>Configure for fuzzing:</p>
-<div class="codehilite"><pre><span></span>$ <span class="nv">CC</span><span class="o">=</span>clang ./config enable-fuzz-libfuzzer <span class="se">\</span>
-        --with-fuzzer-include<span class="o">=</span>../../svn-work/Fuzzer <span class="se">\</span>
-        --with-fuzzer-lib<span class="o">=</span>../../svn-work/Fuzzer/libFuzzer <span class="se">\</span>
-        -DPEDANTIC enable-asan enable-ubsan no-shared
-$ sudo apt-get install make
-$ <span class="nv">LDCMD</span><span class="o">=</span>clang++ make -j
-$ fuzz/helper.py <span class="nv">$FUZZER</span>
+<div class="codehilite"><pre><span></span>$ <span class="nv">CC</span><span class="o">=</span><span class="nv">clang</span> .<span class="o">/</span><span class="nv">config</span> <span class="nv">enable</span><span class="o">-</span><span class="nv">fuzz</span><span class="o">-</span><span class="nv">libfuzzer</span> \
+        <span class="o">--</span><span class="nv">with</span><span class="o">-</span><span class="nv">fuzzer</span><span class="o">-</span><span class="k">include</span><span class="o">=</span>..<span class="o">/</span>..<span class="o">/</span><span class="nv">svn</span><span class="o">-</span><span class="nv">work</span><span class="o">/</span><span class="nv">Fuzzer</span> \
+        <span class="o">--</span><span class="nv">with</span><span class="o">-</span><span class="nv">fuzzer</span><span class="o">-</span><span class="nv">lib</span><span class="o">=</span>..<span class="o">/</span>..<span class="o">/</span><span class="nv">svn</span><span class="o">-</span><span class="nv">work</span><span class="o">/</span><span class="nv">Fuzzer</span><span class="o">/</span><span class="nv">libFuzzer</span> \
+        <span class="o">-</span><span class="nv">DPEDANTIC</span> <span class="nv">enable</span><span class="o">-</span><span class="nv">asan</span> <span class="nv">enable</span><span class="o">-</span><span class="nv">ubsan</span> <span class="nv">no</span><span class="o">-</span><span class="nv">shared</span>
+$ <span class="nv">sudo</span> <span class="nv">apt</span><span class="o">-</span><span class="nv">get</span> <span class="nv">install</span> <span class="nv">make</span>
+$ <span class="nv">LDCMD</span><span class="o">=</span><span class="nv">clang</span><span class="o">++</span> <span class="nv">make</span> <span class="o">-</span><span class="nv">j</span>
+$ <span class="nv">fuzz</span><span class="o">/</span><span class="nv">helper</span>.<span class="nv">py</span> <span class="mh">$F</span><span class="nv">UZZER</span>
 </pre></div>
 
 
-<p>Where $FUZZER is one of the executables in <code class="codehilite">fuzz/</code>.</p>
+<p>Where $FUZZER is one of the executables in <code class="codehilite"><span class="n">fuzz</span><span class="o">/</span></code>.</p>
 <p>If you get a crash, you should find a corresponding input file in
-<code class="codehilite">fuzz/corpora/$FUZZER-crash/</code>. You can reproduce the crash with</p>
+<code class="codehilite"><span class="n">fuzz</span><span class="o">/</span><span class="n">corpora</span><span class="o">/</span><span class="err">$</span><span class="n">FUZZER</span><span class="o">-</span><span class="n">crash</span><span class="o">/</span></code>. You can reproduce the crash with</p>
 <div class="codehilite"><pre><span></span>$ fuzz/<span class="nv">$FUZZER</span> &lt;crashfile&gt;
 </pre></div>
 
@@ -2329,7 +2425,7 @@ $ make
 </pre></div>
 
 
-<p>Where $FUZZER is one of the executables in <code class="codehilite">fuzz/</code>.</p>
+<p>Where $FUZZER is one of the executables in <code class="codehilite"><span class="n">fuzz</span><span class="o">/</span></code>.</p>
                 
                   
                 
@@ -2410,7 +2506,7 @@ $ make
       
     </div>
     
-      <script src="../../../../../../../assets/javascripts/application.267712eb.js"></script>
+      <script src="../../../../../../../assets/javascripts/application.39abc4af.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../../../../../../.."}})</script>
       

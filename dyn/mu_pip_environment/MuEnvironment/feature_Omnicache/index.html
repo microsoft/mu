@@ -36,7 +36,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.1.2">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.2.0">
     
     
       
@@ -44,7 +44,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/application.3020aac5.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/application.750b69bd.css">
       
         <link rel="stylesheet" href="../../../../assets/stylesheets/application-palette.224b79ff.css">
       
@@ -55,7 +55,7 @@
       
     
     
-      <script src="../../../../assets/javascripts/modernizr.01ccdecf.js"></script>
+      <script src="../../../../assets/javascripts/modernizr.74668098.js"></script>
     
     
       
@@ -1345,10 +1345,70 @@
           
 
 
-  <li class="md-nav__item">
-    <a href="../docs/feature_omnicache/" title="docs" class="md-nav__link">
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-4-5-3" type="checkbox" id="nav-9-4-5-3">
+    
+    <label class="md-nav__link" for="nav-9-4-5-3">
       docs
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-9-4-5-3">
+        docs
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../docs/feature_extdep/" title="feature extdep" class="md-nav__link">
+      feature extdep
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../docs/feature_omnicache/" title="feature omnicache" class="md-nav__link">
+      feature omnicache
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../docs/feature_pluginmanager/" title="feature pluginmanager" class="md-nav__link">
+      feature pluginmanager
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../docs/feature_sde/" title="feature sde" class="md-nav__link">
+      feature sde
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
         
@@ -1434,10 +1494,46 @@
           
 
 
-  <li class="md-nav__item">
-    <a href="../../../mu_pip_python_library/MuPythonLibrary/feature_GetHostInfo/" title="Mu Python Library" class="md-nav__link">
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-5-5" type="checkbox" id="nav-9-5-5">
+    
+    <label class="md-nav__link" for="nav-9-5-5">
       Mu Python Library
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-5-5">
+        Mu Python Library
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../mu_pip_python_library/MuPythonLibrary/feature_GetHostInfo/" title="feature Get Host Info" class="md-nav__link">
+      feature Get Host Info
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../mu_pip_python_library/MuPythonLibrary/feature_MuAnsiHandler/" title="feature Mu Ansi Handler" class="md-nav__link">
+      feature Mu Ansi Handler
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
         
@@ -2446,12 +2542,12 @@
 <p>An Omnicache is just a bare repo with lots of remotes fetched so that if configured the Project Mu tools will use it as a reference when updating or cloning a repo.
 This saves a lot of network bandwidth, disk space, and time if you develop with many workspaces on a single PC and can also be used to speed up CI.  </p>
 <h2 id="creating-your-omnicache">Creating your Omnicache<a class="headerlink" href="#creating-your-omnicache" title="Permanent link">&para;</a></h2>
-<p>You can setup your Omnicache many ways.  You can add config entries from numerous files or thru command line.  Try <code class="codehilite">Omnicache -h</code> for help.  Here are the steps for a simple empty installation.  </p>
+<p>You can setup your Omnicache many ways.  You can add config entries from numerous files or thru command line.  Try <code class="codehilite"><span class="n">Omnicache</span> <span class="o">-</span><span class="n">h</span></code> for help.  Here are the steps for a simple empty installation.  </p>
 <ol>
 <li>Make sure you have installed mu_environment using Pip</li>
 <li>Open cmd prompt</li>
 <li>Create one
-  <div class="codehilite"><pre><span></span>omnicache --init &lt;path&gt;
+  <div class="codehilite"><pre><span></span><span class="n">omnicache</span> <span class="c1">--init &lt;path&gt;</span>
 </pre></div></li>
 <li>At the end of the creation it will suggest setting the <strong>OMNICACHE_PATH</strong> environment variable.  For best results do this. </li>
 </ol>
@@ -2459,33 +2555,33 @@ This saves a lot of network bandwidth, disk space, and time if you develop with 
 <p>Config entries can be added when first creating the cache as well as any time by using the tool.<br />
 Config entries can be added 1-by-1 from the command line or thru a config file. </p>
 <h3 id="example-of-adding-config-entry">Example of adding config entry<a class="headerlink" href="#example-of-adding-config-entry" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>omnicache -a tianocore_edk2 https://github.com/tianocore/edk2.git --init %OMNICACHE_PATH%
-omnicache -a openssl https://github.com/openssl/openssl.git True --init %OMNICACHE_PATH%
+<div class="codehilite"><pre><span></span><span class="n">omnicache</span> <span class="o">-</span><span class="n">a</span> <span class="n">tianocore_edk2</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">tianocore</span><span class="o">/</span><span class="n">edk2</span><span class="p">.</span><span class="n">git</span> <span class="c1">--init %OMNICACHE_PATH%</span>
+<span class="n">omnicache</span> <span class="o">-</span><span class="n">a</span> <span class="n">openssl</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">openssl</span><span class="o">/</span><span class="n">openssl</span><span class="p">.</span><span class="n">git</span> <span class="k">True</span> <span class="c1">--init %OMNICACHE_PATH%</span>
 </pre></div>
 
 <h3 id="example-config-for-project-mu-repos">Example Config for Project Mu repos<a class="headerlink" href="#example-config-for-project-mu-repos" title="Permanent link">&para;</a></h3>
 <p>Copy the below sample and save it as <strong>abc.yml</strong></p>
-<p><div class="codehilite"><pre><span></span>remotes:
-- name: mu_basecore
-  url: https://github.com/Microsoft/mu_basecore.git
-- name: common_mu
-  url: https://github.com/Microsoft/mu_plus.git
-- name: common_mu_tiano2
-  url: https://github.com/Microsoft/mu_tiano_plus.git
-- name: mu_silicon_intel_tiano
-  url: https://github.com/Microsoft/mu_silicon_intel_tiano.git
-- name: mu_silicon_arm_tiano
-  url: https://github.com/Microsoft/mu_silicon_arm_tiano.git
-- name: mu_oem_sample
-  url: https://github.com/Microsoft/mu_oem_sample.git
-- name: openssl
-  url: https://github.com/openssl/openssl.git
-  tag: true
-- name: tianocore_edk2
-  url: https://github.com/tianocore/edk2.git
+<p><div class="codehilite"><pre><span></span><span class="n">remotes</span><span class="p">:</span>
+<span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="n">mu_basecore</span>
+  <span class="n">url</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">Microsoft</span><span class="o">/</span><span class="n">mu_basecore</span><span class="p">.</span><span class="n">git</span>
+<span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="n">common_mu</span>
+  <span class="n">url</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">Microsoft</span><span class="o">/</span><span class="n">mu_plus</span><span class="p">.</span><span class="n">git</span>
+<span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="n">common_mu_tiano2</span>
+  <span class="n">url</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">Microsoft</span><span class="o">/</span><span class="n">mu_tiano_plus</span><span class="p">.</span><span class="n">git</span>
+<span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="n">mu_silicon_intel_tiano</span>
+  <span class="n">url</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">Microsoft</span><span class="o">/</span><span class="n">mu_silicon_intel_tiano</span><span class="p">.</span><span class="n">git</span>
+<span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="n">mu_silicon_arm_tiano</span>
+  <span class="n">url</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">Microsoft</span><span class="o">/</span><span class="n">mu_silicon_arm_tiano</span><span class="p">.</span><span class="n">git</span>
+<span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="n">mu_oem_sample</span>
+  <span class="n">url</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">Microsoft</span><span class="o">/</span><span class="n">mu_oem_sample</span><span class="p">.</span><span class="n">git</span>
+<span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="n">openssl</span>
+  <span class="n">url</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">openssl</span><span class="o">/</span><span class="n">openssl</span><span class="p">.</span><span class="n">git</span>
+  <span class="n">tag</span><span class="p">:</span> <span class="k">true</span>
+<span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="n">tianocore_edk2</span>
+  <span class="n">url</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">tianocore</span><span class="o">/</span><span class="n">edk2</span><span class="p">.</span><span class="n">git</span>
 </pre></div>
 Then run omnicache command to add the new entries.
-<div class="codehilite"><pre><span></span>omnicache -c abc.yml --init %OMNICACHE_PATH%
+<div class="codehilite"><pre><span></span><span class="n">omnicache</span> <span class="o">-</span><span class="k">c</span> <span class="n">abc</span><span class="p">.</span><span class="n">yml</span> <span class="c1">--init %OMNICACHE_PATH%</span>
 </pre></div></p>
 <h2 id="keeping-your-omnicache-current">Keeping your Omnicache Current<a class="headerlink" href="#keeping-your-omnicache-current" title="Permanent link">&para;</a></h2>
 <p>The Omnicache doesn't have to always be current.  If it gets stale it will still help but there will be more "cache misses". Since the Omnicache is just a git repo it can easily be updated by running git commands and since it is a bare repo it is trouble free to update.  The Omicache tool attempts to make this even easier.   </p>
@@ -2541,33 +2637,33 @@ Then run omnicache command to add the new entries.
 <span class="nt">&lt;/Task&gt;</span>
 </pre></div>
 4. Open Cmd prompt and use SCHTASKS to create a task. 
-  <div class="codehilite"><pre><span></span>SCHTASKS /Create /XML &quot;O_U.xml&quot; /TN &quot;Omnicache Updater&quot;
+  <div class="codehilite"><pre><span></span><span class="n">SCHTASKS</span> <span class="o">/</span><span class="k">Create</span> <span class="o">/</span><span class="n">XML</span> <span class="ss">&quot;O_U.xml&quot;</span> <span class="o">/</span><span class="n">TN</span> <span class="ss">&quot;Omnicache Updater&quot;</span>
 </pre></div></p>
 <h2 id="using-omnicache-for-update">Using Omnicache for update<a class="headerlink" href="#using-omnicache-for-update" title="Permanent link">&para;</a></h2>
 <p>Set the environment variable <strong>OMNICACHE_PATH</strong> for automatic usage. 
-Project Mu tools when running <code class="codehilite">platformbuild.py --setup</code> or <code class="codehilite">platformbuild.py --update</code> will use the cache. </p>
+Project Mu tools when running <code class="codehilite"><span class="n">platformbuild</span><span class="p">.</span><span class="n">py</span> <span class="c1">--setup</span></code> or <code class="codehilite"><span class="n">platformbuild</span><span class="p">.</span><span class="n">py</span> <span class="c1">--update</span></code> will use the cache. </p>
 <h2 id="using-omnicache-for-git-clone">Using Omnicache for git clone<a class="headerlink" href="#using-omnicache-for-git-clone" title="Permanent link">&para;</a></h2>
 <p>Current best practice is to setup a bashrc alias if using git for windows in gitbash.   </p>
 <div class="codehilite"><pre><span></span><span class="nb">alias</span> <span class="nv">gcl</span><span class="o">=</span><span class="err">&#39;</span>git clone --reference <span class="si">${</span><span class="nv">OMNICACHE_PATH</span><span class="si">}</span>’  
 </pre></div>
 
-<p>Then every git clone you want to do you can call <code class="codehilite">gcl &lt;url&gt; &lt;folder&gt;</code> instead of <code class="codehilite">git clone &lt;url&gt; &lt;folder&gt;</code></p>
+<p>Then every git clone you want to do you can call <code class="codehilite"><span class="n">gcl</span> <span class="o">&lt;</span><span class="n">url</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">folder</span><span class="o">&gt;</span></code> instead of <code class="codehilite"><span class="n">git</span> <span class="n">clone</span> <span class="o">&lt;</span><span class="n">url</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">folder</span><span class="o">&gt;</span></code></p>
 <h2 id="warnings">Warnings<a class="headerlink" href="#warnings" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
 <p>Removing the omnicache from your PC can cause problems in your repos. Read up on --reference in git for methods to resolve this before deleting the omnicache.  </p>
 </li>
 <li>
-<p>Bug in <code class="codehilite">git submodule update --recursive --reference &lt;path&gt;</code> .  This doesn't work as git appends the recursive submodule path to the reference path.  Contacting git maintainers for clarity.  </p>
+<p>Bug in <code class="codehilite"><span class="n">git</span> <span class="n">submodule</span> <span class="k">update</span> <span class="c1">--recursive --reference &lt;path&gt;</span></code> .  This doesn't work as git appends the recursive submodule path to the reference path.  Contacting git maintainers for clarity.  </p>
 </li>
 <li>
 <p>Tags:  tags are not namespaced by remote therefore conflicts could occur.  Suggestion is to not pull tags unless required.  Stack exchange has a few other ideas but nothing implemented yet.</p>
 </li>
 <li>
-<p>Older versions of the omnicache tool used <code class="codehilite">-u true</code> to update.  Newer versions just require <code class="codehilite">-u</code> or <code class="codehilite">--fetch</code>.  </p>
+<p>Older versions of the omnicache tool used <code class="codehilite"><span class="o">-</span><span class="n">u</span> <span class="k">true</span></code> to update.  Newer versions just require <code class="codehilite"><span class="o">-</span><span class="n">u</span></code> or <code class="codehilite"><span class="c1">--fetch</span></code>.  </p>
 </li>
 <li>
-<p>Since <code class="codehilite">-a</code> is a varable length argument list it is best to always add the <code class="codehilite">--init</code> parameter as the last parameter before the cache_dir positional argument.  This way python argparse knows positional args from the <code class="codehilite">-a</code> optional args.  </p>
+<p>Since <code class="codehilite"><span class="o">-</span><span class="n">a</span></code> is a varable length argument list it is best to always add the <code class="codehilite"><span class="c1">--init</span></code> parameter as the last parameter before the cache_dir positional argument.  This way python argparse knows positional args from the <code class="codehilite"><span class="o">-</span><span class="n">a</span></code> optional args.  </p>
 </li>
 </ul>
                 
@@ -2605,13 +2701,13 @@ Project Mu tools when running <code class="codehilite">platformbuild.py --setup<
           </a>
         
         
-          <a href="../docs/feature_omnicache/" title="docs" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../docs/feature_extdep/" title="feature extdep" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                docs
+                feature extdep
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
@@ -2650,7 +2746,7 @@ Project Mu tools when running <code class="codehilite">platformbuild.py --setup<
       
     </div>
     
-      <script src="../../../../assets/javascripts/application.267712eb.js"></script>
+      <script src="../../../../assets/javascripts/application.39abc4af.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../../../.."}})</script>
       

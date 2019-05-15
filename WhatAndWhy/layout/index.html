@@ -36,7 +36,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.1.2">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.2.0">
     
     
       
@@ -44,7 +44,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.3020aac5.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.750b69bd.css">
       
         <link rel="stylesheet" href="../../assets/stylesheets/application-palette.224b79ff.css">
       
@@ -55,7 +55,7 @@
       
     
     
-      <script src="../../assets/javascripts/modernizr.01ccdecf.js"></script>
+      <script src="../../assets/javascripts/modernizr.74668098.js"></script>
     
     
       
@@ -1321,10 +1321,70 @@
           
 
 
-  <li class="md-nav__item">
-    <a href="../../dyn/mu_pip_environment/MuEnvironment/docs/feature_omnicache/" title="docs" class="md-nav__link">
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-4-5-3" type="checkbox" id="nav-9-4-5-3">
+    
+    <label class="md-nav__link" for="nav-9-4-5-3">
       docs
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-9-4-5-3">
+        docs
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dyn/mu_pip_environment/MuEnvironment/docs/feature_extdep/" title="feature extdep" class="md-nav__link">
+      feature extdep
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dyn/mu_pip_environment/MuEnvironment/docs/feature_omnicache/" title="feature omnicache" class="md-nav__link">
+      feature omnicache
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dyn/mu_pip_environment/MuEnvironment/docs/feature_pluginmanager/" title="feature pluginmanager" class="md-nav__link">
+      feature pluginmanager
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dyn/mu_pip_environment/MuEnvironment/docs/feature_sde/" title="feature sde" class="md-nav__link">
+      feature sde
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
         
@@ -1410,10 +1470,46 @@
           
 
 
-  <li class="md-nav__item">
-    <a href="../../dyn/mu_pip_python_library/MuPythonLibrary/feature_GetHostInfo/" title="Mu Python Library" class="md-nav__link">
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-5-5" type="checkbox" id="nav-9-5-5">
+    
+    <label class="md-nav__link" for="nav-9-5-5">
       Mu Python Library
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-5-5">
+        Mu Python Library
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dyn/mu_pip_python_library/MuPythonLibrary/feature_GetHostInfo/" title="feature Get Host Info" class="md-nav__link">
+      feature Get Host Info
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dyn/mu_pip_python_library/MuPythonLibrary/feature_MuAnsiHandler/" title="feature Mu Ansi Handler" class="md-nav__link">
+      feature Mu Ansi Handler
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
         
@@ -2437,52 +2533,52 @@
 <p>The underlying logic of this layout is to clearly distinguish each layer from the rest. As such, the Basecore -- which is considered foundational -- is broken out on its own, followed by the Common repos, followed by the Silicon, followed by the Platform. As mentioned elsewhere, Project Mu makes liberal use of multiple repositories due to the mixture of requirements in the firmware ecosystem. Some repos are split for technical reasons, some for organizational, and some for legal. One of the goals of Project Mu is to make this seemingly complicated layout easier to work with.</p>
 <h3 id="min-platform-example">Min Platform Example<a class="headerlink" href="#min-platform-example" title="Permanent link">&para;</a></h3>
 <p>A simple tree might look like this...</p>
-<div class="codehilite"><pre><span></span>project_mu/
-├── Build/
-├── Common/
-│   └── ...                     # Common code optional, but probably not required
-├── Conf/
-├── MU_BASECORE/
-├── Platform/
-│   └── Sample/
-│       └── MyMinPlatform       # Platform-specific build files and code
-├── Silicon/
-│   └── SiProvider/
-│       └── REF_CODE/           # Enablement code for your architecture
-├── .gitattributes
-├── .gitignore
-└── .gitmodules
+<div class="codehilite"><pre><span></span><span class="nv">project_mu</span><span class="o">/</span>
+├── <span class="nv">Build</span><span class="o">/</span>
+├── <span class="nv">Common</span><span class="o">/</span>
+│   └── ...                     # <span class="nv">Common</span> <span class="nv">code</span> <span class="nv">optional</span>, <span class="nv">but</span> <span class="nv">probably</span> <span class="nv">not</span> <span class="nv">required</span>
+├── <span class="nv">Conf</span><span class="o">/</span>
+├── <span class="nv">MU_BASECORE</span><span class="o">/</span>
+├── <span class="nv">Platform</span><span class="o">/</span>
+│   └── <span class="nv">Sample</span><span class="o">/</span>
+│       └── <span class="nv">MyMinPlatform</span>       # <span class="nv">Platform</span><span class="o">-</span><span class="nv">specific</span> <span class="nv">build</span> <span class="nv">files</span> <span class="nv">and</span> <span class="nv">code</span>
+├── <span class="nv">Silicon</span><span class="o">/</span>
+│   └── <span class="nv">SiProvider</span><span class="o">/</span>
+│       └── <span class="nv">REF_CODE</span><span class="o">/</span>           # <span class="nv">Enablement</span> <span class="nv">code</span> <span class="k">for</span> <span class="nv">your</span> <span class="nv">architecture</span>
+├── .<span class="nv">gitattributes</span>
+├── .<span class="nv">gitignore</span>
+└── .<span class="nv">gitmodules</span>
 </pre></div>
 
 <p>Note that this file structure is likely located in a Git repository, and every "ALL CAPS" directory in this example is a Git submodule/nested repository.</p>
 <h3 id="surface-laptop-example">Surface Laptop Example<a class="headerlink" href="#surface-laptop-example" title="Permanent link">&para;</a></h3>
 <p>For a real-world example, this is a tree that could build the Surface Laptop product, including both open- and closed-source repositories:</p>
-<div class="codehilite"><pre><span></span>project_mu/
-├── Build/
-├── Common/
-│   ├── MSCORE_INTERNAL/        # Proprietary code and code not yet approved for public distribution
-│   ├── MU/
-│   ├── MU_TIANO/
-│   └── SURFACE/                # Shared code to enable common features like FrontPage
-├── Conf/
-├── MU_BASECORE/
-├── Platform/
-│   ├── Surface/
-│   │   ├── SurfKbl/
-│   │   │   └── Laptop/         # Surface Laptop-Specific Platform Code
+<div class="codehilite"><pre><span></span><span class="nv">project_mu</span><span class="o">/</span>
+├── <span class="nv">Build</span><span class="o">/</span>
+├── <span class="nv">Common</span><span class="o">/</span>
+│   ├── <span class="nv">MSCORE_INTERNAL</span><span class="o">/</span>        # <span class="nv">Proprietary</span> <span class="nv">code</span> <span class="nv">and</span> <span class="nv">code</span> <span class="nv">not</span> <span class="nv">yet</span> <span class="nv">approved</span> <span class="k">for</span> <span class="nv">public</span> <span class="nv">distribution</span>
+│   ├── <span class="nv">MU</span><span class="o">/</span>
+│   ├── <span class="nv">MU_TIANO</span><span class="o">/</span>
+│   └── <span class="nv">SURFACE</span><span class="o">/</span>                # <span class="nv">Shared</span> <span class="nv">code</span> <span class="nv">to</span> <span class="nv">enable</span> <span class="nv">common</span> <span class="nv">features</span> <span class="nv">like</span> <span class="nv">FrontPage</span>
+├── <span class="nv">Conf</span><span class="o">/</span>
+├── <span class="nv">MU_BASECORE</span><span class="o">/</span>
+├── <span class="nv">Platform</span><span class="o">/</span>
+│   ├── <span class="nv">Surface</span><span class="o">/</span>
+│   │   ├── <span class="nv">SurfKbl</span><span class="o">/</span>
+│   │   │   └── <span class="nv">Laptop</span><span class="o">/</span>         # <span class="nv">Surface</span> <span class="nv">Laptop</span><span class="o">-</span><span class="nv">Specific</span> <span class="nv">Platform</span> <span class="nv">Code</span>
 │   │   └── ...
-│   └── Others/
+│   └── <span class="nv">Others</span><span class="o">/</span>
 │       └── ...
-├── Silicon/
-│   ├── Intel/
-│   │   ├── KBL/                # Intel KBL Reference Code
-│   │   ├── MU/                 # Project Mu Intel Common Code
-│   │   ├── MU_TIANO/           # Project Mu Intel Code from TianoCore
-│   │   └── SURF_KBL/           # Surface Customizations/Overrides for KBL Ref Code
-│   └── SURFACE/                # Shared code to enable common HW like ECs
-├── .gitattributes
-├── .gitignore
-└── .gitmodules
+├── <span class="nv">Silicon</span><span class="o">/</span>
+│   ├── <span class="nv">Intel</span><span class="o">/</span>
+│   │   ├── <span class="nv">KBL</span><span class="o">/</span>                # <span class="nv">Intel</span> <span class="nv">KBL</span> <span class="nv">Reference</span> <span class="nv">Code</span>
+│   │   ├── <span class="nv">MU</span><span class="o">/</span>                 # <span class="nv">Project</span> <span class="nv">Mu</span> <span class="nv">Intel</span> <span class="nv">Common</span> <span class="nv">Code</span>
+│   │   ├── <span class="nv">MU_TIANO</span><span class="o">/</span>           # <span class="nv">Project</span> <span class="nv">Mu</span> <span class="nv">Intel</span> <span class="nv">Code</span> <span class="nv">from</span> <span class="nv">TianoCore</span>
+│   │   └── <span class="nv">SURF_KBL</span><span class="o">/</span>           # <span class="nv">Surface</span> <span class="nv">Customizations</span><span class="o">/</span><span class="nv">Overrides</span> <span class="k">for</span> <span class="nv">KBL</span> <span class="nv">Ref</span> <span class="nv">Code</span>
+│   └── <span class="nv">SURFACE</span><span class="o">/</span>                # <span class="nv">Shared</span> <span class="nv">code</span> <span class="nv">to</span> <span class="nv">enable</span> <span class="nv">common</span> <span class="nv">HW</span> <span class="nv">like</span> <span class="nv">ECs</span>
+├── .<span class="nv">gitattributes</span>
+├── .<span class="nv">gitignore</span>
+└── .<span class="nv">gitmodules</span>
 </pre></div>
 
 <p>Once again, the "ALL CAPS" directories are submodules.</p>
@@ -2566,7 +2662,7 @@
       
     </div>
     
-      <script src="../../assets/javascripts/application.267712eb.js"></script>
+      <script src="../../assets/javascripts/application.39abc4af.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       
