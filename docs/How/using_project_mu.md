@@ -7,7 +7,7 @@ You will need:
 1) Git
 2) Python 3.7
 3) A text editor
-4) Look at [layout](../WhatAndWhy/layout.html) to understand our recommended repository layout. You can also look at [ms-iot's iMX8](https://github.com/ms-iot/MU_PLATFORM_NXP) for a real platform implementation.
+4) Look at [layout](../WhatAndWhy/layout.html) to understand our recommended repository layout. You can also look at [ms-iot iMX8](https://github.com/ms-iot/MU_PLATFORM_NXP) for a real platform implementation.
 
 ## 1) Create Git Repo
 
@@ -50,7 +50,7 @@ git submodule add https://github.com/Microsoft/mu_oem_sample.git Common/MU_OEM_S
 ```
 
 ### [MU_SILICON_ARM_TIANO](https://github.com/Microsoft/mu_silicon_arm_tiano.git)
-Silicon code from TianoCore has been broken out into indivudal submodules. iMX8 is ARM, so we need this submodule.
+Silicon code from TianoCore has been broken out into individual submodules. iMX8 is ARM, so we need this submodule.
 
 ```cmd
 git submodule add https://github.com/Microsoft/mu_silicon_arm_tiano.git Silicon/ARM/TIANO
@@ -86,7 +86,7 @@ New_Platform_Repo/
 └── .gitmodules
 ```
 
-You will need to create directories in this repository for your platform. The important Project MU piece is the PlatformBuild file. [ms-iot's iMX8](https://github.com/ms-iot/MU_PLATFORM_NXP) can be used as an example to help you get started!
+You will need to create directories in this repository for your platform. The important Project MU piece is the PlatformBuild file. [ms-iot iMX8](https://github.com/ms-iot/MU_PLATFORM_NXP) can be used as an example to help you get started!
 
 # 4) Build instructions
 
