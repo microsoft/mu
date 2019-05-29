@@ -111,7 +111,7 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://microsoft.github.io/mu/dyn/mu_basecore/BaseTools/NugetPublishing/Mu-Basetools-Win32/</loc>
+     <loc>https://microsoft.github.io/mu/dyn/mu_basecore/BaseTools/NugetPublishing/Mu-Basetools/</loc>
      <lastmod>2019-05-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -162,6 +162,16 @@
     </url>
     <url>
      <loc>https://microsoft.github.io/mu/dyn/mu_basecore/MsUnitTestPkg/ReadMe/</loc>
+     <lastmod>2019-05-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://microsoft.github.io/mu/dyn/mu_basecore/NetworkPkg/SharedTlsDxe/release_notes/</loc>
+     <lastmod>2019-05-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://microsoft.github.io/mu/dyn/mu_basecore/NetworkPkg/SharedTlsDxe/SharedTlsDxe/</loc>
      <lastmod>2019-05-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -281,6 +291,11 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://microsoft.github.io/mu/dyn/mu_plus/DfciPkg/AuthManagerNull/</loc>
+     <lastmod>2019-05-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://microsoft.github.io/mu/dyn/mu_plus/DfciPkg/IdentityAndAuthManager/ReadMe/</loc>
      <lastmod>2019-05-29</lastmod>
      <changefreq>daily</changefreq>
@@ -306,6 +321,11 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://microsoft.github.io/mu/dyn/mu_plus/MsCorePkg/MuVarPolicyFoundationDxe/Feature_MuVarPolicyFoundationDxe_Readme/</loc>
+     <lastmod>2019-05-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://microsoft.github.io/mu/dyn/mu_plus/MsCorePkg/UnitTests/JsonTest/readme/</loc>
      <lastmod>2019-05-29</lastmod>
      <changefreq>daily</changefreq>
@@ -322,6 +342,21 @@
     </url>
     <url>
      <loc>https://microsoft.github.io/mu/dyn/mu_plus/PcBdsPkg/Library/MsNetworkDependencyLib/readme/</loc>
+     <lastmod>2019-05-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://microsoft.github.io/mu/dyn/mu_plus/SharedCryptoPkg/feature_sharedcrypto/</loc>
+     <lastmod>2019-05-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://microsoft.github.io/mu/dyn/mu_plus/SharedCryptoPkg/release_notes/</loc>
+     <lastmod>2019-05-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://microsoft.github.io/mu/dyn/mu_plus/SharedCryptoPkg/Driver/Mu-SharedCrypto/</loc>
      <lastmod>2019-05-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -362,11 +397,6 @@
     </url>
     <url>
      <loc>https://microsoft.github.io/mu/dyn/mu_silicon_arm_tiano/RepoDetails/</loc>
-     <lastmod>2019-05-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://microsoft.github.io/mu/dyn/mu_silicon_intel_tiano/Readme/</loc>
      <lastmod>2019-05-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
