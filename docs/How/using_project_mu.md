@@ -11,7 +11,8 @@ You will need:
 
 ## 0) Nomenclature
 
-Ordinarily, we use the *Platform Repository* as the outer-most layer. This means that the outermost git repository is where we store Platform specific files and libraries. In this case, our *Platform Repo* is also our *workspace root*. If you choose to have a different repository layout, it will be important to note what your *workspace root* is, as it should still be the root of your code tree.
+I will use the term *workspace root* to reference the base folder for your code tree.
+Ordinarily, we use the *Platform Repository* as the outer-most layer. This means that the outermost git repository is where we store Platform specific files and libraries. In this case, our *Platform Repo* is also our *workspace root*. If you choose to have a different repository layout, it will be important to note what your *workspace root* is, as it should still be the base folder of your code tree.
 
 ## 1) Create Git Repo
 
@@ -19,7 +20,7 @@ Make new directory.
 ```cmd
 mkdir NewPlatformRepo
 cd NewPlatformRepo
-git init 
+git init
 ```
 
 This will serve as our Platform Repository as well as our Workspace Root.
