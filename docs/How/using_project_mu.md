@@ -42,7 +42,7 @@ Project MU is separated into submodules. For each submodule that you need for yo
 
 ### [MU_BASECORE](https://github.com/Microsoft/mu_basecore.git)
 
-This is the main repo. Contains the guts of the build system as well as core UEFI code, forked from TianoCore. You will need this to continue.
+This is the core section of TianoCore. Contains the guts of UEFI, forked from TianoCore, as well as the BaseTools needed to build. You will need this to continue.
 
 ```cmd
 git submodule add https://github.com/Microsoft/mu_basecore.git MU_BASECORE
