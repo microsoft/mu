@@ -12,7 +12,16 @@ You will need:
 ## 0) Nomenclature
 
 I will use the term *workspace root* to reference the base folder for your code tree.
+
 Ordinarily, we use the *Platform Repository* as the outer-most layer. This means that the outermost git repository is where we store Platform specific files and libraries. In this case, our *Platform Repo* is also our *workspace root*. If you choose to have a different repository layout, it will be important to note what your *workspace root* is, as it should still be the base folder of your code tree.
+
+Submodules are full git repos on their own. What we do with these repos is add them as sub-repos to the *workspace root*. Git will create a `.gitmodules` file that contains links to the repo and default branches. There are git submodule commands that you can use to work with your submodules, such as:
+```bash
+git submodule add <url> <path>  # url to submodule, path to submodule installation
+git submodule update --init --recursive  # Recursively initializes and updates all submodules.
+git submodule foreach git status  # git submodule foreach can be used to run a command in each submodule. git status is just an example.
+```
+For more information available [here](https://git-scm.com/book/en/v2/Git-Tools-Submodules).
 
 ## 1) Create Git Repo
 
@@ -101,7 +110,7 @@ New_Platform_Repo/
 └── .gitmodules
 ```
 
-You will need to create PlatformBuild.py, Platform.dsc, and Platform.fdf. These files will go inside the platform folder, which will be `New_Platform_Repo/PlatformGroup/PlatformName`. The [ms-iot iMX8](https://github.com/ms-iot/MU_PLATFORM_NXP) repo can help you get started as a layout reference and can demonstrate the PlatformBuild file.
+You will need to create PlatformBuild.py, Platform.dsc, and Platform.fdf. These files will go inside the platform folder, which will be `New_Platform_Repo/PlatformGroup/PlatformName`. The [ms-iot iMX8](https://github.com/ms-iot/MU_PLATFORM_NXP) repo can help you get started as a layout reference and can demonstrate the PlatformBuild file. More information about PlatformBuild can be found [here](https://microsoft.github.io/mu/CodeDevelopment/compile/#project-build-aka-platformbuild).
 
 # 4) Build instructions
 
