@@ -24,6 +24,7 @@ steps:
   displayName: 'Spell Check md files'
 
 - task: UsePythonVersion@0
+  condition: succeededOrFailed()
   inputs:
     versionSpec: '3.7'
     architecture: 'x64'
