@@ -41,6 +41,11 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://microsoft.github.io/mu/How/using_project_mu/</loc>
+     <lastmod>2019-07-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://microsoft.github.io/mu/DeveloperDocs/developer_docs/</loc>
      <lastmod>2019-07-19</lastmod>
      <changefreq>daily</changefreq>
