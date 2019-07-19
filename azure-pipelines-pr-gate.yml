@@ -22,7 +22,6 @@ steps:
 
 - script: cspell docs/**/*.md
   displayName: 'Spell Check md files'
-  continueOnError: true
 
 - task: UsePythonVersion@0
   inputs:
