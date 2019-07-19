@@ -27,18 +27,23 @@ steps:
   inputs:
     versionSpec: '3.7'
     architecture: 'x64'
+  condition: succeededOrFailed()
 
 - script: python -m pip install --upgrade pip
   displayName: 'Install/Upgrade pip'
+  condition: succeededOrFailed()
 
 - script: python -m pip install --upgrade -r requirements.txt
   displayName: 'Install/upgrade dependencies'
+  condition: succeededOrFailed()
 
 - script: python Utf8Test.py --RootDir docs
+  condition: succeededOrFailed()
   displayName: Check character encoding
 
 - script: pytest -v --junitxml=test.junit.xml --html=pytest_report.html --self-contained-html --cov=. --cov-report html:cov_html --cov-report xml:cov.xml
   displayName: 'Run UnitTests'
+  condition: succeededOrFailed()
 
 # Publish Test Results to Azure Pipelines/TFS
 - task: PublishTestResults@2
