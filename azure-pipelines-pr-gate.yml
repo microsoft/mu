@@ -1,131 +1,112 @@
 workspace:
   clean: all
 
-jobs:
-  - job: Prep Environment
-    steps:
-    - task: DeleteFiles@1
-      inputs:
-        sourceFolder: $(Build.SourcesDirectory)
-        contents: '**'
+steps:
+- task: DeleteFiles@1
+  inputs:
+    sourceFolder: $(Build.SourcesDirectory)
+    contents: '**'
 
-    - checkout: self
-      clean: true
+- checkout: self
+  clean: true
 
-  - job: Install Node
-    dependsOn: Prep Environment
-    steps:
-    # Node.js Tool Installer
-    # Finds or downloads and caches the specified version spec of Node.js and adds it to the PATH.
-    - task: NodeTool@0
-      inputs:
-        versionSpec: '10.x'
-        #checkLatest: false # Optional
+# Node.js Tool Installer
+# Finds or downloads and caches the specified version spec of Node.js and adds it to the PATH.
+- task: NodeTool@0
+  inputs:
+    versionSpec: '10.x'
+    #checkLatest: false # Optional
 
-  - job: Install and Setup Python
-    dependsOn: Prep Environment
-    steps:
-    - task: UsePythonVersion@0
-      inputs:
-        versionSpec: '3.7'
-        architecture: 'x64'
+- script: npm install -g cspell
+  displayName: 'Install cspell npm'
 
-    - script: python -m pip install --upgrade pip
-      displayName: 'Install/Upgrade pip'
+- script: cspell docs/**/*.md
+  displayName: 'Spell Check md files'
+  continueOnError: true
 
-    - script: python -m pip install --upgrade -r requirements.txt
-      displayName: 'Install/upgrade dependencies'
+- task: UsePythonVersion@0
+  inputs:
+    versionSpec: '3.7'
+    architecture: 'x64'
 
-  - job: Spell Checking
-    dependsOn: Install Node
-    steps:
-    - script: npm install -g cspell
-      displayName: 'Install cspell npm'
+- script: python -m pip install --upgrade pip
+  displayName: 'Install/Upgrade pip'
 
-    - script: cspell docs/**/*.md
-      displayName: 'Spell Check md files'
+- script: python -m pip install --upgrade -r requirements.txt
+  displayName: 'Install/upgrade dependencies'
 
-  - job: Python Unittests
-    dependsOn: Install and Setup Python
-    steps:
-    - script: pytest -v --junitxml=test.junit.xml --html=pytest_report.html --self-contained-html --cov=. --cov-report html:cov_html --cov-report xml:cov.xml
-      displayName: 'Run UnitTests'
+- script: python Utf8Test.py --RootDir docs
+  displayName: Check character encoding
 
-    # Publish Test Results to Azure Pipelines/TFS
-    - task: PublishTestResults@2
-      displayName: 'Publish junit test results'
-      continueOnError: true
-      condition: succeededOrFailed()
-      inputs:
-        testResultsFormat: 'JUnit' # Options: JUnit, NUnit, VSTest, xUnit
-        testResultsFiles: 'test.junit.xml' 
-        mergeTestResults: true # Optional
-        publishRunAttachments: true # Optional
+- script: pytest -v --junitxml=test.junit.xml --html=pytest_report.html --self-contained-html --cov=. --cov-report html:cov_html --cov-report xml:cov.xml
+  displayName: 'Run UnitTests'
 
-    # Publish Build Artifacts
-    # Publish build artifacts to Azure Pipelines/TFS or a file share
-    - task: PublishBuildArtifacts@1
-      inputs:
-        pathtoPublish: 'pytest_report.html' 
-        artifactName: 'python unit test report' 
-      continueOnError: true
-      condition: succeededOrFailed()
+# Publish Test Results to Azure Pipelines/TFS
+- task: PublishTestResults@2
+  displayName: 'Publish junit test results'
+  continueOnError: true
+  condition: succeededOrFailed()
+  inputs:
+    testResultsFormat: 'JUnit' # Options: JUnit, NUnit, VSTest, xUnit
+    testResultsFiles: 'test.junit.xml' 
+    mergeTestResults: true # Optional
+    publishRunAttachments: true # Optional
 
-    # Publish Code Coverage Results
-    # Publish Cobertura code coverage results
-    - task: PublishCodeCoverageResults@1
-      inputs:
-        codeCoverageTool: 'cobertura' # Options: cobertura, jaCoCo
-        summaryFileLocation: $(System.DefaultWorkingDirectory)/cov.xml
-        reportDirectory: $(System.DefaultWorkingDirectory)/cov_html
-      condition: succeededOrFailed()
+# Publish Build Artifacts
+# Publish build artifacts to Azure Pipelines/TFS or a file share
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathtoPublish: 'pytest_report.html' 
+    artifactName: 'python unit test report' 
+  continueOnError: true
+  condition: succeededOrFailed()
 
-  - job: Flake Linting
-    dependsOn: Install and Setup Python
-    steps:
-    - script: flake8 .
-      displayName: 'Run flake8'
+# Publish Code Coverage Results
+# Publish Cobertura code coverage results
+- task: PublishCodeCoverageResults@1
+  inputs:
+    codeCoverageTool: 'cobertura' # Options: cobertura, jaCoCo
+    summaryFileLocation: $(System.DefaultWorkingDirectory)/cov.xml
+    reportDirectory: $(System.DefaultWorkingDirectory)/cov_html
+  condition: succeededOrFailed()
 
-    # Only capture and archive the lint log on failures.
-    - script: flake8 . > flake8.err.log
-      displayName: 'Capture flake8 failures'
-      condition: Failed()
+- script: flake8 .
+  displayName: 'Run flake8'
+  condition: succeededOrFailed()
 
-    - task: PublishBuildArtifacts@1
-      inputs:
-        pathtoPublish: 'flake8.err.log' 
-        artifactName: 'Flake8 Error log file'
-      continueOnError: true
-      condition: Failed()
+- script: flake8 . > flake8.err.log
+  displayName: 'Capture flake8 errors'
+  condition: Failed()
 
-  - job: Build Final Docs
-    dependsOn:
-    - Python Unittests
-    - Flake Linting
-    - Spell Checking
-    steps:
-    # For CI build don't use remote repos
-    - script: python DocBuild.py --clean --build --OutputDir docs --yml mkdocs_base.yml -o pr-gate.log
-      displayName: 'Run Preprocess'
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathtoPublish: 'flake8.err.log' 
+    artifactName: 'Flake8 Error log file'
+  continueOnError: true
+  condition: Failed() 
 
-    - task: PublishBuildArtifacts@1
-      displayName: 'Publish Artifact: Generated Yml File'
-      inputs:
-        PathtoPublish: 'mkdocs.yml'
-        ArtifactName: 'mkdocs.yml'
-      continueOnError: true
-      condition: succeededOrFailed()
+# For CI build don't use remote repos
+- script: python DocBuild.py --clean --build --OutputDir docs --yml mkdocs_base.yml -o pr-gate.log
+  displayName: 'Run Preprocess'
 
-    - task: CmdLine@1
-      displayName: 'build'
-      inputs:
-        filename: mkdocs
-        arguments: 'build -s -v '
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish Artifact: Generated Yml File'
+  inputs:
+    PathtoPublish: 'mkdocs.yml'
+    ArtifactName: 'mkdocs.yml'
+  continueOnError: true
+  condition: succeededOrFailed()
 
-    - task: PublishBuildArtifacts@1
-      displayName: 'Publish DocBuild Log'
-      inputs:
-        PathtoPublish: 'pr-gate.log'
-        ArtifactName: 'DocBuild_Pr-Gate.log'
-      continueOnError: true
-      condition: failed()
+- task: CmdLine@1
+  displayName: 'build'
+  inputs:
+    filename: mkdocs
+    arguments: 'build -s -v '
+
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish DocBuild Log'
+  inputs:
+    PathtoPublish: 'pr-gate.log'
+    ArtifactName: 'DocBuild_Pr-Gate.log'
+  continueOnError: true
+  condition: failed()
