@@ -7,7 +7,7 @@ You will need:
 1) Git
 2) Python 3.7
 3) A text editor
-4) Look at [layout](../WhatAndWhy/layout.html) to understand our recommended repository layout. You can also look at [ms-iot iMX8](https://github.com/ms-iot/MU_PLATFORM_NXP) for a real platform implementation.
+4) Look at [layout](../WhatAndWhy/layout.md) to understand our recommended repository layout. You can also look at [ms-iot iMX8](https://github.com/ms-iot/MU_PLATFORM_NXP) for a real platform implementation.
 
 ## 0) Nomenclature
 
