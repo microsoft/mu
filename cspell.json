@@ -106,6 +106,9 @@
         "workspaces",
         "venv",
         "omnicache",
-        "roadmap","roadmaps"
+        "roadmap","roadmaps",
+
+        // Names and Attributions
+        "Franceschetti", "Donath"
     ]
 }
