@@ -20,6 +20,9 @@ steps:
 - script: npm install -g cspell
   displayName: 'Install cspell npm'
 
+- script: cspell docs/**/*.md
+  displayName: 'Spell Check md files'
+
 - task: UsePythonVersion@0
   inputs:
     versionSpec: '3.7'
@@ -79,9 +82,6 @@ steps:
     artifactName: 'Flake8 Error log file'
   continueOnError: true
   condition: Failed() 
-
-- script: cspell docs/**/*.md
-  displayName: 'Spell Check md files'
 
 # For CI build don't use remote repos
 - script: python DocBuild.py --clean --build --OutputDir docs --yml mkdocs_base.yml -o pr-gate.log
