@@ -52,6 +52,7 @@ nav:
   - How:
     - Release Process: 'How/release_process.md'
     - Contributing: 'How/contributing.md'
+    - Using: 'How/using_project_mu.md'
   - Developing Docs:
     - Overview: "DeveloperDocs/developer_docs.md"
     - How To Build: "DeveloperDocs/build_community_docs.md"
