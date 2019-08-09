@@ -44,11 +44,23 @@ See component list here for more options. https://docs.microsoft.com/en-us/visua
     ``` cmd
     https://aka.ms/vs/16/release/vs_buildtools.exe
     ```
-2. Install from cmd line with required features (this set will change overtime).
+2. Install from cmd line with required features (this set will change over time).
     ``` cmd
     C:\TEMP\vs_buildtools.exe --quiet --wait --norestart --nocache --installPath C:\BuildTools --add Microsoft.VisualStudio.Component.VC.CoreBuildTools --add Microsoft.VisualStudio.Component.VC.Tools.x86.x64 --add Microsoft.VisualStudio.Component.Windows10SDK.17763 --add Microsoft.VisualStudio.Component.VC.Tools.ARM --add Microsoft.VisualStudio.Component.VC.Tools.ARM64
     ```
 See component list here for more options. https://docs.microsoft.com/en-us/visualstudio/install/workload-component-id-vs-build-tools?view=vs-2019
+
+### Optional - Windows Driver Kit (required to sign firmware update Capsules)
+
+1. Download the WDK installer
+    ``` cmd
+    https://go.microsoft.com/fwlink/?linkid=2085767
+    ```
+2. Install from cmd line with required features (this set will change over time).
+    ``` cmd
+    wdksetup.exe /features OptionId.WindowsDriverKitComplete /q 
+    
+    ```
 
 ### Optional - Create an Omnicache
 
