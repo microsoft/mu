@@ -9,7 +9,7 @@ The tools also vary by Operating System and Compiler choice.  Project Mu will do
 
 1. Download latest Python from https://www.python.org/downloads
     ``` cmd
-    https://www.python.org/ftp/python/3.7.2/python-3.7.2-amd64.exe
+    https://www.python.org/ftp/python/3.7.4/python-3.7.4-amd64.exe
     ```
 2. It is recommended you use the following options when installing python:
     1. include pip support
@@ -59,7 +59,6 @@ See component list here for more options. https://docs.microsoft.com/en-us/visua
 2. Install from cmd line with required features (this set will change over time).
     ``` cmd
     wdksetup.exe /features OptionId.WindowsDriverKitComplete /q 
-    
     ```
 
 ### Optional - Create an Omnicache
