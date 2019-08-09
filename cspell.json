@@ -107,6 +107,7 @@
         "venv",
         "omnicache",
         "roadmap","roadmaps",
+	"wdksetup",
 
         // Names and Attributions
         "Franceschetti", "Donath"
