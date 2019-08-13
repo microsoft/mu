@@ -50,7 +50,8 @@ See component list here for more options. https://docs.microsoft.com/en-us/visua
     ```
 See component list here for more options. https://docs.microsoft.com/en-us/visualstudio/install/workload-component-id-vs-build-tools?view=vs-2019
 
-### Optional - Windows Driver Kit (required to sign firmware update Capsules)
+### Optional - Windows Driver Kit
+Provides Inf2Cat.exe, needed to [prepare Windows firmware update packages for signing](https://docs.microsoft.com/en-us/windows-hardware/drivers/bringup/certifying-and-signing-the-update-package).
 
 1. Download the WDK installer
     ``` cmd
@@ -81,9 +82,20 @@ More info on Python Virtual Environments: https://docs.python.org/3/library/venv
 
 ### Workspace Virtual Environment Setup Process 
 
+#### A sample directory layout of workspaces and Python Virtual Environments:
+    code
+    |-- edk2
+    |-- env_dev                     <--- env for Mu Dev
+    |-- env_docs                    <--- env for Mu Docs
+    |-- env_edk                     <--- env for TianoCore
+    |-- env_local                   <--- env for -e installations of mu_pip/edk2tool
+    |-- Omnicache
+    |-- Palindrome
+    |-- Palindrome2
+
 Do this one time per workspace
 
-1. Open Cmd Prompt in the root directory where you want to store your virtual environment
+1. Open Cmd Prompt in the directory where you want to store your virtual environment.  A directory adjacent to workspace directories is convenient.
 2. run python cmd
     ``` cmd
     python -m venv <your virtual env name>
@@ -105,7 +117,6 @@ Do this each time you open a new command window to build your workspace.
     pip install --upgrade -r requirements.txt
     ```
 5. Do dev work and run your builds!
-
 
 ### More About Project Mu tools using Pip
 
