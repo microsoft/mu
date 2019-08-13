@@ -1057,11 +1057,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1-5-1" type="checkbox" id="nav-9-1-5-1">
     
     <label class="md-nav__link" for="nav-9-1-5-1">
-      Shared Tls Dxe
+      Shared Networking
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
       <label class="md-nav__title" for="nav-9-1-5-1">
-        Shared Tls Dxe
+        Shared Networking
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -1072,7 +1072,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../mu_basecore/NetworkPkg/SharedTlsDxe/release_notes/" title="release notes" class="md-nav__link">
+    <a href="../../../../mu_basecore/NetworkPkg/SharedNetworking/release_notes/" title="release notes" class="md-nav__link">
       release notes
     </a>
   </li>
@@ -1084,8 +1084,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../mu_basecore/NetworkPkg/SharedTlsDxe/SharedTlsDxe/" title="Shared Tls Dxe" class="md-nav__link">
-      Shared Tls Dxe
+    <a href="../../../../mu_basecore/NetworkPkg/SharedNetworking/SharedNetworking/" title="Shared Networking" class="md-nav__link">
+      Shared Networking
     </a>
   </li>
 
@@ -1385,6 +1385,13 @@
         <li class="md-nav__item">
   <a href="#authentication" title="Authentication" class="md-nav__link">
     Authentication
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pushing-to-an-authenticated-stream" title="Pushing to an Authenticated Stream" class="md-nav__link">
+    Pushing to an Authenticated Stream
   </a>
   
 </li>
@@ -2604,6 +2611,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#pushing-to-an-authenticated-stream" title="Pushing to an Authenticated Stream" class="md-nav__link">
+    Pushing to an Authenticated Stream
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#example-creating-new-config-file-for-first-use" title="Example: Creating new config file for first use" class="md-nav__link">
     Example: Creating new config file for first use
   </a>
@@ -2639,7 +2653,7 @@
                 <h1 id="nugetpublishing">NugetPublishing<a class="headerlink" href="#nugetpublishing" title="Permanent link">&para;</a></h1>
 <p>Tool to help create and publish nuget packages for Project Mu resources</p>
 <h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
-<p>See NugetPublishing -h  </p>
+<p>See NugetPublishing -h</p>
 <h2 id="optional-host_specific-folders">OPTIONAL: host_specific folders<a class="headerlink" href="#optional-host_specific-folders" title="Permanent link">&para;</a></h2>
 <p>The possible different setups for the host are:
 OS: Linux, Windows, Java
@@ -2669,8 +2683,12 @@ For example</p>
 <li>VSTS credential manager.  In an interactive session a dialog will popup for the user to login</li>
 <li>Tokens can also be used as the API key.  Go to your account page to generate a token that can push packages</li>
 <li>NuGet.org</li>
-<li>Must use an API key.  Go to your account page and generate a key.  </li>
+<li>Must use an API key.  Go to your account page and generate a key.</li>
 </ul>
+<h2 id="pushing-to-an-authenticated-stream">Pushing to an Authenticated Stream<a class="headerlink" href="#pushing-to-an-authenticated-stream" title="Permanent link">&para;</a></h2>
+<p>Previously the VsCredentialProvider was packaged right next to Nuget.exe and it was automatically found.
+If you have a specific credential provider executable needed to push to your stream, you'll need to follow the instructions <a href="https://docs.microsoft.com/en-us/nuget/reference/extensibility/nuget-exe-credential-providers">here</a> to make the executable available to find.
+You can add it to %LocalAppData%\NuGet\CredentialProvider or you can add an environmental variable NUGET_CREDENTIALPROVIDERS_PATH with the location of your provider. If you have multiple, they can be semicolon seperated.</p>
 <h2 id="example-creating-new-config-file-for-first-use">Example: Creating new config file for first use<a class="headerlink" href="#example-creating-new-config-file-for-first-use" title="Permanent link">&para;</a></h2>
 <p>This will create the config files and place them in the current directory:</p>
 <div class="codehilite"><pre><span></span><span class="n">NugetPublishing</span> <span class="c1">--Operation New --Name iasl --Author ProjectMu --ConfigFileFolderPath . --Description &quot;Description of item.&quot; --FeedUrl https://api.nuget.org/v3/index.json --ProjectUrl http://aka.ms/projectmu --LicenseType BSD2</span>
