@@ -8,7 +8,7 @@ What major features does Project Mu bring to the table above/beyond EDK2?
 ### Feature List
 
 * Pluggable, cross-device, performance-optimized BDS
-* Device Firmware Configuration Interface - enables practical MDM management
+* Device Firmware Configuration Interface (DFCI) - enables practical MDM management
 * PBKDF2-based BIOS password example
 * Support for EKU-based trust anchors during signature validation
 * Microsoft unit test framework
