@@ -27,7 +27,6 @@
 ##
 ###
 
-from __future__ import print_function  # support Python3 and 2 for print
 import os
 import sys
 import argparse
@@ -41,7 +40,7 @@ import yaml
 
 
 SCRIPT_PATH = os.path.abspath(os.path.dirname(__file__))
-VERSION = "0.7.0"
+VERSION = "0.8.0"
 
 #
 # Class with basic git support.  Allow data collection from git repo
@@ -95,6 +94,10 @@ class GitSupport(object):
 #
 class NavTree(object):
 
+    SPECIAL_KEY_FIND_PKG_DOCS = "Docs" ## this is the name of folder at package root with Package Docs
+    SPECIAL_KEY_REPLACE_WITH = "Package Overview"  ## this will be in the TOC as container for package Docs
+    SPECIAL_KEY_PACKAGE_MODULES = "Modules" ## this will be in the TOC as container for all docs found with code
+
     def __init__(self, Leaf=None):
         self.Leaf = Leaf
         self.Children = {}
@@ -137,7 +140,13 @@ class NavTree(object):
             return
         p = path.partition("/")  # p[0] = name p[2] = remaining
         if(len(p[2]) > 0):
-            self.GetOrMakeChildNode(p[0]).AddToTree(p[2], leafvalue)
+            rem = p[2]
+            # Dev Note: it was decided that a "Docs" folder found at the root of a Edk2 Package
+            #           should be treated special and that all markdown files found with the code (in modules)
+            #           should lowered one level in TOC by adding a "Module" node.  
+            if p[0].endswith("Pkg") and not p[2].startswith(NavTree.SPECIAL_KEY_FIND_PKG_DOCS):
+                rem = NavTree.SPECIAL_KEY_PACKAGE_MODULES + "/" + p[2]
+            self.GetOrMakeChildNode(p[0]).AddToTree(rem, leafvalue)
         else:
             self.GetOrMakeChildNode(p[0], leafvalue)
         return
@@ -149,7 +158,19 @@ class NavTree(object):
         if self.Leaf is not None:
             return string + ' "' + self.Leaf + '"'
         string2 = ""
+
+        # Dev Note: it was decided that a "Docs" folder found at the root of a Edk2 Package
+        #           should be treated special and put first in the TOC within the Package.  It also
+        #           should be renamed to something more descriptive than docs
+        #  
+        if(NavTree.SPECIAL_KEY_FIND_PKG_DOCS in self.Children.keys()):
+            string1 = "\n" + prefix + "- " + self.MakeFriendly(NavTree.SPECIAL_KEY_REPLACE_WITH) + ":"
+            string2 += self.Children[NavTree.SPECIAL_KEY_FIND_PKG_DOCS].GetNavYml(string1, prefix + "  ")
+
         for (name, cnode) in self.Children.items():
+            if name == NavTree.SPECIAL_KEY_FIND_PKG_DOCS:
+                # already inserted above
+                continue
             string1 = "\n" + prefix + "- " + self.MakeFriendly(name) + ":"
             string2 += cnode.GetNavYml(string1, prefix + "  ")
         return string + string2
