@@ -2221,6 +2221,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../../MsCorePkg/DebugFileLoggerII/" title="Debug File Logger II" class="md-nav__link">
+      Debug File Logger II
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../../MsCorePkg/MuCryptoDxe/Readme/" title="Mu Crypto Dxe" class="md-nav__link">
       Mu Crypto Dxe
     </a>
@@ -2246,13 +2258,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-6-3-1-7" type="checkbox" id="nav-9-6-3-1-7">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-6-3-1-8" type="checkbox" id="nav-9-6-3-1-8">
     
-    <label class="md-nav__link" for="nav-9-6-3-1-7">
+    <label class="md-nav__link" for="nav-9-6-3-1-8">
       Unit Tests
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-      <label class="md-nav__title" for="nav-9-6-3-1-7">
+      <label class="md-nav__title" for="nav-9-6-3-1-8">
         Unit Tests
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -3400,12 +3412,12 @@
                 
                 <h1 id="device-firmware-configuration-interface-dfci-introduction">Device Firmware Configuration Interface (DFCI) Introduction<a class="headerlink" href="#device-firmware-configuration-interface-dfci-introduction" title="Permanent link">&para;</a></h1>
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
-<p>The Device Firmware Configuration Interface (DFCI) brings new levels of security and usability to PC configuration management. It is a new feature of UEFI that enables secure programmatic configuration of hardware settings that are typically configured within a BIOS menu by a human.  High value configuration can be moved to UEFI BIOS where it is resilient against malware, rootkits, and non-persistent physical tampering. Whereas traditional UEFI security implementations required a physical touch, DFCI securely enables <strong>zero-touch</strong> remote configuration of these settings built upon <a href="https://www.microsoft.com/en-us/microsoft-365/enterprise-mobility-security/microsoft-intune">Microsoft Intune</a> and authorized by <a href="http://aka.ms/windowsautopilot">Windows Autopilot</a>.  DFCI can provide additional assurance by configuring and locking hardware security features before launching the OS (e.g. disabling microphones or radios).
+<p>The Device Firmware Configuration Interface (DFCI) brings new levels of security and usability to PC configuration management. It is a new feature of UEFI that enables secure programmatic configuration of hardware settings that are typically configured within a BIOS menu by a human.  High value configuration can be moved to UEFI BIOS where it is resilient against malware, rootkits, and non-persistent physical tampering. Whereas traditional UEFI security implementations required a physical touch, DFCI securely enables <strong>zero-touch</strong> remote configuration of these settings built upon <a href="https://docs.microsoft.com/en-us/intune/configuration/device-firmware-configuration-interface-windows">Microsoft Intune</a> and authorized by <a href="http://aka.ms/windowsautopilot">Windows Autopilot</a>.  DFCI can provide additional assurance by configuring and locking hardware security features before launching the OS (e.g. disabling microphones or radios).
 Note that for management of servers in a datacenter, DFCI does not presume to be the solution.  <a href="https://www.dmtf.org/standards/redfish">Redfish</a> may be a more suitable solution for the datacenter.</p>
 <h3 id="why-zero-touch">Why Zero Touch<a class="headerlink" href="#why-zero-touch" title="Permanent link">&para;</a></h3>
 <p>Traditional UEFI management solutions were either unsecure, allowing malware to control them, or unscalable, requiring a physical touch by IT or OEM for authentication.  DFCI is zero touch, leveraging the existing Windows Autopilot device registration for DFCI authorization.  </p>
 <h3 id="why-should-i-configure-my-uefi-bios">Why should I configure my UEFI BIOS<a class="headerlink" href="#why-should-i-configure-my-uefi-bios" title="Permanent link">&para;</a></h3>
-<p>PC configuration is typically performed via Active Directory Group Policy, System Center Configuration Manager (SCCM), or Modern Device Management (MDM) such as Microsoft Intune.  All of these solutions store their managed configuration in the OS disk partition.  Unfortunately, this configuration can be bypassed by the PCs default ability to boot other operating system instances via external media (e.g. USB), network (e.g. PXE), &amp; alternate disk partitions, or by simply re-installing the OS.  Device Firmware Configuration Interface (DFCI) places high value configuration settings into PCs UEFI BIOS.  UEFI's DFCI storage is both visible to all OS instances, persistent, surviving OS reinstalls and disk reformats, and tamper-resistant, defending itself from malware and rootkits.  UEFI executes before the OS and can disallow booting of specified devices, for example USB or network PXE.  Further, DFCI can leverage hardware security to enforce some policies with higher assurance than typical OS configuration.  For example, it could disable power to cameras or radios in a way that they could not be re-enabled by an OS, malware, or rootkit.</p>
+<p>PC configuration is typically performed via Active Directory Group Policy, System Center Configuration Manager (SCCM), or Modern Device Management (MDM) such as <a href="https://www.microsoft.com/en-us/microsoft-365/enterprise-mobility-security/microsoft-intune">Microsoft Intune</a>.  All of these solutions store their managed configuration in the OS disk partition.  Unfortunately, this configuration can be bypassed by the PCs default ability to boot other operating system instances via external media (e.g. USB), network (e.g. PXE), &amp; alternate disk partitions, or by simply re-installing the OS.  Device Firmware Configuration Interface (DFCI) places high value configuration settings into PCs UEFI BIOS.  UEFI's DFCI storage is both visible to all OS instances, persistent, surviving OS reinstalls and disk reformats, and tamper-resistant, defending itself from malware and rootkits.  UEFI executes before the OS and can disallow booting of specified devices, for example USB or network PXE.  Further, DFCI can leverage hardware security to enforce some policies with higher assurance than typical OS configuration.  For example, it could disable power to cameras or radios in a way that they could not be re-enabled by an OS, malware, or rootkit.</p>
 <h3 id="popular-usages">Popular Usages<a class="headerlink" href="#popular-usages" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Disabling cameras, microphones, and/or radios in manufacturing and other secure facilities</li>

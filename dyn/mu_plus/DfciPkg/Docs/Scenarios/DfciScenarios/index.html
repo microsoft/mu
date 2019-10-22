@@ -1968,6 +1968,19 @@
     Microsoft DFCI Scenario Requirements
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#oems-that-support-dfci" class="md-nav__link">
+    OEMs that support DFCI
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2256,6 +2269,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../../../MsCorePkg/DebugFileLoggerII/" title="Debug File Logger II" class="md-nav__link">
+      Debug File Logger II
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../../../MsCorePkg/MuCryptoDxe/Readme/" title="Mu Crypto Dxe" class="md-nav__link">
       Mu Crypto Dxe
     </a>
@@ -2281,13 +2306,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-6-3-1-7" type="checkbox" id="nav-9-6-3-1-7">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-6-3-1-8" type="checkbox" id="nav-9-6-3-1-8">
     
-    <label class="md-nav__link" for="nav-9-6-3-1-7">
+    <label class="md-nav__link" for="nav-9-6-3-1-8">
       Unit Tests
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-      <label class="md-nav__title" for="nav-9-6-3-1-7">
+      <label class="md-nav__title" for="nav-9-6-3-1-8">
         Unit Tests
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -3358,6 +3383,19 @@
     Microsoft DFCI Scenario Requirements
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#oems-that-support-dfci" class="md-nav__link">
+    OEMs that support DFCI
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -3470,13 +3508,18 @@
                 
                 <h1 id="microsoft-dfci-scenarios">Microsoft DFCI Scenarios<a class="headerlink" href="#microsoft-dfci-scenarios" title="Permanent link">&para;</a></h1>
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
-<p>Microsoft leverages DFCI to provide automated UEFI settings management via Microsoft Intune.  Intune provides the IT manager with abstracted, easy button settings that are generally applicable to all platforms, for example, disable booting USB devices or disable all cameras.  IT managers depend on the UEFI implementation to protect and enforce DFCI configurations such that they cannot be bypassed by an operating system or casual physical attacker.  <a href="https://www.microsoft.com/en-us/microsoft-365/windows/windows-autopilot">Windows Autopilot</a> provides the trusted device ownership database, mapping devices to Azure Active Directory Tenants.  The "Microsoft Device Management Trust" certificate must be included in UEFI to act as the root of trust for automated UEFI management.  The Autopilot Service (APS) exposes a cloud endpoint to enable recovery from a BIOS menu in case the device can no longer boot due to misconfiguration or disk corruption.</p>
+<p>Microsoft <a href="https://docs.microsoft.com/en-us/intune/configuration/device-firmware-configuration-interface-windows">leverages DFCI to provide automated UEFI settings management via Microsoft Intune</a>.  Intune provides the IT manager with abstracted, easy button settings that are generally applicable to all platforms, for example, disable booting USB devices or disable all cameras.  IT managers depend on the UEFI implementation to protect and enforce DFCI configurations such that they cannot be bypassed by an operating system or casual physical attacker.  <a href="https://www.microsoft.com/en-us/microsoft-365/windows/windows-autopilot">Windows Autopilot</a> provides the trusted device ownership database, mapping devices to Azure Active Directory Tenants.  The "Microsoft Device Management Trust" certificate must be included in UEFI to act as the root of trust for automated UEFI management.  The Autopilot Service (APS) exposes a cloud endpoint to enable recovery from a BIOS menu in case the device can no longer boot due to misconfiguration or disk corruption.</p>
 <h2 id="microsoft-dfci-scenario-requirements">Microsoft DFCI Scenario Requirements<a class="headerlink" href="#microsoft-dfci-scenario-requirements" title="Permanent link">&para;</a></h2>
 <ul>
 <li>PCs must include the DFCI feature in their UEFI</li>
 <li>PCs must be registered to the <a href="https://www.microsoft.com/en-us/microsoft-365/windows/windows-autopilot">Windows Autopilot</a> service by an OEM or <a href="https://docs.microsoft.com/en-us/windows/client-management/mdm/uefi-csp">Microsoft Cloud Solution Provider</a></li>
 <li>PCs must be managed with <a href="https://www.microsoft.com/en-us/microsoft-365/enterprise-mobility-security/microsoft-intune">Microsoft Intune</a></li>
 </ul>
+<h3 id="oems-that-support-dfci">OEMs that support DFCI<a class="headerlink" href="#oems-that-support-dfci" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Microsoft Surface</li>
+</ul>
+<p>More are in the works...</p>
 <h2 id="lifecycle">Lifecycle<a class="headerlink" href="#lifecycle" title="Permanent link">&para;</a></h2>
 <p>The DFCI lifecycle can be viewed as UEFI integration, device registration, profile creation, enrollment, management, retirement, &amp; recovery.</p>
 <p><img alt="DFCI Scenarios" src="../collateral/DFCI-Management_mu.png" /></p>
@@ -3498,7 +3541,7 @@
 </tr>
 <tr>
 <td>Profile Creation</td>
-<td>An IT administrator leverages Intune to create DFCI Profiles for their devices.</td>
+<td>An IT administrator <a href="https://docs.microsoft.com/en-us/intune/configuration/device-firmware-configuration-interface-windows">leverages Intune to create DFCI Profiles</a> for their devices.</td>
 </tr>
 <tr>
 <td>Enrollment</td>
