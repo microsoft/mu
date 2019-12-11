@@ -111,43 +111,43 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc></loc>
-     
+     <loc>https://microsoft.github.io/mu/dyn/mu_basecore/pytool/Readme/</loc>
+     <lastmod>2019-12-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc></loc>
-     
+     <loc>https://microsoft.github.io/mu/dyn/mu_basecore/pytool/Plugin/CharEncodingCheck/Readme/</loc>
+     <lastmod>2019-12-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc></loc>
-     
+     <loc>https://microsoft.github.io/mu/dyn/mu_basecore/pytool/Plugin/CompilerPlugin/Readme/</loc>
+     <lastmod>2019-12-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc></loc>
-     
+     <loc>https://microsoft.github.io/mu/dyn/mu_basecore/pytool/Plugin/DependencyCheck/Readme/</loc>
+     <lastmod>2019-12-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc></loc>
-     
+     <loc>https://microsoft.github.io/mu/dyn/mu_basecore/pytool/Plugin/DscCompleteCheck/Readme/</loc>
+     <lastmod>2019-12-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc></loc>
-     
+     <loc>https://microsoft.github.io/mu/dyn/mu_basecore/pytool/Plugin/GuidCheck/Readme/</loc>
+     <lastmod>2019-12-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc></loc>
-     
+     <loc>https://microsoft.github.io/mu/dyn/mu_basecore/pytool/Plugin/LibraryClassCheck/Readme/</loc>
+     <lastmod>2019-12-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc></loc>
-     
+     <loc>https://microsoft.github.io/mu/dyn/mu_basecore/pytool/Plugin/SpellCheck/Readme/</loc>
+     <lastmod>2019-12-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
@@ -531,8 +531,8 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc></loc>
-     
+     <loc>https://microsoft.github.io/mu/dyn/mu_silicon_arm_tiano/pytool/Readme/</loc>
+     <lastmod>2019-12-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
@@ -546,8 +546,8 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc></loc>
-     
+     <loc>https://microsoft.github.io/mu/dyn/mu_silicon_intel_tiano/pytool/Readme/</loc>
+     <lastmod>2019-12-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
@@ -591,8 +591,8 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc></loc>
-     
+     <loc>https://microsoft.github.io/mu/dyn/mu_tiano_plus/pytool/Readme/</loc>
+     <lastmod>2019-12-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
