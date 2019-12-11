@@ -505,7 +505,7 @@ class DocBuild(object):
         root = NavTree()
         for a in self.MdFiles:
             string1 = a.replace(os.sep, "/")
-            string2 = string1.partition(".")[0]
+            string2 = string1.rpartition(".")[0] # remove the md extension
             # this is intentionally not os.sep
             root.AddToTree(string2, DocBuild.DYNFOLDER + "/" + string1)
         logging.debug(root)
