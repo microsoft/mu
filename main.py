@@ -10,4 +10,3 @@ def define_env(env):
     # function.  I have opened a bug https://github.com/fralau/mkdocs_macros_plugin/issues/16
     # and hopefully in the future this module can be removed.
     pass
-
