@@ -323,6 +323,16 @@ class DocBuild(object):
         if(os.path.isfile(self.YmlFilePathOut)):
             os.remove(self.YmlFilePathOut)
 
+    def _CleanChars(self, p: str) -> str:
+        '''mkdocs doesn't support all valid url chars so if they exist in the path they need to
+        be removed.  Once such example is the . char.  This is valid but not with mkdocs'''
+
+        # Bug filed here: https://github.com/mkdocs/mkdocs/issues/1924
+        d, e = os.path.splitext(p)  # split the path and extension so we can change path
+        d = d.replace(".", "")
+        d = d.replace(" ", "_")
+        return d + e
+
     ###########################################################################################
     # Process functions - Start
     ###########################################################################################
@@ -336,6 +346,7 @@ class DocBuild(object):
     def _ProcessMarkdownFile(self, apath):
         # Add relative path to list of md files
         rpath = os.path.relpath(apath, self.RootDirectory)
+        rpath = self._CleanChars(rpath)
         self.MdFiles.append(rpath)
         logging.debug("md file found: {0}".format(rpath))
 
@@ -356,6 +367,7 @@ class DocBuild(object):
     def _ProcessImageFile(self, apath):
         rpath = os.path.relpath(apath, self.RootDirectory)
         logging.debug("image file found: {0}".format(rpath))
+        rpath = self._CleanChars(rpath)
         # Copy to output dir
         s = apath
         d = os.path.join(self.OutputDirectory, rpath)
