@@ -2,9 +2,9 @@
 
 ![Greek Mu](img/project_mu.png)
 
-Project Mu is a modular adaptation of TianoCore's [edk2](https://github.com/tianocore/edk2) tuned for building modern devices using a scalable, maintainable, and reusable pattern.  Mu is built around the idea that shipping and **maintaining** a UEFI product is an ongoing collaboration between numerous partners.  For too long the industry has built products using a "forking" model combined with copy/paste/rename and with each new product the maintenance burden grows to such a level that updates are near impossible due to cost and risk.  
+Project Mu is a modular adaptation of TianoCore's [edk2](https://github.com/tianocore/edk2) tuned for building modern devices using a scalable, maintainable, and reusable pattern.  Mu is built around the idea that shipping and **maintaining** a UEFI product is an ongoing collaboration between numerous partners.  For too long, the industry has built products using a "forking" model combined with copy/paste/rename and with each new product, the maintenance burden grows to such a level that updates are near impossible due to cost and risk.  
 
-Project Mu also tries to address the complex business relationships and legal challenges facing partners today.  To build most products it often requires both closed-source, proprietary assets as well as open source and industry standard code.  The distributed build system and multi-repository design allow product teams to keep code separate and connected to their original source while respecting legal and business boundaries.  
+Project Mu also tries to address the complex business relationships and legal challenges facing partners today.  To build most products,  it often requires both closed-source, proprietary assets as well as open-source and industry-standard code.  The distributed build system and multi-repository design allow product teams to keep code separate and connected to their original source while respecting legal and business boundaries.  
 
 Project Mu originated from building modern Windows PCs but its patterns and design allow it to be scaled down or up for whatever the final product's intent.  IoT, Server, PC, or any other form factor should be able to leverage the content.  
 
@@ -18,7 +18,7 @@ Project Mu is an active project.  This is not a side project, mirror, clone, or 
 
 ### Promote, evangelize, and support an industry shift to a more collaborative environment so we all can build and maintain products with lower costs and higher quality
 
-Today's open source projects although extremely valuable are very resource intensive to interact with.  This friction leads to major industry players avoiding public interaction thus diminishing the overall community’s value.  The modern era of open source projects has incorporated new tools and procedures to lower this friction and it is our goal to leverage those tools.  GitHub provides issue tracking, Pull Requests, Gated builds, tracked/required web-based code reviews, and CI/CD (Continuous builds and testing).   It is our belief that by leveraging and extending this automation and workflow we can lower the friction and foster a safe place for all contributors to work.  
+Today's open source projects, although extremely valuable, are very resource-intensive to interact with.  This friction leads to major industry players avoiding public interaction, thus diminishing the overall community’s value.  The modern era of open source projects has incorporated new tools and procedures to lower this friction and it is our goal to leverage those tools.  GitHub provides issue tracking, Pull Requests, Gated builds, tracked/required web-based code reviews, and CI/CD (Continuous integration and delivery).   It is our belief that by leveraging and extending this automation and workflow, we can lower the friction and foster a safe place for all contributors to work.  
 
 ## Guiding Principles
 
@@ -35,7 +35,7 @@ Have a look around this site to see what is Project Mu.  Start by reviewing the 
 
 Skim the [FAQ](faq)
 
-## Road map
+## Roadmap
 
 After the first few months of Mu, our initial roadmap is largely complete. Any remaining items have been moved to the GitHub Issues and will continue to be tracked there. We hope to use GitHub Issues to track new roadmap items going forwards.
 
