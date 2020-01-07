@@ -36,7 +36,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.5.1">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
     
     
       
@@ -60,7 +60,7 @@
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
@@ -3817,7 +3817,7 @@
                 <h1 id="ms-whea-package">MS WHEA Package<a class="headerlink" href="#ms-whea-package" title="Permanent link">&para;</a></h1>
 <h2 id="about">About<a class="headerlink" href="#about" title="Permanent link">&para;</a></h2>
 <p>This package contains drivers and infrastructure for reporting errors and telemetry through the CPER (Common Platform Error Record) HwErrRecord interface, specifically targeting systems that also leverage WHEA (Windows Hardware Error Architecture).</p>
-<p>The MsWhea drivers provide the same functionality at different stages of UEFI by binding to the REPORT_STATUS_CODE interface. Together, they store hardware errors and corrected faults into non-volatile memory that is later picked up by Windows. In Windows, this can be emitted as telemetry which is then used to idenitfy errors and patterns for devices (as of time of writing any event besides EFI_GENERIC_ERROR_INFO will be sent).</p>
+<p>The MsWhea drivers provide the same functionality at different stages of UEFI by binding to the REPORT_STATUS_CODE interface. Together, they store hardware errors and corrected faults into non-volatile memory that is later picked up by Windows. In Windows, this can be emitted as telemetry which is then used to identify errors and patterns for devices (as of time of writing any event besides EFI_GENERIC_ERROR_INFO will be sent).</p>
 <p>Project MU has updated design which defines a specific section type under <code class="codehilite"><span class="err">gMuTelemetrySectionTypeGuid</span></code> to be used in CPER header for WHEA telemetry. All reported data will be formatted to this section. Please refer to <code class="codehilite"><span class="err">MuTelemetryCperSection.h</span></code> for field definitions.</p>
 <p>This package also contains optional solutions for persisting error records in the pre-memory space. In early boot stages, drivers need to emit events as critical in order for them to be logged.</p>
 <p>Detailed information about CPER can be found in Appendix N of the UEFI spec.</p>
@@ -3875,6 +3875,7 @@ There is also a feature flag that can inject reports on each boot during various
 SPDX-License-Identifier: BSD-2-Clause-Patent</p>
                 
                   
+                
                 
               
               
@@ -3953,7 +3954,7 @@ SPDX-License-Identifier: BSD-2-Clause-Patent</p>
       
     </div>
     
-      <script src="../../../../assets/javascripts/application.8e03edeb.js"></script>
+      <script src="../../../../assets/javascripts/application.808e90bb.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../../../.."}})</script>
       

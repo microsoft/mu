@@ -36,7 +36,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.5.1">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
     
     
       
@@ -60,7 +60,7 @@
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
@@ -3913,7 +3913,7 @@ In addition, the SetupDUT command will update the firewall for the robot framewo
 | DFCI_InTunePermissions | Applies multiple sets of permissions to an InTune Enrolled system. |
 | DFCI_InTuneEnroll | Applies a InTune Owner, an InTune Manager, and the appropriate permissions and settings. |
 | DFCI_InTuneRollCerts | Updates the Owner and Manager certificates. This test can be run multiple times as it just swaps between two sets of certificates. |
-| DFCI_InTuneSettings | Applies multipl sets of settings to a InTune Enrolled system. |
+| DFCI_InTuneSettings | Applies multiple sets of settings to a InTune Enrolled system. |
 | DFCI_InTuneUnenroll | Applies an InTune Owner unenroll package, that removes both the InTune Owner and the InTune Manager, resets the Permission Database, and restores settings marked No UI to their default state. |</p>
 <h2 id="note-on-the-firmware-for-testing-dfci">Note on the firmware for testing DFCI<a class="headerlink" href="#note-on-the-firmware-for-testing-dfci" title="Permanent link">&para;</a></h2>
 <p>Most of DFCI functionality can be tested without regard of the Zero Touch certificate.
@@ -3936,7 +3936,11 @@ To test functionality of the Zero Touch feature, the firmware needs to be built 
 <h2 id="running-the-first-test-case">Running The First Test Case<a class="headerlink" href="#running-the-first-test-case" title="Permanent link">&para;</a></h2>
 <p>Run the first test as shown replacing 11.11.11.211 with the actual IP address of the DUT.
 You should expect to see similar output with all four tests passing.</p>
-<div class="codehilite"><pre><span></span><span class="n">DfciTests</span><span class="o">&gt;</span><span class="n">RunDfciTest</span><span class="p">.</span><span class="n">bat</span> <span class="n">TestCases</span><span class="err">\</span><span class="n">DFCI_InitialState</span> <span class="mi">11</span><span class="p">.</span><span class="mi">11</span><span class="p">.</span><span class="mi">11</span><span class="p">.</span><span class="mi">211</span>
+<!-- spellchecker: disable -->
+
+<!-- This omits the below code block from cspell checking -->
+
+<p><div class="codehilite"><pre><span></span><span class="n">DfciTests</span><span class="o">&gt;</span><span class="n">RunDfciTest</span><span class="p">.</span><span class="n">bat</span> <span class="n">TestCases</span><span class="err">\</span><span class="n">DFCI_InitialState</span> <span class="mi">11</span><span class="p">.</span><span class="mi">11</span><span class="p">.</span><span class="mi">11</span><span class="p">.</span><span class="mi">211</span>
 
 <span class="n">DfciTests</span><span class="o">&gt;</span><span class="n">python</span><span class="p">.</span><span class="n">exe</span> <span class="o">-</span><span class="n">m</span> <span class="n">robot</span><span class="p">.</span><span class="n">run</span> <span class="o">-</span><span class="n">L</span> <span class="n">TRACE</span> <span class="o">-</span><span class="n">x</span> <span class="n">DFCI_InitialState</span><span class="p">.</span><span class="n">xml</span> <span class="o">-</span><span class="n">A</span> <span class="n">Platforms</span><span class="err">\</span><span class="n">SimpleFTDI</span><span class="err">\</span><span class="n">Args</span><span class="p">.</span><span class="n">txt</span> <span class="o">-</span><span class="n">v</span> <span class="n">IP_OF_DUT</span><span class="p">:</span><span class="mi">11</span><span class="p">.</span><span class="mi">11</span><span class="p">.</span><span class="mi">11</span><span class="p">.</span><span class="mi">211</span> <span class="o">-</span><span class="n">v</span> <span class="n">TEST_OUTPUT_BASE</span><span class="p">:</span><span class="k">C</span><span class="p">:</span><span class="err">\</span><span class="n">TestLogs</span><span class="err">\</span><span class="n">robot</span><span class="err">\</span><span class="n">DFCI_InitialState</span><span class="err">\</span><span class="n">logs_20191113_121224</span> <span class="o">-</span><span class="n">d</span> <span class="k">C</span><span class="p">:</span><span class="err">\</span><span class="n">TestLogs</span><span class="err">\</span><span class="n">robot</span><span class="err">\</span><span class="n">DFCI_InitialState</span><span class="err">\</span><span class="n">logs_20191113_121224</span> <span class="n">TestCases</span><span class="err">\</span><span class="n">DFCI_InitialState</span><span class="err">\</span><span class="n">run</span><span class="p">.</span><span class="n">robot</span>
 <span class="o">==============================================================================</span>
@@ -3963,7 +3967,7 @@ You should expect to see similar output with all four tests passing.</p>
 <span class="n">Log</span><span class="p">:</span>     <span class="k">C</span><span class="p">:</span><span class="err">\</span><span class="n">TestLogs</span><span class="err">\</span><span class="n">robot</span><span class="err">\</span><span class="n">DFCI_InitialState</span><span class="err">\</span><span class="n">logs_20191113_121224</span><span class="err">\</span><span class="n">log</span><span class="p">.</span><span class="n">html</span>
 <span class="n">Report</span><span class="p">:</span>  <span class="k">C</span><span class="p">:</span><span class="err">\</span><span class="n">TestLogs</span><span class="err">\</span><span class="n">robot</span><span class="err">\</span><span class="n">DFCI_InitialState</span><span class="err">\</span><span class="n">logs_20191113_121224</span><span class="err">\</span><span class="n">report</span><span class="p">.</span><span class="n">html</span>
 </pre></div>
-
+<!-- spellchecker: enable --></p>
 <h2 id="standard-testing">Standard Testing<a class="headerlink" href="#standard-testing" title="Permanent link">&para;</a></h2>
 <p>Starting with a DUT that is not enrolled in DFCI, run the tests in the following order:</p>
 <ol>
@@ -3982,7 +3986,7 @@ You should expect to see similar output with all four tests passing.</p>
 <li>DFCI_CertChainingTest</li>
 </ul>
 <h2 id="recovering-from-errors">Recovering from errors<a class="headerlink" href="#recovering-from-errors" title="Permanent link">&para;</a></h2>
-<p>Code issues an present issues with DFCI that may require deleting the Idenity and Permission data bases. Using privileged access of a DUT that unlocks the varstore, you can delete the two master variables of DFCI. These variable are:</p>
+<p>Code issues an present issues with DFCI that may require deleting the Identity and Permission data bases. Using privileged access of a DUT that unlocks the varstore, you can delete the two master variables of DFCI. These variable are:</p>
 <ol>
 <li>_SPP</li>
 <li>_IPCVN</li>
@@ -3990,7 +3994,7 @@ You should expect to see similar output with all four tests passing.</p>
 <h2 id="usb-refresh-test">USB Refresh Test<a class="headerlink" href="#usb-refresh-test" title="Permanent link">&para;</a></h2>
 <p>The test cases DFCI_InTuneEnroll and DFCI_InTuneUnenroll have a GenUsb.bat file.
 The GenUsb.bat file will generate a .dfi file that UEFI management menu can read.</p>
-<div class="codehilite"><pre><span></span><span class="err">GenUsb MFGNAME PRODUCTNAME SERIALNUMBER</span>
+<div class="codehilite"><pre><span></span><span class="err">GenUsb MFG_NAME PRODUCT_NAME SERIAL_NUMBER</span>
 </pre></div>
 
 <p>If there is a space or other special characters, add double quotes as in:</p>
@@ -3998,6 +4002,7 @@ The GenUsb.bat file will generate a .dfi file that UEFI management menu can read
 </pre></div>
                 
                   
+                
                 
               
               
@@ -4076,7 +4081,7 @@ The GenUsb.bat file will generate a .dfi file that UEFI management menu can read
       
     </div>
     
-      <script src="../../../../../../assets/javascripts/application.8e03edeb.js"></script>
+      <script src="../../../../../../assets/javascripts/application.808e90bb.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../../../../../.."}})</script>
       

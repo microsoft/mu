@@ -36,7 +36,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.5.1">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
     
     
       
@@ -60,7 +60,7 @@
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
@@ -3969,28 +3969,28 @@
                 <h1 id="paging-audit">Paging Audit<a class="headerlink" href="#paging-audit" title="Permanent link">&para;</a></h1>
 <h2 id="smmpagingaudit">SmmPagingAudit<a class="headerlink" href="#smmpagingaudit" title="Permanent link">&para;</a></h2>
 <h3 id="code-basics">Code Basics<a class="headerlink" href="#code-basics" title="Permanent link">&para;</a></h3>
-<p>SMM is a privileged mode of the ia32/x64 cpu architecture.  In this environment nearly all system state can 
-be inspected including that of the operating system, kernel, and hypervisor.  Due to it's 
-capabilities SMM has become an area of interest for those searching to exploit the system. 
+<p>SMM is a privileged mode of the ia32/x64 cpu architecture.  In this environment nearly all system state can
+be inspected including that of the operating system, kernel, and hypervisor.  Due to it's
+capabilities SMM has become an area of interest for those searching to exploit the system.
 To help minimize the interest and impact of an exploit in SMM the SMI handlers should operate
 in a least privileged model.  To do this standard paging can be leveraged to limit the SMI
 handlers access.  Tianocore has a feature to enable paging within SMM and this tool helps confirm
-the configuration being used.  This tool requires three parts to get a complete view.  </p>
+the configuration being used.  This tool requires three parts to get a complete view.</p>
 <h3 id="smm">SMM<a class="headerlink" href="#smm" title="Permanent link">&para;</a></h3>
 <p>The SMM driver must be included in your build and dispatched to SMM before the End Of Dxe.  It is
 recommended that this driver should only be used on debug builds as it reports the entire
-SMM memory environment to the caller.  The shell app will communicate to the SMM driver and 
+SMM memory environment to the caller.  The shell app will communicate to the SMM driver and
 request critical memory information including IDT, GDT, page tables, and loaded images.</p>
 <h3 id="smm-version-app">SMM Version App<a class="headerlink" href="#smm-version-app" title="Permanent link">&para;</a></h3>
 <p>The UEFI shell application collects system information from the DXE environment and then
-communicates to the SMM driver/handler to collect necessary info from SMM.  It then 
+communicates to the SMM driver/handler to collect necessary info from SMM.  It then
 writes this data to files and then that content is used by the windows scripts.</p>
 <h2 id="dxepagingaudit">DxePagingAudit<a class="headerlink" href="#dxepagingaudit" title="Permanent link">&para;</a></h2>
 <h3 id="code-basics_1">Code Basics<a class="headerlink" href="#code-basics_1" title="Permanent link">&para;</a></h3>
-<p>The Dxe version of paging audit drvier/shell app intends to inspect all 4 levels of page
+<p>The Dxe version of paging audit driver/shell app intends to inspect all 4 levels of page
 tables and their corresponding Read/Write/Executable permissions. The driver/shell app will
-collect necessary memrory information from platform enviroment, then iterate through each
-page entries and log them on to avaiable SimpleFileSystem. The collected *.dat files can be
+collect necessary memory information from platform environment, then iterate through each
+page entries and log them on to available SimpleFileSystem. The collected *.dat files can be
 parsed using Windows\PagingReportGenerator.py.</p>
 <h3 id="dxe-driver">DXE Driver<a class="headerlink" href="#dxe-driver" title="Permanent link">&para;</a></h3>
 <p>The DXE Driver registers an event to be notified on Exit Boot Services (to change this,
@@ -4002,32 +4002,32 @@ from DXE when invoked from Shell environment.</p>
 <h2 id="windows">Windows<a class="headerlink" href="#windows" title="Permanent link">&para;</a></h2>
 <p>The Windows script will look at the *.DAT files, parse their content, check for errors
 and then insert the formatted data into the Html report file.  This report file is then double-clickable
-by the end user/developer to review the posture of the SMM environment.  The Results tab applies 
-our suggested rules for SMM to show if the environment passes or fails.<br />
-If it fails the filters on the data tab can be configured to show where the problem exists.  </p>
+by the end user/developer to review the posture of the SMM environment.  The Results tab applies
+our suggested rules for SMM to show if the environment passes or fails.
+If it fails the filters on the data tab can be configured to show where the problem exists.</p>
 <h2 id="usage-enabling-on-edk2-based-system">Usage / Enabling on EDK2 based system<a class="headerlink" href="#usage-enabling-on-edk2-based-system" title="Permanent link">&para;</a></h2>
 <p>First, for the SMM driver and app you need to add them to your DSC file for your project so they get compiled.</p>
 <h3 id="smm-paging-audit">SMM Paging Audit<a class="headerlink" href="#smm-paging-audit" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="err">[Components.X64]  </span>
-<span class="err">  UefiTestingPkg\AuditTests\PagingAudit\SmmPagingAudit\Smm\SmmPagingAuditSmm.inf  </span>
-<span class="err">  UefiTestingPkg\AuditTests\PagingAudit\SmmPagingAudit\App\SmmPagingAuditApp.inf</span>
+<div class="codehilite"><pre><span></span><span class="k">[Components.X64]</span>
+  <span class="na">UefiTestingPkg\AuditTests\PagingAudit\SmmPagingAudit\Smm\SmmPagingAuditSmm.inf</span>
+  <span class="na">UefiTestingPkg\AuditTests\PagingAudit\SmmPagingAudit\App\SmmPagingAuditApp.inf</span>
 </pre></div>
 
-<p>Next, you must add the SMM driver to a firmware volume in your FDF that can dispatch SMM modules.  <br />
+<p>Next, you must add the SMM driver to a firmware volume in your FDF that can dispatch SMM modules.
 <div class="codehilite"><pre><span></span><span class="err">INF UefiTestingPkg\AuditTests\PagingAudit\SmmPagingAudit\Smm\SmmPagingAuditSmm.inf</span>
 </pre></div></p>
 <p>Third, after compiling your new firmware you must:
-1. flash that image on the system.<br />
+1. flash that image on the system.
 2. Copy the SmmPagingAuditApp.efi to a USB key</p>
-<p>Then, boot your system running the new firmware to the shell and run the app. The tool will create a set of *.dat files on the same USB key. </p>
-<p>On a Windows PC, run the Python script on the data found on your USB key.  </p>
-<p>Finally, double-click the HTML output file and check your results.   </p>
+<p>Then, boot your system running the new firmware to the shell and run the app. The tool will create a set of *.dat files on the same USB key.</p>
+<p>On a Windows PC, run the Python script on the data found on your USB key.</p>
+<p>Finally, double-click the HTML output file and check your results.</p>
 <h3 id="dxe-paging-audit">DXE Paging Audit<a class="headerlink" href="#dxe-paging-audit" title="Permanent link">&para;</a></h3>
 <h4 id="dxepagingauditdxe">DxePagingAuditDxe<a class="headerlink" href="#dxepagingauditdxe" title="Permanent link">&para;</a></h4>
 <ol>
 <li>Add the following entry to platform dsc file;
-<div class="codehilite"><pre><span></span><span class="err">[Components.X64] </span>
-<span class="err">    UefiTestingPkg\AuditTests\PagingAudit\DxePagingAudit\Dxe\DxePagingAuditDxe.inf</span>
+<div class="codehilite"><pre><span></span><span class="k">[Components.X64]</span>
+    <span class="na">UefiTestingPkg\AuditTests\PagingAudit\DxePagingAudit\Dxe\DxePagingAuditDxe.inf</span>
 </pre></div></li>
 <li>Add the driver to a firmware volume in your FDF that can dispatch it;
 <div class="codehilite"><pre><span></span><span class="err">INF UefiTestingPkg\AuditTests\PagingAudit\DxePagingAudit\Dxe\DxePagingAuditDxe.inf</span>
@@ -4047,8 +4047,8 @@ USB key. Please use the following command for detailed script instruction:
 <h4 id="dxepagingauditapp">DxePagingAuditApp<a class="headerlink" href="#dxepagingauditapp" title="Permanent link">&para;</a></h4>
 <ol>
 <li>Add the following entry to platform dsc file;
-<div class="codehilite"><pre><span></span><span class="err">[Components.X64] </span>
-<span class="err">    UefiTestingPkg\AuditTests\PagingAudit\DxePagingAudit\App\DxePagingAuditApp.inf</span>
+<div class="codehilite"><pre><span></span><span class="k">[Components.X64]</span>
+    <span class="na">UefiTestingPkg\AuditTests\PagingAudit\DxePagingAudit\App\DxePagingAuditApp.inf</span>
 </pre></div></li>
 <li>Compile the newly added application and copy DxePagingAuditApp.efi to a USB key;</li>
 <li>Boot your system to the shell with the USB plugged in. If the USB disk is FS0:\, the files
@@ -4064,6 +4064,7 @@ should be in FS1:\. Copy them to the flash drive:
 SPDX-License-Identifier: BSD-2-Clause-Patent</p>
                 
                   
+                
                 
               
               
@@ -4142,7 +4143,7 @@ SPDX-License-Identifier: BSD-2-Clause-Patent</p>
       
     </div>
     
-      <script src="../../../../../assets/javascripts/application.8e03edeb.js"></script>
+      <script src="../../../../../assets/javascripts/application.808e90bb.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../../../../.."}})</script>
       

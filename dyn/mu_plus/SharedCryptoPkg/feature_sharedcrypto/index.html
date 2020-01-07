@@ -36,7 +36,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.5.1">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
     
     
       
@@ -60,7 +60,7 @@
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
@@ -3937,7 +3937,7 @@ The year, the month of the EDK II release, the revision number, and the build nu
 An example of this would be <em>2019.03.02.01</em>, which would translate to EDK II 1903 release, the second revision and the first build.
 This means that there were two code changes within 1903 (either in BaseCryptLib or OpenSSL).
 Release notes will be provided on the NuGet package page and on this repo.
-Build numbers are reved whenever there needs to be a recompiled binary due to a mistake on our part or a build flag is tweaked.</p>
+Build numbers are revved whenever there needs to be a recompiled binary due to a mistake on our part or a build flag is tweaked.</p>
 <h2 id="flavors">Flavors<a class="headerlink" href="#flavors" title="Permanent link">&para;</a></h2>
 <p>Additionally there are a few different "flavors" of SharedCrypto.
 The three main flavors are ShaOnly, Mu, and Full.
@@ -3950,8 +3950,8 @@ When a function is called that a flavor doesn't have, the ProtocolFunctionNotFou
 <p>For those wishing to verify for themselves that the packaged EFI's in the Nuget Feed match the code in this package can compile the Driver themselves by sing the SharedCryptoDriver.dsc or SharedCryptoSettings.py. SharedCryptoSettings is the same exact script that we run to update the package in Nuget.</p>
 <h2 id="modifying">Modifying<a class="headerlink" href="#modifying" title="Permanent link">&para;</a></h2>
 <p>If you wish to swap the underlying Crypto library, replace the BaseCryptLib dependency in the DriverDSC with another version of BaseCryptLib that utilizes another library but conforms to the same interface.</p>
-<p>If you wish to use a different flavor or make a new flavor, create two new INF's. One for the Binary compilation (in the /Driver folder) and one for the external package that is consumed by the platform (in the /Package folder). By examining existing INF's, it should be fairly trival to create new ones.</p>
-<p>When making a new flavor please follow the convetion of SharedCryptoPkg{Phase}{Flavor}.{Target}.inf with Phase being DXE, SMM, or PEI. Target should be DEBUG or RELEASE.</p>
+<p>If you wish to use a different flavor or make a new flavor, create two new INF's. One for the Binary compilation (in the /Driver folder) and one for the external package that is consumed by the platform (in the /Package folder). By examining existing INF's, it should be fairly trivial to create new ones.</p>
+<p>When making a new flavor please follow the convention of SharedCryptoPkg{Phase}{Flavor}.{Target}.inf with Phase being DXE, SMM, or PEI. Target should be DEBUG or RELEASE.</p>
 <h2 id="using-different-pre-built-efis">Using Different Pre-built EFI's<a class="headerlink" href="#using-different-pre-built-efis" title="Permanent link">&para;</a></h2>
 <p>If you wish to use your own PreBuild EFI's, they can be placed in the /Package folder and have INF's point to them.
 Or the INF can be overridden fairly easily.</p>
@@ -3962,7 +3962,7 @@ One for each arch (X86, AARCH64, ARM, X64) and for each phase (DXE, PEI, SMM) an
 The nuget system should take care of downloading the correct version for your project.</p>
 <p>To build, run SharedNetworkSettings.py. This will compile the correct EFI's and copy the needed files such as the license and markdown.
 In order to build, you'll need to have a few repos cloned into your tree, which is most easily accomplished by running SharedNetworkSettings.py --SETUP and SharedNetworkSettings.py --UPDATE, which will clone the correct repos automatically for you.
-Under the hood SharedNetworkSettings is invoking stuart_update, stuart_ci_setup, and BinaryDriveryBuilder as needed.</p>
+Under the hood SharedNetworkSettings is invoking stuart_update, stuart_ci_setup, and BinaryDriverBuilder as needed.</p>
 <p>This should be a one-time step to setup the tree. SharedNetworkSettings supports all the same options that a regular platformbuilder does, such as --update and --skipbuild. If you wish to publish to Nuget, provide an API key by including it on the command line. <em>SharedNetworkSettings.py --api-key=XXXXXX</em></p>
 <p>The output will go to the Build directory under .SharedCrypto_Nuget</p>
 <h2 id="supported-architectures">Supported Architectures<a class="headerlink" href="#supported-architectures" title="Permanent link">&para;</a></h2>
@@ -3984,7 +3984,7 @@ Under the hood SharedNetworkSettings is invoking stuart_update, stuart_ci_setup,
     <span class="na">...</span>
 </pre></div>
 
-<p>Unfortunatly, due to the way that the EDK build system works, you'll also need to include the package in your component section. Make sure this matches whatever you put in your FDF.
+<p>Unfortunately, due to the way that the EDK build system works, you'll also need to include the package in your component section. Make sure this matches whatever you put in your FDF.
 You'll also need to include a macro for the current TARGET.</p>
 <div class="codehilite"><pre><span></span><span class="k">[Components.IA32]</span>
     <span class="na">SharedCryptoPkg/Package/SharedCryptoPkgPeiShaOnly.$(TARGET).inf</span>
@@ -4010,7 +4010,7 @@ You'll also need to include a macro for the current TARGET.</p>
 </pre></div>
 
 <h2 id="release-process">Release Process<a class="headerlink" href="#release-process" title="Permanent link">&para;</a></h2>
-<p>The decision to release a new Shared Crypto shold not be taken lightly. When preparing to release, please follow this checklist.</p>
+<p>The decision to release a new Shared Crypto should not be taken lightly. When preparing to release, please follow this checklist.</p>
 <ol>
 <li>Delete Build folder in the root of your tree</li>
 <li>Run the build</li>
@@ -4039,6 +4039,7 @@ Right now, the new invokable method of doing this makes it fairly easy to do mul
 <p>Have a question for Shared Crypto? Feel free to post feedback here: <a href="https://github.com/microsoft/mu/issues">https://github.com/microsoft/mu/issues</a></p>
                 
                   
+                
                 
               
               
@@ -4117,7 +4118,7 @@ Right now, the new invokable method of doing this makes it fairly easy to do mul
       
     </div>
     
-      <script src="../../../../assets/javascripts/application.8e03edeb.js"></script>
+      <script src="../../../../assets/javascripts/application.808e90bb.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../../../.."}})</script>
       

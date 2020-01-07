@@ -36,7 +36,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.5.1">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
     
     
       
@@ -60,7 +60,7 @@
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
@@ -3754,21 +3754,22 @@
 <h2 id="about">About<a class="headerlink" href="#about" title="Permanent link">&para;</a></h2>
 <p>These libraries implement a method to disable the network stack unless there is a reason to use the network.  Not starting the network improves boot performance and causes fewer issues during manufacturing.</p>
 <h2 id="how-to-use-these-libraries">How to use these libraries<a class="headerlink" href="#how-to-use-these-libraries" title="Permanent link">&para;</a></h2>
-<p>Add the NetworkDelayLib as a NULL library reference.  All this library does is introduce a [Depex] on a NetworkDelay protocol.  </p>
+<p>Add the NetworkDelayLib as a NULL library reference.  All this library does is introduce a [Depex] on a NetworkDelay protocol.</p>
 <div class="codehilite"><pre><span></span><span class="err">  MdeModulePkg/Universal/Network/SnpDxe/SnpDxe.inf {</span>
 <span class="err">    &lt;LibraryClasses&gt;</span>
 <span class="err">      NULL|PcBdsPkg/Library/MsNetworkDelayLib/MsNetworkDelayLib.inf</span>
 <span class="err">  }</span>
 </pre></div>
 
-<p>The NetworkDependencylib implements a StartNetwork() interface that will publish the NetworkDelay protocol.  </p>
-<p>The future goal of this functionality is to have the EFI_BOOT_MANAGER_POLICY.ConnectDeviceClass() function be overriden and insert a call to DeviceDependencyLib.StartNetwork() when a request is made to start the network class.</p>
+<p>The NetworkDependencyLib implements a StartNetwork() interface that will publish the NetworkDelay protocol.</p>
+<p>The future goal of this functionality is to have the EFI_BOOT_MANAGER_POLICY.ConnectDeviceClass() function be overridden and insert a call to DeviceDependencyLib.StartNetwork() when a request is made to start the network class.</p>
 <p>You nay see other references to NetworkDependencyLib as the conversion to using EFI_BOOT_MANAGER_POLICY.ConnectDeviceClass() is not complete.</p>
 <h2 id="copyright">Copyright<a class="headerlink" href="#copyright" title="Permanent link">&para;</a></h2>
 <p>Copyright (C) Microsoft Corporation. All rights reserved.
 SPDX-License-Identifier: BSD-2-Clause-Patent</p>
                 
                   
+                
                 
               
               
@@ -3847,7 +3848,7 @@ SPDX-License-Identifier: BSD-2-Clause-Patent</p>
       
     </div>
     
-      <script src="../../../../../../assets/javascripts/application.8e03edeb.js"></script>
+      <script src="../../../../../../assets/javascripts/application.808e90bb.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../../../../../.."}})</script>
       

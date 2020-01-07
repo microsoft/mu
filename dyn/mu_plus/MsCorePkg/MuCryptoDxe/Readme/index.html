@@ -36,7 +36,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.5.1">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
     
     
       
@@ -60,7 +60,7 @@
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
@@ -3784,7 +3784,7 @@ SPDX-License-Identifier: BSD-2-Clause-Patent</p>
 
 <h2 id="_mu_pkcs7_protocol">_MU_PKCS7_PROTOCOL<a class="headerlink" href="#_mu_pkcs7_protocol" title="Permanent link">&para;</a></h2>
 <h3 id="verify">Verify<a class="headerlink" href="#verify" title="Permanent link">&para;</a></h3>
-<p>Verifies the validility of a PKCS#7 signed data as described in "PKCS #7: Cryptographic Message Syntax Standard". The input signed data could be wrapped in a ContentInfo structure.</p>
+<p>Verifies the validity of a PKCS#7 signed data as described in "PKCS #7: Cryptographic Message Syntax Standard". The input signed data could be wrapped in a ContentInfo structure.</p>
 <p>If P7Data, TrustedCert or InData is NULL, then return EFI_INVALID_PARAMETER.
 If P7Length, CertLength or DataLength overflow, then return EFI_INVALID_PARAMETER.
 If this interface is not supported, then return EFI_UNSUPPORTED.</p>
@@ -3795,7 +3795,7 @@ If this interface is not supported, then return EFI_UNSUPPORTED.</p>
 
 
 <p><strong>Inputs:</strong></p>
-<div class="codehilite"><pre><span></span><span class="err">IN  CONST MU_PKCS7_PROTOCOL       </span>
+<div class="codehilite"><pre><span></span><span class="err">IN  CONST MU_PKCS7_PROTOCOL</span>
 <span class="err">IN  CONST UINT8                   *P7Data,</span>
 <span class="err">IN  UINTN                          P7DataLength,</span>
 <span class="err">IN  CONST UINT8                   *TrustedCert,</span>
@@ -3816,7 +3816,7 @@ If this interface is not supported, then return EFI_UNSUPPORTED.</p>
 
 
 <p><strong>Inputs:</strong></p>
-<div class="codehilite"><pre><span></span><span class="err">IN CONST MU_PKCS7_PROTOCOL    </span>
+<div class="codehilite"><pre><span></span><span class="err">IN CONST MU_PKCS7_PROTOCOL</span>
 <span class="err">IN CONST UINT8                *Pkcs7Signature,</span>
 <span class="err">IN CONST UINT32                SignatureSize,  (in bytes)</span>
 <span class="err">IN CONST CHAR8                *RequiredEKUs[], null-terminated strings listing OIDs of required EKUs</span>
@@ -3842,6 +3842,7 @@ If this interface is not supported, then return EFI_UNSUPPORTED.</p>
 </pre></div>
                 
                   
+                
                 
               
               
@@ -3920,7 +3921,7 @@ If this interface is not supported, then return EFI_UNSUPPORTED.</p>
       
     </div>
     
-      <script src="../../../../../assets/javascripts/application.8e03edeb.js"></script>
+      <script src="../../../../../assets/javascripts/application.808e90bb.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../../../../.."}})</script>
       

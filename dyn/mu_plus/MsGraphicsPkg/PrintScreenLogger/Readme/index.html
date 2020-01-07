@@ -36,7 +36,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.5.1">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
     
     
       
@@ -60,7 +60,7 @@
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
@@ -3755,12 +3755,12 @@ Screen Captures during the preboot environment by pressing the Ctrl-PrtScn key
 combination. This action will creates a 24bbp (Bits Per Pixel) .BMP file of the
 screen's contents and write it to a enabled USB drive.</p>
 <h2 id="supported-architectures">Supported Architectures<a class="headerlink" href="#supported-architectures" title="Permanent link">&para;</a></h2>
-<p>This package is not architecturally dependent. This package is dependent upon 
+<p>This package is not architecturally dependent. This package is dependent upon
 the Gop pixel format, and only supports these two pixel formats:
 1. <em>PixelRedGreenBlueReserved8BitPerColor</em>
 2. <em>PixelBlueGreenRedReserved8BitPerColor</em></p>
 <h2 id="printscreenlogger-operation">PrintScreenLogger operation<a class="headerlink" href="#printscreenlogger-operation" title="Permanent link">&para;</a></h2>
-<p>During initialization, the Print Screen Loggger registers for notification of
+<p>During initialization, the Print Screen Logger registers for notification of
 the Ctrl-PrtScn key combination is pressed.</p>
 <p>When a Print Screen callback occurs:</p>
 <ol>
@@ -3770,7 +3770,7 @@ the Ctrl-PrtScn key combination is pressed.</p>
 <li>Looks for the next available filename in the form <strong>PrtScreen####.bmp</strong>,
    starting with 0000.</li>
 <li>Creates the new <strong>PrtScreen####.bmp</strong> file.</li>
-<li>Call GraphicsOutput-&gt;Blt to obtain the complete screen.  </li>
+<li>Call GraphicsOutput-&gt;Blt to obtain the complete screen.</li>
 <li>Converts the BLT buffer to a 24bbp BMP structure.</li>
 <li>Writes the BMP structure to the new <strong>PrtScreen####.bmp</strong> file.</li>
 </ol>
@@ -3796,6 +3796,7 @@ the Ctrl-PrtScn key combination is pressed.</p>
 SPDX-License-Identifier: BSD-2-Clause-Patent</p>
                 
                   
+                
                 
               
               
@@ -3874,7 +3875,7 @@ SPDX-License-Identifier: BSD-2-Clause-Patent</p>
       
     </div>
     
-      <script src="../../../../../assets/javascripts/application.8e03edeb.js"></script>
+      <script src="../../../../../assets/javascripts/application.808e90bb.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../../../../.."}})</script>
       

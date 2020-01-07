@@ -36,7 +36,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.5.1">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
     
     
       
@@ -60,7 +60,7 @@
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
@@ -3848,12 +3848,12 @@ SPDX-License-Identifier: BSD-2-Clause-Patent</p>
 <p>To support the DXE Phase Indicators, a new policy is installed that creates the <code class="codehilite"><span class="err">gMuVarPolicyDxePhaseGuid</span></code> variable namespace. By policy, all variables in this namespace are required to be the size of a <code class="codehilite"><span class="err">PHASE_INDICATOR</span></code> (which is a <code class="codehilite"><span class="err">UINT8</span></code>) and must be volatile and readable in both BootServices and Runtime. All variables in this namespace will also be made read-only immediately upon creation (as such, they are also Write-Once, but have a special purpose). Because these variables are required to be volatile, it will not be possible to create more after ExitBootServices.</p>
 <p>This driver will also register callbacks for EndOfDxe, ReadyToBoot, and ExitBootServices. At the time of the corresponding event, a new <code class="codehilite"><span class="err">PHASE_INDICATOR</span></code> variable will be created for the callback that has just been triggered. The purpose of these variables is two-fold:</p>
 <ul>
-<li>They can be queried by any driver or library that needs to know what phases of boot have already occurred. This is especially convenient for libraries that might be linked against any type of driver or applicaiton, but may not have been able to register callbacks for all the events because they don't know their execution order or time.</li>
+<li>They can be queried by any driver or library that needs to know what phases of boot have already occurred. This is especially convenient for libraries that might be linked against any type of driver or application, but may not have been able to register callbacks for all the events because they don't know their execution order or time.</li>
 <li>They can be used as the delegated "Variable State" variables in other Variable Policy lock policies. As such, you could describe a variable that locks "at ReadyToBoot" or "EndOfDxe".</li>
 </ul>
 <p>Note that the <code class="codehilite"><span class="err">PHASE_INDICATOR</span></code> variables are intentionally named as short abbreviations, such as "EOD" and "RTB". This is to minimize the size of the policy entries for lock-on-state policies.</p>
 <h3 id="important-note-on-timing">Important Note on Timing<a class="headerlink" href="#important-note-on-timing" title="Permanent link">&para;</a></h3>
-<p>The EndOfDxe and ReadyToBoot state varibles will be created at the <strong>end</strong> of the Notify list for the respective event. As such, any variable that locks on those events will still be writeable in Notify callbacks for the event. However, the ExitBootServices state variable (due to architectural requirements) will be created at a non-deterministic time in the Notify list. Therefore, it is unpredictable whether any variable which locks "on ExitBootServices" would still be writeable in any given callback.</p>
+<p>The EndOfDxe and ReadyToBoot state variables will be created at the <strong>end</strong> of the Notify list for the respective event. As such, any variable that locks on those events will still be writeable in Notify callbacks for the event. However, the ExitBootServices state variable (due to architectural requirements) will be created at a non-deterministic time in the Notify list. Therefore, it is unpredictable whether any variable which locks "on ExitBootServices" would still be writeable in any given callback.</p>
 <h2 id="write-once-state-variables">Write-Once State Variables<a class="headerlink" href="#write-once-state-variables" title="Permanent link">&para;</a></h2>
 <p>The Write-Once State Variables are actually quite similar to the DXE Phase Variables in terms of policy, but are kept distinct because of the different intentions for their use. This driver will also register a policy that creates the <code class="codehilite"><span class="err">gMuVarPolicyWriteOnceStateVarGuid</span></code> namespace. This policy will also limit these variables to being: volatile, BootServices and Runtime, read-only on create, and a fixed size -- <code class="codehilite"><span class="err">sizeof(POLICY_LOCK_VAR)</span></code>, which is also a <code class="codehilite"><span class="err">UINT8</span></code>, given that that is the size of the Value field of the current <code class="codehilite"><span class="err">VARIABLE_LOCK_ON_VAR_STATE_POLICY</span></code> structure.</p>
 <p>The primary difference is that the DXE Phase Variables have a very clear purpose and meaning. While the <code class="codehilite"><span class="err">gMuVarPolicyWriteOnceStateVarGuid</span></code> namespace is designed to be general-purpose and used to easily describe delegated variables for <code class="codehilite"><span class="err">VARIABLE_POLICY_TYPE_LOCK_ON_VAR_STATE</span></code>-type policies without requiring every driver to define two policies in order to employ this common pattern.</p>
@@ -3866,6 +3866,7 @@ SPDX-License-Identifier: BSD-2-Clause-Patent</p>
 <p>Finally, this driver installs an EDK2 Variable Locking Protocol instance. This implementation locks a variable by creating a policy entry and registering it via the Variable Policy Protocol. The policy entry is of type VARIABLE_POLICY_TYPE_LOCK_ON_VAR_STATE and locks the variable based on state of the Phase Indicator variable "EOD" (meaning End Of Dxe) in <code class="codehilite"><span class="err">gMuVarPolicyDxePhaseGuid</span></code> namespace.</p>
                 
                   
+                
                 
               
               
@@ -3944,7 +3945,7 @@ SPDX-License-Identifier: BSD-2-Clause-Patent</p>
       
     </div>
     
-      <script src="../../../../../assets/javascripts/application.8e03edeb.js"></script>
+      <script src="../../../../../assets/javascripts/application.808e90bb.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../../../../.."}})</script>
       
