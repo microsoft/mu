@@ -138,6 +138,7 @@
         "toolchain",
         "ovmf",
         "pytool",
+        "pytools",
         // Names and Attributions
         "Franceschetti",
         "Donath"
