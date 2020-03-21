@@ -35,9 +35,9 @@ git clone https://github.com/Microsoft/mu.git
 
 ## General Suggested documentation workflow
 
-1. open two command windows at the root of docs repository  
+1. open two command windows at the root of docs repository
     1. Window 1: Use to serve files locally
-        * Use ```mkdocs serve``` 
+        * Use ```mkdocs serve```
         * Any changes from the *DocBuild* process will be picked up and served
     2. Window 2: Use to preprocess the source repo files
         * Run the DocBuild.py command from this window
@@ -78,8 +78,7 @@ git clone https://github.com/Microsoft/mu.git
 4. should complete with no errors
 
 !!! Note
-
-    * Note you can also run it on any dynamic content by using a different *RootDir* parameter.  
+    * Note you can also run it on any dynamic content by using a different *RootDir* parameter.
     * Use *-h* for usage to get more detailed information of any failures
 
 ## Use mkdocs to build the docs

@@ -6,7 +6,7 @@
 # to leverage the same functionality in a DocBuild
 #
 ##
-# Copyright (c) 2018, Microsoft Corporation
+# Copyright (c), Microsoft Corporation
 #
 # All rights reserved.
 # Redistribution and use in source and binary forms, with or without

@@ -3,7 +3,7 @@
 # mkdocs
 #
 ##
-# Copyright (c) 2018, Microsoft Corporation
+# Copyright (c), Microsoft Corporation
 #
 # All rights reserved.
 # Redistribution and use in source and binary forms, with or without
@@ -40,7 +40,7 @@ import yaml
 
 
 SCRIPT_PATH = os.path.abspath(os.path.dirname(__file__))
-VERSION = "0.8.0"
+VERSION = "0.9.0"
 
 #
 # Class with basic git support.  Allow data collection from git repo
@@ -222,7 +222,7 @@ class NavTree(object):
 #
 # Main class which runs Documentation build work
 # This helps find all markdown files in source trees
-# and copys them to the mkdocs project
+# and copies them to the mkdocs project
 #
 # This also collects repo information and adds to yml
 # file so markdown pages can use the data for display
