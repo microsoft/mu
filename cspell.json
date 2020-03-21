@@ -5,9 +5,10 @@
     "version": "0.1",
     // language - current active spelling language
     "language": "en",
-
-    "dictionaries": ["companies ", "softwareTerms"],
-
+    "dictionaries": [
+        "companies ",
+        "softwareTerms"
+    ],
     //Attribution file has lots of external content
     "ignorePaths": [
         "docs/DeveloperDocs/attribution.md",
@@ -15,8 +16,16 @@
     ],
     // words - list of words to be always considered correct - use dictionary for all words
     "words": [
-        "uefi", "tiano", "ibv", "ibvs", "oem", "oems",
-        "ACPI", "MSRC", "tianocore", "doxygen",
+        "uefi",
+        "tiano",
+        "ibv",
+        "ibvs",
+        "oem",
+        "oems",
+        "ACPI",
+        "MSRC",
+        "tianocore",
+        "doxygen",
         "nvme",
         "esrt",
         "Infineon",
@@ -93,23 +102,44 @@
         "gitmodules",
         "gitattributes",
         "pymdown",
-        "repo", "repos",
-        "basecore","submodules","submodule",
+        "repo",
+        "repos",
+        "basecore",
+        "submodules",
+        "submodule",
         "howto",
         "mscore",
-        "signtool", "emojione", "opencode", "buildtime",
-        "componentization", "customizations", "enablement", "pluggable", "upstreams", "upstream", "projectmu", "jinja",
+        "signtool",
+        "emojione",
+        "opencode",
+        "buildtime",
+        "componentization",
+        "customizations",
+        "enablement",
+        "pluggable",
+        "upstreams",
+        "upstream",
+        "projectmu",
+        "jinja",
         "lzturbo",
         "rebased",
         "backported",
-        "pytest", "pip", "flake8",
+        "pytest",
+        "pip",
+        "flake8",
         "workspaces",
         "venv",
         "omnicache",
-        "roadmap","roadmaps",
-	"wdksetup",
-
+        "roadmap",
+        "roadmaps",
+        "wdksetup",
+        "cmocka",
+        "toolchains",
+        "toolchain",
+        "ovmf",
+        "pytool",
         // Names and Attributions
-        "Franceschetti", "Donath"
+        "Franceschetti",
+        "Donath"
     ]
 }
