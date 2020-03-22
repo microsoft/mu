@@ -18,4 +18,4 @@ Code should follow best practices.  We are working to add some best practices on
 
 ## Tests
 
-One area of focus for Project Mu is on testing.  Firmware testing has traditionally been hard and very manual.  With Project Mu and our recent contributions to Tianocore we now have a unit test framework available to developers.  Host based tests written in this framework will be automatically be run during CI passes and are required for new contributions.  Check out the [testing](test.md) page for more details.
+One area of focus for Project Mu is on testing.  Firmware testing has traditionally been hard and very manual.  With Project Mu and our recent contributions to Tianocore, we now have a unit test framework available to developers.  Host based tests written in this framework will be automatically run during CI passes and are required for new contributions.  Check out the [testing](test.md) page for more details.

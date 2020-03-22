@@ -39,7 +39,7 @@ It is often desirable to compile test code and at times there might not be a pro
     ```cmd
     stuart_ci_build -c <PyTool Config File>
     ```
-8. Open __TestResults.xml__ in the build output for results
+8. Open __TestResults.xml__ in the build output for results (usually in workspace/Build)
 9. Open log files to debug any errors
 
 ???+ info
@@ -79,7 +79,7 @@ When you actually want to compile for a platform that will create a firmware bin
     ```cmd
     stuart_build -c <platform Config File>
     ```
-8. Open the build output for log files to debug any errors
+8. Open the build output for log files to debug any errors (usually in workspace/Build)
 
 ???+ info
     * In Project Mu repos the platform config file is generally in the platform package.
