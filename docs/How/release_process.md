@@ -21,7 +21,7 @@ The below diagram illustrates the life-cycle of a single branch and indicates th
 
 !!! danger "Important"
     Due to the impacts of the rebase process on the history of Mu release branches, any downstream consumers will have to follow a similar integration process when upgrading to a new release. Any custom changes made within the Project Mu repos will have to be rebased from one release to the next.
-    
+
     This is why we strongly discourage forking Project Mu for direct modification (ie. consumption, not contribution). Instead, leverage the distributed repo management system and override management system to integrate proprietary code/modules.
 
 ## Current Branch Status

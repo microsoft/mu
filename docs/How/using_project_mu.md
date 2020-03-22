@@ -2,14 +2,13 @@
 
 This document will describe the base guidelines for setting up a Project MU repo.
 
-You will need:
+1. You will need to install the [prerequisites tools](../CodeDevelopment/prerequisites.md)
+2. Determine how to layout your project and the content
+     * Look at [layout](../WhatAndWhy/layout.md) to understand our recommended repository layout.
+     * You can also look at [ms-iot iMX8](https://github.com/ms-iot/MU_PLATFORM_NXP) for a real platform implementation.
+     * Check out our docs in our Project Mu Teams channel as we have presentations on OVMF and Intel OpenKBL platforms.
 
-1) Git
-2) Python 3.7
-3) A text editor
-4) Look at [layout](../WhatAndWhy/layout.md) to understand our recommended repository layout. You can also look at [ms-iot iMX8](https://github.com/ms-iot/MU_PLATFORM_NXP) for a real platform implementation.
-
-## 0) Nomenclature
+## Nomenclature
 
 I will use the term *workspace root* to reference the base folder for your code tree.
 
@@ -23,7 +22,7 @@ git submodule foreach git status  # git submodule foreach can be used to run a c
 ```
 For more information available [here](https://git-scm.com/book/en/v2/Git-Tools-Submodules).
 
-## 1) Create Git Repo
+## Create Git Repo
 
 Make new directory.
 ```cmd
@@ -36,7 +35,7 @@ This will serve as our Platform Repository as well as our Workspace Root.
 
 For more information on creating a Git repo, here are [command line instructions](https://kbroman.org/github_tutorial/pages/init.html) and here are [web instructions](https://help.github.com/en/articles/create-a-repo).
 
-## 2) Add pertinent submodules
+## Add pertinent submodules
 
 Project MU is separated into submodules. For each submodule that you need for your project, run the "git submodule add" command to add it to your base Repository. The path after the URL is the path we typically use to group the submodules. You can change it if you'd like, just remember your environment will diverge from the one in these instructions.
 
@@ -90,7 +89,7 @@ git submodule add https://github.com/Microsoft/mu_silicon_intel_tiano.git Silico
 
 You can run `git submodule --update --init` to make sure all the submodules are set up.
 
-# 3) Adding your platform contents
+## Adding your platform contents
 
 ```
 New_Platform_Repo/
@@ -110,8 +109,4 @@ New_Platform_Repo/
 └── .gitmodules
 ```
 
-You will need to create PlatformBuild.py, Platform.dsc, and Platform.fdf. These files will go inside the platform folder, which will be `New_Platform_Repo/PlatformGroup/PlatformName`. The [ms-iot iMX8](https://github.com/ms-iot/MU_PLATFORM_NXP) repo can help you get started as a layout reference and can demonstrate the PlatformBuild file. More information about PlatformBuild can be found [here](https://microsoft.github.io/mu/CodeDevelopment/compile/#project-build-aka-platformbuild).
-
-# 4) Build instructions
-
-[There are](https://microsoft.github.io/mu/CodeDevelopment/compile/#project-build-aka-platformbuild) documents explaining our build system. This will be updated as things change.
+You will need to create PlatformBuild.py, Platform.dsc, and Platform.fdf. These files will go inside the platform folder, which will be `New_Platform_Repo/PlatformGroup/PlatformName`. The [ms-iot iMX8](https://github.com/ms-iot/MU_PLATFORM_NXP) repo can help you get started as a layout reference and can demonstrate the PlatformBuild file. More information about PlatformBuild can be found [here](../CodeDevelopment/compile/).

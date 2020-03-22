@@ -1,44 +1,33 @@
 # Prerequisites for building Code
 
-Generally there are a set of tools required on the platform.  Project Mu tries to minimize the number of global tools but there are a few.  There could be more depending on the repository/product/platform you are building but this should get you started.  If the repo requires other tools those should be documented within the repo.  
+Generally there are a set of tools required on the platform.  Project Mu tries to minimize the number of global tools but there are a few.  There could be more depending on the repository/product/platform you are building but this should get you started.  If the repo requires other tools those should be documented within the repo.
 The tools also vary by Operating System and Compiler choice.  Project Mu will document what is currently supported but the expectation is that between Project Mu and TianoCore Edk2 you could use any of those tool sets.
 
-## Windows
+## Windows 10 x64
 
 ### Python
 
 1. Download latest Python from https://www.python.org/downloads
     ``` cmd
-    https://www.python.org/ftp/python/3.7.4/python-3.7.4-amd64.exe
+    https://www.python.org/ftp/python/3.8.2/python-3.8.2-amd64.exe
     ```
 2. It is recommended you use the following options when installing python:
     1. include pip support
     2. include test support
+    3. include venv virtual environment support
 
 ### Git
 
-1. Download latest Git For Windows from https://git-scm.com/download/win 
+1. Download latest Git For Windows from https://git-scm.com/download/win
     ``` cmd
-    https://github.com/git-for-windows/git/releases/download/v2.20.1.windows.1/Git-2.20.1-64-bit.exe
+    https://github.com/git-for-windows/git/releases/download/v2.25.1.windows.1/Git-2.25.1-64-bit.exe
     ```
 2. It is recommended you use the following options:
     1. Checkout as is, commit as is.
     2. Native Channel support (this will help in corp environments)
     3. Check the box to "Enable Git Credential Manager"
 
-### Visual Studio 2017
-
-1. Download latest version of VS build Tools to c:\TEMP
-    ``` cmd
-    https://aka.ms/vs/15/release/vs_buildtools.exe
-    ```
-2. Install from cmd line with required features (this set will change overtime).
-    ``` cmd
-    C:\TEMP\vs_buildtools.exe --quiet --wait --norestart --nocache --installPath C:\BuildTools --add Microsoft.VisualStudio.Component.VC.CoreBuildTools --add Microsoft.VisualStudio.Component.VC.Tools.x86.x64 --add Microsoft.VisualStudio.Component.Windows10SDK.17763 --add Microsoft.VisualStudio.Component.VC.Tools.ARM --add Microsoft.VisualStudio.Component.VC.Tools.ARM64
-    ```
-See component list here for more options. https://docs.microsoft.com/en-us/visualstudio/install/workload-component-id-vs-build-tools?view=vs-2017
-
-### Visual Studio 2019 **Early Support**
+### Visual Studio 2019 **preferred**
 
 1. Download latest version of VS build Tools to c:\TEMP
     ``` cmd
@@ -50,6 +39,18 @@ See component list here for more options. https://docs.microsoft.com/en-us/visua
     ```
 See component list here for more options. https://docs.microsoft.com/en-us/visualstudio/install/workload-component-id-vs-build-tools?view=vs-2019
 
+### Visual Studio 2017
+
+1. Download latest version of VS build Tools to c:\TEMP
+    ``` cmd
+    https://aka.ms/vs/15/release/vs_buildtools.exe
+    ```
+2. Install from cmd line with required features (this set will change over time).
+    ``` cmd
+    C:\TEMP\vs_buildtools.exe --quiet --wait --norestart --nocache --installPath C:\BuildTools --add Microsoft.VisualStudio.Component.VC.CoreBuildTools --add Microsoft.VisualStudio.Component.VC.Tools.x86.x64 --add Microsoft.VisualStudio.Component.Windows10SDK.17763 --add Microsoft.VisualStudio.Component.VC.Tools.ARM --add Microsoft.VisualStudio.Component.VC.Tools.ARM64
+    ```
+See component list here for more options. https://docs.microsoft.com/en-us/visualstudio/install/workload-component-id-vs-build-tools?view=vs-2017
+
 ### Optional - Windows Driver Kit
 Provides Inf2Cat.exe, needed to [prepare Windows firmware update packages for signing](https://docs.microsoft.com/en-us/windows-hardware/drivers/bringup/certifying-and-signing-the-update-package).
 
@@ -59,48 +60,52 @@ Provides Inf2Cat.exe, needed to [prepare Windows firmware update packages for si
     ```
 2. Install from cmd line with required features (this set will change over time).
     ``` cmd
-    wdksetup.exe /features OptionId.WindowsDriverKitComplete /q 
+    wdksetup.exe /features OptionId.WindowsDriverKitComplete /q
     ```
 
 ### Optional - Create an Omnicache
 
-An Omnicache is a Project Mu tool that leverages git features to speed up git update operations.  This helps speed up git operations if you have multiple workspaces by using the git "--reference" feature.  Omnicache is documented in the Mu Pip Environment section of this site. 
+An Omnicache is a Project Mu tool that leverages git features to speed up git update operations.  This helps speed up git operations if you have multiple workspaces by using the git "--reference" feature.  Omnicache is documented in the Mu Pip Environment section of this site.
 
+## Windows Subsystem For Linux (WSL) and Linux
 
-## Windows Subsystem For Linux (WSL)
+Basic directions here. https://github.com/tianocore/edk2-pytool-extensions/blob/master/docs/usability/using_linux.md
+
+## Pre-built Linux containers
 
 _Coming soon_
 
+## All Operating Systems - Python Virtual Environment and PyTools
 
-## All Operating Systems - Python Virtual Environment and Mu Build Tools
-
-In all Operating Systems environments the Project Mu Build tools are needed. 
+In all Operating Systems environments the PyTools python modules are needed.
 
 Python virtual environments are strongly suggested especially when doing development in multiple workspaces.  Each workspace should have its own virtual environment as to not modify the global system state. Since Project Mu uses Pip modules this allows each workspace to keep the versions in sync with the workspace requirements.
 
 More info on Python Virtual Environments: https://docs.python.org/3/library/venv.html
 
-### Workspace Virtual Environment Setup Process 
+### Workspace Virtual Environment Setup Process
 
-#### A sample directory layout of workspaces and Python Virtual Environments:
-    code
-    |-- edk2
-    |-- env_dev                     <--- env for Mu Dev
-    |-- env_docs                    <--- env for Mu Docs
-    |-- env_edk                     <--- env for TianoCore
-    |-- env_local                   <--- env for -e installations of mu_pip/edk2tool
-    |-- Omnicache
-    |-- Palindrome
-    |-- Palindrome2
+#### A sample directory layout of workspaces and Python Virtual Environments
 
-Do this one time per workspace
+    /Workspace1Root (basic platform)
+    |-- src_of_project1
+    |-- venv        <-- Virtual environment for Project in workspace root 1
+    |
+    /Workspace2Root (basic + local pytool dev support)
+    | -- src_of_project2
+    | -- venv       <-- Virtual environment for Project in workspace root 2 pip requirements
+    | -- venv_dev   <-- Virtual environment configured to use local python modules
+    | -- edk2-pytool-library    <-- local clone of python modules in library
+    | -- edk2-pytool-extensions <-- local clone of python modules in extensions
+
+Virtual environments only need to be created once per workspace.  They must be activated in each new cmd shell.
 
 1. Open Cmd Prompt in the directory where you want to store your virtual environment.  A directory adjacent to workspace directories is convenient.
 2. run python cmd
     ``` cmd
     python -m venv <your virtual env name>
     ```
-3. Activate it for your session.  
+3. Activate it for your session.
 
 ### Activate Virtual Environment
 
@@ -117,31 +122,3 @@ Do this each time you open a new command window to build your workspace.
     pip install --upgrade -r requirements.txt
     ```
 5. Do dev work and run your builds!
-
-### More About Project Mu tools using Pip
-
-Project Mu currently has 3 pip modules
-
-#### mu_python_library
-
-UEFI, Edk2, Acpi, and TPM common library functions.
-
-``` cmd
-python -m pip install --upgrade mu_python_library
-```
-
-#### mu_environment
-
-Self Describing Environment (SDE) code which is used to organize and coordinate UEFI builds.  This is the Project Mu Build system, plugin manager, edk2 build wrapper, logging, etc.  
-
-``` cmd
-python -m pip install --upgrade mu_environment
-```
-
-#### mu_build
-
-CI and package test scripts.  Supports compiling as well as running other build test plugins.
-
-``` cmd
-python -m pip install --upgrade mu_build
-```

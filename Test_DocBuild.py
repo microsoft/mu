@@ -6,7 +6,7 @@
 # These simple unit tests focus on the easy to test parts.
 #
 ##
-# Copyright (c) 2018, Microsoft Corporation
+# Copyright (c), Microsoft Corporation
 #
 # All rights reserved.
 # Redistribution and use in source and binary forms, with or without
