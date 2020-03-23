@@ -1,0 +1,5029 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Project Mu Documentation">
+      
+      
+        <link rel="canonical" href="https://microsoft.github.io/mu/dyn/mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/third_party/googletest/docs/V1_7_Primer/">
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../../../../../../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
+    
+    
+      
+        <title>V1 7 Primer - Project Mu</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../../../../../../../assets/stylesheets/application.adb8469c.css">
+      
+        <link rel="stylesheet" href="../../../../../../../../../../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../../../../../../../../../../../assets/javascripts/modernizr.86422ebf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../../../../../../../../../../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#introduction-why-google-c-testing-framework" tabindex="0" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://microsoft.github.io/mu/" title="Project Mu" aria-label="Project Mu" class="md-header-nav__button md-logo">
+          
+            <img alt="logo" src="../../../../../../../../../../../img/mu.png" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Project Mu
+            </span>
+            <span class="md-header-nav__topic">
+              
+                V1 7 Primer
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/microsoft/mu/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://microsoft.github.io/mu/" title="Project Mu" class="md-nav__button md-logo">
+      
+        <img alt="logo" src="../../../../../../../../../../../img/mu.png" width="48" height="48">
+      
+    </a>
+    Project Mu
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/microsoft/mu/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      What and Why
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        What and Why
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../../WhatAndWhy/overview/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../../WhatAndWhy/layout/" title="Dependencies and Layout" class="md-nav__link">
+      Dependencies and Layout
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../../WhatAndWhy/features/" title="Features" class="md-nav__link">
+      Features
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Where
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Where
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../../Where/project_resources/" title="Project Resources" class="md-nav__link">
+      Project Resources
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../../Where/external_resources/" title="External Resources" class="md-nav__link">
+      External Resources
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      How
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        How
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../../How/release_process/" title="Release Process" class="md-nav__link">
+      Release Process
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../../How/contributing/" title="Contributing" class="md-nav__link">
+      Contributing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../../How/using_project_mu/" title="Using" class="md-nav__link">
+      Using
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Developing Docs
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Developing Docs
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../../DeveloperDocs/developer_docs/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../../DeveloperDocs/build_community_docs/" title="How To Build" class="md-nav__link">
+      How To Build
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../../DeveloperDocs/doc_sample_test/" title="Sample Syntax" class="md-nav__link">
+      Sample Syntax
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../../DeveloperDocs/attribution/" title="Doc Framework Attribution" class="md-nav__link">
+      Doc Framework Attribution
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../../DeveloperDocs/requirements/" title="Documentation Requirements" class="md-nav__link">
+      Documentation Requirements
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Developing Code
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Developing Code
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../../CodeDevelopment/overview/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../../CodeDevelopment/prerequisites/" title="Tools and Prerequisite" class="md-nav__link">
+      Tools and Prerequisite
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../../CodeDevelopment/compile/" title="Compiling" class="md-nav__link">
+      Compiling
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../../CodeDevelopment/test/" title="Testing" class="md-nav__link">
+      Testing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../../CodeDevelopment/requirements/" title="Code Requirements" class="md-nav__link">
+      Code Requirements
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../../faq/" title="FAQ" class="md-nav__link">
+      FAQ
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../../license/" title="License" class="md-nav__link">
+      License
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9" checked>
+    
+    <label class="md-nav__link" for="nav-9">
+      Code Repositories
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        Code Repositories
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1" type="checkbox" id="nav-9-1">
+    
+    <label class="md-nav__link" for="nav-9-1">
+      mu basecore
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-9-1">
+        mu basecore
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_basecore/RepoDetails/" title="Repo Details" class="md-nav__link">
+      Repo Details
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1-2" type="checkbox" id="nav-9-1-2">
+    
+    <label class="md-nav__link" for="nav-9-1-2">
+      pytool
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-1-2">
+        pytool
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_basecore/pytool/Readme/" title="Readme" class="md-nav__link">
+      Readme
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1-2-2" type="checkbox" id="nav-9-1-2-2">
+    
+    <label class="md-nav__link" for="nav-9-1-2-2">
+      Plugin
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-9-1-2-2">
+        Plugin
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_basecore/pytool/Plugin/CharEncodingCheck/Readme/" title="Char Encoding Check" class="md-nav__link">
+      Char Encoding Check
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_basecore/pytool/Plugin/CompilerPlugin/Readme/" title="Compiler Plugin" class="md-nav__link">
+      Compiler Plugin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_basecore/pytool/Plugin/DependencyCheck/Readme/" title="Dependency Check" class="md-nav__link">
+      Dependency Check
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_basecore/pytool/Plugin/DscCompleteCheck/Readme/" title="Dsc Complete Check" class="md-nav__link">
+      Dsc Complete Check
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_basecore/pytool/Plugin/GuidCheck/Readme/" title="Guid Check" class="md-nav__link">
+      Guid Check
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_basecore/pytool/Plugin/HostUnitTestCompilerPlugin/Readme/" title="Host Unit Test Compiler Plugin" class="md-nav__link">
+      Host Unit Test Compiler Plugin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_basecore/pytool/Plugin/HostUnitTestDscCompleteCheck/Readme/" title="Host Unit Test Dsc Complete Check" class="md-nav__link">
+      Host Unit Test Dsc Complete Check
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_basecore/pytool/Plugin/LibraryClassCheck/Readme/" title="Library Class Check" class="md-nav__link">
+      Library Class Check
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_basecore/pytool/Plugin/SpellCheck/Readme/" title="Spell Check" class="md-nav__link">
+      Spell Check
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1-3" type="checkbox" id="nav-9-1-3">
+    
+    <label class="md-nav__link" for="nav-9-1-3">
+      Base Tools
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-1-3">
+        Base Tools
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1-3-1" type="checkbox" id="nav-9-1-3-1">
+    
+    <label class="md-nav__link" for="nav-9-1-3-1">
+      Nuget Publishing
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-9-1-3-1">
+        Nuget Publishing
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_basecore/BaseTools/NugetPublishing/iasl/" title="iasl" class="md-nav__link">
+      iasl
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_basecore/BaseTools/NugetPublishing/Mu-Basetools/" title="Mu-Basetools" class="md-nav__link">
+      Mu-Basetools
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_basecore/BaseTools/NugetPublishing/Mu-Nasm/" title="Mu-Nasm" class="md-nav__link">
+      Mu-Nasm
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_basecore/BaseTools/NugetPublishing/ReadMe/" title="Read Me" class="md-nav__link">
+      Read Me
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1-3-2" type="checkbox" id="nav-9-1-3-2">
+    
+    <label class="md-nav__link" for="nav-9-1-3-2">
+      Plugin
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-9-1-3-2">
+        Plugin
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_basecore/BaseTools/Plugin/FdSizeReport/ReadMe/" title="Fd Size Report" class="md-nav__link">
+      Fd Size Report
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_basecore/BaseTools/Plugin/OverrideValidation/ReadMe/" title="Override Validation" class="md-nav__link">
+      Override Validation
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1-3-3" type="checkbox" id="nav-9-1-3-3">
+    
+    <label class="md-nav__link" for="nav-9-1-3-3">
+      Scripts
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-9-1-3-3">
+        Scripts
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_basecore/BaseTools/Scripts/PackageDocumentTools/Readme/" title="Package Document Tools" class="md-nav__link">
+      Package Document Tools
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1-3-4" type="checkbox" id="nav-9-1-3-4">
+    
+    <label class="md-nav__link" for="nav-9-1-3-4">
+      Source
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-9-1-3-4">
+        Source
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1-3-4-1" type="checkbox" id="nav-9-1-3-4-1">
+    
+    <label class="md-nav__link" for="nav-9-1-3-4-1">
+      C
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+      <label class="md-nav__title" for="nav-9-1-3-4-1">
+        C
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1-3-4-1-1" type="checkbox" id="nav-9-1-3-4-1-1">
+    
+    <label class="md-nav__link" for="nav-9-1-3-4-1-1">
+      Brotli Compress
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="6">
+      <label class="md-nav__title" for="nav-9-1-3-4-1-1">
+        Brotli Compress
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_basecore/BaseTools/Source/C/BrotliCompress/" title="README" class="md-nav__link">
+      README
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_basecore/BaseTools/Source/C/BrotliCompress/tools/brotli/" title="tools" class="md-nav__link">
+      tools
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1-3-4-2" type="checkbox" id="nav-9-1-3-4-2">
+    
+    <label class="md-nav__link" for="nav-9-1-3-4-2">
+      Python
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+      <label class="md-nav__title" for="nav-9-1-3-4-2">
+        Python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_basecore/BaseTools/Source/Python/Pkcs7Sign/Readme/" title="Pkcs7Sign" class="md-nav__link">
+      Pkcs7Sign
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1-4" type="checkbox" id="nav-9-1-4">
+    
+    <label class="md-nav__link" for="nav-9-1-4">
+      Mde Module Pkg
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-1-4">
+        Mde Module Pkg
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1-4-1" type="checkbox" id="nav-9-1-4-1">
+    
+    <label class="md-nav__link" for="nav-9-1-4-1">
+      Modules
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-9-1-4-1">
+        Modules
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1-4-1-1" type="checkbox" id="nav-9-1-4-1-1">
+    
+    <label class="md-nav__link" for="nav-9-1-4-1-1">
+      Library
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+      <label class="md-nav__title" for="nav-9-1-4-1-1">
+        Library
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_basecore/MdeModulePkg/Library/BrotliCustomDecompressLib/" title="Brotli Custom Decompress Lib" class="md-nav__link">
+      Brotli Custom Decompress Lib
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_basecore/MdeModulePkg/Library/DeviceStateLib/Readme/" title="Device State Lib" class="md-nav__link">
+      Device State Lib
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1-5" type="checkbox" id="nav-9-1-5">
+    
+    <label class="md-nav__link" for="nav-9-1-5">
+      Mde Pkg
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-1-5">
+        Mde Pkg
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1-5-1" type="checkbox" id="nav-9-1-5-1">
+    
+    <label class="md-nav__link" for="nav-9-1-5-1">
+      Modules
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-9-1-5-1">
+        Modules
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1-5-1-1" type="checkbox" id="nav-9-1-5-1-1">
+    
+    <label class="md-nav__link" for="nav-9-1-5-1-1">
+      Library
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+      <label class="md-nav__title" for="nav-9-1-5-1-1">
+        Library
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_basecore/MdePkg/Library/FltUsedLib/Readme/" title="Flt Used Lib" class="md-nav__link">
+      Flt Used Lib
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1-6" type="checkbox" id="nav-9-1-6">
+    
+    <label class="md-nav__link" for="nav-9-1-6">
+      Network Pkg
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-1-6">
+        Network Pkg
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1-6-1" type="checkbox" id="nav-9-1-6-1">
+    
+    <label class="md-nav__link" for="nav-9-1-6-1">
+      Modules
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-9-1-6-1">
+        Modules
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1-6-1-1" type="checkbox" id="nav-9-1-6-1-1">
+    
+    <label class="md-nav__link" for="nav-9-1-6-1-1">
+      Shared Networking
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+      <label class="md-nav__title" for="nav-9-1-6-1-1">
+        Shared Networking
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_basecore/NetworkPkg/SharedNetworking/release_notes/" title="release notes" class="md-nav__link">
+      release notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_basecore/NetworkPkg/SharedNetworking/SharedNetworking/" title="Shared Networking" class="md-nav__link">
+      Shared Networking
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1-7" type="checkbox" id="nav-9-1-7">
+    
+    <label class="md-nav__link" for="nav-9-1-7">
+      Rust Pkg
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-1-7">
+        Rust Pkg
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1-7-1" type="checkbox" id="nav-9-1-7-1">
+    
+    <label class="md-nav__link" for="nav-9-1-7-1">
+      Modules
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-9-1-7-1">
+        Modules
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_basecore/RustPkg/Readme/" title="Readme" class="md-nav__link">
+      Readme
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1-7-1-2" type="checkbox" id="nav-9-1-7-1-2">
+    
+    <label class="md-nav__link" for="nav-9-1-7-1-2">
+      External
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+      <label class="md-nav__title" for="nav-9-1-7-1-2">
+        External
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1-7-1-2-1" type="checkbox" id="nav-9-1-7-1-2-1">
+    
+    <label class="md-nav__link" for="nav-9-1-7-1-2-1">
+      r-efi
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="6">
+      <label class="md-nav__title" for="nav-9-1-7-1-2-1">
+        r-efi
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_basecore/RustPkg/External/r-efi/NEWS/" title="NEWS" class="md-nav__link">
+      NEWS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_basecore/RustPkg/External/r-efi/" title="README" class="md-nav__link">
+      README
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1-8" type="checkbox" id="nav-9-1-8">
+    
+    <label class="md-nav__link" for="nav-9-1-8">
+      Unit Test Framework Pkg
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-1-8">
+        Unit Test Framework Pkg
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_basecore/UnitTestFrameworkPkg/ReadMe/" title="Modules" class="md-nav__link">
+      Modules
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-2" type="checkbox" id="nav-9-2">
+    
+    <label class="md-nav__link" for="nav-9-2">
+      mu oem sample
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-9-2">
+        mu oem sample
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_oem_sample/RepoDetails/" title="Repo Details" class="md-nav__link">
+      Repo Details
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-2-2" type="checkbox" id="nav-9-2-2">
+    
+    <label class="md-nav__link" for="nav-9-2-2">
+      Oem Pkg
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-2-2">
+        Oem Pkg
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-2-2-1" type="checkbox" id="nav-9-2-2-1">
+    
+    <label class="md-nav__link" for="nav-9-2-2-1">
+      Modules
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-9-2-2-1">
+        Modules
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_oem_sample/OemPkg/FrontPage/FrontPagePasswordSupport/" title="Front Page" class="md-nav__link">
+      Front Page
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3" type="checkbox" id="nav-9-3">
+    
+    <label class="md-nav__link" for="nav-9-3">
+      mu plus
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-9-3">
+        mu plus
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_plus/RepoDetails/" title="Repo Details" class="md-nav__link">
+      Repo Details
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-2" type="checkbox" id="nav-9-3-2">
+    
+    <label class="md-nav__link" for="nav-9-3-2">
+      Adv Logger Pkg
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-3-2">
+        Adv Logger Pkg
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-2-1" type="checkbox" id="nav-9-3-2-1">
+    
+    <label class="md-nav__link" for="nav-9-3-2-1">
+      Modules
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-9-3-2-1">
+        Modules
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_plus/AdvLoggerPkg/ReadMe/" title="Read Me" class="md-nav__link">
+      Read Me
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-2-1-2" type="checkbox" id="nav-9-3-2-1-2">
+    
+    <label class="md-nav__link" for="nav-9-3-2-1-2">
+      Unit Tests
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+      <label class="md-nav__title" for="nav-9-3-2-1-2">
+        Unit Tests
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_plus/AdvLoggerPkg/UnitTests/LineParser/readme/" title="Line Parser" class="md-nav__link">
+      Line Parser
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-3" type="checkbox" id="nav-9-3-3">
+    
+    <label class="md-nav__link" for="nav-9-3-3">
+      Dfci Pkg
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-3-3">
+        Dfci Pkg
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-3-1" type="checkbox" id="nav-9-3-3-1">
+    
+    <label class="md-nav__link" for="nav-9-3-3-1">
+      Package Overview
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-9-3-3-1">
+        Package Overview
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_plus/DfciPkg/Docs/Dfci_Feature/" title="Dfci Feature" class="md-nav__link">
+      Dfci Feature
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_plus/DfciPkg/Docs/Internals/DfciInternals/" title="Internals" class="md-nav__link">
+      Internals
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-3-1-3" type="checkbox" id="nav-9-3-3-1-3">
+    
+    <label class="md-nav__link" for="nav-9-3-3-1-3">
+      Platform Integration
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+      <label class="md-nav__title" for="nav-9-3-3-1-3">
+        Platform Integration
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_plus/DfciPkg/Docs/PlatformIntegration/DfciDeviceIdSupportLib/" title="Dfci Device Id Support Lib" class="md-nav__link">
+      Dfci Device Id Support Lib
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_plus/DfciPkg/Docs/PlatformIntegration/DfciGroups/" title="Dfci Groups" class="md-nav__link">
+      Dfci Groups
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_plus/DfciPkg/Docs/PlatformIntegration/DfciSettingProviders/" title="Dfci Setting Providers" class="md-nav__link">
+      Dfci Setting Providers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_plus/DfciPkg/Docs/PlatformIntegration/DfciUiSupportLib/" title="Dfci Ui Support Lib" class="md-nav__link">
+      Dfci Ui Support Lib
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_plus/DfciPkg/Docs/PlatformIntegration/PlatformIntegrationOverview/" title="Platform Integration Overview" class="md-nav__link">
+      Platform Integration Overview
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_plus/DfciPkg/Docs/Scenarios/DfciScenarios/" title="Scenarios" class="md-nav__link">
+      Scenarios
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-3-2" type="checkbox" id="nav-9-3-3-2">
+    
+    <label class="md-nav__link" for="nav-9-3-3-2">
+      Modules
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-9-3-3-2">
+        Modules
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_plus/DfciPkg/AuthManagerNull/" title="Auth Manager Null" class="md-nav__link">
+      Auth Manager Null
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_plus/DfciPkg/IdentityAndAuthManager/ReadMe/" title="Identity And Auth Manager" class="md-nav__link">
+      Identity And Auth Manager
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-3-2-3" type="checkbox" id="nav-9-3-3-2-3">
+    
+    <label class="md-nav__link" for="nav-9-3-3-2-3">
+      Library
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+      <label class="md-nav__title" for="nav-9-3-3-2-3">
+        Library
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_plus/DfciPkg/Library/DfciSampleProvider/readme/" title="Dfci Sample Provider" class="md-nav__link">
+      Dfci Sample Provider
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-3-2-4" type="checkbox" id="nav-9-3-3-2-4">
+    
+    <label class="md-nav__link" for="nav-9-3-3-2-4">
+      Unit Tests
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+      <label class="md-nav__title" for="nav-9-3-3-2-4">
+        Unit Tests
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_plus/DfciPkg/UnitTests/DevicdIdTest/readme/" title="Devicd Id Test" class="md-nav__link">
+      Devicd Id Test
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_plus/DfciPkg/UnitTests/DfciTests/readme/" title="Dfci Tests" class="md-nav__link">
+      Dfci Tests
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-4" type="checkbox" id="nav-9-3-4">
+    
+    <label class="md-nav__link" for="nav-9-3-4">
+      Ms Core Pkg
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-3-4">
+        Ms Core Pkg
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-4-1" type="checkbox" id="nav-9-3-4-1">
+    
+    <label class="md-nav__link" for="nav-9-3-4-1">
+      Modules
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-9-3-4-1">
+        Modules
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_plus/MsCorePkg/Feature_DebugRouting_Readme/" title="Feature Debug Routing Readme" class="md-nav__link">
+      Feature Debug Routing Readme
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_plus/MsCorePkg/ReadMe/" title="Read Me" class="md-nav__link">
+      Read Me
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_plus/MsCorePkg/AcpiRGRT/feature_acpi_rgrt/" title="Acpi RGRT" class="md-nav__link">
+      Acpi RGRT
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_plus/MsCorePkg/CheckHardwareConnected/readme/" title="Check Hardware Connected" class="md-nav__link">
+      Check Hardware Connected
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_plus/MsCorePkg/DebugFileLoggerII/" title="Debug File Logger II" class="md-nav__link">
+      Debug File Logger II
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_plus/MsCorePkg/MuCryptoDxe/Readme/" title="Mu Crypto Dxe" class="md-nav__link">
+      Mu Crypto Dxe
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_plus/MsCorePkg/MuVarPolicyFoundationDxe/Feature_MuVarPolicyFoundationDxe_Readme/" title="Mu Var Policy Foundation Dxe" class="md-nav__link">
+      Mu Var Policy Foundation Dxe
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-4-1-8" type="checkbox" id="nav-9-3-4-1-8">
+    
+    <label class="md-nav__link" for="nav-9-3-4-1-8">
+      Unit Tests
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+      <label class="md-nav__title" for="nav-9-3-4-1-8">
+        Unit Tests
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_plus/MsCorePkg/UnitTests/JsonTest/readme/" title="Json Test" class="md-nav__link">
+      Json Test
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-5" type="checkbox" id="nav-9-3-5">
+    
+    <label class="md-nav__link" for="nav-9-3-5">
+      Ms Graphics Pkg
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-3-5">
+        Ms Graphics Pkg
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-5-1" type="checkbox" id="nav-9-3-5-1">
+    
+    <label class="md-nav__link" for="nav-9-3-5-1">
+      Modules
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-9-3-5-1">
+        Modules
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_plus/MsGraphicsPkg/PrintScreenLogger/Readme/" title="Print Screen Logger" class="md-nav__link">
+      Print Screen Logger
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-6" type="checkbox" id="nav-9-3-6">
+    
+    <label class="md-nav__link" for="nav-9-3-6">
+      Ms Whea Pkg
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-3-6">
+        Ms Whea Pkg
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_plus/MsWheaPkg/readme/" title="Modules" class="md-nav__link">
+      Modules
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-7" type="checkbox" id="nav-9-3-7">
+    
+    <label class="md-nav__link" for="nav-9-3-7">
+      Pc Bds Pkg
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-3-7">
+        Pc Bds Pkg
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-7-1" type="checkbox" id="nav-9-3-7-1">
+    
+    <label class="md-nav__link" for="nav-9-3-7-1">
+      Modules
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-9-3-7-1">
+        Modules
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-7-1-1" type="checkbox" id="nav-9-3-7-1-1">
+    
+    <label class="md-nav__link" for="nav-9-3-7-1-1">
+      Library
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+      <label class="md-nav__title" for="nav-9-3-7-1-1">
+        Library
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_plus/PcBdsPkg/Library/MsNetworkDependencyLib/readme/" title="Ms Network Dependency Lib" class="md-nav__link">
+      Ms Network Dependency Lib
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-8" type="checkbox" id="nav-9-3-8">
+    
+    <label class="md-nav__link" for="nav-9-3-8">
+      Shared Crypto Pkg
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-3-8">
+        Shared Crypto Pkg
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-8-1" type="checkbox" id="nav-9-3-8-1">
+    
+    <label class="md-nav__link" for="nav-9-3-8-1">
+      Modules
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-9-3-8-1">
+        Modules
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_plus/SharedCryptoPkg/Readme/" title="Readme" class="md-nav__link">
+      Readme
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_plus/SharedCryptoPkg/release_notes/" title="release notes" class="md-nav__link">
+      release notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_plus/SharedCryptoPkg/Driver/Mu-SharedCrypto/" title="Driver" class="md-nav__link">
+      Driver
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-9" type="checkbox" id="nav-9-3-9">
+    
+    <label class="md-nav__link" for="nav-9-3-9">
+      Uefi Testing Pkg
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-3-9">
+        Uefi Testing Pkg
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-9-1" type="checkbox" id="nav-9-3-9-1">
+    
+    <label class="md-nav__link" for="nav-9-3-9-1">
+      Modules
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-9-3-9-1">
+        Modules
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_plus/UefiTestingPkg/Readme/" title="Readme" class="md-nav__link">
+      Readme
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-9-1-2" type="checkbox" id="nav-9-3-9-1-2">
+    
+    <label class="md-nav__link" for="nav-9-3-9-1-2">
+      Audit Tests
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+      <label class="md-nav__title" for="nav-9-3-9-1-2">
+        Audit Tests
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-9-1-2-1" type="checkbox" id="nav-9-3-9-1-2-1">
+    
+    <label class="md-nav__link" for="nav-9-3-9-1-2-1">
+      DMAProtection Audit
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="6">
+      <label class="md-nav__title" for="nav-9-3-9-1-2-1">
+        DMAProtection Audit
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_plus/UefiTestingPkg/AuditTests/DMAProtectionAudit/UEFI/" title="UEFI" class="md-nav__link">
+      UEFI
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_plus/UefiTestingPkg/AuditTests/DMAProtectionAudit/Windows/Readme/" title="Windows" class="md-nav__link">
+      Windows
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_plus/UefiTestingPkg/AuditTests/PagingAudit/" title="Paging Audit" class="md-nav__link">
+      Paging Audit
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-9-1-3" type="checkbox" id="nav-9-3-9-1-3">
+    
+    <label class="md-nav__link" for="nav-9-3-9-1-3">
+      Functional System Tests
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+      <label class="md-nav__title" for="nav-9-3-9-1-3">
+        Functional System Tests
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_plus/UefiTestingPkg/FunctionalSystemTests/HeapGuardTest/Readme/" title="Heap Guard Test" class="md-nav__link">
+      Heap Guard Test
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_plus/UefiTestingPkg/FunctionalSystemTests/SmmPagingProtectionsTest/Readme/" title="Smm Paging Protections Test" class="md-nav__link">
+      Smm Paging Protections Test
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_plus/UefiTestingPkg/FunctionalSystemTests/VarPolicyUnitTestApp/Readme/" title="Var Policy Unit Test App" class="md-nav__link">
+      Var Policy Unit Test App
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-10" type="checkbox" id="nav-9-3-10">
+    
+    <label class="md-nav__link" for="nav-9-3-10">
+      Xml Support Pkg
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-3-10">
+        Xml Support Pkg
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_plus/XmlSupportPkg/ReadMe/" title="Modules" class="md-nav__link">
+      Modules
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-4" type="checkbox" id="nav-9-4">
+    
+    <label class="md-nav__link" for="nav-9-4">
+      mu silicon arm tiano
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-9-4">
+        mu silicon arm tiano
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_silicon_arm_tiano/RepoDetails/" title="Repo Details" class="md-nav__link">
+      Repo Details
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_silicon_arm_tiano/pytool/Readme/" title="pytool" class="md-nav__link">
+      pytool
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-4-3" type="checkbox" id="nav-9-4-3">
+    
+    <label class="md-nav__link" for="nav-9-4-3">
+      Arm Pkg
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-4-3">
+        Arm Pkg
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-4-3-1" type="checkbox" id="nav-9-4-3-1">
+    
+    <label class="md-nav__link" for="nav-9-4-3-1">
+      Modules
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-9-4-3-1">
+        Modules
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-4-3-1-1" type="checkbox" id="nav-9-4-3-1-1">
+    
+    <label class="md-nav__link" for="nav-9-4-3-1-1">
+      Library
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+      <label class="md-nav__title" for="nav-9-4-3-1-1">
+        Library
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-4-3-1-1-1" type="checkbox" id="nav-9-4-3-1-1-1">
+    
+    <label class="md-nav__link" for="nav-9-4-3-1-1-1">
+      Arm Soft Float Lib
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="6">
+      <label class="md-nav__title" for="nav-9-4-3-1-1-1">
+        Arm Soft Float Lib
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_silicon_arm_tiano/ArmPkg/Library/ArmSoftFloatLib/berkeley-softfloat-3/" title="berkeley-softfloat-3" class="md-nav__link">
+      berkeley-softfloat-3
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-5" type="checkbox" id="nav-9-5">
+    
+    <label class="md-nav__link" for="nav-9-5">
+      mu silicon intel tiano
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-9-5">
+        mu silicon intel tiano
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_silicon_intel_tiano/RepoDetails/" title="Repo Details" class="md-nav__link">
+      Repo Details
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_silicon_intel_tiano/pytool/Readme/" title="pytool" class="md-nav__link">
+      pytool
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-5-3" type="checkbox" id="nav-9-5-3">
+    
+    <label class="md-nav__link" for="nav-9-5-3">
+      Intel Fsp2Pkg
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-5-3">
+        Intel Fsp2Pkg
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-5-3-1" type="checkbox" id="nav-9-5-3-1">
+    
+    <label class="md-nav__link" for="nav-9-5-3-1">
+      Modules
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-9-5-3-1">
+        Modules
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_silicon_intel_tiano/IntelFsp2Pkg/Readme/" title="Readme" class="md-nav__link">
+      Readme
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-5-3-1-2" type="checkbox" id="nav-9-5-3-1-2">
+    
+    <label class="md-nav__link" for="nav-9-5-3-1-2">
+      Tools
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+      <label class="md-nav__title" for="nav-9-5-3-1-2">
+        Tools
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-5-3-1-2-1" type="checkbox" id="nav-9-5-3-1-2-1">
+    
+    <label class="md-nav__link" for="nav-9-5-3-1-2-1">
+      User Manuals
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="6">
+      <label class="md-nav__title" for="nav-9-5-3-1-2-1">
+        User Manuals
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_silicon_intel_tiano/IntelFsp2Pkg/Tools/UserManuals/GenCfgOptUserManual/" title="Gen Cfg Opt User Manual" class="md-nav__link">
+      Gen Cfg Opt User Manual
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_silicon_intel_tiano/IntelFsp2Pkg/Tools/UserManuals/PatchFvUserManual/" title="Patch Fv User Manual" class="md-nav__link">
+      Patch Fv User Manual
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_silicon_intel_tiano/IntelFsp2Pkg/Tools/UserManuals/SplitFspBinUserManual/" title="Split Fsp Bin User Manual" class="md-nav__link">
+      Split Fsp Bin User Manual
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-5-4" type="checkbox" id="nav-9-5-4">
+    
+    <label class="md-nav__link" for="nav-9-5-4">
+      Intel Fsp2Wrapper Pkg
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-5-4">
+        Intel Fsp2Wrapper Pkg
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_silicon_intel_tiano/IntelFsp2WrapperPkg/Readme/" title="Modules" class="md-nav__link">
+      Modules
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-5-5" type="checkbox" id="nav-9-5-5">
+    
+    <label class="md-nav__link" for="nav-9-5-5">
+      Intel Silicon Pkg
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-5-5">
+        Intel Silicon Pkg
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-5-5-1" type="checkbox" id="nav-9-5-5-1">
+    
+    <label class="md-nav__link" for="nav-9-5-5-1">
+      Modules
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-9-5-5-1">
+        Modules
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-5-5-1-1" type="checkbox" id="nav-9-5-5-1-1">
+    
+    <label class="md-nav__link" for="nav-9-5-5-1-1">
+      Feature
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+      <label class="md-nav__title" for="nav-9-5-5-1-1">
+        Feature
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-5-5-1-1-1" type="checkbox" id="nav-9-5-5-1-1-1">
+    
+    <label class="md-nav__link" for="nav-9-5-5-1-1-1">
+      Capsule
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="6">
+      <label class="md-nav__title" for="nav-9-5-5-1-1-1">
+        Capsule
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_silicon_intel_tiano/IntelSiliconPkg/Feature/Capsule/MicrocodeCapsulePdb/Readme/" title="Microcode Capsule Pdb" class="md-nav__link">
+      Microcode Capsule Pdb
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../../mu_silicon_intel_tiano/IntelSiliconPkg/Feature/Capsule/MicrocodeCapsuleTxt/Readme/" title="Microcode Capsule Txt" class="md-nav__link">
+      Microcode Capsule Txt
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-6" type="checkbox" id="nav-9-6" checked>
+    
+    <label class="md-nav__link" for="nav-9-6">
+      mu tiano plus
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-9-6">
+        mu tiano plus
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../RepoDetails/" title="Repo Details" class="md-nav__link">
+      Repo Details
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../pytool/Readme/" title="pytool" class="md-nav__link">
+      pytool
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-6-3" type="checkbox" id="nav-9-6-3" checked>
+    
+    <label class="md-nav__link" for="nav-9-6-3">
+      Crypto Pkg
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-6-3">
+        Crypto Pkg
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-6-3-1" type="checkbox" id="nav-9-6-3-1" checked>
+    
+    <label class="md-nav__link" for="nav-9-6-3-1">
+      Modules
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-9-6-3-1">
+        Modules
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-6-3-1-1" type="checkbox" id="nav-9-6-3-1-1" checked>
+    
+    <label class="md-nav__link" for="nav-9-6-3-1-1">
+      Library
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+      <label class="md-nav__title" for="nav-9-6-3-1-1">
+        Library
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-6-3-1-1-1" type="checkbox" id="nav-9-6-3-1-1-1" checked>
+    
+    <label class="md-nav__link" for="nav-9-6-3-1-1-1">
+      Openssl Lib
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="6">
+      <label class="md-nav__title" for="nav-9-6-3-1-1-1">
+        Openssl Lib
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-6-3-1-1-1-1" type="checkbox" id="nav-9-6-3-1-1-1-1" checked>
+    
+    <label class="md-nav__link" for="nav-9-6-3-1-1-1-1">
+      openssl
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="7">
+      <label class="md-nav__title" for="nav-9-6-3-1-1-1-1">
+        openssl
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../github/PULL_REQUEST_TEMPLATE/" title="github" class="md-nav__link">
+      github
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-6-3-1-1-1-1-2" type="checkbox" id="nav-9-6-3-1-1-1-1-2" checked>
+    
+    <label class="md-nav__link" for="nav-9-6-3-1-1-1-1-2">
+      boringssl
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="8">
+      <label class="md-nav__title" for="nav-9-6-3-1-1-1-1-2">
+        boringssl
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../API-CONVENTIONS/" title="API-CONVENTIONS" class="md-nav__link">
+      API-CONVENTIONS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../BUILDING/" title="BUILDING" class="md-nav__link">
+      BUILDING
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../CONTRIBUTING/" title="CONTRIBUTING" class="md-nav__link">
+      CONTRIBUTING
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../FUZZING/" title="FUZZING" class="md-nav__link">
+      FUZZING
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../INCORPORATING/" title="INCORPORATING" class="md-nav__link">
+      INCORPORATING
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../PORTING/" title="PORTING" class="md-nav__link">
+      PORTING
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../" title="README" class="md-nav__link">
+      README
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../STYLE/" title="STYLE" class="md-nav__link">
+      STYLE
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-6-3-1-1-1-1-2-9" type="checkbox" id="nav-9-6-3-1-1-1-1-2-9">
+    
+    <label class="md-nav__link" for="nav-9-6-3-1-1-1-1-2-9">
+      infra
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="9">
+      <label class="md-nav__title" for="nav-9-6-3-1-1-1-1-2-9">
+        infra
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../infra/config/" title="config" class="md-nav__link">
+      config
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-6-3-1-1-1-1-2-10" type="checkbox" id="nav-9-6-3-1-1-1-1-2-10">
+    
+    <label class="md-nav__link" for="nav-9-6-3-1-1-1-1-2-10">
+      ssl
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="9">
+      <label class="md-nav__title" for="nav-9-6-3-1-1-1-1-2-10">
+        ssl
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-6-3-1-1-1-1-2-10-1" type="checkbox" id="nav-9-6-3-1-1-1-1-2-10-1">
+    
+    <label class="md-nav__link" for="nav-9-6-3-1-1-1-1-2-10-1">
+      test
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="10">
+      <label class="md-nav__title" for="nav-9-6-3-1-1-1-1-2-10-1">
+        test
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../ssl/test/PORTING/" title="PORTING" class="md-nav__link">
+      PORTING
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../ssl/test/" title="README" class="md-nav__link">
+      README
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-6-3-1-1-1-1-2-11" type="checkbox" id="nav-9-6-3-1-1-1-1-2-11" checked>
+    
+    <label class="md-nav__link" for="nav-9-6-3-1-1-1-1-2-11">
+      third party
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="9">
+      <label class="md-nav__title" for="nav-9-6-3-1-1-1-1-2-11">
+        third party
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-6-3-1-1-1-1-2-11-1" type="checkbox" id="nav-9-6-3-1-1-1-1-2-11-1">
+    
+    <label class="md-nav__link" for="nav-9-6-3-1-1-1-1-2-11-1">
+      android-cmake
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="10">
+      <label class="md-nav__title" for="nav-9-6-3-1-1-1-1-2-11-1">
+        android-cmake
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../android-cmake/ndk_links/" title="ndk links" class="md-nav__link">
+      ndk links
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../android-cmake/" title="README" class="md-nav__link">
+      README
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-6-3-1-1-1-1-2-11-2" type="checkbox" id="nav-9-6-3-1-1-1-1-2-11-2" checked>
+    
+    <label class="md-nav__link" for="nav-9-6-3-1-1-1-1-2-11-2">
+      googletest
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="10">
+      <label class="md-nav__title" for="nav-9-6-3-1-1-1-1-2-11-2">
+        googletest
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../" title="README" class="md-nav__link">
+      README
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-6-3-1-1-1-1-2-11-2-2" type="checkbox" id="nav-9-6-3-1-1-1-1-2-11-2-2" checked>
+    
+    <label class="md-nav__link" for="nav-9-6-3-1-1-1-1-2-11-2-2">
+      docs
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="11">
+      <label class="md-nav__title" for="nav-9-6-3-1-1-1-1-2-11-2-2">
+        docs
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../AdvancedGuide/" title="Advanced Guide" class="md-nav__link">
+      Advanced Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../DevGuide/" title="Dev Guide" class="md-nav__link">
+      Dev Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Documentation/" title="Documentation" class="md-nav__link">
+      Documentation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../FAQ/" title="FAQ" class="md-nav__link">
+      FAQ
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Primer/" title="Primer" class="md-nav__link">
+      Primer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../PumpManual/" title="Pump Manual" class="md-nav__link">
+      Pump Manual
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Samples/" title="Samples" class="md-nav__link">
+      Samples
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../V1_5_AdvancedGuide/" title="V1 5 Advanced Guide" class="md-nav__link">
+      V1 5 Advanced Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../V1_5_Documentation/" title="V1 5 Documentation" class="md-nav__link">
+      V1 5 Documentation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../V1_5_FAQ/" title="V1 5 FAQ" class="md-nav__link">
+      V1 5 FAQ
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../V1_5_Primer/" title="V1 5 Primer" class="md-nav__link">
+      V1 5 Primer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../V1_5_PumpManual/" title="V1 5 Pump Manual" class="md-nav__link">
+      V1 5 Pump Manual
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../V1_5_XcodeGuide/" title="V1 5 Xcode Guide" class="md-nav__link">
+      V1 5 Xcode Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../V1_6_AdvancedGuide/" title="V1 6 Advanced Guide" class="md-nav__link">
+      V1 6 Advanced Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../V1_6_Documentation/" title="V1 6 Documentation" class="md-nav__link">
+      V1 6 Documentation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../V1_6_FAQ/" title="V1 6 FAQ" class="md-nav__link">
+      V1 6 FAQ
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../V1_6_Primer/" title="V1 6 Primer" class="md-nav__link">
+      V1 6 Primer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../V1_6_PumpManual/" title="V1 6 Pump Manual" class="md-nav__link">
+      V1 6 Pump Manual
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../V1_6_Samples/" title="V1 6 Samples" class="md-nav__link">
+      V1 6 Samples
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../V1_6_XcodeGuide/" title="V1 6 Xcode Guide" class="md-nav__link">
+      V1 6 Xcode Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../V1_7_AdvancedGuide/" title="V1 7 Advanced Guide" class="md-nav__link">
+      V1 7 Advanced Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../V1_7_Documentation/" title="V1 7 Documentation" class="md-nav__link">
+      V1 7 Documentation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../V1_7_FAQ/" title="V1 7 FAQ" class="md-nav__link">
+      V1 7 FAQ
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+    <a href="./" title="V1 7 Primer" class="md-nav__link md-nav__link--active">
+      V1 7 Primer
+    </a>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../V1_7_PumpManual/" title="V1 7 Pump Manual" class="md-nav__link">
+      V1 7 Pump Manual
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../V1_7_Samples/" title="V1 7 Samples" class="md-nav__link">
+      V1 7 Samples
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../V1_7_XcodeGuide/" title="V1 7 Xcode Guide" class="md-nav__link">
+      V1 7 Xcode Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../XcodeGuide/" title="Xcode Guide" class="md-nav__link">
+      Xcode Guide
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../fuzz/" title="fuzz" class="md-nav__link">
+      fuzz
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-6-3-1-1-1-1-4" type="checkbox" id="nav-9-6-3-1-1-1-1-4">
+    
+    <label class="md-nav__link" for="nav-9-6-3-1-1-1-1-4">
+      pyca-cryptography
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="8">
+      <label class="md-nav__title" for="nav-9-6-3-1-1-1-1-4">
+        pyca-cryptography
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-6-3-1-1-1-1-4-1" type="checkbox" id="nav-9-6-3-1-1-1-1-4-1">
+    
+    <label class="md-nav__link" for="nav-9-6-3-1-1-1-1-4-1">
+      github
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="9">
+      <label class="md-nav__title" for="nav-9-6-3-1-1-1-1-4-1">
+        github
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../pyca-cryptography/github/ISSUE_TEMPLATE/openssl-release/" title="ISSUE TEMPLATE" class="md-nav__link">
+      ISSUE TEMPLATE
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../test/READMEssltest/" title="test" class="md-nav__link">
+      test
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-6-3-1-2" type="checkbox" id="nav-9-6-3-1-2">
+    
+    <label class="md-nav__link" for="nav-9-6-3-1-2">
+      Unit Tests
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+      <label class="md-nav__title" for="nav-9-6-3-1-2">
+        Unit Tests
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../UnitTests/VerifyPkcs7EkuUnitTestApp/readme/" title="Verify Pkcs7Eku Unit Test App" class="md-nav__link">
+      Verify Pkcs7Eku Unit Test App
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-6-4" type="checkbox" id="nav-9-6-4">
+    
+    <label class="md-nav__link" for="nav-9-6-4">
+      Embedded Pkg
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-6-4">
+        Embedded Pkg
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-6-4-1" type="checkbox" id="nav-9-6-4-1">
+    
+    <label class="md-nav__link" for="nav-9-6-4-1">
+      Modules
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-9-6-4-1">
+        Modules
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-6-4-1-1" type="checkbox" id="nav-9-6-4-1-1">
+    
+    <label class="md-nav__link" for="nav-9-6-4-1-1">
+      Scripts
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+      <label class="md-nav__title" for="nav-9-6-4-1-1">
+        Scripts
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../EmbeddedPkg/Scripts/LauterbachT32/Readme/" title="Lauterbach T32" class="md-nav__link">
+      Lauterbach T32
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-6-5" type="checkbox" id="nav-9-6-5">
+    
+    <label class="md-nav__link" for="nav-9-6-5">
+      Fmp Device Pkg
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-6-5">
+        Fmp Device Pkg
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-6-5-1" type="checkbox" id="nav-9-6-5-1">
+    
+    <label class="md-nav__link" for="nav-9-6-5-1">
+      Modules
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-9-6-5-1">
+        Modules
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../FmpDevicePkg/FmpDxe/" title="Fmp Dxe" class="md-nav__link">
+      Fmp Dxe
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/microsoft/mu/edit/master/docs/dyn/mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/third_party/googletest/docs/V1_7_Primer.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="introduction-why-google-c-testing-framework">Introduction: Why Google C++ Testing Framework?<a class="headerlink" href="#introduction-why-google-c-testing-framework" title="Permanent link">&para;</a></h1>
+<p><em>Google C++ Testing Framework</em> helps you write better C++ tests.</p>
+<p>No matter whether you work on Linux, Windows, or a Mac, if you write C++ code,
+Google Test can help you.</p>
+<p>So what makes a good test, and how does Google C++ Testing Framework fit in? We believe:
+  1. Tests should be <em>independent</em> and <em>repeatable</em>. It's a pain to debug a test that succeeds or fails as a result of other tests.  Google C++ Testing Framework isolates the tests by running each of them on a different object. When a test fails, Google C++ Testing Framework allows you to run it in isolation for quick debugging.
+  1. Tests should be well <em>organized</em> and reflect the structure of the tested code.  Google C++ Testing Framework groups related tests into test cases that can share data and subroutines. This common pattern is easy to recognize and makes tests easy to maintain. Such consistency is especially helpful when people switch projects and start to work on a new code base.
+  1. Tests should be <em>portable</em> and <em>reusable</em>. The open-source community has a lot of code that is platform-neutral, its tests should also be platform-neutral.  Google C++ Testing Framework works on different OSes, with different compilers (gcc, MSVC, and others), with or without exceptions, so Google C++ Testing Framework tests can easily work with a variety of configurations.  (Note that the current release only contains build scripts for Linux - we are actively working on scripts for other platforms.)
+  1. When tests fail, they should provide as much <em>information</em> about the problem as possible. Google C++ Testing Framework doesn't stop at the first test failure. Instead, it only stops the current test and continues with the next. You can also set up tests that report non-fatal failures after which the current test continues. Thus, you can detect and fix multiple bugs in a single run-edit-compile cycle.
+  1. The testing framework should liberate test writers from housekeeping chores and let them focus on the test <em>content</em>.  Google C++ Testing Framework automatically keeps track of all tests defined, and doesn't require the user to enumerate them in order to run them.
+  1. Tests should be <em>fast</em>. With Google C++ Testing Framework, you can reuse shared resources across tests and pay for the set-up/tear-down only once, without making tests depend on each other.</p>
+<p>Since Google C++ Testing Framework is based on the popular xUnit
+architecture, you'll feel right at home if you've used JUnit or PyUnit before.
+If not, it will take you about 10 minutes to learn the basics and get started.
+So let's go!</p>
+<p><em>Note:</em> We sometimes refer to Google C++ Testing Framework informally
+as <em>Google Test</em>.</p>
+<h1 id="setting-up-a-new-test-project">Setting up a New Test Project<a class="headerlink" href="#setting-up-a-new-test-project" title="Permanent link">&para;</a></h1>
+<p>To write a test program using Google Test, you need to compile Google
+Test into a library and link your test with it.  We provide build
+files for some popular build systems: <code class="codehilite"><span class="err">msvc/</span></code> for Visual Studio,
+<code class="codehilite"><span class="err">xcode/</span></code> for Mac Xcode, <code class="codehilite"><span class="err">make/</span></code> for GNU make, <code class="codehilite"><span class="err">codegear/</span></code> for Borland
+C++ Builder, and the autotools script (deprecated) and
+<code class="codehilite"><span class="err">CMakeLists.txt</span></code> for CMake (recommended) in the Google Test root
+directory.  If your build system is not on this list, you can take a
+look at <code class="codehilite"><span class="err">make/Makefile</span></code> to learn how Google Test should be compiled
+(basically you want to compile <code class="codehilite"><span class="err">src/gtest-all.cc</span></code> with <code class="codehilite"><span class="err">GTEST_ROOT</span></code>
+and <code class="codehilite"><span class="err">GTEST_ROOT/include</span></code> in the header search path, where <code class="codehilite"><span class="err">GTEST_ROOT</span></code>
+is the Google Test root directory).</p>
+<p>Once you are able to compile the Google Test library, you should
+create a project or build target for your test program.  Make sure you
+have <code class="codehilite"><span class="err">GTEST_ROOT/include</span></code> in the header search path so that the
+compiler can find <code class="codehilite"><span class="err">&quot;gtest/gtest.h&quot;</span></code> when compiling your test.  Set up
+your test project to link with the Google Test library (for example,
+in Visual Studio, this is done by adding a dependency on
+<code class="codehilite"><span class="err">gtest.vcproj</span></code>).</p>
+<p>If you still have questions, take a look at how Google Test's own
+tests are built and use them as examples.</p>
+<h1 id="basic-concepts">Basic Concepts<a class="headerlink" href="#basic-concepts" title="Permanent link">&para;</a></h1>
+<p>When using Google Test, you start by writing <em>assertions</em>, which are statements
+that check whether a condition is true. An assertion's result can be <em>success</em>,
+<em>nonfatal failure</em>, or <em>fatal failure</em>. If a fatal failure occurs, it aborts
+the current function; otherwise the program continues normally.</p>
+<p><em>Tests</em> use assertions to verify the tested code's behavior. If a test crashes
+or has a failed assertion, then it <em>fails</em>; otherwise it <em>succeeds</em>.</p>
+<p>A <em>test case</em> contains one or many tests. You should group your tests into test
+cases that reflect the structure of the tested code. When multiple tests in a
+test case need to share common objects and subroutines, you can put them into a
+<em>test fixture</em> class.</p>
+<p>A <em>test program</em> can contain multiple test cases.</p>
+<p>We'll now explain how to write a test program, starting at the individual
+assertion level and building up to tests and test cases.</p>
+<h1 id="assertions">Assertions<a class="headerlink" href="#assertions" title="Permanent link">&para;</a></h1>
+<p>Google Test assertions are macros that resemble function calls. You test a
+class or function by making assertions about its behavior. When an assertion
+fails, Google Test prints the assertion's source file and line number location,
+along with a failure message. You may also supply a custom failure message
+which will be appended to Google Test's message.</p>
+<p>The assertions come in pairs that test the same thing but have different
+effects on the current function. <code class="codehilite"><span class="err">ASSERT_*</span></code> versions generate fatal failures
+when they fail, and <strong>abort the current function</strong>. <code class="codehilite"><span class="err">EXPECT_*</span></code> versions generate
+nonfatal failures, which don't abort the current function. Usually <code class="codehilite"><span class="err">EXPECT_*</span></code>
+are preferred, as they allow more than one failures to be reported in a test.
+However, you should use <code class="codehilite"><span class="err">ASSERT_*</span></code> if it doesn't make sense to continue when
+the assertion in question fails.</p>
+<p>Since a failed <code class="codehilite"><span class="err">ASSERT_*</span></code> returns from the current function immediately,
+possibly skipping clean-up code that comes after it, it may cause a space leak.
+Depending on the nature of the leak, it may or may not be worth fixing - so
+keep this in mind if you get a heap checker error in addition to assertion
+errors.</p>
+<p>To provide a custom failure message, simply stream it into the macro using the
+<code class="codehilite"><span class="err">&lt;&lt;</span></code> operator, or a sequence of such operators. An example:
+<div class="codehilite"><pre><span></span><code><span class="n">ASSERT_EQ</span><span class="p">(</span><span class="n">x</span><span class="p">.</span><span class="k">size</span><span class="p">(),</span><span class="w"> </span><span class="n">y</span><span class="p">.</span><span class="k">size</span><span class="p">())</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="ss">&quot;Vectors x and y are of unequal length&quot;</span><span class="p">;</span><span class="w"></span>
+
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="nc">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">x</span><span class="p">.</span><span class="k">size</span><span class="p">();</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="err">{</span><span class="w"></span>
+<span class="w">  </span><span class="n">EXPECT_EQ</span><span class="p">(</span><span class="n">x</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="ss">&quot;Vectors x and y differ at index &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w"></span>
+<span class="err">}</span><span class="w"></span>
+</code></pre></div></p>
+<p>Anything that can be streamed to an <code class="codehilite"><span class="err">ostream</span></code> can be streamed to an assertion
+macro--in particular, C strings and <code class="codehilite"><span class="err">string</span></code> objects. If a wide string
+(<code class="codehilite"><span class="err">wchar_t*</span></code>, <code class="codehilite"><span class="err">TCHAR*</span></code> in <code class="codehilite"><span class="err">UNICODE</span></code> mode on Windows, or <code class="codehilite"><span class="c">std::wstring</span></code>) is
+streamed to an assertion, it will be translated to UTF-8 when printed.</p>
+<h2 id="basic-assertions">Basic Assertions<a class="headerlink" href="#basic-assertions" title="Permanent link">&para;</a></h2>
+<p>These assertions do basic true/false condition testing.
+| <strong>Fatal assertion</strong> | <strong>Nonfatal assertion</strong> | <strong>Verifies</strong> |
+|:--------------------|:-----------------------|:-------------|
+| <code class="codehilite"><span class="err">ASSERT_TRUE(</span></code><em>condition</em><code class="codehilite"><span class="err">)</span></code>;  | <code class="codehilite"><span class="err">EXPECT_TRUE(</span></code><em>condition</em><code class="codehilite"><span class="err">)</span></code>;   | <em>condition</em> is true |
+| <code class="codehilite"><span class="err">ASSERT_FALSE(</span></code><em>condition</em><code class="codehilite"><span class="err">)</span></code>; | <code class="codehilite"><span class="err">EXPECT_FALSE(</span></code><em>condition</em><code class="codehilite"><span class="err">)</span></code>;  | <em>condition</em> is false |</p>
+<p>Remember, when they fail, <code class="codehilite"><span class="err">ASSERT_*</span></code> yields a fatal failure and
+returns from the current function, while <code class="codehilite"><span class="err">EXPECT_*</span></code> yields a nonfatal
+failure, allowing the function to continue running. In either case, an
+assertion failure means its containing test fails.</p>
+<p><em>Availability</em>: Linux, Windows, Mac.</p>
+<h2 id="binary-comparison">Binary Comparison<a class="headerlink" href="#binary-comparison" title="Permanent link">&para;</a></h2>
+<p>This section describes assertions that compare two values.</p>
+<table>
+<thead>
+<tr>
+<th align="left"><strong>Fatal assertion</strong></th>
+<th align="left"><strong>Nonfatal assertion</strong></th>
+<th align="left"><strong>Verifies</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code class="codehilite"><span class="err">ASSERT_EQ(</span></code><em>expected</em><code class="codehilite"><span class="err">,</span></code><em>actual</em><code class="codehilite"><span class="err">);</span></code></td>
+<td align="left"><code class="codehilite"><span class="err">EXPECT_EQ(</span></code><em>expected</em><code class="codehilite"><span class="err">,</span></code><em>actual</em><code class="codehilite"><span class="err">);</span></code></td>
+<td align="left"><em>expected</em> <code class="codehilite"><span class="err">==</span></code> <em>actual</em></td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="err">ASSERT_NE(</span></code><em>val1</em><code class="codehilite"><span class="err">,</span></code><em>val2</em><code class="codehilite"><span class="err">);</span></code></td>
+<td align="left"><code class="codehilite"><span class="err">EXPECT_NE(</span></code><em>val1</em><code class="codehilite"><span class="err">,</span></code><em>val2</em><code class="codehilite"><span class="err">);</span></code></td>
+<td align="left"><em>val1</em> <code class="codehilite"><span class="err">!=</span></code> <em>val2</em></td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="err">ASSERT_LT(</span></code><em>val1</em><code class="codehilite"><span class="err">,</span></code><em>val2</em><code class="codehilite"><span class="err">);</span></code></td>
+<td align="left"><code class="codehilite"><span class="err">EXPECT_LT(</span></code><em>val1</em><code class="codehilite"><span class="err">,</span></code><em>val2</em><code class="codehilite"><span class="err">);</span></code></td>
+<td align="left"><em>val1</em> <code class="codehilite"><span class="err">&lt;</span></code> <em>val2</em></td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="err">ASSERT_LE(</span></code><em>val1</em><code class="codehilite"><span class="err">,</span></code><em>val2</em><code class="codehilite"><span class="err">);</span></code></td>
+<td align="left"><code class="codehilite"><span class="err">EXPECT_LE(</span></code><em>val1</em><code class="codehilite"><span class="err">,</span></code><em>val2</em><code class="codehilite"><span class="err">);</span></code></td>
+<td align="left"><em>val1</em> <code class="codehilite"><span class="err">&lt;=</span></code> <em>val2</em></td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="err">ASSERT_GT(</span></code><em>val1</em><code class="codehilite"><span class="err">,</span></code><em>val2</em><code class="codehilite"><span class="err">);</span></code></td>
+<td align="left"><code class="codehilite"><span class="err">EXPECT_GT(</span></code><em>val1</em><code class="codehilite"><span class="err">,</span></code><em>val2</em><code class="codehilite"><span class="err">);</span></code></td>
+<td align="left"><em>val1</em> <code class="codehilite"><span class="err">&gt;</span></code> <em>val2</em></td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="err">ASSERT_GE(</span></code><em>val1</em><code class="codehilite"><span class="err">,</span></code><em>val2</em><code class="codehilite"><span class="err">);</span></code></td>
+<td align="left"><code class="codehilite"><span class="err">EXPECT_GE(</span></code><em>val1</em><code class="codehilite"><span class="err">,</span></code><em>val2</em><code class="codehilite"><span class="err">);</span></code></td>
+<td align="left"><em>val1</em> <code class="codehilite"><span class="err">&gt;=</span></code> <em>val2</em></td>
+</tr>
+</tbody>
+</table>
+<p>In the event of a failure, Google Test prints both <em>val1</em> and <em>val2</em>
+. In <code class="codehilite"><span class="err">ASSERT_EQ*</span></code> and <code class="codehilite"><span class="err">EXPECT_EQ*</span></code> (and all other equality assertions
+we'll introduce later), you should put the expression you want to test
+in the position of <em>actual</em>, and put its expected value in <em>expected</em>,
+as Google Test's failure messages are optimized for this convention.</p>
+<p>Value arguments must be comparable by the assertion's comparison
+operator or you'll get a compiler error.  We used to require the
+arguments to support the <code class="codehilite"><span class="err">&lt;&lt;</span></code> operator for streaming to an <code class="codehilite"><span class="err">ostream</span></code>,
+but it's no longer necessary since v1.6.0 (if <code class="codehilite"><span class="err">&lt;&lt;</span></code> is supported, it
+will be called to print the arguments when the assertion fails;
+otherwise Google Test will attempt to print them in the best way it
+can. For more details and how to customize the printing of the
+arguments, see this Google Mock <a href="../../googlemock/docs/CookBook.md#teaching-google-mock-how-to-print-your-values">recipe</a>.).</p>
+<p>These assertions can work with a user-defined type, but only if you define the
+corresponding comparison operator (e.g. <code class="codehilite"><span class="err">==</span></code>, <code class="codehilite"><span class="err">&lt;</span></code>, etc).  If the corresponding
+operator is defined, prefer using the <code class="codehilite"><span class="err">ASSERT_*()</span></code> macros because they will
+print out not only the result of the comparison, but the two operands as well.</p>
+<p>Arguments are always evaluated exactly once. Therefore, it's OK for the
+arguments to have side effects. However, as with any ordinary C/C++ function,
+the arguments' evaluation order is undefined (i.e. the compiler is free to
+choose any order) and your code should not depend on any particular argument
+evaluation order.</p>
+<p><code class="codehilite"><span class="err">ASSERT_EQ()</span></code> does pointer equality on pointers. If used on two C strings, it
+tests if they are in the same memory location, not if they have the same value.
+Therefore, if you want to compare C strings (e.g. <code class="codehilite"><span class="err">const char*</span></code>) by value, use
+<code class="codehilite"><span class="err">ASSERT_STREQ()</span></code> , which will be described later on. In particular, to assert
+that a C string is <code class="codehilite"><span class="err">NULL</span></code>, use <code class="codehilite"><span class="err">ASSERT_STREQ(NULL, c_string)</span></code> . However, to
+compare two <code class="codehilite"><span class="err">string</span></code> objects, you should use <code class="codehilite"><span class="err">ASSERT_EQ</span></code>.</p>
+<p>Macros in this section work with both narrow and wide string objects (<code class="codehilite"><span class="err">string</span></code>
+and <code class="codehilite"><span class="err">wstring</span></code>).</p>
+<p><em>Availability</em>: Linux, Windows, Mac.</p>
+<h2 id="string-comparison">String Comparison<a class="headerlink" href="#string-comparison" title="Permanent link">&para;</a></h2>
+<p>The assertions in this group compare two <strong>C strings</strong>. If you want to compare
+two <code class="codehilite"><span class="err">string</span></code> objects, use <code class="codehilite"><span class="err">EXPECT_EQ</span></code>, <code class="codehilite"><span class="err">EXPECT_NE</span></code>, and etc instead.</p>
+<table>
+<thead>
+<tr>
+<th align="left"><strong>Fatal assertion</strong></th>
+<th align="left"><strong>Nonfatal assertion</strong></th>
+<th align="left"><strong>Verifies</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code class="codehilite"><span class="err">ASSERT_STREQ(</span></code><em>expected_str</em><code class="codehilite"><span class="err">,</span></code><em>actual_str</em><code class="codehilite"><span class="err">);</span></code></td>
+<td align="left"><code class="codehilite"><span class="err">EXPECT_STREQ(</span></code><em>expected_str</em><code class="codehilite"><span class="err">,</span></code><em>actual_str</em><code class="codehilite"><span class="err">);</span></code></td>
+<td align="left">the two C strings have the same content</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="err">ASSERT_STRNE(</span></code><em>str1</em><code class="codehilite"><span class="err">,</span></code><em>str2</em><code class="codehilite"><span class="err">);</span></code></td>
+<td align="left"><code class="codehilite"><span class="err">EXPECT_STRNE(</span></code><em>str1</em><code class="codehilite"><span class="err">,</span></code><em>str2</em><code class="codehilite"><span class="err">);</span></code></td>
+<td align="left">the two C strings have different content</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="err">ASSERT_STRCASEEQ(</span></code><em>expected_str</em><code class="codehilite"><span class="err">,</span></code><em>actual_str</em><code class="codehilite"><span class="err">);</span></code></td>
+<td align="left"><code class="codehilite"><span class="err">EXPECT_STRCASEEQ(</span></code><em>expected_str</em><code class="codehilite"><span class="err">,</span></code><em>actual_str</em><code class="codehilite"><span class="err">);</span></code></td>
+<td align="left">the two C strings have the same content, ignoring case</td>
+</tr>
+<tr>
+<td align="left"><code class="codehilite"><span class="err">ASSERT_STRCASENE(</span></code><em>str1</em><code class="codehilite"><span class="err">,</span></code><em>str2</em><code class="codehilite"><span class="err">);</span></code></td>
+<td align="left"><code class="codehilite"><span class="err">EXPECT_STRCASENE(</span></code><em>str1</em><code class="codehilite"><span class="err">,</span></code><em>str2</em><code class="codehilite"><span class="err">);</span></code></td>
+<td align="left">the two C strings have different content, ignoring case</td>
+</tr>
+</tbody>
+</table>
+<p>Note that "CASE" in an assertion name means that case is ignored.</p>
+<p><code class="codehilite"><span class="err">*STREQ*</span></code> and <code class="codehilite"><span class="err">*STRNE*</span></code> also accept wide C strings (<code class="codehilite"><span class="err">wchar_t*</span></code>). If a
+comparison of two wide strings fails, their values will be printed as UTF-8
+narrow strings.</p>
+<p>A <code class="codehilite"><span class="err">NULL</span></code> pointer and an empty string are considered <em>different</em>.</p>
+<p><em>Availability</em>: Linux, Windows, Mac.</p>
+<p>See also: For more string comparison tricks (substring, prefix, suffix, and
+regular expression matching, for example), see the <a href="../V1_7_AdvancedGuide/">Advanced Google Test Guide</a>.</p>
+<h1 id="simple-tests">Simple Tests<a class="headerlink" href="#simple-tests" title="Permanent link">&para;</a></h1>
+<p>To create a test:
+  1. Use the <code class="codehilite"><span class="err">TEST()</span></code> macro to define and name a test function, These are ordinary C++ functions that don't return a value.
+  1. In this function, along with any valid C++ statements you want to include, use the various Google Test assertions to check values.
+  1. The test's result is determined by the assertions; if any assertion in the test fails (either fatally or non-fatally), or if the test crashes, the entire test fails. Otherwise, it succeeds.</p>
+<div class="codehilite"><pre><span></span><code><span class="err">TEST(test_case_name, test_name) {</span>
+<span class="err"> ... test body ...</span>
+<span class="err">}</span>
+</code></pre></div>
+
+<p><code class="codehilite"><span class="err">TEST()</span></code> arguments go from general to specific. The <em>first</em> argument is the
+name of the test case, and the <em>second</em> argument is the test's name within the
+test case. Both names must be valid C++ identifiers, and they should not contain underscore (<code class="codehilite"><span class="err">_</span></code>). A test's <em>full name</em> consists of its containing test case and its
+individual name. Tests from different test cases can have the same individual
+name.</p>
+<p>For example, let's take a simple integer function:
+<div class="codehilite"><pre><span></span><code><span class="err">int Factorial(int n); // Returns the factorial of n</span>
+</code></pre></div></p>
+<p>A test case for this function might look like:
+<div class="codehilite"><pre><span></span><code><span class="o">//</span> <span class="n">Tests</span> <span class="n">factorial</span> <span class="k">of</span> <span class="mi">0</span><span class="p">.</span>
+<span class="n">TEST</span><span class="p">(</span><span class="n">FactorialTest</span><span class="p">,</span> <span class="n">HandlesZeroInput</span><span class="p">)</span> <span class="err">{</span>
+  <span class="n">EXPECT_EQ</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">Factorial</span><span class="p">(</span><span class="mi">0</span><span class="p">));</span>
+<span class="err">}</span>
+
+<span class="o">//</span> <span class="n">Tests</span> <span class="n">factorial</span> <span class="k">of</span> <span class="n">positive</span> <span class="n">numbers</span><span class="p">.</span>
+<span class="n">TEST</span><span class="p">(</span><span class="n">FactorialTest</span><span class="p">,</span> <span class="n">HandlesPositiveInput</span><span class="p">)</span> <span class="err">{</span>
+  <span class="n">EXPECT_EQ</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">Factorial</span><span class="p">(</span><span class="mi">1</span><span class="p">));</span>
+  <span class="n">EXPECT_EQ</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">Factorial</span><span class="p">(</span><span class="mi">2</span><span class="p">));</span>
+  <span class="n">EXPECT_EQ</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="n">Factorial</span><span class="p">(</span><span class="mi">3</span><span class="p">));</span>
+  <span class="n">EXPECT_EQ</span><span class="p">(</span><span class="mi">40320</span><span class="p">,</span> <span class="n">Factorial</span><span class="p">(</span><span class="mi">8</span><span class="p">));</span>
+<span class="err">}</span>
+</code></pre></div></p>
+<p>Google Test groups the test results by test cases, so logically-related tests
+should be in the same test case; in other words, the first argument to their
+<code class="codehilite"><span class="err">TEST()</span></code> should be the same. In the above example, we have two tests,
+<code class="codehilite"><span class="err">HandlesZeroInput</span></code> and <code class="codehilite"><span class="err">HandlesPositiveInput</span></code>, that belong to the same test
+case <code class="codehilite"><span class="err">FactorialTest</span></code>.</p>
+<p><em>Availability</em>: Linux, Windows, Mac.</p>
+<h1 id="test-fixtures-using-the-same-data-configuration-for-multiple-tests">Test Fixtures: Using the Same Data Configuration for Multiple Tests<a class="headerlink" href="#test-fixtures-using-the-same-data-configuration-for-multiple-tests" title="Permanent link">&para;</a></h1>
+<p>If you find yourself writing two or more tests that operate on similar data,
+you can use a <em>test fixture</em>. It allows you to reuse the same configuration of
+objects for several different tests.</p>
+<p>To create a fixture, just:
+  1. Derive a class from <code class="codehilite"><span class="err">::testing::Test</span></code> . Start its body with <code class="codehilite"><span class="c">protected:</span></code> or <code class="codehilite"><span class="c">public:</span></code> as we'll want to access fixture members from sub-classes.
+  1. Inside the class, declare any objects you plan to use.
+  1. If necessary, write a default constructor or <code class="codehilite"><span class="err">SetUp()</span></code> function to prepare the objects for each test. A common mistake is to spell <code class="codehilite"><span class="err">SetUp()</span></code> as <code class="codehilite"><span class="err">Setup()</span></code> with a small <code class="codehilite"><span class="err">u</span></code> - don't let that happen to you.
+  1. If necessary, write a destructor or <code class="codehilite"><span class="err">TearDown()</span></code> function to release any resources you allocated in <code class="codehilite"><span class="err">SetUp()</span></code> . To learn when you should use the constructor/destructor and when you should use <code class="codehilite"><span class="err">SetUp()/TearDown()</span></code>, read this <a href="../V1_7_FAQ/#should-i-use-the-constructordestructor-of-the-test-fixture-or-the-set-uptear-down-function">FAQ entry</a>.
+  1. If needed, define subroutines for your tests to share.</p>
+<p>When using a fixture, use <code class="codehilite"><span class="err">TEST_F()</span></code> instead of <code class="codehilite"><span class="err">TEST()</span></code> as it allows you to
+access objects and subroutines in the test fixture:
+<div class="codehilite"><pre><span></span><code><span class="err">TEST_F(test_case_name, test_name) {</span>
+<span class="err"> ... test body ...</span>
+<span class="err">}</span>
+</code></pre></div></p>
+<p>Like <code class="codehilite"><span class="err">TEST()</span></code>, the first argument is the test case name, but for <code class="codehilite"><span class="err">TEST_F()</span></code>
+this must be the name of the test fixture class. You've probably guessed: <code class="codehilite"><span class="err">_F</span></code>
+is for fixture.</p>
+<p>Unfortunately, the C++ macro system does not allow us to create a single macro
+that can handle both types of tests. Using the wrong macro causes a compiler
+error.</p>
+<p>Also, you must first define a test fixture class before using it in a
+<code class="codehilite"><span class="err">TEST_F()</span></code>, or you'll get the compiler error "<code class="codehilite"><span class="err">virtual outside class</span><span class="err">declaration</span></code>".</p>
+<p>For each test defined with <code class="codehilite"><span class="err">TEST_F()</span></code>, Google Test will:
+  1. Create a <em>fresh</em> test fixture at runtime
+  1. Immediately initialize it via <code class="codehilite"><span class="err">SetUp()</span></code> ,
+  1. Run the test
+  1. Clean up by calling <code class="codehilite"><span class="err">TearDown()</span></code>
+  1. Delete the test fixture.  Note that different tests in the same test case have different test fixture objects, and Google Test always deletes a test fixture before it creates the next one. Google Test does not reuse the same test fixture for multiple tests. Any changes one test makes to the fixture do not affect other tests.</p>
+<p>As an example, let's write tests for a FIFO queue class named <code class="codehilite"><span class="err">Queue</span></code>, which
+has the following interface:
+<div class="codehilite"><pre><span></span><code><span class="err">template &lt;typename E&gt; // E is the element type.</span>
+<span class="err">class Queue {</span>
+<span class="err"> public:</span>
+<span class="err">  Queue();</span>
+<span class="err">  void Enqueue(const E&amp; element);</span>
+<span class="err">  E* Dequeue(); // Returns NULL if the queue is empty.</span>
+<span class="err">  size_t size() const;</span>
+<span class="err">  ...</span>
+<span class="err">};</span>
+</code></pre></div></p>
+<p>First, define a fixture class. By convention, you should give it the name
+<code class="codehilite"><span class="err">FooTest</span></code> where <code class="codehilite"><span class="err">Foo</span></code> is the class being tested.
+<div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="n">QueueTest</span> : <span class="n">public</span> ::<span class="n">testing::Test</span> {
+ <span class="n">protected:</span>
+  <span class="n">virtual</span> <span class="n">void</span> <span class="n">SetUp</span>() {
+    <span class="n">q1_</span>.<span class="n">Enqueue</span>(<span class="mi">1</span>);
+    <span class="n">q2_</span>.<span class="n">Enqueue</span>(<span class="mi">2</span>);
+    <span class="n">q2_</span>.<span class="n">Enqueue</span>(<span class="mi">3</span>);
+  }
+
+  // <span class="n">virtual</span> <span class="n">void</span> <span class="n">TearDown</span>() {}
+
+  <span class="n">Queue</span><span class="s">&lt;int&gt;</span> <span class="n">q0_</span>;
+  <span class="n">Queue</span><span class="s">&lt;int&gt;</span> <span class="n">q1_</span>;
+  <span class="n">Queue</span><span class="s">&lt;int&gt;</span> <span class="n">q2_</span>;
+};
+</code></pre></div></p>
+<p>In this case, <code class="codehilite"><span class="err">TearDown()</span></code> is not needed since we don't have to clean up after
+each test, other than what's already done by the destructor.</p>
+<p>Now we'll write tests using <code class="codehilite"><span class="err">TEST_F()</span></code> and this fixture.
+<div class="codehilite"><pre><span></span><code><span class="n">TEST_F</span><span class="p">(</span><span class="n">QueueTest</span><span class="p">,</span> <span class="n">IsEmptyInitially</span><span class="p">)</span> <span class="err">{</span>
+  <span class="n">EXPECT_EQ</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">q0_</span><span class="p">.</span><span class="k">size</span><span class="p">());</span>
+<span class="err">}</span>
+
+<span class="n">TEST_F</span><span class="p">(</span><span class="n">QueueTest</span><span class="p">,</span> <span class="n">DequeueWorks</span><span class="p">)</span> <span class="err">{</span>
+  <span class="nb">int</span><span class="o">*</span> <span class="n">n</span> <span class="o">=</span> <span class="n">q0_</span><span class="p">.</span><span class="n">Dequeue</span><span class="p">();</span>
+  <span class="n">EXPECT_EQ</span><span class="p">(</span><span class="k">NULL</span><span class="p">,</span> <span class="n">n</span><span class="p">);</span>
+
+  <span class="n">n</span> <span class="o">=</span> <span class="n">q1_</span><span class="p">.</span><span class="n">Dequeue</span><span class="p">();</span>
+  <span class="n">ASSERT_TRUE</span><span class="p">(</span><span class="n">n</span> <span class="o">!=</span> <span class="k">NULL</span><span class="p">);</span>
+  <span class="n">EXPECT_EQ</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">*</span><span class="n">n</span><span class="p">);</span>
+  <span class="n">EXPECT_EQ</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">q1_</span><span class="p">.</span><span class="k">size</span><span class="p">());</span>
+  <span class="k">delete</span> <span class="n">n</span><span class="p">;</span>
+
+  <span class="n">n</span> <span class="o">=</span> <span class="n">q2_</span><span class="p">.</span><span class="n">Dequeue</span><span class="p">();</span>
+  <span class="n">ASSERT_TRUE</span><span class="p">(</span><span class="n">n</span> <span class="o">!=</span> <span class="k">NULL</span><span class="p">);</span>
+  <span class="n">EXPECT_EQ</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="o">*</span><span class="n">n</span><span class="p">);</span>
+  <span class="n">EXPECT_EQ</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">q2_</span><span class="p">.</span><span class="k">size</span><span class="p">());</span>
+  <span class="k">delete</span> <span class="n">n</span><span class="p">;</span>
+<span class="err">}</span>
+</code></pre></div></p>
+<p>The above uses both <code class="codehilite"><span class="err">ASSERT_*</span></code> and <code class="codehilite"><span class="err">EXPECT_*</span></code> assertions. The rule of thumb is
+to use <code class="codehilite"><span class="err">EXPECT_*</span></code> when you want the test to continue to reveal more errors
+after the assertion failure, and use <code class="codehilite"><span class="err">ASSERT_*</span></code> when continuing after failure
+doesn't make sense. For example, the second assertion in the <code class="codehilite"><span class="err">Dequeue</span></code> test is
+<code class="codehilite"><span class="err">ASSERT_TRUE(n != NULL)</span></code>, as we need to dereference the pointer <code class="codehilite"><span class="err">n</span></code> later,
+which would lead to a segfault when <code class="codehilite"><span class="err">n</span></code> is <code class="codehilite"><span class="err">NULL</span></code>.</p>
+<p>When these tests run, the following happens:
+  1. Google Test constructs a <code class="codehilite"><span class="err">QueueTest</span></code> object (let's call it <code class="codehilite"><span class="err">t1</span></code> ).
+  1. <code class="codehilite"><span class="err">t1.SetUp()</span></code> initializes <code class="codehilite"><span class="err">t1</span></code> .
+  1. The first test ( <code class="codehilite"><span class="err">IsEmptyInitially</span></code> ) runs on <code class="codehilite"><span class="err">t1</span></code> .
+  1. <code class="codehilite"><span class="err">t1.TearDown()</span></code> cleans up after the test finishes.
+  1. <code class="codehilite"><span class="err">t1</span></code> is destructed.
+  1. The above steps are repeated on another <code class="codehilite"><span class="err">QueueTest</span></code> object, this time running the <code class="codehilite"><span class="err">DequeueWorks</span></code> test.</p>
+<p><em>Availability</em>: Linux, Windows, Mac.</p>
+<p><em>Note</em>: Google Test automatically saves all <em>Google Test</em> flags when a test
+object is constructed, and restores them when it is destructed.</p>
+<h1 id="invoking-the-tests">Invoking the Tests<a class="headerlink" href="#invoking-the-tests" title="Permanent link">&para;</a></h1>
+<p><code class="codehilite"><span class="err">TEST()</span></code> and <code class="codehilite"><span class="err">TEST_F()</span></code> implicitly register their tests with Google Test. So, unlike with many other C++ testing frameworks, you don't have to re-list all your defined tests in order to run them.</p>
+<p>After defining your tests, you can run them with <code class="codehilite"><span class="err">RUN_ALL_TESTS()</span></code> , which returns <code class="codehilite"><span class="err">0</span></code> if all the tests are successful, or <code class="codehilite"><span class="err">1</span></code> otherwise. Note that <code class="codehilite"><span class="err">RUN_ALL_TESTS()</span></code> runs <em>all tests</em> in your link unit -- they can be from different test cases, or even different source files.</p>
+<p>When invoked, the <code class="codehilite"><span class="err">RUN_ALL_TESTS()</span></code> macro:
+  1. Saves the state of all  Google Test flags.
+  1. Creates a test fixture object for the first test.
+  1. Initializes it via <code class="codehilite"><span class="err">SetUp()</span></code>.
+  1. Runs the test on the fixture object.
+  1. Cleans up the fixture via <code class="codehilite"><span class="err">TearDown()</span></code>.
+  1. Deletes the fixture.
+  1. Restores the state of all Google Test flags.
+  1. Repeats the above steps for the next test, until all tests have run.</p>
+<p>In addition, if the text fixture's constructor generates a fatal failure in
+step 2, there is no point for step 3 - 5 and they are thus skipped. Similarly,
+if step 3 generates a fatal failure, step 4 will be skipped.</p>
+<p><em>Important</em>: You must not ignore the return value of <code class="codehilite"><span class="err">RUN_ALL_TESTS()</span></code>, or <code class="codehilite"><span class="err">gcc</span></code>
+will give you a compiler error. The rationale for this design is that the
+automated testing service determines whether a test has passed based on its
+exit code, not on its stdout/stderr output; thus your <code class="codehilite"><span class="err">main()</span></code> function must
+return the value of <code class="codehilite"><span class="err">RUN_ALL_TESTS()</span></code>.</p>
+<p>Also, you should call <code class="codehilite"><span class="err">RUN_ALL_TESTS()</span></code> only <strong>once</strong>. Calling it more than once
+conflicts with some advanced Google Test features (e.g. thread-safe death
+tests) and thus is not supported.</p>
+<p><em>Availability</em>: Linux, Windows, Mac.</p>
+<h1 id="writing-the-main-function">Writing the main() Function<a class="headerlink" href="#writing-the-main-function" title="Permanent link">&para;</a></h1>
+<p>You can start from this boilerplate:
+<div class="codehilite"><pre><span></span><code><span class="cp">#include</span> <span class="cpf">&quot;this/package/foo.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;gtest/gtest.h&quot;</span><span class="cp"></span>
+
+<span class="n">namespace</span> <span class="p">{</span>
+
+<span class="c1">// The fixture for testing class Foo.</span>
+<span class="n">class</span> <span class="nl">FooTest</span> <span class="p">:</span> <span class="n">public</span> <span class="o">::</span><span class="n">testing</span><span class="o">::</span><span class="n">Test</span> <span class="p">{</span>
+ <span class="nl">protected</span><span class="p">:</span>
+  <span class="c1">// You can remove any or all of the following functions if its body</span>
+  <span class="c1">// is empty.</span>
+
+  <span class="n">FooTest</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// You can do set-up work for each test here.</span>
+  <span class="p">}</span>
+
+  <span class="n">virtual</span> <span class="o">~</span><span class="n">FooTest</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// You can do clean-up work that doesn&#39;t throw exceptions here.</span>
+  <span class="p">}</span>
+
+  <span class="c1">// If the constructor and destructor are not enough for setting up</span>
+  <span class="c1">// and cleaning up each test, you can define the following methods:</span>
+
+  <span class="n">virtual</span> <span class="kt">void</span> <span class="n">SetUp</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// Code here will be called immediately after the constructor (right</span>
+    <span class="c1">// before each test).</span>
+  <span class="p">}</span>
+
+  <span class="n">virtual</span> <span class="kt">void</span> <span class="n">TearDown</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// Code here will be called immediately after each test (right</span>
+    <span class="c1">// before the destructor).</span>
+  <span class="p">}</span>
+
+  <span class="c1">// Objects declared here can be used by all tests in the test case for Foo.</span>
+<span class="p">};</span>
+
+<span class="c1">// Tests that the Foo::Bar() method does Abc.</span>
+<span class="n">TEST_F</span><span class="p">(</span><span class="n">FooTest</span><span class="p">,</span> <span class="n">MethodBarDoesAbc</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">const</span> <span class="n">string</span> <span class="n">input_filepath</span> <span class="o">=</span> <span class="s">&quot;this/package/testdata/myinputfile.dat&quot;</span><span class="p">;</span>
+  <span class="k">const</span> <span class="n">string</span> <span class="n">output_filepath</span> <span class="o">=</span> <span class="s">&quot;this/package/testdata/myoutputfile.dat&quot;</span><span class="p">;</span>
+  <span class="n">Foo</span> <span class="n">f</span><span class="p">;</span>
+  <span class="n">EXPECT_EQ</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">f</span><span class="p">.</span><span class="n">Bar</span><span class="p">(</span><span class="n">input_filepath</span><span class="p">,</span> <span class="n">output_filepath</span><span class="p">));</span>
+<span class="p">}</span>
+
+<span class="c1">// Tests that Foo does Xyz.</span>
+<span class="n">TEST_F</span><span class="p">(</span><span class="n">FooTest</span><span class="p">,</span> <span class="n">DoesXyz</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// Exercises the Xyz feature of Foo.</span>
+<span class="p">}</span>
+
+<span class="p">}</span>  <span class="c1">// namespace</span>
+
+<span class="kt">int</span> <span class="n">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">)</span> <span class="p">{</span>
+  <span class="o">::</span><span class="n">testing</span><span class="o">::</span><span class="n">InitGoogleTest</span><span class="p">(</span><span class="o">&amp;</span><span class="n">argc</span><span class="p">,</span> <span class="n">argv</span><span class="p">);</span>
+  <span class="k">return</span> <span class="nf">RUN_ALL_TESTS</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p>The <code class="codehilite"><span class="err">::testing::InitGoogleTest()</span></code> function parses the command line for Google
+Test flags, and removes all recognized flags. This allows the user to control a
+test program's behavior via various flags, which we'll cover in <a href="../V1_7_AdvancedGuide/">AdvancedGuide</a>.
+You must call this function before calling <code class="codehilite"><span class="err">RUN_ALL_TESTS()</span></code>, or the flags
+won't be properly initialized.</p>
+<p>On Windows, <code class="codehilite"><span class="err">InitGoogleTest()</span></code> also works with wide strings, so it can be used
+in programs compiled in <code class="codehilite"><span class="err">UNICODE</span></code> mode as well.</p>
+<p>But maybe you think that writing all those main() functions is too much work? We agree with you completely and that's why Google Test provides a basic implementation of main(). If it fits your needs, then just link your test with gtest_main library and you are good to go.</p>
+<h2 id="important-note-for-visual-c-users">Important note for Visual C++ users<a class="headerlink" href="#important-note-for-visual-c-users" title="Permanent link">&para;</a></h2>
+<p>If you put your tests into a library and your <code class="codehilite"><span class="err">main()</span></code> function is in a different library or in your .exe file, those tests will not run. The reason is a <a href="https://connect.microsoft.com/feedback/viewfeedback.aspx?FeedbackID=244410&amp;siteid=210">bug</a> in Visual C++. When you define your tests, Google Test creates certain static objects to register them. These objects are not referenced from elsewhere but their constructors are still supposed to run. When Visual C++ linker sees that nothing in the library is referenced from other places it throws the library out. You have to reference your library with tests from your main program to keep the linker from discarding it. Here is how to do it. Somewhere in your library code declare a function:
+<div class="codehilite"><pre><span></span><code><span class="err">__declspec(dllexport) int PullInMyLibrary() { return 0; }</span>
+</code></pre></div>
+If you put your tests in a static library (not DLL) then <code class="codehilite"><span class="err">__declspec(dllexport)</span></code> is not required. Now, in your main program, write a code that invokes that function:
+<div class="codehilite"><pre><span></span><code><span class="err">int PullInMyLibrary();</span>
+<span class="err">static int dummy = PullInMyLibrary();</span>
+</code></pre></div>
+This will keep your tests referenced and will make them register themselves at startup.</p>
+<p>In addition, if you define your tests in a static library, add <code class="codehilite"><span class="err">/OPT:NOREF</span></code> to your main program linker options. If you use MSVC++ IDE, go to your .exe project properties/Configuration Properties/Linker/Optimization and set References setting to <code class="codehilite"><span class="err">Keep Unreferenced Data (/OPT:NOREF)</span></code>. This will keep Visual C++ linker from discarding individual symbols generated by your tests from the final executable.</p>
+<p>There is one more pitfall, though. If you use Google Test as a static library (that's how it is defined in gtest.vcproj) your tests must also reside in a static library. If you have to have them in a DLL, you <em>must</em> change Google Test to build into a DLL as well. Otherwise your tests will not run correctly or will not run at all. The general conclusion here is: make your life easier - do not write your tests in libraries!</p>
+<h1 id="where-to-go-from-here">Where to Go from Here<a class="headerlink" href="#where-to-go-from-here" title="Permanent link">&para;</a></h1>
+<p>Congratulations! You've learned the Google Test basics. You can start writing
+and running Google Test tests, read some <a href="../V1_7_Samples/">samples</a>, or continue with
+<a href="../V1_7_AdvancedGuide/">AdvancedGuide</a>, which describes many more useful Google Test features.</p>
+<h1 id="known-limitations">Known Limitations<a class="headerlink" href="#known-limitations" title="Permanent link">&para;</a></h1>
+<p>Google Test is designed to be thread-safe.  The implementation is
+thread-safe on systems where the <code class="codehilite"><span class="err">pthreads</span></code> library is available.  It
+is currently <em>unsafe</em> to use Google Test assertions from two threads
+concurrently on other systems (e.g. Windows).  In most tests this is
+not an issue as usually the assertions are done in the main thread. If
+you want to help, you can volunteer to implement the necessary
+synchronization primitives in <code class="codehilite"><span class="err">gtest-port.h</span></code> for your platform.</p>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../V1_7_FAQ/" title="V1 7 FAQ" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                V1 7 FAQ
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../V1_7_PumpManual/" title="V1 7 Pump Manual" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                V1 7 Pump Manual
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright (c) Microsoft.  All rights reserved
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../../../../../../../../../../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/microsoft/mu" target="_blank" rel="noopener" title="github" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../../../../../../../../../assets/javascripts/application.c33a9706.js"></script>
+      
+      <script>app.initialize({version:"1.1",url:{base:"../../../../../../../../../../.."}})</script>
+      
+    
+  </body>
+</html>

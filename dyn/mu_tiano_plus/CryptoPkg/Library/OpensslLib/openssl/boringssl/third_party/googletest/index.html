@@ -1,0 +1,5186 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Project Mu Documentation">
+      
+      
+        <link rel="canonical" href="https://microsoft.github.io/mu/dyn/mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/third_party/googletest/">
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../../../../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
+    
+    
+      
+        <title>README - Project Mu</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../../../../../assets/stylesheets/application.adb8469c.css">
+      
+        <link rel="stylesheet" href="../../../../../../../../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../../../../../../../../../assets/javascripts/modernizr.86422ebf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../../../../../../../../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#generic-build-instructions" tabindex="0" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://microsoft.github.io/mu/" title="Project Mu" aria-label="Project Mu" class="md-header-nav__button md-logo">
+          
+            <img alt="logo" src="../../../../../../../../../img/mu.png" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Project Mu
+            </span>
+            <span class="md-header-nav__topic">
+              
+                README
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/microsoft/mu/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://microsoft.github.io/mu/" title="Project Mu" class="md-nav__button md-logo">
+      
+        <img alt="logo" src="../../../../../../../../../img/mu.png" width="48" height="48">
+      
+    </a>
+    Project Mu
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/microsoft/mu/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      What and Why
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        What and Why
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../WhatAndWhy/overview/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../WhatAndWhy/layout/" title="Dependencies and Layout" class="md-nav__link">
+      Dependencies and Layout
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../WhatAndWhy/features/" title="Features" class="md-nav__link">
+      Features
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Where
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Where
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../Where/project_resources/" title="Project Resources" class="md-nav__link">
+      Project Resources
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../Where/external_resources/" title="External Resources" class="md-nav__link">
+      External Resources
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      How
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        How
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../How/release_process/" title="Release Process" class="md-nav__link">
+      Release Process
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../How/contributing/" title="Contributing" class="md-nav__link">
+      Contributing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../How/using_project_mu/" title="Using" class="md-nav__link">
+      Using
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Developing Docs
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Developing Docs
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../DeveloperDocs/developer_docs/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../DeveloperDocs/build_community_docs/" title="How To Build" class="md-nav__link">
+      How To Build
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../DeveloperDocs/doc_sample_test/" title="Sample Syntax" class="md-nav__link">
+      Sample Syntax
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../DeveloperDocs/attribution/" title="Doc Framework Attribution" class="md-nav__link">
+      Doc Framework Attribution
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../DeveloperDocs/requirements/" title="Documentation Requirements" class="md-nav__link">
+      Documentation Requirements
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Developing Code
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Developing Code
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../CodeDevelopment/overview/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../CodeDevelopment/prerequisites/" title="Tools and Prerequisite" class="md-nav__link">
+      Tools and Prerequisite
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../CodeDevelopment/compile/" title="Compiling" class="md-nav__link">
+      Compiling
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../CodeDevelopment/test/" title="Testing" class="md-nav__link">
+      Testing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../CodeDevelopment/requirements/" title="Code Requirements" class="md-nav__link">
+      Code Requirements
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../faq/" title="FAQ" class="md-nav__link">
+      FAQ
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../../license/" title="License" class="md-nav__link">
+      License
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9" checked>
+    
+    <label class="md-nav__link" for="nav-9">
+      Code Repositories
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        Code Repositories
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1" type="checkbox" id="nav-9-1">
+    
+    <label class="md-nav__link" for="nav-9-1">
+      mu basecore
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-9-1">
+        mu basecore
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_basecore/RepoDetails/" title="Repo Details" class="md-nav__link">
+      Repo Details
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1-2" type="checkbox" id="nav-9-1-2">
+    
+    <label class="md-nav__link" for="nav-9-1-2">
+      pytool
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-1-2">
+        pytool
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_basecore/pytool/Readme/" title="Readme" class="md-nav__link">
+      Readme
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1-2-2" type="checkbox" id="nav-9-1-2-2">
+    
+    <label class="md-nav__link" for="nav-9-1-2-2">
+      Plugin
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-9-1-2-2">
+        Plugin
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_basecore/pytool/Plugin/CharEncodingCheck/Readme/" title="Char Encoding Check" class="md-nav__link">
+      Char Encoding Check
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_basecore/pytool/Plugin/CompilerPlugin/Readme/" title="Compiler Plugin" class="md-nav__link">
+      Compiler Plugin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_basecore/pytool/Plugin/DependencyCheck/Readme/" title="Dependency Check" class="md-nav__link">
+      Dependency Check
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_basecore/pytool/Plugin/DscCompleteCheck/Readme/" title="Dsc Complete Check" class="md-nav__link">
+      Dsc Complete Check
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_basecore/pytool/Plugin/GuidCheck/Readme/" title="Guid Check" class="md-nav__link">
+      Guid Check
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_basecore/pytool/Plugin/HostUnitTestCompilerPlugin/Readme/" title="Host Unit Test Compiler Plugin" class="md-nav__link">
+      Host Unit Test Compiler Plugin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_basecore/pytool/Plugin/HostUnitTestDscCompleteCheck/Readme/" title="Host Unit Test Dsc Complete Check" class="md-nav__link">
+      Host Unit Test Dsc Complete Check
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_basecore/pytool/Plugin/LibraryClassCheck/Readme/" title="Library Class Check" class="md-nav__link">
+      Library Class Check
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_basecore/pytool/Plugin/SpellCheck/Readme/" title="Spell Check" class="md-nav__link">
+      Spell Check
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1-3" type="checkbox" id="nav-9-1-3">
+    
+    <label class="md-nav__link" for="nav-9-1-3">
+      Base Tools
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-1-3">
+        Base Tools
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1-3-1" type="checkbox" id="nav-9-1-3-1">
+    
+    <label class="md-nav__link" for="nav-9-1-3-1">
+      Nuget Publishing
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-9-1-3-1">
+        Nuget Publishing
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_basecore/BaseTools/NugetPublishing/iasl/" title="iasl" class="md-nav__link">
+      iasl
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_basecore/BaseTools/NugetPublishing/Mu-Basetools/" title="Mu-Basetools" class="md-nav__link">
+      Mu-Basetools
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_basecore/BaseTools/NugetPublishing/Mu-Nasm/" title="Mu-Nasm" class="md-nav__link">
+      Mu-Nasm
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_basecore/BaseTools/NugetPublishing/ReadMe/" title="Read Me" class="md-nav__link">
+      Read Me
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1-3-2" type="checkbox" id="nav-9-1-3-2">
+    
+    <label class="md-nav__link" for="nav-9-1-3-2">
+      Plugin
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-9-1-3-2">
+        Plugin
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_basecore/BaseTools/Plugin/FdSizeReport/ReadMe/" title="Fd Size Report" class="md-nav__link">
+      Fd Size Report
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_basecore/BaseTools/Plugin/OverrideValidation/ReadMe/" title="Override Validation" class="md-nav__link">
+      Override Validation
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1-3-3" type="checkbox" id="nav-9-1-3-3">
+    
+    <label class="md-nav__link" for="nav-9-1-3-3">
+      Scripts
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-9-1-3-3">
+        Scripts
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_basecore/BaseTools/Scripts/PackageDocumentTools/Readme/" title="Package Document Tools" class="md-nav__link">
+      Package Document Tools
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1-3-4" type="checkbox" id="nav-9-1-3-4">
+    
+    <label class="md-nav__link" for="nav-9-1-3-4">
+      Source
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-9-1-3-4">
+        Source
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1-3-4-1" type="checkbox" id="nav-9-1-3-4-1">
+    
+    <label class="md-nav__link" for="nav-9-1-3-4-1">
+      C
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+      <label class="md-nav__title" for="nav-9-1-3-4-1">
+        C
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1-3-4-1-1" type="checkbox" id="nav-9-1-3-4-1-1">
+    
+    <label class="md-nav__link" for="nav-9-1-3-4-1-1">
+      Brotli Compress
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="6">
+      <label class="md-nav__title" for="nav-9-1-3-4-1-1">
+        Brotli Compress
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_basecore/BaseTools/Source/C/BrotliCompress/" title="README" class="md-nav__link">
+      README
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_basecore/BaseTools/Source/C/BrotliCompress/tools/brotli/" title="tools" class="md-nav__link">
+      tools
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1-3-4-2" type="checkbox" id="nav-9-1-3-4-2">
+    
+    <label class="md-nav__link" for="nav-9-1-3-4-2">
+      Python
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+      <label class="md-nav__title" for="nav-9-1-3-4-2">
+        Python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_basecore/BaseTools/Source/Python/Pkcs7Sign/Readme/" title="Pkcs7Sign" class="md-nav__link">
+      Pkcs7Sign
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1-4" type="checkbox" id="nav-9-1-4">
+    
+    <label class="md-nav__link" for="nav-9-1-4">
+      Mde Module Pkg
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-1-4">
+        Mde Module Pkg
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1-4-1" type="checkbox" id="nav-9-1-4-1">
+    
+    <label class="md-nav__link" for="nav-9-1-4-1">
+      Modules
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-9-1-4-1">
+        Modules
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1-4-1-1" type="checkbox" id="nav-9-1-4-1-1">
+    
+    <label class="md-nav__link" for="nav-9-1-4-1-1">
+      Library
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+      <label class="md-nav__title" for="nav-9-1-4-1-1">
+        Library
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_basecore/MdeModulePkg/Library/BrotliCustomDecompressLib/" title="Brotli Custom Decompress Lib" class="md-nav__link">
+      Brotli Custom Decompress Lib
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_basecore/MdeModulePkg/Library/DeviceStateLib/Readme/" title="Device State Lib" class="md-nav__link">
+      Device State Lib
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1-5" type="checkbox" id="nav-9-1-5">
+    
+    <label class="md-nav__link" for="nav-9-1-5">
+      Mde Pkg
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-1-5">
+        Mde Pkg
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1-5-1" type="checkbox" id="nav-9-1-5-1">
+    
+    <label class="md-nav__link" for="nav-9-1-5-1">
+      Modules
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-9-1-5-1">
+        Modules
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1-5-1-1" type="checkbox" id="nav-9-1-5-1-1">
+    
+    <label class="md-nav__link" for="nav-9-1-5-1-1">
+      Library
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+      <label class="md-nav__title" for="nav-9-1-5-1-1">
+        Library
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_basecore/MdePkg/Library/FltUsedLib/Readme/" title="Flt Used Lib" class="md-nav__link">
+      Flt Used Lib
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1-6" type="checkbox" id="nav-9-1-6">
+    
+    <label class="md-nav__link" for="nav-9-1-6">
+      Network Pkg
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-1-6">
+        Network Pkg
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1-6-1" type="checkbox" id="nav-9-1-6-1">
+    
+    <label class="md-nav__link" for="nav-9-1-6-1">
+      Modules
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-9-1-6-1">
+        Modules
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1-6-1-1" type="checkbox" id="nav-9-1-6-1-1">
+    
+    <label class="md-nav__link" for="nav-9-1-6-1-1">
+      Shared Networking
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+      <label class="md-nav__title" for="nav-9-1-6-1-1">
+        Shared Networking
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_basecore/NetworkPkg/SharedNetworking/release_notes/" title="release notes" class="md-nav__link">
+      release notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_basecore/NetworkPkg/SharedNetworking/SharedNetworking/" title="Shared Networking" class="md-nav__link">
+      Shared Networking
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1-7" type="checkbox" id="nav-9-1-7">
+    
+    <label class="md-nav__link" for="nav-9-1-7">
+      Rust Pkg
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-1-7">
+        Rust Pkg
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1-7-1" type="checkbox" id="nav-9-1-7-1">
+    
+    <label class="md-nav__link" for="nav-9-1-7-1">
+      Modules
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-9-1-7-1">
+        Modules
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_basecore/RustPkg/Readme/" title="Readme" class="md-nav__link">
+      Readme
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1-7-1-2" type="checkbox" id="nav-9-1-7-1-2">
+    
+    <label class="md-nav__link" for="nav-9-1-7-1-2">
+      External
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+      <label class="md-nav__title" for="nav-9-1-7-1-2">
+        External
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1-7-1-2-1" type="checkbox" id="nav-9-1-7-1-2-1">
+    
+    <label class="md-nav__link" for="nav-9-1-7-1-2-1">
+      r-efi
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="6">
+      <label class="md-nav__title" for="nav-9-1-7-1-2-1">
+        r-efi
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_basecore/RustPkg/External/r-efi/NEWS/" title="NEWS" class="md-nav__link">
+      NEWS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_basecore/RustPkg/External/r-efi/" title="README" class="md-nav__link">
+      README
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1-8" type="checkbox" id="nav-9-1-8">
+    
+    <label class="md-nav__link" for="nav-9-1-8">
+      Unit Test Framework Pkg
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-1-8">
+        Unit Test Framework Pkg
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_basecore/UnitTestFrameworkPkg/ReadMe/" title="Modules" class="md-nav__link">
+      Modules
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-2" type="checkbox" id="nav-9-2">
+    
+    <label class="md-nav__link" for="nav-9-2">
+      mu oem sample
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-9-2">
+        mu oem sample
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_oem_sample/RepoDetails/" title="Repo Details" class="md-nav__link">
+      Repo Details
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-2-2" type="checkbox" id="nav-9-2-2">
+    
+    <label class="md-nav__link" for="nav-9-2-2">
+      Oem Pkg
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-2-2">
+        Oem Pkg
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-2-2-1" type="checkbox" id="nav-9-2-2-1">
+    
+    <label class="md-nav__link" for="nav-9-2-2-1">
+      Modules
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-9-2-2-1">
+        Modules
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_oem_sample/OemPkg/FrontPage/FrontPagePasswordSupport/" title="Front Page" class="md-nav__link">
+      Front Page
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3" type="checkbox" id="nav-9-3">
+    
+    <label class="md-nav__link" for="nav-9-3">
+      mu plus
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-9-3">
+        mu plus
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_plus/RepoDetails/" title="Repo Details" class="md-nav__link">
+      Repo Details
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-2" type="checkbox" id="nav-9-3-2">
+    
+    <label class="md-nav__link" for="nav-9-3-2">
+      Adv Logger Pkg
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-3-2">
+        Adv Logger Pkg
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-2-1" type="checkbox" id="nav-9-3-2-1">
+    
+    <label class="md-nav__link" for="nav-9-3-2-1">
+      Modules
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-9-3-2-1">
+        Modules
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_plus/AdvLoggerPkg/ReadMe/" title="Read Me" class="md-nav__link">
+      Read Me
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-2-1-2" type="checkbox" id="nav-9-3-2-1-2">
+    
+    <label class="md-nav__link" for="nav-9-3-2-1-2">
+      Unit Tests
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+      <label class="md-nav__title" for="nav-9-3-2-1-2">
+        Unit Tests
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_plus/AdvLoggerPkg/UnitTests/LineParser/readme/" title="Line Parser" class="md-nav__link">
+      Line Parser
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-3" type="checkbox" id="nav-9-3-3">
+    
+    <label class="md-nav__link" for="nav-9-3-3">
+      Dfci Pkg
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-3-3">
+        Dfci Pkg
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-3-1" type="checkbox" id="nav-9-3-3-1">
+    
+    <label class="md-nav__link" for="nav-9-3-3-1">
+      Package Overview
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-9-3-3-1">
+        Package Overview
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_plus/DfciPkg/Docs/Dfci_Feature/" title="Dfci Feature" class="md-nav__link">
+      Dfci Feature
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_plus/DfciPkg/Docs/Internals/DfciInternals/" title="Internals" class="md-nav__link">
+      Internals
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-3-1-3" type="checkbox" id="nav-9-3-3-1-3">
+    
+    <label class="md-nav__link" for="nav-9-3-3-1-3">
+      Platform Integration
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+      <label class="md-nav__title" for="nav-9-3-3-1-3">
+        Platform Integration
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_plus/DfciPkg/Docs/PlatformIntegration/DfciDeviceIdSupportLib/" title="Dfci Device Id Support Lib" class="md-nav__link">
+      Dfci Device Id Support Lib
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_plus/DfciPkg/Docs/PlatformIntegration/DfciGroups/" title="Dfci Groups" class="md-nav__link">
+      Dfci Groups
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_plus/DfciPkg/Docs/PlatformIntegration/DfciSettingProviders/" title="Dfci Setting Providers" class="md-nav__link">
+      Dfci Setting Providers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_plus/DfciPkg/Docs/PlatformIntegration/DfciUiSupportLib/" title="Dfci Ui Support Lib" class="md-nav__link">
+      Dfci Ui Support Lib
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_plus/DfciPkg/Docs/PlatformIntegration/PlatformIntegrationOverview/" title="Platform Integration Overview" class="md-nav__link">
+      Platform Integration Overview
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_plus/DfciPkg/Docs/Scenarios/DfciScenarios/" title="Scenarios" class="md-nav__link">
+      Scenarios
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-3-2" type="checkbox" id="nav-9-3-3-2">
+    
+    <label class="md-nav__link" for="nav-9-3-3-2">
+      Modules
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-9-3-3-2">
+        Modules
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_plus/DfciPkg/AuthManagerNull/" title="Auth Manager Null" class="md-nav__link">
+      Auth Manager Null
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_plus/DfciPkg/IdentityAndAuthManager/ReadMe/" title="Identity And Auth Manager" class="md-nav__link">
+      Identity And Auth Manager
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-3-2-3" type="checkbox" id="nav-9-3-3-2-3">
+    
+    <label class="md-nav__link" for="nav-9-3-3-2-3">
+      Library
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+      <label class="md-nav__title" for="nav-9-3-3-2-3">
+        Library
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_plus/DfciPkg/Library/DfciSampleProvider/readme/" title="Dfci Sample Provider" class="md-nav__link">
+      Dfci Sample Provider
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-3-2-4" type="checkbox" id="nav-9-3-3-2-4">
+    
+    <label class="md-nav__link" for="nav-9-3-3-2-4">
+      Unit Tests
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+      <label class="md-nav__title" for="nav-9-3-3-2-4">
+        Unit Tests
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_plus/DfciPkg/UnitTests/DevicdIdTest/readme/" title="Devicd Id Test" class="md-nav__link">
+      Devicd Id Test
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_plus/DfciPkg/UnitTests/DfciTests/readme/" title="Dfci Tests" class="md-nav__link">
+      Dfci Tests
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-4" type="checkbox" id="nav-9-3-4">
+    
+    <label class="md-nav__link" for="nav-9-3-4">
+      Ms Core Pkg
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-3-4">
+        Ms Core Pkg
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-4-1" type="checkbox" id="nav-9-3-4-1">
+    
+    <label class="md-nav__link" for="nav-9-3-4-1">
+      Modules
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-9-3-4-1">
+        Modules
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_plus/MsCorePkg/Feature_DebugRouting_Readme/" title="Feature Debug Routing Readme" class="md-nav__link">
+      Feature Debug Routing Readme
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_plus/MsCorePkg/ReadMe/" title="Read Me" class="md-nav__link">
+      Read Me
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_plus/MsCorePkg/AcpiRGRT/feature_acpi_rgrt/" title="Acpi RGRT" class="md-nav__link">
+      Acpi RGRT
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_plus/MsCorePkg/CheckHardwareConnected/readme/" title="Check Hardware Connected" class="md-nav__link">
+      Check Hardware Connected
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_plus/MsCorePkg/DebugFileLoggerII/" title="Debug File Logger II" class="md-nav__link">
+      Debug File Logger II
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_plus/MsCorePkg/MuCryptoDxe/Readme/" title="Mu Crypto Dxe" class="md-nav__link">
+      Mu Crypto Dxe
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_plus/MsCorePkg/MuVarPolicyFoundationDxe/Feature_MuVarPolicyFoundationDxe_Readme/" title="Mu Var Policy Foundation Dxe" class="md-nav__link">
+      Mu Var Policy Foundation Dxe
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-4-1-8" type="checkbox" id="nav-9-3-4-1-8">
+    
+    <label class="md-nav__link" for="nav-9-3-4-1-8">
+      Unit Tests
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+      <label class="md-nav__title" for="nav-9-3-4-1-8">
+        Unit Tests
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_plus/MsCorePkg/UnitTests/JsonTest/readme/" title="Json Test" class="md-nav__link">
+      Json Test
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-5" type="checkbox" id="nav-9-3-5">
+    
+    <label class="md-nav__link" for="nav-9-3-5">
+      Ms Graphics Pkg
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-3-5">
+        Ms Graphics Pkg
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-5-1" type="checkbox" id="nav-9-3-5-1">
+    
+    <label class="md-nav__link" for="nav-9-3-5-1">
+      Modules
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-9-3-5-1">
+        Modules
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_plus/MsGraphicsPkg/PrintScreenLogger/Readme/" title="Print Screen Logger" class="md-nav__link">
+      Print Screen Logger
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-6" type="checkbox" id="nav-9-3-6">
+    
+    <label class="md-nav__link" for="nav-9-3-6">
+      Ms Whea Pkg
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-3-6">
+        Ms Whea Pkg
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_plus/MsWheaPkg/readme/" title="Modules" class="md-nav__link">
+      Modules
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-7" type="checkbox" id="nav-9-3-7">
+    
+    <label class="md-nav__link" for="nav-9-3-7">
+      Pc Bds Pkg
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-3-7">
+        Pc Bds Pkg
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-7-1" type="checkbox" id="nav-9-3-7-1">
+    
+    <label class="md-nav__link" for="nav-9-3-7-1">
+      Modules
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-9-3-7-1">
+        Modules
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-7-1-1" type="checkbox" id="nav-9-3-7-1-1">
+    
+    <label class="md-nav__link" for="nav-9-3-7-1-1">
+      Library
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+      <label class="md-nav__title" for="nav-9-3-7-1-1">
+        Library
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_plus/PcBdsPkg/Library/MsNetworkDependencyLib/readme/" title="Ms Network Dependency Lib" class="md-nav__link">
+      Ms Network Dependency Lib
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-8" type="checkbox" id="nav-9-3-8">
+    
+    <label class="md-nav__link" for="nav-9-3-8">
+      Shared Crypto Pkg
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-3-8">
+        Shared Crypto Pkg
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-8-1" type="checkbox" id="nav-9-3-8-1">
+    
+    <label class="md-nav__link" for="nav-9-3-8-1">
+      Modules
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-9-3-8-1">
+        Modules
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_plus/SharedCryptoPkg/Readme/" title="Readme" class="md-nav__link">
+      Readme
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_plus/SharedCryptoPkg/release_notes/" title="release notes" class="md-nav__link">
+      release notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_plus/SharedCryptoPkg/Driver/Mu-SharedCrypto/" title="Driver" class="md-nav__link">
+      Driver
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-9" type="checkbox" id="nav-9-3-9">
+    
+    <label class="md-nav__link" for="nav-9-3-9">
+      Uefi Testing Pkg
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-3-9">
+        Uefi Testing Pkg
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-9-1" type="checkbox" id="nav-9-3-9-1">
+    
+    <label class="md-nav__link" for="nav-9-3-9-1">
+      Modules
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-9-3-9-1">
+        Modules
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_plus/UefiTestingPkg/Readme/" title="Readme" class="md-nav__link">
+      Readme
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-9-1-2" type="checkbox" id="nav-9-3-9-1-2">
+    
+    <label class="md-nav__link" for="nav-9-3-9-1-2">
+      Audit Tests
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+      <label class="md-nav__title" for="nav-9-3-9-1-2">
+        Audit Tests
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-9-1-2-1" type="checkbox" id="nav-9-3-9-1-2-1">
+    
+    <label class="md-nav__link" for="nav-9-3-9-1-2-1">
+      DMAProtection Audit
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="6">
+      <label class="md-nav__title" for="nav-9-3-9-1-2-1">
+        DMAProtection Audit
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_plus/UefiTestingPkg/AuditTests/DMAProtectionAudit/UEFI/" title="UEFI" class="md-nav__link">
+      UEFI
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_plus/UefiTestingPkg/AuditTests/DMAProtectionAudit/Windows/Readme/" title="Windows" class="md-nav__link">
+      Windows
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_plus/UefiTestingPkg/AuditTests/PagingAudit/" title="Paging Audit" class="md-nav__link">
+      Paging Audit
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-9-1-3" type="checkbox" id="nav-9-3-9-1-3">
+    
+    <label class="md-nav__link" for="nav-9-3-9-1-3">
+      Functional System Tests
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+      <label class="md-nav__title" for="nav-9-3-9-1-3">
+        Functional System Tests
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_plus/UefiTestingPkg/FunctionalSystemTests/HeapGuardTest/Readme/" title="Heap Guard Test" class="md-nav__link">
+      Heap Guard Test
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_plus/UefiTestingPkg/FunctionalSystemTests/SmmPagingProtectionsTest/Readme/" title="Smm Paging Protections Test" class="md-nav__link">
+      Smm Paging Protections Test
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_plus/UefiTestingPkg/FunctionalSystemTests/VarPolicyUnitTestApp/Readme/" title="Var Policy Unit Test App" class="md-nav__link">
+      Var Policy Unit Test App
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-10" type="checkbox" id="nav-9-3-10">
+    
+    <label class="md-nav__link" for="nav-9-3-10">
+      Xml Support Pkg
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-3-10">
+        Xml Support Pkg
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_plus/XmlSupportPkg/ReadMe/" title="Modules" class="md-nav__link">
+      Modules
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-4" type="checkbox" id="nav-9-4">
+    
+    <label class="md-nav__link" for="nav-9-4">
+      mu silicon arm tiano
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-9-4">
+        mu silicon arm tiano
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_silicon_arm_tiano/RepoDetails/" title="Repo Details" class="md-nav__link">
+      Repo Details
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_silicon_arm_tiano/pytool/Readme/" title="pytool" class="md-nav__link">
+      pytool
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-4-3" type="checkbox" id="nav-9-4-3">
+    
+    <label class="md-nav__link" for="nav-9-4-3">
+      Arm Pkg
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-4-3">
+        Arm Pkg
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-4-3-1" type="checkbox" id="nav-9-4-3-1">
+    
+    <label class="md-nav__link" for="nav-9-4-3-1">
+      Modules
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-9-4-3-1">
+        Modules
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-4-3-1-1" type="checkbox" id="nav-9-4-3-1-1">
+    
+    <label class="md-nav__link" for="nav-9-4-3-1-1">
+      Library
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+      <label class="md-nav__title" for="nav-9-4-3-1-1">
+        Library
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-4-3-1-1-1" type="checkbox" id="nav-9-4-3-1-1-1">
+    
+    <label class="md-nav__link" for="nav-9-4-3-1-1-1">
+      Arm Soft Float Lib
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="6">
+      <label class="md-nav__title" for="nav-9-4-3-1-1-1">
+        Arm Soft Float Lib
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_silicon_arm_tiano/ArmPkg/Library/ArmSoftFloatLib/berkeley-softfloat-3/" title="berkeley-softfloat-3" class="md-nav__link">
+      berkeley-softfloat-3
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-5" type="checkbox" id="nav-9-5">
+    
+    <label class="md-nav__link" for="nav-9-5">
+      mu silicon intel tiano
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-9-5">
+        mu silicon intel tiano
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_silicon_intel_tiano/RepoDetails/" title="Repo Details" class="md-nav__link">
+      Repo Details
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_silicon_intel_tiano/pytool/Readme/" title="pytool" class="md-nav__link">
+      pytool
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-5-3" type="checkbox" id="nav-9-5-3">
+    
+    <label class="md-nav__link" for="nav-9-5-3">
+      Intel Fsp2Pkg
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-5-3">
+        Intel Fsp2Pkg
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-5-3-1" type="checkbox" id="nav-9-5-3-1">
+    
+    <label class="md-nav__link" for="nav-9-5-3-1">
+      Modules
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-9-5-3-1">
+        Modules
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_silicon_intel_tiano/IntelFsp2Pkg/Readme/" title="Readme" class="md-nav__link">
+      Readme
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-5-3-1-2" type="checkbox" id="nav-9-5-3-1-2">
+    
+    <label class="md-nav__link" for="nav-9-5-3-1-2">
+      Tools
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+      <label class="md-nav__title" for="nav-9-5-3-1-2">
+        Tools
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-5-3-1-2-1" type="checkbox" id="nav-9-5-3-1-2-1">
+    
+    <label class="md-nav__link" for="nav-9-5-3-1-2-1">
+      User Manuals
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="6">
+      <label class="md-nav__title" for="nav-9-5-3-1-2-1">
+        User Manuals
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_silicon_intel_tiano/IntelFsp2Pkg/Tools/UserManuals/GenCfgOptUserManual/" title="Gen Cfg Opt User Manual" class="md-nav__link">
+      Gen Cfg Opt User Manual
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_silicon_intel_tiano/IntelFsp2Pkg/Tools/UserManuals/PatchFvUserManual/" title="Patch Fv User Manual" class="md-nav__link">
+      Patch Fv User Manual
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_silicon_intel_tiano/IntelFsp2Pkg/Tools/UserManuals/SplitFspBinUserManual/" title="Split Fsp Bin User Manual" class="md-nav__link">
+      Split Fsp Bin User Manual
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-5-4" type="checkbox" id="nav-9-5-4">
+    
+    <label class="md-nav__link" for="nav-9-5-4">
+      Intel Fsp2Wrapper Pkg
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-5-4">
+        Intel Fsp2Wrapper Pkg
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_silicon_intel_tiano/IntelFsp2WrapperPkg/Readme/" title="Modules" class="md-nav__link">
+      Modules
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-5-5" type="checkbox" id="nav-9-5-5">
+    
+    <label class="md-nav__link" for="nav-9-5-5">
+      Intel Silicon Pkg
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-5-5">
+        Intel Silicon Pkg
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-5-5-1" type="checkbox" id="nav-9-5-5-1">
+    
+    <label class="md-nav__link" for="nav-9-5-5-1">
+      Modules
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-9-5-5-1">
+        Modules
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-5-5-1-1" type="checkbox" id="nav-9-5-5-1-1">
+    
+    <label class="md-nav__link" for="nav-9-5-5-1-1">
+      Feature
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+      <label class="md-nav__title" for="nav-9-5-5-1-1">
+        Feature
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-5-5-1-1-1" type="checkbox" id="nav-9-5-5-1-1-1">
+    
+    <label class="md-nav__link" for="nav-9-5-5-1-1-1">
+      Capsule
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="6">
+      <label class="md-nav__title" for="nav-9-5-5-1-1-1">
+        Capsule
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_silicon_intel_tiano/IntelSiliconPkg/Feature/Capsule/MicrocodeCapsulePdb/Readme/" title="Microcode Capsule Pdb" class="md-nav__link">
+      Microcode Capsule Pdb
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../../mu_silicon_intel_tiano/IntelSiliconPkg/Feature/Capsule/MicrocodeCapsuleTxt/Readme/" title="Microcode Capsule Txt" class="md-nav__link">
+      Microcode Capsule Txt
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-6" type="checkbox" id="nav-9-6" checked>
+    
+    <label class="md-nav__link" for="nav-9-6">
+      mu tiano plus
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-9-6">
+        mu tiano plus
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../RepoDetails/" title="Repo Details" class="md-nav__link">
+      Repo Details
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../pytool/Readme/" title="pytool" class="md-nav__link">
+      pytool
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-6-3" type="checkbox" id="nav-9-6-3" checked>
+    
+    <label class="md-nav__link" for="nav-9-6-3">
+      Crypto Pkg
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-6-3">
+        Crypto Pkg
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-6-3-1" type="checkbox" id="nav-9-6-3-1" checked>
+    
+    <label class="md-nav__link" for="nav-9-6-3-1">
+      Modules
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-9-6-3-1">
+        Modules
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-6-3-1-1" type="checkbox" id="nav-9-6-3-1-1" checked>
+    
+    <label class="md-nav__link" for="nav-9-6-3-1-1">
+      Library
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+      <label class="md-nav__title" for="nav-9-6-3-1-1">
+        Library
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-6-3-1-1-1" type="checkbox" id="nav-9-6-3-1-1-1" checked>
+    
+    <label class="md-nav__link" for="nav-9-6-3-1-1-1">
+      Openssl Lib
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="6">
+      <label class="md-nav__title" for="nav-9-6-3-1-1-1">
+        Openssl Lib
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-6-3-1-1-1-1" type="checkbox" id="nav-9-6-3-1-1-1-1" checked>
+    
+    <label class="md-nav__link" for="nav-9-6-3-1-1-1-1">
+      openssl
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="7">
+      <label class="md-nav__title" for="nav-9-6-3-1-1-1-1">
+        openssl
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../github/PULL_REQUEST_TEMPLATE/" title="github" class="md-nav__link">
+      github
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-6-3-1-1-1-1-2" type="checkbox" id="nav-9-6-3-1-1-1-1-2" checked>
+    
+    <label class="md-nav__link" for="nav-9-6-3-1-1-1-1-2">
+      boringssl
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="8">
+      <label class="md-nav__title" for="nav-9-6-3-1-1-1-1-2">
+        boringssl
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../API-CONVENTIONS/" title="API-CONVENTIONS" class="md-nav__link">
+      API-CONVENTIONS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../BUILDING/" title="BUILDING" class="md-nav__link">
+      BUILDING
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../CONTRIBUTING/" title="CONTRIBUTING" class="md-nav__link">
+      CONTRIBUTING
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../FUZZING/" title="FUZZING" class="md-nav__link">
+      FUZZING
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../INCORPORATING/" title="INCORPORATING" class="md-nav__link">
+      INCORPORATING
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../PORTING/" title="PORTING" class="md-nav__link">
+      PORTING
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../" title="README" class="md-nav__link">
+      README
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../STYLE/" title="STYLE" class="md-nav__link">
+      STYLE
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-6-3-1-1-1-1-2-9" type="checkbox" id="nav-9-6-3-1-1-1-1-2-9">
+    
+    <label class="md-nav__link" for="nav-9-6-3-1-1-1-1-2-9">
+      infra
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="9">
+      <label class="md-nav__title" for="nav-9-6-3-1-1-1-1-2-9">
+        infra
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../infra/config/" title="config" class="md-nav__link">
+      config
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-6-3-1-1-1-1-2-10" type="checkbox" id="nav-9-6-3-1-1-1-1-2-10">
+    
+    <label class="md-nav__link" for="nav-9-6-3-1-1-1-1-2-10">
+      ssl
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="9">
+      <label class="md-nav__title" for="nav-9-6-3-1-1-1-1-2-10">
+        ssl
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-6-3-1-1-1-1-2-10-1" type="checkbox" id="nav-9-6-3-1-1-1-1-2-10-1">
+    
+    <label class="md-nav__link" for="nav-9-6-3-1-1-1-1-2-10-1">
+      test
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="10">
+      <label class="md-nav__title" for="nav-9-6-3-1-1-1-1-2-10-1">
+        test
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ssl/test/PORTING/" title="PORTING" class="md-nav__link">
+      PORTING
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ssl/test/" title="README" class="md-nav__link">
+      README
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-6-3-1-1-1-1-2-11" type="checkbox" id="nav-9-6-3-1-1-1-1-2-11" checked>
+    
+    <label class="md-nav__link" for="nav-9-6-3-1-1-1-1-2-11">
+      third party
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="9">
+      <label class="md-nav__title" for="nav-9-6-3-1-1-1-1-2-11">
+        third party
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-6-3-1-1-1-1-2-11-1" type="checkbox" id="nav-9-6-3-1-1-1-1-2-11-1">
+    
+    <label class="md-nav__link" for="nav-9-6-3-1-1-1-1-2-11-1">
+      android-cmake
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="10">
+      <label class="md-nav__title" for="nav-9-6-3-1-1-1-1-2-11-1">
+        android-cmake
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../android-cmake/ndk_links/" title="ndk links" class="md-nav__link">
+      ndk links
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../android-cmake/" title="README" class="md-nav__link">
+      README
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-6-3-1-1-1-1-2-11-2" type="checkbox" id="nav-9-6-3-1-1-1-1-2-11-2" checked>
+    
+    <label class="md-nav__link" for="nav-9-6-3-1-1-1-1-2-11-2">
+      googletest
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="10">
+      <label class="md-nav__title" for="nav-9-6-3-1-1-1-1-2-11-2">
+        googletest
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        README
+      </label>
+    
+    <a href="./" title="README" class="md-nav__link md-nav__link--active">
+      README
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#generic-build-instructions" class="md-nav__link">
+    Generic Build Instructions
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    Setup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build" class="md-nav__link">
+    Build
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-cmake" class="md-nav__link">
+    Using CMake
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#standalone-cmake-project" class="md-nav__link">
+    Standalone CMake Project
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#incorporating-into-an-existing-cmake-project" class="md-nav__link">
+    Incorporating Into An Existing CMake Project
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#legacy-build-scripts" class="md-nav__link">
+    Legacy Build Scripts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tweaking-google-test" class="md-nav__link">
+    Tweaking Google Test
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#choosing-a-tr1-tuple-library" class="md-nav__link">
+    Choosing a TR1 Tuple Library
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multi-threaded-tests" class="md-nav__link">
+    Multi-threaded Tests
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#as-a-shared-library-dll" class="md-nav__link">
+    As a Shared Library (DLL)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#avoiding-macro-name-clashes" class="md-nav__link">
+    Avoiding Macro Name Clashes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#developing-google-test" class="md-nav__link">
+    Developing Google Test
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#testing-google-test-itself" class="md-nav__link">
+    Testing Google Test Itself
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-6-3-1-1-1-1-2-11-2-2" type="checkbox" id="nav-9-6-3-1-1-1-1-2-11-2-2">
+    
+    <label class="md-nav__link" for="nav-9-6-3-1-1-1-1-2-11-2-2">
+      docs
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="11">
+      <label class="md-nav__title" for="nav-9-6-3-1-1-1-1-2-11-2-2">
+        docs
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="docs/AdvancedGuide/" title="Advanced Guide" class="md-nav__link">
+      Advanced Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="docs/DevGuide/" title="Dev Guide" class="md-nav__link">
+      Dev Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="docs/Documentation/" title="Documentation" class="md-nav__link">
+      Documentation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="docs/FAQ/" title="FAQ" class="md-nav__link">
+      FAQ
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="docs/Primer/" title="Primer" class="md-nav__link">
+      Primer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="docs/PumpManual/" title="Pump Manual" class="md-nav__link">
+      Pump Manual
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="docs/Samples/" title="Samples" class="md-nav__link">
+      Samples
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="docs/V1_5_AdvancedGuide/" title="V1 5 Advanced Guide" class="md-nav__link">
+      V1 5 Advanced Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="docs/V1_5_Documentation/" title="V1 5 Documentation" class="md-nav__link">
+      V1 5 Documentation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="docs/V1_5_FAQ/" title="V1 5 FAQ" class="md-nav__link">
+      V1 5 FAQ
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="docs/V1_5_Primer/" title="V1 5 Primer" class="md-nav__link">
+      V1 5 Primer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="docs/V1_5_PumpManual/" title="V1 5 Pump Manual" class="md-nav__link">
+      V1 5 Pump Manual
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="docs/V1_5_XcodeGuide/" title="V1 5 Xcode Guide" class="md-nav__link">
+      V1 5 Xcode Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="docs/V1_6_AdvancedGuide/" title="V1 6 Advanced Guide" class="md-nav__link">
+      V1 6 Advanced Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="docs/V1_6_Documentation/" title="V1 6 Documentation" class="md-nav__link">
+      V1 6 Documentation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="docs/V1_6_FAQ/" title="V1 6 FAQ" class="md-nav__link">
+      V1 6 FAQ
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="docs/V1_6_Primer/" title="V1 6 Primer" class="md-nav__link">
+      V1 6 Primer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="docs/V1_6_PumpManual/" title="V1 6 Pump Manual" class="md-nav__link">
+      V1 6 Pump Manual
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="docs/V1_6_Samples/" title="V1 6 Samples" class="md-nav__link">
+      V1 6 Samples
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="docs/V1_6_XcodeGuide/" title="V1 6 Xcode Guide" class="md-nav__link">
+      V1 6 Xcode Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="docs/V1_7_AdvancedGuide/" title="V1 7 Advanced Guide" class="md-nav__link">
+      V1 7 Advanced Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="docs/V1_7_Documentation/" title="V1 7 Documentation" class="md-nav__link">
+      V1 7 Documentation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="docs/V1_7_FAQ/" title="V1 7 FAQ" class="md-nav__link">
+      V1 7 FAQ
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="docs/V1_7_Primer/" title="V1 7 Primer" class="md-nav__link">
+      V1 7 Primer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="docs/V1_7_PumpManual/" title="V1 7 Pump Manual" class="md-nav__link">
+      V1 7 Pump Manual
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="docs/V1_7_Samples/" title="V1 7 Samples" class="md-nav__link">
+      V1 7 Samples
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="docs/V1_7_XcodeGuide/" title="V1 7 Xcode Guide" class="md-nav__link">
+      V1 7 Xcode Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="docs/XcodeGuide/" title="Xcode Guide" class="md-nav__link">
+      Xcode Guide
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../fuzz/" title="fuzz" class="md-nav__link">
+      fuzz
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-6-3-1-1-1-1-4" type="checkbox" id="nav-9-6-3-1-1-1-1-4">
+    
+    <label class="md-nav__link" for="nav-9-6-3-1-1-1-1-4">
+      pyca-cryptography
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="8">
+      <label class="md-nav__title" for="nav-9-6-3-1-1-1-1-4">
+        pyca-cryptography
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-6-3-1-1-1-1-4-1" type="checkbox" id="nav-9-6-3-1-1-1-1-4-1">
+    
+    <label class="md-nav__link" for="nav-9-6-3-1-1-1-1-4-1">
+      github
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="9">
+      <label class="md-nav__title" for="nav-9-6-3-1-1-1-1-4-1">
+        github
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../pyca-cryptography/github/ISSUE_TEMPLATE/openssl-release/" title="ISSUE TEMPLATE" class="md-nav__link">
+      ISSUE TEMPLATE
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../test/READMEssltest/" title="test" class="md-nav__link">
+      test
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-6-3-1-2" type="checkbox" id="nav-9-6-3-1-2">
+    
+    <label class="md-nav__link" for="nav-9-6-3-1-2">
+      Unit Tests
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+      <label class="md-nav__title" for="nav-9-6-3-1-2">
+        Unit Tests
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../UnitTests/VerifyPkcs7EkuUnitTestApp/readme/" title="Verify Pkcs7Eku Unit Test App" class="md-nav__link">
+      Verify Pkcs7Eku Unit Test App
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-6-4" type="checkbox" id="nav-9-6-4">
+    
+    <label class="md-nav__link" for="nav-9-6-4">
+      Embedded Pkg
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-6-4">
+        Embedded Pkg
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-6-4-1" type="checkbox" id="nav-9-6-4-1">
+    
+    <label class="md-nav__link" for="nav-9-6-4-1">
+      Modules
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-9-6-4-1">
+        Modules
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-6-4-1-1" type="checkbox" id="nav-9-6-4-1-1">
+    
+    <label class="md-nav__link" for="nav-9-6-4-1-1">
+      Scripts
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+      <label class="md-nav__title" for="nav-9-6-4-1-1">
+        Scripts
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../EmbeddedPkg/Scripts/LauterbachT32/Readme/" title="Lauterbach T32" class="md-nav__link">
+      Lauterbach T32
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-6-5" type="checkbox" id="nav-9-6-5">
+    
+    <label class="md-nav__link" for="nav-9-6-5">
+      Fmp Device Pkg
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-6-5">
+        Fmp Device Pkg
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-6-5-1" type="checkbox" id="nav-9-6-5-1">
+    
+    <label class="md-nav__link" for="nav-9-6-5-1">
+      Modules
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-9-6-5-1">
+        Modules
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../../../FmpDevicePkg/FmpDxe/" title="Fmp Dxe" class="md-nav__link">
+      Fmp Dxe
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#generic-build-instructions" class="md-nav__link">
+    Generic Build Instructions
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    Setup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build" class="md-nav__link">
+    Build
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-cmake" class="md-nav__link">
+    Using CMake
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#standalone-cmake-project" class="md-nav__link">
+    Standalone CMake Project
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#incorporating-into-an-existing-cmake-project" class="md-nav__link">
+    Incorporating Into An Existing CMake Project
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#legacy-build-scripts" class="md-nav__link">
+    Legacy Build Scripts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tweaking-google-test" class="md-nav__link">
+    Tweaking Google Test
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#choosing-a-tr1-tuple-library" class="md-nav__link">
+    Choosing a TR1 Tuple Library
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multi-threaded-tests" class="md-nav__link">
+    Multi-threaded Tests
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#as-a-shared-library-dll" class="md-nav__link">
+    As a Shared Library (DLL)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#avoiding-macro-name-clashes" class="md-nav__link">
+    Avoiding Macro Name Clashes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#developing-google-test" class="md-nav__link">
+    Developing Google Test
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#testing-google-test-itself" class="md-nav__link">
+    Testing Google Test Itself
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/microsoft/mu/edit/master/docs/dyn/mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/third_party/googletest/README.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                  <h1>README</h1>
+                
+                <h3 id="generic-build-instructions">Generic Build Instructions<a class="headerlink" href="#generic-build-instructions" title="Permanent link">&para;</a></h3>
+<h4 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">&para;</a></h4>
+<p>To build Google Test and your tests that use it, you need to tell your
+build system where to find its headers and source files.  The exact
+way to do it depends on which build system you use, and is usually
+straightforward.</p>
+<h4 id="build">Build<a class="headerlink" href="#build" title="Permanent link">&para;</a></h4>
+<p>Suppose you put Google Test in directory <code class="codehilite"><span class="cp">${</span><span class="n">GTEST_DIR</span><span class="cp">}</span></code>.  To build it,
+create a library build target (or a project as called by Visual Studio
+and Xcode) to compile</p>
+<div class="codehilite"><pre><span></span><code><span class="cp">${</span><span class="n">GTEST_DIR</span><span class="cp">}</span>/src/gtest-all.cc
+</code></pre></div>
+
+
+<p>with <code class="codehilite"><span class="cp">${</span><span class="n">GTEST_DIR</span><span class="cp">}</span>/include</code> in the system header search path and <code class="codehilite"><span class="cp">${</span><span class="n">GTEST_DIR</span><span class="cp">}</span></code>
+in the normal header search path.  Assuming a Linux-like system and gcc,
+something like the following will do:</p>
+<div class="codehilite"><pre><span></span><code>g++ -isystem <span class="cp">${</span><span class="n">GTEST_DIR</span><span class="cp">}</span>/include -I<span class="cp">${</span><span class="n">GTEST_DIR</span><span class="cp">}</span> \
+    -pthread -c <span class="cp">${</span><span class="n">GTEST_DIR</span><span class="cp">}</span>/src/gtest-all.cc
+ar -rv libgtest.a gtest-all.o
+</code></pre></div>
+
+
+<p>(We need <code class="codehilite"><span class="err">-pthread</span></code> as Google Test uses threads.)</p>
+<p>Next, you should compile your test source file with
+<code class="codehilite"><span class="cp">${</span><span class="n">GTEST_DIR</span><span class="cp">}</span>/include</code> in the system header search path, and link it
+with gtest and any other necessary libraries:</p>
+<div class="codehilite"><pre><span></span><code>g++ -isystem <span class="cp">${</span><span class="n">GTEST_DIR</span><span class="cp">}</span>/include -pthread path/to/your_test.cc libgtest.a \
+    -o your_test
+</code></pre></div>
+
+
+<p>As an example, the make/ directory contains a Makefile that you can
+use to build Google Test on systems where GNU make is available
+(e.g. Linux, Mac OS X, and Cygwin).  It doesn't try to build Google
+Test's own tests.  Instead, it just builds the Google Test library and
+a sample test.  You can use it as a starting point for your own build
+script.</p>
+<p>If the default settings are correct for your environment, the
+following commands should succeed:</p>
+<div class="codehilite"><pre><span></span><code>cd <span class="cp">${</span><span class="n">GTEST_DIR</span><span class="cp">}</span>/make
+make
+./sample1_unittest
+</code></pre></div>
+
+
+<p>If you see errors, try to tweak the contents of <code class="codehilite"><span class="err">make/Makefile</span></code> to make
+them go away.  There are instructions in <code class="codehilite"><span class="err">make/Makefile</span></code> on how to do
+it.</p>
+<h3 id="using-cmake">Using CMake<a class="headerlink" href="#using-cmake" title="Permanent link">&para;</a></h3>
+<p>Google Test comes with a CMake build script (
+<a href="CMakeLists.txt">CMakeLists.txt</a>) that can be used on a wide range of platforms ("C" stands for
+cross-platform.). If you don't have CMake installed already, you can
+download it for free from <a href="http://www.cmake.org/">http://www.cmake.org/</a>.</p>
+<p>CMake works by generating native makefiles or build projects that can
+be used in the compiler environment of your choice.  You can either
+build Google Test as a standalone project or it can be incorporated
+into an existing CMake build for another project.</p>
+<h4 id="standalone-cmake-project">Standalone CMake Project<a class="headerlink" href="#standalone-cmake-project" title="Permanent link">&para;</a></h4>
+<p>When building Google Test as a standalone project, the typical
+workflow starts with:</p>
+<div class="codehilite"><pre><span></span><code>mkdir mybuild       # Create a directory to hold the build output.
+cd mybuild
+cmake <span class="cp">${</span><span class="n">GTEST_DIR</span><span class="cp">}</span>  # Generate native build scripts.
+</code></pre></div>
+
+
+<p>If you want to build Google Test's samples, you should replace the
+last command with</p>
+<div class="codehilite"><pre><span></span><code>cmake -Dgtest_build_samples=ON <span class="cp">${</span><span class="n">GTEST_DIR</span><span class="cp">}</span>
+</code></pre></div>
+
+
+<p>If you are on a *nix system, you should now see a Makefile in the
+current directory.  Just type 'make' to build gtest.</p>
+<p>If you use Windows and have Visual Studio installed, a <code class="codehilite"><span class="err">gtest.sln</span></code> file
+and several <code class="codehilite"><span class="na">.vcproj</span></code> files will be created.  You can then build them
+using Visual Studio.</p>
+<p>On Mac OS X with Xcode installed, a <code class="codehilite"><span class="na">.xcodeproj</span></code> file will be generated.</p>
+<h4 id="incorporating-into-an-existing-cmake-project">Incorporating Into An Existing CMake Project<a class="headerlink" href="#incorporating-into-an-existing-cmake-project" title="Permanent link">&para;</a></h4>
+<p>If you want to use gtest in a project which already uses CMake, then a
+more robust and flexible approach is to build gtest as part of that
+project directly. This is done by making the GoogleTest source code
+available to the main build and adding it using CMake's
+<code class="codehilite"><span class="err">add_subdirectory()</span></code> command. This has the significant advantage that
+the same compiler and linker settings are used between gtest and the
+rest of your project, so issues associated with using incompatible
+libraries (eg debug/release), etc. are avoided. This is particularly
+useful on Windows. Making GoogleTest's source code available to the
+main build can be done a few different ways:</p>
+<ul>
+<li>Download the GoogleTest source code manually and place it at a
+  known location. This is the least flexible approach and can make
+  it more difficult to use with continuous integration systems, etc.</li>
+<li>Embed the GoogleTest source code as a direct copy in the main
+  project's source tree. This is often the simplest approach, but is
+  also the hardest to keep up to date. Some organizations may not
+  permit this method.</li>
+<li>Add GoogleTest as a git submodule or equivalent. This may not
+  always be possible or appropriate. Git submodules, for example,
+  have their own set of advantages and drawbacks.</li>
+<li>Use CMake to download GoogleTest as part of the build's configure
+  step. This is just a little more complex, but doesn't have the
+  limitations of the other methods.</li>
+</ul>
+<p>The last of the above methods is implemented with a small piece
+of CMake code in a separate file (e.g. <code class="codehilite"><span class="err">CMakeLists.txt.in</span></code>) which
+is copied to the build area and then invoked as a sub-build
+<em>during the CMake stage</em>. That directory is then pulled into the
+main build with <code class="codehilite"><span class="err">add_subdirectory()</span></code>. For example:</p>
+<p>New file <code class="codehilite"><span class="err">CMakeLists.txt.in</span></code>:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">cmake_minimum_required</span><span class="p">(</span><span class="s">VERSION</span> <span class="s">2.8.2</span><span class="p">)</span>
+
+<span class="nb">project</span><span class="p">(</span><span class="s">googletest-download</span> <span class="s">NONE</span><span class="p">)</span>
+
+<span class="nb">include</span><span class="p">(</span><span class="s">ExternalProject</span><span class="p">)</span>
+<span class="nb">ExternalProject_Add</span><span class="p">(</span><span class="s">googletest</span>
+  <span class="s">GIT_REPOSITORY</span>    <span class="s">https://github.com/google/googletest.git</span>
+  <span class="s">GIT_TAG</span>           <span class="s">master</span>
+  <span class="s">SOURCE_DIR</span>        <span class="s2">&quot;${CMAKE_BINARY_DIR}/googletest-src&quot;</span>
+  <span class="s">BINARY_DIR</span>        <span class="s2">&quot;${CMAKE_BINARY_DIR}/googletest-build&quot;</span>
+  <span class="s">CONFIGURE_COMMAND</span> <span class="s2">&quot;&quot;</span>
+  <span class="s">BUILD_COMMAND</span>     <span class="s2">&quot;&quot;</span>
+  <span class="s">INSTALL_COMMAND</span>   <span class="s2">&quot;&quot;</span>
+  <span class="s">TEST_COMMAND</span>      <span class="s2">&quot;&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<p>Existing build's <code class="codehilite"><span class="err">CMakeLists.txt</span></code>:</p>
+<div class="codehilite"><pre><span></span><code># Download and unpack googletest at configure time
+configure_file(CMakeLists.txt.in googletest-download/CMakeLists.txt)
+execute_process(COMMAND <span class="cp">${</span><span class="n">CMAKE_COMMAND</span><span class="cp">}</span> -G &quot;<span class="cp">${</span><span class="n">CMAKE_GENERATOR</span><span class="cp">}</span>&quot; .
+  RESULT_VARIABLE result
+  WORKING_DIRECTORY <span class="cp">${</span><span class="n">CMAKE_BINARY_DIR</span><span class="cp">}</span>/googletest-download )
+if(result)
+  message(FATAL_ERROR &quot;CMake step for googletest failed: <span class="cp">${</span><span class="n">result</span><span class="cp">}</span>&quot;)
+endif()
+execute_process(COMMAND <span class="cp">${</span><span class="n">CMAKE_COMMAND</span><span class="cp">}</span> --build .
+  RESULT_VARIABLE result
+  WORKING_DIRECTORY <span class="cp">${</span><span class="n">CMAKE_BINARY_DIR</span><span class="cp">}</span>/googletest-download )
+if(result)
+  message(FATAL_ERROR &quot;Build step for googletest failed: <span class="cp">${</span><span class="n">result</span><span class="cp">}</span>&quot;)
+endif()
+
+# Prevent overriding the parent project&#39;s compiler/linker
+# settings on Windows
+set(gtest_force_shared_crt ON CACHE BOOL &quot;&quot; FORCE)
+
+# Add googletest directly to our build. This defines
+# the gtest and gtest_main targets.
+add_subdirectory(<span class="cp">${</span><span class="n">CMAKE_BINARY_DIR</span><span class="cp">}</span>/googletest-src
+                 <span class="cp">${</span><span class="n">CMAKE_BINARY_DIR</span><span class="cp">}</span>/googletest-build)
+
+# The gtest/gtest_main targets carry header search path
+# dependencies automatically when using CMake 2.8.11 or
+# later. Otherwise we have to add them here ourselves.
+if (CMAKE_VERSION VERSION_LESS 2.8.11)
+  include_directories(&quot;<span class="cp">${</span><span class="n">gtest_SOURCE_DIR</span><span class="cp">}</span>/include&quot;)
+endif()
+
+# Now simply link against gtest or gtest_main as needed. Eg
+add_executable(example example.cpp)
+target_link_libraries(example gtest_main)
+add_test(NAME example_test COMMAND example)
+</code></pre></div>
+
+
+<p>Note that this approach requires CMake 2.8.2 or later due to
+its use of the <code class="codehilite"><span class="err">ExternalProject_Add()</span></code> command. The above
+technique is discussed in more detail in 
+<a href="http://crascit.com/2015/07/25/cmake-gtest/">this separate article</a>
+which also contains a link to a fully generalized implementation
+of the technique.</p>
+<h3 id="legacy-build-scripts">Legacy Build Scripts<a class="headerlink" href="#legacy-build-scripts" title="Permanent link">&para;</a></h3>
+<p>Before settling on CMake, we have been providing hand-maintained build
+projects/scripts for Visual Studio, Xcode, and Autotools.  While we
+continue to provide them for convenience, they are not actively
+maintained any more.  We highly recommend that you follow the
+instructions in the above sections to integrate Google Test
+with your existing build system.</p>
+<p>If you still need to use the legacy build scripts, here's how:</p>
+<p>The msvc folder contains two solutions with Visual C++ projects.
+Open the <code class="codehilite"><span class="err">gtest.sln</span></code> or <code class="codehilite"><span class="err">gtest-md.sln</span></code> file using Visual Studio, and you
+are ready to build Google Test the same way you build any Visual
+Studio project.  Files that have names ending with -md use DLL
+versions of Microsoft runtime libraries (the /MD or the /MDd compiler
+option).  Files without that suffix use static versions of the runtime
+libraries (the /MT or the /MTd option).  Please note that one must use
+the same option to compile both gtest and the test code.  If you use
+Visual Studio 2005 or above, we recommend the -md version as /MD is
+the default for new projects in these versions of Visual Studio.</p>
+<p>On Mac OS X, open the <code class="codehilite"><span class="err">gtest.xcodeproj</span></code> in the <code class="codehilite"><span class="err">xcode/</span></code> folder using
+Xcode.  Build the "gtest" target.  The universal binary framework will
+end up in your selected build directory (selected in the Xcode
+"Preferences..." -&gt; "Building" pane and defaults to xcode/build).
+Alternatively, at the command line, enter:</p>
+<div class="codehilite"><pre><span></span><code><span class="err">xcodebuild</span>
+</code></pre></div>
+
+
+<p>This will build the "Release" configuration of gtest.framework in your
+default build location.  See the "xcodebuild" man page for more
+information about building different configurations and building in
+different locations.</p>
+<p>If you wish to use the Google Test Xcode project with Xcode 4.x and
+above, you need to either:</p>
+<ul>
+<li>update the SDK configuration options in xcode/Config/General.xconfig.
+   Comment options <code class="codehilite"><span class="err">SDKROOT</span></code>, <code class="codehilite"><span class="err">MACOS_DEPLOYMENT_TARGET</span></code>, and <code class="codehilite"><span class="err">GCC_VERSION</span></code>. If
+   you choose this route you lose the ability to target earlier versions
+   of MacOS X.</li>
+<li>Install an SDK for an earlier version. This doesn't appear to be
+   supported by Apple, but has been reported to work
+   (<a href="http://stackoverflow.com/questions/5378518">http://stackoverflow.com/questions/5378518</a>).</li>
+</ul>
+<h3 id="tweaking-google-test">Tweaking Google Test<a class="headerlink" href="#tweaking-google-test" title="Permanent link">&para;</a></h3>
+<p>Google Test can be used in diverse environments.  The default
+configuration may not work (or may not work well) out of the box in
+some environments.  However, you can easily tweak Google Test by
+defining control macros on the compiler command line.  Generally,
+these macros are named like <code class="codehilite"><span class="err">GTEST_XYZ</span></code> and you define them to either 1
+or 0 to enable or disable a certain feature.</p>
+<p>We list the most frequently used macros below.  For a complete list,
+see file <a href="include/gtest/internal/gtest-port.h">include/gtest/internal/gtest-port.h</a>.</p>
+<h3 id="choosing-a-tr1-tuple-library">Choosing a TR1 Tuple Library<a class="headerlink" href="#choosing-a-tr1-tuple-library" title="Permanent link">&para;</a></h3>
+<p>Some Google Test features require the C++ Technical Report 1 (TR1)
+tuple library, which is not yet available with all compilers.  The
+good news is that Google Test implements a subset of TR1 tuple that's
+enough for its own need, and will automatically use this when the
+compiler doesn't provide TR1 tuple.</p>
+<p>Usually you don't need to care about which tuple library Google Test
+uses.  However, if your project already uses TR1 tuple, you need to
+tell Google Test to use the same TR1 tuple library the rest of your
+project uses, or the two tuple implementations will clash.  To do
+that, add</p>
+<div class="codehilite"><pre><span></span><code><span class="err">-DGTEST_USE_OWN_TR1_TUPLE=0</span>
+</code></pre></div>
+
+
+<p>to the compiler flags while compiling Google Test and your tests.  If
+you want to force Google Test to use its own tuple library, just add</p>
+<div class="codehilite"><pre><span></span><code><span class="err">-DGTEST_USE_OWN_TR1_TUPLE=1</span>
+</code></pre></div>
+
+
+<p>to the compiler flags instead.</p>
+<p>If you don't want Google Test to use tuple at all, add</p>
+<div class="codehilite"><pre><span></span><code><span class="err">-DGTEST_HAS_TR1_TUPLE=0</span>
+</code></pre></div>
+
+
+<p>and all features using tuple will be disabled.</p>
+<h3 id="multi-threaded-tests">Multi-threaded Tests<a class="headerlink" href="#multi-threaded-tests" title="Permanent link">&para;</a></h3>
+<p>Google Test is thread-safe where the pthread library is available.
+After <code class="codehilite"><span class="cp">#include</span> <span class="cpf">&quot;gtest/gtest.h&quot;</span><span class="cp"></span></code>, you can check the <code class="codehilite"><span class="err">GTEST_IS_THREADSAFE</span></code>
+macro to see whether this is the case (yes if the macro is <code class="codehilite"><span class="err">#defined</span></code> to
+1, no if it's undefined.).</p>
+<p>If Google Test doesn't correctly detect whether pthread is available
+in your environment, you can force it with</p>
+<div class="codehilite"><pre><span></span><code><span class="err">-DGTEST_HAS_PTHREAD=1</span>
+</code></pre></div>
+
+
+<p>or</p>
+<div class="codehilite"><pre><span></span><code><span class="err">-DGTEST_HAS_PTHREAD=0</span>
+</code></pre></div>
+
+
+<p>When Google Test uses pthread, you may need to add flags to your
+compiler and/or linker to select the pthread library, or you'll get
+link errors.  If you use the CMake script or the deprecated Autotools
+script, this is taken care of for you.  If you use your own build
+script, you'll need to read your compiler and linker's manual to
+figure out what flags to add.</p>
+<h3 id="as-a-shared-library-dll">As a Shared Library (DLL)<a class="headerlink" href="#as-a-shared-library-dll" title="Permanent link">&para;</a></h3>
+<p>Google Test is compact, so most users can build and link it as a
+static library for the simplicity.  You can choose to use Google Test
+as a shared library (known as a DLL on Windows) if you prefer.</p>
+<p>To compile <em>gtest</em> as a shared library, add</p>
+<div class="codehilite"><pre><span></span><code><span class="err">-DGTEST_CREATE_SHARED_LIBRARY=1</span>
+</code></pre></div>
+
+
+<p>to the compiler flags.  You'll also need to tell the linker to produce
+a shared library instead - consult your linker's manual for how to do
+it.</p>
+<p>To compile your <em>tests</em> that use the gtest shared library, add</p>
+<div class="codehilite"><pre><span></span><code><span class="err">-DGTEST_LINKED_AS_SHARED_LIBRARY=1</span>
+</code></pre></div>
+
+
+<p>to the compiler flags.</p>
+<p>Note: while the above steps aren't technically necessary today when
+using some compilers (e.g. GCC), they may become necessary in the
+future, if we decide to improve the speed of loading the library (see
+<a href="http://gcc.gnu.org/wiki/Visibility">http://gcc.gnu.org/wiki/Visibility</a> for details).  Therefore you are
+recommended to always add the above flags when using Google Test as a
+shared library.  Otherwise a future release of Google Test may break
+your build script.</p>
+<h3 id="avoiding-macro-name-clashes">Avoiding Macro Name Clashes<a class="headerlink" href="#avoiding-macro-name-clashes" title="Permanent link">&para;</a></h3>
+<p>In C++, macros don't obey namespaces.  Therefore two libraries that
+both define a macro of the same name will clash if you <code class="codehilite"><span class="err">#include</span></code> both
+definitions.  In case a Google Test macro clashes with another
+library, you can force Google Test to rename its macro to avoid the
+conflict.</p>
+<p>Specifically, if both Google Test and some other code define macro
+FOO, you can add</p>
+<div class="codehilite"><pre><span></span><code><span class="err">-DGTEST_DONT_DEFINE_FOO=1</span>
+</code></pre></div>
+
+
+<p>to the compiler flags to tell Google Test to change the macro's name
+from <code class="codehilite"><span class="err">FOO</span></code> to <code class="codehilite"><span class="err">GTEST_FOO</span></code>.  Currently <code class="codehilite"><span class="err">FOO</span></code> can be <code class="codehilite"><span class="err">FAIL</span></code>, <code class="codehilite"><span class="err">SUCCEED</span></code>,
+or <code class="codehilite"><span class="err">TEST</span></code>.  For example, with <code class="codehilite"><span class="err">-DGTEST_DONT_DEFINE_TEST=1</span></code>, you'll
+need to write</p>
+<div class="codehilite"><pre><span></span><code><span class="err">GTEST_TEST(SomeTest, DoesThis) { ... }</span>
+</code></pre></div>
+
+
+<p>instead of</p>
+<div class="codehilite"><pre><span></span><code><span class="err">TEST(SomeTest, DoesThis) { ... }</span>
+</code></pre></div>
+
+
+<p>in order to define a test.</p>
+<h2 id="developing-google-test">Developing Google Test<a class="headerlink" href="#developing-google-test" title="Permanent link">&para;</a></h2>
+<p>This section discusses how to make your own changes to Google Test.</p>
+<h3 id="testing-google-test-itself">Testing Google Test Itself<a class="headerlink" href="#testing-google-test-itself" title="Permanent link">&para;</a></h3>
+<p>To make sure your changes work as intended and don't break existing
+functionality, you'll want to compile and run Google Test's own tests.
+For that you can use CMake:</p>
+<div class="codehilite"><pre><span></span><code>mkdir mybuild
+cd mybuild
+cmake -Dgtest_build_tests=ON <span class="cp">${</span><span class="n">GTEST_DIR</span><span class="cp">}</span>
+</code></pre></div>
+
+
+<p>Make sure you have Python installed, as some of Google Test's tests
+are written in Python.  If the cmake command complains about not being
+able to find Python (<code class="codehilite"><span class="err">Could NOT find PythonInterp (missing:</span><span class="err">PYTHON_EXECUTABLE)</span></code>), try telling it explicitly where your Python
+executable can be found:</p>
+<div class="codehilite"><pre><span></span><code>cmake -DPYTHON_EXECUTABLE=path/to/python -Dgtest_build_tests=ON <span class="cp">${</span><span class="n">GTEST_DIR</span><span class="cp">}</span>
+</code></pre></div>
+
+
+<p>Next, you can build Google Test and all of its own tests.  On *nix,
+this is usually done by 'make'.  To run the tests, do</p>
+<div class="codehilite"><pre><span></span><code><span class="err">make test</span>
+</code></pre></div>
+
+
+<p>All tests should pass.</p>
+<p>Normally you don't need to worry about regenerating the source files,
+unless you need to modify them.  In that case, you should modify the
+corresponding .pump files instead and run the pump.py Python script to
+regenerate them.  You can find pump.py in the <a href="scripts/">scripts/</a> directory.
+Read the <a href="docs/PumpManual/">Pump manual</a> for how to use it.</p>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../android-cmake/" title="README" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                README
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="docs/AdvancedGuide/" title="Advanced Guide" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Advanced Guide
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright (c) Microsoft.  All rights reserved
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../../../../../../../../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/microsoft/mu" target="_blank" rel="noopener" title="github" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../../../../../../../assets/javascripts/application.c33a9706.js"></script>
+      
+      <script>app.initialize({version:"1.1",url:{base:"../../../../../../../../.."}})</script>
+      
+    
+  </body>
+</html>
