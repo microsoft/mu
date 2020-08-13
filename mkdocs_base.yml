@@ -7,6 +7,9 @@ plugins:
     - search
     - macros
 
+extra_javascript:
+  - https://unpkg.com/mermaid@8.7.0/dist/mermaid.min.js
+
 theme:
   name: 'material'
   custom_dir: 'theme'
@@ -33,7 +36,11 @@ markdown_extensions:
   - pymdownx.magiclink
   - pymdownx.mark
   - pymdownx.smartsymbols
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_div_format
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
