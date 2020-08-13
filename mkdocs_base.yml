@@ -37,6 +37,7 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
+  - pymdownx.tabbed
   - toc:
       permalink: true
 

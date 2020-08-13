@@ -38,6 +38,17 @@ https://facelessuser.github.io/pymdown-extensions/extensions/emoji/
 
 Twitter, github, and emojione tags available.  
 
+### Tab support
+
+You can now use tabs to organize your content.
+
+=== "Basic Example Tab1"
+    Some content in tab1
+=== "Example Tab2"
+    More content in tab2
+=== "Link to More details"
+    https://facelessuser.github.io/pymdown-extensions/extensions/tabbed/
+
 ### Others
 
 Check out the mkdocs.yml file for other extensions and details can be found in the links above.
