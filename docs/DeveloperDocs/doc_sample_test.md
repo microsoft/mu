@@ -4,7 +4,9 @@
 
 This plugin allows providing some variables in mkdocs.yml file and then reference those variables using jinja2 syntax in md files.  Most of these variables are populated and created during the DocBuild step and inserted into the yml file.
 
-https://github.com/fralau/mkdocs_macros_plugin
+* Docs: https://mkdocs-macros-plugin.readthedocs.io/en/latest/
+
+* Src Project: https://github.com/fralau/mkdocs_macros_plugin
 
 ## Material theme
 
