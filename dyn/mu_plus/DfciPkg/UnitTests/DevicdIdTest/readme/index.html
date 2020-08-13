@@ -1,14 +1,12 @@
 
 
 
-
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
-      <meta http-equiv="x-ua-compatible" content="ie=edge">
       
         <meta name="description" content="Project Mu Documentation">
       
@@ -16,27 +14,8 @@
         <link rel="canonical" href="https://microsoft.github.io/mu/dyn/mu_plus/DfciPkg/UnitTests/DevicdIdTest/readme/">
       
       
-      
-        <meta name="lang:clipboard.copy" content="Copy to clipboard">
-      
-        <meta name="lang:clipboard.copied" content="Copied to clipboard">
-      
-        <meta name="lang:search.language" content="en">
-      
-        <meta name="lang:search.pipeline.stopwords" content="True">
-      
-        <meta name="lang:search.pipeline.trimmer" content="True">
-      
-        <meta name="lang:search.result.none" content="No matching documents">
-      
-        <meta name="lang:search.result.one" content="1 matching document">
-      
-        <meta name="lang:search.result.other" content="# matching documents">
-      
-        <meta name="lang:search.tokenizer" content="[\s\-]+">
-      
       <link rel="shortcut icon" href="../../../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.6">
     
     
       
@@ -44,9 +23,9 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../../assets/stylesheets/application.adb8469c.css">
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.63b94e9e.min.css">
       
-        <link rel="stylesheet" href="../../../../../../assets/stylesheets/application-palette.a8b3c06d.css">
+        <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.7f672a1f.min.css">
       
       
         
@@ -55,16 +34,13 @@
       
     
     
-      <script src="../../../../../../assets/javascripts/modernizr.86422ebf.js"></script>
-    
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
       
     
-    <link rel="stylesheet" href="../../../../../../assets/fonts/material-icons.css">
     
     
     
@@ -73,73 +49,75 @@
     
   </head>
   
-    
-    
-    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
-    <svg class="md-svg">
-      <defs>
-        
-        
-          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
-        
-      </defs>
-    </svg>
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
-    
-      <a href="#verify-dfcidevicedidlib-library-functionality" tabindex="0" class="md-skip">
-        Skip to content
-      </a>
-    
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#verify-dfcidevicedidlib-library-functionality" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
     
       <header class="md-header" data-md-component="header">
-  <nav class="md-header-nav md-grid">
-    <div class="md-flex">
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="https://microsoft.github.io/mu/" title="Project Mu" aria-label="Project Mu" class="md-header-nav__button md-logo">
-          
-            <img alt="logo" src="../../../../../../img/mu.png" width="24" height="24">
-          
-        </a>
-      </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
-      </div>
-      <div class="md-flex__cell md-flex__cell--stretch">
-        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
-          
-            <span class="md-header-nav__topic">
-              Project Mu
-            </span>
-            <span class="md-header-nav__topic">
-              
-                Devicd Id Test
-              
-            </span>
-          
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="https://microsoft.github.io/mu/" title="Project Mu" class="md-header-nav__button md-logo" aria-label="Project Mu">
+      
+  <img src="../../../../../../img/mu.png" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Project Mu
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Devicd Id Test
+            
+          </span>
         </div>
-      </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
-        
-          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
-          
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
 <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
-      <label class="md-icon md-search__icon" for="__search"></label>
-      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
-        &#xE5CD;
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
       </button>
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result">
+        <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Type to start searching
+            Initializing search
           </div>
           <ol class="md-search-result__list"></ol>
         </div>
@@ -147,71 +125,55 @@
     </div>
   </div>
 </div>
+    
+    
+      <div class="md-header-nav__source">
         
-      </div>
-      
-        <div class="md-flex__cell md-flex__cell--shrink">
-          <div class="md-header-nav__source">
-            
-
-
-  
-
-<a href="https://github.com/microsoft/mu/" title="Go to repository" class="md-source" data-md-source="github">
-  
-    <div class="md-source__icon">
-      <svg viewBox="0 0 24 24" width="24" height="24">
-        <use xlink:href="#__github" width="24" height="24"></use>
-      </svg>
-    </div>
-  
+<a href="https://github.com/microsoft/mu/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
   <div class="md-source__repository">
     GitHub
   </div>
 </a>
-          </div>
-        </div>
-      
-    </div>
+      </div>
+    
   </nav>
 </header>
     
-    <div class="md-container">
+    <div class="md-container" data-md-component="container">
       
         
       
       
-      <main class="md-main" role="main">
-        <div class="md-main__inner md-grid" data-md-component="container">
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
           
             
               <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary" data-md-level="0">
-  <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="https://microsoft.github.io/mu/" title="Project Mu" class="md-nav__button md-logo">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://microsoft.github.io/mu/" title="Project Mu" class="md-nav__button md-logo" aria-label="Project Mu">
       
-        <img alt="logo" src="../../../../../../img/mu.png" width="48" height="48">
-      
+  <img src="../../../../../../img/mu.png" alt="logo">
+
     </a>
     Project Mu
   </label>
   
     <div class="md-nav__source">
       
-
-
-  
-
-<a href="https://github.com/microsoft/mu/" title="Go to repository" class="md-source" data-md-source="github">
-  
-    <div class="md-source__icon">
-      <svg viewBox="0 0 24 24" width="24" height="24">
-        <use xlink:href="#__github" width="24" height="24"></use>
-      </svg>
-    </div>
-  
+<a href="https://github.com/microsoft/mu/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
   <div class="md-source__repository">
     GitHub
   </div>
@@ -239,13 +201,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
     
     <label class="md-nav__link" for="nav-2">
       What and Why
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+    <nav class="md-nav" aria-label="What and Why" data-md-level="1">
       <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         What and Why
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -299,13 +267,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
     
     <label class="md-nav__link" for="nav-3">
       Where
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+    <nav class="md-nav" aria-label="Where" data-md-level="1">
       <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Where
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -347,13 +321,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
     <label class="md-nav__link" for="nav-4">
       How
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+    <nav class="md-nav" aria-label="How" data-md-level="1">
       <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         How
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -407,13 +387,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
     
     <label class="md-nav__link" for="nav-5">
       Developing Docs
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+    <nav class="md-nav" aria-label="Developing Docs" data-md-level="1">
       <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Developing Docs
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -491,13 +477,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
     
     <label class="md-nav__link" for="nav-6">
       Developing Code
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+    <nav class="md-nav" aria-label="Developing Code" data-md-level="1">
       <label class="md-nav__title" for="nav-6">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Developing Code
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -601,13 +593,19 @@
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9" checked>
     
     <label class="md-nav__link" for="nav-9">
       Code Repositories
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+    <nav class="md-nav" aria-label="Code Repositories" data-md-level="1">
       <label class="md-nav__title" for="nav-9">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Code Repositories
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -620,13 +618,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1" type="checkbox" id="nav-9-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-1" type="checkbox" id="nav-9-1">
     
     <label class="md-nav__link" for="nav-9-1">
       mu basecore
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+    <nav class="md-nav" aria-label="mu basecore" data-md-level="2">
       <label class="md-nav__title" for="nav-9-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         mu basecore
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -651,13 +655,73 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1-2" type="checkbox" id="nav-9-1-2">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-1-2" type="checkbox" id="nav-9-1-2">
     
     <label class="md-nav__link" for="nav-9-1-2">
-      pytool
+      azurepipelines
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+    <nav class="md-nav" aria-label="azurepipelines" data-md-level="3">
       <label class="md-nav__title" for="nav-9-1-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        azurepipelines
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../mu_basecore/azurepipelines/ReadMe/" title="Read Me" class="md-nav__link">
+      Read Me
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../mu_basecore/azurepipelines/templates/ReadMe/" title="templates" class="md-nav__link">
+      templates
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-1-3" type="checkbox" id="nav-9-1-3">
+    
+    <label class="md-nav__link" for="nav-9-1-3">
+      pytool
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="pytool" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-1-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         pytool
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -682,13 +746,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1-2-2" type="checkbox" id="nav-9-1-2-2">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-1-3-2" type="checkbox" id="nav-9-1-3-2">
     
-    <label class="md-nav__link" for="nav-9-1-2-2">
+    <label class="md-nav__link" for="nav-9-1-3-2">
       Plugin
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-      <label class="md-nav__title" for="nav-9-1-2-2">
+    <nav class="md-nav" aria-label="Plugin" data-md-level="4">
+      <label class="md-nav__title" for="nav-9-1-3-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Plugin
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -819,13 +889,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1-3" type="checkbox" id="nav-9-1-3">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-1-4" type="checkbox" id="nav-9-1-4">
     
-    <label class="md-nav__link" for="nav-9-1-3">
+    <label class="md-nav__link" for="nav-9-1-4">
       Base Tools
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-9-1-3">
+    <nav class="md-nav" aria-label="Base Tools" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-1-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Base Tools
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -838,13 +914,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1-3-1" type="checkbox" id="nav-9-1-3-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-1-4-1" type="checkbox" id="nav-9-1-4-1">
     
-    <label class="md-nav__link" for="nav-9-1-3-1">
+    <label class="md-nav__link" for="nav-9-1-4-1">
       Nuget Publishing
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-      <label class="md-nav__title" for="nav-9-1-3-1">
+    <nav class="md-nav" aria-label="Nuget Publishing" data-md-level="4">
+      <label class="md-nav__title" for="nav-9-1-4-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Nuget Publishing
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -910,13 +992,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1-3-2" type="checkbox" id="nav-9-1-3-2">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-1-4-2" type="checkbox" id="nav-9-1-4-2">
     
-    <label class="md-nav__link" for="nav-9-1-3-2">
+    <label class="md-nav__link" for="nav-9-1-4-2">
       Plugin
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-      <label class="md-nav__title" for="nav-9-1-3-2">
+    <nav class="md-nav" aria-label="Plugin" data-md-level="4">
+      <label class="md-nav__title" for="nav-9-1-4-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Plugin
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -958,13 +1046,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1-3-3" type="checkbox" id="nav-9-1-3-3">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-1-4-3" type="checkbox" id="nav-9-1-4-3">
     
-    <label class="md-nav__link" for="nav-9-1-3-3">
+    <label class="md-nav__link" for="nav-9-1-4-3">
       Scripts
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-      <label class="md-nav__title" for="nav-9-1-3-3">
+    <nav class="md-nav" aria-label="Scripts" data-md-level="4">
+      <label class="md-nav__title" for="nav-9-1-4-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Scripts
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -994,13 +1088,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1-3-4" type="checkbox" id="nav-9-1-3-4">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-1-4-4" type="checkbox" id="nav-9-1-4-4">
     
-    <label class="md-nav__link" for="nav-9-1-3-4">
+    <label class="md-nav__link" for="nav-9-1-4-4">
       Source
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-      <label class="md-nav__title" for="nav-9-1-3-4">
+    <nav class="md-nav" aria-label="Source" data-md-level="4">
+      <label class="md-nav__title" for="nav-9-1-4-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Source
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1013,13 +1113,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1-3-4-1" type="checkbox" id="nav-9-1-3-4-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-1-4-4-1" type="checkbox" id="nav-9-1-4-4-1">
     
-    <label class="md-nav__link" for="nav-9-1-3-4-1">
+    <label class="md-nav__link" for="nav-9-1-4-4-1">
       C
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-      <label class="md-nav__title" for="nav-9-1-3-4-1">
+    <nav class="md-nav" aria-label="C" data-md-level="5">
+      <label class="md-nav__title" for="nav-9-1-4-4-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         C
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1032,13 +1138,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1-3-4-1-1" type="checkbox" id="nav-9-1-3-4-1-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-1-4-4-1-1" type="checkbox" id="nav-9-1-4-4-1-1">
     
-    <label class="md-nav__link" for="nav-9-1-3-4-1-1">
+    <label class="md-nav__link" for="nav-9-1-4-4-1-1">
       Brotli Compress
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="6">
-      <label class="md-nav__title" for="nav-9-1-3-4-1-1">
+    <nav class="md-nav" aria-label="Brotli Compress" data-md-level="6">
+      <label class="md-nav__title" for="nav-9-1-4-4-1-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Brotli Compress
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1049,9 +1161,34 @@
           
 
 
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-1-4-4-1-1-1" type="checkbox" id="nav-9-1-4-4-1-1-1">
+    
+    <label class="md-nav__link" for="nav-9-1-4-4-1-1-1">
+      brotli
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="brotli" data-md-level="7">
+      <label class="md-nav__title" for="nav-9-1-4-4-1-1-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        brotli
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
   <li class="md-nav__item">
-    <a href="../../../../../mu_basecore/BaseTools/Source/C/BrotliCompress/" title="README" class="md-nav__link">
-      README
+    <a href="../../../../../mu_basecore/BaseTools/Source/C/BrotliCompress/brotli/CONTRIBUTING/" title="CONTRIBUTING" class="md-nav__link">
+      CONTRIBUTING
     </a>
   </li>
 
@@ -1062,8 +1199,148 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../../mu_basecore/BaseTools/Source/C/BrotliCompress/tools/brotli/" title="tools" class="md-nav__link">
+    <a href="../../../../../mu_basecore/BaseTools/Source/C/BrotliCompress/brotli/" title="README" class="md-nav__link">
+      README
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-1-4-4-1-1-1-3" type="checkbox" id="nav-9-1-4-4-1-1-1-3">
+    
+    <label class="md-nav__link" for="nav-9-1-4-4-1-1-1-3">
+      c
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="c" data-md-level="8">
+      <label class="md-nav__title" for="nav-9-1-4-4-1-1-1-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        c
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../mu_basecore/BaseTools/Source/C/BrotliCompress/brotli/c/tools/brotli/" title="tools" class="md-nav__link">
       tools
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../mu_basecore/BaseTools/Source/C/BrotliCompress/brotli/python/" title="python" class="md-nav__link">
+      python
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-1-4-4-1-1-1-5" type="checkbox" id="nav-9-1-4-4-1-1-1-5">
+    
+    <label class="md-nav__link" for="nav-9-1-4-4-1-1-1-5">
+      research
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="research" data-md-level="8">
+      <label class="md-nav__title" for="nav-9-1-4-4-1-1-1-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        research
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../mu_basecore/BaseTools/Source/C/BrotliCompress/brotli/research/" title="README" class="md-nav__link">
+      README
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-1-4-4-1-1-1-5-2" type="checkbox" id="nav-9-1-4-4-1-1-1-5-2">
+    
+    <label class="md-nav__link" for="nav-9-1-4-4-1-1-1-5-2">
+      libdivsufsort
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="libdivsufsort" data-md-level="9">
+      <label class="md-nav__title" for="nav-9-1-4-4-1-1-1-5-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        libdivsufsort
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../mu_basecore/BaseTools/Source/C/BrotliCompress/brotli/research/libdivsufsort/CHANGELOG/" title="CHANGELOG" class="md-nav__link">
+      CHANGELOG
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../mu_basecore/BaseTools/Source/C/BrotliCompress/brotli/research/libdivsufsort/" title="README" class="md-nav__link">
+      README
     </a>
   </li>
 
@@ -1085,13 +1362,76 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1-3-4-2" type="checkbox" id="nav-9-1-3-4-2">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-1-4-4-1-1-1-6" type="checkbox" id="nav-9-1-4-4-1-1-1-6">
     
-    <label class="md-nav__link" for="nav-9-1-3-4-2">
-      Python
+    <label class="md-nav__link" for="nav-9-1-4-4-1-1-1-6">
+      scripts
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-      <label class="md-nav__title" for="nav-9-1-3-4-2">
+    <nav class="md-nav" aria-label="scripts" data-md-level="8">
+      <label class="md-nav__title" for="nav-9-1-4-4-1-1-1-6">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        scripts
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../mu_basecore/BaseTools/Source/C/BrotliCompress/brotli/scripts/dictionary/" title="dictionary" class="md-nav__link">
+      dictionary
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-1-4-4-2" type="checkbox" id="nav-9-1-4-4-2">
+    
+    <label class="md-nav__link" for="nav-9-1-4-4-2">
+      Python
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Python" data-md-level="5">
+      <label class="md-nav__title" for="nav-9-1-4-4-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Python
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1131,13 +1471,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1-4" type="checkbox" id="nav-9-1-4">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-1-5" type="checkbox" id="nav-9-1-5">
     
-    <label class="md-nav__link" for="nav-9-1-4">
+    <label class="md-nav__link" for="nav-9-1-5">
       Mde Module Pkg
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-9-1-4">
+    <nav class="md-nav" aria-label="Mde Module Pkg" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-1-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Mde Module Pkg
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1150,13 +1496,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1-4-1" type="checkbox" id="nav-9-1-4-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-1-5-1" type="checkbox" id="nav-9-1-5-1">
     
-    <label class="md-nav__link" for="nav-9-1-4-1">
+    <label class="md-nav__link" for="nav-9-1-5-1">
       Modules
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-      <label class="md-nav__title" for="nav-9-1-4-1">
+    <nav class="md-nav" aria-label="Modules" data-md-level="4">
+      <label class="md-nav__title" for="nav-9-1-5-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Modules
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1169,13 +1521,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1-4-1-1" type="checkbox" id="nav-9-1-4-1-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-1-5-1-1" type="checkbox" id="nav-9-1-5-1-1">
     
-    <label class="md-nav__link" for="nav-9-1-4-1-1">
+    <label class="md-nav__link" for="nav-9-1-5-1-1">
       Library
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-      <label class="md-nav__title" for="nav-9-1-4-1-1">
+    <nav class="md-nav" aria-label="Library" data-md-level="5">
+      <label class="md-nav__title" for="nav-9-1-5-1-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Library
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1186,10 +1544,274 @@
           
 
 
-  <li class="md-nav__item">
-    <a href="../../../../../mu_basecore/MdeModulePkg/Library/BrotliCustomDecompressLib/" title="Brotli Custom Decompress Lib" class="md-nav__link">
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-1-5-1-1-1" type="checkbox" id="nav-9-1-5-1-1-1">
+    
+    <label class="md-nav__link" for="nav-9-1-5-1-1-1">
       Brotli Custom Decompress Lib
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Brotli Custom Decompress Lib" data-md-level="6">
+      <label class="md-nav__title" for="nav-9-1-5-1-1-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Brotli Custom Decompress Lib
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-1-5-1-1-1-1" type="checkbox" id="nav-9-1-5-1-1-1-1">
+    
+    <label class="md-nav__link" for="nav-9-1-5-1-1-1-1">
+      brotli
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="brotli" data-md-level="7">
+      <label class="md-nav__title" for="nav-9-1-5-1-1-1-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        brotli
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../mu_basecore/MdeModulePkg/Library/BrotliCustomDecompressLib/brotli/CONTRIBUTING/" title="CONTRIBUTING" class="md-nav__link">
+      CONTRIBUTING
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../mu_basecore/MdeModulePkg/Library/BrotliCustomDecompressLib/brotli/" title="README" class="md-nav__link">
+      README
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-1-5-1-1-1-1-3" type="checkbox" id="nav-9-1-5-1-1-1-1-3">
+    
+    <label class="md-nav__link" for="nav-9-1-5-1-1-1-1-3">
+      c
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="c" data-md-level="8">
+      <label class="md-nav__title" for="nav-9-1-5-1-1-1-1-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        c
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../mu_basecore/MdeModulePkg/Library/BrotliCustomDecompressLib/brotli/c/tools/brotli/" title="tools" class="md-nav__link">
+      tools
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../mu_basecore/MdeModulePkg/Library/BrotliCustomDecompressLib/brotli/python/" title="python" class="md-nav__link">
+      python
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-1-5-1-1-1-1-5" type="checkbox" id="nav-9-1-5-1-1-1-1-5">
+    
+    <label class="md-nav__link" for="nav-9-1-5-1-1-1-1-5">
+      research
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="research" data-md-level="8">
+      <label class="md-nav__title" for="nav-9-1-5-1-1-1-1-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        research
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../mu_basecore/MdeModulePkg/Library/BrotliCustomDecompressLib/brotli/research/" title="README" class="md-nav__link">
+      README
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-1-5-1-1-1-1-5-2" type="checkbox" id="nav-9-1-5-1-1-1-1-5-2">
+    
+    <label class="md-nav__link" for="nav-9-1-5-1-1-1-1-5-2">
+      libdivsufsort
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="libdivsufsort" data-md-level="9">
+      <label class="md-nav__title" for="nav-9-1-5-1-1-1-1-5-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        libdivsufsort
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../mu_basecore/MdeModulePkg/Library/BrotliCustomDecompressLib/brotli/research/libdivsufsort/CHANGELOG/" title="CHANGELOG" class="md-nav__link">
+      CHANGELOG
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../mu_basecore/MdeModulePkg/Library/BrotliCustomDecompressLib/brotli/research/libdivsufsort/" title="README" class="md-nav__link">
+      README
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-1-5-1-1-1-1-6" type="checkbox" id="nav-9-1-5-1-1-1-1-6">
+    
+    <label class="md-nav__link" for="nav-9-1-5-1-1-1-1-6">
+      scripts
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="scripts" data-md-level="8">
+      <label class="md-nav__title" for="nav-9-1-5-1-1-1-1-6">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        scripts
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../mu_basecore/MdeModulePkg/Library/BrotliCustomDecompressLib/brotli/scripts/dictionary/" title="dictionary" class="md-nav__link">
+      dictionary
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
         
@@ -1210,6 +1832,105 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-1-5-1-2" type="checkbox" id="nav-9-1-5-1-2">
+    
+    <label class="md-nav__link" for="nav-9-1-5-1-2">
+      Universal
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Universal" data-md-level="5">
+      <label class="md-nav__title" for="nav-9-1-5-1-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Universal
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-1-5-1-2-1" type="checkbox" id="nav-9-1-5-1-2-1">
+    
+    <label class="md-nav__link" for="nav-9-1-5-1-2-1">
+      Regular Expression Dxe
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Regular Expression Dxe" data-md-level="6">
+      <label class="md-nav__title" for="nav-9-1-5-1-2-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Regular Expression Dxe
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-1-5-1-2-1-1" type="checkbox" id="nav-9-1-5-1-2-1-1">
+    
+    <label class="md-nav__link" for="nav-9-1-5-1-2-1-1">
+      oniguruma
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="oniguruma" data-md-level="7">
+      <label class="md-nav__title" for="nav-9-1-5-1-2-1-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        oniguruma
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../mu_basecore/MdeModulePkg/Universal/RegularExpressionDxe/oniguruma/" title="README" class="md-nav__link">
+      README
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../mu_basecore/MdeModulePkg/Universal/RegularExpressionDxe/oniguruma/doc/SYNTAX/" title="doc" class="md-nav__link">
+      doc
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -1227,13 +1948,76 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1-5" type="checkbox" id="nav-9-1-5">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-1-5-1-2-2" type="checkbox" id="nav-9-1-5-1-2-2">
     
-    <label class="md-nav__link" for="nav-9-1-5">
-      Mde Pkg
+    <label class="md-nav__link" for="nav-9-1-5-1-2-2">
+      Variable
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-9-1-5">
+    <nav class="md-nav" aria-label="Variable" data-md-level="6">
+      <label class="md-nav__title" for="nav-9-1-5-1-2-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Variable
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../mu_basecore/MdeModulePkg/Universal/Variable/UefiVariablePolicy/ReadMe/" title="Uefi Variable Policy" class="md-nav__link">
+      Uefi Variable Policy
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-1-6" type="checkbox" id="nav-9-1-6">
+    
+    <label class="md-nav__link" for="nav-9-1-6">
+      Mde Pkg
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Mde Pkg" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-1-6">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Mde Pkg
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1246,13 +2030,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1-5-1" type="checkbox" id="nav-9-1-5-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-1-6-1" type="checkbox" id="nav-9-1-6-1">
     
-    <label class="md-nav__link" for="nav-9-1-5-1">
+    <label class="md-nav__link" for="nav-9-1-6-1">
       Modules
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-      <label class="md-nav__title" for="nav-9-1-5-1">
+    <nav class="md-nav" aria-label="Modules" data-md-level="4">
+      <label class="md-nav__title" for="nav-9-1-6-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Modules
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1265,13 +2055,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1-5-1-1" type="checkbox" id="nav-9-1-5-1-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-1-6-1-1" type="checkbox" id="nav-9-1-6-1-1">
     
-    <label class="md-nav__link" for="nav-9-1-5-1-1">
+    <label class="md-nav__link" for="nav-9-1-6-1-1">
       Library
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-      <label class="md-nav__title" for="nav-9-1-5-1-1">
+    <nav class="md-nav" aria-label="Library" data-md-level="5">
+      <label class="md-nav__title" for="nav-9-1-6-1-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Library
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1311,13 +2107,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1-6" type="checkbox" id="nav-9-1-6">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-1-7" type="checkbox" id="nav-9-1-7">
     
-    <label class="md-nav__link" for="nav-9-1-6">
+    <label class="md-nav__link" for="nav-9-1-7">
       Network Pkg
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-9-1-6">
+    <nav class="md-nav" aria-label="Network Pkg" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-1-7">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Network Pkg
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1330,13 +2132,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1-6-1" type="checkbox" id="nav-9-1-6-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-1-7-1" type="checkbox" id="nav-9-1-7-1">
     
-    <label class="md-nav__link" for="nav-9-1-6-1">
+    <label class="md-nav__link" for="nav-9-1-7-1">
       Modules
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-      <label class="md-nav__title" for="nav-9-1-6-1">
+    <nav class="md-nav" aria-label="Modules" data-md-level="4">
+      <label class="md-nav__title" for="nav-9-1-7-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Modules
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1349,17 +2157,35 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1-6-1-1" type="checkbox" id="nav-9-1-6-1-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-1-7-1-1" type="checkbox" id="nav-9-1-7-1-1">
     
-    <label class="md-nav__link" for="nav-9-1-6-1-1">
+    <label class="md-nav__link" for="nav-9-1-7-1-1">
       Shared Networking
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-      <label class="md-nav__title" for="nav-9-1-6-1-1">
+    <nav class="md-nav" aria-label="Shared Networking" data-md-level="5">
+      <label class="md-nav__title" for="nav-9-1-7-1-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Shared Networking
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../mu_basecore/NetworkPkg/SharedNetworking/" title="README" class="md-nav__link">
+      README
+    </a>
+  </li>
+
         
           
           
@@ -1407,145 +2233,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1-7" type="checkbox" id="nav-9-1-7">
-    
-    <label class="md-nav__link" for="nav-9-1-7">
-      Rust Pkg
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-9-1-7">
-        Rust Pkg
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1-7-1" type="checkbox" id="nav-9-1-7-1">
-    
-    <label class="md-nav__link" for="nav-9-1-7-1">
-      Modules
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-      <label class="md-nav__title" for="nav-9-1-7-1">
-        Modules
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../../../mu_basecore/RustPkg/Readme/" title="Readme" class="md-nav__link">
-      Readme
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1-7-1-2" type="checkbox" id="nav-9-1-7-1-2">
-    
-    <label class="md-nav__link" for="nav-9-1-7-1-2">
-      External
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-      <label class="md-nav__title" for="nav-9-1-7-1-2">
-        External
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1-7-1-2-1" type="checkbox" id="nav-9-1-7-1-2-1">
-    
-    <label class="md-nav__link" for="nav-9-1-7-1-2-1">
-      r-efi
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="6">
-      <label class="md-nav__title" for="nav-9-1-7-1-2-1">
-        r-efi
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../../../mu_basecore/RustPkg/External/r-efi/NEWS/" title="NEWS" class="md-nav__link">
-      NEWS
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../../../mu_basecore/RustPkg/External/r-efi/" title="README" class="md-nav__link">
-      README
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-1-8" type="checkbox" id="nav-9-1-8">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-1-8" type="checkbox" id="nav-9-1-8">
     
     <label class="md-nav__link" for="nav-9-1-8">
       Unit Test Framework Pkg
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+    <nav class="md-nav" aria-label="Unit Test Framework Pkg" data-md-level="3">
       <label class="md-nav__title" for="nav-9-1-8">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Unit Test Framework Pkg
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1580,13 +2280,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-2" type="checkbox" id="nav-9-2">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-2" type="checkbox" id="nav-9-2">
     
     <label class="md-nav__link" for="nav-9-2">
       mu oem sample
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+    <nav class="md-nav" aria-label="mu oem sample" data-md-level="2">
       <label class="md-nav__title" for="nav-9-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         mu oem sample
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1611,13 +2317,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-2-2" type="checkbox" id="nav-9-2-2">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-2-2" type="checkbox" id="nav-9-2-2">
     
     <label class="md-nav__link" for="nav-9-2-2">
       Oem Pkg
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+    <nav class="md-nav" aria-label="Oem Pkg" data-md-level="3">
       <label class="md-nav__title" for="nav-9-2-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Oem Pkg
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1630,13 +2342,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-2-2-1" type="checkbox" id="nav-9-2-2-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-2-2-1" type="checkbox" id="nav-9-2-2-1">
     
     <label class="md-nav__link" for="nav-9-2-2-1">
       Modules
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+    <nav class="md-nav" aria-label="Modules" data-md-level="4">
       <label class="md-nav__title" for="nav-9-2-2-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Modules
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1678,13 +2396,19 @@
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3" type="checkbox" id="nav-9-3" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-3" type="checkbox" id="nav-9-3" checked>
     
     <label class="md-nav__link" for="nav-9-3">
       mu plus
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+    <nav class="md-nav" aria-label="mu plus" data-md-level="2">
       <label class="md-nav__title" for="nav-9-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         mu plus
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1709,13 +2433,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-2" type="checkbox" id="nav-9-3-2">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-3-2" type="checkbox" id="nav-9-3-2">
     
     <label class="md-nav__link" for="nav-9-3-2">
       Adv Logger Pkg
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+    <nav class="md-nav" aria-label="Adv Logger Pkg" data-md-level="3">
       <label class="md-nav__title" for="nav-9-3-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Adv Logger Pkg
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1728,13 +2458,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-2-1" type="checkbox" id="nav-9-3-2-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-3-2-1" type="checkbox" id="nav-9-3-2-1">
     
     <label class="md-nav__link" for="nav-9-3-2-1">
       Modules
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+    <nav class="md-nav" aria-label="Modules" data-md-level="4">
       <label class="md-nav__title" for="nav-9-3-2-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Modules
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1759,13 +2495,61 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-2-1-2" type="checkbox" id="nav-9-3-2-1-2">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-3-2-1-2" type="checkbox" id="nav-9-3-2-1-2">
     
     <label class="md-nav__link" for="nav-9-3-2-1-2">
-      Unit Tests
+      Application
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+    <nav class="md-nav" aria-label="Application" data-md-level="5">
       <label class="md-nav__title" for="nav-9-3-2-1-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Application
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../AdvLoggerPkg/Application/DecodeUefiLog/ReadMe/" title="Decode Uefi Log" class="md-nav__link">
+      Decode Uefi Log
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-3-2-1-3" type="checkbox" id="nav-9-3-2-1-3">
+    
+    <label class="md-nav__link" for="nav-9-3-2-1-3">
+      Unit Tests
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Unit Tests" data-md-level="5">
+      <label class="md-nav__title" for="nav-9-3-2-1-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Unit Tests
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1807,13 +2591,19 @@
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-3" type="checkbox" id="nav-9-3-3" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-3-3" type="checkbox" id="nav-9-3-3" checked>
     
     <label class="md-nav__link" for="nav-9-3-3">
       Dfci Pkg
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+    <nav class="md-nav" aria-label="Dfci Pkg" data-md-level="3">
       <label class="md-nav__title" for="nav-9-3-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Dfci Pkg
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1826,13 +2616,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-3-1" type="checkbox" id="nav-9-3-3-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-3-3-1" type="checkbox" id="nav-9-3-3-1">
     
     <label class="md-nav__link" for="nav-9-3-3-1">
       Package Overview
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+    <nav class="md-nav" aria-label="Package Overview" data-md-level="4">
       <label class="md-nav__title" for="nav-9-3-3-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Package Overview
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1869,13 +2665,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-3-1-3" type="checkbox" id="nav-9-3-3-1-3">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-3-3-1-3" type="checkbox" id="nav-9-3-3-1-3">
     
     <label class="md-nav__link" for="nav-9-3-3-1-3">
       Platform Integration
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+    <nav class="md-nav" aria-label="Platform Integration" data-md-level="5">
       <label class="md-nav__title" for="nav-9-3-3-1-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Platform Integration
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1972,13 +2774,19 @@
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-3-2" type="checkbox" id="nav-9-3-3-2" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-3-3-2" type="checkbox" id="nav-9-3-3-2" checked>
     
     <label class="md-nav__link" for="nav-9-3-3-2">
       Modules
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+    <nav class="md-nav" aria-label="Modules" data-md-level="4">
       <label class="md-nav__title" for="nav-9-3-3-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Modules
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2015,13 +2823,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-3-2-3" type="checkbox" id="nav-9-3-3-2-3">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-3-3-2-3" type="checkbox" id="nav-9-3-3-2-3">
     
     <label class="md-nav__link" for="nav-9-3-3-2-3">
       Library
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+    <nav class="md-nav" aria-label="Library" data-md-level="5">
       <label class="md-nav__title" for="nav-9-3-3-2-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Library
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2053,13 +2867,19 @@
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-3-2-4" type="checkbox" id="nav-9-3-3-2-4" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-3-3-2-4" type="checkbox" id="nav-9-3-3-2-4" checked>
     
     <label class="md-nav__link" for="nav-9-3-3-2-4">
       Unit Tests
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+    <nav class="md-nav" aria-label="Unit Tests" data-md-level="5">
       <label class="md-nav__title" for="nav-9-3-3-2-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Unit Tests
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2074,13 +2894,16 @@
 
   <li class="md-nav__item md-nav__item--active">
     
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
       
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
         Devicd Id Test
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
       </label>
     
     <a href="./" title="Devicd Id Test" class="md-nav__link md-nav__link--active">
@@ -2088,13 +2911,18 @@
     </a>
     
       
-<nav class="md-nav md-nav--secondary">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
     
   
   
-    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
@@ -2117,10 +2945,6 @@
   </a>
   
 </li>
-      
-      
-      
-      
       
     </ul>
   
@@ -2163,13 +2987,157 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-4" type="checkbox" id="nav-9-3-4">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-3-4" type="checkbox" id="nav-9-3-4">
     
     <label class="md-nav__link" for="nav-9-3-4">
-      Ms Core Pkg
+      Hid Pkg
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+    <nav class="md-nav" aria-label="Hid Pkg" data-md-level="3">
       <label class="md-nav__title" for="nav-9-3-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Hid Pkg
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-3-4-1" type="checkbox" id="nav-9-3-4-1">
+    
+    <label class="md-nav__link" for="nav-9-3-4-1">
+      Modules
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Modules" data-md-level="4">
+      <label class="md-nav__title" for="nav-9-3-4-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Modules
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../HidPkg/Readme/" title="Readme" class="md-nav__link">
+      Readme
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../HidPkg/HidKeyboardDxe/HidKeyboardDxe/" title="Hid Keyboard Dxe" class="md-nav__link">
+      Hid Keyboard Dxe
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../HidPkg/HidMouseAbsolutePointerDxe/HidMouseAbsolutePointerDxe/" title="Hid Mouse Absolute Pointer Dxe" class="md-nav__link">
+      Hid Mouse Absolute Pointer Dxe
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-3-5" type="checkbox" id="nav-9-3-5">
+    
+    <label class="md-nav__link" for="nav-9-3-5">
+      Mfci Pkg
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Mfci Pkg" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-3-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Mfci Pkg
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../MfciPkg/Docs/Mfci_Feature/" title="Package Overview" class="md-nav__link">
+      Package Overview
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-3-6" type="checkbox" id="nav-9-3-6">
+    
+    <label class="md-nav__link" for="nav-9-3-6">
+      Ms Core Pkg
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Ms Core Pkg" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-3-6">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Ms Core Pkg
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2182,13 +3150,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-4-1" type="checkbox" id="nav-9-3-4-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-3-6-1" type="checkbox" id="nav-9-3-6-1">
     
-    <label class="md-nav__link" for="nav-9-3-4-1">
+    <label class="md-nav__link" for="nav-9-3-6-1">
       Modules
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-      <label class="md-nav__title" for="nav-9-3-4-1">
+    <nav class="md-nav" aria-label="Modules" data-md-level="4">
+      <label class="md-nav__title" for="nav-9-3-6-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Modules
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2285,13 +3259,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-4-1-8" type="checkbox" id="nav-9-3-4-1-8">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-3-6-1-8" type="checkbox" id="nav-9-3-6-1-8">
     
-    <label class="md-nav__link" for="nav-9-3-4-1-8">
+    <label class="md-nav__link" for="nav-9-3-6-1-8">
       Unit Tests
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-      <label class="md-nav__title" for="nav-9-3-4-1-8">
+    <nav class="md-nav" aria-label="Unit Tests" data-md-level="5">
+      <label class="md-nav__title" for="nav-9-3-6-1-8">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Unit Tests
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2331,13 +3311,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-5" type="checkbox" id="nav-9-3-5">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-3-7" type="checkbox" id="nav-9-3-7">
     
-    <label class="md-nav__link" for="nav-9-3-5">
+    <label class="md-nav__link" for="nav-9-3-7">
       Ms Graphics Pkg
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-9-3-5">
+    <nav class="md-nav" aria-label="Ms Graphics Pkg" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-3-7">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Ms Graphics Pkg
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2350,13 +3336,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-5-1" type="checkbox" id="nav-9-3-5-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-3-7-1" type="checkbox" id="nav-9-3-7-1">
     
-    <label class="md-nav__link" for="nav-9-3-5-1">
+    <label class="md-nav__link" for="nav-9-3-7-1">
       Modules
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-      <label class="md-nav__title" for="nav-9-3-5-1">
+    <nav class="md-nav" aria-label="Modules" data-md-level="4">
+      <label class="md-nav__title" for="nav-9-3-7-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Modules
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2391,13 +3383,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-6" type="checkbox" id="nav-9-3-6">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-3-8" type="checkbox" id="nav-9-3-8">
     
-    <label class="md-nav__link" for="nav-9-3-6">
+    <label class="md-nav__link" for="nav-9-3-8">
       Ms Whea Pkg
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-9-3-6">
+    <nav class="md-nav" aria-label="Ms Whea Pkg" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-3-8">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Ms Whea Pkg
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2427,13 +3425,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-7" type="checkbox" id="nav-9-3-7">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-3-9" type="checkbox" id="nav-9-3-9">
     
-    <label class="md-nav__link" for="nav-9-3-7">
+    <label class="md-nav__link" for="nav-9-3-9">
       Pc Bds Pkg
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-9-3-7">
+    <nav class="md-nav" aria-label="Pc Bds Pkg" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-3-9">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Pc Bds Pkg
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2446,13 +3450,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-7-1" type="checkbox" id="nav-9-3-7-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-3-9-1" type="checkbox" id="nav-9-3-9-1">
     
-    <label class="md-nav__link" for="nav-9-3-7-1">
+    <label class="md-nav__link" for="nav-9-3-9-1">
       Modules
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-      <label class="md-nav__title" for="nav-9-3-7-1">
+    <nav class="md-nav" aria-label="Modules" data-md-level="4">
+      <label class="md-nav__title" for="nav-9-3-9-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Modules
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2465,13 +3475,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-7-1-1" type="checkbox" id="nav-9-3-7-1-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-3-9-1-1" type="checkbox" id="nav-9-3-9-1-1">
     
-    <label class="md-nav__link" for="nav-9-3-7-1-1">
+    <label class="md-nav__link" for="nav-9-3-9-1-1">
       Library
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-      <label class="md-nav__title" for="nav-9-3-7-1-1">
+    <nav class="md-nav" aria-label="Library" data-md-level="5">
+      <label class="md-nav__title" for="nav-9-3-9-1-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Library
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2511,97 +3527,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-8" type="checkbox" id="nav-9-3-8">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-3-10" type="checkbox" id="nav-9-3-10">
     
-    <label class="md-nav__link" for="nav-9-3-8">
-      Shared Crypto Pkg
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-9-3-8">
-        Shared Crypto Pkg
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-8-1" type="checkbox" id="nav-9-3-8-1">
-    
-    <label class="md-nav__link" for="nav-9-3-8-1">
-      Modules
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-      <label class="md-nav__title" for="nav-9-3-8-1">
-        Modules
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../../SharedCryptoPkg/Readme/" title="Readme" class="md-nav__link">
-      Readme
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../../SharedCryptoPkg/release_notes/" title="release notes" class="md-nav__link">
-      release notes
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../../SharedCryptoPkg/Driver/Mu-SharedCrypto/" title="Driver" class="md-nav__link">
-      Driver
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-9" type="checkbox" id="nav-9-3-9">
-    
-    <label class="md-nav__link" for="nav-9-3-9">
+    <label class="md-nav__link" for="nav-9-3-10">
       Uefi Testing Pkg
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-9-3-9">
+    <nav class="md-nav" aria-label="Uefi Testing Pkg" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-3-10">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Uefi Testing Pkg
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2614,13 +3552,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-9-1" type="checkbox" id="nav-9-3-9-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-3-10-1" type="checkbox" id="nav-9-3-10-1">
     
-    <label class="md-nav__link" for="nav-9-3-9-1">
+    <label class="md-nav__link" for="nav-9-3-10-1">
       Modules
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-      <label class="md-nav__title" for="nav-9-3-9-1">
+    <nav class="md-nav" aria-label="Modules" data-md-level="4">
+      <label class="md-nav__title" for="nav-9-3-10-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Modules
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2645,13 +3589,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-9-1-2" type="checkbox" id="nav-9-3-9-1-2">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-3-10-1-2" type="checkbox" id="nav-9-3-10-1-2">
     
-    <label class="md-nav__link" for="nav-9-3-9-1-2">
+    <label class="md-nav__link" for="nav-9-3-10-1-2">
       Audit Tests
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-      <label class="md-nav__title" for="nav-9-3-9-1-2">
+    <nav class="md-nav" aria-label="Audit Tests" data-md-level="5">
+      <label class="md-nav__title" for="nav-9-3-10-1-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Audit Tests
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2664,13 +3614,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-9-1-2-1" type="checkbox" id="nav-9-3-9-1-2-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-3-10-1-2-1" type="checkbox" id="nav-9-3-10-1-2-1">
     
-    <label class="md-nav__link" for="nav-9-3-9-1-2-1">
+    <label class="md-nav__link" for="nav-9-3-10-1-2-1">
       DMAProtection Audit
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="6">
-      <label class="md-nav__title" for="nav-9-3-9-1-2-1">
+    <nav class="md-nav" aria-label="DMAProtection Audit" data-md-level="6">
+      <label class="md-nav__title" for="nav-9-3-10-1-2-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         DMAProtection Audit
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2729,13 +3685,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-9-1-3" type="checkbox" id="nav-9-3-9-1-3">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-3-10-1-3" type="checkbox" id="nav-9-3-10-1-3">
     
-    <label class="md-nav__link" for="nav-9-3-9-1-3">
+    <label class="md-nav__link" for="nav-9-3-10-1-3">
       Functional System Tests
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-      <label class="md-nav__title" for="nav-9-3-9-1-3">
+    <nav class="md-nav" aria-label="Functional System Tests" data-md-level="5">
+      <label class="md-nav__title" for="nav-9-3-10-1-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Functional System Tests
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2799,13 +3761,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-3-10" type="checkbox" id="nav-9-3-10">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-3-11" type="checkbox" id="nav-9-3-11">
     
-    <label class="md-nav__link" for="nav-9-3-10">
+    <label class="md-nav__link" for="nav-9-3-11">
       Xml Support Pkg
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-9-3-10">
+    <nav class="md-nav" aria-label="Xml Support Pkg" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-3-11">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Xml Support Pkg
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2840,13 +3808,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-4" type="checkbox" id="nav-9-4">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-4" type="checkbox" id="nav-9-4">
     
     <label class="md-nav__link" for="nav-9-4">
       mu silicon arm tiano
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+    <nav class="md-nav" aria-label="mu silicon arm tiano" data-md-level="2">
       <label class="md-nav__title" for="nav-9-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         mu silicon arm tiano
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2869,6 +3843,60 @@
           
 
 
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-4-2" type="checkbox" id="nav-9-4-2">
+    
+    <label class="md-nav__link" for="nav-9-4-2">
+      azurepipelines
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="azurepipelines" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-4-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        azurepipelines
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../mu_silicon_arm_tiano/azurepipelines/ReadMe/" title="Read Me" class="md-nav__link">
+      Read Me
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../mu_silicon_arm_tiano/azurepipelines/templates/ReadMe/" title="templates" class="md-nav__link">
+      templates
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
   <li class="md-nav__item">
     <a href="../../../../../mu_silicon_arm_tiano/pytool/Readme/" title="pytool" class="md-nav__link">
       pytool
@@ -2883,13 +3911,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-4-3" type="checkbox" id="nav-9-4-3">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-4-4" type="checkbox" id="nav-9-4-4">
     
-    <label class="md-nav__link" for="nav-9-4-3">
+    <label class="md-nav__link" for="nav-9-4-4">
       Arm Pkg
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-9-4-3">
+    <nav class="md-nav" aria-label="Arm Pkg" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-4-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Arm Pkg
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2902,13 +3936,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-4-3-1" type="checkbox" id="nav-9-4-3-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-4-4-1" type="checkbox" id="nav-9-4-4-1">
     
-    <label class="md-nav__link" for="nav-9-4-3-1">
+    <label class="md-nav__link" for="nav-9-4-4-1">
       Modules
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-      <label class="md-nav__title" for="nav-9-4-3-1">
+    <nav class="md-nav" aria-label="Modules" data-md-level="4">
+      <label class="md-nav__title" for="nav-9-4-4-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Modules
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2921,13 +3961,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-4-3-1-1" type="checkbox" id="nav-9-4-3-1-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-4-4-1-1" type="checkbox" id="nav-9-4-4-1-1">
     
-    <label class="md-nav__link" for="nav-9-4-3-1-1">
+    <label class="md-nav__link" for="nav-9-4-4-1-1">
       Library
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-      <label class="md-nav__title" for="nav-9-4-3-1-1">
+    <nav class="md-nav" aria-label="Library" data-md-level="5">
+      <label class="md-nav__title" for="nav-9-4-4-1-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Library
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2940,13 +3986,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-4-3-1-1-1" type="checkbox" id="nav-9-4-3-1-1-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-4-4-1-1-1" type="checkbox" id="nav-9-4-4-1-1-1">
     
-    <label class="md-nav__link" for="nav-9-4-3-1-1-1">
+    <label class="md-nav__link" for="nav-9-4-4-1-1-1">
       Arm Soft Float Lib
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="6">
-      <label class="md-nav__title" for="nav-9-4-3-1-1-1">
+    <nav class="md-nav" aria-label="Arm Soft Float Lib" data-md-level="6">
+      <label class="md-nav__title" for="nav-9-4-4-1-1-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Arm Soft Float Lib
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2984,6 +4036,78 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-4-5" type="checkbox" id="nav-9-4-5">
+    
+    <label class="md-nav__link" for="nav-9-4-5">
+      Arm Virt Pkg
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Arm Virt Pkg" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-4-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Arm Virt Pkg
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-4-5-1" type="checkbox" id="nav-9-4-5-1">
+    
+    <label class="md-nav__link" for="nav-9-4-5-1">
+      Modules
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Modules" data-md-level="4">
+      <label class="md-nav__title" for="nav-9-4-5-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Modules
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../mu_silicon_arm_tiano/ArmVirtPkg/PlatformCI/ReadMe/" title="Platform CI" class="md-nav__link">
+      Platform CI
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -2996,13 +4120,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-5" type="checkbox" id="nav-9-5">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-5" type="checkbox" id="nav-9-5">
     
     <label class="md-nav__link" for="nav-9-5">
       mu silicon intel tiano
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+    <nav class="md-nav" aria-label="mu silicon intel tiano" data-md-level="2">
       <label class="md-nav__title" for="nav-9-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         mu silicon intel tiano
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -3025,6 +4155,60 @@
           
 
 
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-5-2" type="checkbox" id="nav-9-5-2">
+    
+    <label class="md-nav__link" for="nav-9-5-2">
+      azurepipelines
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="azurepipelines" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-5-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        azurepipelines
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../mu_silicon_intel_tiano/azurepipelines/ReadMe/" title="Read Me" class="md-nav__link">
+      Read Me
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../mu_silicon_intel_tiano/azurepipelines/templates/ReadMe/" title="templates" class="md-nav__link">
+      templates
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
   <li class="md-nav__item">
     <a href="../../../../../mu_silicon_intel_tiano/pytool/Readme/" title="pytool" class="md-nav__link">
       pytool
@@ -3039,13 +4223,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-5-3" type="checkbox" id="nav-9-5-3">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-5-4" type="checkbox" id="nav-9-5-4">
     
-    <label class="md-nav__link" for="nav-9-5-3">
+    <label class="md-nav__link" for="nav-9-5-4">
       Intel Fsp2Pkg
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-9-5-3">
+    <nav class="md-nav" aria-label="Intel Fsp2Pkg" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-5-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Intel Fsp2Pkg
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -3058,13 +4248,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-5-3-1" type="checkbox" id="nav-9-5-3-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-5-4-1" type="checkbox" id="nav-9-5-4-1">
     
-    <label class="md-nav__link" for="nav-9-5-3-1">
+    <label class="md-nav__link" for="nav-9-5-4-1">
       Modules
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-      <label class="md-nav__title" for="nav-9-5-3-1">
+    <nav class="md-nav" aria-label="Modules" data-md-level="4">
+      <label class="md-nav__title" for="nav-9-5-4-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Modules
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -3089,13 +4285,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-5-3-1-2" type="checkbox" id="nav-9-5-3-1-2">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-5-4-1-2" type="checkbox" id="nav-9-5-4-1-2">
     
-    <label class="md-nav__link" for="nav-9-5-3-1-2">
+    <label class="md-nav__link" for="nav-9-5-4-1-2">
       Tools
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-      <label class="md-nav__title" for="nav-9-5-3-1-2">
+    <nav class="md-nav" aria-label="Tools" data-md-level="5">
+      <label class="md-nav__title" for="nav-9-5-4-1-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Tools
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -3108,13 +4310,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-5-3-1-2-1" type="checkbox" id="nav-9-5-3-1-2-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-5-4-1-2-1" type="checkbox" id="nav-9-5-4-1-2-1">
     
-    <label class="md-nav__link" for="nav-9-5-3-1-2-1">
+    <label class="md-nav__link" for="nav-9-5-4-1-2-1">
       User Manuals
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="6">
-      <label class="md-nav__title" for="nav-9-5-3-1-2-1">
+    <nav class="md-nav" aria-label="User Manuals" data-md-level="6">
+      <label class="md-nav__title" for="nav-9-5-4-1-2-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         User Manuals
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -3183,13 +4391,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-5-4" type="checkbox" id="nav-9-5-4">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-5-5" type="checkbox" id="nav-9-5-5">
     
-    <label class="md-nav__link" for="nav-9-5-4">
+    <label class="md-nav__link" for="nav-9-5-5">
       Intel Fsp2Wrapper Pkg
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-9-5-4">
+    <nav class="md-nav" aria-label="Intel Fsp2Wrapper Pkg" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-5-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Intel Fsp2Wrapper Pkg
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -3219,13 +4433,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-5-5" type="checkbox" id="nav-9-5-5">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-5-6" type="checkbox" id="nav-9-5-6">
     
-    <label class="md-nav__link" for="nav-9-5-5">
+    <label class="md-nav__link" for="nav-9-5-6">
       Intel Silicon Pkg
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-9-5-5">
+    <nav class="md-nav" aria-label="Intel Silicon Pkg" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-5-6">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Intel Silicon Pkg
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -3238,13 +4458,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-5-5-1" type="checkbox" id="nav-9-5-5-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-5-6-1" type="checkbox" id="nav-9-5-6-1">
     
-    <label class="md-nav__link" for="nav-9-5-5-1">
+    <label class="md-nav__link" for="nav-9-5-6-1">
       Modules
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-      <label class="md-nav__title" for="nav-9-5-5-1">
+    <nav class="md-nav" aria-label="Modules" data-md-level="4">
+      <label class="md-nav__title" for="nav-9-5-6-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Modules
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -3257,13 +4483,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-5-5-1-1" type="checkbox" id="nav-9-5-5-1-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-5-6-1-1" type="checkbox" id="nav-9-5-6-1-1">
     
-    <label class="md-nav__link" for="nav-9-5-5-1-1">
+    <label class="md-nav__link" for="nav-9-5-6-1-1">
       Feature
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-      <label class="md-nav__title" for="nav-9-5-5-1-1">
+    <nav class="md-nav" aria-label="Feature" data-md-level="5">
+      <label class="md-nav__title" for="nav-9-5-6-1-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Feature
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -3276,13 +4508,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-5-5-1-1-1" type="checkbox" id="nav-9-5-5-1-1-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-5-6-1-1-1" type="checkbox" id="nav-9-5-6-1-1-1">
     
-    <label class="md-nav__link" for="nav-9-5-5-1-1-1">
+    <label class="md-nav__link" for="nav-9-5-6-1-1-1">
       Capsule
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="6">
-      <label class="md-nav__title" for="nav-9-5-5-1-1-1">
+    <nav class="md-nav" aria-label="Capsule" data-md-level="6">
+      <label class="md-nav__title" for="nav-9-5-6-1-1-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Capsule
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -3344,13 +4582,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-6" type="checkbox" id="nav-9-6">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-6" type="checkbox" id="nav-9-6">
     
     <label class="md-nav__link" for="nav-9-6">
       mu tiano plus
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+    <nav class="md-nav" aria-label="mu tiano plus" data-md-level="2">
       <label class="md-nav__title" for="nav-9-6">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         mu tiano plus
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -3373,6 +4617,60 @@
           
 
 
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-6-2" type="checkbox" id="nav-9-6-2">
+    
+    <label class="md-nav__link" for="nav-9-6-2">
+      azurepipelines
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="azurepipelines" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-6-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        azurepipelines
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../mu_tiano_plus/azurepipelines/ReadMe/" title="Read Me" class="md-nav__link">
+      Read Me
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../mu_tiano_plus/azurepipelines/templates/ReadMe/" title="templates" class="md-nav__link">
+      templates
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
   <li class="md-nav__item">
     <a href="../../../../../mu_tiano_plus/pytool/Readme/" title="pytool" class="md-nav__link">
       pytool
@@ -3387,13 +4685,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-6-3" type="checkbox" id="nav-9-6-3">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-6-4" type="checkbox" id="nav-9-6-4">
     
-    <label class="md-nav__link" for="nav-9-6-3">
+    <label class="md-nav__link" for="nav-9-6-4">
       Crypto Pkg
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-9-6-3">
+    <nav class="md-nav" aria-label="Crypto Pkg" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-6-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Crypto Pkg
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -3406,13 +4710,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-6-3-1" type="checkbox" id="nav-9-6-3-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-6-4-1" type="checkbox" id="nav-9-6-4-1">
     
-    <label class="md-nav__link" for="nav-9-6-3-1">
+    <label class="md-nav__link" for="nav-9-6-4-1">
       Modules
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-      <label class="md-nav__title" for="nav-9-6-3-1">
+    <nav class="md-nav" aria-label="Modules" data-md-level="4">
+      <label class="md-nav__title" for="nav-9-6-4-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Modules
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -3423,15 +4733,33 @@
           
 
 
+  <li class="md-nav__item">
+    <a href="../../../../../mu_tiano_plus/CryptoPkg/Driver/readme/" title="Driver" class="md-nav__link">
+      Driver
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-6-3-1-1" type="checkbox" id="nav-9-6-3-1-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-6-4-1-2" type="checkbox" id="nav-9-6-4-1-2">
     
-    <label class="md-nav__link" for="nav-9-6-3-1-1">
+    <label class="md-nav__link" for="nav-9-6-4-1-2">
       Library
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-      <label class="md-nav__title" for="nav-9-6-3-1-1">
+    <nav class="md-nav" aria-label="Library" data-md-level="5">
+      <label class="md-nav__title" for="nav-9-6-4-1-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Library
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -3442,15 +4770,33 @@
           
 
 
+  <li class="md-nav__item">
+    <a href="../../../../../mu_tiano_plus/CryptoPkg/Library/BaseCryptLibOnProtocolPpi/readme/" title="Base Crypt Lib On Protocol Ppi" class="md-nav__link">
+      Base Crypt Lib On Protocol Ppi
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-6-3-1-1-1" type="checkbox" id="nav-9-6-3-1-1-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-6-4-1-2-2" type="checkbox" id="nav-9-6-4-1-2-2">
     
-    <label class="md-nav__link" for="nav-9-6-3-1-1-1">
+    <label class="md-nav__link" for="nav-9-6-4-1-2-2">
       Openssl Lib
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="6">
-      <label class="md-nav__title" for="nav-9-6-3-1-1-1">
+    <nav class="md-nav" aria-label="Openssl Lib" data-md-level="6">
+      <label class="md-nav__title" for="nav-9-6-4-1-2-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Openssl Lib
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -3463,13 +4809,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-6-3-1-1-1-1" type="checkbox" id="nav-9-6-3-1-1-1-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-6-4-1-2-2-1" type="checkbox" id="nav-9-6-4-1-2-2-1">
     
-    <label class="md-nav__link" for="nav-9-6-3-1-1-1-1">
+    <label class="md-nav__link" for="nav-9-6-4-1-2-2-1">
       openssl
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="7">
-      <label class="md-nav__title" for="nav-9-6-3-1-1-1-1">
+    <nav class="md-nav" aria-label="openssl" data-md-level="7">
+      <label class="md-nav__title" for="nav-9-6-4-1-2-2-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         openssl
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -3494,13 +4846,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-6-3-1-1-1-1-2" type="checkbox" id="nav-9-6-3-1-1-1-1-2">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-6-4-1-2-2-1-2" type="checkbox" id="nav-9-6-4-1-2-2-1-2">
     
-    <label class="md-nav__link" for="nav-9-6-3-1-1-1-1-2">
+    <label class="md-nav__link" for="nav-9-6-4-1-2-2-1-2">
       boringssl
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="8">
-      <label class="md-nav__title" for="nav-9-6-3-1-1-1-1-2">
+    <nav class="md-nav" aria-label="boringssl" data-md-level="8">
+      <label class="md-nav__title" for="nav-9-6-4-1-2-2-1-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         boringssl
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -3609,13 +4967,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-6-3-1-1-1-1-2-9" type="checkbox" id="nav-9-6-3-1-1-1-1-2-9">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-6-4-1-2-2-1-2-9" type="checkbox" id="nav-9-6-4-1-2-2-1-2-9">
     
-    <label class="md-nav__link" for="nav-9-6-3-1-1-1-1-2-9">
+    <label class="md-nav__link" for="nav-9-6-4-1-2-2-1-2-9">
       infra
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="9">
-      <label class="md-nav__title" for="nav-9-6-3-1-1-1-1-2-9">
+    <nav class="md-nav" aria-label="infra" data-md-level="9">
+      <label class="md-nav__title" for="nav-9-6-4-1-2-2-1-2-9">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         infra
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -3645,13 +5009,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-6-3-1-1-1-1-2-10" type="checkbox" id="nav-9-6-3-1-1-1-1-2-10">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-6-4-1-2-2-1-2-10" type="checkbox" id="nav-9-6-4-1-2-2-1-2-10">
     
-    <label class="md-nav__link" for="nav-9-6-3-1-1-1-1-2-10">
+    <label class="md-nav__link" for="nav-9-6-4-1-2-2-1-2-10">
       ssl
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="9">
-      <label class="md-nav__title" for="nav-9-6-3-1-1-1-1-2-10">
+    <nav class="md-nav" aria-label="ssl" data-md-level="9">
+      <label class="md-nav__title" for="nav-9-6-4-1-2-2-1-2-10">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         ssl
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -3664,13 +5034,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-6-3-1-1-1-1-2-10-1" type="checkbox" id="nav-9-6-3-1-1-1-1-2-10-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-6-4-1-2-2-1-2-10-1" type="checkbox" id="nav-9-6-4-1-2-2-1-2-10-1">
     
-    <label class="md-nav__link" for="nav-9-6-3-1-1-1-1-2-10-1">
+    <label class="md-nav__link" for="nav-9-6-4-1-2-2-1-2-10-1">
       test
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="10">
-      <label class="md-nav__title" for="nav-9-6-3-1-1-1-1-2-10-1">
+    <nav class="md-nav" aria-label="test" data-md-level="10">
+      <label class="md-nav__title" for="nav-9-6-4-1-2-2-1-2-10-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         test
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -3717,13 +5093,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-6-3-1-1-1-1-2-11" type="checkbox" id="nav-9-6-3-1-1-1-1-2-11">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-6-4-1-2-2-1-2-11" type="checkbox" id="nav-9-6-4-1-2-2-1-2-11">
     
-    <label class="md-nav__link" for="nav-9-6-3-1-1-1-1-2-11">
+    <label class="md-nav__link" for="nav-9-6-4-1-2-2-1-2-11">
       third party
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="9">
-      <label class="md-nav__title" for="nav-9-6-3-1-1-1-1-2-11">
+    <nav class="md-nav" aria-label="third party" data-md-level="9">
+      <label class="md-nav__title" for="nav-9-6-4-1-2-2-1-2-11">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         third party
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -3736,13 +5118,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-6-3-1-1-1-1-2-11-1" type="checkbox" id="nav-9-6-3-1-1-1-1-2-11-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-6-4-1-2-2-1-2-11-1" type="checkbox" id="nav-9-6-4-1-2-2-1-2-11-1">
     
-    <label class="md-nav__link" for="nav-9-6-3-1-1-1-1-2-11-1">
+    <label class="md-nav__link" for="nav-9-6-4-1-2-2-1-2-11-1">
       android-cmake
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="10">
-      <label class="md-nav__title" for="nav-9-6-3-1-1-1-1-2-11-1">
+    <nav class="md-nav" aria-label="android-cmake" data-md-level="10">
+      <label class="md-nav__title" for="nav-9-6-4-1-2-2-1-2-11-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         android-cmake
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -3784,13 +5172,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-6-3-1-1-1-1-2-11-2" type="checkbox" id="nav-9-6-3-1-1-1-1-2-11-2">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-6-4-1-2-2-1-2-11-2" type="checkbox" id="nav-9-6-4-1-2-2-1-2-11-2">
     
-    <label class="md-nav__link" for="nav-9-6-3-1-1-1-1-2-11-2">
+    <label class="md-nav__link" for="nav-9-6-4-1-2-2-1-2-11-2">
       googletest
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="10">
-      <label class="md-nav__title" for="nav-9-6-3-1-1-1-1-2-11-2">
+    <nav class="md-nav" aria-label="googletest" data-md-level="10">
+      <label class="md-nav__title" for="nav-9-6-4-1-2-2-1-2-11-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         googletest
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -3815,13 +5209,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-6-3-1-1-1-1-2-11-2-2" type="checkbox" id="nav-9-6-3-1-1-1-1-2-11-2-2">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-6-4-1-2-2-1-2-11-2-2" type="checkbox" id="nav-9-6-4-1-2-2-1-2-11-2-2">
     
-    <label class="md-nav__link" for="nav-9-6-3-1-1-1-1-2-11-2-2">
+    <label class="md-nav__link" for="nav-9-6-4-1-2-2-1-2-11-2-2">
       docs
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="11">
-      <label class="md-nav__title" for="nav-9-6-3-1-1-1-1-2-11-2-2">
+    <nav class="md-nav" aria-label="docs" data-md-level="11">
+      <label class="md-nav__title" for="nav-9-6-4-1-2-2-1-2-11-2-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         docs
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -4202,13 +5602,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-6-3-1-1-1-1-4" type="checkbox" id="nav-9-6-3-1-1-1-1-4">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-6-4-1-2-2-1-4" type="checkbox" id="nav-9-6-4-1-2-2-1-4">
     
-    <label class="md-nav__link" for="nav-9-6-3-1-1-1-1-4">
+    <label class="md-nav__link" for="nav-9-6-4-1-2-2-1-4">
       pyca-cryptography
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="8">
-      <label class="md-nav__title" for="nav-9-6-3-1-1-1-1-4">
+    <nav class="md-nav" aria-label="pyca-cryptography" data-md-level="8">
+      <label class="md-nav__title" for="nav-9-6-4-1-2-2-1-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         pyca-cryptography
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -4221,13 +5627,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-6-3-1-1-1-1-4-1" type="checkbox" id="nav-9-6-3-1-1-1-1-4-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-6-4-1-2-2-1-4-1" type="checkbox" id="nav-9-6-4-1-2-2-1-4-1">
     
-    <label class="md-nav__link" for="nav-9-6-3-1-1-1-1-4-1">
+    <label class="md-nav__link" for="nav-9-6-4-1-2-2-1-4-1">
       github
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="9">
-      <label class="md-nav__title" for="nav-9-6-3-1-1-1-1-4-1">
+    <nav class="md-nav" aria-label="github" data-md-level="9">
+      <label class="md-nav__title" for="nav-9-6-4-1-2-2-1-4-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         github
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -4289,13 +5701,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-6-3-1-2" type="checkbox" id="nav-9-6-3-1-2">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-6-4-1-3" type="checkbox" id="nav-9-6-4-1-3">
     
-    <label class="md-nav__link" for="nav-9-6-3-1-2">
+    <label class="md-nav__link" for="nav-9-6-4-1-3">
       Unit Tests
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-      <label class="md-nav__title" for="nav-9-6-3-1-2">
+    <nav class="md-nav" aria-label="Unit Tests" data-md-level="5">
+      <label class="md-nav__title" for="nav-9-6-4-1-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Unit Tests
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -4335,13 +5753,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-6-4" type="checkbox" id="nav-9-6-4">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-6-5" type="checkbox" id="nav-9-6-5">
     
-    <label class="md-nav__link" for="nav-9-6-4">
+    <label class="md-nav__link" for="nav-9-6-5">
       Embedded Pkg
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-9-6-4">
+    <nav class="md-nav" aria-label="Embedded Pkg" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-6-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Embedded Pkg
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -4354,13 +5778,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-6-4-1" type="checkbox" id="nav-9-6-4-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-6-5-1" type="checkbox" id="nav-9-6-5-1">
     
-    <label class="md-nav__link" for="nav-9-6-4-1">
+    <label class="md-nav__link" for="nav-9-6-5-1">
       Modules
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-      <label class="md-nav__title" for="nav-9-6-4-1">
+    <nav class="md-nav" aria-label="Modules" data-md-level="4">
+      <label class="md-nav__title" for="nav-9-6-5-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Modules
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -4373,13 +5803,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-6-4-1-1" type="checkbox" id="nav-9-6-4-1-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-6-5-1-1" type="checkbox" id="nav-9-6-5-1-1">
     
-    <label class="md-nav__link" for="nav-9-6-4-1-1">
+    <label class="md-nav__link" for="nav-9-6-5-1-1">
       Scripts
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
-      <label class="md-nav__title" for="nav-9-6-4-1-1">
+    <nav class="md-nav" aria-label="Scripts" data-md-level="5">
+      <label class="md-nav__title" for="nav-9-6-5-1-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Scripts
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -4419,13 +5855,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-6-5" type="checkbox" id="nav-9-6-5">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-6-6" type="checkbox" id="nav-9-6-6">
     
-    <label class="md-nav__link" for="nav-9-6-5">
+    <label class="md-nav__link" for="nav-9-6-6">
       Fmp Device Pkg
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-9-6-5">
+    <nav class="md-nav" aria-label="Fmp Device Pkg" data-md-level="3">
+      <label class="md-nav__title" for="nav-9-6-6">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Fmp Device Pkg
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -4438,13 +5880,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-6-5-1" type="checkbox" id="nav-9-6-5-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-6-6-1" type="checkbox" id="nav-9-6-6-1">
     
-    <label class="md-nav__link" for="nav-9-6-5-1">
+    <label class="md-nav__link" for="nav-9-6-6-1">
       Modules
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-      <label class="md-nav__title" for="nav-9-6-5-1">
+    <nav class="md-nav" aria-label="Modules" data-md-level="4">
+      <label class="md-nav__title" for="nav-9-6-6-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Modules
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -4493,13 +5941,18 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
-<nav class="md-nav md-nav--secondary">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
     
   
   
-    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
@@ -4523,10 +5976,6 @@
   
 </li>
       
-      
-      
-      
-      
     </ul>
   
 </nav>
@@ -4539,7 +5988,12 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/microsoft/mu/edit/master/docs/dyn/mu_plus/DfciPkg/UnitTests/DevicdIdTest/readme.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/microsoft/mu/edit/master/docs/dyn/mu_plus/DfciPkg/UnitTests/DevicdIdTest/readme.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  
                 
                 
                 <h1 id="verify-dfcidevicedidlib-library-functionality">Verify DfciDevicedIdLib library functionality<a class="headerlink" href="#verify-dfcidevicedidlib-library-functionality" title="Permanent link">&para;</a></h1>
@@ -4568,9 +6022,6 @@
 <p>Copyright (C) Microsoft Corporation. All rights reserved.
 SPDX-License-Identifier: BSD-2-Clause-Patent</p>
                 
-                  
-                
-                
               
               
                 
@@ -4586,34 +6037,34 @@ SPDX-License-Identifier: BSD-2-Clause-Patent</p>
 <footer class="md-footer">
   
     <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../../../Library/DfciSampleProvider/readme/" title="Dfci Sample Provider" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+          <a href="../../../Library/DfciSampleProvider/readme/" title="Dfci Sample Provider" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
                 Dfci Sample Provider
-              </span>
+              </div>
             </div>
           </a>
         
         
-          <a href="../../DfciTests/readme/" title="Dfci Tests" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
+          <a href="../../DfciTests/readme/" title="Dfci Tests" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
                 Dfci Tests
-              </span>
+              </div>
             </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
             </div>
           </a>
         
@@ -4628,17 +6079,22 @@ SPDX-License-Identifier: BSD-2-Clause-Patent</p>
             Copyright (c) Microsoft.  All rights reserved
           </div>
         
-        powered by
-        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
-        and
+        Made with
         <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-          Material for MkDocs</a>
+          Material for MkDocs
+        </a>
       </div>
       
   <div class="md-footer-social">
-    <link rel="stylesheet" href="../../../../../../assets/fonts/font-awesome.css">
     
-      <a href="https://github.com/microsoft/mu" target="_blank" rel="noopener" title="github" class="md-footer-social__link fa fa-github"></a>
+      
+      
+        
+        
+      
+      <a href="https://github.com/microsoft/mu" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+      </a>
     
   </div>
 
@@ -4648,9 +6104,18 @@ SPDX-License-Identifier: BSD-2-Clause-Patent</p>
       
     </div>
     
-      <script src="../../../../../../assets/javascripts/application.c33a9706.js"></script>
+      <script src="../../../../../../assets/javascripts/vendor.d1f5a259.min.js"></script>
+      <script src="../../../../../../assets/javascripts/bundle.d5fec882.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
       
-      <script>app.initialize({version:"1.1",url:{base:"../../../../../.."}})</script>
+      <script>
+        app = initialize({
+          base: "../../../../../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../../../../../assets/javascripts/worker/search.fae956e7.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
       
     
   </body>
