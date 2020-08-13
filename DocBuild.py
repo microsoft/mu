@@ -40,7 +40,7 @@ import yaml
 
 
 SCRIPT_PATH = os.path.abspath(os.path.dirname(__file__))
-VERSION = "0.9.0"
+VERSION = "0.9.1"
 
 #
 # Class with basic git support.  Allow data collection from git repo
@@ -299,7 +299,7 @@ class DocBuild(object):
         self.ExtraContents["buildtime"] = str(
             datetime.datetime.now().strftime("%Y-%m-%d %H:%M"))
         self.ExtraContents["social"] = [
-            {"type": 'github', "link": 'https://github.com/microsoft/mu'}]
+            {"icon": 'fontawesome/brands/github-alt', "link": 'https://github.com/microsoft/mu'}]
 
     #
     # delete the outputdirectory
