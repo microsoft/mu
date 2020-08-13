@@ -35,6 +35,9 @@ Who doesn't love using emojis. Icon usage has shown to help communicate directio
 https://facelessuser.github.io/pymdown-extensions/extensions/emoji/
 
 :smile: :alien:
+:material-airplane:
+:material-ambulance:
+:material-github:
 
 Twitter, github, and emojione tags available.
 
