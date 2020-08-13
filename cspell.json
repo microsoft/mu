@@ -139,6 +139,7 @@
         "ovmf",
         "pytool",
         "pytools",
+        "superfences",
         // Names and Attributions
         "Franceschetti",
         "Donath"
