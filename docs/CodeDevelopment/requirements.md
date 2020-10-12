@@ -6,7 +6,8 @@
 2. Make sure it builds
 3. Write a unit test for it.  Test positive cases as well as negative cases.
 4. Make sure it has docs.  Even a minimal readme.md will get collected and added to the docs.
-5. Make sure it has only valid characters encoded (often copy paste from Microsoft Word docs or the internet will lead to invalid characters)
+5. Make sure it has only valid characters encoded (often copy paste from Microsoft Word docs or the internet will lead
+   to invalid characters)
 6. If it is a small change/tweak to existing code that originates outside of Project Mu please mark it with //MU_CHANGE
 
 ## Uefi Package
@@ -33,12 +34,15 @@
 ## Library Instance
 
 1. The supported module types in the INFs must be accurate.
+
     ``` inf
     LIBRARY_CLASS: <Library Class Name>|<Module types supported by this instance>
     ```
+
 2. Use STATIC on each non-public function and non-public global to avoid conflicts with other modules.
 3. Use EFIAPI on all public library class functions.
 
 ## More info
 
-For general Edk2 and UEFI development additional information can be found at the [TianoCore.org](https://www.tianocore.org/) website.
+For general Edk2 and UEFI development additional information can be found at the
+[TianoCore.org](https://www.tianocore.org/) website.

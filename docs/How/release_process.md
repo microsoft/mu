@@ -59,13 +59,13 @@ Once all evaluation is completed, the rebase will be performed in the new `relea
 During integration, multiple tags are applied to the branch to serve as milestones. They also serve as reference point for changelog documentation that is produced during the integration process. These tags are described below:
 
 * `*_Upstream`
-    * This tag is placed on the exact TianoCore commit that a given release branch started from. This is used as a reference point between branches and relative to the rebase operation. The documentation produced for this tag contains the differences in TianoCore between this branch and the previous branch. For branches that originated from TianoCore releases, this changelog should be identical to the TianoCore changelog.
+  * This tag is placed on the exact TianoCore commit that a given release branch started from. This is used as a reference point between branches and relative to the rebase operation. The documentation produced for this tag contains the differences in TianoCore between this branch and the previous branch. For branches that originated from TianoCore releases, this changelog should be identical to the TianoCore changelog.
 * `*_Rebase`
-    * This tag is placed on the commit at the branch HEAD once the rebase is completed. The only changes to the commits from the last branch should be merge conflict resolutions and any history simplification as described above. The documentation produced for this tag contains a record of these resolutions and simplifications.
+  * This tag is placed on the commit at the branch HEAD once the rebase is completed. The only changes to the commits from the last branch should be merge conflict resolutions and any history simplification as described above. The documentation produced for this tag contains a record of these resolutions and simplifications.
 * `*_RefBuild`
-    * This tag is placed on the commit where a reference platform consuming a large portion of the Mu code can successfully build. The documentation produced for this tag contains any changes required to get the reference platform building. It includes a list of changes outside the Mu project that are recommended for any consuming platform.
+  * This tag is placed on the commit where a reference platform consuming a large portion of the Mu code can successfully build. The documentation produced for this tag contains any changes required to get the reference platform building. It includes a list of changes outside the Mu project that are recommended for any consuming platform.
 * `*_RefBoot`
-    * This tag is placed on the commit where a reference platform consuming a large portion of the Mu code can successfully boot. The documentation produced for this tag contains any changes required to get the reference platform booting. It includes a list of changes outside the Mu project that are recommended for any consuming platform.
+  * This tag is placed on the commit where a reference platform consuming a large portion of the Mu code can successfully boot. The documentation produced for this tag contains any changes required to get the reference platform booting. It includes a list of changes outside the Mu project that are recommended for any consuming platform.
 
 In each of these cases, the `*` will be replaced with a corresponding branch name. For example, the tags associated with `release/201808` will be prefixed with `1808` (e.g. `1808_Rebase`, `1808_RC1`, etc.).
 

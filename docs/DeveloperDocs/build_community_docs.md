@@ -1,7 +1,8 @@
 # Building Community Docs
 
 !!! info
-    Today this process has been validated for use on Windows 10. This setup process is expected to roughly the same on other operating systems
+    Today this process has been validated for use on Windows 10. This setup process is expected to roughly the same on
+    other operating systems
     and none of the actual documentation source or tools should have any OS dependency.
 
 ## Get the docs repository
@@ -14,24 +15,39 @@ git clone https://github.com/Microsoft/mu.git
 
 ## Install required tools
 
-1. Install python (Current suggested version is 3.7.x).  Current min requirement is python 3.4+.  Checkout python.org for directions.
-2. Install pip.  Generally, this is done when installing python but can also be done as its own process.  Details here https://pip.pypa.io/en/stable/installing/#do-i-need-to-install-pip
+1. Install python (Current suggested version is 3.7.x).  Current min requirement is python 3.4+.  Checkout python.org for
+   directions.
+2. Install pip.  Generally, this is done when installing python but can also be done as its own process.
+   Details here <https://pip.pypa.io/en/stable/installing/#do-i-need-to-install-pip>
 3. Update pip.
+
     ``` cmd
     python -m pip install --upgrade pip
     ```
+
 4. Install dependencies.
+
     ``` cmd
     pip install --upgrade -r requirements.txt
     ```
 
-5. if wanting to use spell check
-    * Install nodejs from https://nodejs.org/en/
-    * Install cspell
-        ``` cmd
-        npm install -g cspell
-        ```
-6. Install Git on your path (Required for generating dynamic repo based content during preprocess)
+5. Install nodejs for more tooling
+   * Install nodejs from <https://nodejs.org/en/>
+   * Include npm for package management
+
+6. Install markdownlint cli tool for linting the markdown
+
+    ``` cmd
+    npm install -g markdownlint-cli
+    ```
+
+7. Install cspell cli tool for spell checking the markdown
+
+    ``` cmd
+    npm install -g cspell
+    ```
+
+8. Install Git on your path (Required for generating dynamic repo based content during preprocess)
 
 ## General Suggested documentation workflow
 
@@ -49,6 +65,7 @@ git clone https://github.com/Microsoft/mu.git
 2. Clone all repositories for dynamic content here
 3. Set each repo to the branch/commit that you want to document
 4. run the *DocBuild.py* command supplying the parameters
+
     ```cmd
     DocBuild.py --clean --build --OutputDir docs --yml mkdocs_base.yml --RootDir ..\repos
     ```
@@ -56,6 +73,7 @@ git clone https://github.com/Microsoft/mu.git
 ## Pre-process with no source repo(s) content
 
 1. run the DocBuild.py command supplying minimal parameters
+
     ```cmd
     DocBuild.py --clean --build --yml mkdocs_base.yml
     ```
@@ -63,6 +81,7 @@ git clone https://github.com/Microsoft/mu.git
 ## Clean / Remove all pre-processed content
 
 1. use *DocBuild.py* command
+
     ```cmd
     DocBuild.py --clean --yml <path to yml base file> --OutputDir <docs folder>
     ```
@@ -72,23 +91,27 @@ git clone https://github.com/Microsoft/mu.git
 1. navigate to root of repository (should see a *docs* folder, the *mkdocs_base.yml* file, and a few other things)
 2. open command window
 3. run  Utf8Test python script cmd prompt
+
     ``` cmd
     Utf8Test.py --RootDir docs
     ```
+
 4. should complete with no errors
 
 !!! Note
-    * Note you can also run it on any dynamic content by using a different *RootDir* parameter.
-    * Use *-h* for usage to get more detailed information of any failures
+    - Note you can also run it on any dynamic content by using a different *RootDir* parameter.
+    - Use *-h* for usage to get more detailed information of any failures
 
 ## Use mkdocs to build the docs
 
 1. navigate to root of repository (should see a *docs* folder, the *mkdocs_base.yml* file, and a few other things)
 2. open command window
 3. run  mkdocs build from cmd prompt at root
+
     ``` cmd
     mkdocs build -s -v
     ```
+
 4. should complete with no errors
 
 ## Spell check the docs
@@ -96,25 +119,44 @@ git clone https://github.com/Microsoft/mu.git
 1. navigate to root of repository (should see a *docs* folder, the *mkdocs_base.yml* file, and a few other things)
 2. open command window
 3. run command to spell check
+
     ``` cmd
-    cspell docs/**/*.md
+    cspell "docs/**/*.md"
     ```
+
 4. should complete with no errors
 
-??? bug "False Spelling Errors"
-    If the spelling error is a false positive there are two solutions:
+    ??? bug "False Spelling Errors"  
+    If the spelling error is a false positive there are two solutions:  
+        1. If it is a valid word or commonly understood term then add the word to the **cspell.json**
+        config file `words` section  
+        2. Update the **cspell.json** file `ignorePaths` element to ignore the entire file.
 
-    1. If it is a valid word or commonly understood term then add the word to the **cspell.json** config file `words` section
-    2. Update the **cspell.json** file `ignorePaths` element to ignore the entire file.
+## Lint the Markdown
+
+1. navigate to root of repository (should see a *docs* folder, the *mkdocs_base.yml* file, and a few other things)
+2. open command window
+3. run command to lint the markdown
+
+    ``` cmd
+    markdownlint "**/*.md"
+    ```
+
+4. Should complete with no errors.
+    * Rules can be found here <https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md>
+    * Configuration info here <https://github.com/DavidAnson/markdownlint#configuration>
+    * Project specific configuration is is in `.markdownlint.yaml` file at the root
 
 ## Locally serve the docs
 
 One great feature of mkdocs is how easy it is to locally serve the docs to validate your changes.
 
 1. Use mkdocs to serve your local copy
+
     ``` cmd
     mkdocs serve
     ```
+
 2. navigate to 127.0.0.1:8000 in web browser
 
 !!! important
@@ -122,4 +164,6 @@ One great feature of mkdocs is how easy it is to locally serve the docs to valid
 
 ## Advanced doc features
 
-We do turn on a few advanced/extension features.  Please use these carefully as they may break compatibility if the publishing engine is changed.  Checkout the [sample syntax / test page](doc_sample_test.md) for syntax and information.
+We do turn on a few advanced/extension features.  Please use these carefully as they may break compatibility
+if the publishing engine is changed.  Checkout the [sample syntax / test page](doc_sample_test.md) for syntax
+and information.
