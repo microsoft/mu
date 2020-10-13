@@ -20,7 +20,7 @@ steps:
 - script: npm install -g cspell
   displayName: 'Install cspell npm'
 
-- script: cspell docs/**/*.md
+- script: cspell "docs/**/*.md"
   displayName: 'Spell Check md files'
 
 - task: UsePythonVersion@0

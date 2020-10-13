@@ -35,7 +35,7 @@ To understand the layering you must first understand the terminology.  There are
     id1 -.-> id2
 ```
 
-Example of a build time/link dependency: DxeCore in the Basecore layer depnds on the TimerLib interface.  TimerLib
+Example of a build time/link dependency: DxeCore in the Basecore layer depends on the TimerLib interface.  TimerLib
 interface is defined in the same Basecore layer as DxeCore, so in this case a Basecore module is depending on
 a Basecore interface. This is allowed. :heavy_check_mark:
 
@@ -48,9 +48,9 @@ flowchart BT
 ```
 
 To extend this example even more into construction details.  Often the logic of a library will be implemented in the
-silicon layer.  This means the code may vary based on which silicon is used in the product but becasue the interface
+silicon layer.  This means the code may vary based on which silicon is used in the product but because the interface
 is defined in the basecore layer this is allowed and working as designed.  The core module can be optimized
-and targeted for a specific silicon impelementation.  :heavy_check_mark:
+and targeted for a specific silicon implementation.  :heavy_check_mark:
 
 ``` mermaid
 flowchart BT
