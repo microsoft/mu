@@ -1,4 +1,5 @@
 # Documentation framework attribution
+<!-- markdownlint-disable-file -->
 
 A special thank you to the people and projects that helped make Project Mu Documentation possible.
 
@@ -6,7 +7,7 @@ A special thank you to the people and projects that helped make Project Mu Docum
 
 ### Mkdocs
 
-https://www.mkdocs.org/
+<https://www.mkdocs.org/>
 
 MkDocs License (BSD)
 Copyright © 2014, Tom Christie. All rights reserved.
@@ -16,7 +17,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 ### mkdocs macros plugin
 
-https://github.com/fralau/mkdocs_macros_plugin
+<https://github.com/fralau/mkdocs_macros_plugin>
 
 MIT License
 Copyright (C) 2018 Laurent Franceschetti
@@ -26,7 +27,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ### Material for MkDocs
 
-https://squidfunk.github.io/mkdocs-material/
+<https://squidfunk.github.io/mkdocs-material/>
 
 License
 MIT License
@@ -37,7 +38,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ### PyMdown Extensions
 
-https://facelessuser.github.io/pymdown-extensions/
+<https://facelessuser.github.io/pymdown-extensions/>
 
 PyMdown Extensions
 

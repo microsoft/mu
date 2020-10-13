@@ -15,7 +15,7 @@ What major features does Project Mu bring to the table above/beyond EDK2?
 * Audit, function, & performance tests for platform features
 * Scalable Python build environment
 * Build plug in: override tracking tool
-* Build plug in: flash descriptor analysis 
+* Build plug in: flash descriptor analysis
 * Binary package management via NuGet
 * Capsule signing via signtool.exe
 * Up-to-date Visual Studio compiler support
@@ -33,7 +33,7 @@ What major features does Project Mu bring to the table above/beyond EDK2?
 ### Features integrated into Tiano
 
 * Safe Integer library
-* Heap Guard 
+* Heap Guard
 * ESRT DXE driver
 * Scalable device FMP framework
 * Progress bar for Capsule Updates

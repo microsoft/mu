@@ -15,24 +15,80 @@ A modern, full-featured, product-ready UEFI firmware codebase combines code from
 * Board-specific code
 * etc.
 
-Some of the above components come from closed-source projects (silicon vendors, IBVs, OEMs), others are open source.  Each component is supported at its own schedule with new features and bug fixes, creating a problem of stale code if not synced up regularly. Compound the version and source problem with the sheer size: a common UEFI codebase is typically well above 1 million LOC and only goes up from there.  
+Some of the above components come from closed-source projects (silicon vendors, IBVs, OEMs), others are open source.
+Each component is supported at its own schedule with new features and bug fixes, creating a problem of stale code if
+not synced up regularly. Compound the version and source problem with the sheer size: a common UEFI codebase is
+typically well above 1 million LOC and only goes up from there.  
 
 ## What is a dependency
 
-To understand the layering you must first understand the terminology.  There are two types of code assets.  
+To understand the layering you must first understand the terminology.  There are two types of code assets.
 
-  1. A definition of something.  Generally, this is defined in an accessible header file.  This is the API provided by some asset.  This API can be "depended" upon to provide some capability.
+  1. A definition of something.  Generally, this is defined in an accessible header file.  This is the API provided by
+     some asset.  This API can be "depended" upon to provide some capability.
   2. An implementation of something.
 
-<center>![Dependency](../img/dependency.png)</center>
+``` mermaid
+  flowchart BT
+    id1["Implementation/Module <br> (Inf/C)"]
+    id2["Definition/Declaration <br>(Public Header file)"]
+    id1 -.-> id2
+```
 
-Example of a dependency: DxeCore in the Basecore layer includes a TimerLib interface.  TimerLib interface is defined in the same Basecore layer as DxeCore, so in this case a Basecore module is depending on a Basecore interface. This is allowed.
+Example of a build time/link dependency: DxeCore in the Basecore layer depends on the TimerLib interface.  TimerLib
+interface is defined in the same Basecore layer as DxeCore, so in this case a Basecore module is depending on
+a Basecore interface. This is allowed. :heavy_check_mark:
 
-Another example: Silicon-layer module implements a TimerLib interface defined in Basecore.  Here, a Silicon layer module depends on a Basecore interface. This is allowed.
+``` mermaid
+flowchart BT
+  id1["DxeCore Module"]
+  id2["TimerLib Interface"]
+  id1 -.-> id2
+  
+```
+
+To extend this example even more into construction details.  Often the logic of a library will be implemented in the
+silicon layer.  This means the code may vary based on which silicon is used in the product but because the interface
+is defined in the basecore layer this is allowed and working as designed.  The core module can be optimized
+and targeted for a specific silicon implementation.  :heavy_check_mark:
+
+``` mermaid
+flowchart BT
+  subgraph bc [Basecore]
+    id1["DxeCore"]
+    id2["TimerLib"]
+    id1 -.-> id2
+  end
+  subgraph sl [Silicon layer]
+    id3["Silicon TimerLib"]
+  end
+  id3 -->id2
+```
+
+An example of an unacceptable/unsustainable dependency is if the core module starts to use the silicon layer
+directly. For example if a feature was introduced that used a silicon special widget in the DxeCore then
+this would fail our dependency checks.  :x:
+
+``` mermaid
+flowchart BT
+  subgraph bc [Basecore]
+    id1["DxeCore"]
+  end
+  subgraph sl [Silicon layer]
+    id3["Silicon Special Widget Lib<br>Implementations"]
+    id4["Silicon SpecialWidgetLib"]
+    id3 -->id4
+  end
+  id1 -. NOT ALLOWED .-> id4
+```
 
 ## Architecture
 
-Project Mu is an attempt to create a rigid layering scheme that defines the hierarchy of dependencies.  Architectural goal kept in mind when designing this layering scheme is a controlled, limited scope, and allowed dependencies for each module within a given layer.  It is important to know, when implementing a module, what the module is allowed to depend on. When creating an interface, it is important to identify the correct layer for it such that all the consuming modules are located in the layers below.
+Project Mu is an attempt to create a rigid layering scheme that defines the hierarchy of dependencies.  Architectural
+goal kept in mind when designing this layering scheme is a controlled, limited scope, and allowed dependencies for each
+module within a given layer.  It is important to know, when implementing a module, what the module is allowed to depend
+on. When creating an interface, it is important to identify the correct layer for it such that all the consuming
+modules are located in the layers below.
 
 Motivation and goals of the layering scheme:
 
@@ -46,15 +102,21 @@ Motivation and goals of the layering scheme:
 
 ## File Layout
 
-To best preserve and delineate these concepts of componentization and unidirectional dependency, we have chosen to lay out our repository files in a structure that reinforces the same mentality.
+To best preserve and delineate these concepts of componentization and unidirectional dependency, we have chosen to lay
+out our repository files in a structure that reinforces the same mentality.
 
-The underlying logic of this layout is to clearly distinguish each layer from the rest. As such, the Basecore -- which is considered foundational -- is broken out on its own, followed by the Common repos, followed by the Silicon, followed by the Platform. As mentioned elsewhere, Project Mu makes liberal use of multiple repositories due to the mixture of requirements in the firmware ecosystem. Some repos are split for technical reasons, some for organizational, and some for legal. One of the goals of Project Mu is to make this seemingly complicated layout easier to work with.
+The underlying logic of this layout is to clearly distinguish each layer from the rest. As such, the Basecore -- which
+is considered foundational -- is broken out on its own, followed by the Common repos, followed by the Silicon,
+followed by the Platform. As mentioned elsewhere, Project Mu makes liberal use of multiple repositories due to the
+mixture of requirements in the firmware ecosystem. Some repos are split for technical reasons, some for
+organizational, and some for legal. One of the goals of Project Mu is to make this seemingly complicated layout easier
+to work with.
 
 ### Min Platform Example
 
 A simple tree might look like this...
 
-```
+``` pre
 project_mu/
 ├── Build/
 ├── Common/
@@ -72,13 +134,15 @@ project_mu/
 └── .gitmodules
 ```
 
-Note that this file structure is likely located in a Git repository, and every "ALL CAPS" directory in this example is a Git submodule/nested repository.
+Note that this file structure is likely located in a Git repository, and every "ALL CAPS" directory in this example is
+a Git submodule/nested repository.
 
 ### Surface Laptop Example
 
-For a real-world example, this is a tree that could build the Surface Laptop product, including both open- and closed-source repositories:
+For a real-world example, this is a tree that could build the Surface Laptop product, including both open- and
+closed-source repositories:
 
-```
+``` pre
 project_mu/
 ├── Build/
 ├── Common/

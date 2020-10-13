@@ -1,0 +1,6 @@
+# Rules can be found here: https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md
+# Config info: https://github.com/DavidAnson/markdownlint#configuration
+{
+  "default": true,
+  "MD013": {"line_length": 120 }
+}

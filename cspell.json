@@ -140,6 +140,7 @@
         "pytool",
         "pytools",
         "superfences",
+        "markdownlint",
         // Names and Attributions
         "Franceschetti",
         "Donath"

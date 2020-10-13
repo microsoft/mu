@@ -8,6 +8,8 @@ Please update this list as you learn more.
 2. filenames should use "_" to separate words and should not have spaces.
 3. all links to pages are case sensitive (when published to GitHub the server is case sensitive)
 4. use a code editor like vscode for markdown.  It has linting support and will identify issues prior to build.
+   * For rare cases you need to break a linter rule you can do so using the syntax defined here:
+     <https://github.com/DavidAnson/markdownlint#configuration>
 5. If you markdown has images:
     1. Awesome.  Images help make docs more informative and easier to understand
     2. Path in markdown to image must be relative
