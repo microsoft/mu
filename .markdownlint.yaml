@@ -2,5 +2,5 @@
 # Config info: https://github.com/DavidAnson/markdownlint#configuration
 {
   "default": true,
-  "MD013": {"line_length": 120 }
+  "MD013": {"line_length": 120, "code_blocks": false}
 }
