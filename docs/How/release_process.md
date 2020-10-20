@@ -21,8 +21,8 @@ TianoCore commit that it's based on (e.g. `release/201808` is based on the `edk2
 Work proceeds on that branch until a new TianoCore integration is targeted, at which point a new branch is created and
 all existing changes are rebased onto the new branch and the new branch is used for all active development going
 forward. At this point, the previous branch enters a stabilization period where further tests are performed and only
-bug/security fixes are allowed to be committed. Once in stabilization, the branch will recieve a Release Candidate tag
-(like `2002_RC1`) to provide syncronization across all Mu repos and represents releases of the code that has been
+bug/security fixes are allowed to be committed. Once in stabilization, the branch will receive a Release Candidate tag
+(like `2002_RC1`) to provide synchronization across all Mu repos and represents releases of the code that has been
 tested and is known to work together.
 
 `release/*` branches will be maintained in LTS (Long-Term Support) for at least the next two releases (though it may be
@@ -157,7 +157,7 @@ that these commits are cleaned up on the next integration.
 
 Once active development has moved off of a given `release/*` branch, the branch will undergo a period of stabilization
 where no major changes will be made while additional hours are gained and -- potentially -- additional tests are run.
-Once sufficent confidence is built, the branch will be tagged with an `*_RC1` tag. Only major bug fixes and features
+Once sufficient confidence is built, the branch will be tagged with an `*_RC1` tag. Only major bug fixes and features
 that have reached community consensus will be accepted from then on.
 
 It is Project Mu's goal that this cadence be aligned with the TianoCore release cadence, with the previous branch
@@ -193,7 +193,7 @@ posterity and should be available by request.
 
 ### Post-LTS and Archiving
 
-LTS branch maintenace requires significant resources, both to human (to manually curate and port critical fixes, as
+LTS branch maintenance requires significant resources, both to human (to manually curate and port critical fixes, as
 well as documentation) and computational (to run regular CI on all active branches across all repos). As such, while
 we try to keep these branches stable and active for as long as possible, we cannot do it forever.
 
