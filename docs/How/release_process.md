@@ -14,7 +14,9 @@ most recent commits and encouraging the reverse integration of all changes/fixes
 
 In general, the life-cycle of active code follows the following path:
 
+<!-- markdownlint-disable MD033 -->
 <center>![Stable Release, Upstream Rebase, Build/Boot Fixes, Active Development, Stabilization, Stable Release](../img/release_cycle.svg)</center>
+<!-- markdownlint-enable MD033 -->
 
 All active work in Project Mu is performed on a `release/*` branch, named sequentially according to the date of
 TianoCore commit that it's based on (e.g. `release/201808` is based on the `edk2-stable201808` branch in TianoCore).
@@ -29,7 +31,9 @@ tested and is known to work together.
 longer based on community needs). Once LTS has ended, the branch will be archived following the process described
 [below](#post-lts-and-archiving).
 
+<!-- markdownlint-disable MD033 -->
 <center>![Multiple, staggered branches from EDK2, with rebased changes](../img/repo_release_graph.svg)</center>
+<!-- markdownlint-enable MD033 -->
 
 The below diagram illustrates the life-cycle of a single branch and indicates the critical points in its lifetime.
 These critical points will be applied as tags for reference and documentation. The tags are given a name relative
@@ -37,7 +41,9 @@ to the target branch and consist of: Upstream base, Rebase complete, Rebase buil
 a designated reference platform, and stabilized Release Candidates.
 These tags are discussed in more detail [below](#integration-milestone-tags).
 
+<!-- markdownlint-disable MD033 MD013 -->
 <center><img src="../../img/branch_release_graph.svg" alt="The phases of a release branch: integration, active dev, stabilization, LTS" width="60%" /></center>
+<!-- markdownlint-enable MD033 MD013 -->
 
 !!! danger "Important"
     Due to the impacts of the rebase process on the history of Mu release branches, any downstream consumers will have
@@ -107,27 +113,30 @@ During integration, multiple tags are applied to the branch to serve as mileston
 for changelog documentation that is produced during the integration process. Not all repos will have all tags, because
 not all repos have an upstream. These tags are described below:
 
+<!-- markdownlint-disable MD007 -->
+<!-- For some reason, mkdocs wants 4 and markdownlint wants 2 -->
 * `*_Upstream`
-    - This tag is placed on the exact TianoCore commit that a given release branch started from. This is used as a
+    * This tag is placed on the exact TianoCore commit that a given release branch started from. This is used as a
     reference point between branches and relative to the rebase operation. The documentation produced for this tag
     contains the differences in TianoCore between this branch and the previous branch. For branches that originated
     from TianoCore releases, this changelog should be identical to the TianoCore changelog. (Does not exist on all
     repos.)
 * `*_Rebase`
-    - This tag is placed on the commit at the branch HEAD once the rebase is completed. The only changes to the commits
+    * This tag is placed on the commit at the branch HEAD once the rebase is completed. The only changes to the commits
     from the last branch should be merge conflict resolutions and any history simplification as described above. The
     documentation produced for this tag contains a record of these resolutions and simplifications. (Does not exist on
     all repos.)
 * `*_CIBuild`
-    - This tag is placed on the commit where all code in the given repo passes all CI/PR checks that would normally
+    * This tag is placed on the commit where all code in the given repo passes all CI/PR checks that would normally
     be required of any commit to the branch. These checks include comprehensive compilation checks as well as things
     like: spelling, library declarations, code format, etc. The documentation produced for this tag contains any changes
     required to pass these checks.
 * `*_RefBoot`
-    - This tag is placed on the commit where a reference platform consuming a large portion of the Mu code can
+    * This tag is placed on the commit where a reference platform consuming a large portion of the Mu code can
     successfully boot. The documentation produced for this tag contains any changes required to get the reference
     platform building and booting. It includes a list of changes outside the Mu project that are recommended for
     any consuming platform.
+<!-- markdownlint-enable MD007 -->
 
 In each of these cases, the `*` will be replaced with a corresponding branch name. For example, the tags associated
 with `release/201808` will be prefixed with `1808` (e.g. `1808_Rebase`, `1808_RC1`, etc.).
@@ -169,7 +178,6 @@ next `release/*` branch without lapse in availability.
     protracted Stabilization phase, or if major issues were found after the initial `*_RC` tag. If this occurs,
     the ReadMe.rst file will be updated with the motivation behind the extra release. It should also be noted that
     this will cause a new release across all the Project Mu repos to confirm that the code has been tested together.
-
     As a result, there may exist a single commit with multiple `*_RC` tags.
 
 ### Transition Branches
