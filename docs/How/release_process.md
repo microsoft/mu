@@ -14,9 +14,7 @@ most recent commits and encouraging the reverse integration of all changes/fixes
 
 In general, the life-cycle of active code follows the following path:
 
-<!-- markdownlint-disable MD033 -->
 <center>![Stable Release, Upstream Rebase, Build/Boot Fixes, Active Development, Stabilization, Stable Release](../img/release_cycle.svg)</center>
-<!-- markdownlint-enable MD033 -->
 
 All active work in Project Mu is performed on a `release/*` branch, named sequentially according to the date of
 TianoCore commit that it's based on (e.g. `release/201808` is based on the `edk2-stable201808` branch in TianoCore).
@@ -31,9 +29,7 @@ tested and is known to work together.
 longer based on community needs). Once LTS has ended, the branch will be archived following the process described
 [below](#post-lts-and-archiving).
 
-<!-- markdownlint-disable MD033 -->
 <center>![Multiple, staggered branches from EDK2, with rebased changes](../img/repo_release_graph.svg)</center>
-<!-- markdownlint-enable MD033 -->
 
 The below diagram illustrates the life-cycle of a single branch and indicates the critical points in its lifetime.
 These critical points will be applied as tags for reference and documentation. The tags are given a name relative
@@ -41,9 +37,11 @@ to the target branch and consist of: Upstream base, Rebase complete, Rebase buil
 a designated reference platform, and stabilized Release Candidates.
 These tags are discussed in more detail [below](#integration-milestone-tags).
 
-<!-- markdownlint-disable MD033 MD013 -->
-<center><img src="../../img/branch_release_graph.svg" alt="The phases of a release branch: integration, active dev, stabilization, LTS" width="60%" /></center>
-<!-- markdownlint-enable MD033 MD013 -->
+<center>
+<img src="../../img/branch_release_graph.svg"
+     alt="The phases of a release branch: integration, active dev, stabilization, LTS"
+     width="60%" />
+</center>
 
 !!! danger "Important"
     Due to the impacts of the rebase process on the history of Mu release branches, any downstream consumers will have

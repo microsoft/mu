@@ -2,5 +2,6 @@
 # Config info: https://github.com/DavidAnson/markdownlint#configuration
 {
   "default": true,
-  "MD013": {"line_length": 120, "code_blocks": false}
+  "MD013": {"line_length": 120, "code_blocks": false, "tables": false},
+  "MD033": {"allowed_elements": ["br", "center", "img"]}
 }
