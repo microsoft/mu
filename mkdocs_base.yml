@@ -55,6 +55,7 @@ nav:
     - Overview: 'WhatAndWhy/overview.md'
     - Dependencies and Layout: 'WhatAndWhy/layout.md'
     - Features: 'WhatAndWhy/features.md'
+    - Security: 'WhatAndWhy/security.md'
   - Where:
     - Project Resources: 'Where/project_resources.md'
     - External Resources: 'Where/external_resources.md'
