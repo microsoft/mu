@@ -19,7 +19,7 @@ Much of this process is designed to be run on every Mu repo. When deciding which
 dependencies documented in each repo.
 
 There are currently exceptions to this rule. The `mu_basecore`, `mu_silicon_arm_tiano`, and `mu_tiano_plus` repos have a
-circular dependency that must be worked with care. Refer to the integration guide videos for clarificaion on how these
+circular dependency that must be worked with care. Refer to the integration guide videos for clarification on how these
 three should work. They should be rebased and tested prior to any of the others, starting with `mu_basecore`.
 
 ### a) Prep for the Naive Rebase
@@ -53,18 +53,18 @@ For each repo, refer to the Readme for any special maintenance instructions.
 
 * Tag the branch as `*_Rebase` and push tag to remotes
   * NOTE: From here on out, can only make new commits
-* On the 3 cicular dependency repos, will need to create a temp commit that updates dependencies to point at
+* On the 3 circular dependency repos, will need to create a temp commit that updates dependencies to point at
   the corresponding `rebase/*_staging` branch, rather than the final `release/*` branch
 
 ### e) Run Testing
 
-* Repeatedly run the PR gate pipelines (recomment using the servers) and resolve build issues as they emerge
+* Repeatedly run the PR gate pipelines (recommend using the servers) and resolve build issues as they emerge
   * Each issue should be solved in it's own commit and include an update to the Readme with details and potential
     follow-up actions
 
 ### f) Clean Up
 
-* Once passing CI on a given repo, first rebase agains the `*_Rebase` tag to remove the temp commit for dependencies
+* Once passing CI on a given repo, first rebase against the `*_Rebase` tag to remove the temp commit for dependencies
   if it was created
   * Should only apply to the 3 circular dependency repos
 * Confirm all CI Build notes were updated in the Readme
@@ -73,17 +73,17 @@ For each repo, refer to the Readme for any special maintenance instructions.
 
 ## 3) Boot a Reference Platform
 
-Once all rebases have been completed on all repos...
+Once rebase has been completed on all repos...
 
 * On a reference platform, create a new branch for integration testing
 * Pivot all Mu submodules to the new `rebase/*_staging` branch
 * Build platform and fix issues as discovered
-  * Update individual Readmes with notes on changes required
+  * Update individual Readme files with notes on changes required
   * Try to keep these notes associated with the correct repo. Example: if the platform requires a new PCD to build
     and this PCD is defined in `UefiCpuPkg`, update the `mu_basecore` Readme with a note about the platform decision
     (and ideally include recommendations)
 * Once built, boot platform and fix issues as discovered
-  * Update individual Readmes with notes on changes required
+  * Update individual Readme files with notes on changes required
 
 ## 4) Change Default Branches
 
