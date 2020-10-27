@@ -20,6 +20,6 @@ members who can establish that they have already been given prior clearance to t
 ## Usage
 
 The Security Patch repos maintain branches that are 1:1 matches with public branches. All that is necessary to ingest
-the security patches is to retarget your Git submodule at the Security Patch repo and pull the branch with the same name.
+the security patches is to re-target your Git submodule at the Security Patch repo and pull the branch with the same name.
 They are also kept in sync with any `*_RC` tags that are applied to the public repo, so it should be simple to identify
-which public commit corresponds to wich SP repo commit.
+which public commit corresponds to which SP repo commit.
