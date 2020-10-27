@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#dxe-phase-debug" class="md-skip">
+        <a href="#lauterbach-t32-scripts" class="md-skip">
           Skip to content
         </a>
       
@@ -6203,9 +6203,45 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Lauterbach T32
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
     <a href="./" class="md-nav__link md-nav__link--active">
       Lauterbach T32
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#dxe-phase-debug" class="md-nav__link">
+    DXE Phase Debug
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#secpei-phase-debug" class="md-nav__link">
+    SEC/PEI Phase Debug
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -6251,16 +6287,28 @@
           
 
 
+  <li class="md-nav__item">
+    <a href="../../../../FmpDevicePkg/Docs/FmpDevicePkg_ReadMe/" class="md-nav__link">
+      Package Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-6-7-1" type="checkbox" id="nav-9-6-7-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-6-7-2" type="checkbox" id="nav-9-6-7-2">
     
-    <label class="md-nav__link" for="nav-9-6-7-1">
+    <label class="md-nav__link" for="nav-9-6-7-2">
       Modules
       <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="Modules" data-md-level="4">
-      <label class="md-nav__title" for="nav-9-6-7-1">
+      <label class="md-nav__title" for="nav-9-6-7-2">
         <span class="md-nav__icon md-icon"></span>
         Modules
       </label>
@@ -6273,7 +6321,19 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../FmpDevicePkg/FmpDxe/" class="md-nav__link">
+    <a href="../../../../FmpDevicePkg/CapsuleUpdatePolicyDxe/ReadMe/" class="md-nav__link">
+      Capsule Update Policy Dxe
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../FmpDevicePkg/FmpDxe/ReadMe/" class="md-nav__link">
       Fmp Dxe
     </a>
   </li>
@@ -6316,6 +6376,28 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#dxe-phase-debug" class="md-nav__link">
+    DXE Phase Debug
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#secpei-phase-debug" class="md-nav__link">
+    SEC/PEI Phase Debug
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -6331,17 +6413,18 @@
                   </a>
                 
                 
-                <h1 id="dxe-phase-debug">DXE Phase Debug<a class="headerlink" href="#dxe-phase-debug" title="Permanent link">&para;</a></h1>
+                <h1 id="lauterbach-t32-scripts">Lauterbach T32 Scripts<a class="headerlink" href="#lauterbach-t32-scripts" title="Permanent link">&para;</a></h1>
+<h2 id="dxe-phase-debug">DXE Phase Debug<a class="headerlink" href="#dxe-phase-debug" title="Permanent link">&para;</a></h2>
 <p>Update the memsize variable in EfiLoadDxe.cmm for the actual amount of memory
 available in your system.  Allow your system to boot to the point that the DXE
 core is initialized (so that the System Table and Debug Information table is
 present in memory) and execute this script (using the toolbar button or
 'do EfiLoadDxe' from the command area).  It will scan memory for the debug info
 table and load modules in it.</p>
-<h1 id="secpei-phase-debug">SEC/PEI Phase Debug<a class="headerlink" href="#secpei-phase-debug" title="Permanent link">&para;</a></h1>
+<h2 id="secpei-phase-debug">SEC/PEI Phase Debug<a class="headerlink" href="#secpei-phase-debug" title="Permanent link">&para;</a></h2>
 <p>There is no way to autodetect where these images reside so you must pass an
 address for the memory-mapped Firmware Volume containing these images.  To do
-this, enter 'do EfiLoadFv <addr>' where <addr> is the base address for the
+this, enter 'do EfiLoadFv \&lt;addr>' where \&lt;addr> is the base address for the
 firmware volume containing the SEC or PEI code.  To be more efficient you may
 want to create a script that calls this, like MyBoardLoadSec.cmm which contains
 the call to EfiLoadFv.  You can them map this script to a T32 menu or toolbar
@@ -6379,13 +6462,13 @@ button for quick access.</p>
           </a>
         
         
-          <a href="../../../../FmpDevicePkg/FmpDxe/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../../../FmpDevicePkg/Docs/FmpDevicePkg_ReadMe/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Fmp Dxe
+                Package Overview
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">

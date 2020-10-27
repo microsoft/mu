@@ -944,7 +944,15 @@
      <lastmod>2020-10-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://microsoft.github.io/mu/dyn/mu_tiano_plus/FmpDevicePkg/FmpDxe/</loc>
+     <loc>https://microsoft.github.io/mu/dyn/mu_tiano_plus/FmpDevicePkg/Docs/FmpDevicePkg_ReadMe/</loc>
+     <lastmod>2020-10-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://microsoft.github.io/mu/dyn/mu_tiano_plus/FmpDevicePkg/CapsuleUpdatePolicyDxe/ReadMe/</loc>
+     <lastmod>2020-10-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://microsoft.github.io/mu/dyn/mu_tiano_plus/FmpDevicePkg/FmpDxe/ReadMe/</loc>
      <lastmod>2020-10-27</lastmod>
      <changefreq>daily</changefreq>
     </url>

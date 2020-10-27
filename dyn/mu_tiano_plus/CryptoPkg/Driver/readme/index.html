@@ -6312,16 +6312,28 @@
           
 
 
+  <li class="md-nav__item">
+    <a href="../../../FmpDevicePkg/Docs/FmpDevicePkg_ReadMe/" class="md-nav__link">
+      Package Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-6-7-1" type="checkbox" id="nav-9-6-7-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-6-7-2" type="checkbox" id="nav-9-6-7-2">
     
-    <label class="md-nav__link" for="nav-9-6-7-1">
+    <label class="md-nav__link" for="nav-9-6-7-2">
       Modules
       <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="Modules" data-md-level="4">
-      <label class="md-nav__title" for="nav-9-6-7-1">
+      <label class="md-nav__title" for="nav-9-6-7-2">
         <span class="md-nav__icon md-icon"></span>
         Modules
       </label>
@@ -6334,7 +6346,19 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../FmpDevicePkg/FmpDxe/" class="md-nav__link">
+    <a href="../../../FmpDevicePkg/CapsuleUpdatePolicyDxe/ReadMe/" class="md-nav__link">
+      Capsule Update Policy Dxe
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../FmpDevicePkg/FmpDxe/ReadMe/" class="md-nav__link">
       Fmp Dxe
     </a>
   </li>
@@ -6445,26 +6469,26 @@
 <p>This is a potentially prepacked version of the BaseCryptLib and TlsLib, delivered via protocol.</p>
 <p>There are two routes: using the pre-compiled version and compiling it into your platform.</p>
 <h2 id="benefits">Benefits<a class="headerlink" href="#benefits" title="Permanent link">&para;</a></h2>
-<p>But first, why would you care about this? 
-It has a few benefits, namely:</p>
+<p>But first, why would you care about this?</p>
+<p>It has a few benefits, namely:</p>
 <ul>
 <li>Smaller Binary sizes</li>
 <li>Easier to service/upgrade</li>
 <li>Transparency on what version of crypto you're using</li>
 <li>Reduced build times (if using pre-compiled version)</li>
 </ul>
-<p>There are different flavors of Crypto available, with different functions supported. 
+<p>There are different flavors of Crypto available, with different functions supported.
 Don't need to use HMAC in your PEI phase?
 Select a service level or flavor that doesn't include HMAC in your platform.</p>
 <h2 id="how-include-on-your-platform">How include on your platform<a class="headerlink" href="#how-include-on-your-platform" title="Permanent link">&para;</a></h2>
 <p>Now there are a few options for you. We'll start with the pre-compiled route.</p>
 <h3 id="the-pre-compiled-easy-way">The Pre-compiled (easy) way<a class="headerlink" href="#the-pre-compiled-easy-way" title="Permanent link">&para;</a></h3>
-<p>The easy way involves setting a few variables and a few includes. 
+<p>The easy way involves setting a few variables and a few includes.
 The hard way is just to do it yourself.</p>
 <p>First the easy way:</p>
 <ol>
 <li>
-<p>Define the service level that you want for each phase of UEFI in the defines section of your DSC.
+<p>Define the service level that you want for each phase of UEFI in the defines section of your DSC.</p>
 <div class="highlight"><pre><span></span><code>[Defines]
     DEFINE PEI_CRYPTO_SERVICES = TINY_SHA
     DEFINE DXE_CRYPTO_SERVICES = STANDARD
@@ -6473,22 +6497,21 @@ The hard way is just to do it yourself.</p>
     DEFINE DXE_CRYPTO_ARCH = X64
     DEFINE SMM_CRYPTO_ARCH = X64
 </code></pre></div>
-The above example is for a standard intel platform, and the service levels or flavors available. </p>
+<p>The above example is for a standard intel platform, and the service levels or flavors available.</p>
 </li>
 <li>
-<p>Add the DSC include
+<p>Add the DSC include</p>
 <div class="highlight"><pre><span></span><code>!include CryptoPkg/Driver/Bin/CryptoDriver.inc.dsc
 </code></pre></div>
-This sets the definitions for BaseCryptLib as well as includes the correct flavor level of the component you wish to use.</p>
+<p>This sets the definitions for BaseCryptLib as well as includes the correct flavor level of the component you
+wish to use.</p>
 </li>
 <li>
 <p>Add the FDF includes to your platform FDF</p>
-</li>
-</ol>
-<p>Currently, it isn't possible in an FDF to redefine a FV section and have them be combined. 
+<p>Currently, it isn't possible in an FDF to redefine a FV section and have them be combined.
 There are two includes: BOOTBLOCK and DXE.
 The first includes the PEI phase and is meant to be stuck in your BOOTBLOCK FV.
-The second contains the DXE and SMM modules and is meant to be stuck in your FVDXE.
+The second contains the DXE and SMM modules and is meant to be stuck in your FVDXE.</p>
 <div class="highlight"><pre><span></span><code>[FV.FVBOOTBLOCK]
   ...
 !include CryptoPkg/Driver/Bin/CryptoDriver.BOOTBLOCK.inc.fdf
@@ -6497,7 +6520,9 @@ The second contains the DXE and SMM modules and is meant to be stuck in your FVD
 [FV.FVDXE]
   ...
   !include CryptoPkg/Driver/Bin/CryptoDriver.BOOTBLOCK.inc.fdf
-</code></pre></div></p>
+</code></pre></div>
+</li>
+</ol>
 <h3 id="recommendations">Recommendations<a class="headerlink" href="#recommendations" title="Permanent link">&para;</a></h3>
 <p>It is highly recommended to put this logic behind conditionals like so:</p>
 <div class="highlight"><pre><span></span><code>[FV.FVBOOTBLOCK]
@@ -6512,8 +6537,9 @@ Just add a check if it's not defined in your DSC like so.</p>
 !endif
 </code></pre></div>
 <h3 id="the-diy-way">The DIY way<a class="headerlink" href="#the-diy-way" title="Permanent link">&para;</a></h3>
-<p>If you want to take advantage of the BaseCryptOnProtocol but don't want to use a pre-compiled method, you can compile it within your platform itself.
-Shown here is for an intel platform, adjust the architectures as needed. </p>
+<p>If you want to take advantage of the BaseCryptOnProtocol but don't want to use a pre-compiled method, you can compile
+it within your platform itself.</p>
+<p>Shown here is for an Intel platform, adjust the architectures as needed.</p>
 <div class="highlight"><pre><span></span><code>[LibraryClasses.IA32]
   BaseCryptLib|CryptoPkg/Library/BaseCryptLibOnProtocolPpi/PeiCryptLib.inf
   TlsLib|CryptoPkg/Library/BaseCryptLibOnProtocolPpi/PeiCryptLib.inf
@@ -6552,8 +6578,9 @@ Shown here is for an intel platform, adjust the architectures as needed. </p>
   }
 </code></pre></div>
 <p>The PCDs are long and default to all false.
-The flavors are stored as .inc.dsc files at <code>CryptoPkg\Driver\Packaging</code>. 
-An example would be <code>CryptoPkg\Driver\Packaging\Crypto.pcd.TINY_SHA.inc.dsc</code> which is a flavor that just has Sha1, Sha256, and Sha386.</p>
+The flavors are stored as .inc.dsc files at <code>CryptoPkg\Driver\Packaging</code>.
+An example would be <code>CryptoPkg\Driver\Packaging\Crypto.pcd.TINY_SHA.inc.dsc</code> which is a flavor that just has Sha1,
+Sha256, and Sha386.</p>
 <p>You'll need to include these components in your FDF as well.</p>
 <div class="highlight"><pre><span></span><code>[FV.FVBOOTBLOCK]
   INF CryptoPkg/Driver/CryptoPei.inf
