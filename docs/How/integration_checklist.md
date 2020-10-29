@@ -37,7 +37,7 @@ For each repo, refer to the Readme for any special maintenance instructions.
   * Make sure to pay attention to first two commits and whether any new packages/files/submodules need to be dropped
   * Make sure to drop any new `.pytool/Plugins` that may have been added to other repos that are only needed in
     `mu_basecore`
-* Keep notes of any major conflicts/sightings, how the were resolved, and any follow up steps that may be needed
+* Keep notes of any major conflicts/sightings, how they were resolved, and any follow up steps that may be needed
 * Sync the Azure pipelines and other docs, .gitignore with Basecore. Try to keep things consistent where possible
 
 ### c) Clean the Rebase
