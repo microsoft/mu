@@ -6470,7 +6470,31 @@
 <li>Make sure it has docs.  Even a minimal readme.md will get collected and added to the docs.</li>
 <li>Make sure it has only valid characters encoded (often copy paste from Microsoft Word docs or the internet will lead
    to invalid characters)</li>
-<li>If it is a small change/tweak to existing code that originates outside of Project Mu please mark it with //MU_CHANGE</li>
+<li>
+<p>Any changes made to code that originates from outside Project Mu (e.g. upstream project TianoCore, OpenSSL, etc.)
+   should be surrounded with comments/tags indicating that it is a "MU_CHANGE".</p>
+<ul>
+<li>Most of the contents of <code>mu_basecore</code>, <code>mu_tiano_plus</code>, <code>mu_silicon_arm_tiano</code>, and <code>mu_silicon_intel_tiano</code>
+  fall under this requirement.</li>
+<li>Example:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">EFI_STATUS</span>
+<span class="n">EFIAPI</span>
+<span class="n">SomeFunction</span> <span class="p">(</span>
+        <span class="n">VOID</span>
+        <span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">EFI_STATUS</span>      <span class="n">Status</span><span class="p">;</span>
+        <span class="c1">// MU_CHANGE [BEGIN] - Add new counters for Feature X</span>
+        <span class="n">UINTN</span>           <span class="n">CounterA</span><span class="p">;</span>
+        <span class="n">UINTN</span>           <span class="n">CounterB</span><span class="p">;</span>
+        <span class="c1">// MU_CHANGE [END]</span>
+
+        <span class="n">Status</span> <span class="o">=</span> <span class="n">EFI_ABORTED</span><span class="p">;</span>
+        <span class="p">...</span>
+    <span class="p">}</span>
+</code></pre></div>
+</li>
 </ol>
 <h2 id="uefi-package">Uefi Package<a class="headerlink" href="#uefi-package" title="Permanent link">&para;</a></h2>
 <h2 id="uefi-components">UEFI Components<a class="headerlink" href="#uefi-components" title="Permanent link">&para;</a></h2>
