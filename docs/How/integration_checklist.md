@@ -46,8 +46,6 @@ For each repo, refer to the Readme for any special maintenance instructions.
 * Repeat with as many new cleaning branches as necessary
   * Always diff with the `rebase/*_naive` branch to ensure changes are understood
 * Create the `rebase/*_staging` branch when complete
-* For `mu_basecore`, build and release the BaseTools binary (using the pipeline)
-  * Afterwards, update the ext_dep with the updated binary version
 
 ### d) Prepare for Testing
 
@@ -56,13 +54,27 @@ For each repo, refer to the Readme for any special maintenance instructions.
 * On the 3 circular dependency repos, will need to create a temp commit that updates dependencies to point at
   the corresponding `rebase/*_staging` branch, rather than the final `release/*` branch
 
-### e) Run Testing
+### e) Updating Binaries and the ext_deps
+
+Inside different repos, there are pre-built binaries meant to improve the developer experiences.
+These binaries are usually included in the tree by way of ext_deps.
+In order to move forward with the integration, you'll need to build and publish a new binary.
+
+* For `mu_basecore`, build and release the BaseTools binary (using the pipeline)
+  * Afterwards, update the ext_dep with the updated binary version
+  * Instructions can be found here: 
+* For `mu_tiano_plus`, a build of BaseCryptoLibOnProtocol (BCOP) will need to be released. 
+  * Use the pipeline or build it locally, publish it to NuGet. If you do publish it locally, make sure the version
+  ends in `-beta`.
+  * Once the NuGet has an updated binary, update the ext_dep version to match.
+
+### f) Run Testing
 
 * Repeatedly run the PR gate pipelines (recommend using the servers) and resolve build issues as they emerge
   * Each issue should be solved in it's own commit and include an update to the Readme with details and potential
     follow-up actions
 
-### f) Clean Up
+### g) Clean Up
 
 * Once passing CI on a given repo, first rebase against the `*_Rebase` tag to remove the temp commit for dependencies
   if it was created
