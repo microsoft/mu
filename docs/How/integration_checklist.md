@@ -66,6 +66,8 @@ In order to move forward with the integration, you'll need to build and publish 
 * For `mu_tiano_plus`, a build of BaseCryptoLibOnProtocol (BCOP) will need to be released. 
   * Use the pipeline or build it locally, publish it to NuGet. If you do publish it locally, make sure the version
   ends in `-beta`.
+  * The pipeline only runs on the Project Mu secure mirror with security patches (more information in section 5
+    or the [Security page](../WhatAndWhy/Security.md)), so you'll likely need to run locally during this step.
   * Once the NuGet has an updated binary, update the ext_dep version to match.
 
 ### f) Run Testing
