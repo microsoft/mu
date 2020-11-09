@@ -9,22 +9,23 @@
         <meta name="description" content="Project Mu Documentation">
       
       
-        <link rel="canonical" href="https://microsoft.github.io/mu/dyn/mu_silicon_arm_tiano/pytool/Readme/">
+      
+        <link rel="canonical" href="https://microsoft.github.io/mu/How/integration_checklist/">
       
       
-      <link rel="shortcut icon" href="../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.0">
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.4">
     
     
       
-        <title>pytool - Project Mu</title>
+        <title>Integration Checklist - Project Mu</title>
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.bc7e593a.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.358818c7.min.css">
       
         
-        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab28b872.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.f0267088.min.css">
         
           
           
@@ -64,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#edk2-continuous-integration" class="md-skip">
+        <a href="#steps-for-a-new-integration" class="md-skip">
           Skip to content
         </a>
       
@@ -79,7 +80,7 @@
   <nav class="md-header-nav md-grid" aria-label="Header">
     <a href="https://microsoft.github.io/mu/" title="Project Mu" class="md-header-nav__button md-logo" aria-label="Project Mu">
       
-  <img src="../../../../img/mu.png" alt="logo">
+  <img src="../../img/mu.png" alt="logo">
 
     </a>
     <label class="md-header-nav__button md-icon" for="__drawer">
@@ -93,7 +94,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              pytool
+              Integration Checklist
             
           </span>
         </div>
@@ -165,7 +166,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="https://microsoft.github.io/mu/" title="Project Mu" class="md-nav__button md-logo" aria-label="Project Mu">
       
-  <img src="../../../../img/mu.png" alt="logo">
+  <img src="../../img/mu.png" alt="logo">
 
     </a>
     Project Mu
@@ -192,7 +193,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../.." class="md-nav__link">
+    <a href="../.." class="md-nav__link">
       Home
     </a>
   </li>
@@ -225,7 +226,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../WhatAndWhy/overview/" class="md-nav__link">
+    <a href="../../WhatAndWhy/overview/" class="md-nav__link">
       Overview
     </a>
   </li>
@@ -237,7 +238,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../WhatAndWhy/layout/" class="md-nav__link">
+    <a href="../../WhatAndWhy/layout/" class="md-nav__link">
       Dependencies and Layout
     </a>
   </li>
@@ -249,7 +250,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../WhatAndWhy/features/" class="md-nav__link">
+    <a href="../../WhatAndWhy/features/" class="md-nav__link">
       Features
     </a>
   </li>
@@ -261,7 +262,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../WhatAndWhy/security/" class="md-nav__link">
+    <a href="../../WhatAndWhy/security/" class="md-nav__link">
       Security
     </a>
   </li>
@@ -299,7 +300,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../Where/project_resources/" class="md-nav__link">
+    <a href="../../Where/project_resources/" class="md-nav__link">
       Project Resources
     </a>
   </li>
@@ -311,7 +312,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../Where/external_resources/" class="md-nav__link">
+    <a href="../../Where/external_resources/" class="md-nav__link">
       External Resources
     </a>
   </li>
@@ -326,10 +327,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
     
     <label class="md-nav__link" for="nav-4">
       How
@@ -349,7 +352,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../How/release_process/" class="md-nav__link">
+    <a href="../release_process/" class="md-nav__link">
       Release Process
     </a>
   </li>
@@ -359,9 +362,149 @@
           
           
 
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Integration Checklist
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      Integration Checklist
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-announce" class="md-nav__link">
+    1) Announce
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-rebase-and-test" class="md-nav__link">
+    2) Rebase and Test
+  </a>
+  
+    <nav class="md-nav" aria-label="2) Rebase and Test">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-prep-for-the-naive-rebase" class="md-nav__link">
+    a) Prep for the Naive Rebase
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-perform-the-naive-rebase" class="md-nav__link">
+    b) Perform the Naive Rebase
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-clean-the-rebase" class="md-nav__link">
+    c) Clean the Rebase
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-prepare-for-testing" class="md-nav__link">
+    d) Prepare for Testing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#e-run-testing" class="md-nav__link">
+    e) Run Testing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#f-clean-up" class="md-nav__link">
+    f) Clean Up
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-boot-a-reference-platform" class="md-nav__link">
+    3) Boot a Reference Platform
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-change-default-branches" class="md-nav__link">
+    4) Change Default Branches
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-update-security-repos" class="md-nav__link">
+    5) Update Security Repos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-announce-completion" class="md-nav__link">
+    6) Announce Completion
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
 
   <li class="md-nav__item">
-    <a href="../../../../How/contributing/" class="md-nav__link">
+    <a href="../contributing/" class="md-nav__link">
       Contributing
     </a>
   </li>
@@ -373,7 +516,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../How/using_project_mu/" class="md-nav__link">
+    <a href="../using_project_mu/" class="md-nav__link">
       Using
     </a>
   </li>
@@ -411,7 +554,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../DeveloperDocs/developer_docs/" class="md-nav__link">
+    <a href="../../DeveloperDocs/developer_docs/" class="md-nav__link">
       Overview
     </a>
   </li>
@@ -423,7 +566,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../DeveloperDocs/build_community_docs/" class="md-nav__link">
+    <a href="../../DeveloperDocs/build_community_docs/" class="md-nav__link">
       How To Build
     </a>
   </li>
@@ -435,7 +578,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../DeveloperDocs/doc_sample_test/" class="md-nav__link">
+    <a href="../../DeveloperDocs/doc_sample_test/" class="md-nav__link">
       Sample Syntax
     </a>
   </li>
@@ -447,7 +590,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../DeveloperDocs/attribution/" class="md-nav__link">
+    <a href="../../DeveloperDocs/attribution/" class="md-nav__link">
       Doc Framework Attribution
     </a>
   </li>
@@ -459,7 +602,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../DeveloperDocs/requirements/" class="md-nav__link">
+    <a href="../../DeveloperDocs/requirements/" class="md-nav__link">
       Documentation Requirements
     </a>
   </li>
@@ -497,7 +640,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../CodeDevelopment/overview/" class="md-nav__link">
+    <a href="../../CodeDevelopment/overview/" class="md-nav__link">
       Overview
     </a>
   </li>
@@ -509,7 +652,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../CodeDevelopment/prerequisites/" class="md-nav__link">
+    <a href="../../CodeDevelopment/prerequisites/" class="md-nav__link">
       Tools and Prerequisite
     </a>
   </li>
@@ -521,7 +664,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../CodeDevelopment/compile/" class="md-nav__link">
+    <a href="../../CodeDevelopment/compile/" class="md-nav__link">
       Compiling
     </a>
   </li>
@@ -533,7 +676,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../CodeDevelopment/test/" class="md-nav__link">
+    <a href="../../CodeDevelopment/test/" class="md-nav__link">
       Testing
     </a>
   </li>
@@ -545,7 +688,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../CodeDevelopment/requirements/" class="md-nav__link">
+    <a href="../../CodeDevelopment/requirements/" class="md-nav__link">
       Code Requirements
     </a>
   </li>
@@ -562,7 +705,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../faq/" class="md-nav__link">
+    <a href="../../faq/" class="md-nav__link">
       FAQ
     </a>
   </li>
@@ -574,7 +717,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../license/" class="md-nav__link">
+    <a href="../../license/" class="md-nav__link">
       License
     </a>
   </li>
@@ -584,12 +727,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
     
     <label class="md-nav__link" for="nav-9">
       Code Repositories
@@ -630,7 +771,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_basecore/CONTRIBUTING/" class="md-nav__link">
+    <a href="../../dyn/mu_basecore/CONTRIBUTING/" class="md-nav__link">
       CONTRIBUTING
     </a>
   </li>
@@ -642,7 +783,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_basecore/RepoDetails/" class="md-nav__link">
+    <a href="../../dyn/mu_basecore/RepoDetails/" class="md-nav__link">
       Repo Details
     </a>
   </li>
@@ -675,7 +816,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_basecore/azurepipelines/ReadMe/" class="md-nav__link">
+    <a href="../../dyn/mu_basecore/azurepipelines/ReadMe/" class="md-nav__link">
       Read Me
     </a>
   </li>
@@ -687,7 +828,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_basecore/azurepipelines/templates/ReadMe/" class="md-nav__link">
+    <a href="../../dyn/mu_basecore/azurepipelines/templates/ReadMe/" class="md-nav__link">
       templates
     </a>
   </li>
@@ -724,28 +865,16 @@
           
 
 
-  <li class="md-nav__item">
-    <a href="../../../mu_basecore/pytool/Readme/" class="md-nav__link">
-      Readme
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-1-4-2" type="checkbox" id="nav-9-1-4-2">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-1-4-1" type="checkbox" id="nav-9-1-4-1">
     
-    <label class="md-nav__link" for="nav-9-1-4-2">
+    <label class="md-nav__link" for="nav-9-1-4-1">
       Plugin
       <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="Plugin" data-md-level="4">
-      <label class="md-nav__title" for="nav-9-1-4-2">
+      <label class="md-nav__title" for="nav-9-1-4-1">
         <span class="md-nav__icon md-icon"></span>
         Plugin
       </label>
@@ -758,7 +887,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_basecore/pytool/Plugin/CharEncodingCheck/Readme/" class="md-nav__link">
+    <a href="../../dyn/mu_basecore/pytool/Plugin/CharEncodingCheck/Readme/" class="md-nav__link">
       Char Encoding Check
     </a>
   </li>
@@ -770,7 +899,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_basecore/pytool/Plugin/CompilerPlugin/Readme/" class="md-nav__link">
+    <a href="../../dyn/mu_basecore/pytool/Plugin/CompilerPlugin/Readme/" class="md-nav__link">
       Compiler Plugin
     </a>
   </li>
@@ -782,7 +911,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_basecore/pytool/Plugin/DependencyCheck/Readme/" class="md-nav__link">
+    <a href="../../dyn/mu_basecore/pytool/Plugin/DependencyCheck/Readme/" class="md-nav__link">
       Dependency Check
     </a>
   </li>
@@ -794,7 +923,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_basecore/pytool/Plugin/DscCompleteCheck/Readme/" class="md-nav__link">
+    <a href="../../dyn/mu_basecore/pytool/Plugin/DscCompleteCheck/Readme/" class="md-nav__link">
       Dsc Complete Check
     </a>
   </li>
@@ -806,7 +935,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_basecore/pytool/Plugin/EccCheck/Readme/" class="md-nav__link">
+    <a href="../../dyn/mu_basecore/pytool/Plugin/EccCheck/Readme/" class="md-nav__link">
       Ecc Check
     </a>
   </li>
@@ -818,7 +947,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_basecore/pytool/Plugin/GuidCheck/Readme/" class="md-nav__link">
+    <a href="../../dyn/mu_basecore/pytool/Plugin/GuidCheck/Readme/" class="md-nav__link">
       Guid Check
     </a>
   </li>
@@ -830,7 +959,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_basecore/pytool/Plugin/HostUnitTestCompilerPlugin/Readme/" class="md-nav__link">
+    <a href="../../dyn/mu_basecore/pytool/Plugin/HostUnitTestCompilerPlugin/Readme/" class="md-nav__link">
       Host Unit Test Compiler Plugin
     </a>
   </li>
@@ -842,7 +971,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_basecore/pytool/Plugin/HostUnitTestDscCompleteCheck/Readme/" class="md-nav__link">
+    <a href="../../dyn/mu_basecore/pytool/Plugin/HostUnitTestDscCompleteCheck/Readme/" class="md-nav__link">
       Host Unit Test Dsc Complete Check
     </a>
   </li>
@@ -854,7 +983,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_basecore/pytool/Plugin/LibraryClassCheck/Readme/" class="md-nav__link">
+    <a href="../../dyn/mu_basecore/pytool/Plugin/LibraryClassCheck/Readme/" class="md-nav__link">
       Library Class Check
     </a>
   </li>
@@ -866,7 +995,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_basecore/pytool/Plugin/LicenseCheck/Readme/" class="md-nav__link">
+    <a href="../../dyn/mu_basecore/pytool/Plugin/LicenseCheck/Readme/" class="md-nav__link">
       License Check
     </a>
   </li>
@@ -878,7 +1007,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_basecore/pytool/Plugin/MarkdownLintCheck/Readme/" class="md-nav__link">
+    <a href="../../dyn/mu_basecore/pytool/Plugin/MarkdownLintCheck/Readme/" class="md-nav__link">
       Markdown Lint Check
     </a>
   </li>
@@ -890,7 +1019,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_basecore/pytool/Plugin/SpellCheck/Readme/" class="md-nav__link">
+    <a href="../../dyn/mu_basecore/pytool/Plugin/SpellCheck/Readme/" class="md-nav__link">
       Spell Check
     </a>
   </li>
@@ -954,7 +1083,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_basecore/BaseTools/NugetPublishing/iasl/" class="md-nav__link">
+    <a href="../../dyn/mu_basecore/BaseTools/NugetPublishing/iasl/" class="md-nav__link">
       iasl
     </a>
   </li>
@@ -966,7 +1095,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_basecore/BaseTools/NugetPublishing/Mu-Basetools/" class="md-nav__link">
+    <a href="../../dyn/mu_basecore/BaseTools/NugetPublishing/Mu-Basetools/" class="md-nav__link">
       Mu-Basetools
     </a>
   </li>
@@ -978,7 +1107,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_basecore/BaseTools/NugetPublishing/Mu-Nasm/" class="md-nav__link">
+    <a href="../../dyn/mu_basecore/BaseTools/NugetPublishing/Mu-Nasm/" class="md-nav__link">
       Mu-Nasm
     </a>
   </li>
@@ -990,7 +1119,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_basecore/BaseTools/NugetPublishing/ReadMe/" class="md-nav__link">
+    <a href="../../dyn/mu_basecore/BaseTools/NugetPublishing/ReadMe/" class="md-nav__link">
       Read Me
     </a>
   </li>
@@ -1028,7 +1157,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_basecore/BaseTools/Plugin/FdSizeReport/ReadMe/" class="md-nav__link">
+    <a href="../../dyn/mu_basecore/BaseTools/Plugin/FdSizeReport/ReadMe/" class="md-nav__link">
       Fd Size Report
     </a>
   </li>
@@ -1040,7 +1169,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_basecore/BaseTools/Plugin/OverrideValidation/ReadMe/" class="md-nav__link">
+    <a href="../../dyn/mu_basecore/BaseTools/Plugin/OverrideValidation/ReadMe/" class="md-nav__link">
       Override Validation
     </a>
   </li>
@@ -1078,7 +1207,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_basecore/BaseTools/Scripts/PackageDocumentTools/Readme/" class="md-nav__link">
+    <a href="../../dyn/mu_basecore/BaseTools/Scripts/PackageDocumentTools/Readme/" class="md-nav__link">
       Package Document Tools
     </a>
   </li>
@@ -1179,7 +1308,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_basecore/BaseTools/Source/C/BrotliCompress/brotli/CONTRIBUTING/" class="md-nav__link">
+    <a href="../../dyn/mu_basecore/BaseTools/Source/C/BrotliCompress/brotli/CONTRIBUTING/" class="md-nav__link">
       CONTRIBUTING
     </a>
   </li>
@@ -1191,7 +1320,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_basecore/BaseTools/Source/C/BrotliCompress/brotli/" class="md-nav__link">
+    <a href="../../dyn/mu_basecore/BaseTools/Source/C/BrotliCompress/brotli/" class="md-nav__link">
       README
     </a>
   </li>
@@ -1224,7 +1353,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_basecore/BaseTools/Source/C/BrotliCompress/brotli/c/tools/brotli/" class="md-nav__link">
+    <a href="../../dyn/mu_basecore/BaseTools/Source/C/BrotliCompress/brotli/c/tools/brotli/" class="md-nav__link">
       tools
     </a>
   </li>
@@ -1241,7 +1370,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_basecore/BaseTools/Source/C/BrotliCompress/brotli/python/" class="md-nav__link">
+    <a href="../../dyn/mu_basecore/BaseTools/Source/C/BrotliCompress/brotli/python/" class="md-nav__link">
       python
     </a>
   </li>
@@ -1274,7 +1403,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_basecore/BaseTools/Source/C/BrotliCompress/brotli/research/" class="md-nav__link">
+    <a href="../../dyn/mu_basecore/BaseTools/Source/C/BrotliCompress/brotli/research/" class="md-nav__link">
       README
     </a>
   </li>
@@ -1307,7 +1436,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_basecore/BaseTools/Source/C/BrotliCompress/brotli/research/libdivsufsort/CHANGELOG/" class="md-nav__link">
+    <a href="../../dyn/mu_basecore/BaseTools/Source/C/BrotliCompress/brotli/research/libdivsufsort/CHANGELOG/" class="md-nav__link">
       CHANGELOG
     </a>
   </li>
@@ -1319,7 +1448,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_basecore/BaseTools/Source/C/BrotliCompress/brotli/research/libdivsufsort/" class="md-nav__link">
+    <a href="../../dyn/mu_basecore/BaseTools/Source/C/BrotliCompress/brotli/research/libdivsufsort/" class="md-nav__link">
       README
     </a>
   </li>
@@ -1362,7 +1491,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_basecore/BaseTools/Source/C/BrotliCompress/brotli/scripts/dictionary/" class="md-nav__link">
+    <a href="../../dyn/mu_basecore/BaseTools/Source/C/BrotliCompress/brotli/scripts/dictionary/" class="md-nav__link">
       dictionary
     </a>
   </li>
@@ -1415,7 +1544,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_basecore/BaseTools/Source/Python/Pkcs7Sign/Readme/" class="md-nav__link">
+    <a href="../../dyn/mu_basecore/BaseTools/Source/Python/Pkcs7Sign/Readme/" class="md-nav__link">
       Pkcs7Sign
     </a>
   </li>
@@ -1547,7 +1676,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_basecore/MdeModulePkg/Library/BrotliCustomDecompressLib/brotli/CONTRIBUTING/" class="md-nav__link">
+    <a href="../../dyn/mu_basecore/MdeModulePkg/Library/BrotliCustomDecompressLib/brotli/CONTRIBUTING/" class="md-nav__link">
       CONTRIBUTING
     </a>
   </li>
@@ -1559,7 +1688,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_basecore/MdeModulePkg/Library/BrotliCustomDecompressLib/brotli/" class="md-nav__link">
+    <a href="../../dyn/mu_basecore/MdeModulePkg/Library/BrotliCustomDecompressLib/brotli/" class="md-nav__link">
       README
     </a>
   </li>
@@ -1592,7 +1721,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_basecore/MdeModulePkg/Library/BrotliCustomDecompressLib/brotli/c/tools/brotli/" class="md-nav__link">
+    <a href="../../dyn/mu_basecore/MdeModulePkg/Library/BrotliCustomDecompressLib/brotli/c/tools/brotli/" class="md-nav__link">
       tools
     </a>
   </li>
@@ -1609,7 +1738,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_basecore/MdeModulePkg/Library/BrotliCustomDecompressLib/brotli/python/" class="md-nav__link">
+    <a href="../../dyn/mu_basecore/MdeModulePkg/Library/BrotliCustomDecompressLib/brotli/python/" class="md-nav__link">
       python
     </a>
   </li>
@@ -1642,7 +1771,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_basecore/MdeModulePkg/Library/BrotliCustomDecompressLib/brotli/research/" class="md-nav__link">
+    <a href="../../dyn/mu_basecore/MdeModulePkg/Library/BrotliCustomDecompressLib/brotli/research/" class="md-nav__link">
       README
     </a>
   </li>
@@ -1675,7 +1804,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_basecore/MdeModulePkg/Library/BrotliCustomDecompressLib/brotli/research/libdivsufsort/CHANGELOG/" class="md-nav__link">
+    <a href="../../dyn/mu_basecore/MdeModulePkg/Library/BrotliCustomDecompressLib/brotli/research/libdivsufsort/CHANGELOG/" class="md-nav__link">
       CHANGELOG
     </a>
   </li>
@@ -1687,7 +1816,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_basecore/MdeModulePkg/Library/BrotliCustomDecompressLib/brotli/research/libdivsufsort/" class="md-nav__link">
+    <a href="../../dyn/mu_basecore/MdeModulePkg/Library/BrotliCustomDecompressLib/brotli/research/libdivsufsort/" class="md-nav__link">
       README
     </a>
   </li>
@@ -1730,7 +1859,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_basecore/MdeModulePkg/Library/BrotliCustomDecompressLib/brotli/scripts/dictionary/" class="md-nav__link">
+    <a href="../../dyn/mu_basecore/MdeModulePkg/Library/BrotliCustomDecompressLib/brotli/scripts/dictionary/" class="md-nav__link">
       dictionary
     </a>
   </li>
@@ -1757,7 +1886,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_basecore/MdeModulePkg/Library/DeviceStateLib/Readme/" class="md-nav__link">
+    <a href="../../dyn/mu_basecore/MdeModulePkg/Library/DeviceStateLib/Readme/" class="md-nav__link">
       Device State Lib
     </a>
   </li>
@@ -1837,7 +1966,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_basecore/MdeModulePkg/Universal/RegularExpressionDxe/oniguruma/" class="md-nav__link">
+    <a href="../../dyn/mu_basecore/MdeModulePkg/Universal/RegularExpressionDxe/oniguruma/" class="md-nav__link">
       README
     </a>
   </li>
@@ -1849,7 +1978,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_basecore/MdeModulePkg/Universal/RegularExpressionDxe/oniguruma/doc/SYNTAX/" class="md-nav__link">
+    <a href="../../dyn/mu_basecore/MdeModulePkg/Universal/RegularExpressionDxe/oniguruma/doc/SYNTAX/" class="md-nav__link">
       doc
     </a>
   </li>
@@ -1892,7 +2021,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_basecore/MdeModulePkg/Universal/Variable/UefiVariablePolicy/ReadMe/" class="md-nav__link">
+    <a href="../../dyn/mu_basecore/MdeModulePkg/Universal/Variable/UefiVariablePolicy/ReadMe/" class="md-nav__link">
       Uefi Variable Policy
     </a>
   </li>
@@ -1987,7 +2116,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_basecore/MdePkg/Library/FltUsedLib/Readme/" class="md-nav__link">
+    <a href="../../dyn/mu_basecore/MdePkg/Library/FltUsedLib/Readme/" class="md-nav__link">
       Flt Used Lib
     </a>
   </li>
@@ -2077,7 +2206,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_basecore/NetworkPkg/SharedNetworking/" class="md-nav__link">
+    <a href="../../dyn/mu_basecore/NetworkPkg/SharedNetworking/" class="md-nav__link">
       README
     </a>
   </li>
@@ -2089,7 +2218,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_basecore/NetworkPkg/SharedNetworking/release_notes/" class="md-nav__link">
+    <a href="../../dyn/mu_basecore/NetworkPkg/SharedNetworking/release_notes/" class="md-nav__link">
       release notes
     </a>
   </li>
@@ -2101,7 +2230,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_basecore/NetworkPkg/SharedNetworking/SharedNetworking/" class="md-nav__link">
+    <a href="../../dyn/mu_basecore/NetworkPkg/SharedNetworking/SharedNetworking/" class="md-nav__link">
       Shared Networking
     </a>
   </li>
@@ -2149,7 +2278,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_basecore/UnitTestFrameworkPkg/ReadMe/" class="md-nav__link">
+    <a href="../../dyn/mu_basecore/UnitTestFrameworkPkg/ReadMe/" class="md-nav__link">
       Modules
     </a>
   </li>
@@ -2192,7 +2321,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_oem_sample/RepoDetails/" class="md-nav__link">
+    <a href="../../dyn/mu_oem_sample/RepoDetails/" class="md-nav__link">
       Repo Details
     </a>
   </li>
@@ -2225,7 +2354,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_oem_sample/azurepipelines/ReadMe/" class="md-nav__link">
+    <a href="../../dyn/mu_oem_sample/azurepipelines/ReadMe/" class="md-nav__link">
       Read Me
     </a>
   </li>
@@ -2237,7 +2366,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_oem_sample/azurepipelines/templates/ReadMe/" class="md-nav__link">
+    <a href="../../dyn/mu_oem_sample/azurepipelines/templates/ReadMe/" class="md-nav__link">
       templates
     </a>
   </li>
@@ -2253,28 +2382,16 @@
           
 
 
-  <li class="md-nav__item">
-    <a href="../../../mu_oem_sample/pytool/Readme/" class="md-nav__link">
-      pytool
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-2-4" type="checkbox" id="nav-9-2-4">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-2-3" type="checkbox" id="nav-9-2-3">
     
-    <label class="md-nav__link" for="nav-9-2-4">
+    <label class="md-nav__link" for="nav-9-2-3">
       Oem Pkg
       <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="Oem Pkg" data-md-level="3">
-      <label class="md-nav__title" for="nav-9-2-4">
+      <label class="md-nav__title" for="nav-9-2-3">
         <span class="md-nav__icon md-icon"></span>
         Oem Pkg
       </label>
@@ -2288,14 +2405,14 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-2-4-1" type="checkbox" id="nav-9-2-4-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-2-3-1" type="checkbox" id="nav-9-2-3-1">
     
-    <label class="md-nav__link" for="nav-9-2-4-1">
+    <label class="md-nav__link" for="nav-9-2-3-1">
       Modules
       <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="Modules" data-md-level="4">
-      <label class="md-nav__title" for="nav-9-2-4-1">
+      <label class="md-nav__title" for="nav-9-2-3-1">
         <span class="md-nav__icon md-icon"></span>
         Modules
       </label>
@@ -2308,7 +2425,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_oem_sample/OemPkg/FrontPage/FrontPagePasswordSupport/" class="md-nav__link">
+    <a href="../../dyn/mu_oem_sample/OemPkg/FrontPage/FrontPagePasswordSupport/" class="md-nav__link">
       Front Page
     </a>
   </li>
@@ -2356,7 +2473,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/RepoDetails/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/RepoDetails/" class="md-nav__link">
       Repo Details
     </a>
   </li>
@@ -2389,7 +2506,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/azurepipelines/ReadMe/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/azurepipelines/ReadMe/" class="md-nav__link">
       Read Me
     </a>
   </li>
@@ -2401,7 +2518,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/azurepipelines/templates/ReadMe/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/azurepipelines/templates/ReadMe/" class="md-nav__link">
       templates
     </a>
   </li>
@@ -2439,7 +2556,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/AdvLoggerPkg/Docs/ReadMe/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/AdvLoggerPkg/Docs/ReadMe/" class="md-nav__link">
       Package Overview
     </a>
   </li>
@@ -2472,7 +2589,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/AdvLoggerPkg/AdvancedFileLogger/ReadMe/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/AdvLoggerPkg/AdvancedFileLogger/ReadMe/" class="md-nav__link">
       Advanced File Logger
     </a>
   </li>
@@ -2484,7 +2601,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/AdvLoggerPkg/AdvancedSerialLogger/ReadMe/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/AdvLoggerPkg/AdvancedSerialLogger/ReadMe/" class="md-nav__link">
       Advanced Serial Logger
     </a>
   </li>
@@ -2517,7 +2634,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/AdvLoggerPkg/Application/DecodeUefiLog/ReadMe/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/AdvLoggerPkg/Application/DecodeUefiLog/ReadMe/" class="md-nav__link">
       Decode Uefi Log
     </a>
   </li>
@@ -2555,7 +2672,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/AdvLoggerPkg/UnitTests/LineParser/readme/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/AdvLoggerPkg/UnitTests/LineParser/readme/" class="md-nav__link">
       Line Parser
     </a>
   </li>
@@ -2624,7 +2741,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/DfciPkg/Docs/Dfci_Feature/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/DfciPkg/Docs/Dfci_Feature/" class="md-nav__link">
       Dfci Feature
     </a>
   </li>
@@ -2636,7 +2753,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/DfciPkg/Docs/Internals/DfciInternals/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/DfciPkg/Docs/Internals/DfciInternals/" class="md-nav__link">
       Internals
     </a>
   </li>
@@ -2669,7 +2786,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/DfciPkg/Docs/PlatformIntegration/DfciDeviceIdSupportLib/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/DfciPkg/Docs/PlatformIntegration/DfciDeviceIdSupportLib/" class="md-nav__link">
       Dfci Device Id Support Lib
     </a>
   </li>
@@ -2681,7 +2798,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/DfciPkg/Docs/PlatformIntegration/DfciGroups/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/DfciPkg/Docs/PlatformIntegration/DfciGroups/" class="md-nav__link">
       Dfci Groups
     </a>
   </li>
@@ -2693,7 +2810,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/DfciPkg/Docs/PlatformIntegration/DfciSettingProviders/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/DfciPkg/Docs/PlatformIntegration/DfciSettingProviders/" class="md-nav__link">
       Dfci Setting Providers
     </a>
   </li>
@@ -2705,7 +2822,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/DfciPkg/Docs/PlatformIntegration/DfciUiSupportLib/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/DfciPkg/Docs/PlatformIntegration/DfciUiSupportLib/" class="md-nav__link">
       Dfci Ui Support Lib
     </a>
   </li>
@@ -2717,7 +2834,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/DfciPkg/Docs/PlatformIntegration/PlatformIntegrationOverview/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/DfciPkg/Docs/PlatformIntegration/PlatformIntegrationOverview/" class="md-nav__link">
       Platform Integration Overview
     </a>
   </li>
@@ -2734,7 +2851,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/DfciPkg/Docs/Scenarios/DfciScenarios/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/DfciPkg/Docs/Scenarios/DfciScenarios/" class="md-nav__link">
       Scenarios
     </a>
   </li>
@@ -2772,7 +2889,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/DfciPkg/AuthManagerNull/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/DfciPkg/AuthManagerNull/" class="md-nav__link">
       Auth Manager Null
     </a>
   </li>
@@ -2784,7 +2901,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/DfciPkg/IdentityAndAuthManager/ReadMe/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/DfciPkg/IdentityAndAuthManager/ReadMe/" class="md-nav__link">
       Identity And Auth Manager
     </a>
   </li>
@@ -2817,7 +2934,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/DfciPkg/Library/DfciSampleProvider/readme/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/DfciPkg/Library/DfciSampleProvider/readme/" class="md-nav__link">
       Dfci Sample Provider
     </a>
   </li>
@@ -2855,7 +2972,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/DfciPkg/UnitTests/DevicdIdTest/readme/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/DfciPkg/UnitTests/DevicdIdTest/readme/" class="md-nav__link">
       Devicd Id Test
     </a>
   </li>
@@ -2867,7 +2984,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/DfciPkg/UnitTests/DfciTests/readme/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/DfciPkg/UnitTests/DfciTests/readme/" class="md-nav__link">
       Dfci Tests
     </a>
   </li>
@@ -2915,7 +3032,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/HidPkg/Docs/Readme/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/HidPkg/Docs/Readme/" class="md-nav__link">
       Package Overview
     </a>
   </li>
@@ -2948,7 +3065,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/HidPkg/HidKeyboardDxe/HidKeyboardDxe/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/HidPkg/HidKeyboardDxe/HidKeyboardDxe/" class="md-nav__link">
       Hid Keyboard Dxe
     </a>
   </li>
@@ -2960,7 +3077,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/HidPkg/HidMouseAbsolutePointerDxe/HidMouseAbsolutePointerDxe/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/HidPkg/HidMouseAbsolutePointerDxe/HidMouseAbsolutePointerDxe/" class="md-nav__link">
       Hid Mouse Absolute Pointer Dxe
     </a>
   </li>
@@ -3024,7 +3141,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/MfciPkg/Docs/Mfci_Feature/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/MfciPkg/Docs/Mfci_Feature/" class="md-nav__link">
       Mfci Feature
     </a>
   </li>
@@ -3036,7 +3153,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/MfciPkg/Docs/Mfci_Integration_Guide/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/MfciPkg/Docs/Mfci_Integration_Guide/" class="md-nav__link">
       Mfci Integration Guide
     </a>
   </li>
@@ -3048,7 +3165,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/MfciPkg/Docs/Mfci_Structures/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/MfciPkg/Docs/Mfci_Structures/" class="md-nav__link">
       Mfci Structures
     </a>
   </li>
@@ -3091,7 +3208,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/MsCorePkg/Docs/ReadMe/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/MsCorePkg/Docs/ReadMe/" class="md-nav__link">
       Package Overview
     </a>
   </li>
@@ -3124,7 +3241,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/MsCorePkg/AcpiRGRT/feature_acpi_rgrt/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/MsCorePkg/AcpiRGRT/feature_acpi_rgrt/" class="md-nav__link">
       Acpi RGRT
     </a>
   </li>
@@ -3136,7 +3253,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/MsCorePkg/CheckHardwareConnected/readme/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/MsCorePkg/CheckHardwareConnected/readme/" class="md-nav__link">
       Check Hardware Connected
     </a>
   </li>
@@ -3169,7 +3286,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/MsCorePkg/Core/GuidedSectionExtractPeim/ReadMe/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/MsCorePkg/Core/GuidedSectionExtractPeim/ReadMe/" class="md-nav__link">
       Guided Section Extract Peim
     </a>
   </li>
@@ -3186,7 +3303,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/MsCorePkg/DebugFileLoggerII/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/MsCorePkg/DebugFileLoggerII/" class="md-nav__link">
       Debug File Logger II
     </a>
   </li>
@@ -3219,7 +3336,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/MsCorePkg/IncompatiblePciDevices/ReadMe/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/MsCorePkg/IncompatiblePciDevices/ReadMe/" class="md-nav__link">
       Read Me
     </a>
   </li>
@@ -3231,7 +3348,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/MsCorePkg/IncompatiblePciDevices/NoOptionRomsAllowed/ReadMe/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/MsCorePkg/IncompatiblePciDevices/NoOptionRomsAllowed/ReadMe/" class="md-nav__link">
       No Option Roms Allowed
     </a>
   </li>
@@ -3269,7 +3386,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/MsCorePkg/Library/DebugPortPei/ReadMe/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/MsCorePkg/Library/DebugPortPei/ReadMe/" class="md-nav__link">
       Debug Port Pei
     </a>
   </li>
@@ -3281,7 +3398,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/MsCorePkg/Library/DebugPortProtocolInstallLib/ReadMe/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/MsCorePkg/Library/DebugPortProtocolInstallLib/ReadMe/" class="md-nav__link">
       Debug Port Protocol Install Lib
     </a>
   </li>
@@ -3293,7 +3410,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/MsCorePkg/Library/DeviceBootManagerLibNull/ReadMe/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/MsCorePkg/Library/DeviceBootManagerLibNull/ReadMe/" class="md-nav__link">
       Device Boot Manager Lib Null
     </a>
   </li>
@@ -3305,7 +3422,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/MsCorePkg/Library/DeviceSpecificBusInfoLibNull/ReadMe/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/MsCorePkg/Library/DeviceSpecificBusInfoLibNull/ReadMe/" class="md-nav__link">
       Device Specific Bus Info Lib Null
     </a>
   </li>
@@ -3317,7 +3434,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/MsCorePkg/Library/DxeDebugLibRouter/Feature_DebugRouting_Readme/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/MsCorePkg/Library/DxeDebugLibRouter/Feature_DebugRouting_Readme/" class="md-nav__link">
       Dxe Debug Lib Router
     </a>
   </li>
@@ -3329,7 +3446,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/MsCorePkg/Library/JsonLiteParser/ReadMe/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/MsCorePkg/Library/JsonLiteParser/ReadMe/" class="md-nav__link">
       Json Lite Parser
     </a>
   </li>
@@ -3341,7 +3458,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/MsCorePkg/Library/MathLib/ReadMe/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/MsCorePkg/Library/MathLib/ReadMe/" class="md-nav__link">
       Math Lib
     </a>
   </li>
@@ -3353,7 +3470,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/MsCorePkg/Library/MemoryTypeInformationChangeLib/ReadMe/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/MsCorePkg/Library/MemoryTypeInformationChangeLib/ReadMe/" class="md-nav__link">
       Memory Type Information Change Lib
     </a>
   </li>
@@ -3365,7 +3482,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/MsCorePkg/Library/PasswordStoreLibNull/ReadMe/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/MsCorePkg/Library/PasswordStoreLibNull/ReadMe/" class="md-nav__link">
       Password Store Lib Null
     </a>
   </li>
@@ -3377,7 +3494,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/MsCorePkg/Library/PeiDebugLib/ReadMe/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/MsCorePkg/Library/PeiDebugLib/ReadMe/" class="md-nav__link">
       Pei Debug Lib
     </a>
   </li>
@@ -3389,7 +3506,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/MsCorePkg/Library/PlatformBootManagerLib/ReadMe/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/MsCorePkg/Library/PlatformBootManagerLib/ReadMe/" class="md-nav__link">
       Platform Boot Manager Lib
     </a>
   </li>
@@ -3401,7 +3518,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/MsCorePkg/Library/TpmSgNvIndexLib/ReadMe/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/MsCorePkg/Library/TpmSgNvIndexLib/ReadMe/" class="md-nav__link">
       Tpm Sg Nv Index Lib
     </a>
   </li>
@@ -3418,7 +3535,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/MsCorePkg/MuCryptoDxe/Readme/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/MsCorePkg/MuCryptoDxe/Readme/" class="md-nav__link">
       Mu Crypto Dxe
     </a>
   </li>
@@ -3430,7 +3547,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/MsCorePkg/MuVarPolicyFoundationDxe/Feature_MuVarPolicyFoundationDxe_Readme/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/MsCorePkg/MuVarPolicyFoundationDxe/Feature_MuVarPolicyFoundationDxe_Readme/" class="md-nav__link">
       Mu Var Policy Foundation Dxe
     </a>
   </li>
@@ -3463,7 +3580,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/MsCorePkg/UnitTests/JsonTest/readme/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/MsCorePkg/UnitTests/JsonTest/readme/" class="md-nav__link">
       Json Test
     </a>
   </li>
@@ -3475,7 +3592,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/MsCorePkg/UnitTests/MathLibUnitTest/ReadMe/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/MsCorePkg/UnitTests/MathLibUnitTest/ReadMe/" class="md-nav__link">
       Math Lib Unit Test
     </a>
   </li>
@@ -3513,7 +3630,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/MsCorePkg/Universal/StatusCodeHandler/ReadMe/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/MsCorePkg/Universal/StatusCodeHandler/ReadMe/" class="md-nav__link">
       Status Code Handler
     </a>
   </li>
@@ -3561,7 +3678,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/MsGraphicsPkg/Docs/ReadMe/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/MsGraphicsPkg/Docs/ReadMe/" class="md-nav__link">
       Package Overview
     </a>
   </li>
@@ -3615,7 +3732,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/MsGraphicsPkg/Application/BmpDisplay/ReadMe/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/MsGraphicsPkg/Application/BmpDisplay/ReadMe/" class="md-nav__link">
       Bmp Display
     </a>
   </li>
@@ -3632,7 +3749,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/MsGraphicsPkg/DisplayEngineDxe/ReadMe/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/MsGraphicsPkg/DisplayEngineDxe/ReadMe/" class="md-nav__link">
       Display Engine Dxe
     </a>
   </li>
@@ -3644,7 +3761,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/MsGraphicsPkg/GopOverrideDxe/ReadMe/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/MsGraphicsPkg/GopOverrideDxe/ReadMe/" class="md-nav__link">
       Gop Override Dxe
     </a>
   </li>
@@ -3677,7 +3794,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/MsGraphicsPkg/Library/BaseUiProgressCircleLib/ReadMe/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/MsGraphicsPkg/Library/BaseUiProgressCircleLib/ReadMe/" class="md-nav__link">
       Base Ui Progress Circle Lib
     </a>
   </li>
@@ -3689,7 +3806,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/MsGraphicsPkg/Library/BaseUiRectangleLib/ReadMe/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/MsGraphicsPkg/Library/BaseUiRectangleLib/ReadMe/" class="md-nav__link">
       Base Ui Rectangle Lib
     </a>
   </li>
@@ -3701,7 +3818,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/MsGraphicsPkg/Library/BootGraphicsLib/ReadMe/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/MsGraphicsPkg/Library/BootGraphicsLib/ReadMe/" class="md-nav__link">
       Boot Graphics Lib
     </a>
   </li>
@@ -3713,7 +3830,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/MsGraphicsPkg/Library/BootGraphicsLibNull/ReadMe/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/MsGraphicsPkg/Library/BootGraphicsLibNull/ReadMe/" class="md-nav__link">
       Boot Graphics Lib Null
     </a>
   </li>
@@ -3725,7 +3842,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/MsGraphicsPkg/Library/BootGraphicsProviderLibNull/ReadMe/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/MsGraphicsPkg/Library/BootGraphicsProviderLibNull/ReadMe/" class="md-nav__link">
       Boot Graphics Provider Lib Null
     </a>
   </li>
@@ -3737,7 +3854,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/MsGraphicsPkg/Library/ColorBarDisplayDeviceStateLib/ReadMe/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/MsGraphicsPkg/Library/ColorBarDisplayDeviceStateLib/ReadMe/" class="md-nav__link">
       Color Bar Display Device State Lib
     </a>
   </li>
@@ -3749,7 +3866,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/MsGraphicsPkg/Library/DisplayDeviceStateLibNull/ReadMe/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/MsGraphicsPkg/Library/DisplayDeviceStateLibNull/ReadMe/" class="md-nav__link">
       Display Device State Lib Null
     </a>
   </li>
@@ -3761,7 +3878,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/MsGraphicsPkg/Library/MsColorTableLib/ReadMe/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/MsGraphicsPkg/Library/MsColorTableLib/ReadMe/" class="md-nav__link">
       Ms Color Table Lib
     </a>
   </li>
@@ -3773,7 +3890,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/MsGraphicsPkg/Library/MsEarlyGraphicsLibNull/ReadMe/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/MsGraphicsPkg/Library/MsEarlyGraphicsLibNull/ReadMe/" class="md-nav__link">
       Ms Early Graphics Lib Null
     </a>
   </li>
@@ -3785,7 +3902,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/MsGraphicsPkg/Library/MsUiThemeCopyLib/ReadMe/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/MsGraphicsPkg/Library/MsUiThemeCopyLib/ReadMe/" class="md-nav__link">
       Ms Ui Theme Copy Lib
     </a>
   </li>
@@ -3797,7 +3914,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/MsGraphicsPkg/Library/MsUiThemeLib/ReadMe/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/MsGraphicsPkg/Library/MsUiThemeLib/ReadMe/" class="md-nav__link">
       Ms Ui Theme Lib
     </a>
   </li>
@@ -3809,7 +3926,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/MsGraphicsPkg/Library/QrEncoderLib/ReadMe/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/MsGraphicsPkg/Library/QrEncoderLib/ReadMe/" class="md-nav__link">
       Qr Encoder Lib
     </a>
   </li>
@@ -3821,7 +3938,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/MsGraphicsPkg/Library/SamplePlatformThemeLib/ReadMe/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/MsGraphicsPkg/Library/SamplePlatformThemeLib/ReadMe/" class="md-nav__link">
       Sample Platform Theme Lib
     </a>
   </li>
@@ -3833,7 +3950,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/MsGraphicsPkg/Library/SimpleUIToolKit/ReadMe/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/MsGraphicsPkg/Library/SimpleUIToolKit/ReadMe/" class="md-nav__link">
       Simple UITool Kit
     </a>
   </li>
@@ -3845,7 +3962,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/MsGraphicsPkg/Library/SwmDialogsLib/ReadMe/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/MsGraphicsPkg/Library/SwmDialogsLib/ReadMe/" class="md-nav__link">
       Swm Dialogs Lib
     </a>
   </li>
@@ -3862,7 +3979,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/MsGraphicsPkg/MsEarlyGraphics/ReadMe/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/MsGraphicsPkg/MsEarlyGraphics/ReadMe/" class="md-nav__link">
       Ms Early Graphics
     </a>
   </li>
@@ -3874,7 +3991,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/MsGraphicsPkg/MsUiTheme/ReadMe/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/MsGraphicsPkg/MsUiTheme/ReadMe/" class="md-nav__link">
       Ms Ui Theme
     </a>
   </li>
@@ -3886,7 +4003,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/MsGraphicsPkg/OnScreenKeyboardDxe/ReadMe/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/MsGraphicsPkg/OnScreenKeyboardDxe/ReadMe/" class="md-nav__link">
       On Screen Keyboard Dxe
     </a>
   </li>
@@ -3898,7 +4015,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/MsGraphicsPkg/PrintScreenLogger/Readme/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/MsGraphicsPkg/PrintScreenLogger/Readme/" class="md-nav__link">
       Print Screen Logger
     </a>
   </li>
@@ -3910,7 +4027,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/MsGraphicsPkg/RenderingEngineDxe/ReadMe/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/MsGraphicsPkg/RenderingEngineDxe/ReadMe/" class="md-nav__link">
       Rendering Engine Dxe
     </a>
   </li>
@@ -3922,7 +4039,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/MsGraphicsPkg/SimpleWindowManagerDxe/ReadMe/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/MsGraphicsPkg/SimpleWindowManagerDxe/ReadMe/" class="md-nav__link">
       Simple Window Manager Dxe
     </a>
   </li>
@@ -3965,7 +4082,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/MsWheaPkg/readme/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/MsWheaPkg/readme/" class="md-nav__link">
       Modules
     </a>
   </li>
@@ -4045,7 +4162,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/PcBdsPkg/Library/MsNetworkDependencyLib/readme/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/PcBdsPkg/Library/MsNetworkDependencyLib/readme/" class="md-nav__link">
       Ms Network Dependency Lib
     </a>
   </li>
@@ -4114,7 +4231,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/UefiTestingPkg/Readme/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/UefiTestingPkg/Readme/" class="md-nav__link">
       Readme
     </a>
   </li>
@@ -4168,7 +4285,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/UefiTestingPkg/AuditTests/DMAProtectionAudit/UEFI/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/UefiTestingPkg/AuditTests/DMAProtectionAudit/UEFI/" class="md-nav__link">
       UEFI
     </a>
   </li>
@@ -4180,7 +4297,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/UefiTestingPkg/AuditTests/DMAProtectionAudit/Windows/Readme/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/UefiTestingPkg/AuditTests/DMAProtectionAudit/Windows/Readme/" class="md-nav__link">
       Windows
     </a>
   </li>
@@ -4197,7 +4314,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/UefiTestingPkg/AuditTests/PagingAudit/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/UefiTestingPkg/AuditTests/PagingAudit/" class="md-nav__link">
       Paging Audit
     </a>
   </li>
@@ -4235,7 +4352,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/UefiTestingPkg/FunctionalSystemTests/HeapGuardTest/Readme/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/UefiTestingPkg/FunctionalSystemTests/HeapGuardTest/Readme/" class="md-nav__link">
       Heap Guard Test
     </a>
   </li>
@@ -4247,7 +4364,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/UefiTestingPkg/FunctionalSystemTests/SmmPagingProtectionsTest/Readme/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/UefiTestingPkg/FunctionalSystemTests/SmmPagingProtectionsTest/Readme/" class="md-nav__link">
       Smm Paging Protections Test
     </a>
   </li>
@@ -4259,7 +4376,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/UefiTestingPkg/FunctionalSystemTests/VarPolicyUnitTestApp/Readme/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/UefiTestingPkg/FunctionalSystemTests/VarPolicyUnitTestApp/Readme/" class="md-nav__link">
       Var Policy Unit Test App
     </a>
   </li>
@@ -4307,7 +4424,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_plus/XmlSupportPkg/ReadMe/" class="md-nav__link">
+    <a href="../../dyn/mu_plus/XmlSupportPkg/ReadMe/" class="md-nav__link">
       Modules
     </a>
   </li>
@@ -4327,12 +4444,10 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-4" type="checkbox" id="nav-9-4" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-4" type="checkbox" id="nav-9-4">
     
     <label class="md-nav__link" for="nav-9-4">
       mu silicon arm tiano
@@ -4352,7 +4467,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../CONTRIBUTING/" class="md-nav__link">
+    <a href="../../dyn/mu_silicon_arm_tiano/CONTRIBUTING/" class="md-nav__link">
       CONTRIBUTING
     </a>
   </li>
@@ -4364,7 +4479,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../RepoDetails/" class="md-nav__link">
+    <a href="../../dyn/mu_silicon_arm_tiano/RepoDetails/" class="md-nav__link">
       Repo Details
     </a>
   </li>
@@ -4397,7 +4512,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../azurepipelines/ReadMe/" class="md-nav__link">
+    <a href="../../dyn/mu_silicon_arm_tiano/azurepipelines/ReadMe/" class="md-nav__link">
       Read Me
     </a>
   </li>
@@ -4409,7 +4524,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../azurepipelines/templates/ReadMe/" class="md-nav__link">
+    <a href="../../dyn/mu_silicon_arm_tiano/azurepipelines/templates/ReadMe/" class="md-nav__link">
       templates
     </a>
   </li>
@@ -4424,218 +4539,17 @@
           
           
 
-  
-
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        pytool
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-    
-    <a href="./" class="md-nav__link md-nav__link--active">
-      pytool
-    </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#basic-status" class="md-nav__link">
-    Basic Status
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#background" class="md-nav__link">
-    Background
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configuration" class="md-nav__link">
-    Configuration
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#running-ci-locally" class="md-nav__link">
-    Running CI locally
-  </a>
-  
-    <nav class="md-nav" aria-label="Running CI locally">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#prerequisets" class="md-nav__link">
-    Prerequisets
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#running-ci" class="md-nav__link">
-    Running CI
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#current-pytool-test-capabilities" class="md-nav__link">
-    Current PyTool Test Capabilities
-  </a>
-  
-    <nav class="md-nav" aria-label="Current PyTool Test Capabilities">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#module-inclusion-test-dsccompletecheck" class="md-nav__link">
-    Module Inclusion Test - DscCompleteCheck
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#host-module-inclusion-test-hostunittestdsccompletecheck" class="md-nav__link">
-    Host Module Inclusion Test - HostUnitTestDscCompleteCheck
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#code-compilation-test-compilerplugin" class="md-nav__link">
-    Code Compilation Test - CompilerPlugin
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#host-unit-test-compilation-and-run-test-hostunittestcompilerplugin" class="md-nav__link">
-    Host Unit Test Compilation and Run Test - HostUnitTestCompilerPlugin
-  </a>
-  
-    <nav class="md-nav" aria-label="Host Unit Test Compilation and Run Test - HostUnitTestCompilerPlugin">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#including-host-based-tests-in-the-package-yaml" class="md-nav__link">
-    Including Host-Based Tests in the Package YAML
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#configuring-the-hostbased-dsc" class="md-nav__link">
-    Configuring the HostBased DSC
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#guid-uniqueness-test-guidcheck" class="md-nav__link">
-    GUID Uniqueness Test - GuidCheck
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cross-package-dependency-test-dependencycheck" class="md-nav__link">
-    Cross-Package Dependency Test - DependencyCheck
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#library-declaration-test-libraryclasscheck" class="md-nav__link">
-    Library Declaration Test - LibraryClassCheck
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#invalid-character-test-charencodingcheck" class="md-nav__link">
-    Invalid Character Test - CharEncodingCheck
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#spell-checking-cspell" class="md-nav__link">
-    Spell Checking - cspell
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pytool-scopes" class="md-nav__link">
-    PyTool Scopes
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#future-investments" class="md-nav__link">
-    Future investments
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
-  </li>
-
-        
-          
-          
-          
-
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-4-5" type="checkbox" id="nav-9-4-5">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-4-4" type="checkbox" id="nav-9-4-4">
     
-    <label class="md-nav__link" for="nav-9-4-5">
+    <label class="md-nav__link" for="nav-9-4-4">
       Arm Pkg
       <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="Arm Pkg" data-md-level="3">
-      <label class="md-nav__title" for="nav-9-4-5">
+      <label class="md-nav__title" for="nav-9-4-4">
         <span class="md-nav__icon md-icon"></span>
         Arm Pkg
       </label>
@@ -4649,14 +4563,14 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-4-5-1" type="checkbox" id="nav-9-4-5-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-4-4-1" type="checkbox" id="nav-9-4-4-1">
     
-    <label class="md-nav__link" for="nav-9-4-5-1">
+    <label class="md-nav__link" for="nav-9-4-4-1">
       Modules
       <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="Modules" data-md-level="4">
-      <label class="md-nav__title" for="nav-9-4-5-1">
+      <label class="md-nav__title" for="nav-9-4-4-1">
         <span class="md-nav__icon md-icon"></span>
         Modules
       </label>
@@ -4670,14 +4584,14 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-4-5-1-1" type="checkbox" id="nav-9-4-5-1-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-4-4-1-1" type="checkbox" id="nav-9-4-4-1-1">
     
-    <label class="md-nav__link" for="nav-9-4-5-1-1">
+    <label class="md-nav__link" for="nav-9-4-4-1-1">
       Library
       <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="Library" data-md-level="5">
-      <label class="md-nav__title" for="nav-9-4-5-1-1">
+      <label class="md-nav__title" for="nav-9-4-4-1-1">
         <span class="md-nav__icon md-icon"></span>
         Library
       </label>
@@ -4691,14 +4605,14 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-4-5-1-1-1" type="checkbox" id="nav-9-4-5-1-1-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-4-4-1-1-1" type="checkbox" id="nav-9-4-4-1-1-1">
     
-    <label class="md-nav__link" for="nav-9-4-5-1-1-1">
+    <label class="md-nav__link" for="nav-9-4-4-1-1-1">
       Arm Soft Float Lib
       <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="Arm Soft Float Lib" data-md-level="6">
-      <label class="md-nav__title" for="nav-9-4-5-1-1-1">
+      <label class="md-nav__title" for="nav-9-4-4-1-1-1">
         <span class="md-nav__icon md-icon"></span>
         Arm Soft Float Lib
       </label>
@@ -4711,7 +4625,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../ArmPkg/Library/ArmSoftFloatLib/berkeley-softfloat-3/" class="md-nav__link">
+    <a href="../../dyn/mu_silicon_arm_tiano/ArmPkg/Library/ArmSoftFloatLib/berkeley-softfloat-3/" class="md-nav__link">
       berkeley-softfloat-3
     </a>
   </li>
@@ -4744,14 +4658,14 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-4-6" type="checkbox" id="nav-9-4-6">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-4-5" type="checkbox" id="nav-9-4-5">
     
-    <label class="md-nav__link" for="nav-9-4-6">
+    <label class="md-nav__link" for="nav-9-4-5">
       Arm Virt Pkg
       <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="Arm Virt Pkg" data-md-level="3">
-      <label class="md-nav__title" for="nav-9-4-6">
+      <label class="md-nav__title" for="nav-9-4-5">
         <span class="md-nav__icon md-icon"></span>
         Arm Virt Pkg
       </label>
@@ -4765,14 +4679,14 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-4-6-1" type="checkbox" id="nav-9-4-6-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-4-5-1" type="checkbox" id="nav-9-4-5-1">
     
-    <label class="md-nav__link" for="nav-9-4-6-1">
+    <label class="md-nav__link" for="nav-9-4-5-1">
       Modules
       <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="Modules" data-md-level="4">
-      <label class="md-nav__title" for="nav-9-4-6-1">
+      <label class="md-nav__title" for="nav-9-4-5-1">
         <span class="md-nav__icon md-icon"></span>
         Modules
       </label>
@@ -4785,7 +4699,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../ArmVirtPkg/PlatformCI/ReadMe/" class="md-nav__link">
+    <a href="../../dyn/mu_silicon_arm_tiano/ArmVirtPkg/PlatformCI/ReadMe/" class="md-nav__link">
       Platform CI
     </a>
   </li>
@@ -4833,7 +4747,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_silicon_intel_tiano/CONTRIBUTING/" class="md-nav__link">
+    <a href="../../dyn/mu_silicon_intel_tiano/CONTRIBUTING/" class="md-nav__link">
       CONTRIBUTING
     </a>
   </li>
@@ -4845,7 +4759,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_silicon_intel_tiano/RepoDetails/" class="md-nav__link">
+    <a href="../../dyn/mu_silicon_intel_tiano/RepoDetails/" class="md-nav__link">
       Repo Details
     </a>
   </li>
@@ -4878,7 +4792,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_silicon_intel_tiano/azurepipelines/ReadMe/" class="md-nav__link">
+    <a href="../../dyn/mu_silicon_intel_tiano/azurepipelines/ReadMe/" class="md-nav__link">
       Read Me
     </a>
   </li>
@@ -4890,7 +4804,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_silicon_intel_tiano/azurepipelines/templates/ReadMe/" class="md-nav__link">
+    <a href="../../dyn/mu_silicon_intel_tiano/azurepipelines/templates/ReadMe/" class="md-nav__link">
       templates
     </a>
   </li>
@@ -4906,28 +4820,16 @@
           
 
 
-  <li class="md-nav__item">
-    <a href="../../../mu_silicon_intel_tiano/pytool/Readme/" class="md-nav__link">
-      pytool
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-5-5" type="checkbox" id="nav-9-5-5">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-5-4" type="checkbox" id="nav-9-5-4">
     
-    <label class="md-nav__link" for="nav-9-5-5">
+    <label class="md-nav__link" for="nav-9-5-4">
       Intel Fsp2Pkg
       <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="Intel Fsp2Pkg" data-md-level="3">
-      <label class="md-nav__title" for="nav-9-5-5">
+      <label class="md-nav__title" for="nav-9-5-4">
         <span class="md-nav__icon md-icon"></span>
         Intel Fsp2Pkg
       </label>
@@ -4941,14 +4843,14 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-5-5-1" type="checkbox" id="nav-9-5-5-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-5-4-1" type="checkbox" id="nav-9-5-4-1">
     
-    <label class="md-nav__link" for="nav-9-5-5-1">
+    <label class="md-nav__link" for="nav-9-5-4-1">
       Modules
       <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="Modules" data-md-level="4">
-      <label class="md-nav__title" for="nav-9-5-5-1">
+      <label class="md-nav__title" for="nav-9-5-4-1">
         <span class="md-nav__icon md-icon"></span>
         Modules
       </label>
@@ -4961,7 +4863,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_silicon_intel_tiano/IntelFsp2Pkg/Readme/" class="md-nav__link">
+    <a href="../../dyn/mu_silicon_intel_tiano/IntelFsp2Pkg/Readme/" class="md-nav__link">
       Readme
     </a>
   </li>
@@ -4974,14 +4876,14 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-5-5-1-2" type="checkbox" id="nav-9-5-5-1-2">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-5-4-1-2" type="checkbox" id="nav-9-5-4-1-2">
     
-    <label class="md-nav__link" for="nav-9-5-5-1-2">
+    <label class="md-nav__link" for="nav-9-5-4-1-2">
       Tools
       <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="Tools" data-md-level="5">
-      <label class="md-nav__title" for="nav-9-5-5-1-2">
+      <label class="md-nav__title" for="nav-9-5-4-1-2">
         <span class="md-nav__icon md-icon"></span>
         Tools
       </label>
@@ -4995,14 +4897,14 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-5-5-1-2-1" type="checkbox" id="nav-9-5-5-1-2-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-5-4-1-2-1" type="checkbox" id="nav-9-5-4-1-2-1">
     
-    <label class="md-nav__link" for="nav-9-5-5-1-2-1">
+    <label class="md-nav__link" for="nav-9-5-4-1-2-1">
       User Manuals
       <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="User Manuals" data-md-level="6">
-      <label class="md-nav__title" for="nav-9-5-5-1-2-1">
+      <label class="md-nav__title" for="nav-9-5-4-1-2-1">
         <span class="md-nav__icon md-icon"></span>
         User Manuals
       </label>
@@ -5015,7 +4917,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_silicon_intel_tiano/IntelFsp2Pkg/Tools/UserManuals/GenCfgOptUserManual/" class="md-nav__link">
+    <a href="../../dyn/mu_silicon_intel_tiano/IntelFsp2Pkg/Tools/UserManuals/GenCfgOptUserManual/" class="md-nav__link">
       Gen Cfg Opt User Manual
     </a>
   </li>
@@ -5027,7 +4929,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_silicon_intel_tiano/IntelFsp2Pkg/Tools/UserManuals/PatchFvUserManual/" class="md-nav__link">
+    <a href="../../dyn/mu_silicon_intel_tiano/IntelFsp2Pkg/Tools/UserManuals/PatchFvUserManual/" class="md-nav__link">
       Patch Fv User Manual
     </a>
   </li>
@@ -5039,7 +4941,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_silicon_intel_tiano/IntelFsp2Pkg/Tools/UserManuals/SplitFspBinUserManual/" class="md-nav__link">
+    <a href="../../dyn/mu_silicon_intel_tiano/IntelFsp2Pkg/Tools/UserManuals/SplitFspBinUserManual/" class="md-nav__link">
       Split Fsp Bin User Manual
     </a>
   </li>
@@ -5072,14 +4974,14 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-5-6" type="checkbox" id="nav-9-5-6">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-5-5" type="checkbox" id="nav-9-5-5">
     
-    <label class="md-nav__link" for="nav-9-5-6">
+    <label class="md-nav__link" for="nav-9-5-5">
       Intel Fsp2Wrapper Pkg
       <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="Intel Fsp2Wrapper Pkg" data-md-level="3">
-      <label class="md-nav__title" for="nav-9-5-6">
+      <label class="md-nav__title" for="nav-9-5-5">
         <span class="md-nav__icon md-icon"></span>
         Intel Fsp2Wrapper Pkg
       </label>
@@ -5092,7 +4994,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_silicon_intel_tiano/IntelFsp2WrapperPkg/Readme/" class="md-nav__link">
+    <a href="../../dyn/mu_silicon_intel_tiano/IntelFsp2WrapperPkg/Readme/" class="md-nav__link">
       Modules
     </a>
   </li>
@@ -5110,14 +5012,14 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-5-7" type="checkbox" id="nav-9-5-7">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-5-6" type="checkbox" id="nav-9-5-6">
     
-    <label class="md-nav__link" for="nav-9-5-7">
+    <label class="md-nav__link" for="nav-9-5-6">
       Intel Silicon Pkg
       <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="Intel Silicon Pkg" data-md-level="3">
-      <label class="md-nav__title" for="nav-9-5-7">
+      <label class="md-nav__title" for="nav-9-5-6">
         <span class="md-nav__icon md-icon"></span>
         Intel Silicon Pkg
       </label>
@@ -5131,14 +5033,14 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-5-7-1" type="checkbox" id="nav-9-5-7-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-5-6-1" type="checkbox" id="nav-9-5-6-1">
     
-    <label class="md-nav__link" for="nav-9-5-7-1">
+    <label class="md-nav__link" for="nav-9-5-6-1">
       Modules
       <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="Modules" data-md-level="4">
-      <label class="md-nav__title" for="nav-9-5-7-1">
+      <label class="md-nav__title" for="nav-9-5-6-1">
         <span class="md-nav__icon md-icon"></span>
         Modules
       </label>
@@ -5152,14 +5054,14 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-5-7-1-1" type="checkbox" id="nav-9-5-7-1-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-5-6-1-1" type="checkbox" id="nav-9-5-6-1-1">
     
-    <label class="md-nav__link" for="nav-9-5-7-1-1">
+    <label class="md-nav__link" for="nav-9-5-6-1-1">
       Feature
       <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="Feature" data-md-level="5">
-      <label class="md-nav__title" for="nav-9-5-7-1-1">
+      <label class="md-nav__title" for="nav-9-5-6-1-1">
         <span class="md-nav__icon md-icon"></span>
         Feature
       </label>
@@ -5173,14 +5075,14 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-5-7-1-1-1" type="checkbox" id="nav-9-5-7-1-1-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-5-6-1-1-1" type="checkbox" id="nav-9-5-6-1-1-1">
     
-    <label class="md-nav__link" for="nav-9-5-7-1-1-1">
+    <label class="md-nav__link" for="nav-9-5-6-1-1-1">
       Capsule
       <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="Capsule" data-md-level="6">
-      <label class="md-nav__title" for="nav-9-5-7-1-1-1">
+      <label class="md-nav__title" for="nav-9-5-6-1-1-1">
         <span class="md-nav__icon md-icon"></span>
         Capsule
       </label>
@@ -5193,7 +5095,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_silicon_intel_tiano/IntelSiliconPkg/Feature/Capsule/MicrocodeCapsulePdb/Readme/" class="md-nav__link">
+    <a href="../../dyn/mu_silicon_intel_tiano/IntelSiliconPkg/Feature/Capsule/MicrocodeCapsulePdb/Readme/" class="md-nav__link">
       Microcode Capsule Pdb
     </a>
   </li>
@@ -5205,7 +5107,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_silicon_intel_tiano/IntelSiliconPkg/Feature/Capsule/MicrocodeCapsuleTxt/Readme/" class="md-nav__link">
+    <a href="../../dyn/mu_silicon_intel_tiano/IntelSiliconPkg/Feature/Capsule/MicrocodeCapsuleTxt/Readme/" class="md-nav__link">
       Microcode Capsule Txt
     </a>
   </li>
@@ -5263,7 +5165,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_tiano_plus/CONTRIBUTING/" class="md-nav__link">
+    <a href="../../dyn/mu_tiano_plus/CONTRIBUTING/" class="md-nav__link">
       CONTRIBUTING
     </a>
   </li>
@@ -5275,7 +5177,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_tiano_plus/RepoDetails/" class="md-nav__link">
+    <a href="../../dyn/mu_tiano_plus/RepoDetails/" class="md-nav__link">
       Repo Details
     </a>
   </li>
@@ -5308,7 +5210,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_tiano_plus/azurepipelines/ReadMe/" class="md-nav__link">
+    <a href="../../dyn/mu_tiano_plus/azurepipelines/ReadMe/" class="md-nav__link">
       Read Me
     </a>
   </li>
@@ -5320,7 +5222,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_tiano_plus/azurepipelines/templates/ReadMe/" class="md-nav__link">
+    <a href="../../dyn/mu_tiano_plus/azurepipelines/templates/ReadMe/" class="md-nav__link">
       templates
     </a>
   </li>
@@ -5336,28 +5238,16 @@
           
 
 
-  <li class="md-nav__item">
-    <a href="../../../mu_tiano_plus/pytool/Readme/" class="md-nav__link">
-      pytool
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-6-5" type="checkbox" id="nav-9-6-5">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-6-4" type="checkbox" id="nav-9-6-4">
     
-    <label class="md-nav__link" for="nav-9-6-5">
+    <label class="md-nav__link" for="nav-9-6-4">
       Crypto Pkg
       <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="Crypto Pkg" data-md-level="3">
-      <label class="md-nav__title" for="nav-9-6-5">
+      <label class="md-nav__title" for="nav-9-6-4">
         <span class="md-nav__icon md-icon"></span>
         Crypto Pkg
       </label>
@@ -5371,14 +5261,14 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-6-5-1" type="checkbox" id="nav-9-6-5-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-6-4-1" type="checkbox" id="nav-9-6-4-1">
     
-    <label class="md-nav__link" for="nav-9-6-5-1">
+    <label class="md-nav__link" for="nav-9-6-4-1">
       Modules
       <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="Modules" data-md-level="4">
-      <label class="md-nav__title" for="nav-9-6-5-1">
+      <label class="md-nav__title" for="nav-9-6-4-1">
         <span class="md-nav__icon md-icon"></span>
         Modules
       </label>
@@ -5391,7 +5281,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_tiano_plus/CryptoPkg/Driver/readme/" class="md-nav__link">
+    <a href="../../dyn/mu_tiano_plus/CryptoPkg/Driver/readme/" class="md-nav__link">
       Driver
     </a>
   </li>
@@ -5404,14 +5294,14 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-6-5-1-2" type="checkbox" id="nav-9-6-5-1-2">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-6-4-1-2" type="checkbox" id="nav-9-6-4-1-2">
     
-    <label class="md-nav__link" for="nav-9-6-5-1-2">
+    <label class="md-nav__link" for="nav-9-6-4-1-2">
       Library
       <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="Library" data-md-level="5">
-      <label class="md-nav__title" for="nav-9-6-5-1-2">
+      <label class="md-nav__title" for="nav-9-6-4-1-2">
         <span class="md-nav__icon md-icon"></span>
         Library
       </label>
@@ -5424,7 +5314,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_tiano_plus/CryptoPkg/Library/BaseCryptLibOnProtocolPpi/readme/" class="md-nav__link">
+    <a href="../../dyn/mu_tiano_plus/CryptoPkg/Library/BaseCryptLibOnProtocolPpi/readme/" class="md-nav__link">
       Base Crypt Lib On Protocol Ppi
     </a>
   </li>
@@ -5437,14 +5327,14 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-6-5-1-2-2" type="checkbox" id="nav-9-6-5-1-2-2">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-6-4-1-2-2" type="checkbox" id="nav-9-6-4-1-2-2">
     
-    <label class="md-nav__link" for="nav-9-6-5-1-2-2">
+    <label class="md-nav__link" for="nav-9-6-4-1-2-2">
       Openssl Lib
       <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="Openssl Lib" data-md-level="6">
-      <label class="md-nav__title" for="nav-9-6-5-1-2-2">
+      <label class="md-nav__title" for="nav-9-6-4-1-2-2">
         <span class="md-nav__icon md-icon"></span>
         Openssl Lib
       </label>
@@ -5458,14 +5348,14 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-6-5-1-2-2-1" type="checkbox" id="nav-9-6-5-1-2-2-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-6-4-1-2-2-1" type="checkbox" id="nav-9-6-4-1-2-2-1">
     
-    <label class="md-nav__link" for="nav-9-6-5-1-2-2-1">
+    <label class="md-nav__link" for="nav-9-6-4-1-2-2-1">
       openssl
       <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="openssl" data-md-level="7">
-      <label class="md-nav__title" for="nav-9-6-5-1-2-2-1">
+      <label class="md-nav__title" for="nav-9-6-4-1-2-2-1">
         <span class="md-nav__icon md-icon"></span>
         openssl
       </label>
@@ -5478,7 +5368,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/github/PULL_REQUEST_TEMPLATE/" class="md-nav__link">
+    <a href="../../dyn/mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/github/PULL_REQUEST_TEMPLATE/" class="md-nav__link">
       github
     </a>
   </li>
@@ -5491,14 +5381,14 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-6-5-1-2-2-1-2" type="checkbox" id="nav-9-6-5-1-2-2-1-2">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-6-4-1-2-2-1-2" type="checkbox" id="nav-9-6-4-1-2-2-1-2">
     
-    <label class="md-nav__link" for="nav-9-6-5-1-2-2-1-2">
+    <label class="md-nav__link" for="nav-9-6-4-1-2-2-1-2">
       boringssl
       <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="boringssl" data-md-level="8">
-      <label class="md-nav__title" for="nav-9-6-5-1-2-2-1-2">
+      <label class="md-nav__title" for="nav-9-6-4-1-2-2-1-2">
         <span class="md-nav__icon md-icon"></span>
         boringssl
       </label>
@@ -5511,7 +5401,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/API-CONVENTIONS/" class="md-nav__link">
+    <a href="../../dyn/mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/API-CONVENTIONS/" class="md-nav__link">
       API-CONVENTIONS
     </a>
   </li>
@@ -5523,7 +5413,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/BUILDING/" class="md-nav__link">
+    <a href="../../dyn/mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/BUILDING/" class="md-nav__link">
       BUILDING
     </a>
   </li>
@@ -5535,7 +5425,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/CONTRIBUTING/" class="md-nav__link">
+    <a href="../../dyn/mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/CONTRIBUTING/" class="md-nav__link">
       CONTRIBUTING
     </a>
   </li>
@@ -5547,7 +5437,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/FUZZING/" class="md-nav__link">
+    <a href="../../dyn/mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/FUZZING/" class="md-nav__link">
       FUZZING
     </a>
   </li>
@@ -5559,7 +5449,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/INCORPORATING/" class="md-nav__link">
+    <a href="../../dyn/mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/INCORPORATING/" class="md-nav__link">
       INCORPORATING
     </a>
   </li>
@@ -5571,7 +5461,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/PORTING/" class="md-nav__link">
+    <a href="../../dyn/mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/PORTING/" class="md-nav__link">
       PORTING
     </a>
   </li>
@@ -5583,7 +5473,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/" class="md-nav__link">
+    <a href="../../dyn/mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/" class="md-nav__link">
       README
     </a>
   </li>
@@ -5595,7 +5485,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/STYLE/" class="md-nav__link">
+    <a href="../../dyn/mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/STYLE/" class="md-nav__link">
       STYLE
     </a>
   </li>
@@ -5608,14 +5498,14 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-6-5-1-2-2-1-2-9" type="checkbox" id="nav-9-6-5-1-2-2-1-2-9">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-6-4-1-2-2-1-2-9" type="checkbox" id="nav-9-6-4-1-2-2-1-2-9">
     
-    <label class="md-nav__link" for="nav-9-6-5-1-2-2-1-2-9">
+    <label class="md-nav__link" for="nav-9-6-4-1-2-2-1-2-9">
       infra
       <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="infra" data-md-level="9">
-      <label class="md-nav__title" for="nav-9-6-5-1-2-2-1-2-9">
+      <label class="md-nav__title" for="nav-9-6-4-1-2-2-1-2-9">
         <span class="md-nav__icon md-icon"></span>
         infra
       </label>
@@ -5628,7 +5518,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/infra/config/" class="md-nav__link">
+    <a href="../../dyn/mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/infra/config/" class="md-nav__link">
       config
     </a>
   </li>
@@ -5646,14 +5536,14 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-6-5-1-2-2-1-2-10" type="checkbox" id="nav-9-6-5-1-2-2-1-2-10">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-6-4-1-2-2-1-2-10" type="checkbox" id="nav-9-6-4-1-2-2-1-2-10">
     
-    <label class="md-nav__link" for="nav-9-6-5-1-2-2-1-2-10">
+    <label class="md-nav__link" for="nav-9-6-4-1-2-2-1-2-10">
       ssl
       <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="ssl" data-md-level="9">
-      <label class="md-nav__title" for="nav-9-6-5-1-2-2-1-2-10">
+      <label class="md-nav__title" for="nav-9-6-4-1-2-2-1-2-10">
         <span class="md-nav__icon md-icon"></span>
         ssl
       </label>
@@ -5667,14 +5557,14 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-6-5-1-2-2-1-2-10-1" type="checkbox" id="nav-9-6-5-1-2-2-1-2-10-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-6-4-1-2-2-1-2-10-1" type="checkbox" id="nav-9-6-4-1-2-2-1-2-10-1">
     
-    <label class="md-nav__link" for="nav-9-6-5-1-2-2-1-2-10-1">
+    <label class="md-nav__link" for="nav-9-6-4-1-2-2-1-2-10-1">
       test
       <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="test" data-md-level="10">
-      <label class="md-nav__title" for="nav-9-6-5-1-2-2-1-2-10-1">
+      <label class="md-nav__title" for="nav-9-6-4-1-2-2-1-2-10-1">
         <span class="md-nav__icon md-icon"></span>
         test
       </label>
@@ -5687,7 +5577,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/ssl/test/PORTING/" class="md-nav__link">
+    <a href="../../dyn/mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/ssl/test/PORTING/" class="md-nav__link">
       PORTING
     </a>
   </li>
@@ -5699,7 +5589,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/ssl/test/" class="md-nav__link">
+    <a href="../../dyn/mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/ssl/test/" class="md-nav__link">
       README
     </a>
   </li>
@@ -5722,14 +5612,14 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-6-5-1-2-2-1-2-11" type="checkbox" id="nav-9-6-5-1-2-2-1-2-11">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-6-4-1-2-2-1-2-11" type="checkbox" id="nav-9-6-4-1-2-2-1-2-11">
     
-    <label class="md-nav__link" for="nav-9-6-5-1-2-2-1-2-11">
+    <label class="md-nav__link" for="nav-9-6-4-1-2-2-1-2-11">
       third party
       <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="third party" data-md-level="9">
-      <label class="md-nav__title" for="nav-9-6-5-1-2-2-1-2-11">
+      <label class="md-nav__title" for="nav-9-6-4-1-2-2-1-2-11">
         <span class="md-nav__icon md-icon"></span>
         third party
       </label>
@@ -5743,14 +5633,14 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-6-5-1-2-2-1-2-11-1" type="checkbox" id="nav-9-6-5-1-2-2-1-2-11-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-6-4-1-2-2-1-2-11-1" type="checkbox" id="nav-9-6-4-1-2-2-1-2-11-1">
     
-    <label class="md-nav__link" for="nav-9-6-5-1-2-2-1-2-11-1">
+    <label class="md-nav__link" for="nav-9-6-4-1-2-2-1-2-11-1">
       android-cmake
       <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="android-cmake" data-md-level="10">
-      <label class="md-nav__title" for="nav-9-6-5-1-2-2-1-2-11-1">
+      <label class="md-nav__title" for="nav-9-6-4-1-2-2-1-2-11-1">
         <span class="md-nav__icon md-icon"></span>
         android-cmake
       </label>
@@ -5763,7 +5653,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/third_party/android-cmake/ndk_links/" class="md-nav__link">
+    <a href="../../dyn/mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/third_party/android-cmake/ndk_links/" class="md-nav__link">
       ndk links
     </a>
   </li>
@@ -5775,7 +5665,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/third_party/android-cmake/" class="md-nav__link">
+    <a href="../../dyn/mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/third_party/android-cmake/" class="md-nav__link">
       README
     </a>
   </li>
@@ -5793,14 +5683,14 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-6-5-1-2-2-1-2-11-2" type="checkbox" id="nav-9-6-5-1-2-2-1-2-11-2">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-6-4-1-2-2-1-2-11-2" type="checkbox" id="nav-9-6-4-1-2-2-1-2-11-2">
     
-    <label class="md-nav__link" for="nav-9-6-5-1-2-2-1-2-11-2">
+    <label class="md-nav__link" for="nav-9-6-4-1-2-2-1-2-11-2">
       googletest
       <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="googletest" data-md-level="10">
-      <label class="md-nav__title" for="nav-9-6-5-1-2-2-1-2-11-2">
+      <label class="md-nav__title" for="nav-9-6-4-1-2-2-1-2-11-2">
         <span class="md-nav__icon md-icon"></span>
         googletest
       </label>
@@ -5813,7 +5703,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/third_party/googletest/" class="md-nav__link">
+    <a href="../../dyn/mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/third_party/googletest/" class="md-nav__link">
       README
     </a>
   </li>
@@ -5826,14 +5716,14 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-6-5-1-2-2-1-2-11-2-2" type="checkbox" id="nav-9-6-5-1-2-2-1-2-11-2-2">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-6-4-1-2-2-1-2-11-2-2" type="checkbox" id="nav-9-6-4-1-2-2-1-2-11-2-2">
     
-    <label class="md-nav__link" for="nav-9-6-5-1-2-2-1-2-11-2-2">
+    <label class="md-nav__link" for="nav-9-6-4-1-2-2-1-2-11-2-2">
       docs
       <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="docs" data-md-level="11">
-      <label class="md-nav__title" for="nav-9-6-5-1-2-2-1-2-11-2-2">
+      <label class="md-nav__title" for="nav-9-6-4-1-2-2-1-2-11-2-2">
         <span class="md-nav__icon md-icon"></span>
         docs
       </label>
@@ -5846,7 +5736,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/third_party/googletest/docs/AdvancedGuide/" class="md-nav__link">
+    <a href="../../dyn/mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/third_party/googletest/docs/AdvancedGuide/" class="md-nav__link">
       Advanced Guide
     </a>
   </li>
@@ -5858,7 +5748,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/third_party/googletest/docs/DevGuide/" class="md-nav__link">
+    <a href="../../dyn/mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/third_party/googletest/docs/DevGuide/" class="md-nav__link">
       Dev Guide
     </a>
   </li>
@@ -5870,7 +5760,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/third_party/googletest/docs/Documentation/" class="md-nav__link">
+    <a href="../../dyn/mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/third_party/googletest/docs/Documentation/" class="md-nav__link">
       Documentation
     </a>
   </li>
@@ -5882,7 +5772,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/third_party/googletest/docs/FAQ/" class="md-nav__link">
+    <a href="../../dyn/mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/third_party/googletest/docs/FAQ/" class="md-nav__link">
       FAQ
     </a>
   </li>
@@ -5894,7 +5784,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/third_party/googletest/docs/Primer/" class="md-nav__link">
+    <a href="../../dyn/mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/third_party/googletest/docs/Primer/" class="md-nav__link">
       Primer
     </a>
   </li>
@@ -5906,7 +5796,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/third_party/googletest/docs/PumpManual/" class="md-nav__link">
+    <a href="../../dyn/mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/third_party/googletest/docs/PumpManual/" class="md-nav__link">
       Pump Manual
     </a>
   </li>
@@ -5918,7 +5808,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/third_party/googletest/docs/Samples/" class="md-nav__link">
+    <a href="../../dyn/mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/third_party/googletest/docs/Samples/" class="md-nav__link">
       Samples
     </a>
   </li>
@@ -5930,7 +5820,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/third_party/googletest/docs/V1_5_AdvancedGuide/" class="md-nav__link">
+    <a href="../../dyn/mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/third_party/googletest/docs/V1_5_AdvancedGuide/" class="md-nav__link">
       V1 5 Advanced Guide
     </a>
   </li>
@@ -5942,7 +5832,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/third_party/googletest/docs/V1_5_Documentation/" class="md-nav__link">
+    <a href="../../dyn/mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/third_party/googletest/docs/V1_5_Documentation/" class="md-nav__link">
       V1 5 Documentation
     </a>
   </li>
@@ -5954,7 +5844,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/third_party/googletest/docs/V1_5_FAQ/" class="md-nav__link">
+    <a href="../../dyn/mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/third_party/googletest/docs/V1_5_FAQ/" class="md-nav__link">
       V1 5 FAQ
     </a>
   </li>
@@ -5966,7 +5856,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/third_party/googletest/docs/V1_5_Primer/" class="md-nav__link">
+    <a href="../../dyn/mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/third_party/googletest/docs/V1_5_Primer/" class="md-nav__link">
       V1 5 Primer
     </a>
   </li>
@@ -5978,7 +5868,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/third_party/googletest/docs/V1_5_PumpManual/" class="md-nav__link">
+    <a href="../../dyn/mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/third_party/googletest/docs/V1_5_PumpManual/" class="md-nav__link">
       V1 5 Pump Manual
     </a>
   </li>
@@ -5990,7 +5880,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/third_party/googletest/docs/V1_5_XcodeGuide/" class="md-nav__link">
+    <a href="../../dyn/mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/third_party/googletest/docs/V1_5_XcodeGuide/" class="md-nav__link">
       V1 5 Xcode Guide
     </a>
   </li>
@@ -6002,7 +5892,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/third_party/googletest/docs/V1_6_AdvancedGuide/" class="md-nav__link">
+    <a href="../../dyn/mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/third_party/googletest/docs/V1_6_AdvancedGuide/" class="md-nav__link">
       V1 6 Advanced Guide
     </a>
   </li>
@@ -6014,7 +5904,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/third_party/googletest/docs/V1_6_Documentation/" class="md-nav__link">
+    <a href="../../dyn/mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/third_party/googletest/docs/V1_6_Documentation/" class="md-nav__link">
       V1 6 Documentation
     </a>
   </li>
@@ -6026,7 +5916,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/third_party/googletest/docs/V1_6_FAQ/" class="md-nav__link">
+    <a href="../../dyn/mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/third_party/googletest/docs/V1_6_FAQ/" class="md-nav__link">
       V1 6 FAQ
     </a>
   </li>
@@ -6038,7 +5928,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/third_party/googletest/docs/V1_6_Primer/" class="md-nav__link">
+    <a href="../../dyn/mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/third_party/googletest/docs/V1_6_Primer/" class="md-nav__link">
       V1 6 Primer
     </a>
   </li>
@@ -6050,7 +5940,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/third_party/googletest/docs/V1_6_PumpManual/" class="md-nav__link">
+    <a href="../../dyn/mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/third_party/googletest/docs/V1_6_PumpManual/" class="md-nav__link">
       V1 6 Pump Manual
     </a>
   </li>
@@ -6062,7 +5952,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/third_party/googletest/docs/V1_6_Samples/" class="md-nav__link">
+    <a href="../../dyn/mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/third_party/googletest/docs/V1_6_Samples/" class="md-nav__link">
       V1 6 Samples
     </a>
   </li>
@@ -6074,7 +5964,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/third_party/googletest/docs/V1_6_XcodeGuide/" class="md-nav__link">
+    <a href="../../dyn/mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/third_party/googletest/docs/V1_6_XcodeGuide/" class="md-nav__link">
       V1 6 Xcode Guide
     </a>
   </li>
@@ -6086,7 +5976,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/third_party/googletest/docs/V1_7_AdvancedGuide/" class="md-nav__link">
+    <a href="../../dyn/mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/third_party/googletest/docs/V1_7_AdvancedGuide/" class="md-nav__link">
       V1 7 Advanced Guide
     </a>
   </li>
@@ -6098,7 +5988,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/third_party/googletest/docs/V1_7_Documentation/" class="md-nav__link">
+    <a href="../../dyn/mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/third_party/googletest/docs/V1_7_Documentation/" class="md-nav__link">
       V1 7 Documentation
     </a>
   </li>
@@ -6110,7 +6000,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/third_party/googletest/docs/V1_7_FAQ/" class="md-nav__link">
+    <a href="../../dyn/mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/third_party/googletest/docs/V1_7_FAQ/" class="md-nav__link">
       V1 7 FAQ
     </a>
   </li>
@@ -6122,7 +6012,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/third_party/googletest/docs/V1_7_Primer/" class="md-nav__link">
+    <a href="../../dyn/mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/third_party/googletest/docs/V1_7_Primer/" class="md-nav__link">
       V1 7 Primer
     </a>
   </li>
@@ -6134,7 +6024,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/third_party/googletest/docs/V1_7_PumpManual/" class="md-nav__link">
+    <a href="../../dyn/mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/third_party/googletest/docs/V1_7_PumpManual/" class="md-nav__link">
       V1 7 Pump Manual
     </a>
   </li>
@@ -6146,7 +6036,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/third_party/googletest/docs/V1_7_Samples/" class="md-nav__link">
+    <a href="../../dyn/mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/third_party/googletest/docs/V1_7_Samples/" class="md-nav__link">
       V1 7 Samples
     </a>
   </li>
@@ -6158,7 +6048,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/third_party/googletest/docs/V1_7_XcodeGuide/" class="md-nav__link">
+    <a href="../../dyn/mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/third_party/googletest/docs/V1_7_XcodeGuide/" class="md-nav__link">
       V1 7 Xcode Guide
     </a>
   </li>
@@ -6170,7 +6060,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/third_party/googletest/docs/XcodeGuide/" class="md-nav__link">
+    <a href="../../dyn/mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/boringssl/third_party/googletest/docs/XcodeGuide/" class="md-nav__link">
       Xcode Guide
     </a>
   </li>
@@ -6202,7 +6092,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/fuzz/" class="md-nav__link">
+    <a href="../../dyn/mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/fuzz/" class="md-nav__link">
       fuzz
     </a>
   </li>
@@ -6215,14 +6105,14 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-6-5-1-2-2-1-4" type="checkbox" id="nav-9-6-5-1-2-2-1-4">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-6-4-1-2-2-1-4" type="checkbox" id="nav-9-6-4-1-2-2-1-4">
     
-    <label class="md-nav__link" for="nav-9-6-5-1-2-2-1-4">
+    <label class="md-nav__link" for="nav-9-6-4-1-2-2-1-4">
       pyca-cryptography
       <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="pyca-cryptography" data-md-level="8">
-      <label class="md-nav__title" for="nav-9-6-5-1-2-2-1-4">
+      <label class="md-nav__title" for="nav-9-6-4-1-2-2-1-4">
         <span class="md-nav__icon md-icon"></span>
         pyca-cryptography
       </label>
@@ -6236,14 +6126,14 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-6-5-1-2-2-1-4-1" type="checkbox" id="nav-9-6-5-1-2-2-1-4-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-6-4-1-2-2-1-4-1" type="checkbox" id="nav-9-6-4-1-2-2-1-4-1">
     
-    <label class="md-nav__link" for="nav-9-6-5-1-2-2-1-4-1">
+    <label class="md-nav__link" for="nav-9-6-4-1-2-2-1-4-1">
       github
       <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="github" data-md-level="9">
-      <label class="md-nav__title" for="nav-9-6-5-1-2-2-1-4-1">
+      <label class="md-nav__title" for="nav-9-6-4-1-2-2-1-4-1">
         <span class="md-nav__icon md-icon"></span>
         github
       </label>
@@ -6256,7 +6146,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/pyca-cryptography/github/ISSUE_TEMPLATE/openssl-release/" class="md-nav__link">
+    <a href="../../dyn/mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/pyca-cryptography/github/ISSUE_TEMPLATE/openssl-release/" class="md-nav__link">
       ISSUE TEMPLATE
     </a>
   </li>
@@ -6278,7 +6168,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/test/READMEssltest/" class="md-nav__link">
+    <a href="../../dyn/mu_tiano_plus/CryptoPkg/Library/OpensslLib/openssl/test/READMEssltest/" class="md-nav__link">
       test
     </a>
   </li>
@@ -6316,14 +6206,14 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-6-6" type="checkbox" id="nav-9-6-6">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-6-5" type="checkbox" id="nav-9-6-5">
     
-    <label class="md-nav__link" for="nav-9-6-6">
+    <label class="md-nav__link" for="nav-9-6-5">
       Embedded Pkg
       <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="Embedded Pkg" data-md-level="3">
-      <label class="md-nav__title" for="nav-9-6-6">
+      <label class="md-nav__title" for="nav-9-6-5">
         <span class="md-nav__icon md-icon"></span>
         Embedded Pkg
       </label>
@@ -6337,14 +6227,14 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-6-6-1" type="checkbox" id="nav-9-6-6-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-6-5-1" type="checkbox" id="nav-9-6-5-1">
     
-    <label class="md-nav__link" for="nav-9-6-6-1">
+    <label class="md-nav__link" for="nav-9-6-5-1">
       Modules
       <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="Modules" data-md-level="4">
-      <label class="md-nav__title" for="nav-9-6-6-1">
+      <label class="md-nav__title" for="nav-9-6-5-1">
         <span class="md-nav__icon md-icon"></span>
         Modules
       </label>
@@ -6358,14 +6248,14 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-6-6-1-1" type="checkbox" id="nav-9-6-6-1-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-6-5-1-1" type="checkbox" id="nav-9-6-5-1-1">
     
-    <label class="md-nav__link" for="nav-9-6-6-1-1">
+    <label class="md-nav__link" for="nav-9-6-5-1-1">
       Scripts
       <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="Scripts" data-md-level="5">
-      <label class="md-nav__title" for="nav-9-6-6-1-1">
+      <label class="md-nav__title" for="nav-9-6-5-1-1">
         <span class="md-nav__icon md-icon"></span>
         Scripts
       </label>
@@ -6378,7 +6268,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_tiano_plus/EmbeddedPkg/Scripts/LauterbachT32/Readme/" class="md-nav__link">
+    <a href="../../dyn/mu_tiano_plus/EmbeddedPkg/Scripts/LauterbachT32/Readme/" class="md-nav__link">
       Lauterbach T32
     </a>
   </li>
@@ -6406,14 +6296,14 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-6-7" type="checkbox" id="nav-9-6-7">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-6-6" type="checkbox" id="nav-9-6-6">
     
-    <label class="md-nav__link" for="nav-9-6-7">
+    <label class="md-nav__link" for="nav-9-6-6">
       Fmp Device Pkg
       <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="Fmp Device Pkg" data-md-level="3">
-      <label class="md-nav__title" for="nav-9-6-7">
+      <label class="md-nav__title" for="nav-9-6-6">
         <span class="md-nav__icon md-icon"></span>
         Fmp Device Pkg
       </label>
@@ -6426,7 +6316,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_tiano_plus/FmpDevicePkg/Docs/FmpDevicePkg_ReadMe/" class="md-nav__link">
+    <a href="../../dyn/mu_tiano_plus/FmpDevicePkg/Docs/FmpDevicePkg_ReadMe/" class="md-nav__link">
       Package Overview
     </a>
   </li>
@@ -6439,14 +6329,14 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-6-7-2" type="checkbox" id="nav-9-6-7-2">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-6-6-2" type="checkbox" id="nav-9-6-6-2">
     
-    <label class="md-nav__link" for="nav-9-6-7-2">
+    <label class="md-nav__link" for="nav-9-6-6-2">
       Modules
       <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="Modules" data-md-level="4">
-      <label class="md-nav__title" for="nav-9-6-7-2">
+      <label class="md-nav__title" for="nav-9-6-6-2">
         <span class="md-nav__icon md-icon"></span>
         Modules
       </label>
@@ -6459,7 +6349,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_tiano_plus/FmpDevicePkg/CapsuleUpdatePolicyDxe/ReadMe/" class="md-nav__link">
+    <a href="../../dyn/mu_tiano_plus/FmpDevicePkg/CapsuleUpdatePolicyDxe/ReadMe/" class="md-nav__link">
       Capsule Update Policy Dxe
     </a>
   </li>
@@ -6471,7 +6361,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../mu_tiano_plus/FmpDevicePkg/FmpDxe/ReadMe/" class="md-nav__link">
+    <a href="../../dyn/mu_tiano_plus/FmpDevicePkg/FmpDxe/ReadMe/" class="md-nav__link">
       Fmp Dxe
     </a>
   </li>
@@ -6521,44 +6411,65 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#basic-status" class="md-nav__link">
-    Basic Status
+  <a href="#overview" class="md-nav__link">
+    Overview
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#background" class="md-nav__link">
-    Background
+  <a href="#1-announce" class="md-nav__link">
+    1) Announce
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuration" class="md-nav__link">
-    Configuration
+  <a href="#2-rebase-and-test" class="md-nav__link">
+    2) Rebase and Test
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#running-ci-locally" class="md-nav__link">
-    Running CI locally
-  </a>
-  
-    <nav class="md-nav" aria-label="Running CI locally">
+    <nav class="md-nav" aria-label="2) Rebase and Test">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#prerequisets" class="md-nav__link">
-    Prerequisets
+  <a href="#a-prep-for-the-naive-rebase" class="md-nav__link">
+    a) Prep for the Naive Rebase
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#running-ci" class="md-nav__link">
-    Running CI
+  <a href="#b-perform-the-naive-rebase" class="md-nav__link">
+    b) Perform the Naive Rebase
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-clean-the-rebase" class="md-nav__link">
+    c) Clean the Rebase
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-prepare-for-testing" class="md-nav__link">
+    d) Prepare for Testing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#e-run-testing" class="md-nav__link">
+    e) Run Testing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#f-clean-up" class="md-nav__link">
+    f) Clean Up
   </a>
   
 </li>
@@ -6569,111 +6480,29 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#current-pytool-test-capabilities" class="md-nav__link">
-    Current PyTool Test Capabilities
-  </a>
-  
-    <nav class="md-nav" aria-label="Current PyTool Test Capabilities">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#module-inclusion-test-dsccompletecheck" class="md-nav__link">
-    Module Inclusion Test - DscCompleteCheck
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#host-module-inclusion-test-hostunittestdsccompletecheck" class="md-nav__link">
-    Host Module Inclusion Test - HostUnitTestDscCompleteCheck
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#code-compilation-test-compilerplugin" class="md-nav__link">
-    Code Compilation Test - CompilerPlugin
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#host-unit-test-compilation-and-run-test-hostunittestcompilerplugin" class="md-nav__link">
-    Host Unit Test Compilation and Run Test - HostUnitTestCompilerPlugin
-  </a>
-  
-    <nav class="md-nav" aria-label="Host Unit Test Compilation and Run Test - HostUnitTestCompilerPlugin">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#including-host-based-tests-in-the-package-yaml" class="md-nav__link">
-    Including Host-Based Tests in the Package YAML
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#configuring-the-hostbased-dsc" class="md-nav__link">
-    Configuring the HostBased DSC
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#guid-uniqueness-test-guidcheck" class="md-nav__link">
-    GUID Uniqueness Test - GuidCheck
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cross-package-dependency-test-dependencycheck" class="md-nav__link">
-    Cross-Package Dependency Test - DependencyCheck
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#library-declaration-test-libraryclasscheck" class="md-nav__link">
-    Library Declaration Test - LibraryClassCheck
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#invalid-character-test-charencodingcheck" class="md-nav__link">
-    Invalid Character Test - CharEncodingCheck
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#spell-checking-cspell" class="md-nav__link">
-    Spell Checking - cspell
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pytool-scopes" class="md-nav__link">
-    PyTool Scopes
+  <a href="#3-boot-a-reference-platform" class="md-nav__link">
+    3) Boot a Reference Platform
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#future-investments" class="md-nav__link">
-    Future investments
+  <a href="#4-change-default-branches" class="md-nav__link">
+    4) Change Default Branches
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-update-security-repos" class="md-nav__link">
+    5) Update Security Repos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-announce-completion" class="md-nav__link">
+    6) Announce Completion
   </a>
   
 </li>
@@ -6690,291 +6519,119 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/microsoft/mu/edit/master/docs/dyn/mu_silicon_arm_tiano/pytool/Readme.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/microsoft/mu/edit/master/docs/How/integration_checklist.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="edk2-continuous-integration">Edk2 Continuous Integration<a class="headerlink" href="#edk2-continuous-integration" title="Permanent link">&para;</a></h1>
-<h2 id="basic-status">Basic Status<a class="headerlink" href="#basic-status" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th align="left">Package</th>
-<th align="left">Windows VS2019 (IA32/X64)</th>
-<th align="left">Ubuntu GCC (IA32/X64/ARM/AARCH64)</th>
-<th align="left">Known Issues</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">ArmPkg</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">ArmPlatformPkg</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">ArmVirtPkg</td>
-<td align="left">SEE PACKAGE README</td>
-<td align="left">SEE PACKAGE README</td>
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
-<p>For more detailed status look at the test results of the latest CI run on the
-repo readme.</p>
-<h2 id="background">Background<a class="headerlink" href="#background" title="Permanent link">&para;</a></h2>
-<p>This Continuous integration and testing infrastructure leverages the TianoCore EDKII Tools PIP modules:
-<a href="https://pypi.org/project/edk2-pytool-library/">library</a> and
-<a href="https://pypi.org/project/edk2-pytool-extensions/">extensions</a> (with repos
-located <a href="https://github.com/tianocore/edk2-pytool-library">here</a> and
-<a href="https://github.com/tianocore/edk2-pytool-extensions">here</a>).</p>
-<p>The primary execution flows can be found in the
-<code>.azurepipelines/Windows-VS2019.yml</code> and <code>.azurepipelines/Ubuntu-GCC5.yml</code>
-files. These YAML files are consumed by the Azure Dev Ops Build Pipeline and
-dictate what server resources should be used, how they should be configured, and
-what processes should be run on them. An overview of this schema can be found
-<a href="https://docs.microsoft.com/en-us/azure/devops/pipelines/yaml-schema?view=azure-devops&amp;tabs=schema">here</a>.</p>
-<p>Inspection of these files reveals the EDKII Tools commands that make up the
-primary processes for the CI build: 'stuart_setup', 'stuart_update', and
-'stuart_ci_build'. These commands come from the EDKII Tools PIP modules and are
-configured as described below. More documentation on the tools can be
-found <a href="https://github.com/tianocore/edk2-pytool-extensions/blob/master/docs/using.md">here</a>
-and <a href="https://github.com/tianocore/edk2-pytool-extensions/blob/master/docs/features/feature_invocables.md">here</a>.</p>
-<h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h2>
-<p>Configuration of the CI process consists of (in order of precedence):</p>
+                <h1 id="steps-for-a-new-integration">Steps for a New Integration<a class="headerlink" href="#steps-for-a-new-integration" title="Permanent link">&para;</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>In Project Mu, any time we snap to a new commit from our upstream project, <a href="https://github.com/tianocore/edk2">Tianocore</a>,
+we call that an Integration. This usually happens when Tianocore releases a new stable tag, but it can happen at other
+times, as needed.</p>
+<p>Below, you will find a checklist of the steps that should be followed by any project maintainers when performing a new
+upstream integration. This is for reference by the maintainers and by any of the community interested in the process.</p>
+<p>We will do our best to keep this up to date, so it's an excellent reference for what to expect if you're waiting on an
+integration.</p>
+<h2 id="1-announce">1) Announce<a class="headerlink" href="#1-announce" title="Permanent link">&para;</a></h2>
+<p>Advertise the upcoming update, where it will start from, how long it will take, and what will happen with the existing
+release branch afterwards. This should be done in the <a href="https://teams.microsoft.com/l/channel/19%3a2fcb1744302e4cd28b5a7e9d46479ca8%40thread.skype/Release%2520Announcements?groupId=6ba27a5b-86b2-4dc2-9d74-a8d8a03c3c3f&amp;tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47">Release Announcements</a>
+channel in the Project Mu Team.</p>
+<h2 id="2-rebase-and-test">2) Rebase and Test<a class="headerlink" href="#2-rebase-and-test" title="Permanent link">&para;</a></h2>
+<p>Much of this process is designed to be run on every Mu repo. When deciding which repos to update first, refer to the CI
+dependencies documented in each repo. <a href="https://github.com/microsoft/mu_basecore/blob/ce3097e7de6f44f6788b96f7f2dae7c863d44a89/.pytool/CISettings.py#L155">See here</a>
+for an example.</p>
+<p>There are currently exceptions to this rule. The <code>mu_basecore</code>, <code>mu_silicon_arm_tiano</code>, and <code>mu_tiano_plus</code> repos have a
+circular dependency that must be worked with care. Refer to the integration guide videos for clarification on how these
+three should work. They should be rebased and tested prior to any of the others, starting with <code>mu_basecore</code>.</p>
+<h3 id="a-prep-for-the-naive-rebase">a) Prep for the Naive Rebase<a class="headerlink" href="#a-prep-for-the-naive-rebase" title="Permanent link">&para;</a></h3>
 <ul>
-<li>command-line arguments passed in via the Pipeline YAML</li>
-<li>a per-package configuration file (e.g. <code>&lt;package-name&gt;.ci.yaml</code>) that is
-  detected by the CI system in EDKII Tools.</li>
-<li>a global configuration Python module (e.g. <code>CISetting.py</code>) passed in via the
-  command-line</li>
+<li>Create <code>rebase/*_naive</code> branch by starting at the very tip of the current (latest) release branch</li>
+<li>There may be reasons to choose a commit other than the very tip, but this is the default</li>
+<li>Update the readme with new branch info and update all CI badges to look for the new branch</li>
+<li>Make sure to update source and destination commits</li>
 </ul>
-<p>The global configuration file is described in
-<a href="https://github.com/tianocore/edk2-pytool-extensions/blob/master/docs/usability/using_settings_manager.md">this readme</a>
-from the EDKII Tools documentation. This configuration is written as a Python
-module so that decisions can be made dynamically based on command line
-parameters and codebase state.</p>
-<p>The per-package configuration file can override most settings in the global
-configuration file, but is not dynamic. This file can be used to skip or
-customize tests that may be incompatible with a specific package.  Each test generally requires
-per package configuration which comes from this file.</p>
-<h2 id="running-ci-locally">Running CI locally<a class="headerlink" href="#running-ci-locally" title="Permanent link">&para;</a></h2>
-<p>The EDKII Tools environment (and by extension the ci) is designed to support
-easily and consistently running locally and in a cloud ci environment.  To do
-that a few steps should be followed.  Details of EDKII Tools can be found in the
-<a href="https://github.com/tianocore/edk2-pytool-extensions/tree/master/docs">docs folder here</a></p>
-<h3 id="prerequisets">Prerequisets<a class="headerlink" href="#prerequisets" title="Permanent link">&para;</a></h3>
-<ol>
-<li>A supported toolchain (others might work but this is what is tested and validated)</li>
-<li>Windows 10:<ul>
-<li>VS 2017 or VS 2019</li>
-<li>Windows SDK (for rc)</li>
-<li>Windows WDK (for capsules)</li>
-</ul>
-</li>
-<li>Ubuntu 18.04 or Fedora<ul>
-<li>GCC5</li>
-</ul>
-</li>
-<li>Easy to add more but this is the current state</li>
-<li>Python 3.7.x or newer on path</li>
-<li>git on path</li>
-<li>Recommended to setup and activate a python virtual environment</li>
-<li>Install the requirements <code>pip install --upgrade pip-requirements.txt</code></li>
-</ol>
-<h3 id="running-ci">Running CI<a class="headerlink" href="#running-ci" title="Permanent link">&para;</a></h3>
-<ol>
-<li>clone your edk2 repo</li>
-<li>Activate your python virtual environment in cmd window</li>
-<li>Get code dependencies (done only when submodules change)</li>
-<li><code>stuart_setup -c .pytool/CISettings.py TOOL_CHAIN_TAG=&lt;your tag here&gt;</code></li>
-<li>Update other dependencies (done more often)</li>
-<li><code>stuart_update -c .pytool/CISettings.py TOOL_CHAIN_TAG=&lt;your tag here&gt;</code></li>
-<li>Run CI build (--help will give you options)</li>
-<li><code>stuart_ci_build -c .pytool/CISettings.py TOOL_CHAIN_TAG=&lt;your tag here&gt;</code></li>
-<li>-p <pkg1,pkg2,pkg3> : To build only certain packages use a CSV list</li>
-<li>-a <arch1,arch2,arch3>: To run only certain architectures use a CSV list</li>
-<li>-t <target1,target2>: To run only tests related to certain targets use a
-     CSV list</li>
-<li>By default all tests are opted in.  Then given a package.ci.yaml file those
-     tests can be configured for a package. Finally setting the check to the
-     value <code>skip</code> will skip that plugin.  Examples:<ul>
-<li><code>CompilerPlugin=skip</code> skip the build test</li>
-<li><code>GuidCheck=skip</code> skip the Guid check</li>
-<li><code>SpellCheck=skip</code> skip the spell checker</li>
-<li>etc</li>
-</ul>
-</li>
-<li>Detailed reports and logs per package are captured in the <code>Build</code> directory</li>
-</ol>
-<h2 id="current-pytool-test-capabilities">Current PyTool Test Capabilities<a class="headerlink" href="#current-pytool-test-capabilities" title="Permanent link">&para;</a></h2>
-<p>All CI tests are instances of EDKII Tools plugins. Documentation on the plugin
-system can be found <a href="https://github.com/tianocore/edk2-pytool-extensions/blob/master/docs/usability/using_plugin_manager.md">here</a>
-and <a href="https://github.com/tianocore/edk2-pytool-extensions/blob/master/docs/features/feature_plugin_manager.md">here</a>.
-Upon invocation, each plugin will be passed the path to the current package
-under test and a dictionary containing its targeted configuration, as assembled
-from the command line, per-package configuration, and global configuration.</p>
-<p>Note: CI plugins are considered unique from build plugins and helper plugins,
-even though some CI plugins may execute steps of a build.</p>
-<p>In the example, these plugins live alongside the code under test (in the
-<code>.pytool/Plugin</code> directory), but may be moved to the 'edk2-test' repo if that
-location makes more sense for the community.</p>
-<h3 id="module-inclusion-test-dsccompletecheck">Module Inclusion Test - DscCompleteCheck<a class="headerlink" href="#module-inclusion-test-dsccompletecheck" title="Permanent link">&para;</a></h3>
-<p>This scans all INF files from a package and confirms they are
-listed in the package level DSC file. The test considers it an error if any INF
-does not appear in the <code>Components</code> section of the package-level DSC (indicating
-that it would not be built if the package were built). This is critical because
-much of the CI infrastructure assumes that all modules will be listed in the DSC
-and compiled.</p>
-<p>This test will ignore INFs in the following cases:</p>
-<ol>
-<li>When <code>MODULE_TYPE</code> = <code>HOST_APPLICATION</code></li>
-<li>When a Library instance <strong>only</strong> supports the <code>HOST_APPLICATION</code> environment</li>
-</ol>
-<h3 id="host-module-inclusion-test-hostunittestdsccompletecheck">Host Module Inclusion Test - HostUnitTestDscCompleteCheck<a class="headerlink" href="#host-module-inclusion-test-hostunittestdsccompletecheck" title="Permanent link">&para;</a></h3>
-<p>This test scans all INF files from a package for those related to host
-based unit tests and confirms they are listed in the unit test DSC file for the package.
-The test considers it an error if any INF meeting the requirements does not appear
-in the <code>Components</code> section of the unit test DSC. This is critical because
-much of the CI infrastructure assumes that  modules will be listed in the DSC
-and compiled.</p>
-<p>This test will only require INFs in the following cases:</p>
-<ol>
-<li>When <code>MODULE_TYPE</code> = <code>HOST_APPLICATION</code></li>
-<li>When a Library instance explicitly supports the <code>HOST_APPLICATION</code> environment</li>
-</ol>
-<h3 id="code-compilation-test-compilerplugin">Code Compilation Test - CompilerPlugin<a class="headerlink" href="#code-compilation-test-compilerplugin" title="Permanent link">&para;</a></h3>
-<p>Once the Module Inclusion Test has verified that all modules would be built if
-all package-level DSCs were built, the Code Compilation Test simply runs through
-and builds every package-level DSC on every toolchain and for every architecture
-that is supported. Any module that fails to build is considered an error.</p>
-<h3 id="host-unit-test-compilation-and-run-test-hostunittestcompilerplugin">Host Unit Test Compilation and Run Test - HostUnitTestCompilerPlugin<a class="headerlink" href="#host-unit-test-compilation-and-run-test-hostunittestcompilerplugin" title="Permanent link">&para;</a></h3>
-<p>A test that compiles the dsc for host based unit test apps.
-On Windows this will also enable a build plugin to execute that will run the unit tests and verify the results.</p>
-<p>These tools will be invoked on any CI
-pass that includes the NOOPT target. In order for these tools to do their job,
-the package and tests must be configured in a particular way...</p>
-<h4 id="including-host-based-tests-in-the-package-yaml">Including Host-Based Tests in the Package YAML<a class="headerlink" href="#including-host-based-tests-in-the-package-yaml" title="Permanent link">&para;</a></h4>
-<p>For example, looking at the <code>MdeModulePkg.ci.yaml</code> config file, there are two
-config options that control HostBased test behavior:</p>
-<div class="highlight"><pre><span></span><code>    <span class="err">##</span> <span class="err">options</span> <span class="err">defined</span> <span class="err">.pytool/Plugin/HostUnitTestCompilerPlugin</span>
-    <span class="s2">&quot;HostUnitTestCompilerPlugin&quot;</span><span class="err">:</span> <span class="p">{</span>
-        <span class="nt">&quot;DscPath&quot;</span><span class="p">:</span> <span class="s2">&quot;Test/MdeModulePkgHostTest.dsc&quot;</span>
-    <span class="p">}</span><span class="err">,</span>
-</code></pre></div>
-<p>This option tell the test builder to run. The test builder needs to know which
-modules in this package are host-based tests, so that DSC path is provided.</p>
-<h4 id="configuring-the-hostbased-dsc">Configuring the HostBased DSC<a class="headerlink" href="#configuring-the-hostbased-dsc" title="Permanent link">&para;</a></h4>
-<p>The HostBased DSC for <code>MdeModulePkg</code> is located at
-<code>MdeModulePkg/Test/MdeModulePkgHostTest.dsc</code>.</p>
-<p>To add automated host-based unit test building to a new package, create a
-similar DSC. The new DSC should make sure to have the <code>NOOPT</code> BUILD_TARGET
-and should include the line:</p>
-<div class="highlight"><pre><span></span><code>!include UnitTestFrameworkPkg/UnitTestFrameworkPkgHost.dsc.inc
-</code></pre></div>
-<p>All of the modules that are included in the <code>Components</code> section of this
-DSC should be of type HOST_APPLICATION.</p>
-<h3 id="guid-uniqueness-test-guidcheck">GUID Uniqueness Test - GuidCheck<a class="headerlink" href="#guid-uniqueness-test-guidcheck" title="Permanent link">&para;</a></h3>
-<p>This test works on the collection of all packages rather than an individual
-package. It looks at all FILE_GUIDs and GUIDs declared in DEC files and ensures
-that they are unique for the codebase. This prevents, for example, accidental
-duplication of GUIDs when using an existing INF as a template for a new module.</p>
-<h3 id="cross-package-dependency-test-dependencycheck">Cross-Package Dependency Test - DependencyCheck<a class="headerlink" href="#cross-package-dependency-test-dependencycheck" title="Permanent link">&para;</a></h3>
-<p>This test compares the list of all packages used in INFs files for a given
-package against a list of "allowed dependencies" in plugin configuration for
-that package. Any module that depends on a disallowed package will cause a test
-failure.</p>
-<h3 id="library-declaration-test-libraryclasscheck">Library Declaration Test - LibraryClassCheck<a class="headerlink" href="#library-declaration-test-libraryclasscheck" title="Permanent link">&para;</a></h3>
-<p>This test scans at all library header files found in the <code>Library</code> folders in
-all of the package's declared include directories and ensures that all files
-have a matching LibraryClass declaration in the DEC file for the package. Any
-missing declarations will cause a failure.</p>
-<h3 id="invalid-character-test-charencodingcheck">Invalid Character Test - CharEncodingCheck<a class="headerlink" href="#invalid-character-test-charencodingcheck" title="Permanent link">&para;</a></h3>
-<p>This test scans all files in a package to make sure that there are no invalid
-Unicode characters that may cause build errors in some character
-sets/localizations.</p>
-<h3 id="spell-checking-cspell">Spell Checking - cspell<a class="headerlink" href="#spell-checking-cspell" title="Permanent link">&para;</a></h3>
-<p>This test runs a spell checker on all files within the package.  This is done
-using the NodeJs cspell tool.  For details check <code>.pytool/Plugin/SpellCheck</code>.
-For this plugin to run during ci you must install nodejs and cspell and have
-both available to the command line when running your CI.</p>
-<p>Install</p>
+<h3 id="b-perform-the-naive-rebase">b) Perform the Naive Rebase<a class="headerlink" href="#b-perform-the-naive-rebase" title="Permanent link">&para;</a></h3>
+<p>NOTE: This process will not be followed the same way on "pure Mu" repos such as <code>mu_plus</code>.
+For each repo, refer to the Readme for any special maintenance instructions.</p>
 <ul>
-<li>Install nodejs from <a href="https://nodejs.org/en/">https://nodejs.org/en/</a></li>
-<li>Install cspell</li>
-<li>Open cmd prompt with access to node and npm</li>
-<li>Run <code>npm install -g cspell</code></li>
+<li>Work through the Naive Rebase</li>
+<li>Make sure to pay attention to first two commits and whether any new packages/files/submodules need to be dropped</li>
+<li>Make sure to drop any new <code>.pytool/Plugins</code> that may have been added to other repos that are only needed in
+    <code>mu_basecore</code>. Some plugins may have been added by the upstream project, but most plugins should only live in
+    <code>mu_basecore</code></li>
+<li>Keep notes of any major conflicts/sightings, how they were resolved, and any follow up steps that may be needed</li>
+<li>Sync the Azure pipelines and other docs, .gitignore with Basecore. Try to keep things consistent where possible</li>
+<li>Easiest way to do this is just a Beyond Compare with Basecore and look at the <code>.azurepipelines</code> and <code>.pytool</code>
+    directories, as well as the <code>pip_requirements.txt</code>, <code>.gitignore</code>, <code>RepoDetails.txt</code>, and <code>Readme.rst</code> files</li>
 </ul>
-<p>More cspell info: <a href="https://github.com/streetsidesoftware/cspell">https://github.com/streetsidesoftware/cspell</a></p>
-<h2 id="pytool-scopes">PyTool Scopes<a class="headerlink" href="#pytool-scopes" title="Permanent link">&para;</a></h2>
-<p>Scopes are how the PyTool ext_dep, path_env, and plugins are activated.  Meaning
-that if an invocable process has a scope active then those ext_dep and path_env
-will be active. To allow easy integration of PyTools capabilities there are a
-few standard scopes.</p>
-<table>
-<thead>
-<tr>
-<th align="left">Scope</th>
-<th align="left">Invocable</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">global</td>
-<td align="left">edk2_invocable++ - should be base_abstract_invocable</td>
-<td align="left">Running an invocables</td>
-</tr>
-<tr>
-<td align="left">global-win</td>
-<td align="left">edk2_invocable++</td>
-<td align="left">Running on Microsoft Windows</td>
-</tr>
-<tr>
-<td align="left">global-nix</td>
-<td align="left">edk2_invocable++</td>
-<td align="left">Running on Linux based OS</td>
-</tr>
-<tr>
-<td align="left">edk2-build</td>
-<td align="left"></td>
-<td align="left">This indicates that an invocable is building EDK2 based UEFI code</td>
-</tr>
-<tr>
-<td align="left">cibuild</td>
-<td align="left">set in .pytool/CISettings.py</td>
-<td align="left">Suggested target for edk2 continuous integration builds.  Tools used for CiBuilds can use this scope.  Example: asl compiler</td>
-</tr>
-<tr>
-<td align="left">host-based-test</td>
-<td align="left">set in .pytool/CISettings.py</td>
-<td align="left">Turns on the host based tests and plugin</td>
-</tr>
-<tr>
-<td align="left">host-test-win</td>
-<td align="left">set in .pytool/CISettings.py</td>
-<td align="left">Enables the host based test runner for Windows</td>
-</tr>
-</tbody>
-</table>
-<h2 id="future-investments">Future investments<a class="headerlink" href="#future-investments" title="Permanent link">&para;</a></h2>
+<h3 id="c-clean-the-rebase">c) Clean the Rebase<a class="headerlink" href="#c-clean-the-rebase" title="Permanent link">&para;</a></h3>
+<p>This is an optional -- though desireable -- step where we have the opportunity to squash small bugfixes, drop
+temporary/testing commits, update features with new testing requirements, and any other behavior that helps keep
+the history clean and readable.</p>
 <ul>
-<li>PatchCheck tests as plugins</li>
-<li>MacOS/xcode support</li>
-<li>Clang/LLVM support</li>
-<li>Visual Studio AARCH64 and ARM support</li>
-<li>BaseTools C tools CI/PR and binary release process</li>
-<li>BaseTools Python tools CI/PR process</li>
-<li>Extensible private/closed source platform reporting</li>
-<li>UEFI SCTs</li>
-<li>Other automation</li>
+<li>Create <code>rebase/*_1</code> branch and perform initial cleaning</li>
+<li>Repeat with as many new cleaning branches as necessary</li>
+<li>Always diff with the <code>rebase/*_naive</code> branch to ensure changes are understood</li>
+<li>Create the <code>rebase/*_staging</code> branch when complete</li>
+<li>For <code>mu_basecore</code>, build and release the BaseTools binary (using the pipeline)</li>
+<li>Afterwards, update the <a href="https://github.com/microsoft/mu_basecore/blob/release/202008/BaseTools/Bin/basetoolsbin_ext_dep.yaml">ext_dep</a>
+    with the updated binary version</li>
+<li><a href="https://github.com/tianocore/edk2-pytool-extensions/blob/master/docs/usability/using_extdep.md">See here</a> for more
+    details</li>
+</ul>
+<h3 id="d-prepare-for-testing">d) Prepare for Testing<a class="headerlink" href="#d-prepare-for-testing" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Tag the branch as <code>*_Rebase</code> and push tag to remotes</li>
+<li>NOTE: From here on out, can only make new commits</li>
+<li>On the 3 circular dependency repos, will need to create a temp commit that updates dependencies to point at
+  the corresponding <code>rebase/*_staging</code> branch, rather than the final <code>release/*</code> branch</li>
+</ul>
+<h3 id="e-run-testing">e) Run Testing<a class="headerlink" href="#e-run-testing" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Repeatedly run the PR gate pipelines (recommend using the servers) and resolve build issues as they emerge</li>
+<li>Each issue should be solved in it's own commit and include an update to the Readme with details and potential
+    follow-up actions</li>
+</ul>
+<h3 id="f-clean-up">f) Clean Up<a class="headerlink" href="#f-clean-up" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Once passing CI on a given repo, first rebase against the <code>*_Rebase</code> tag to remove the temp commit for dependencies
+  if it was created</li>
+<li>Should only apply to the 3 circular dependency repos</li>
+<li>Confirm all CI Build notes were updated in the Readme</li>
+<li>Tag as <code>*_CIBuild</code> and push to all remotes</li>
+<li>NOTE: Again, from here on out we cannot reinvent history after this tag</li>
+</ul>
+<h2 id="3-boot-a-reference-platform">3) Boot a Reference Platform<a class="headerlink" href="#3-boot-a-reference-platform" title="Permanent link">&para;</a></h2>
+<p>Once rebase has been completed on all repos...</p>
+<ul>
+<li>On a reference platform, create a new branch for integration testing</li>
+<li>Pivot all Mu submodules to the new <code>rebase/*_staging</code> branch</li>
+<li>Build platform and fix issues as discovered</li>
+<li>Update individual Readme files with notes on changes required</li>
+<li>Try to keep these notes associated with the correct repo. Example: if the platform requires a new PCD to build
+    and this PCD is defined in <code>UefiCpuPkg</code>, update the <code>mu_basecore</code> Readme with a note about the platform decision
+    (and ideally include recommendations)</li>
+<li>Once built, boot platform and fix issues as discovered</li>
+<li>Update individual Readme files with notes on changes required</li>
+</ul>
+<h2 id="4-change-default-branches">4) Change Default Branches<a class="headerlink" href="#4-change-default-branches" title="Permanent link">&para;</a></h2>
+<p>Once a reference platform successfully boots to Windows...</p>
+<ul>
+<li>Tag all repos as <code>*_RefBoot</code> and push tag to remotes</li>
+<li>Create <code>release/*</code> branch in all repos and push branch to remotes</li>
+<li>Follow the steps in the <a href="https://msit.microsoftstream.com/video/2621a4ff-0400-9fb2-0956-f1eb0db01e45">tutorial</a>
+  <a href="https://msit.microsoftstream.com/video/65efa3ff-0400-9fb2-d666-f1eb0db4336f">videos</a> to move the public and
+  internal defaults</li>
+</ul>
+<h2 id="5-update-security-repos">5) Update Security Repos<a class="headerlink" href="#5-update-security-repos" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Follow the steps in the <a href="https://msit.microsoftstream.com/video/8f0fa1ff-0400-9fb2-2468-f1eb0a7c3087?list=studio">tutorial video</a>
+  to update all current Security Patch repos</li>
+</ul>
+<h2 id="6-announce-completion">6) Announce Completion<a class="headerlink" href="#6-announce-completion" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Use the <code>Release Announcements</code> channel in the Project Mu Team to announce completion</li>
 </ul>
                 
               
@@ -6994,7 +6651,7 @@ few standard scopes.</p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../../azurepipelines/templates/ReadMe/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../release_process/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -7003,19 +6660,19 @@ few standard scopes.</p>
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                templates
+                Release Process
               </div>
             </div>
           </a>
         
         
-          <a href="../../ArmPkg/Library/ArmSoftFloatLib/berkeley-softfloat-3/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../contributing/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                berkeley-softfloat-3
+                Contributing
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
@@ -7059,15 +6716,15 @@ few standard scopes.</p>
       
     </div>
     
-      <script src="../../../../assets/javascripts/vendor.6a3d08fc.min.js"></script>
-      <script src="../../../../assets/javascripts/bundle.71201edf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../../assets/javascripts/vendor.7e0ee788.min.js"></script>
+      <script src="../../assets/javascripts/bundle.b3a72adc.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({
-          base: "../../../..",
+          base: "../..",
           features: [],
           search: Object.assign({
-            worker: "../../../../assets/javascripts/worker/search.4ac00218.min.js"
+            worker: "../../assets/javascripts/worker/search.4ac00218.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>
