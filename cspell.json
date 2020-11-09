@@ -142,6 +142,7 @@
         "superfences",
         "markdownlint",
         "UINTN",
+        "azurepipelines",
         // Names and Attributions
         "Franceschetti",
         "Donath"

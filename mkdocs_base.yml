@@ -61,6 +61,7 @@ nav:
     - External Resources: 'Where/external_resources.md'
   - How:
     - Release Process: 'How/release_process.md'
+    - Integration Checklist: 'How/integration_checklist.md'
     - Contributing: 'How/contributing.md'
     - Using: 'How/using_project_mu.md'
   - Developing Docs:
