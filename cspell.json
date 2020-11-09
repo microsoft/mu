@@ -141,6 +141,7 @@
         "pytools",
         "superfences",
         "markdownlint",
+        "UINTN",
         // Names and Attributions
         "Franceschetti",
         "Donath"
