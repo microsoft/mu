@@ -152,7 +152,7 @@ Do this each time you open a new command window to build your workspace.
 4. Update/Install your python pip requirements.  This is generally at the workspace root.
 
     ``` cmd
-    pip install --upgrade -r requirements.txt
+    pip install --upgrade -r pip-requirements.txt
     ```
 
 5. Do dev work and run your builds!
