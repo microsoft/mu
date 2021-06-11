@@ -145,7 +145,7 @@ Do this each time you open a new command window to build your workspace.
 2. run activate script - for windows cmd prompt (cmd.exe) do this
 
     ``` cmd
-    <your virtual env name>\Script\activate
+    <your virtual env name>\Scripts\activate
     ```
 
 3. cd into your workspace directory
