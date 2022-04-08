@@ -14,7 +14,7 @@ details for pytools can be found here:
 * <https://github.com/tianocore/edk2-pytool-extensions/tree/master/docs>
 * <https://github.com/tianocore/edk2-pytool-library/tree/master/docs>
 
-## CI multi-package Building and Testing aka __stuart_ci_build__
+## CI multi-package Building and Testing aka **stuart_ci_build**
 
 stuart_ci_build is a framework for running a battery of tests against a single Mu repository (and its dependencies).
 A plugin model is used for adding additional tests.  Today one such plugin is a basic compile test.  Another plugin
@@ -58,7 +58,7 @@ the Pull Requests gates are implemented and enforced.
     stuart_ci_build -c <PyTool Config File>
     ```
 
-8. Open __TestResults.xml__ in the build output for results (usually in workspace/Build)
+8. Open **TestResults.xml** in the build output for results (usually in workspace/Build)
 9. Open log files to debug any errors
 
 ???+ info
@@ -76,7 +76,7 @@ the Pull Requests gates are implemented and enforced.
         - `-t <targets csv>` - list of targets to run for
         - `TOOL_CHAIN_TAG=<tag>` - set toolchain for operation
 
-## Project Build aka __PlatformBuild__ aka __stuart_build__
+## Project Build aka **PlatformBuild** aka **stuart_build**
 
 When you actually want to compile for a platform that will create a firmware binary which can be flashed and execute on
 a platform the process is generally as follows.  Again the platform repository should have details but this is
