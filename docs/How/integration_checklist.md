@@ -44,7 +44,7 @@ for an example.
   * nasm
   * ACPI tools
   * etc.
-* Sync the Azure pipelines, pip, gitignores, configs, and other docs with `mu_basecore`. Try to keep things consistent
+* Sync the Azure pipelines, pip, gitignore files, configs, and other docs with `mu_basecore`. Try to keep things consistent
   where possible
   * Easiest way to do this is just a Beyond Compare with Basecore and look at the `.azurepipelines` and `.pytool`
     directories, as well as the `pip_requirements.txt`, `.gitignore`, `RepoDetails.txt`, and `Readme.rst` files
