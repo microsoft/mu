@@ -47,7 +47,7 @@ git clone https://github.com/Microsoft/mu.git
     npm install -g cspell
     ```
 
-8. Install Git on your path (Required for generating dynamic repo based content during preprocess)
+8. Install Git on your path (Required for generating dynamic repo based content during pre-process)
 
 ## General Suggested documentation workflow
 
@@ -55,7 +55,7 @@ git clone https://github.com/Microsoft/mu.git
     1. Window 1: Use to serve files locally
         * Use ```mkdocs serve```
         * Any changes from the *DocBuild* process will be picked up and served
-    2. Window 2: Use to preprocess the source repo files
+    2. Window 2: Use to pre-process the source repo files
         * Run the DocBuild.py command from this window
 2. Make changes to the docs in source repos or this repo and then re-run the DocBuild.py build command
 
@@ -160,7 +160,7 @@ One great feature of mkdocs is how easy it is to locally serve the docs to valid
 2. navigate to 127.0.0.1:8000 in web browser
 
 !!! important
-    If you get an error like ```Config file 'mkdocs.yml' does not exist``` you must run the preprocess step.
+    If you get an error like ```Config file 'mkdocs.yml' does not exist``` you must run the pre-process step.
 
 ## Advanced doc features
 
