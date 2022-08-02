@@ -674,15 +674,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#visual-studio-2019-preferred" class="md-nav__link">
-    Visual Studio 2019 preferred
+  <a href="#visual-studio-2022-preferred" class="md-nav__link">
+    Visual Studio 2022 preferred
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#visual-studio-2017" class="md-nav__link">
-    Visual Studio 2017
+  <a href="#visual-studio-2019" class="md-nav__link">
+    Visual Studio 2019
   </a>
   
 </li>
@@ -8611,15 +8611,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#visual-studio-2019-preferred" class="md-nav__link">
-    Visual Studio 2019 preferred
+  <a href="#visual-studio-2022-preferred" class="md-nav__link">
+    Visual Studio 2022 preferred
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#visual-studio-2017" class="md-nav__link">
-    Visual Studio 2017
+  <a href="#visual-studio-2019" class="md-nav__link">
+    Visual Studio 2019
   </a>
   
 </li>
@@ -8747,7 +8747,24 @@ the expectation is that between Project Mu and TianoCore Edk2 you could use any 
 </ol>
 </li>
 </ol>
-<h3 id="visual-studio-2019-preferred">Visual Studio 2019 <strong>preferred</strong><a class="headerlink" href="#visual-studio-2019-preferred" title="Permanent link">&para;</a></h3>
+<h3 id="visual-studio-2022-preferred">Visual Studio 2022 <strong>preferred</strong><a class="headerlink" href="#visual-studio-2022-preferred" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Download latest version of VS build Tools to c:\TEMP</p>
+<div class="highlight"><pre><span></span><code>https://aka.ms/vs/17/release/vs_buildtools.exe
+</code></pre></div>
+</li>
+<li>
+<p>Install from cmd line with required features (this set will change over time).</p>
+<div class="highlight"><pre><span></span><code>C:\TEMP\vs_buildtools.exe --quiet --wait --norestart --nocache --installPath C:\BuildTools ^
+--add Microsoft.VisualStudio.Component.VC.CoreBuildTools --add Microsoft.VisualStudio.Component.VC.Tools.x86.x64 ^
+--add Microsoft.VisualStudio.Component.Windows11SDK.22000 --add Microsoft.VisualStudio.Component.VC.Tools.ARM ^
+--add Microsoft.VisualStudio.Component.VC.Tools.ARM64
+</code></pre></div>
+</li>
+</ol>
+<p>See component list here for more options. <a href="https://docs.microsoft.com/en-us/visualstudio/install/workload-component-id-vs-build-tools?view=vs-2022">https://docs.microsoft.com/en-us/visualstudio/install/workload-component-id-vs-build-tools?view=vs-2022</a></p>
+<h3 id="visual-studio-2019">Visual Studio 2019<a class="headerlink" href="#visual-studio-2019" title="Permanent link">&para;</a></h3>
 <ol>
 <li>
 <p>Download latest version of VS build Tools to c:\TEMP</p>
@@ -8758,30 +8775,12 @@ the expectation is that between Project Mu and TianoCore Edk2 you could use any 
 <p>Install from cmd line with required features (this set will change over time).</p>
 <div class="highlight"><pre><span></span><code>C:\TEMP\vs_buildtools.exe --quiet --wait --norestart --nocache --installPath C:\BuildTools ^
 --add Microsoft.VisualStudio.Component.VC.CoreBuildTools --add Microsoft.VisualStudio.Component.VC.Tools.x86.x64 ^
---add Microsoft.VisualStudio.Component.Windows10SDK.17763 --add Microsoft.VisualStudio.Component.VC.Tools.ARM ^
+--add Microsoft.VisualStudio.Component.Windows10SDK.19041 --add Microsoft.VisualStudio.Component.VC.Tools.ARM ^
 --add Microsoft.VisualStudio.Component.VC.Tools.ARM64
 </code></pre></div>
 </li>
 </ol>
 <p>See component list here for more options. <a href="https://docs.microsoft.com/en-us/visualstudio/install/workload-component-id-vs-build-tools?view=vs-2019">https://docs.microsoft.com/en-us/visualstudio/install/workload-component-id-vs-build-tools?view=vs-2019</a></p>
-<h3 id="visual-studio-2017">Visual Studio 2017<a class="headerlink" href="#visual-studio-2017" title="Permanent link">&para;</a></h3>
-<ol>
-<li>
-<p>Download latest version of VS build Tools to c:\TEMP</p>
-<div class="highlight"><pre><span></span><code>https://aka.ms/vs/15/release/vs_buildtools.exe
-</code></pre></div>
-</li>
-<li>
-<p>Install from cmd line with required features (this set will change over time).</p>
-<div class="highlight"><pre><span></span><code>C:\TEMP\vs_buildtools.exe --quiet --wait --norestart --nocache --installPath C:\BuildTools ^
---add Microsoft.VisualStudio.Component.VC.CoreBuildTools --add Microsoft.VisualStudio.Component.VC.Tools.x86.x64 ^
---add Microsoft.VisualStudio.Component.Windows10SDK.17763 --add Microsoft.VisualStudio.Component.VC.Tools.ARM ^
---add Microsoft.VisualStudio.Component.VC.Tools.ARM64
-</code></pre></div>
-</li>
-</ol>
-<p>See component list here for more options.
-<a href="https://docs.microsoft.com/en-us/visualstudio/install/workload-component-id-vs-build-tools?view=vs-2017">https://docs.microsoft.com/en-us/visualstudio/install/workload-component-id-vs-build-tools?view=vs-2017</a></p>
 <h3 id="optional-windows-driver-kit">Optional - Windows Driver Kit<a class="headerlink" href="#optional-windows-driver-kit" title="Permanent link">&para;</a></h3>
 <p>Provides Inf2Cat.exe, needed to <a href="https://docs.microsoft.com/en-us/windows-hardware/drivers/bringup/certifying-and-signing-the-update-package">prepare Windows firmware update packages for signing</a>.</p>
 <ol>

@@ -8855,6 +8855,11 @@
 <td>09/28/2021</td>
 <td>First draft</td>
 </tr>
+<tr>
+<td>Oliver Smith-Denny</td>
+<td>7/22/2022</td>
+<td>Add Merged YAML/XML Support</td>
+</tr>
 </tbody>
 </table>
 <h2 id="terms">Terms<a class="headerlink" href="#terms" title="Permanent link">&para;</a></h2>
@@ -8930,11 +8935,11 @@ in <a href="#reference-documents">References</a>). This framework provides graph
 flexibility to design and optimize configuration per platform usage.</li>
 <li><a href="../../../Common/MU_CONF_APPS/SetupDataPkg/Tools/ConfigEditor.py">Configuration editor</a> is authored in Python which is
 host platform architecture independent and easy to update per proprietary requirements per projects need.</li>
-<li>The configuration is driven by YAML file, which can be designed per platform usage. Per YAML specification, please reference
-to Configuration YAML Spec in <a href="#reference-documents">References</a>.</li>
+<li>The configuration is driven by YAML and XML files, which can be designed per platform usage. Per YAML specification,
+please reference to Configuration YAML Spec in <a href="#reference-documents">References</a>.</li>
 <li>The slim bootloader framework provides data structure conversion tooling from YAML to C header files, YAML to binary
-data blob out of the box. More extensions, such as output data signing, tooling servicing, will be added during development
-process.</li>
+data blob out of the box. XML extensions have been added to support additional use cases. More extensions,
+such as output data signing, tooling servicing, will be added during the development process.</li>
 </ul>
 <h3 id="os-configuration-workflow">OS Configuration Workflow<a class="headerlink" href="#os-configuration-workflow" title="Permanent link">&para;</a></h3>
 <p><img alt="Conf Workflow" src="Images/conf_edit_work_flow.png" /></p>
@@ -9022,10 +9027,10 @@ should all conform to policy setter and getter APIs.</li>
 <li><strong>Silicon Drivers</strong>: Silicon code needs to be updated to pull policy settings from silicon policy data when needed.</li>
 <li><strong>Platform Policy Drivers</strong>: Platform owners will first create PEI modules to populate default silicon policy into Policy
 managers provided by Project MU.</li>
-<li><strong>Platform YAML Configurations</strong>: Platform owners should then design the configuration YAML files. This would expose
+<li><strong>Platform YAML/XML Configurations</strong>: Platform owners should then design the configuration YAML/XML files. This would expose
 certain configuration "knobs" from silicon policy to be configurable through setup variable flow.</li>
 <li><strong>Platform Settings Providers</strong>: Accordingly, platform owners will develop modules to parse the configuration data and
-translate the exposed configurations in YAML file to/from standard silicon policies through the interface of Settings
+translate the exposed configurations in YAML/XML file to/from standard silicon policies through the interface of Settings
 Provider (see example from <a href="../../../Common/MU/DfciPkg/Library/DfciSampleProvider/DfciSampleProvider.c">Project MU</a>).</li>
 </ul>
 <h2 id="configuration-related-uefi-boot-flow">Configuration Related UEFI Boot Flow<a class="headerlink" href="#configuration-related-uefi-boot-flow" title="Permanent link">&para;</a></h2>

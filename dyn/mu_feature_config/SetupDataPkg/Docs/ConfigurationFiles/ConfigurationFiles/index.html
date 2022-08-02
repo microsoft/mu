@@ -2715,8 +2715,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#specification-differences" class="md-nav__link">
-    Specification Differences
+  <a href="#yaml-specification-differences" class="md-nav__link">
+    YAML Specification Differences
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xml-specification" class="md-nav__link">
+    XML Specification
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#merged-yaml-and-xml-operations" class="md-nav__link">
+    Merged YAML and XML Operations
   </a>
   
 </li>
@@ -8584,8 +8598,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#specification-differences" class="md-nav__link">
-    Specification Differences
+  <a href="#yaml-specification-differences" class="md-nav__link">
+    YAML Specification Differences
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xml-specification" class="md-nav__link">
+    XML Specification
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#merged-yaml-and-xml-operations" class="md-nav__link">
+    Merged YAML and XML Operations
   </a>
   
 </li>
@@ -8615,7 +8643,9 @@
 <li><a href="#revision-history">Revision History</a></li>
 <li><a href="#terms">Terms</a></li>
 <li><a href="#introduction">Introduction</a></li>
-<li><a href="#specification-differences">Specification Differences</a></li>
+<li><a href="#yaml-specification-differences">YML Specification Differences</a></li>
+<li><a href="#xml-specification">XML Specification</a></li>
+<li><a href="#merged-yaml-and-xml-operations">Merged YAML and XML Operations</a></li>
 </ul>
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">&para;</a></h2>
 <p>This document is intended to describe the Project MU version of Configuration Files Specification.</p>
@@ -8633,6 +8663,11 @@
 <td>Kun Qin</td>
 <td>11/29/2021</td>
 <td>First draft</td>
+</tr>
+<tr>
+<td>Oliver Smith-Denny</td>
+<td>7/22/2022</td>
+<td>Add YAML/XML Merged Support</td>
 </tr>
 </tbody>
 </table>
@@ -8682,8 +8717,9 @@
 <p>As Project MU inherits tool set from Slim Bootloader repository to support setup variable feature, certain modifications
 has been made to improve workflow and architectural abstraction.</p>
 <p>Although the syntax of configuration YAML files mainly follow Slim Bootloader specification for design simplicity, this
-document mainly listed the differences between Project MU version and original Slim Bootloader.</p>
-<h2 id="specification-differences">Specification Differences<a class="headerlink" href="#specification-differences" title="Permanent link">&para;</a></h2>
+document mainly listed the differences between Project MU version and original Slim Bootloader. Additionally, this document
+describes the XML format that will be accepted.</p>
+<h2 id="yaml-specification-differences">YAML Specification Differences<a class="headerlink" href="#yaml-specification-differences" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
 <p>All UI related form fields (i.e. <code>name</code>, <code>type</code>, <code>help</code>, etc.) should be described separately from the data definitions.</p>
@@ -8713,17 +8749,75 @@ content to backend database and generate the same binary data blob.</p>
 <li>
 <p>MU version of ConfigEditor supports 3 more option for loading from and saving to SVD (Setup Variable Data) files:</p>
 </li>
-<li>Save Full Config Data to SVD File:
+<li>Save Full Config Data to SVD File (supported for YAML/XML/Merged YAML + XML):
       Saving the entire defined YAML structure into encoded binary settings format. This format is useful when many tags
       of settings need updating at once, as it will save transmission overhead when serial method is selected. But this
       will <em>touch</em> all configurations defined.</li>
-<li>Save Config Changes to SVD File:
+<li>Save Config Changes to SVD File (Supported for YAML):
       Saving only the changed tag setting into corresponding encoded binary value. This will allow the target system to
       update only the changed tag setting (i.e. Only disable GFX controllers, and leave USB ports on the same system intact)</li>
-<li>Load Config Data from SVD File:
+<li>Load Config Data from SVD File (Supported for YAML/XML/Merged YAML + XML):
       Once the target system has dumped current configuration from ConfApp, the output data can be viewed in ConfigEditor
       on host system.</li>
 </ul>
+<h2 id="xml-specification">XML Specification<a class="headerlink" href="#xml-specification" title="Permanent link">&para;</a></h2>
+<p>See <a href="../../Tools/sampleschema.xml">sampleschema.xml</a> for an example XML schema.</p>
+<p>Configuration will be organized in namespaces, each consisting of various knobs. Knobs may be built of children knobs
+or be a leaf knob.</p>
+<p>Supported data types are:</p>
+<ul>
+<li>uint8_t</li>
+<li>int8_t</li>
+<li>uint16_t</li>
+<li>int16_t</li>
+<li>uint32_t</li>
+<li>int32_t</li>
+<li>uint64_t</li>
+<li>int64_t</li>
+<li>float (note that floats are imprecise, doubles are recommend to avoid rounding errors)</li>
+<li>double</li>
+<li>bool</li>
+</ul>
+<h2 id="merged-yaml-and-xml-operations">Merged YAML and XML Operations<a class="headerlink" href="#merged-yaml-and-xml-operations" title="Permanent link">&para;</a></h2>
+<p>One YAML and one XML file may be loaded at the same time via the CLI as such:</p>
+<div class="highlight"><pre><span></span><code>python ConfigEditor.py sampleschema.xml samplecfg.yaml
+</code></pre></div>
+<p>When saving config changes to delta files, two files will be output: a .dlt file for the YAML
+config changes and a .csv file for the XML config changes. Either or both of these can be later
+loaded to modify the current config viewed in the ConfigEditor.</p>
+<p>As noted above under YAML Specification Differences, the full SVD can be saved in a merged
+configuration. YAML config will be under Device.ConfigData.ConfigData and XML config will be
+under Device.RuntimeData.RuntimeData.</p>
+<p>For saving to/loading from a binary file, the merged config will create a list of UEFI variables
+that will look as such:</p>
+<p>|   XML Var 1  |
+|   XML Var 2  |
+|      ...     |
+|   XML Var N  |
+| YML Var List |</p>
+<p>Where XML Var N looks like:</p>
+<p>|   Name Size   |
+|   Data Size   |
+|      Name     |
+|      GUID     |
+|      Data     |
+|      CRC      |</p>
+<p>And YML Var List is:</p>
+<p>|              Name Size              |
+|              Data Size              |
+|      DFCI_SETTINGS_REQUEST_NAME     |
+|      DFCI_SETTINGS_REQUEST_GUID     |
+|     Base64 Encoded YAML Only SVD    |
+|                 CRC                 |</p>
+<p>Where the Base64 Encoded YAML Only SVD is the Full SVD produced by the ConfigEditor app, containing
+only the YAML configurations, and then base64 encoded, as this is the format DFCI expects.</p>
+<p>The save to/load from raw bin option is for YAML only configurations and will save the raw binary
+as is used by the build process.</p>
+<p>The SVD is intended for use with the UEFI <a href="../../ConfApp/">Conf App</a>, which can take the SVD as input
+and give an SVD describing the current UEFI settings as an output. The SVD is formatted to be compatible
+with <a href="https://github.com/microsoft/mu_plus/tree/release/202202/DfciPkg">DFCI</a>.</p>
+<p>The variable list output is intended for use with runtime configuration, to be consumed directly by
+components that deal with runtime configuration.</p>
 
               
             </article>
