@@ -83,7 +83,7 @@ class GitSupport(object):
 
     def make_commit_url(self, commit, url):
         cl = url
-        if(url.endswith(".git")):  # github address scheme
+        if (url.endswith(".git")):  # github address scheme
             cl = url[:-4]
         return cl + "/commit/" + commit
 
@@ -103,7 +103,7 @@ class NavTree(object):
         self.Children = {}
 
     def __str__(self):
-        if(self.Leaf is not None):
+        if (self.Leaf is not None):
             return "(Leaf: " + self.Leaf + ")"
         else:
             st = "(Children:"
@@ -136,10 +136,10 @@ class NavTree(object):
     # Make Tree nodes for a given path
     #
     def AddToTree(self, path, leafvalue):
-        if(path is None):
+        if (path is None):
             return
         p = path.partition("/")  # p[0] = name p[2] = remaining
-        if(len(p[2]) > 0):
+        if (len(p[2]) > 0):
             rem = p[2]
             # Dev Note: it was decided that a "Docs" folder found at the root of a Edk2 Package
             #           should be treated special and that all markdown files found with the code (in modules)
@@ -163,7 +163,7 @@ class NavTree(object):
         #           should be treated special and put first in the TOC within the Package.  It also
         #           should be renamed to something more descriptive than docs
         #
-        if(NavTree.SPECIAL_KEY_FIND_PKG_DOCS in self.Children.keys()):
+        if (NavTree.SPECIAL_KEY_FIND_PKG_DOCS in self.Children.keys()):
             string1 = "\n" + prefix + "- " + self.MakeFriendly(NavTree.SPECIAL_KEY_REPLACE_WITH) + ":"
             string2 += self.Children[NavTree.SPECIAL_KEY_FIND_PKG_DOCS].GetNavYml(string1, prefix + "  ")
 
@@ -189,10 +189,10 @@ class NavTree(object):
         newstring = ""
         prev_char_lowercase = False
         for i in string:
-            if(not prev_char_lowercase):
+            if (not prev_char_lowercase):
                 newstring += i
             else:
-                if(i.isupper()):
+                if (i.isupper()):
                     newstring += " " + i
                 else:
                     newstring += i
@@ -207,10 +207,10 @@ class NavTree(object):
         if self.Leaf is not None:
             return self
 
-        if(len(self.Children) == 1):
+        if (len(self.Children) == 1):
             for (name, cnode) in self.Children.items():
                 leaf = cnode.Collapse()
-                if(leaf is not None):
+                if (leaf is not None):
                     self.Leaf = leaf.Leaf
                     self.Children = {}
         else:
@@ -249,26 +249,26 @@ class DocBuild(object):
         self.ExtraContents = dict()
 
         # Convert RootDir to abs and confirm valid
-        if(RootDir is not None):
-            if(os.path.isabs(RootDir)):
+        if (RootDir is not None):
+            if (os.path.isabs(RootDir)):
                 self.RootDirectory = RootDir
             else:
                 self.RootDirectory = os.path.join(
                     os.path.abspath(os.getcwd()), RootDir)
             self.RootDirectory = os.path.realpath(self.RootDirectory)
-            if(not os.path.isdir(self.RootDirectory)):
+            if (not os.path.isdir(self.RootDirectory)):
                 raise Exception(
                     "Invalid Path for RootDir: {0}".format(self.RootDirectory))
 
         # Convert YmlFile to abs and confirm valid
-        if(YmlFile is not None):
-            if(os.path.isabs(YmlFile)):
+        if (YmlFile is not None):
+            if (os.path.isabs(YmlFile)):
                 self.YmlFilePathBase = YmlFile
             else:
                 self.YmlFilePathBase = os.path.join(
                     os.path.abspath(os.getcwd()), YmlFile)
             self.YmlFilePathBase = os.path.realpath(self.YmlFilePathBase)
-            if(not os.path.isfile(self.YmlFilePathBase)):
+            if (not os.path.isfile(self.YmlFilePathBase)):
                 raise Exception(
                     "Invalid Path for YmlFile: {0}".format(self.YmlFilePathBase))
 
@@ -276,20 +276,20 @@ class DocBuild(object):
                 os.path.dirname(self.YmlFilePathBase), "mkdocs.yml")
 
         # Convert OutputDir to abs and then mkdir if necessary
-        if(OutputDir is not None):
-            if(os.path.isabs(OutputDir)):
+        if (OutputDir is not None):
+            if (os.path.isabs(OutputDir)):
                 self.OutputDirectory = OutputDir
             else:
                 self.OutputDirectory = os.path.join(
                     os.path.abspath(os.getcwd()), OutputDir)
             self.OutputDirectory = os.path.realpath(self.OutputDirectory)
 
-            if(os.path.basename(self.OutputDirectory) != "docs"):
+            if (os.path.basename(self.OutputDirectory) != "docs"):
                 raise Exception(
                     "For mkdocs we only support output dir of docs. OutputDir: %s" % self.OutputDirectory)
             # set output to the dynamic folder
             self.OutputDirectory = os.path.join(OutputDir, DocBuild.DYNFOLDER)
-            if(not os.path.isdir(self.OutputDirectory)):
+            if (not os.path.isdir(self.OutputDirectory)):
                 logging.debug("Output directory doesn't exist.  Making... {0}".format(
                     self.OutputDirectory))
                 os.makedirs(self.OutputDirectory)
@@ -308,7 +308,7 @@ class DocBuild(object):
         retry = 1  # hack to make rmtree more successful
         while True:
             try:
-                if(self.OutputDirectory is not None and os.path.isdir(self.OutputDirectory)):
+                if (self.OutputDirectory is not None and os.path.isdir(self.OutputDirectory)):
                     shutil.rmtree(self.OutputDirectory)
             except OSError:
                 if not retry:
@@ -320,7 +320,7 @@ class DocBuild(object):
                 continue
             break
 
-        if(os.path.isfile(self.YmlFilePathOut)):
+        if (os.path.isfile(self.YmlFilePathOut)):
             os.remove(self.YmlFilePathOut)
 
     def _CleanChars(self, p: str) -> str:
@@ -404,7 +404,7 @@ class DocBuild(object):
     #
 
     def ProcessRootDir(self):
-        if(self.RootDirectory is None):
+        if (self.RootDirectory is None):
             logging.debug("ProcessRootDir: No RootDirectory set.")
             return
 
@@ -415,7 +415,7 @@ class DocBuild(object):
         for top, dirs, files in os.walk(self.RootDirectory):
             for f in files:
                 if f.lower().endswith(".md"):
-                    if(not self.EncodingChecker.TestMdEncodingOk(os.path.join(top, f), "utf-8")):
+                    if (not self.EncodingChecker.TestMdEncodingOk(os.path.join(top, f), "utf-8")):
                         logging.error("Ignore Invalid markdown file: {0}".format(
                             os.path.join(top, f)))
                     else:
@@ -427,7 +427,7 @@ class DocBuild(object):
                 elif f.lower().endswith(("_mu.gif", "_mu.png", "_mu.jpg")):
                     self._ProcessImageFile(os.path.join(top, f))
 
-            if(".git" in dirs):
+            if (".git" in dirs):
                 # root of git repo
                 self._ProcessGitRepo(top)
         return 0
@@ -550,8 +550,8 @@ def main():
     args = GatherArguments()
 
     # setup file based logging if outputReport specified
-    if(args.OutputLog):
-        if(len(args.OutputLog) < 2):
+    if (args.OutputLog):
+        if (len(args.OutputLog) < 2):
             logging.critical("the output log file parameter is invalid")
             return -2
 
@@ -571,17 +571,17 @@ def main():
     logging.info("Output Directory For Docs: {0}".format(
         Build.OutputDirectory))
 
-    if(args.Clean):
+    if (args.Clean):
         logging.critical("Clean")
         Build.Clean()
 
-    if(not args.Build):
+    if (not args.Build):
         return 0
 
     logging.critical("Build")
 
     Build.MakeYml()
-    if(args.OutputDir is not None):
+    if (args.OutputDir is not None):
         Build.ProcessRootDir()
         Build.MakeNav()
         Build.MakeRepoInfo()

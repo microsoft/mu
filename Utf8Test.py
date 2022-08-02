@@ -53,7 +53,7 @@ class EncodingCheck(object):
 
 def Valid_Dir(string):
     ab = string
-    if(not os.path.isabs(ab)):
+    if (not os.path.isabs(ab)):
         ab = os.path.join(os.getcwd(), ab)
     ab = os.path.realpath(ab)
     if not os.path.isdir(ab):
@@ -69,12 +69,12 @@ def main():
     parser.add_argument("--debug", dest="debug", help="Output all debug messages to console", action="store_true", default=False)
     args = parser.parse_args()
 
-    if(args.debug):
+    if (args.debug):
         logging.getLogger().handlers[0].setLevel(logging.DEBUG)
 
     # setup file based logging if outputReport specified
-    if(args.OutputLog):
-        if(len(args.OutputLog) < 2):
+    if (args.OutputLog):
+        if (len(args.OutputLog) < 2):
             logging.critical("the output log file parameter is invalid")
             return -2
 
