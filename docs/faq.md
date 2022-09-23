@@ -39,22 +39,29 @@ repos are split for technical reasons, some for organizational, and some for leg
 
 For details, see "Repo Philosophy" in [What and Why](WhatAndWhy/overview.md#repo-philosophy).
 
-## Is there any stronger guidance than ["Less is More"](index#Guiding Principles)?
+## Is there any stronger guidance than "Less is More"?
+
+Since Mu is derived from Edk2, the Edk2 coding standards are a foundation, as can the existing code in the 
+TianoCore repositories. Beyond that, here are a few other musings:
 
 #### Forgotten lessons in firmware
 Firmware, no matter what the flavor of it, all has the same end goal: to securely boot some sort of payload. Features
 have been added to firmware over multiple years, but not all of the features work directly towards the goal of 
-booting a payload.  The Mu respisorities attempt to meet the goals of creating an secure enviornemnt for firmware.
+booting a payload.  The Mu repositories attempt to meet the goals of creating an secure environment for firmware.
 
 Some of the additional responsibilities pushed into firmware have become outdated, or can be pared down.  Mu attempts 
-to engague in securing the core requirements for securly booting a system. 
+to engage in securing the core requirements for securely booting a system.
 
 
 #### Coding style will change depending on the goal
+* Researchers just need code to work. 
 * Platform developers may need code to only work for a single platform
 * Silicon developers need code to work for a single processor architecture 
-* Mu developers need code to work for multiple platforms and multiple processor architectures
 
+Mu is working towards code that works for multiple platforms and multiple processor architectures through good code.
+What is good code? Clean code flow, minimal entanglement and follows industry standard best practices. 
+
+Coding is a process and it gets better with the feedback of multiple developers and with being reused across projects. 
 
 
 #### Public Headers vs Private Headers
@@ -71,7 +78,3 @@ Private Header examples
 *Base.h, can use Uefi.h instead
 *ProcessorBind.h, handled through AutoGen's PiDxe,h, PiPei.h, etc
 *UefiBaseType.h, handled through AutoGen.h's PiDxe.h, PiPei.h, etc
-
-#### 
-
-https://docs.opensource.microsoft.com/releasing/general-guidance/copyright-headers/
