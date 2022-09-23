@@ -38,3 +38,40 @@ Project Mu makes liberal use of multiple repositories due to the mixture of requ
 repos are split for technical reasons, some for organizational, and some for legal.
 
 For details, see "Repo Philosophy" in [What and Why](WhatAndWhy/overview.md#repo-philosophy).
+
+## Is there any stronger guidance than ["Less is More"](index#Guiding Principles)?
+
+#### Forgotten lessons in firmware
+Firmware, no matter what the flavor of it, all has the same end goal: to securely boot some sort of payload. Features
+have been added to firmware over multiple years, but not all of the features work directly towards the goal of 
+booting a payload.  The Mu respisorities attempt to meet the goals of creating an secure enviornemnt for firmware.
+
+Some of the additional responsibilities pushed into firmware have become outdated, or can be pared down.  Mu attempts 
+to engague in securing the core requirements for securly booting a system. 
+
+
+#### Coding style will change depending on the goal
+* Platform developers may need code to only work for a single platform
+* Silicon developers need code to work for a single processor architecture 
+* Mu developers need code to work for multiple platforms and multiple processor architectures
+
+
+
+#### Public Headers vs Private Headers
+There are lots of header files available in the Edk2 source trees.  Header files can be considered in two types: Public and Private.
+* Public Header files are files that contain APIs (Function Library declarations, Ppi/Protocol declarations or information related)
+* Private Header flies includes files that abstract Compiler Specific/Processor Specific information.
+
+Public header file includes can be used, while private header files should be avoided. Private header files should be handled 
+automatically through the public header files and build system. 
+
+Note that the Edk2 build system will create AutoGen.h, which usually includes some of the private header files automatically.
+
+Private Header examples
+*Base.h, can use Uefi.h instead
+*ProcessorBind.h, handled through AutoGen's PiDxe,h, PiPei.h, etc
+*UefiBaseType.h, handled through AutoGen.h's PiDxe.h, PiPei.h, etc
+
+#### 
+
+https://docs.opensource.microsoft.com/releasing/general-guidance/copyright-headers/
