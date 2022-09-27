@@ -41,13 +41,13 @@ For details, see "Repo Philosophy" in [What and Why](WhatAndWhy/overview.md#repo
 
 ## Is there any stronger guidance than "Less is More"?
 
-Since Mu is derived from Edk2, the Edk2 coding standards are a foundation, as can the existing code in the 
+Since Mu is derived from Edk2, the Edk2 coding standards are a good foundation, as is the existing code in the 
 TianoCore repositories. Beyond that, here are a few other musings:
 
 #### Forgotten lessons in firmware
 Firmware, no matter what the flavor of it, all has the same end goal: to securely boot some sort of payload. Features
 have been added to firmware over multiple years, but not all of the features work directly towards the goal of 
-booting a payload.  The Mu repositories attempt to meet the goals of creating an secure environment for firmware.
+booting a payload.  The Mu repositories attempt to meet the goals of creating a secure environment for firmware.
 
 Some of the additional responsibilities pushed into firmware have become outdated, or can be pared down.  Mu attempts 
 to engage in securing the core requirements for securely booting a system.
