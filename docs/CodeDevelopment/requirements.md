@@ -34,18 +34,18 @@
 
 ## Repositories
 
-[Repo Philosophy](docs/overview.md#repo-philosophy)
+[Repo Philosophy](overview.md#repo-philosophy)
 
 - Repositories should have a clear owner
 - Repositories should have a clear target
-    -Cross platform/single platform
-    -Cross architecture/single architecture
-    -Cross organization/single organization
+  - Cross platform/single platform
+  - Cross architecture/single architecture
+  - Cross organization/single organization
 - Repositories should have a consistence license (open source or proprietary)
 - Repositories should have a well defined
-    -CI process
-    -Build/Test process
-    -Release process
+  - CI process
+  - Build/Test process
+  - Release process
 - Repositories should provide documentation for working with the repository
 
 ## Uefi Packages
@@ -69,13 +69,13 @@
     - Use existing libraries and functionality when possible
     - Build out minimal required abstraction to allow other silicon or architectures to leverage common capabilities
 4. All modules should consider testability as part of their design.
-    - Writing a unit test e
+    - It is highly recommended to write a unit test for each module in the design
 
 ## Public Header files
 
 1. Don't include other header files
 2. Don't mix public and private information in the same header file
-    - Implementation details should be contained to the instance
+    - Implementation details should never be in a public header file
 3. Use "doxygen" style function header comments to clearly specify parameters and return results.
 4. Use a guidgen tool to define any guids
 5. For libraries:
