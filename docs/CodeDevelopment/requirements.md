@@ -4,7 +4,7 @@
 
 1. Make sure it follows the package, repo, and codebase rules
 2. Make sure it builds
-3. Write a unit test for it.  Test positive cases as well as negative cases.
+3. Write sa unit test for it.  Test positive cases as well as negative cases.
 4. Make sure it has docs.  Even a minimal readme.md will get collected and added to the docs.
 5. Make sure it has only valid characters encoded (often copy paste from Microsoft Word docs or the internet will lead
    to invalid characters)
@@ -32,15 +32,44 @@
         }
     ```
 
-## Uefi Package
+## Repositories
 
-## UEFI Components
+[Repo Philosophy](docs/overview.md#repo-philosophy)
 
-1. All new modules must be listed in their containing package DSC in the components section
+- Repositories should have a clear owner
+- Repositories should have a clear target
+    -Cross platform/single platform
+    -Cross architecture/single architecture
+    -Cross organization/single organization
+- Repositories should have a consistence license (open source or proprietary)
+- Repositories should have a well defined
+    -CI process
+    -Build/Test process
+    -Release process
+- Repositories should provide documentation for working with the repository
+
+## Uefi Packages
+
+- Packages are the sharing granular in Project Mu
+- Packages should be for a feature/feature set
+- Packages should enable all CI features
+- Packages should contain a hosted-based unit test Dsc
+- Packages should contain a compile test Dsc that includes all INF files
+- Packages should have minimized dependencies
+- Package documentation should reside in the same package (Docs folder)
+  - Documentation should describe dependencies
+  - Documentation should describe integration steps
+  - Documentation should describe abstraction points and package usage
+
+## Uefi Components
+
+1. All new modules must be listed in their containing package Dsc in the components section
 2. All modules must follow the dependency rules of their containing package
 3. All modules within common layers should avoid silicon or architecture dependencies.
     - Use existing libraries and functionality when possible
     - Build out minimal required abstraction to allow other silicon or architectures to leverage common capabilities
+4. All modules should consider testability as part of their design.
+    - Writing a unit test e
 
 ## Public Header files
 
@@ -63,6 +92,13 @@
 
 2. Use STATIC on each non-public function and non-public global to avoid conflicts with other modules.
 3. Use EFIAPI on all public library class functions.
+
+## Source files
+
+Source files should follow the Edk2 coding standards available on [TianoCore.org](https://www.tianocore.org/) website.  
+
+Please include the appropriate copyright messages in the file headers, and Spdx License
+Identifiers are appreciated (<https://spdx.org/licenses/>).
 
 ## More info
 

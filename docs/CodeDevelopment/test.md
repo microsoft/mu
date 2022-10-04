@@ -1,18 +1,20 @@
 # Tests
 
-Testing firmware is critical and should be done so much more than it is today. So please, start writing tests. A lot
-of work has been done to make it easier.
+Testing firmware is critical and testing should go beyond what is performed today. With more thorough testing,
+adoption of code updates, code refactoring and maintenance all become easier.  As bugs are reported and fixed,
+new test cases can be added to ensure continued compliance.  So please, start writing tests. A lot of work
+has been done to make adding tests easier.
 
 ## Static Code Tests (analysis)
 
 *stuart_ci_build* provides a framework for running static tests on the code base.  More details of the ever changing
-tests can be found here. <https://github.com/microsoft/mu_basecore/tree/release/202002/.pytool/Plugin>
+tests can be found here. <https://github.com/microsoft/mu_basecore/tree/release/202008/.pytool/Plugin>
 
 ## UEFI Unit Tests - C code
 
 It now exists!! There is a framework available in Tianocore and Project Mu basecore.
-Simple API here. <https://github.com/microsoft/mu_basecore/blob/release/202002/MdePkg/Include/Library/UnitTestLib.h>
-Implementation details here. <https://github.com/microsoft/mu_basecore/tree/release/202002/UnitTestFrameworkPkg>
+Simple API here. <https://github.com/microsoft/mu_basecore/blob/release/202008/MdePkg/Include/Library/UnitTestLib.h>
+Implementation details here. <https://github.com/microsoft/mu_basecore/tree/release/202008/UnitTestFrameworkPkg>
 
 ### Host Based - console app
 

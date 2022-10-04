@@ -6,14 +6,14 @@ get you started.  If the repo requires other tools those should be documented wi
 The tools also vary by Operating System and Compiler choice.  Project Mu will document what is currently supported but
 the expectation is that between Project Mu and TianoCore Edk2 you could use any of those tool sets.
 
-## Windows 10 x64
+## Windows 10 x64 / Windows 11 x64
 
 ### Python
 
 1. Download latest Python from <https://www.python.org/downloads>
 
     ``` cmd
-    https://www.python.org/ftp/python/3.8.2/python-3.8.2-amd64.exe
+    https://www.python.org/ftp/python/3.10.7/python-3.10.7-amd64.exe
     ```
 
 2. It is recommended you use the following options when installing python:
@@ -26,7 +26,7 @@ the expectation is that between Project Mu and TianoCore Edk2 you could use any 
 1. Download latest Git For Windows from <https://git-scm.com/download/win>
 
     ``` cmd
-    https://github.com/git-for-windows/git/releases/download/v2.25.1.windows.1/Git-2.25.1-64-bit.exe
+    https://github.com/git-for-windows/git/releases/download/v2.38.0.windows.1/Git-2.38.0-64-bit.exe
     ```
 
 2. It is recommended you use the following options:
