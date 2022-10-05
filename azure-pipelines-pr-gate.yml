@@ -1,6 +1,8 @@
 workspace:
   clean: all
 
+vmImage: windows-2022
+
 steps:
 - task: DeleteFiles@1
   inputs:
@@ -17,13 +19,13 @@ steps:
     versionSpec: '17.x'
     #checkLatest: false # Optional
 
-- script: npm install -g cspell
+- script: npm install -g cspell@5.20.0
   displayName: 'Install cspell npm'
 
 - script: cspell "docs/**/*.md"
   displayName: 'Spell Check md files'
 
-- script: npm install -g markdownlint-cli
+- script: npm install -g markdownlint-cli@0.31.0
   displayName: "Install markdown linter"
 
 - script: markdownlint "**/*.md"
@@ -31,7 +33,7 @@ steps:
 
 - task: UsePythonVersion@0
   inputs:
-    versionSpec: '3.8'
+    versionSpec: '3.10'
     architecture: 'x64'
 
 - script: python -m pip install --upgrade pip
