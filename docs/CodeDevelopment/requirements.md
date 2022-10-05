@@ -38,17 +38,15 @@
 
 1. Repositories should have a clear owner
 2. Repositories should have a clear target
-
-- Cross platform/single platform
-- Cross architecture/single architecture
-- Cross organization/single organization
+   - Cross platform/single platform
+   - Cross architecture/single architecture
+   - Cross organization/single organization
 
 3. Repositories should have a consistent license (open source or proprietary)
 4. Repositories should have a well defined:
-
-- CI process
-- Build/Test process
-- Release process
+   - CI process
+   - Build/Test process
+   - Release process
 
 5. Repositories should provide documentation for working with the repository
 6. Repositories _must_ not violate the intellectual property of others
@@ -62,10 +60,9 @@
 5. Packages should contain a compile test Dsc that includes all INF files
 6. Packages should minimize dependencies
 7. Package documentation should reside in the same package (Docs folder)
-
-- Documentation should describe dependencies
-- Documentation should describe integration steps
-- Documentation should describe abstraction points and package usage
+   - Documentation should describe dependencies
+   - Documentation should describe integration steps
+   - Documentation should describe abstraction points and package usage
 
 ## Uefi Components
 
