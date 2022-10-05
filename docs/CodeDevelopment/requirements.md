@@ -4,7 +4,7 @@
 
 1. Make sure it follows the package, repo, and codebase rules
 2. Make sure it builds
-3. Write sa unit test for it.  Test positive cases as well as negative cases.
+3. Write a unit test for it.  Test positive cases as well as negative cases.
 4. Make sure it has docs.  Even a minimal readme.md will get collected and added to the docs.
 5. Make sure it has only valid characters encoded (often copy paste from Microsoft Word docs or the internet will lead
    to invalid characters)
@@ -36,30 +36,36 @@
 
 [Repo Philosophy](overview.md#repo-philosophy)
 
-- Repositories should have a clear owner
-- Repositories should have a clear target
-  - Cross platform/single platform
-  - Cross architecture/single architecture
-  - Cross organization/single organization
-- Repositories should have a consistence license (open source or proprietary)
-- Repositories should have a well defined
-  - CI process
-  - Build/Test process
-  - Release process
-- Repositories should provide documentation for working with the repository
+1. Repositories should have a clear owner
+2. Repositories should have a clear target
+
+- Cross platform/single platform
+- Cross architecture/single architecture
+- Cross organization/single organization
+
+3. Repositories should have a consistent license (open source or proprietary)
+4. Repositories should have a well defined
+
+- CI process
+- Build/Test process
+- Release process
+
+5. Repositories should provide documentation for working with the repository
+6. Repositories _must_ not violate the intellectual property of others
 
 ## Uefi Packages
 
-- Packages are the sharing granular in Project Mu
-- Packages should be for a feature/feature set
-- Packages should enable all CI features
-- Packages should contain a hosted-based unit test Dsc
-- Packages should contain a compile test Dsc that includes all INF files
-- Packages should have minimized dependencies
-- Package documentation should reside in the same package (Docs folder)
-  - Documentation should describe dependencies
-  - Documentation should describe integration steps
-  - Documentation should describe abstraction points and package usage
+1. Packages are the sharing granular in Project Mu
+2. Packages should be for a feature/feature set
+3. Packages should enable all CI features
+4. Packages should contain a host-based unit test Dsc
+5. Packages should contain a compile test Dsc that includes all INF files
+6. Packages should minimize dependencies
+7. Package documentation should reside in the same package (Docs folder)
+
+- Documentation should describe dependencies
+- Documentation should describe integration steps
+- Documentation should describe abstraction points and package usage
 
 ## Uefi Components
 
@@ -97,8 +103,8 @@
 
 Source files should follow the Edk2 coding standards available on [TianoCore.org](https://www.tianocore.org/) website.  
 
-Please include the appropriate copyright messages in the file headers, and Spdx License
-Identifiers are appreciated (<https://spdx.org/licenses/>).
+Please include the appropriate copyright messages in the file headers.
+Please include the appropiate Spdx License Identifier(s) in the file headers. (<https://spdx.org/licenses/>)
 
 ## More info
 
