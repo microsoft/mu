@@ -13,7 +13,7 @@ the expectation is that between Project Mu and TianoCore Edk2 you could use any 
 1. Download latest Python from <https://www.python.org/downloads>
 
     ``` cmd
-    https://www.python.org/ftp/python/3.10.7/python-3.10.7-amd64.exe
+    https://www.python.org/downloads
     ```
 
 2. It is recommended you use the following options when installing python:
@@ -26,7 +26,7 @@ the expectation is that between Project Mu and TianoCore Edk2 you could use any 
 1. Download latest Git For Windows from <https://git-scm.com/download/win>
 
     ``` cmd
-    https://github.com/git-for-windows/git/releases/download/v2.38.0.windows.1/Git-2.38.0-64-bit.exe
+    https://git-scm.com/download/win
     ```
 
 2. It is recommended you use the following options:

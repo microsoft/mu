@@ -44,7 +44,7 @@
 - Cross organization/single organization
 
 3. Repositories should have a consistent license (open source or proprietary)
-4. Repositories should have a well defined
+4. Repositories should have a well defined:
 
 - CI process
 - Build/Test process
@@ -101,10 +101,10 @@
 
 ## Source files
 
-Source files should follow the Edk2 coding standards available on [TianoCore.org](https://www.tianocore.org/) website.  
+Source files should follow the [EDK II C Coding Standards Specification](https://edk2-docs.gitbook.io/edk-ii-c-coding-standards-specification/).
 
 Please include the appropriate copyright messages in the file headers.
-Please include the appropiate Spdx License Identifier(s) in the file headers. (<https://spdx.org/licenses/>)
+Please include the appropriate Spdx License Identifier(s) in the file headers. (<https://spdx.org/licenses/>)
 
 ## More info
 

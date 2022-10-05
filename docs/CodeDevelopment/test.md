@@ -13,8 +13,10 @@ tests can be found here. <https://github.com/microsoft/mu_basecore/tree/release/
 ## UEFI Unit Tests - C code
 
 It now exists!! There is a framework available in Tianocore and Project Mu basecore.
-Simple API here. <https://github.com/microsoft/mu_basecore/blob/release/202008/MdePkg/Include/Library/UnitTestLib.h>
-Implementation details here. <https://github.com/microsoft/mu_basecore/tree/release/202008/UnitTestFrameworkPkg>
+
+[Simple API](https://github.com/microsoft/mu_basecore/blob/release/202008/MdePkg/Include/Library/UnitTestLib.h)
+
+[Implementation details](https://github.com/microsoft/mu_basecore/tree/release/202008/UnitTestFrameworkPkg)
 
 ### Host Based - console app
 

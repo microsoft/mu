@@ -64,7 +64,7 @@ the Pull Requests gates are implemented and enforced.
 ???+ info
     - In Project Mu repos the config file is generally at ```.pytool/CISettings.py```
     - Project Mu runs on Windows 10/Windows 11 using the following tags: VS2019 and VS2022
-    - Project Mu runs on Ubuntu 18.04 using the tags: GCC5
+    - Project Mu runs on latest Ubuntu using the tags: GCC5
     - Each of the stuart commands can take in additional parameters.  To see customized help run
       `<stuart cmd> -c .pytool/CISettings.py -h`
     - Some common optional parameters that *might* allow the stuart operation to optimize for expected usage.
