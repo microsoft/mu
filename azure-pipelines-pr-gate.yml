@@ -1,7 +1,8 @@
 workspace:
   clean: all
 
-vmImage: windows-2022
+pool:
+  vmImage: windows-2022
 
 steps:
 - task: DeleteFiles@1
