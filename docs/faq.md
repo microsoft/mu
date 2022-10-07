@@ -38,3 +38,35 @@ Project Mu makes liberal use of multiple repositories due to the mixture of requ
 repos are split for technical reasons, some for organizational, and some for legal.
 
 For details, see "Repo Philosophy" in [What and Why](WhatAndWhy/overview.md#repo-philosophy).
+
+### What is a good philosophy for organizing my code?
+
+Programming has had a lot written about abstractions to help make code more readable or to simplify complex disjoint
+features under a common API. The same volume of literature does not exist for organizing large sets of features
+for firmware.  
+
+[Repo Philosophy](overview.md#repo-philosophy)
+
+So how should firmware be organized? By feature? By silicon, or by author? It is difficult to document what makes
+good organization.  Some simple observations are below:
+
+1. Understand the consumer of your code
+    If your code is designed to be an intermediate, then design it to be as robust as possible. If your code
+    is configuring a piece of hardware, leave the "policy" decision as an input to your code, and allow external
+    configuration of the policy via library or pcd.
+2. Abstract silicon specific code.  
+    e.g. Most platforms use SPI flash, but the mechanics of reading/writing/configuring a SPI controller are specific
+    to the hardware. Move SPI controller functionality out of your feature.
+3. Organizing code for reuse and configurability.
+    Are you writing something to satisfy a program requirement? What portions of the code would be useful for
+    reuse? Maybe those should move into a library or outside of the current package you are designing?
+4. Be mindful of dependencies
+    If you are writing a feature for reuse, be mindful of what dependencies you create.  Its bad practice to have
+    a generic function include horizontal dependencies. e.g. If FatPkg had dependencies on ArmPkg, or OvmfPkg had
+    dependencies on IntelFsp2Pkg those would be considered bad designs.
+
+Did a bad decision get made in your code design? Refactoring may cause some temporary pain, but will be beneficial
+in the long run.
+
+Did a bad decision get made in your existing repos? The benefit of Project Mu using the [edk2-pytools-library](https://github.com/tianocore/edk2-pytool-library)
+is that reorganization of repositories will have minimal effect on a project
