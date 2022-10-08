@@ -57,7 +57,7 @@ good organization.  Some simple observations are below:
 2. Abstract silicon specific code.  
     e.g. Most platforms use SPI flash, but the mechanics of reading/writing/configuring a SPI controller are specific
     to the hardware. Move SPI controller functionality out of your feature.
-3. Organizing code for reuse and configurability.
+3. Organizing code for reuse and for being configurable.
     Are you writing something to satisfy a program requirement? What portions of the code would be useful for
     reuse? Maybe those should move into a library or outside of the current package you are designing?
 4. Be mindful of dependencies
