@@ -69,8 +69,8 @@ the Pull Requests gates are implemented and enforced.
       `<stuart cmd> -c .pytool/CISettings.py -h`
     - Some common optional parameters that *might* allow the stuart operation to optimize for expected usage.
       For example if only building for X64 ARCH then the ARM compilers might not be
-      downloaded.  Or if using the VS2019/VS2022 toolchain then GCC specific assets aren't needed.  If you only want to run CI
-      against the MdePkg and MdeModulePkg then you can do that with `-p`.
+      downloaded.  Or if using the VS2019/VS2022 toolchain then GCC specific assets aren't needed.  If you only want
+      to run CI against the MdePkg and MdeModulePkg then you can do that with `-p`.
         - `-a <arch csv>` - list of architectures to run for
         - `-p <packages csv>` - list of packages to run against
         - `-t <targets csv>` - list of targets to run for
