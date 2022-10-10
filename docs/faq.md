@@ -45,8 +45,6 @@ Programming has had a lot written about abstractions to help make code more read
 features under a common API. The same volume of literature does not exist for organizing large sets of features
 for firmware.  
 
-[Repo Philosophy](overview.md#repo-philosophy)
-
 So how should firmware be organized? By feature? By silicon, or by author? It is difficult to document what makes
 good organization.  Some simple observations are below:
 
