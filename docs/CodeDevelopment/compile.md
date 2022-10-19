@@ -63,14 +63,14 @@ the Pull Requests gates are implemented and enforced.
 
 ???+ info
     - In Project Mu repos the config file is generally at ```.pytool/CISettings.py```
-    - Project Mu runs on Windows 10 using the following tags: VS2017 and VS2019
+    - Project Mu runs on Windows 10 using the following tags: VS2019 and VS2022
     - Project Mu runs on Ubuntu 18.04 using the tags: GCC5
     - Each of the stuart commands can take in additional parameters.  To see customized help run
       `<stuart cmd> -c .pytool/CISettings.py -h`
     - Some common optional parameters that *might* allow the stuart operation to optimize for expected usage.
       For example if only building for X64 ARCH then the ARM compilers might not be
-      downloaded.  Or if using the VS2019 toolchain then GCC specific assets aren't needed.  If you only want to run CI
-      against the MdePkg and MdeModulePkg then you can do that with `-p`.
+      downloaded.  Or if using the Visual Studio toolchain then GCC specific assets aren't needed.  If you only want
+      to run CI against the MdePkg and MdeModulePkg then you can do that with `-p`.
         - `-a <arch csv>` - list of architectures to run for
         - `-p <packages csv>` - list of packages to run against
         - `-t <targets csv>` - list of targets to run for
