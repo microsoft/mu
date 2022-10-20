@@ -6,20 +6,22 @@ There are three common ways to contribute.
 1. Contribute documentation by opening a GitHub Pull Request.
 1. Contribute code by opening a GitHub Pull Request
 
-## Issue Tracker Usage
+## Filing Issues
 
-<https://github.com/Microsoft/mu/issues>
+File a GitHub issue in the corresponding Project Mu repository.
 
 ### General feedback and discussions
 
-Please start a discussion on the issue tracker.
+If the feedback is actionable, such as a feature request, file a feature request issue. Otherwise, start a new
+thread in the GitHub Discussions section of the corresponding Project Mu GitHub repository.
 
 ### Bugs and feature requests
 
-For non-security related bugs please log a new issue on the
-[Project Mu repo issue tracker](https://github.com/Microsoft/mu/issues). The best way to get your bug fixed is to be
-as detailed as you can be about the problem. Providing a code snippet or sample driver that exposes the issue with
-steps to reproduce the problem is ideal.  
+For non-security related bugs, please submit a new issue in the Project Mu GitHub repository that contains the code
+related to the issue.
+
+The best way to get your bug fixed is to be as detailed as you can be about the problem. Providing a code snippet or
+sample driver that exposes the issue with steps to reproduce the problem is ideal.
 
 ### Reporting security issues and bugs
 
@@ -48,7 +50,7 @@ conventions.
 8. Make changes / adjust based on feedback and discussion
 9. Keep your PR branch in-sync with the branch you are targeting and resolve any merge conflicts
 10. Once the the PR status is all passing it can be squashed and merged (just press the button in the PR).  If the PR
-    is ready the maintainers may complete it for you.  
+    is ready the maintainers may complete it for you.
 
 That is it.  Thanks for contributing.
 
