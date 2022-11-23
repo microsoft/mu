@@ -1,0 +1,21 @@
+# This workflow warns and then closes issues and PRs that have had no activity for a specified amount of time.
+#
+# Copyright (c) Microsoft Corporation.
+# SPDX-License-Identifier: BSD-2-Clause-Patent
+#
+# You can adjust the behavior by modifying this file.
+# For more information, see:
+# https://github.com/actions/stale
+
+name: Check for Stale Issues and Pull Requests
+
+on:
+  schedule:
+    # At 23:40 on every day-of-week from Sunday through Saturday
+    # https://crontab.guru/#40_23_*_*_0-6
+    - cron: '40 23 * * 0-6'
+  workflow_dispatch:
+
+jobs:
+  check:
+    uses: microsoft/mu_devops/.github/workflows/Stale.yml@main
