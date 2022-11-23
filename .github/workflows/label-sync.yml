@@ -1,0 +1,21 @@
+# This workflow syncs GitHub labels to the common set of labels defined in Mu DevOps.
+#
+# All repos should sync at the same time.
+#   '0 0,12 * * *''
+#
+# Copyright (c) Microsoft Corporation.
+# SPDX-License-Identifier: BSD-2-Clause-Patent
+#
+
+name: Sync GitHub Labels
+
+on:
+  schedule:
+    # At minute 0 past hour 0 and 12
+    # https://crontab.guru/#0_0,12_*_*_*
+    - cron: '0 0,12 * * *'
+  workflow_dispatch:
+
+jobs:
+  sync:
+    uses: microsoft/mu_devops/.github/workflows/LabelSyncer.yml@main
