@@ -1,5 +1,11 @@
 # This workflow warns and then closes issues and PRs that have had no activity for a specified amount of time.
 #
+# NOTE: This file is automatically synchronized from Mu DevOps. Update the original file there
+#       instead of the file in this repo.
+#
+# - Mu DevOps Repo: https://github.com/microsoft/mu_devops
+# - File Sync Settings: https://github.com/microsoft/mu_devops/blob/main/.sync/Files.yml
+#
 # Copyright (c) Microsoft Corporation.
 # SPDX-License-Identifier: BSD-2-Clause-Patent
 #
@@ -11,9 +17,9 @@ name: Check for Stale Issues and Pull Requests
 
 on:
   schedule:
-    # At 23:40 on every day-of-week from Sunday through Saturday
-    # https://crontab.guru/#40_23_*_*_0-6
-    - cron: '40 23 * * 0-6'
+    # At 23:35 on every day-of-week from Sunday through Saturday
+    # https://crontab.guru/#35_23_*_*_0-6
+    - cron: '35 23 * * 0-6'
   workflow_dispatch:
 
 jobs:

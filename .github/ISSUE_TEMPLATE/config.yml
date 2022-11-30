@@ -1,0 +1,20 @@
+# Project Mu GitHub Issue Configuration File
+#
+# NOTE: This file is automatically synchronized from Mu DevOps. Update the original file there
+#       instead of the file in this repo.
+#
+# - Mu DevOps Repo: https://github.com/microsoft/mu_devops
+# - File Sync Settings: https://github.com/microsoft/mu_devops/blob/main/.sync/Files.yml
+#
+# Copyright (c) Microsoft Corporation.
+# SPDX-License-Identifier: BSD-2-Clause-Patent
+#
+
+contact_links:
+  - name: 📃 Project Mu Documentation
+    url: https://microsoft.github.io/mu/
+    about: Goals, principles, repo layout, build instructions, and more.
+
+  - name: 🔐 Security Reporting Policy
+    url: https://github.com/microsoft/.github/blob/main/SECURITY.md
+    about: A special process is used to report security vulnerabilities.
