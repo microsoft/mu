@@ -1,0 +1,12 @@
+# Specifies labels to apply to issues and pull requests based on file path patterns in Project Mu repositories.
+#
+# Copyright (c) Microsoft Corporation.
+# SPDX-License-Identifier: BSD-2-Clause-Patent
+#
+# For more information, see:
+# https://github.com/actions/labeler
+
+# Maintenance: Keep labels organized in ascending alphabetical order - easier to scan, identify duplicates, etc.
+
+language:python:
+  - '**/*.py'

@@ -1,0 +1,34 @@
+# This workflow automatically applies labels to GitHub issues and pull requests based on the
+# file paths in a pull request or content in the body of an issue or pull request.
+#
+# NOTE: This file is automatically synchronized from Mu DevOps. Update the original file there
+#       instead of the file in this repo.
+#
+# NOTE: This file uses a reusable workflow. Do not make changes to the file that should be made
+#       in the common/reusable workflow.
+#
+# - Mu DevOps Repo: https://github.com/microsoft/mu_devops
+# - File Sync Settings: https://github.com/microsoft/mu_devops/blob/main/.sync/Files.yml
+#
+# Copyright (c) Microsoft Corporation.
+# SPDX-License-Identifier: BSD-2-Clause-Patent
+#
+
+name: Apply Issue and PR Labels
+
+on:
+  issues:
+    types:
+      - edited
+      - opened
+  pull_request_target:
+    types:
+      - edited
+      - opened
+      - reopened
+      - synchronize
+  workflow_dispatch:
+
+jobs:
+  apply:
+    uses: microsoft/mu_devops/.github/workflows/Labeler.yml@main
