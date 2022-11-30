@@ -346,6 +346,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://microsoft.github.io/mu/dyn/mu_feature_config/CONTRIBUTING/</loc>
+         <lastmod>2022-11-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_feature_config/RepoDetails/</loc>
          <lastmod>2022-11-30</lastmod>
          <changefreq>daily</changefreq>
@@ -377,6 +382,16 @@
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_feature_config/SetupDataPkg/Docs/Profiles/Overview/</loc>
+         <lastmod>2022-11-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://microsoft.github.io/mu/dyn/mu_feature_config/github/pull_request_template/</loc>
+         <lastmod>2022-11-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://microsoft.github.io/mu/dyn/mu_feature_ipmi/CONTRIBUTING/</loc>
          <lastmod>2022-11-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -431,6 +446,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://microsoft.github.io/mu/dyn/mu_feature_ipmi/github/pull_request_template/</loc>
+         <lastmod>2022-11-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://microsoft.github.io/mu/dyn/mu_feature_mm_supv/CONTRIBUTING/</loc>
+         <lastmod>2022-11-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_feature_mm_supv/RepoDetails/</loc>
          <lastmod>2022-11-30</lastmod>
          <changefreq>daily</changefreq>
@@ -467,6 +492,11 @@
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_feature_mm_supv/MmSupervisorPkg/Docs/TraditionalSmmFramework/traditional_smm_framework/</loc>
+         <lastmod>2022-11-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://microsoft.github.io/mu/dyn/mu_feature_mm_supv/github/pull_request_template/</loc>
          <lastmod>2022-11-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
