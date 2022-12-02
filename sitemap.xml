@@ -126,11 +126,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://microsoft.github.io/mu/dyn/mu_basecore/pull_request_template/</loc>
-         <lastmod>2022-12-02</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_basecore/BaseTools/Docs/feature_ver_spec/</loc>
          <lastmod>2022-12-02</lastmod>
          <changefreq>daily</changefreq>
@@ -167,6 +162,11 @@
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_basecore/BaseTools/Source/Python/</loc>
+         <lastmod>2022-12-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://microsoft.github.io/mu/dyn/mu_basecore/BaseTools/Source/Python/FMMT/</loc>
          <lastmod>2022-12-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -261,7 +261,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://microsoft.github.io/mu/dyn/mu_basecore/github/pull_request_template/</loc>
+         <lastmod>2022-12-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_basecore/pytool/Plugin/CharEncodingCheck/Readme/</loc>
+         <lastmod>2022-12-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://microsoft.github.io/mu/dyn/mu_basecore/pytool/Plugin/CodeQL/Readme/</loc>
          <lastmod>2022-12-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -341,7 +351,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://microsoft.github.io/mu/dyn/mu_common_intel_min_platform/CONTRIBUTING/</loc>
+         <lastmod>2022-12-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_common_intel_min_platform/RepoDetails/</loc>
+         <lastmod>2022-12-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://microsoft.github.io/mu/dyn/mu_common_intel_min_platform/github/pull_request_template/</loc>
          <lastmod>2022-12-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -501,6 +521,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://microsoft.github.io/mu/dyn/mu_oem_sample/CONTRIBUTING/</loc>
+         <lastmod>2022-12-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_oem_sample/Docs/OemPkg/</loc>
          <lastmod>2022-12-02</lastmod>
          <changefreq>daily</changefreq>
@@ -521,12 +546,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://microsoft.github.io/mu/dyn/mu_plus/RepoDetails/</loc>
+         <loc>https://microsoft.github.io/mu/dyn/mu_oem_sample/github/pull_request_template/</loc>
          <lastmod>2022-12-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://microsoft.github.io/mu/dyn/mu_plus/pull_request_template/</loc>
+         <loc>https://microsoft.github.io/mu/dyn/mu_plus/CONTRIBUTING/</loc>
+         <lastmod>2022-12-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://microsoft.github.io/mu/dyn/mu_plus/RepoDetails/</loc>
          <lastmod>2022-12-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -1036,6 +1066,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://microsoft.github.io/mu/dyn/mu_plus/github/pull_request_template/</loc>
+         <lastmod>2022-12-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_silicon_arm_tiano/CONTRIBUTING/</loc>
          <lastmod>2022-12-02</lastmod>
          <changefreq>daily</changefreq>
@@ -1052,6 +1087,16 @@
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_silicon_arm_tiano/ArmVirtPkg/PlatformCI/ReadMe/</loc>
+         <lastmod>2022-12-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://microsoft.github.io/mu/dyn/mu_silicon_arm_tiano/DynamicTablesPkg/Readme/</loc>
+         <lastmod>2022-12-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://microsoft.github.io/mu/dyn/mu_silicon_arm_tiano/github/pull_request_template/</loc>
          <lastmod>2022-12-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -1111,7 +1156,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://microsoft.github.io/mu/dyn/mu_tiano_platforms/CODE_OF_CONDUCT/</loc>
+         <loc>https://microsoft.github.io/mu/dyn/mu_silicon_intel_tiano/github/pull_request_template/</loc>
+         <lastmod>2022-12-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://microsoft.github.io/mu/dyn/mu_tiano_platforms/CONTRIBUTING/</loc>
          <lastmod>2022-12-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -1122,16 +1172,6 @@
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_tiano_platforms/SECURITY/</loc>
-         <lastmod>2022-12-02</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://microsoft.github.io/mu/dyn/mu_tiano_platforms/Platforms/OvmfPkg/ReadMe/</loc>
-         <lastmod>2022-12-02</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://microsoft.github.io/mu/dyn/mu_tiano_platforms/Platforms/OvmfPkg/PlatformCI/ReadMe/</loc>
          <lastmod>2022-12-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -1147,6 +1187,16 @@
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_tiano_platforms/Platforms/QemuQ35Pkg/Docs/Development/debugging/</loc>
+         <lastmod>2022-12-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://microsoft.github.io/mu/dyn/mu_tiano_platforms/Platforms/QemuQ35Pkg/Docs/Features/feature_codeql/</loc>
+         <lastmod>2022-12-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://microsoft.github.io/mu/dyn/mu_tiano_platforms/Platforms/QemuQ35Pkg/Docs/Features/feature_config/</loc>
          <lastmod>2022-12-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -1196,7 +1246,57 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://microsoft.github.io/mu/dyn/mu_tiano_platforms/Platforms/QemuSbsaPkg/Docs/QemuSbsa_ReadMe/</loc>
+         <lastmod>2022-12-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://microsoft.github.io/mu/dyn/mu_tiano_platforms/Platforms/QemuSbsaPkg/Docs/Development/building/</loc>
+         <lastmod>2022-12-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://microsoft.github.io/mu/dyn/mu_tiano_platforms/Platforms/QemuSbsaPkg/Docs/Development/debugging/</loc>
+         <lastmod>2022-12-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://microsoft.github.io/mu/dyn/mu_tiano_platforms/Platforms/QemuSbsaPkg/Docs/Features/feature_dfci/</loc>
+         <lastmod>2022-12-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://microsoft.github.io/mu/dyn/mu_tiano_platforms/Platforms/QemuSbsaPkg/Docs/Features/feature_frontpage/</loc>
+         <lastmod>2022-12-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://microsoft.github.io/mu/dyn/mu_tiano_platforms/Platforms/QemuSbsaPkg/Docs/Features/feature_qemurunner/</loc>
+         <lastmod>2022-12-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://microsoft.github.io/mu/dyn/mu_tiano_platforms/Platforms/QemuSbsaPkg/Docs/Features/feature_whea/</loc>
+         <lastmod>2022-12-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://microsoft.github.io/mu/dyn/mu_tiano_platforms/Platforms/QemuSbsaPkg/Library/MsPlatformDevicesLibQemuSbsa/ReadMe/</loc>
+         <lastmod>2022-12-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://microsoft.github.io/mu/dyn/mu_tiano_platforms/UefiDbgExt/readme/</loc>
+         <lastmod>2022-12-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_tiano_platforms/docs/BranchReadme_template/</loc>
+         <lastmod>2022-12-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://microsoft.github.io/mu/dyn/mu_tiano_platforms/github/pull_request_template/</loc>
          <lastmod>2022-12-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -1207,11 +1307,6 @@
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_tiano_plus/RepoDetails/</loc>
-         <lastmod>2022-12-02</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://microsoft.github.io/mu/dyn/mu_tiano_plus/pull_request_template/</loc>
          <lastmod>2022-12-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -1282,6 +1377,11 @@
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_tiano_plus/PrmPkg/Samples/Readme/</loc>
+         <lastmod>2022-12-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://microsoft.github.io/mu/dyn/mu_tiano_plus/github/pull_request_template/</loc>
          <lastmod>2022-12-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
