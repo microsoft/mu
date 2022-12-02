@@ -31,4 +31,4 @@ on:
 
 jobs:
   apply:
-    uses: microsoft/mu_devops/.github/workflows/Labeler.yml@main
+    uses: microsoft/mu_devops/.github/workflows/Labeler.yml@v0.1.0
