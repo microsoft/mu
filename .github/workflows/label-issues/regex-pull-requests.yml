@@ -12,7 +12,7 @@ impact:breaking-change:
   - '\s*-\s*\[\s*[x|X]\s*\] Breaking change\?'
 
 impact:non-functional:
-  - '\s*-\s*\[\s*[x|X]\s*\] Impacts functionality\?'
+  - '\s*-\s*\[\s*(?![x|X])\s*\] Impacts functionality\?'
 
 impact:security:
   - '\s*-\s*\[\s*[x|X]\s*\] Impacts security\?'
