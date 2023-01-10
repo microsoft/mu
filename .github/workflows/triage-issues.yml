@@ -1,7 +1,5 @@
-# This workflow syncs GitHub labels to the common set of labels defined in Mu DevOps.
-#
-# All repos should sync at the same time.
-#   '0 0,12 * * *''
+# This workflow assists with initial triage of new issues by applying
+# labels based on data provided in the issue.
 #
 # NOTE: This file is automatically synchronized from Mu DevOps. Update the original file there
 #       instead of the file in this repo.
@@ -13,15 +11,12 @@
 # SPDX-License-Identifier: BSD-2-Clause-Patent
 #
 
-name: Sync GitHub Labels
+name: Initial Triage for New Issue
 
 on:
-  schedule:
-    # At minute 0 past hour 0 and 12
-    # https://crontab.guru/#0_0,12_*_*_*
-    - cron: '0 0,12 * * *'
-  workflow_dispatch:
+  issues:
+    types: [ opened ]
 
 jobs:
-  sync:
-    uses: microsoft/mu_devops/.github/workflows/LabelSyncer.yml@v1.4.2
+  triage:
+    uses: microsoft/mu_devops/.github/workflows/IssueTriager.yml@v1.4.2

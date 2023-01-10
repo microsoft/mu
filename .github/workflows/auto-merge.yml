@@ -1,5 +1,4 @@
-# This workflow automatically applies labels to GitHub issues and pull requests based on the
-# file paths in a pull request or content in the body of an issue or pull request.
+# This workflow automatically merges pull requests under certain conditions.
 #
 # NOTE: This file is automatically synchronized from Mu DevOps. Update the original file there
 #       instead of the file in this repo.
@@ -14,21 +13,18 @@
 # SPDX-License-Identifier: BSD-2-Clause-Patent
 #
 
-name: Apply Issue and PR Labels
+name: Auto Merge Pull Request
 
 on:
-  issues:
-    types:
-      - edited
-      - opened
   pull_request_target:
     types:
-      - edited
       - opened
       - reopened
       - synchronize
-  workflow_dispatch:
 
 jobs:
-  apply:
-    uses: microsoft/mu_devops/.github/workflows/Labeler.yml@v1.4.2
+  merge_check:
+    if: |
+      github.event.pull_request.user.login == 'dependabot[bot]' || github.event.pull_request.user.login == 'uefibot'
+    uses: microsoft/mu_devops/.github/workflows/AutoMerger.yml@v1.4.2
+    secrets: inherit
