@@ -19,7 +19,7 @@
         <link rel="next" href="../../Overview/Overview/">
       
       <link rel="icon" href="../../../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.3">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.6">
     
     
       
@@ -27,7 +27,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.6b71719e.min.css">
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.558e4712.min.css">
       
         
         <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.2505c338.min.css">
@@ -142,7 +142,7 @@
           <div class="md-search-result__meta">
             Initializing search
           </div>
-          <ol class="md-search-result__list"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
         </div>
       </div>
     </div>
@@ -9111,6 +9111,9 @@ with <a href="https://github.com/microsoft/mu_plus/tree/release/202202/DfciPkg">
 <p>Profiles are represented as delta files on top of the generic profile (for more info see the
 <a href="../../Profiles/Overview/">Profiles</a> doc). In addition, the XML differences between what is set in the UI and the base
 XML can be saved as CSV files.</p>
+<p>The UI tool expects the XML file name to be a prefix to the CSV file name. I.e. my_config_1.xml would match with
+my_config_1_override_all.csv and my_config_1_some_overrides.csv but not i_overrode_my_config_1.csv. This way the CSV
+will be correctly applied to the appropriate loaded XML file.</p>
 <ul>
 <li>Save Full Config Data to Change File
   Save all configuration knobs to the change file, even if they do not have a change over the base YAML/XML. This is
@@ -9207,7 +9210,7 @@ that will look as such:</p>
     <script id="__config" type="application/json">{"base": "../../../../../..", "features": [], "search": "../../../../../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": "0.9.1"}</script>
     
     
-      <script src="../../../../../../assets/javascripts/bundle.ba449ae6.min.js"></script>
+      <script src="../../../../../../assets/javascripts/bundle.51d95adb.min.js"></script>
       
         <script src="https://unpkg.com/mermaid@8.7.0/dist/mermaid.min.js"></script>
       
