@@ -41,6 +41,18 @@ body:
     validations:
       required: true
 
+  - type: dropdown
+    id: needs_maintainer_feedback
+    attributes:
+      label: Do you need maintainer feedback?
+      description: Indicate if you would like a maintainer to provide feedback on this submission.
+      multiple: false
+      options:
+        - No maintainer feedback needed
+        - Maintainer feedback requested
+    validations:
+      required: true
+
   - type: textarea
     id: anything_else
     attributes:

@@ -45,3 +45,10 @@ policy:
             'Someone else needs to make the change',
             'Someone else needs to implement the feature'
             ]
+
+    # Issue Template - Needs Maintainer Feedback Dropdown
+    - id: ['needs_maintainer_feedback']
+      block-list: []
+      label:
+        - name: 'state:needs-maintainer-feedback'
+          keys: ['Maintainer feedback requested']
