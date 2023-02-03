@@ -18,6 +18,11 @@ section of the relevant Project Mu GitHub repo.
 Every Project Mu repo has an `Issues` section. Bug reports, feature requests, and documentation requests can all be
 submitted in the issues section.
 
+## Security Vulnerabilities
+
+Please review the repos `Security Policy` but in general every Project Mu repo has `Private vulnerability reporting`
+enabled.  Please use the security tab to report a potential issue.  
+
 ### Identify Where to Report
 
 Project Mu is distributed across multiple repositories. Use features such as issues and discussions in the repository
