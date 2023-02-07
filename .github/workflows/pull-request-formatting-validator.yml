@@ -1,0 +1,54 @@
+# This workflow validates basic pull request formatting requirements are met.
+#
+# NOTE: This file is automatically synchronized from Mu DevOps. Update the original file there
+#       instead of the file in this repo.
+#
+# - Mu DevOps Repo: https://github.com/microsoft/mu_devops
+# - File Sync Settings: https://github.com/microsoft/mu_devops/blob/main/.sync/Files.yml
+#
+# Copyright (c) Microsoft Corporation.
+# SPDX-License-Identifier: BSD-2-Clause-Patent
+#
+
+name: Validate Pull Request Formatting
+
+on:
+  pull_request_target:
+    types:
+      - edited
+      - opened
+      - reopened
+      - synchronize
+
+jobs:
+  validate_pr:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          prTitle="$(gh api graphql -F owner=$OWNER -F name=$REPO -F pr_number=$PR_NUMBER -f query='
+            query($name: String!, $owner: String!, $pr_number: Int!) {
+              repository(owner: $owner, name: $name) {
+                pullRequest(number: $pr_number) {
+                  title
+                }
+              }
+            }')"
+
+          if [[ "${prTitle}" == *"Personal/"* ]]; then
+            gh pr comment $PR_URL --body "⚠️ Please add a meaningful PR title (remove the 'Personal/' prefix from the title)."
+            echo 'VALIDATION_ERROR=true' >> $GITHUB_ENV
+          fi
+
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          OWNER: ${{ github.repository_owner }}
+          PR_NUMBER: ${{ github.event.number }}
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          REPO: ${{ github.event.repository.name }}
+
+      - name: Check for Validation Errors
+        if: env.VALIDATION_ERROR
+        uses: actions/github-script@v6
+        with:
+          script: |
+            core.setFailed('PR Formatting Validation Check Failed!')
