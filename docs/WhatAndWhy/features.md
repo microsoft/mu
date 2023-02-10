@@ -8,7 +8,6 @@ What major features does Project Mu bring to the table above/beyond EDK2?
 ### Feature List
 
 * Pluggable, cross-device, performance-optimized BDS
-* Device Firmware Configuration Interface (DFCI) - enables practical MDM management
 * PBKDF2-based BIOS password example
 * Support for EKU-based trust anchors during signature validation
 * Microsoft unit test framework
@@ -39,3 +38,13 @@ What major features does Project Mu bring to the table above/beyond EDK2?
 * Progress bar for Capsule Updates
 * TCG FV pre hashing optimization
 * NVME shutdown
+
+### Stand alone Mu Features with separate code repositories
+
+These Project Mu features may be included as submodules or as external git dependency repositories.
+See each code repository for more details
+
+* Device Firmware Configuration Interface (DFCI) - enables practical MDM management [mu_feature_dfci](https://github.com/microsoft/mu_feature_dfci)
+* Manamgement Module Supervisor (protections in Management Mode) - [mu_feature_mm_supv](https://github.com/microsoft/mu_feature_mm_supv)
+* Platform Configuration Support - [mu_feature_config](https://github.com/microsoft/mu_feature_config)
+* Uefi Variable Store (In design phase) - [mu_feature_uefi_variable](https://github.com/microsoft/mu_feature_uefi_variable)

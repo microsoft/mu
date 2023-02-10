@@ -52,7 +52,7 @@ automation and workflow, we can lower the friction and foster a safe place for a
 
 Have a look around this site to see what is Project Mu.  Start by reviewing the details of the community and our
 process. See how to interact and get involved, why it's different, how to work within or extend it, as well as where
-everything is located.  Finally, explore the [Developer Docs](DeveloperDocs/developer_docs.md) if you want to review
+everything is located.  Finally, explore the [Developer Docs](DeveloperDocs\developer_docs.md) if you want to review
 more in-depth details.
 
 ## Having trouble

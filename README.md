@@ -16,7 +16,7 @@ The following gives you a rough overview how to serve it locally:
 * Run `DocBuild.py --Build --Clean --yml mkdocs_base.yml`
 * Run `mkdocs serve`
 
-Now you should be able to open <http://127.0.0.1:8000> on your machine.
+Now you should be able to open <http://127.0.0.1:8000/mu> on your machine.
 
 A more detailed information how to build this project can be found
 [here](https://microsoft.github.io/mu/DeveloperDocs/build_community_docs/).

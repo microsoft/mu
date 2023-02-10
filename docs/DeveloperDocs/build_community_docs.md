@@ -157,7 +157,7 @@ One great feature of mkdocs is how easy it is to locally serve the docs to valid
     mkdocs serve
     ```
 
-2. navigate to 127.0.0.1:8000 in web browser
+2. navigate to http://127.0.0.1:8000/mu in a web browser
 
 !!! important
     If you get an error like ```Config file 'mkdocs.yml' does not exist``` you must run the pre-process step.

@@ -7,3 +7,5 @@ pytest
 pytest-html
 pytest-cov
 flake8
+pep8-naming
+mkdocs-redirects

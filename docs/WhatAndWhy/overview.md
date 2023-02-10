@@ -35,6 +35,11 @@ This repository contains only modules that were originally sourced from TianoCor
 particular platform, but are likely useful to many platforms. The versions contained in this repo are modified
 and/or improved to work with the rest of Project Mu.
 
+## [Mu Feature Dfci](https://github.com/Microsoft/mu_tiano_plus/mu_feature_dfci)
+
+This repository contains only the DFCI feature.
+For more information, take a look at the [DFCI Documentation]https://microsoft.github.io/mu/dyn/mu_feature_dfci/DfciPkg/Docs/Dfci_Feature/)
+
 ## Repo Philosophy
 
 Project Mu makes liberal use of multiple repositories due to the mixture of requirements in the UEFI ecosystem. Some
