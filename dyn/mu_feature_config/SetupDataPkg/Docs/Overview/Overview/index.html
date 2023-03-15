@@ -19,7 +19,7 @@
         <link rel="next" href="../../PlatformIntegration/PlatformIntegrationSteps/">
       
       <link rel="icon" href="../../../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.14">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.3">
     
     
       
@@ -27,7 +27,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.113286f1.min.css">
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.c4a75a56.min.css">
       
         
         <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.a0c5b2b5.min.css">
@@ -87,7 +87,9 @@
     
       
 
-<header class="md-header" data-md-component="header">
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../../../../../.." title="Project Mu" class="md-header__button md-logo" aria-label="Project Mu" data-md-component="logo">
       
@@ -1944,88 +1946,6 @@
 
             
           
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_1_10_1_2" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_9_1_10_1_2" id="__nav_9_1_10_1_2_label" tabindex="0">
-          Test
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_9_1_10_1_2_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_9_1_10_1_2">
-          <span class="md-nav__icon md-icon"></span>
-          Test
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_1_10_1_2_1" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_9_1_10_1_2_1" id="__nav_9_1_10_1_2_1_label" tabindex="0">
-          Shell Test
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="6" aria-labelledby="__nav_9_1_10_1_2_1_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_9_1_10_1_2_1">
-          <span class="md-nav__icon md-icon"></span>
-          Shell Test
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../mu_basecore/MdePkg/Test/ShellTest/MemoryAttributeProtocolFuncTestApp/Readme/" class="md-nav__link">
-        Memory Attribute Protocol Func Test App
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
         </ul>
       </nav>
     </li>
@@ -2740,6 +2660,20 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#configuration-flows" class="md-nav__link">
+    Configuration Flows
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#theory-of-operation" class="md-nav__link">
+    Theory of Operation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#os-based-configuration-app" class="md-nav__link">
     OS Based Configuration App
   </a>
@@ -2767,16 +2701,16 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#uefi-boot-application" class="md-nav__link">
-    UEFI Boot Application
+  <a href="#uefi-conf-shell-application" class="md-nav__link">
+    UEFI Conf Shell Application
   </a>
   
-    <nav class="md-nav" aria-label="UEFI Boot Application">
+    <nav class="md-nav" aria-label="UEFI Conf Shell Application">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#uefi-boot-app-overview" class="md-nav__link">
-    UEFI Boot App Overview
+  <a href="#uefi-conf-shell-app-overview" class="md-nav__link">
+    UEFI Conf Shell App Overview
   </a>
   
 </li>
@@ -2794,50 +2728,16 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#uefi-build-tool-and-plugin" class="md-nav__link">
-    UEFI Build Tool and Plugin
+  <a href="#uefi-build-plugin-and-headers" class="md-nav__link">
+    UEFI Build Plugin and Headers
   </a>
   
-    <nav class="md-nav" aria-label="UEFI Build Tool and Plugin">
+    <nav class="md-nav" aria-label="UEFI Build Plugin and Headers">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#build-tool-and-plugin-overview" class="md-nav__link">
-    Build Tool and Plugin Overview
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#build-process" class="md-nav__link">
-    Build Process
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#uefi-code-change" class="md-nav__link">
-    UEFI Code Change
-  </a>
-  
-    <nav class="md-nav" aria-label="UEFI Code Change">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#project-mu-code" class="md-nav__link">
-    Project Mu Code
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#platform-and-silicon-code" class="md-nav__link">
-    Platform and Silicon Code
+  <a href="#plugin-and-headers-overview" class="md-nav__link">
+    Plugin and Headers Overview
   </a>
   
 </li>
@@ -2851,26 +2751,6 @@
   <a href="#profiles" class="md-nav__link">
     Profiles
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configuration-related-uefi-boot-flow" class="md-nav__link">
-    Configuration Related UEFI Boot Flow
-  </a>
-  
-    <nav class="md-nav" aria-label="Configuration Related UEFI Boot Flow">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#settings-update-boot-flow" class="md-nav__link">
-    Settings Update Boot Flow
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2888,58 +2768,10 @@
   
   
   
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_3_6_1_3" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_9_3_6_1_3" id="__nav_9_3_6_1_3_label" tabindex="0">
-          Platform Integration
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_9_3_6_1_3_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_9_3_6_1_3">
-          <span class="md-nav__icon md-icon"></span>
-          Platform Integration
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
     <li class="md-nav__item">
       <a href="../../PlatformIntegration/PlatformIntegrationSteps/" class="md-nav__link">
-        Platform Integration Steps
+        Platform Integration
       </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../PlatformIntegration/SoftwareComponentOverview/" class="md-nav__link">
-        Software Component Overview
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
     </li>
   
 
@@ -8516,6 +8348,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../mu_tiano_platforms/Platforms/QemuSbsaPkg/QemuVideoDxe/ReadMe/" class="md-nav__link">
+        Qemu Video Dxe
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -9191,6 +9037,20 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#configuration-flows" class="md-nav__link">
+    Configuration Flows
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#theory-of-operation" class="md-nav__link">
+    Theory of Operation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#os-based-configuration-app" class="md-nav__link">
     OS Based Configuration App
   </a>
@@ -9218,16 +9078,16 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#uefi-boot-application" class="md-nav__link">
-    UEFI Boot Application
+  <a href="#uefi-conf-shell-application" class="md-nav__link">
+    UEFI Conf Shell Application
   </a>
   
-    <nav class="md-nav" aria-label="UEFI Boot Application">
+    <nav class="md-nav" aria-label="UEFI Conf Shell Application">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#uefi-boot-app-overview" class="md-nav__link">
-    UEFI Boot App Overview
+  <a href="#uefi-conf-shell-app-overview" class="md-nav__link">
+    UEFI Conf Shell App Overview
   </a>
   
 </li>
@@ -9245,50 +9105,16 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#uefi-build-tool-and-plugin" class="md-nav__link">
-    UEFI Build Tool and Plugin
+  <a href="#uefi-build-plugin-and-headers" class="md-nav__link">
+    UEFI Build Plugin and Headers
   </a>
   
-    <nav class="md-nav" aria-label="UEFI Build Tool and Plugin">
+    <nav class="md-nav" aria-label="UEFI Build Plugin and Headers">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#build-tool-and-plugin-overview" class="md-nav__link">
-    Build Tool and Plugin Overview
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#build-process" class="md-nav__link">
-    Build Process
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#uefi-code-change" class="md-nav__link">
-    UEFI Code Change
-  </a>
-  
-    <nav class="md-nav" aria-label="UEFI Code Change">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#project-mu-code" class="md-nav__link">
-    Project Mu Code
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#platform-and-silicon-code" class="md-nav__link">
-    Platform and Silicon Code
+  <a href="#plugin-and-headers-overview" class="md-nav__link">
+    Plugin and Headers Overview
   </a>
   
 </li>
@@ -9302,26 +9128,6 @@
   <a href="#profiles" class="md-nav__link">
     Profiles
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configuration-related-uefi-boot-flow" class="md-nav__link">
-    Configuration Related UEFI Boot Flow
-  </a>
-  
-    <nav class="md-nav" aria-label="Configuration Related UEFI Boot Flow">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#settings-update-boot-flow" class="md-nav__link">
-    Settings Update Boot Flow
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -9351,14 +9157,17 @@
 <li><a href="#terms">Terms</a></li>
 <li><a href="#reference-documents">Reference Documents</a></li>
 <li><a href="#introduction">Introduction</a></li>
+<li><a href="#configuration-flows">Configuration Flows</a></li>
+<li><a href="#theory-of-operation">Theory of Operation</a></li>
 <li><a href="#os-based-configuration-app">OS Based Configuration App</a></li>
-<li><a href="#uefi-boot-application">UEFI Boot Application</a></li>
-<li><a href="#uefi-build-tool-and-plugin">UEFI Build Tool and Plugin</a></li>
-<li><a href="#uefi-code-change">UEFI Code Change</a></li>
-<li><a href="#configuration-related-uefi-boot-flow">Configuration Related UEFI Boot Flow</a></li>
+<li><a href="#uefi-conf-shell-application">UEFI Conf Shell Application</a></li>
+<li><a href="#uefi-build-plugin-and-headers">UEFI Build Plugin and Headers</a></li>
+<li><a href="#profiles">Profiles</a></li>
 </ul>
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">&para;</a></h2>
-<p>This document is intended to describe the Setup Variable design on applicable platforms.</p>
+<p>This document describes the configuration knob flow for consumers of mu_feature_config. This is an opinionated approach
+to managing platform configuration with reusable core functionality, standard interfaces, and a layered approach to
+setup config.</p>
 <h2 id="revision-history">Revision History<a class="headerlink" href="#revision-history" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -9384,6 +9193,11 @@
 <td>9/15/2022</td>
 <td>Add Profile Support</td>
 </tr>
+<tr>
+<td>Oliver Smith-Denny</td>
+<td>2/21/2023</td>
+<td>Move to XML Spec</td>
+</tr>
 </tbody>
 </table>
 <h2 id="terms">Terms<a class="headerlink" href="#terms" title="Permanent link">&para;</a></h2>
@@ -9400,12 +9214,20 @@
 <td>Unified Extensible Firmware Interface</td>
 </tr>
 <tr>
-<td>DFCI</td>
-<td>Device Firmware Configuration Interface</td>
-</tr>
-<tr>
 <td>BDS</td>
 <td>Boot Device Selection</td>
+</tr>
+<tr>
+<td>FW</td>
+<td>Firmware</td>
+</tr>
+<tr>
+<td>FMP</td>
+<td>Firmware Management Protocol</td>
+</tr>
+<tr>
+<td>HII</td>
+<td>Human Interface Infrastructure</td>
 </tr>
 </tbody>
 </table>
@@ -9419,192 +9241,119 @@
 </thead>
 <tbody>
 <tr>
-<td>Slim Bootloader Repo</td>
-<td><a href="https://github.com/slimbootloader/slimbootloader">https://github.com/slimbootloader/slimbootloader</a></td>
-</tr>
-<tr>
-<td>Configuration YAML Spec</td>
-<td><a href="https://slimbootloader.github.io/specs/config.html#configuration-description-yaml-explained">https://slimbootloader.github.io/specs/config.html#configuration-description-yaml-explained</a></td>
-</tr>
-<tr>
-<td>Project Mu Document</td>
+<td>Project Mu Documentation</td>
 <td><a href="https://microsoft.github.io/mu/">https://microsoft.github.io/mu/</a></td>
-</tr>
-<tr>
-<td>DFCI Documents</td>
-<td><a href="https://microsoft.github.io/mu/dyn/mu_plus/DfciPkg/Docs/Dfci_Feature/">https://microsoft.github.io/mu/dyn/mu_plus/DfciPkg/Docs/Dfci_Feature/</a></td>
-</tr>
-<tr>
-<td>Configuration Apps Repo</td>
-<td><a href="https://windowspartners.visualstudio.com/MSCoreUEFI/_git/mu_config_apps">https://windowspartners.visualstudio.com/MSCoreUEFI/_git/mu_config_apps</a></td>
 </tr>
 </tbody>
 </table>
 <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
-<p>This document is describing how the configuration framework functions and what changes have been made.</p>
-<p>The proposition of this design intends to facilitate development usage and provide secure usage for production deployment.</p>
-<p>HII in the system, setup browser in system and/or other advance display capabilities has been convoluted and pertain poor
-portability. Hence proposed workflow steps away from existing UI applications, HII based form rendering models on the target
-system and adopts data centric methods to achieve the same results.</p>
-<p>In addition, tooling workflows are also proposed to enforce security and maintainability rules and best practices for data
-accessability, version migration, etc.</p>
-<p><em>Note: The technical details in this document is meant to reflect the current status of design. Certain topics are still
-under discussion and subject to change.</em></p>
+<p>Classic setup configuration workflows use HII and FW based UI menus to configure knobs. These approaches are convoluted
+and are not easily ported across platforms as they contain very platform specific code. In addition, in many
+environments, a UI based configuration menu is inconvenient and not scalable, such as in a server system, where an
+administrator may be trying to update settings across 10,000 nodes.</p>
+<p>This document describes the mu_feature_config approach to a scalable, portable, and extensible configuration system
+using a data centric model to flow data between core, platform, and silicon components.</p>
+<p>In addition, tooling workflows are introduced to manage the end to end configuration flow, from changing a knob to
+applying it in a target system.</p>
+<p>mu_feature_config is targeted at platforms where
+<a href="https://microsoft.github.io/mu/dyn/mu_feature_dfci/DfciPkg/Docs/Dfci_Feature/">DFCI</a> is not applicable, primarily
+where the concept of owners and managed systems is not used.</p>
+<p>Project Mu does not require the use of mu_feature_config, however this is the recommended approach to using config
+with project Mu.</p>
+<h2 id="configuration-flows">Configuration Flows<a class="headerlink" href="#configuration-flows" title="Permanent link">&para;</a></h2>
+<p><img alt="UEFI Build" src="Images/mu_feature_configworkflows.png" /></p>
+<h2 id="theory-of-operation">Theory of Operation<a class="headerlink" href="#theory-of-operation" title="Permanent link">&para;</a></h2>
+<p>Project Mu's configuration model provides a flexible way for a platform to define and modify configuration knobs. These
+knobs are kept in memory in Policy Service, so the option is available to the OEM/platform to have statically defined,
+unchangeable configuration knobs (by not consulting variable storage when constructing the config/silicon policies).
+There exists support for multiple configuration profiles that may be chosen at run time.</p>
+<p>It is expected that multiple silicon components run in early PEI to publish default silicon policies for a given
+subsystem. At the same time (or at least without a dependency between the two) the OEM Config Policy Creator runs to
+consume the autogenerated config data from the platform and convert it to a config policy.</p>
+<p>Following the OEM Config Policy Creator and the default silicon policy producers, one or more Config Policy to Silicon
+Policy mappers is expected to run, to convert, in a platform specific way, the config policy to silicon policy. This is
+not necessarily 1:1, as in the case where the silicon policy may have 4 USB knobs, but the config policy only has 2, as
+this is all that is exposed to the user.</p>
+<p>Following this, each final consumer simply interacts with the relevant silicon policy to that component that has been
+overridden by the config policy to silicon policy mapper. This may be through autogenerated getters if using verified
+policy or by directly accessing structures returned from Policy Service.</p>
 <h2 id="os-based-configuration-app">OS Based Configuration App<a class="headerlink" href="#os-based-configuration-app" title="Permanent link">&para;</a></h2>
 <h3 id="os-configuration-app-overview">OS Configuration App Overview<a class="headerlink" href="#os-configuration-app-overview" title="Permanent link">&para;</a></h3>
-<p><img alt="Conf Editor" src="Images/conf_edit_view.png" /></p>
+<p><img alt="Config Editor" src="Images/conf_edit_view.png" /></p>
 <ul>
-<li>The original framework of configuration editor is derived from Intel's open sourced project Slim Bootloader (more information
-in <a href="#reference-documents">References</a>). This framework provides graphical user interface on the host side and extensive
-flexibility to design and optimize configuration per platform usage.</li>
-<li><a href="../../../Common/MU_CONF_APPS/SetupDataPkg/Tools/ConfigEditor.py">Configuration editor</a> is authored in Python which is
-host platform architecture independent and easy to update per proprietary requirements per projects need.</li>
-<li>The configuration is driven by YAML and XML files, which can be designed per platform usage. Per YAML specification,
-please reference to Configuration YAML Spec in <a href="#reference-documents">References</a>.</li>
-<li>The slim bootloader framework provides data structure conversion tooling from YAML to C header files, YAML to binary
-data blob out of the box. XML extensions have been added to support additional use cases. More extensions,
-such as output data signing, tooling servicing, will be added during the development process.</li>
+<li>The GUI configuration editor is derived from the open source project Slim Bootloader. This framework provides
+a graphical user interface on the host side and extensive flexibility to design and optimize configuration per platform
+usage.</li>
+<li><a href="../../Tools/ConfigEditor.py">Config Editor</a> is authored in Python which is host platform architecture independent and
+easy to update to accommodate addition needs.</li>
+<li>The configuration is driven by XML files, which can be designed per platform usage. Reference the
+<a href="../../ConfigurationFiles/ConfigurationFiles/">Configuration XML Spec</a> for details on the schema.</li>
+<li>The mu_feature_config framework provides data structure conversion tooling from XML to C header files, binary, change
+files, and SVD format (base64 encoded to send via serial to Conf App).</li>
 </ul>
 <h3 id="os-configuration-workflow">OS Configuration Workflow<a class="headerlink" href="#os-configuration-workflow" title="Permanent link">&para;</a></h3>
 <p><img alt="Conf Workflow" src="Images/conf_edit_work_flow.png" /></p>
 <ul>
-<li>Whenever a configuration change is needed, configuration editor can be launched on a local workstation.</li>
-<li>Through the UI tool, one can update supported option as needed and export updated options as binary blob. <em>Updated options
-can also be saved as "profile" that can be loaded into editor tool for faster configuration deployment</em></li>
-<li>The exported binary blob will be encoded and signed with platform designated certificates and formatted to DFCI standard
-packet. (more about DFCI please see <a href="#reference-documents">References</a>).</li>
-<li>DFCI standard packets can be applied to target system through USB sticks, OS application on target systems, or serial
-transport through UEFI boot application (more about UEFI configuration app <a href="#uefi-boot-application">here</a>)</li>
+<li>To change configuration on a target system, a user can open the relevant XML in Config Editor on their local
+workstation.</li>
+<li>In the UI tool, the user can manipulate fields as desired to achieve target config. This can then be saved to a change
+file, binary, or SVD.</li>
+<li>The change file can be consumed as a configuration profile. For more details see the
+<a href="../../Profiles/Overview/">Profiles doc</a>.</li>
+<li>The variable list binary, saved in .vl format, can be applied to a running system via dmpstore in the EFI shell,
+or via <a href="../../Tools/WriteConfVarListToUefiVars.py">WriteConfVarListToUefiVars.py</a>.</li>
+<li>The SVD can be applied to a running system via USB/serial via mu_feature_config's Conf App.</li>
+<li>Changes to the XML itself will result in a change to the default configuration options of a platform.</li>
 </ul>
-<h2 id="uefi-boot-application">UEFI Boot Application<a class="headerlink" href="#uefi-boot-application" title="Permanent link">&para;</a></h2>
-<h3 id="uefi-boot-app-overview">UEFI Boot App Overview<a class="headerlink" href="#uefi-boot-app-overview" title="Permanent link">&para;</a></h3>
+<h2 id="uefi-conf-shell-application">UEFI Conf Shell Application<a class="headerlink" href="#uefi-conf-shell-application" title="Permanent link">&para;</a></h2>
+<h3 id="uefi-conf-shell-app-overview">UEFI Conf Shell App Overview<a class="headerlink" href="#uefi-conf-shell-app-overview" title="Permanent link">&para;</a></h3>
 <p><img alt="Conf App" src="Images/app_view_menu.png" /></p>
 <p>As stated in the <a href="#introduction">introduction section</a>, this proposal intends to replace the existing UI applications,
-HII forms and other advanced display support. Instead, a Configuration UEFI application will be provided in lieu of traditional
-UI App to configuration system behavior.</p>
+HII forms, and other advanced display support. Instead, a Configuration UEFI application will be provided in lieu of
+a traditional UI App to configuration system behavior.</p>
 <ul>
-<li>This application is optimized for serial connection. All input and output would go through UEFI standard console, which
-is connected to BMC through UART.<br />
-Note: Available input devices will be:</li>
-<li><strong>Physical USB Keyboard</strong>: This will be used for standard keyboard</li>
-<li><strong>Virtual USB Keyboard</strong>: This will be used with BMC based virtual keyboard for remote KVM.</li>
-<li><strong>Serial console for SAC</strong>: this uses VT100 terminal type for UEFI setup/Windows EMC or SAC.</li>
-<li>The application will provide basic information regarding system status:
-<img alt="Conf App" src="Images/app_view_info.png" /></li>
+<li>This application is optimized for serial connection. Primary input and output is intended to go through the UEFI
+standard serial console.  </li>
+<li>The application will provide basic information regarding system status it receives via FMP:</li>
 <li>Firmware version</li>
 <li>Date/Time</li>
-<li>Identities</li>
-<li>Settings</li>
 <li>A few critical operations is also provided in this application:</li>
 <li>Secure Boot enable/disable:
   <img alt="Conf App" src="Images/app_view_secure.png" /></li>
 <li>Select available boot options:
   <img alt="Conf App" src="Images/app_view_boot.png" /></li>
-<li>Apply configuration options from OS configuration application:
-  <img alt="Conf App" src="Images/conf_update_view.png" /></li>
+<li>Apply configuration options from SVD generated from Config Editor:
+  <img alt="Conf App" src="Images/app_view_update.png" /></li>
 <li>USB Stick</li>
-<li>Network</li>
 <li>Serial console</li>
+<li>Dump running configuration in SVD format (which can then be loaded on top of an XML in the Config Editor to view).
+  <img alt="Conf App" src="Images/app_view_dump.png" /></li>
+<li>Dump Current Configuration</li>
 </ul>
 <h3 id="uefi-configuration-workflow">UEFI Configuration Workflow<a class="headerlink" href="#uefi-configuration-workflow" title="Permanent link">&para;</a></h3>
-<p><img alt="Conf Update" src="Images/app_work_flow.png" /></p>
-<p>With the exported configuration change from OS configuration application, this change can be applied within UEFI app:</p>
+<p>The SVD saved from the Config Editor can be applied via Conf App:</p>
 <ul>
-<li><strong>USB Stick</strong>: Store the generated base64 encoded file from previous step and select <code>Update Setup Configuration</code> -&gt;
-<code>Update from USB Stick</code> from UEFI App.</li>
-<li><strong>Serial Port</strong>: Open the generated base64 encoded file, and select <code>Update Setup Configuration</code> -&gt; <code>Update from Serial
-port</code> from UEFI App. Then paste the encoded string into serial console.</li>
+<li><strong>USB Stick</strong>: Store the SVD file and select <code>Update Setup Configuration</code> -&gt; <code>Update from USB Stick</code> from Conf App.</li>
+<li><strong>Serial Port</strong>: Open the SVD, copy it, and select <code>Update Setup Configuration</code> -&gt; <code>Update from Serial Port</code> from
+Conf App. Then paste the SVD into the serial terminal and hit enter.</li>
 </ul>
-<h2 id="uefi-build-tool-and-plugin">UEFI Build Tool and Plugin<a class="headerlink" href="#uefi-build-tool-and-plugin" title="Permanent link">&para;</a></h2>
-<h3 id="build-tool-and-plugin-overview">Build Tool and Plugin Overview<a class="headerlink" href="#build-tool-and-plugin-overview" title="Permanent link">&para;</a></h3>
-<p>During UEFI build time, toolings will be provided as plugins to integrate configuration related data and enforce best practices.</p>
-<p>Toolings from Project will cover:</p>
-<ul>
-<li>Converting designed YAML file into binary blob to be included in UEFI firmware volume.</li>
-<li>Generate C header files, if requested, for platform code consumption, and populate version transition templates.</li>
-</ul>
-<h3 id="build-process">Build Process<a class="headerlink" href="#build-process" title="Permanent link">&para;</a></h3>
-<p><img alt="UEFI Build" src="Images/build_work_flow.png" /></p>
-<ul>
-<li>During pre-build step, customized platform YAML file will be used by Project MU plugin to derive configuration header
-files for platform to consume during development/runtime.</li>
-<li>Platform will hold a hash value in PlatformBuild.py for all YAML derived C header files for this platform. Project MU
-plugin will generate temporary C header files per build to compare hash match.</li>
-<li>If hash changed, a template of library will be generated and allow developer to author transition code if needed.</li>
-<li>If hash match, build can proceed as usual.</li>
-<li>At post-build, a binary blob with default configuration values will be derived from YAML files and inserted in UEFI
-firmware volume.</li>
-</ul>
-<h2 id="uefi-code-change">UEFI Code Change<a class="headerlink" href="#uefi-code-change" title="Permanent link">&para;</a></h2>
-<h3 id="project-mu-code">Project Mu Code<a class="headerlink" href="#project-mu-code" title="Permanent link">&para;</a></h3>
-<ul>
-<li><strong>BDS</strong>: Project MU BDS will provide specific event signals and platform entrypoints that are customized for DFCI settings.</li>
-<li><strong>DFCI</strong>: DFCI framework will be used to accept and validate incoming configuration against platform identity associated
-certificates.</li>
-<li><strong>MFCI</strong>: The MFCI framework will be used to check what mode the system is in, manufacturing mode or customer mode.</li>
-<li><strong>Settings Manager</strong>: Settings manager together with DFCI framework would apply the configuration data through platform
-configured settings providers.</li>
-<li><strong>Policy Manager</strong>: Policy manager controls the policy publication and revoke. Silicon policy and platform configuration
-should all conform to policy setter and getter APIs.</li>
-<li><strong>Profile Manager</strong>: ConfProfileMgrDxe validates and enforces profiles (collections of configuration settings for
-different use cases) when the system is in MFCI Customer Mode.</li>
-</ul>
-<h3 id="platform-and-silicon-code">Platform and Silicon Code<a class="headerlink" href="#platform-and-silicon-code" title="Permanent link">&para;</a></h3>
-<ul>
-<li><strong>Silicon Drivers</strong>: Silicon code needs to be updated to pull policy settings from silicon policy data when needed.</li>
-<li><strong>Platform Policy Drivers</strong>: Platform owners will first create PEI modules to populate default silicon policy into Policy
-managers provided by Project MU.</li>
-<li><strong>Platform YAML Configurations</strong>: Platform owners should then design the configuration YAML files. This would expose
-certain configuration "knobs" from silicon policy to be configurable through setup variable flow.</li>
-<li><strong>Platform Settings Providers</strong>: Accordingly, platform owners will develop modules to parse the configuration data and
-translate the exposed configurations in YAML file to/from standard silicon policies through the interface of Settings
-Provider (see example from <a href="../../../Common/MU/DfciPkg/Library/DfciSampleProvider/DfciSampleProvider.c">Project MU</a>).</li>
-</ul>
+<h2 id="uefi-build-plugin-and-headers">UEFI Build Plugin and Headers<a class="headerlink" href="#uefi-build-plugin-and-headers" title="Permanent link">&para;</a></h2>
+<h3 id="plugin-and-headers-overview">Plugin and Headers Overview<a class="headerlink" href="#plugin-and-headers-overview" title="Permanent link">&para;</a></h3>
+<p>During UEFI build time, the <a href="../../Plugins/UpdateConfigHdr/UpdateConfigHdr.py">UpdateConfigHdr build plugin</a> will run,
+consume the XML, and produce C header files for config consumers, silicon policy creators, and platform data producers.</p>
+<p>All three autogenerated headers will use standard structures defined in
+<a href="../../Include/ConfigStdStructDefs.h">ConfigStdStructsDef.h</a>.</p>
+<p>The header for consumers will contain stubs for the getters and the platform specific config data structures. This file
+is intended to be included before the other two headers files so they may leverage definitions here.</p>
+<p>The header for silicon policy creators includes definitions for the getters (indexing into the config policy).</p>
+<p>The header for the platform data producer contains the profile and default config data. It is intended to be included in
+a platform level driver that just includes the client and data headers so that the OEM level config policy creator
+can link in the platform level data. An example is provided in
+<a href="https://github.com/microsoft/mu_oem_sample/blob/HEAD/OemPkg/OemConfigPolicyCreatorPei/OemConfigPolicyCreatorPei.c">mu_oem_sample</a>.</p>
+<p>Learn more about the UpdateConfigHdr plugin, the generated headers, and the config/silicon policy creators in the
+<a href="../../PlatformIntegration/PlatformIntegrationSteps/">Platform Integration doc</a>.</p>
 <h2 id="profiles">Profiles<a class="headerlink" href="#profiles" title="Permanent link">&para;</a></h2>
 <p>See the <a href="../../Profiles/Overview/">Profiles doc</a> for details.</p>
-<h2 id="configuration-related-uefi-boot-flow">Configuration Related UEFI Boot Flow<a class="headerlink" href="#configuration-related-uefi-boot-flow" title="Permanent link">&para;</a></h2>
-<p><img alt="UEFI Build" src="Images/uefi_boot_flow.png" /></p>
-<h3 id="settings-update-boot-flow">Settings Update Boot Flow<a class="headerlink" href="#settings-update-boot-flow" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Formatted update configuration data from USB, serial port or OS application will first be stored to UEFI variable storage,
-followed by a system reboot.</li>
-<li>On the next reboot, the formatted configuration data from UEFI variable storage will be authenticated (if the
-<a href="https://github.com/microsoft/mu_plus/blob/release/202202/DfciPkg/Docs/PlatformIntegration/PlatformIntegrationOverview.md#unsigned-settings-packets">DFCI Unsigned Settings</a>
-feature is not used) and decoded by DFCI framework. Decoded configuration data will be dispatched to corresponding
-platform authored setting provider.</li>
-<li>Platform configuration setting provider will perform sanity check on incoming data and store this data as UEFI variable
-with the following specifications (source code reference <a href="../../Include/Library/ConfigDataLib.h">here</a>),
-followed by a system reboot:</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>Variable Name</th>
-<th>Variable GUID</th>
-<th>Variable Attributes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>CONF_POLICY_BLOB</code></td>
-<td><code>gSetupConfigPolicyVariableGuid</code></td>
-<td><code>EFI_VARIABLE_NON_VOLATILE + EFI_VARIABLE_BOOTSERVICE_ACCESS</code></td>
-</tr>
-<tr>
-<td><code>Device.ConfigData.TagID_%08X</code></td>
-<td><code>gSetupConfigPolicyVariableGuid</code></td>
-<td><code>EFI_VARIABLE_NON_VOLATILE + EFI_VARIABLE_BOOTSERVICE_ACCESS</code></td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>Upon a new boot, entities other than UEFI can consume the aforementioned variable.</li>
-<li>After entering UEFI firmware, platform policy module will pull previously stored configuration data variable from UEFI
-variable and parse the data blob based on YAML derived C header files.</li>
-<li>If any configuration change is required, platform should update the corresponding silicon policy through policy manager.</li>
-<li>When silicon drivers load, these drivers should fetch latest policy through policy manager and configure hardware resource
-accordingly.</li>
-</ul>
 
 
 
@@ -9664,7 +9413,7 @@ accordingly.</li>
     <script id="__config" type="application/json">{"base": "../../../../../..", "features": [], "search": "../../../../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": "0.9.1"}</script>
     
     
-      <script src="../../../../../../assets/javascripts/bundle.2a6f1dda.min.js"></script>
+      <script src="../../../../../../assets/javascripts/bundle.efa0ade1.min.js"></script>
       
         <script src="https://unpkg.com/mermaid@8.7.0/dist/mermaid.min.js"></script>
       
