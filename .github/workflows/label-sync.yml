@@ -24,4 +24,4 @@ on:
 
 jobs:
   sync:
-    uses: microsoft/mu_devops/.github/workflows/LabelSyncer.yml@v2.2.0
+    uses: microsoft/mu_devops/.github/workflows/LabelSyncer.yml@v2.3.0
