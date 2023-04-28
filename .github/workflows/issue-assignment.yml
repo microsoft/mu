@@ -1,5 +1,4 @@
-# This workflow assists with initial triage of new issues by applying
-# labels based on data provided in the issue.
+# This workflow provides actions that should be applied when an issue is assigned.
 #
 # NOTE: This file is automatically synchronized from Mu DevOps. Update the original file there
 #       instead of the file in this repo.
@@ -11,12 +10,12 @@
 # SPDX-License-Identifier: BSD-2-Clause-Patent
 #
 
-name: Initial Triage for New Issue
+name: React to Issue Assignment
 
 on:
   issues:
-    types: [ opened ]
+    types: assigned
 
 jobs:
-  triage:
-    uses: microsoft/mu_devops/.github/workflows/IssueTriager.yml@v2.5.1
+  apply:
+    uses: microsoft/mu_devops/.github/workflows/IssueAssignment.yml@v2.5.1
