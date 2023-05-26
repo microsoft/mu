@@ -19,7 +19,7 @@
         <link rel="next" href="../../QemuQ35Pkg/ReadMe/">
       
       <link rel="icon" href="../../../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.8">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.14">
     
     
       
@@ -27,10 +27,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.ded33207.min.css">
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.85bb2934.min.css">
       
         
-        <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.a0c5b2b5.min.css">
+        <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.a6bdf11c.min.css">
       
       
 
@@ -2989,9 +2989,29 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#adding-dfci-to-your-platform-build" class="md-nav__link">
+    Adding DFCI to your platform build
+  </a>
+  
+    <nav class="md-nav" aria-label="Adding DFCI to your platform build">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enabling-http-connections" class="md-nav__link">
+    Enabling HTTP Connections
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#platform-dsc-statements" class="md-nav__link">
     Platform DSC statements
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -9068,9 +9088,29 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#adding-dfci-to-your-platform-build" class="md-nav__link">
+    Adding DFCI to your platform build
+  </a>
+  
+    <nav class="md-nav" aria-label="Adding DFCI to your platform build">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enabling-http-connections" class="md-nav__link">
+    Enabling HTTP Connections
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#platform-dsc-statements" class="md-nav__link">
     Platform DSC statements
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -9237,11 +9277,9 @@ located by your pre-boot UEFI menu application (e.g. "FrontPage") and displayed.
 <p>Setting providers is how a platform provides a setting to DFCI</p>
 <p><a href="../DfciSettingProviders/">Setting detailed overview</a></p>
 <h2 id="mu-changes">Mu Changes<a class="headerlink" href="#mu-changes" title="Permanent link">&para;</a></h2>
+<p>DFCI Recovery service uses HTTPS certificates with Subject Alternative Names. This requires a recent version of NetworkPkg.</p>
+<p>To verify you have the correct version, verify that your version of NetworkPkg has one of the following changes:</p>
 <ul>
-<li>
-<p>DFCI Recovery service uses HTTPS certificates with Subject Alternative Names.  This requires a recent version of NetworkPkg.
-To verify you have the correct version, verify that your version of NetworkPkg has one of the following changes:</p>
-</li>
 <li>
 <p><a href="https://github.com/microsoft/mu_basecore/commit/931ff1a45ce13a6a8c3e296f89c6de21f23a17ed#diff-620e10fa41a63814688b931d19fefa89R628">mu_basecore - removal of EFI_TLS_VERIFY_FLAG_NO_WILDCARDS from TlsConfigureSession()</a>.</p>
 </li>
@@ -9258,14 +9296,40 @@ To verify you have the correct version, verify that your version of NetworkPkg h
 <p><a href="https://github.com/tianocore/edk2/commit/9dd964f5e5c5595a1acd5eb438fb088327db86fa"><em>edk2</em> Ensure ECC Ciphers are included (minimum version)</a></p>
 </li>
 </ul>
-<h2 id="platform-dsc-statements">Platform DSC statements<a class="headerlink" href="#platform-dsc-statements" title="Permanent link">&para;</a></h2>
-<p>Adding DFCI to your system consists of:</p>
+<h2 id="adding-dfci-to-your-platform-build">Adding DFCI to your platform build<a class="headerlink" href="#adding-dfci-to-your-platform-build" title="Permanent link">&para;</a></h2>
+<p>Adding DFCI to your platform build consists of:</p>
 <ol>
-<li>Write your settings providers. Use <strong>DfciPkg/Library/DfciSampleProvider</strong>.</li>
-<li>Writing three library classes for the DfciDeviceIdSupportLib, DfciGroupLib, and DfciUiSupportLib.</li>
-<li>Adding the DSC sections below.</li>
-<li>Adding the FDF sections below.</li>
+<li>Writing your settings providers<ul>
+<li>See <a href="../DfciSettingProviders/">DfciSettingProviders</a> for an example.</li>
+</ul>
+</li>
+<li>Writing three library classes:<ul>
+<li><a href="../DfciDeviceIdSupportLib/">DfciDeviceIdSupportLib</a></li>
+<li><a href="../DfciGroups/">DfciGroupLib</a></li>
+<li><a href="../DfciUiSupportLib/">DfciUiSupportLib</a></li>
+</ul>
+</li>
+<li><a href="#enabling-http-connections">Ensure you have enabled HTTP Connections in your platform build</a></li>
+<li><a href="#platform-dsc-statements">Adding the DSC sections below</a></li>
+<li><a href="#platform-fdf-statements">Adding the FDF sections below</a></li>
 </ol>
+<h3 id="enabling-http-connections">Enabling HTTP Connections<a class="headerlink" href="#enabling-http-connections" title="Permanent link">&para;</a></h3>
+<p>Ensure that you have the following PCD set in your <code>NetworkPcds.dsc.inc</code></p>
+<blockquote>
+<p>NetworkPcds.dsc.inc</p>
+<div class="highlight"><pre><span></span><code>!if $(NETWORK_ALLOW_HTTP_CONNECTIONS) == TRUE
+  gEfiNetworkPkgTokenSpaceGuid.PcdAllowHttpConnections|TRUE
+!endif
+</code></pre></div>
+</blockquote>
+<p>Then in your platform DSC file such as <code>QemuQ35.dsc</code> add the following to your define section:</p>
+<blockquote>
+<p>QemuQ35.dsc</p>
+<div class="highlight"><pre><span></span><code>[Defines]
+    DEFINE NETWORK_ALLOW_HTTP_CONNECTIONS = TRUE
+</code></pre></div>
+</blockquote>
+<h3 id="platform-dsc-statements">Platform DSC statements<a class="headerlink" href="#platform-dsc-statements" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code>[LibraryClasses.XXX]
   DfciXmlSettingSchemaSupportLib|DfciPkg/Library/DfciXmlSettingSchemaSupportLib/DfciXmlSettingSchemaSupportLib.inf
   DfciXmlPermissionSchemaSupportLib|DfciPkg/Library/DfciXmlPermissionSchemaSupportLib/DfciXmlPermissionSchemaSupportLib.inf
@@ -9421,7 +9485,7 @@ Unsigned_Settings_apply.bin file, and restart the system.</p>
     <script id="__config" type="application/json">{"base": "../../../../../..", "features": [], "search": "../../../../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": "0.9.1"}</script>
     
     
-      <script src="../../../../../../assets/javascripts/bundle.51198bba.min.js"></script>
+      <script src="../../../../../../assets/javascripts/bundle.b4d07000.min.js"></script>
       
         <script src="https://unpkg.com/mermaid@8.7.0/dist/mermaid.min.js"></script>
       

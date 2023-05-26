@@ -19,7 +19,7 @@
         <link rel="next" href="Library/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.8">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.14">
     
     
       
@@ -27,10 +27,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.ded33207.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.85bb2934.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.a0c5b2b5.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.a6bdf11c.min.css">
       
       
 
@@ -2325,6 +2325,13 @@
           <li class="md-nav__item">
   <a href="#dxe-phase" class="md-nav__link">
     DXE Phase
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#standalone-mm" class="md-nav__link">
+    Standalone MM
   </a>
   
 </li>
@@ -9274,6 +9281,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#standalone-mm" class="md-nav__link">
+    Standalone MM
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -9498,59 +9512,84 @@ and freed when removed or expanded.</p>
 <p>Like the PEIM, the DXE driver will install/reinstall a NULL protocol with the
 given policies GUID when it is created or updated to allow for notification and
 dispatch on the policy availability.</p>
+<h3 id="standalone-mm">Standalone MM<a class="headerlink" href="#standalone-mm" title="Permanent link">&para;</a></h3>
+<p>Like the DXE phase, the MM policy service will ingest any policies from the HOB
+list for architectures. The MM policy service is implemented identically to the
+DXE phase module with the exception of using the MM specific protocols.</p>
+<p>Policies in the MM service are isolated from PEI and DXE. The MM module will ingest
+any policies available in the hob list from PEI where applicable but no policies
+created or modified by PEI or DXE after Standalone MM has been launched will be
+available from the MM policy service. Similarly, no policy created or edited in
+the MM policy service will be readable from the PEI or DXE policies services.</p>
+<p>Policies are not shared with the standalone MM module after initialization. Any
+policy created in MM will not be readable by DXE and PEI, and any policy made after
+MM initialization will not be readable from MM.</p>
 <h2 id="yaml-based-policy-definition">YAML Based Policy Definition<a class="headerlink" href="#yaml-based-policy-definition" title="Permanent link">&para;</a></h2>
-<p>This section provides an overview of YAML based policy definition and how platform can
-integrate them.</p>
+<p>This section provides an overview of YAML based policy definition and how
+platform can integrate them.</p>
 <h3 id="yaml-definition-for-policy-structures">YAML Definition for Policy Structures<a class="headerlink" href="#yaml-definition-for-policy-structures" title="Permanent link">&para;</a></h3>
-<p>When used, the YAML based policy definition is treated as the ground truth of policy structure
-and default data. The YAML parser is largely inheritted from <a href="https://github.com/slimbootloader/slimbootloader">Intel's slim bootloader</a>.
+<p>When used, the YAML based policy definition is treated as the ground truth of
+policy structure and default data. The YAML parser is largely inheritted from
+<a href="https://github.com/slimbootloader/slimbootloader">Intel's slim bootloader</a>.
 Thus, the YAML syntax follows the specification defined in <a href="https://slimbootloader.github.io/specs/config.html#configuration-description-yaml-explained">slim bootloader</a>
 as well.</p>
-<p>Such YAML definition will be used to generate header files and the field accessors for platform consumption.</p>
+<p>Such YAML definition will be used to generate header files and the field
+accessors for platform consumption.</p>
 <h3 id="mu-added-rules">MU Added Rules<a class="headerlink" href="#mu-added-rules" title="Permanent link">&para;</a></h3>
-<p>In addition to aforementioned YAML specification from slim bootloader, a few extra rules was added to the existing
-specification to facilitate the adaptation of policy specific usage. These rules will be enforced by a Pre-Build
-plugin, more details in its <a href="#Pre-Build-Plugin">implementation section</a>.</p>
+<p>In addition to aforementioned YAML specification from slim bootloader, a few
+extra rules was added to the existing specification to facilitate the adaptation
+of policy specific usage. These rules will be enforced by a Pre-Build plugin,
+more details in its <a href="#pre-build-plugin">implementation section</a>.</p>
 <ol>
 <li>
-<p>Each policy definition group must include a <code>POLICY_HEADER_TMPL</code> section, as provided in this template <a href="CommonPolicy/Template_PolicyHeader.yaml">here</a>.
-This section should include a 64-bit signature, an expected major version, an maximally expected minor version and
-a size of such structure. This data will mainly be used as metadata instead of policy data. Platforms could <code>!include</code>
+<p>Each policy definition group must include a <code>POLICY_HEADER_TMPL</code> section, as
+provided in this template <a href="CommonPolicy/Template_PolicyHeader.yaml">here</a>.
+This section should include a 64-bit signature, an expected major version, an
+maximally expected minor version and a size of such structure. This data will
+mainly be used as metadata instead of policy data. Platforms could <code>!include</code>
 the provided template for easier inclusion.</p>
 </li>
 <li>
-<p>For each non-header fields defined in the YAML policy file, developers could optionally add a <code>minver</code> field, which
-denotes at which minor version this field is added. If not added, this field will be treated as 0 for default value.</p>
+<p>For each non-header fields defined in the YAML policy file, developers could
+optionally add a <code>minver</code> field, which denotes at which minor version this field
+is added. If not added, this field will be treated as 0 for default value.</p>
 </li>
 <li>
-<p>Under the same major value, all new minor fields should only be appended after the fields with lower minor version
-values, otherwise the build will break.</p>
+<p>Under the same major value, all new minor fields should only be appended
+after the fields with lower minor version values, otherwise the build will break.</p>
 </li>
 <li>
-<p>This YAML definition is not created to support UI configuration features, thus no UI related configuration fields
-will be recognized in the context of policy YAML definition.</p>
+<p>This YAML definition is not created to support UI configuration features,
+thus no UI related configuration fields will be recognized in the context of
+policy YAML definition.</p>
 </li>
 </ol>
 <h3 id="field-accessors">Field Accessors<a class="headerlink" href="#field-accessors" title="Permanent link">&para;</a></h3>
-<p>For each fields defined in YAML structures, 4 accessor functions will be created. These functions will cover the
-functionality of setting this field to target value or default value, get current or default value from policy handle.</p>
-<p>All autogen functions will be created under the naming scheme of <code>SET_POLICY_STRUCTURE_NAME_Field_Name</code>,
-<code>SET_POLICY_STRUCTURE_NAME_Field_Name_default</code>, <code>GET_POLICY_STRUCTURE_NAME_Field_Name</code> and
-<code>GET_POLICY_STRUCTURE_NAME_Field_Name_default</code>.</p>
-<p>The internal implementation of these functions are dependent on <code>PolicyLib</code>, specifically the verified policy related
-functionalities.</p>
-<p>In order to simplify the usage of policy initialization, a function of <code>SET_POLICY_STRUCTURE_NAME_default</code> is created.
-This function could be invoked for a platform to initialize the newly created policy handle.</p>
+<p>For each fields defined in YAML structures, 4 accessor functions will be
+created. These functions will cover the functionality of setting this field to
+target value or default value, get current or default value from policy handle.</p>
+<p>All autogen functions will be created under the naming scheme of
+<code>SET_POLICY_STRUCTURE_NAME_Field_Name</code>, <code>SET_POLICY_STRUCTURE_NAME_Field_Name_default</code>,
+<code>GET_POLICY_STRUCTURE_NAME_Field_Name</code> and <code>GET_POLICY_STRUCTURE_NAME_Field_Name_default</code>.</p>
+<p>The internal implementation of these functions are dependent on <code>PolicyLib</code>,
+specifically the verified policy related functionalities.</p>
+<p>In order to simplify the usage of policy initialization, a function of
+<code>SET_POLICY_STRUCTURE_NAME_default</code> is created. This function could be invoked
+for a platform to initialize the newly created policy handle.</p>
 <h3 id="pre-build-plugin">Pre-Build Plugin<a class="headerlink" href="#pre-build-plugin" title="Permanent link">&para;</a></h3>
-<p>A pre-build plugin is created to enforce rules indicated in the previous <a href="#Field-Accessors">section</a>.</p>
+<p>A pre-build plugin is created to enforce rules indicated in the previous
+<a href="#field-accessors">section</a>.</p>
 <p>This plugin requires 3 build environment variable to execute properly:</p>
 <ul>
-<li><code>BUILD_OUTPUT_BASE</code>: This is used to create a temporary folder to contain intermediate files</li>
+<li><code>BUILD_OUTPUT_BASE</code>: This is used to create a temporary folder to contain
+intermediate files</li>
 <li><code>UPDATE_SETTINGS</code>: Setting this to <code>false</code> to disable this plugin</li>
-<li><code>POLICY_REPORT_FOLDER</code>: This optional variable can be used to indicate where the plugin should output the report.</li>
-<li><code>POLICY_IGNORE_PATHS</code>: This optional variable can be used by platform to specify which directories or files the autogen
-should ignore. Each entry should be relative UEFI path separated by colons (';').
-If not supplied this report will be save to the same folder of <code>ACTIVE_PLATFORM</code>.</li>
+<li><code>POLICY_REPORT_FOLDER</code>: This optional variable can be used to indicate where
+the plugin should output the report.</li>
+<li><code>POLICY_IGNORE_PATHS</code>: This optional variable can be used by platform to
+specify which directories or files the autogen should ignore. Each entry should
+be relative UEFI path separated by colons (';'). If not supplied this report
+will be save to the same folder of <code>ACTIVE_PLATFORM</code>.</li>
 </ul>
 <p>A policy report is the collateral output after codebase analyzing:</p>
 <ul>
@@ -9657,7 +9696,7 @@ which includes the header structure and its accessors.</p>
     <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": "0.9.1"}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.51198bba.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.b4d07000.min.js"></script>
       
         <script src="https://unpkg.com/mermaid@8.7.0/dist/mermaid.min.js"></script>
       

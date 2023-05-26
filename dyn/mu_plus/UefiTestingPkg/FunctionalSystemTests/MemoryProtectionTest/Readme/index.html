@@ -19,7 +19,7 @@
         <link rel="next" href="../../MpManagement/Readme/">
       
       <link rel="icon" href="../../../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.8">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.14">
     
     
       
@@ -27,10 +27,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.ded33207.min.css">
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.85bb2934.min.css">
       
         
-        <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.a0c5b2b5.min.css">
+        <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.a6bdf11c.min.css">
       
       
 
@@ -71,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#memory-protection-tests" class="md-skip">
+        <a href="#memory-protection-test-app" class="md-skip">
           Skip to content
         </a>
       
@@ -6466,6 +6466,34 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#testing-using-resets" class="md-nav__link">
+    Testing using Resets
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing-by-clearing-faults" class="md-nav__link">
+    Testing by Clearing Faults
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing-by-using-the-memory-attribute-protocol" class="md-nav__link">
+    Testing by using the Memory Attribute Protocol
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-the-test" class="md-nav__link">
+    Running the Test
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -8983,6 +9011,34 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#testing-using-resets" class="md-nav__link">
+    Testing using Resets
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing-by-clearing-faults" class="md-nav__link">
+    Testing by Clearing Faults
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing-by-using-the-memory-attribute-protocol" class="md-nav__link">
+    Testing by using the Memory Attribute Protocol
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-the-test" class="md-nav__link">
+    Running the Test
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -9001,21 +9057,46 @@
   
 
 
-<h1 id="memory-protection-tests">Memory Protection Tests<a class="headerlink" href="#memory-protection-tests" title="Permanent link">&para;</a></h1>
+<h1 id="memory-protection-test-app">Memory Protection Test App<a class="headerlink" href="#memory-protection-test-app" title="Permanent link">&para;</a></h1>
 <h2 id="copyright">Copyright<a class="headerlink" href="#copyright" title="Permanent link">&para;</a></h2>
 <p>Copyright (C) Microsoft Corporation. All rights reserved.
 SPDX-License-Identifier: BSD-2-Clause-Patent</p>
 <h2 id="about-this-test">About This Test<a class="headerlink" href="#about-this-test" title="Permanent link">&para;</a></h2>
-<p>This is set of tests to ensure that heap guard, stack guard, null pointer detection, and nx protections are working properly.</p>
-<p>It consists of:</p>
-<ul>
-<li>An SMM driver</li>
-<li>A Shell-based test app</li>
-</ul>
-<p>The Shell-based app may be built at any time and run from Shell. The app can use the SMM driver to preform SMM tests if the
-SMM driver is installed.</p>
-<p>It is not the intention of this test to include the driver in production systems. They should only be used for purpose-built
-test images.</p>
+<p>This test verifies the memory protection features of Project Mu. The test checks the
+memory protection policy of the system and adds a test for each memory type of each
+protection type active. For example, if the system protection policy has NX protection
+on EfiBootServicesData, the test will allocate a buffer of that type and check the
+attributes of that buffer either by attempting to execute code within it or by fetching
+the attributes using the memory attribute protocol. The test has a few methods of running.</p>
+<h2 id="testing-using-resets">Testing using Resets<a class="headerlink" href="#testing-using-resets" title="Permanent link">&para;</a></h2>
+<p>This method is the slowest, reaching upwards of 45 minutes with a strict protection policy
+(benchmarked on a Q35 DEBUG build). The test will intentionally cause faults for each
+protection policy and use a custom installed fault handler for IA32_PAGE_FAULT exceptions
+which simply performs a warm reset on a fault. This method can be run on x86 based platforms.
+Currently, the test doesn't install a synchronous handler for initiating a reset on ARM
+platforms.</p>
+<h2 id="testing-by-clearing-faults">Testing by Clearing Faults<a class="headerlink" href="#testing-by-clearing-faults" title="Permanent link">&para;</a></h2>
+<p>This method takes less than 5 seconds to run. The test will intentionally cause faults for
+each protection policy with the expectation that the Project Mu fault handler will clear the
+fault and allow the test to continue. Project Mu currently only supports this method of
+running the test on x86 based platforms.</p>
+<h2 id="testing-by-using-the-memory-attribute-protocol">Testing by using the Memory Attribute Protocol<a class="headerlink" href="#testing-by-using-the-memory-attribute-protocol" title="Permanent link">&para;</a></h2>
+<p>This method takes less than 5 seconds to run. Instead of intentionally causing faults,
+this method checks the attributes of the region which should fault against the expected
+protection attributes. For example, instead of intentionally causing a stack overflow to
+check the stack guard, the test will find the stack base and check that the attributes
+are EFI_MEMORY_RP using the Memory Attribute Protocol (because the page at the stack base
+is a guard page marked EFI_MEMORY_RP). This method can be run on either X64 or
+ARM64 platforms.</p>
+<h2 id="running-the-test">Running the Test<a class="headerlink" href="#running-the-test" title="Permanent link">&para;</a></h2>
+<p>The test is run from the shell using the command <code>MemoryProtectionTestApp.efi</code>. By default,
+the test will try to run using the Memory Attribute Protocol method, then the Clearing
+Faults method, then the warm reset method. If none of these methods are available, the
+test will fail. The test can be run using a specific method by passing in one of the
+following arguments:</p>
+<p>'--Reset'</p>
+<p>'--ClearFaults'</p>
+<p>'--MemoryAttribute'</p>
 
 
 
@@ -9075,7 +9156,7 @@ test images.</p>
     <script id="__config" type="application/json">{"base": "../../../../../..", "features": [], "search": "../../../../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": "0.9.1"}</script>
     
     
-      <script src="../../../../../../assets/javascripts/bundle.51198bba.min.js"></script>
+      <script src="../../../../../../assets/javascripts/bundle.b4d07000.min.js"></script>
       
         <script src="https://unpkg.com/mermaid@8.7.0/dist/mermaid.min.js"></script>
       
