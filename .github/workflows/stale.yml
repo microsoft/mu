@@ -24,4 +24,4 @@ on:
 
 jobs:
   check:
-    uses: microsoft/mu_devops/.github/workflows/Stale.yml@v2.5.1
+    uses: microsoft/mu_devops/.github/workflows/Stale.yml@v3.0.0
