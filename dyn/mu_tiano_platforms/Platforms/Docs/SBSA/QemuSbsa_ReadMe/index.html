@@ -19,7 +19,7 @@
         <link rel="next" href="../../../QemuQ35Pkg/Library/MsPlatformDevicesLibQemuQ35/ReadMe/">
       
       <link rel="icon" href="../../../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.14">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.15">
     
     
       
@@ -27,10 +27,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.85bb2934.min.css">
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.26e3688c.min.css">
       
         
-        <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.a6bdf11c.min.css">
+        <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.ecc896b0.min.css">
       
       
 
@@ -3534,6 +3534,20 @@
     <li class="md-nav__item">
       <a href="../../../../../mu_feature_ipmi/IpmiFeaturePkg/Samples/Readme/" class="md-nav__link">
         Samples
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../mu_feature_ipmi/IpmiFeaturePkg/SpmiTable/Readme/" class="md-nav__link">
+        Spmi Table
       </a>
     </li>
   
@@ -7967,13 +7981,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#platform-runtime-mechanism-prm" class="md-nav__link">
-    Platform Runtime Mechanism (PRM)
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -9080,13 +9087,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#platform-runtime-mechanism-prm" class="md-nav__link">
-    Platform Runtime Mechanism (PRM)
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -9157,7 +9157,7 @@ centric.</p>
 better ARM based platform level support (ACPI, etc.) as well as having an integrated AHCI controller.</p>
 <h2 id="compiling-and-running-qemu">Compiling and Running QEMU<a class="headerlink" href="#compiling-and-running-qemu" title="Permanent link">&para;</a></h2>
 <p>QemuSbsaPkg uses the Project Mu repositories and Edk2 PyTools for its build operations.
-Specific details can be found here <a href="Development/building.md">Development/building.md</a></p>
+Specific details can be found here <a href="../../Common/building/">Development/building.md</a></p>
 <h2 id="firmware-features">Firmware Features<a class="headerlink" href="#firmware-features" title="Permanent link">&para;</a></h2>
 <p>QemuSbsaPkg is a great environment to demonstrate Project Mu features without any restricted or costly physical
 hardware. Current QEMU SBSA platform supports the following features provided by Project Mu:</p>
@@ -9165,25 +9165,19 @@ hardware. Current QEMU SBSA platform supports the following features provided by
 <p>Enable the Project Mu OEM sample "front page".
 This is a touch friendly, graphical, UEFI HII based UI application that
 allows basic platform and boot device configuration.</p>
-<p><a href="Features/feature_frontpage.md">Details</a></p>
+<p><a href="../../Common/Features/feature_frontpage/">Details</a></p>
 <h3 id="device-firmware-configuration-interface">Device Firmware Configuration Interface<a class="headerlink" href="#device-firmware-configuration-interface" title="Permanent link">&para;</a></h3>
 <p>The DFCI feature enables cloud management services (MDM services like Microsoft Intune) to manage some PC
 bios settings <strong>securely</strong>.  DFCI is a foundational feature that provides a shared identity and ownership
 model between the device firmware and the cloud.  Once a device is enrolled this shared identity can be used
 to securely communicate across untrusted mediums (network or usb).</p>
-<p><a href="Features/feature_dfci.md">Details</a></p>
+<p><a href="../../Common/Features/feature_dfci/">Details</a></p>
 <h3 id="mu-telemetry-whea-hwerrorrecord">Mu Telemetry / WHEA / HwErrorRecord<a class="headerlink" href="#mu-telemetry-whea-hwerrorrecord" title="Permanent link">&para;</a></h3>
 <p>The Mu Telemetry feature is an extension of the PI spec defined report status code.  The feature is
 designed to collect critical (platform defined) status codes, record them into a HwErrRecord,
 and then transfer them through the Microsoft WHEA pipeline.  From there an OEM can use Microsoft
 provided reports to check on in market device health.  *Some work still pending completion.</p>
-<p><a href="Features/feature_whea.md">Details</a></p>
-<h3 id="platform-runtime-mechanism-prm">Platform Runtime Mechanism (PRM)<a class="headerlink" href="#platform-runtime-mechanism-prm" title="Permanent link">&para;</a></h3>
-<p>Platform Runtime Mechanism (PRM) introduces the capability of moving certain classes of SMM code out of SMM and into
-a code module that executes within OS context. This feature adds the PRM infrastructure to the firmware that enables
-loading PRM modules which in turn are exposed to the OS for invocation. To accomplish this, a set of open source
-sample PRM modules are used to demonstrate the feature and show how additional modules can be added.</p>
-<p><a href="Features/feature_prm.md">Details</a></p>
+<p><a href="../../Common/Features/feature_whea/">Details</a></p>
 <h2 id="mu-customized-components">Mu Customized Components<a class="headerlink" href="#mu-customized-components" title="Permanent link">&para;</a></h2>
 <h3 id="modules">Modules<a class="headerlink" href="#modules" title="Permanent link">&para;</a></h3>
 <table>
@@ -9196,7 +9190,7 @@ sample PRM modules are used to demonstrate the feature and show how additional m
 <tbody>
 <tr>
 <td><strong>QemuVideoDxe</strong></td>
-<td><a href="../QemuVideoDxe/ReadMe.md">QEMU Cirrus Video Controller</a></td>
+<td><a href="../../../QemuSbsaPkg/QemuVideoDxe/ReadMe/">QEMU Cirrus Video Controller</a></td>
 </tr>
 </tbody>
 </table>
@@ -9211,15 +9205,7 @@ sample PRM modules are used to demonstrate the feature and show how additional m
 <tbody>
 <tr>
 <td><strong>MsPlatformDevicesLib</strong></td>
-<td><a href="../Library/MsPlatformDevicesLibQemuSbsa/ReadMe.md">MsPlatformDevicesLib</a></td>
-</tr>
-<tr>
-<td><strong>PlatformDebugLibIoPort</strong></td>
-<td><a href="../Library/PlatformDebugLibIoPort/ReadMe.md">PlatformDebugLibIoPort</a></td>
-</tr>
-<tr>
-<td><strong>PlatformThemeLib</strong></td>
-<td><a href="../Library/PlatformThemeLib/ReadMe.md">PlatformThemeLib</a></td>
+<td><a href="../../../QemuSbsaPkg/Library/MsPlatformDevicesLibQemuSbsa/ReadMe/">MsPlatformDevicesLib</a></td>
 </tr>
 </tbody>
 </table>

@@ -19,7 +19,7 @@
         <link rel="next" href="../feature_prm/">
       
       <link rel="icon" href="../../../../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.14">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.15">
     
     
       
@@ -27,10 +27,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../../../assets/stylesheets/main.85bb2934.min.css">
+      <link rel="stylesheet" href="../../../../../../../assets/stylesheets/main.26e3688c.min.css">
       
         
-        <link rel="stylesheet" href="../../../../../../../assets/stylesheets/palette.a6bdf11c.min.css">
+        <link rel="stylesheet" href="../../../../../../../assets/stylesheets/palette.ecc896b0.min.css">
       
       
 
@@ -3534,6 +3534,20 @@
     <li class="md-nav__item">
       <a href="../../../../../../mu_feature_ipmi/IpmiFeaturePkg/Samples/Readme/" class="md-nav__link">
         Samples
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../mu_feature_ipmi/IpmiFeaturePkg/SpmiTable/Readme/" class="md-nav__link">
+        Spmi Table
       </a>
     </li>
   
@@ -9163,7 +9177,7 @@ the expected workflow.</p>
 <h3 id="authormodify-the-final-consumer-module-around-policy-package">Author/Modify the Final Consumer Module Around Policy Package<a class="headerlink" href="#authormodify-the-final-consumer-module-around-policy-package" title="Permanent link">&para;</a></h3>
 <p>For a feature that needs to be configured through this framework, the end module should be updated to consume the data
 described in <a href="https://microsoft.github.io/mu/dyn/mu_basecore/PolicyServicePkg/">PolicyServicePkg</a>.</p>
-<p>In the example of GFX module, <a href="../../QemuVideoDxe/QemuVideoDxe.inf">QemuQ35Pkg/QemuVideoDxe/QemuVideoDxe.inf</a> is updated
+<p>In the example of GFX module, <a href="../../../QemuQ35Pkg/QemuVideoDxe/QemuVideoDxe.inf">QemuQ35Pkg/QemuVideoDxe/QemuVideoDxe.inf</a> is updated
 to check against the published policy data (<code>GFX_POLICY_DATA</code>) to enable/disable the applicable VGA controller during the
 driver binding event.</p>
 <h3 id="author-the-initial-policy-publisher">Author the Initial Policy Publisher<a class="headerlink" href="#author-the-initial-policy-publisher" title="Permanent link">&para;</a></h3>
@@ -9171,16 +9185,16 @@ driver binding event.</p>
 values for the feature module to proceed properly. Per platform discretion, this module could either be a silicon module
 if a general default policy data is applicable, or a platform module when the platform would like to apply customizations
 to the inital policy value.</p>
-<p>In the example of GFX module, this initial value is handled by <a href="../../ConfigDataGfx/ConfigDataGfx.inf">QemuQ35Pkg/ConfigDataGfx/ConfigDataGfx.inf</a>,
+<p>In the example of GFX module, this initial value is handled by <a href="../../../QemuQ35Pkg/ConfigKnobs/ConfigKnobs.inf">QemuQ35Pkg/ConfigDataGfx/ConfigDataGfx.inf</a>,
 which publishes a policy blob under GUID <code>gPolicyDataGFXGuid</code> to enable all GFX controllers by default.</p>
 <h3 id="author-the-platform-configuration-consumer">Author the Platform Configuration Consumer<a class="headerlink" href="#author-the-platform-configuration-consumer" title="Permanent link">&para;</a></h3>
 <p>Once the initial policy data is published, the platform driver should check the configuration data, as defined by platform
 configuratuin definition files (i.e. XML) to translate the data and apply them on top of the GFX policy data.</p>
-<p>In the example of GFX module, this translation and data application is also handled by <a href="../../ConfigDataGfx/ConfigDataGfx.inf">QemuQ35Pkg/ConfigDataGfx/ConfigDataGfx.inf</a>.</p>
+<p>In the example of GFX module, this translation and data application is also handled by <a href="../../../QemuQ35Pkg/ConfigKnobs/ConfigKnobs.inf">QemuQ35Pkg/ConfigDataGfx/ConfigDataGfx.inf</a>.</p>
 <p>Note that with the support of GUIDed policy database and notification, the platform configuration consumer does not always
 need to be the same driver as the policy publisher, but can instead be a module with a Depex on the published policy data
 GUID (in this case, <code>gPolicyDataGFXGuid</code>).</p>
-<p>This way, when <a href="../../QemuVideoDxe/QemuVideoDxe.inf">QemuQ35Pkg/QemuVideoDxe/QemuVideoDxe.inf</a> enters the driver binding
+<p>This way, when <a href="../../../QemuQ35Pkg/QemuVideoDxe/QemuVideoDxe.inf">QemuQ35Pkg/QemuVideoDxe/QemuVideoDxe.inf</a> enters the driver binding
 event, it will check against the updated policy database and enable/disable the VGA controller accordingly.</p>
 
 
