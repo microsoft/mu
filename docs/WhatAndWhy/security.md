@@ -69,7 +69,8 @@ UNIQUE_NAME:
 
     files_impacted:
     # This is a list of all the files impacted by this change
-        - SecurityPkg/Library/ExampleFile.c
+        - # The lists are broken down by patch
+            - SecurityPkg/Library/ExampleFile.c
 
     links:
     # At a minimum this section should contain links to the security issue
