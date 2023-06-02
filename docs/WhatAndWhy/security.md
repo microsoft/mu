@@ -29,7 +29,7 @@ which public commit corresponds to which SP repo commit.
 ## Active Security Patch Auditing
 
 In project Mu's public repos a `SecurityFixes.yaml` file will exist in any package that CVE's have been entered against.
-This yaml file will be oth human and machine readable to enable both human inspection and scripting. These files will
+This yaml file will be both human and machine readable to enable both human inspection and scripting. These files will
 allow a firmware developer to ensure that the firmware they are building is up to date with the latest CVE's. In addition
 to what is in the public, the embargoed fixes described above will also have their own entries in the Security repos.
 
