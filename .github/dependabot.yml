@@ -45,7 +45,8 @@ updates:
   - package-ecosystem: "pip"
     directory: "/"
     schedule:
-      interval: "daily"
+      interval: "weekly"
+      day: "wednesday"
       timezone: "America/Los_Angeles"
       time: "01:00"
     commit-message:
