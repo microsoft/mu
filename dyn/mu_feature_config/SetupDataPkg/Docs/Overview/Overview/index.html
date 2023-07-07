@@ -19,7 +19,7 @@
         <link rel="next" href="../../PlatformIntegration/PlatformIntegrationSteps/">
       
       <link rel="icon" href="../../../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.16">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
     
     
       
@@ -9426,6 +9426,9 @@ file, binary, or SVD.</li>
 <a href="../../Profiles/Overview/">Profiles doc</a>.</li>
 <li>The variable list binary, saved in .vl format, can be applied to a running system via dmpstore in the EFI shell,
 or via <a href="../../Tools/WriteConfVarListToUefiVars.py">WriteConfVarListToUefiVars.py</a>.</li>
+<li>Vice versa, variables applied to target system can be fetch through ConfApp's dump configuration option in UEFI, saved
+to a file system in the EFI shell via dmpstore, or by <a href="../../Tools/ReadUefiVarsToConfVarList.py">ReadUefiVarsToConfVarList.py</a>
+in the OS.</li>
 <li>The SVD can be applied to a running system via USB/serial via mu_feature_config's Conf App.</li>
 <li>Changes to the XML itself will result in a change to the default configuration options of a platform.</li>
 </ul>
@@ -9534,10 +9537,10 @@ can link in the platform level data. An example is provided in
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../../../../..", "features": [], "search": "../../../../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": "0.9.1"}</script>
+    <script id="__config" type="application/json">{"base": "../../../../../..", "features": [], "search": "../../../../../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": "0.9.1"}</script>
     
     
-      <script src="../../../../../../assets/javascripts/bundle.a51614de.min.js"></script>
+      <script src="../../../../../../assets/javascripts/bundle.220ee61c.min.js"></script>
       
         
           <script src="https://unpkg.com/mermaid@8.7.0/dist/mermaid.min.js"></script>
