@@ -86,7 +86,7 @@ the history clean and readable.
 * Trigger the actual release once the build passes
 * Tag the commit that these were released from
 * Update the Basetools version and re-enable the extdep
-* [See here](https://github.com/tianocore/edk2-pytool-extensions/blob/master/docs/usability/using_extdep.md) for more
+* [See here](https://www.tianocore.org/edk2-pytool-extensions/features/extdep/) for more
   details
 
 ### f) Run Testing
