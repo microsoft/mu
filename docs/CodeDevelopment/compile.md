@@ -11,8 +11,8 @@ dependencies, updating git dependencies, and other functions.  Project Mu has tw
 will be described here to encourage pattern/code reuse and limit the required repository specific documentation.  More
 details for pytools can be found here:
 
-* <https://github.com/tianocore/edk2-pytool-extensions/tree/master/docs>
-* <https://github.com/tianocore/edk2-pytool-library/tree/master/docs>
+* <https://www.tianocore.org/edk2-pytool-extensions/>
+* <https://www.tianocore.org/edk2-pytool-library/>
 
 ## CI multi-package Building and Testing aka **stuart_ci_build**
 

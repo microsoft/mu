@@ -95,7 +95,7 @@ git operations if you have multiple workspaces by using the git "--reference" fe
 
 ## Windows Subsystem For Linux (WSL) and Linux
 
-Basic directions here. <https://github.com/tianocore/edk2-pytool-extensions/blob/master/docs/usability/using_linux.md>
+Basic directions here. <https://www.tianocore.org/edk2-pytool-extensions/features/using_linux/>
 
 ## All Operating Systems - Python Virtual Environment and PyTools
 
