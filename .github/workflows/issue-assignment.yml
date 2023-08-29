@@ -18,4 +18,4 @@ on:
 
 jobs:
   apply:
-    uses: microsoft/mu_devops/.github/workflows/IssueAssignment.yml@v5.0.6
+    uses: microsoft/mu_devops/.github/workflows/IssueAssignment.yml@v6.1.0
