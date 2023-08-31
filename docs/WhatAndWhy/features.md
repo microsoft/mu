@@ -21,6 +21,10 @@ What major features does Project Mu bring to the table above/beyond EDK2?
 * Up-to-date Visual Studio compiler support
 * Base64 encode for binary objects
 * XML Support Package
+* Rust support
+  * [Rust build documentation](../DeveloperDocs/rust_build.md)
+  * [Rust convention documentation](../How/rust_documentation_conventions.md)
+  * [Rust motivation documentation:](../WhatAndWhy/rust.md)
 
 ### Features Coming Soon
 
