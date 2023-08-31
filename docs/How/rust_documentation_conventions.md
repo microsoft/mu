@@ -293,7 +293,7 @@ pub struct Pe32ImageInfo {
     pub size_of_image: u32,
     /// The size of an individual section in a power of 2 (4K [0x1000], etc.).
     pub section_alignment: u32,
-    /// The ascii string representation of a file (<filenname>.efi).
+    /// The ascii string representation of a file (<filename>.efi).
     pub filename: Option<String>,
 }
 ```

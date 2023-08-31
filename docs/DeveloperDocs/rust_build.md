@@ -49,7 +49,7 @@ At this point, the essential Rust applications are installed, and a repo can beg
 Currently, two files are provided in Project Mu repos that play an important role in the building and formatting of
 Rust code in Project Mu based repositories.
 
-- `Makefile.toml` - Defines the tasks and environment settings use within the Project Mu build system to buid and
+- `Makefile.toml` - Defines the tasks and environment settings use within the Project Mu build system to bui;d and
   test code.
 
 - `rustfmt.toml` - Defines Rust formatting options used.
