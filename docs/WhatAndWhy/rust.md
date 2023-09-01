@@ -18,8 +18,8 @@ Fundamental security features taken for granted in later system software such as
 based on secure establishment in a lower layer of firmware. At the root is a concept of "trust".
 
 While operating systems are attractive targets due to their ubiquity across devices and scale, attackers are
-increasingly evaluating firmware as an attack surface in response to increasingly effective security measures being
-applied in modern operating systems. Securing the early boot process revolves around key inflection points and
+beginning to shift more focus to firmware as an attack surface in response to increasingly effective security measures
+being applied in modern operating systems. Securing the early boot process revolves around key inflection points and
 protections applied between those points. The earliest point is the device "root of trust", where the system needs to
 ensure it begins operating in a trusted state. This is often performed by code in immutable ROMs located in a SOC.
 Since size is extremely limited, this logic typically hands off quickly to code of larger size on some mutable storage
@@ -48,15 +48,15 @@ lines of code written in a language developed over 50 years ago requires a uniqu
 
 ## Rust and Firmware
 
-As previously stated, modern PC firmware necessitates a powerful language that can support low-level programming at
-scale with maximum performance, reliability, and safety. While C has provided the flexibility needed to implement
-relatively efficient firmware code, it has failed to prevent recurring problems around memory safety.
+As previously stated, modern PC firmware necessitates a powerful language that can support low-level programming with
+maximum performance, reliability, and safety. While C has provided the flexibility needed to implement relatively
+efficient firmware code, it has failed to prevent recurring problems around memory safety.
 
 Common pitfalls in C such as null pointer dereferences, buffer and stack overflows, and pointer mismanagement continue
 to be at the root of high impact firmware vulnerabilities. These issues are especially impactful if they compromise
 the system TCB. Rust is compelling for UEFI firmware development because it is designed around strong memory safety
 without the usual overhead of a garbage collector. In addition, it enforces stringent type safety and concurrency rules
-that often lead to subtle bugs in low-level software development.
+that prevent the types of issues that often lead to subtle bugs in low-level software development.
 
 Languages aside, UEFI firmware has greatly fallen behind other system software in its adoption of basic memory
 vulnerability mitigation techniques. For example, data execution protection, heap and stack guards, stack cookies,
