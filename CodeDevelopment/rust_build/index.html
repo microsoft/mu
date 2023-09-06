@@ -10,21 +10,25 @@
       
       
       
-        <link rel="canonical" href="https://microsoft.github.io/mu/DeveloperDocs/rust_build/">
+        <link rel="canonical" href="https://microsoft.github.io/mu/CodeDevelopment/rust_build/">
       
       
+        <link rel="prev" href="../requirements/">
+      
+      
+        <link rel="next" href="../rust_documentation_conventions/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.6">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.8">
     
     
       
-        <title>Rust Build - Project Mu</title>
+        <title>Rust Compiling and Testing - Project Mu</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.0e669242.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.046329b4.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.85d0ee34.min.css">
@@ -110,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Rust Build
+              Rust Compiling and Testing
             
           </span>
         </div>
@@ -322,6 +326,26 @@
   
   <span class="md-ellipsis">
     Features
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WhatAndWhy/rust/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rust
   </span>
   
 
@@ -600,7 +624,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../developer_docs/" class="md-nav__link">
+      <a href="../../DeveloperDocs/developer_docs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -620,7 +644,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../build_community_docs/" class="md-nav__link">
+      <a href="../../DeveloperDocs/build_community_docs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -640,7 +664,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../doc_sample_test/" class="md-nav__link">
+      <a href="../../DeveloperDocs/doc_sample_test/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -660,7 +684,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../attribution/" class="md-nav__link">
+      <a href="../../DeveloperDocs/attribution/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -680,7 +704,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../requirements/" class="md-nav__link">
+      <a href="../../DeveloperDocs/requirements/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -705,17 +729,19 @@
       
   
   
+    
+  
   
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
@@ -728,7 +754,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Developing Code
@@ -741,7 +767,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CodeDevelopment/overview/" class="md-nav__link">
+      <a href="../overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -761,7 +787,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CodeDevelopment/prerequisites/" class="md-nav__link">
+      <a href="../prerequisites/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -781,7 +807,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CodeDevelopment/compile/" class="md-nav__link">
+      <a href="../compile/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -801,7 +827,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CodeDevelopment/test/" class="md-nav__link">
+      <a href="../test/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -821,11 +847,146 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CodeDevelopment/requirements/" class="md-nav__link">
+      <a href="../requirements/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Code Requirements
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Rust Compiling and Testing
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Rust Compiling and Testing
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#generally-getting-started-with-rust" class="md-nav__link">
+    Generally Getting Started with Rust
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#important-build-and-config-files" class="md-nav__link">
+    Important Build and Config Files
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dev-container-with-rust" class="md-nav__link">
+    Dev Container (with Rust)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build-variations" class="md-nav__link">
+    Build Variations
+  </a>
+  
+    <nav class="md-nav" aria-label="Build Variations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#build-an-individual-module" class="md-nav__link">
+    Build an Individual Module
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-an-individual-module" class="md-nav__link">
+    Test an Individual Module
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supported-build-combinations" class="md-nav__link">
+    Supported Build Combinations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rust_documentation_conventions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rust Documentation Conventions
   </span>
   
 
@@ -12116,7 +12277,7 @@ be produced.</p>
     <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": "0.9.1"}</script>
     
     
-      <script src="../../assets/javascripts/bundle.78eede0e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
       
         <script src="https://unpkg.com/mermaid@8.7.0/dist/mermaid.min.js"></script>
       

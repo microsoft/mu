@@ -13,18 +13,22 @@
         <link rel="canonical" href="https://microsoft.github.io/mu/WhatAndWhy/rust/">
       
       
+        <link rel="prev" href="../features/">
+      
+      
+        <link rel="next" href="../security/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.6">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.8">
     
     
       
-        <title>Project Mu and Rust - Project Mu</title>
+        <title>Rust - Project Mu</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.0e669242.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.046329b4.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.85d0ee34.min.css">
@@ -110,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Project Mu and Rust
+              Rust
             
           </span>
         </div>
@@ -241,17 +245,19 @@
       
   
   
+    
+  
   
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
@@ -264,7 +270,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             What and Why
@@ -326,6 +332,87 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Rust
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Rust
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rust-and-firmware" class="md-nav__link">
+    Rust and Firmware
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rust-and-project-mu" class="md-nav__link">
+    Rust and Project Mu
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -826,6 +913,46 @@
   
   <span class="md-ellipsis">
     Code Requirements
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CodeDevelopment/rust_build/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rust Compiling and Testing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CodeDevelopment/rust_documentation_conventions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rust Documentation Conventions
   </span>
   
 
@@ -11953,7 +12080,7 @@ of low-level needs and can precisely structure data for C compatibility.</p>
 <p>At this time, Project Mu has started its Rust journey by including support for Rust code within the build system used
 for firmware code. This allows Rust code to naturally be included in the compilation and firmware packaging process.
 More details about build support in particular is covered in the
-<a href="https://github.com/microsoft/mu_basecore/blob/HEAD/Docs/rust_build.md">Project Mu Rust Build</a> readme.</p>
+<a href="../../CodeDevelopment/rust_build/">Project Mu Rust Build</a> readme.</p>
 <p>Setting up a fully functional pre-Rust firmware development environment can be tedious. The Rust toolchain is another
 dependency that must be accounted for now. To ease the setup process, everything needed to get started has been
 integrated into a <a href="https://github.com/microsoft/mu_devops/pkgs/container/mu_devops%2Fubuntu-22-dev">container</a> in the
@@ -11967,7 +12094,8 @@ development.</p>
 <p><a href="https://www.qemu.org/">QEMU</a> is an open-source virtual machine emulator. Project Mu implements open-source firmware
 for the <a href="https://wiki.qemu.org/Features/Q35">QEMU Q35 platform</a> in its <a href="https://github.com/microsoft/mu_tiano_platforms">Mu Tiano Platforms repository</a>.
 This open virtual platform is used as an easily accessible demonstration vehicle for Project Mu features. In this case,
-UEFI (DXE) modules are already included in the platform firmware to demonstrate their functionality (and test it in CI).</p>
+UEFI (DXE) Rust modules are already included in the platform firmware to demonstrate their functionality (and test it
+in CI).</p>
 <p>Looking forward, we're continuing to expand the coverage of our firmware code written in Rust. We are excited to
 continue learning more about Rust in collaboration with the community and our partners.</p>
 
@@ -12029,7 +12157,7 @@ continue learning more about Rust in collaboration with the community and our pa
     <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": "0.9.1"}</script>
     
     
-      <script src="../../assets/javascripts/bundle.78eede0e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
       
         <script src="https://unpkg.com/mermaid@8.7.0/dist/mermaid.min.js"></script>
       
