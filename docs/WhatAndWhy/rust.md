@@ -96,7 +96,7 @@ of low-level needs and can precisely structure data for C compatibility.
 At this time, Project Mu has started its Rust journey by including support for Rust code within the build system used
 for firmware code. This allows Rust code to naturally be included in the compilation and firmware packaging process.
 More details about build support in particular is covered in the
-[Project Mu Rust Build](https://github.com/microsoft/mu_basecore/blob/HEAD/Docs/rust_build.md) readme.
+[Project Mu Rust Build](../CodeDevelopment/rust_build.md) readme.
 
 Setting up a fully functional pre-Rust firmware development environment can be tedious. The Rust toolchain is another
 dependency that must be accounted for now. To ease the setup process, everything needed to get started has been
@@ -113,7 +113,8 @@ development.
 [QEMU](https://www.qemu.org/) is an open-source virtual machine emulator. Project Mu implements open-source firmware
 for the [QEMU Q35 platform](https://wiki.qemu.org/Features/Q35) in its [Mu Tiano Platforms repository](https://github.com/microsoft/mu_tiano_platforms).
 This open virtual platform is used as an easily accessible demonstration vehicle for Project Mu features. In this case,
-UEFI (DXE) modules are already included in the platform firmware to demonstrate their functionality (and test it in CI).
+UEFI (DXE) Rust modules are already included in the platform firmware to demonstrate their functionality (and test it
+in CI).
 
 Looking forward, we're continuing to expand the coverage of our firmware code written in Rust. We are excited to
 continue learning more about Rust in collaboration with the community and our partners.
