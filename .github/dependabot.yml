@@ -7,6 +7,7 @@
 #
 #       This dependabot file is limited to syncing the following type of dependencies. Other files
 #       are already available in Mu DevOps to sync other dependency types.
+#         - Rust Crate Dependencies (`cargo`)
 #         - GitHub Actions (`github-actions`)
 #         - Python PIP Modules (`pip`)
 #
@@ -26,6 +27,20 @@
 version: 2
 
 updates:
+  - package-ecosystem: "cargo"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      timezone: "America/Los_Angeles"
+      time: "03:00"
+    commit-message:
+      prefix: "Rust Dependency"
+    labels:
+      - "type:dependencies"
+      - "type:dependabot"
+    rebase-strategy: "disabled"
+
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
