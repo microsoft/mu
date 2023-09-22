@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.8">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.1">
     
     
       
@@ -28,10 +28,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.046329b4.min.css">
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.72749a73.min.css">
       
         
-        <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.85d0ee34.min.css">
+        <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.a5377069.min.css">
       
       
 
@@ -12341,6 +12341,15 @@ client header, and the service header. In this way the structure and enum defini
 are available for the code using the getters. In our mu_tiano_platforms example, the Config Policy to Silicon Policy
 Mapper is compiled with several C files that only include the client header, as the service header is only needed once
 per module to query the config knobs out of the config policy.</p>
+<p>The getter functions are implemented in the service header file. The traditional way to fetch a knob value will be to call
+the getter function with the knob name by supplying the pointer to hold such knob
+(i.e. <code>ConfigGetKnob1 (&amp;Knob)</code>).</p>
+<p>Alternatively, getter functions can also be called with a knob name and a size-specified buffer. In this case, the getter
+function will inspect the cache buffer and try to populate the content if it is uninitialized. The caller should keep note
+of the intialized buffer for subsquent calls in the same module for optimal performance. The caller should also be aware
+that the buffer size should be large enough (<code>CACHED_POLICY_SIZE + CACHED_POLICY_HEADER_SIZE</code>) to hold the knob value.
+The usage of this alternative could work around the limitation of the traditional way that the relies on global variables
+when the modules are XIP (execute in place).</p>
 <p>The Silicon Policy Consumers do not need to include any of the above headers and will instead fetch their configuration
 directly from silicon policy.</p>
 <h3 id="config-knob-validation-functions">Config Knob Validation Functions<a class="headerlink" href="#config-knob-validation-functions" title="Permanent link">&para;</a></h3>
@@ -12482,10 +12491,10 @@ and apply the overrides from <code>gProfileData</code>.</p>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../../../../..", "features": [], "search": "../../../../../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": "0.9.1"}</script>
+    <script id="__config" type="application/json">{"base": "../../../../../..", "features": [], "search": "../../../../../../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": "0.9.1"}</script>
     
     
-      <script src="../../../../../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
+      <script src="../../../../../../assets/javascripts/bundle.4e0fa4ba.min.js"></script>
       
         <script src="https://unpkg.com/mermaid@8.7.0/dist/mermaid.min.js"></script>
       
