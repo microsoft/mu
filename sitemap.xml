@@ -2,1497 +2,1497 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://microsoft.github.io/mu/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/faq/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/license/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/CodeDevelopment/compile/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/CodeDevelopment/overview/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/CodeDevelopment/prerequisites/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/CodeDevelopment/requirements/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/CodeDevelopment/rust_build/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/CodeDevelopment/rust_documentation_conventions/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/CodeDevelopment/test/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/DeveloperDocs/attribution/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/DeveloperDocs/build_community_docs/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/DeveloperDocs/developer_docs/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/DeveloperDocs/doc_sample_test/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/DeveloperDocs/requirements/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/How/contributing/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/How/integration_checklist/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/How/release_process/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/How/using_project_mu/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/WhatAndWhy/features/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/WhatAndWhy/layout/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/WhatAndWhy/overview/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/WhatAndWhy/rust/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/WhatAndWhy/security/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/Where/external_resources/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/Where/project_resources/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_basecore/CONTRIBUTING/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_basecore/RepoDetails/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_basecore/SECURITY/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_basecore/BaseTools/Docs/feature_ver_spec/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_basecore/BaseTools/NugetPublishing/Mu-Basetools/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_basecore/BaseTools/NugetPublishing/Mu-Nasm/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_basecore/BaseTools/NugetPublishing/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_basecore/BaseTools/Plugin/FdSizeReport/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_basecore/BaseTools/Plugin/OverrideValidation/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_basecore/BaseTools/Scripts/PackageDocumentTools/Readme/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_basecore/BaseTools/Source/Python/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_basecore/BaseTools/Source/Python/FMMT/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_basecore/BaseTools/Source/Python/Pkcs7Sign/Readme/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_basecore/CryptoPkg/Driver/readme/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_basecore/CryptoPkg/Library/BaseCryptLibOnProtocolPpi/readme/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_basecore/CryptoPkg/Library/OpensslLib/readme/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_basecore/Docs/feature_memory_protection/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_basecore/MdeModulePkg/Library/DeviceStateLib/Readme/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_basecore/MdeModulePkg/Library/VariablePolicyLib/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_basecore/MdeModulePkg/Test/ShellTest/VariablePolicyFuncTestApp/Readme/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_basecore/MdePkg/Library/FltUsedLib/Readme/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_basecore/NetworkPkg/SharedNetworking/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_basecore/NetworkPkg/SharedNetworking/SharedNetworking/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_basecore/NetworkPkg/SharedNetworking/release_notes/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_basecore/PolicyServicePkg/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_basecore/PolicyServicePkg/Library/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_basecore/PolicyServicePkg/Samples/PolicyDefinitions/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_basecore/PolicyServicePkg/Samples/PolicyInterface/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_basecore/UnitTestFrameworkPkg/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_basecore/github/pull_request_template/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_basecore/pytool/Plugin/CharEncodingCheck/Readme/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_basecore/pytool/Plugin/CodeQL/Readme/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_basecore/pytool/Plugin/CompilerPlugin/Readme/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_basecore/pytool/Plugin/DebugMacroCheck/Readme/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_basecore/pytool/Plugin/DependencyCheck/Readme/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_basecore/pytool/Plugin/DscCompleteCheck/Readme/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_basecore/pytool/Plugin/EccCheck/Readme/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_basecore/pytool/Plugin/GuidCheck/Readme/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_basecore/pytool/Plugin/HostUnitTestCompilerPlugin/Readme/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_basecore/pytool/Plugin/HostUnitTestDscCompleteCheck/Readme/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_basecore/pytool/Plugin/ImageValidation/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_basecore/pytool/Plugin/LibraryClassCheck/Readme/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_basecore/pytool/Plugin/LicenseCheck/Readme/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_basecore/pytool/Plugin/LineEndingCheck/Readme/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_basecore/pytool/Plugin/MarkdownLintCheck/Readme/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_basecore/pytool/Plugin/SpellCheck/Readme/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_basecore/pytool/Plugin/UncrustifyCheck/Readme/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_common_intel_min_platform/CONTRIBUTING/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_common_intel_min_platform/RepoDetails/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_common_intel_min_platform/SECURITY/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_common_intel_min_platform/github/pull_request_template/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_feature_config/CONTRIBUTING/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_feature_config/RepoDetails/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_feature_config/SECURITY/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_feature_config/breaking_changes/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_feature_config/SetupDataPkg/Docs/ConfigurationFiles/ConfigurationFiles/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_feature_config/SetupDataPkg/Docs/Overview/Overview/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_feature_config/SetupDataPkg/Docs/PlatformIntegration/PlatformIntegrationSteps/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_feature_config/SetupDataPkg/Docs/Profiles/Overview/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_feature_config/github/pull_request_template/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_feature_dfci/CODE_OF_CONDUCT/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_feature_dfci/CONTRIBUTING/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_feature_dfci/RepoDetails/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_feature_dfci/SECURITY/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_feature_dfci/DfciPkg/Application/DfciMenu/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_feature_dfci/DfciPkg/AuthManagerNull/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_feature_dfci/DfciPkg/Docs/Dfci_Feature/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_feature_dfci/DfciPkg/Docs/Internals/DfciInternals/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_feature_dfci/DfciPkg/Docs/PlatformIntegration/DfciDeviceIdSupportLib/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_feature_dfci/DfciPkg/Docs/PlatformIntegration/DfciGroups/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_feature_dfci/DfciPkg/Docs/PlatformIntegration/DfciSettingProviders/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_feature_dfci/DfciPkg/Docs/PlatformIntegration/DfciUiSupportLib/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_feature_dfci/DfciPkg/Docs/PlatformIntegration/PlatformIntegrationOverview/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_feature_dfci/DfciPkg/Docs/QemuQ35Pkg/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_feature_dfci/DfciPkg/Docs/Scenarios/DfciScenarios/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_feature_dfci/DfciPkg/IdentityAndAuthManager/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_feature_dfci/DfciPkg/Library/DfciSampleProvider/readme/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_feature_dfci/DfciPkg/UnitTests/DeviceIdTest/readme/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_feature_dfci/DfciPkg/UnitTests/DfciTests/readme/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_feature_dfci/github/pull_request_template/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_feature_ipmi/CONTRIBUTING/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_feature_ipmi/RepoDetails/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_feature_ipmi/SECURITY/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_feature_ipmi/IpmiFeaturePkg/Readme/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_feature_ipmi/IpmiFeaturePkg/Docs/Ipmi_Boot_Options/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_feature_ipmi/IpmiFeaturePkg/Docs/Ipmi_Feature/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_feature_ipmi/IpmiFeaturePkg/Docs/Ipmi_System_Event_Log/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_feature_ipmi/IpmiFeaturePkg/Docs/Ipmi_Watchdog/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_feature_ipmi/IpmiFeaturePkg/IpmiPowerRestorePolicy/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_feature_ipmi/IpmiFeaturePkg/IpmiSmbios/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_feature_ipmi/IpmiFeaturePkg/Library/IpmiTransportLibSsif/Readme/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_feature_ipmi/IpmiFeaturePkg/Library/MockIpmi/Readme/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_feature_ipmi/IpmiFeaturePkg/Samples/Readme/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_feature_ipmi/IpmiFeaturePkg/SpmiTable/Readme/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_feature_ipmi/github/pull_request_template/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_feature_mm_supv/CONTRIBUTING/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_feature_mm_supv/RepoDetails/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_feature_mm_supv/SECURITY/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_feature_mm_supv/MmSupervisorPkg/Docs/MmSupervisor_Feature/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_feature_mm_supv/MmSupervisorPkg/Docs/MmSupervisorDesign/mm_supervisor_design/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_feature_mm_supv/MmSupervisorPkg/Docs/PlatformIntegration/PlatformIntegrationSteps/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_feature_mm_supv/MmSupervisorPkg/Docs/PlatformIntegration/SoftwareComponentOverview/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_feature_mm_supv/MmSupervisorPkg/Docs/PlatformIntegration/SwitchingToDenyByDefault/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_feature_mm_supv/MmSupervisorPkg/Docs/StandaloneMmOverview/standalone_mm_framework/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_feature_mm_supv/MmSupervisorPkg/Docs/TraditionalSmmFramework/traditional_smm_framework/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_feature_mm_supv/github/pull_request_template/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_oem_sample/CONTRIBUTING/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_oem_sample/SECURITY/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_oem_sample/Docs/OemPkg/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_oem_sample/Docs/Repo_Details/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_oem_sample/Docs/Frontpage_Includes/Frontpage_DSC_Include/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_oem_sample/Docs/Frontpage_Includes/Frontpage_FDF_Include/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_oem_sample/github/pull_request_template/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/CONTRIBUTING/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/RepoDetails/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/SECURITY/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/AdvLoggerPkg/AdvancedFileLogger/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/AdvLoggerPkg/AdvancedSerialLogger/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/AdvLoggerPkg/Application/DecodeUefiLog/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/AdvLoggerPkg/Docs/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/AdvLoggerPkg/UnitTests/LineParser/readme/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/HidPkg/Docs/Readme/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/HidPkg/HidKeyboardDxe/HidKeyboardDxe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/HidPkg/HidMouseAbsolutePointerDxe/HidMouseAbsolutePointerDxe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/MfciPkg/Docs/Mfci_Feature/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/MfciPkg/Docs/Mfci_Integration_Guide/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/MfciPkg/Docs/Mfci_Structures/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/MfciPkg/Library/MfciDeviceIdSupportLibNull/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/MfciPkg/Library/MfciDeviceIdSupportLibSmbios/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/MfciPkg/Library/MfciRetrievePolicyLibNull/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/MfciPkg/Library/MfciRetrievePolicyLibViaHob/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/MfciPkg/Library/MfciRetrievePolicyLibViaVariable/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/MsCorePkg/AcpiRGRT/feature_acpi_rgrt/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/MsCorePkg/CapsuleRuntimeDxe/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/MsCorePkg/CapsuleServicePei/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/MsCorePkg/CapsuleServiceProtocolDxe/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/MsCorePkg/CheckHardwareConnected/readme/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/MsCorePkg/Core/GuidedSectionExtractPeim/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/MsCorePkg/DebugFileLoggerII/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/MsCorePkg/Docs/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/MsCorePkg/IncompatiblePciDevices/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/MsCorePkg/IncompatiblePciDevices/NoOptionRomsAllowed/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/MsCorePkg/Library/DebugPortPei/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/MsCorePkg/Library/DebugPortProtocolInstallLib/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/MsCorePkg/Library/DeviceBootManagerLibNull/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/MsCorePkg/Library/DeviceSpecificBusInfoLibNull/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/MsCorePkg/Library/DxeCapsulePersistenceLib/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/MsCorePkg/Library/DxeDebugLibRouter/Feature_DebugRouting_Readme/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/MsCorePkg/Library/DxeIsCapsuleSupportedLib/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/MsCorePkg/Library/DxeQueueUefiVariableLib/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/MsCorePkg/Library/ExceptionPersistenceLibCmos/Readme/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/MsCorePkg/Library/JsonLiteParser/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/MsCorePkg/Library/MathLib/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/MsCorePkg/Library/MemoryProtectionExceptionHandlerLib/Readme/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/MsCorePkg/Library/MemoryTypeInformationChangeLib/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/MsCorePkg/Library/MuSecureBootKeySelectorLib/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/MsCorePkg/Library/PasswordStoreLibNull/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/MsCorePkg/Library/PeiDebugLib/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/MsCorePkg/Library/PlatformBootManagerLib/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/MsCorePkg/Library/TpmSgNvIndexLib/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/MsCorePkg/MacAddressEmulationDxe/Readme/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/MsCorePkg/MuCryptoDxe/Readme/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/MsCorePkg/MuVarPolicyFoundationDxe/Feature_MuVarPolicyFoundationDxe_Readme/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/MsCorePkg/UnitTests/JsonTest/readme/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/MsCorePkg/UnitTests/MathLibUnitTest/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/MsCorePkg/Universal/StatusCodeHandler/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/MsGraphicsPkg/Application/BmpDisplay/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/MsGraphicsPkg/DisplayEngineDxe/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/MsGraphicsPkg/Docs/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/MsGraphicsPkg/GopOverrideDxe/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/MsGraphicsPkg/Library/BaseUiProgressCircleLib/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/MsGraphicsPkg/Library/BaseUiRectangleLib/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/MsGraphicsPkg/Library/BootGraphicsLib/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/MsGraphicsPkg/Library/BootGraphicsLibNull/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/MsGraphicsPkg/Library/BootGraphicsProviderLibNull/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/MsGraphicsPkg/Library/ColorBarDisplayDeviceStateLib/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/MsGraphicsPkg/Library/DisplayDeviceStateLibNull/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/MsGraphicsPkg/Library/FrameBufferMemDrawLib/Readme/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/MsGraphicsPkg/Library/MsColorTableLib/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/MsGraphicsPkg/Library/MsEarlyGraphicsLibNull/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/MsGraphicsPkg/Library/MsUiThemeCopyLib/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/MsGraphicsPkg/Library/MsUiThemeLib/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/MsGraphicsPkg/Library/QrEncoderLib/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/MsGraphicsPkg/Library/SamplePlatformThemeLib/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/MsGraphicsPkg/Library/SimpleUIToolKit/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/MsGraphicsPkg/Library/SwmDialogsLib/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/MsGraphicsPkg/MsEarlyGraphics/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/MsGraphicsPkg/MsUiTheme/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/MsGraphicsPkg/OnScreenKeyboardDxe/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/MsGraphicsPkg/PrintScreenLogger/Readme/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/MsGraphicsPkg/RenderingEngineDxe/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/MsGraphicsPkg/SimpleWindowManagerDxe/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/MsWheaPkg/readme/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/MsWheaPkg/HwhMenu/readme/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/MsWheaPkg/Library/ParserRegistryLib/readme/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/PcBdsPkg/Library/MsNetworkDependencyLib/readme/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/UefiTestingPkg/Readme/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/UefiTestingPkg/AuditTests/DMAProtectionAudit/UEFI/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/UefiTestingPkg/AuditTests/DMAProtectionAudit/Windows/Readme/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/UefiTestingPkg/AuditTests/PagingAudit/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/UefiTestingPkg/AuditTests/UefiVarLockAudit/Readme/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/UefiTestingPkg/FunctionalSystemTests/MemoryAttributeProtocolFuncTestApp/Readme/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/UefiTestingPkg/FunctionalSystemTests/MemoryProtectionTest/Readme/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/UefiTestingPkg/FunctionalSystemTests/MpManagement/Readme/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/UefiTestingPkg/FunctionalSystemTests/SmmPagingProtectionsTest/Readme/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/XmlSupportPkg/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/github/pull_request_template/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_silicon_arm_tiano/CONTRIBUTING/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_silicon_arm_tiano/RepoDetails/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_silicon_arm_tiano/SECURITY/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_silicon_arm_tiano/ArmPlatformPkg/Drivers/HestMmErrorSources/Readme/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_silicon_arm_tiano/ArmVirtPkg/PlatformCI/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_silicon_arm_tiano/DynamicTablesPkg/Readme/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_silicon_arm_tiano/github/pull_request_template/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_silicon_intel_tiano/CONTRIBUTING/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_silicon_intel_tiano/RepoDetails/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_silicon_intel_tiano/SECURITY/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_silicon_intel_tiano/IntelFsp2Pkg/Readme/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_silicon_intel_tiano/IntelFsp2Pkg/Tools/UserManuals/ConfigEditorUserManual/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_silicon_intel_tiano/IntelFsp2Pkg/Tools/UserManuals/FspDscBsf2YamlUserManual/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_silicon_intel_tiano/IntelFsp2Pkg/Tools/UserManuals/GenCfgOptUserManual/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_silicon_intel_tiano/IntelFsp2Pkg/Tools/UserManuals/PatchFvUserManual/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_silicon_intel_tiano/IntelFsp2Pkg/Tools/UserManuals/SplitFspBinUserManual/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_silicon_intel_tiano/IntelFsp2WrapperPkg/Readme/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_silicon_intel_tiano/IntelSiliconPkg/Feature/Capsule/MicrocodeCapsulePdb/Readme/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_silicon_intel_tiano/IntelSiliconPkg/Feature/Capsule/MicrocodeCapsuleTxt/Readme/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_silicon_intel_tiano/github/pull_request_template/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_tiano_platforms/CONTRIBUTING/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_tiano_platforms/RepoDetails/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_tiano_platforms/SECURITY/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_tiano_platforms/Platforms/Docs/Common/building/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_tiano_platforms/Platforms/Docs/Common/Features/feature_dfci/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_tiano_platforms/Platforms/Docs/Common/Features/feature_frontpage/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_tiano_platforms/Platforms/Docs/Common/Features/feature_memoryprotection/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_tiano_platforms/Platforms/Docs/Common/Features/feature_qemurunner/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_tiano_platforms/Platforms/Docs/Common/Features/feature_whea/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_tiano_platforms/Platforms/Docs/Q35/QemuQ35_ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_tiano_platforms/Platforms/Docs/Q35/debugging/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_tiano_platforms/Platforms/Docs/Q35/Features/feature_codeql/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_tiano_platforms/Platforms/Docs/Q35/Features/feature_colorbar/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_tiano_platforms/Platforms/Docs/Q35/Features/feature_config/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_tiano_platforms/Platforms/Docs/Q35/Features/feature_prm/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_tiano_platforms/Platforms/Docs/Q35/Features/feature_tpm/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_tiano_platforms/Platforms/Docs/Q35/Features/feature_tpm_replay/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_tiano_platforms/Platforms/Docs/SBSA/QemuSbsa_ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_tiano_platforms/Platforms/Docs/SBSA/debugging/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_tiano_platforms/Platforms/QemuQ35Pkg/Library/MsPlatformDevicesLibQemuQ35/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_tiano_platforms/Platforms/QemuQ35Pkg/Library/PlatformDebugLibIoPort/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_tiano_platforms/Platforms/QemuQ35Pkg/QemuVideoDxe/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_tiano_platforms/Platforms/QemuSbsaPkg/Library/MsPlatformDevicesLibQemuSbsa/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_tiano_platforms/Platforms/QemuSbsaPkg/QemuVideoDxe/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_tiano_platforms/QemuPkg/Library/PlatformThemeLib/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_tiano_platforms/UefiDbgExt/readme/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_tiano_platforms/docs/BranchReadme_template/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_tiano_platforms/github/pull_request_template/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_tiano_plus/CONTRIBUTING/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_tiano_plus/RepoDetails/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_tiano_plus/SECURITY/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_tiano_plus/EmbeddedPkg/Scripts/LauterbachT32/Readme/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_tiano_plus/FmpDevicePkg/CapsuleUpdatePolicyDxe/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_tiano_plus/FmpDevicePkg/Docs/FmpDevicePkg_ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_tiano_plus/FmpDevicePkg/FmpDxe/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_tiano_plus/FmpDevicePkg/Library/CapsuleUpdatePolicyLibNull/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_tiano_plus/FmpDevicePkg/Library/CapsuleUpdatePolicyLibOnProtocol/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_tiano_plus/FmpDevicePkg/Library/FmpDependencyCheckLib/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_tiano_plus/FmpDevicePkg/Library/FmpDependencyCheckLibNull/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_tiano_plus/FmpDevicePkg/Library/FmpDependencyDeviceLibNull/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_tiano_plus/FmpDevicePkg/Library/FmpDependencyLib/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_tiano_plus/FmpDevicePkg/Library/FmpDeviceLibNull/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_tiano_plus/FmpDevicePkg/Library/FmpPayloadHeaderLibV1/ReadMe/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_tiano_plus/PrmPkg/Readme/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_tiano_plus/PrmPkg/Samples/Readme/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_tiano_plus/github/pull_request_template/</loc>
-         <lastmod>2023-09-26</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
