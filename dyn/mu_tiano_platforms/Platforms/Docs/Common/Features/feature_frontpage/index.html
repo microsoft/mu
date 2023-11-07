@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../../../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.5">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.8">
     
     
       
@@ -28,7 +28,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../../../assets/stylesheets/main.6a10b989.min.css">
+      <link rel="stylesheet" href="../../../../../../../assets/stylesheets/main.4b4a2bd9.min.css">
       
         
         <link rel="stylesheet" href="../../../../../../../assets/stylesheets/palette.356b1318.min.css">
@@ -10409,6 +10409,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    feature frontpage
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -10418,6 +10429,32 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#entering-front-page" class="md-nav__link">
+    Entering Front Page
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -12175,6 +12212,21 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#entering-front-page" class="md-nav__link">
+    Entering Front Page
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -12192,8 +12244,25 @@
 
 
 <h1 id="front-page">Front Page<a class="headerlink" href="#front-page" title="Permanent link">&para;</a></h1>
-<p>Todo</p>
+<p>The Project Mu graphical front page provides access to system information, boot option configuration, and
+<a href="https://github.com/microsoft/mu_feature_dfci">DFCI</a> configuration settings.</p>
+<p>For more information about front page, refer to its documentation -
+<a href="https://github.com/microsoft/mu_oem_sample/blob/HEAD/Docs/OemPkg.md">OemPkg - Front Page</a>.</p>
 <p><img alt="Front page in Q35" src="mu_frontpage.gif" /></p>
+<h2 id="entering-front-page">Entering Front Page<a class="headerlink" href="#entering-front-page" title="Permanent link">&para;</a></h2>
+<p>Two build variables are available that influence how front page is built and loaded.</p>
+<ol>
+<li><code>BLD_*_GUI_FRONT_PAGE=TRUE</code> - Builds the front page application shown here instead of alternative non-GUI
+   applications that act as the front page. The default value for this variable is <code>FALSE</code>, therefore it must be set
+   to <code>TRUE</code>.</li>
+<li><code>BOOT_TO_FRONT_PAGE=TRUE</code> - Simulates pressing the Vol+ button which indicates that the boot should prioritize the
+   front page boot option. If this is not done, but (1) is set to <code>TRUE</code>, this front page can still be entered but it
+   is not loaded automatically. Instead, the boot will likely boot to the EFI shell and then exiting the shell (with
+   the <code>exit</code> command), will switch to this front page.</li>
+</ol>
+<p>Once in front page, the boot option order can be configured as desired. This front page's boot option entry is named
+   "Mu UEFI UI Front Page".</p>
+<p>The default value for this variable is <code>FALSE</code>.</p>
 
 
 
@@ -12254,7 +12323,7 @@
     <script id="__config" type="application/json">{"base": "../../../../../../..", "features": [], "search": "../../../../../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": "0.9.1"}</script>
     
     
-      <script src="../../../../../../../assets/javascripts/bundle.aecac24b.min.js"></script>
+      <script src="../../../../../../../assets/javascripts/bundle.81fa17fe.min.js"></script>
       
         <script src="https://unpkg.com/mermaid@8.7.0/dist/mermaid.min.js"></script>
       

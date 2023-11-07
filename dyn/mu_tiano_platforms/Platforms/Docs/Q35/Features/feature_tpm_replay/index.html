@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../../../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.5">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.8">
     
     
       
@@ -28,7 +28,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../../../assets/stylesheets/main.6a10b989.min.css">
+      <link rel="stylesheet" href="../../../../../../../assets/stylesheets/main.4b4a2bd9.min.css">
       
         
         <link rel="stylesheet" href="../../../../../../../assets/stylesheets/palette.356b1318.min.css">
@@ -10780,6 +10780,19 @@
     Loading a TPM Replay Event Log
   </a>
   
+    <nav class="md-nav" aria-label="Loading a TPM Replay Event Log">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fw-cfg-example" class="md-nav__link">
+    FW CFG Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -12306,6 +12319,19 @@
     Loading a TPM Replay Event Log
   </a>
   
+    <nav class="md-nav" aria-label="Loading a TPM Replay Event Log">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fw-cfg-example" class="md-nav__link">
+    FW CFG Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -12487,6 +12513,16 @@ by the firmware so the firmware can replay the log during boot. That is done wit
 </ul>
 <p>More details about these are covered in the <a href="https://github.com/microsoft/mu_plus/blob/HEAD/TpmTestingPkg/TpmReplayPei/Readme.md#tcg-event-log-input-channels">"Input Channels"</a>
 section of the main TPM Replay feature documentation.</p>
+<h4 id="fw-cfg-example">FW CFG Example<a class="headerlink" href="#fw-cfg-example" title="Permanent link">&para;</a></h4>
+<p>This option allows a new log to be passed to QEMU from the host machine easily without rebuilding firmware.</p>
+<p>An additional argument to QEMU can be passed in the runner plugin.</p>
+<ul>
+<li><a href="https://github.com/microsoft/mu_tiano_platforms/blob/HEAD/Platforms/QemuQ35Pkg/Plugins/QemuRunner/QemuRunner.py">QemuQ35Pkg QemuRunner.py</a></li>
+<li><a href="https://github.com/microsoft/mu_tiano_platforms/blob/HEAD/Platforms/QemuSbsaPkg/Plugins/QemuRunner/QemuRunner.py">QemuSbsaPkg QemuRunner.py</a></li>
+</ul>
+<p>The <code>args</code> variable can be updated with the fw_cfg item:</p>
+<div class="highlight"><pre><span></span><code>  <span class="n">args</span> <span class="o">+=</span> <span class="s2">&quot; -fw_cfg name=opt/org.mu/tpm_replay/event_log,file=/replaylog.bin&quot;</span><span class="err">`</span>
+</code></pre></div>
 <h3 id="converting-a-binary-back-to-a-human-readable-file">Converting a Binary Back to a Human Readable File<a class="headerlink" href="#converting-a-binary-back-to-a-human-readable-file" title="Permanent link">&para;</a></h3>
 <p>It may be useful to view what's in a binary. That is also possible using <code>TpmReplay.py</code>.</p>
 <div class="highlight"><pre><span></span><code>&gt;<span class="w"> </span>python<span class="w"> </span>TpmReplay.py<span class="w"> </span>-e<span class="w"> </span>InputBinary.bin<span class="w"> </span>-o<span class="w"> </span>OutputLog.yml
@@ -12559,7 +12595,7 @@ section of the main TPM Replay feature documentation.</p>
     <script id="__config" type="application/json">{"base": "../../../../../../..", "features": [], "search": "../../../../../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": "0.9.1"}</script>
     
     
-      <script src="../../../../../../../assets/javascripts/bundle.aecac24b.min.js"></script>
+      <script src="../../../../../../../assets/javascripts/bundle.81fa17fe.min.js"></script>
       
         <script src="https://unpkg.com/mermaid@8.7.0/dist/mermaid.min.js"></script>
       
