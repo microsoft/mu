@@ -15,3 +15,6 @@ __pycache__/
 
 # yml file - build process builds it
 /mkdocs.yml
+
+# ignore generated log files
+*.log
