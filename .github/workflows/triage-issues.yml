@@ -19,4 +19,4 @@ on:
 
 jobs:
   triage:
-    uses: microsoft/mu_devops/.github/workflows/IssueTriager.yml@v7.1.0
+    uses: microsoft/mu_devops/.github/workflows/IssueTriager.yml@v7.2.0
