@@ -67,8 +67,8 @@ by following the instructions in the "Default Tasks and Extending" section of th
 
 Note that the file path to the Mu Basecore file will be relative to the project's own makefile.
 
-The `rustfmt.toml` and `rust-toolchain.toml` files synced across Project Mu repos defines the common formatting options expected for Rust code in
-other Project Mu based repositories.
+The `rustfmt.toml` and `rust-toolchain.toml` files synced across Project Mu repos defines the supported rust version
+common formatting options expected for Rust code in other Project Mu based repositories.
 
 ## Dev Container (with Rust)
 
