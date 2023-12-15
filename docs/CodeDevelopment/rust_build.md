@@ -22,25 +22,30 @@ It is recommended to:
 
    \>`cargo --version`
 
-4. Install the desired Rust tool chain
+4. Install the desired Rust tool chain. The version is found in the `rust-toolchain.toml` file at the root of any
+   Project Mu repository that contains Rust code.
 
-   - Example: `1.68.2 x86_64 toolchain`
+   - [Example](https://github.com/microsoft/mu_tiano_platforms/blob/main/rust-toolchain.toml): `1.73.0 x86_64 toolchain`
 
    - Windows:
 
-      \>`rustup toolchain install 1.68.2-x86_64-pc-windows-msvc`
+      \>`rustup toolchain install 1.73.0-x86_64-pc-windows-msvc`
 
-      \>`rustup component add rust-src --toolchain 1.68.2-x86_64-pc-windows-msvc`
+      \>`rustup component add rust-src --toolchain 1.73.0-x86_64-pc-windows-msvc`
 
    - Linux:
 
-      \>`rustup toolchain install 1.68.2-x86_64-unknown-linux-gnu`
+      \>`rustup toolchain install 1.73.0-x86_64-unknown-linux-gnu`
 
-      \>`rustup component add rust-src --toolchain 1.68.2-x86_64-unknown-linux-gnu`
+      \>`rustup component add rust-src --toolchain 1.73.0-x86_64-unknown-linux-gnu`
 
 5. Install `cargo make`
 
    \>`cargo install --force cargo-make`
+
+6. Install `cargo tarpaulin`
+
+   \>`cargo install --force cargo-tarpaulin`
 
 At this point, the essential Rust applications are installed, and a repo can begin to add and build Rust code.
 
@@ -49,10 +54,12 @@ At this point, the essential Rust applications are installed, and a repo can beg
 Currently, two files are provided in Project Mu repos that play an important role in the building and formatting of
 Rust code in Project Mu based repositories.
 
-- `Makefile.toml` - Defines the tasks and environment settings use within the Project Mu build system to bui;d and
+- `Makefile.toml` - Defines the tasks and environment settings use within the Project Mu build system to build and
   test code.
 
 - `rustfmt.toml` - Defines Rust formatting options used.
+
+- `rust-toolchain.toml` - Defines the exact toolchain supported for this repository
 
 Project Mu repos have common files automatically synced from a common source in the [Mu DevOps](https://github.com/microsoft/mu_devops)
 repo. Projects downstream to Project Mu are recommended to "extend" the `Makefile.toml` in [Mu Basecore](https://github.com/microsoft/mu_basecore)
@@ -61,8 +68,8 @@ by following the instructions in the "Default Tasks and Extending" section of th
 
 Note that the file path to the Mu Basecore file will be relative to the project's own makefile.
 
-The `rustfmt.toml` file synced across Project Mu repos defines the common formatting options expected for Rust code in
-other Project Mu based repositories.
+The `rustfmt.toml` and `rust-toolchain.toml` files synced across Project Mu repos defines the supported rust version
+common formatting options expected for Rust code in other Project Mu based repositories.
 
 ## Dev Container (with Rust)
 

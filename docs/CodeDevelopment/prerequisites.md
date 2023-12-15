@@ -72,6 +72,11 @@ See component list here for more options. <https://docs.microsoft.com/en-us/visu
 
 See component list here for more options. <https://docs.microsoft.com/en-us/visualstudio/install/workload-component-id-vs-build-tools?view=vs-2019>
 
+### Rust
+
+Follow the Rust [install steps](/mu/CodeDevelopment/rust_build#generally-getting-started-with-rust) to install all
+required tooling. This generally includes: `rustc`, `cargo`, `cargo-make`, and `cargo-tarpaulin`
+
 ### Optional - Windows Driver Kit
 
 Provides Inf2Cat.exe, needed to [prepare Windows firmware update packages for signing](https://docs.microsoft.com/en-us/windows-hardware/drivers/bringup/certifying-and-signing-the-update-package).

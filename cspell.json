@@ -130,6 +130,7 @@
         "rlib",
         "roadmap",
         "roadmaps",
+        "rustc",
         "rustfmt",
         "rustup",
         "signtool",
