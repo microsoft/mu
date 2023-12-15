@@ -25,7 +25,6 @@ It is recommended to:
 4. Install the desired Rust tool chain. The version is found in the `rust-toolchain.toml` file at the root of any
    Project Mu repository that contains Rust code.
 
-
    - [Example](https://github.com/microsoft/mu_tiano_platforms/blob/main/rust-toolchain.toml): `1.73.0 x86_64 toolchain`
 
    - Windows:
