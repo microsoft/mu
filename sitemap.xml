@@ -196,6 +196,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://microsoft.github.io/mu/dyn/mu_basecore/CryptoPkg/Readme/</loc>
+         <lastmod>2023-12-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_basecore/CryptoPkg/Driver/readme/</loc>
          <lastmod>2023-12-19</lastmod>
          <changefreq>daily</changefreq>
@@ -212,6 +217,11 @@
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_basecore/Docs/feature_memory_protection/</loc>
+         <lastmod>2023-12-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://microsoft.github.io/mu/dyn/mu_basecore/Docs/rust_build/</loc>
          <lastmod>2023-12-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -352,6 +362,16 @@
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_basecore/pytool/Plugin/MarkdownLintCheck/Readme/</loc>
+         <lastmod>2023-12-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://microsoft.github.io/mu/dyn/mu_basecore/pytool/Plugin/NestedPackageCheck/Readme/</loc>
+         <lastmod>2023-12-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://microsoft.github.io/mu/dyn/mu_basecore/pytool/Plugin/RustHostUnitTestPlugin/Readme/</loc>
          <lastmod>2023-12-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -691,6 +711,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://microsoft.github.io/mu/dyn/mu_oem_sample/OemPkg/HelloUefi/Readme/</loc>
+         <lastmod>2023-12-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_oem_sample/github/pull_request_template/</loc>
          <lastmod>2023-12-19</lastmod>
          <changefreq>daily</changefreq>
@@ -787,6 +812,16 @@
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/MfciPkg/Library/MfciRetrievePolicyLibViaVariable/ReadMe/</loc>
+         <lastmod>2023-12-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://microsoft.github.io/mu/dyn/mu_plus/MsApplicationPkg/Docs/Readme/</loc>
+         <lastmod>2023-12-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://microsoft.github.io/mu/dyn/mu_plus/MsApplicationPkg/SecureBootRecovery/Readme/</loc>
          <lastmod>2023-12-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -1107,6 +1142,16 @@
     </url>
     <url>
          <loc>https://microsoft.github.io/mu/dyn/mu_plus/PcBdsPkg/Library/MsNetworkDependencyLib/readme/</loc>
+         <lastmod>2023-12-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://microsoft.github.io/mu/dyn/mu_plus/TpmTestingPkg/TpmReplayPei/Readme/</loc>
+         <lastmod>2023-12-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://microsoft.github.io/mu/dyn/mu_plus/TpmTestingPkg/TpmReplayPei/Tool/TpmReplaySchema/</loc>
          <lastmod>2023-12-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
