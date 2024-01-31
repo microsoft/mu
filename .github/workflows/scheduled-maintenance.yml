@@ -24,6 +24,11 @@ on:
 jobs:
   repo_cleanup:
     runs-on: ubuntu-latest
+
+    permissions:
+      pull-requests: write
+      issues: write
+
     steps:
       - name: Get Repository Info
         run: echo "REPOSITORY_NAME=${GITHUB_REPOSITORY#*/}" >> $GITHUB_ENV
