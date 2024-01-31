@@ -23,7 +23,11 @@ on:
 
 jobs:
   approval_check:
+
+    permissions:
+      pull-requests: write
+
     if: |
       github.event.pull_request.user.login == 'dependabot[bot]' || github.event.pull_request.user.login == 'uefibot'
-    uses: microsoft/mu_devops/.github/workflows/AutoApprover.yml@v9.0.1
+    uses: microsoft/mu_devops/.github/workflows/AutoApprover.yml@v9.1.1
     secrets: inherit
