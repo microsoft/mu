@@ -45,13 +45,13 @@ the expectation is that between Project Mu and TianoCore Edk2 you could use any 
 2. Install from cmd line with required features (this set will change over time).
 
     ``` cmd
-    C:\TEMP\vs_buildtools.exe --quiet --wait --norestart --nocache --installPath C:\BuildTools ^
+    C:\TEMP\vs_buildtools.exe --passive --wait --norestart --nocache --installPath C:\BuildTools ^
     --add Microsoft.VisualStudio.Component.VC.CoreBuildTools --add Microsoft.VisualStudio.Component.VC.Tools.x86.x64 ^
-    --add Microsoft.VisualStudio.Component.Windows11SDK.22000 --add Microsoft.VisualStudio.Component.VC.Tools.ARM ^
+    --add Microsoft.VisualStudio.Component.Windows11SDK.22621 --add Microsoft.VisualStudio.Component.VC.Tools.ARM ^
     --add Microsoft.VisualStudio.Component.VC.Tools.ARM64
     ```
-
-See component list here for more options. <https://docs.microsoft.com/en-us/visualstudio/install/workload-component-id-vs-build-tools?view=vs-2022>
+See component list here for more options. <https://docs.microsoft.com/en-us/visualstudio/install/workload-component-id-vs-build-tools?view=vs-2022>  
+The `^` char is the line continuation char of cmd.exe. Simply remove them if you use previous command in PowerShell.
 
 ### Visual Studio 2019
 
