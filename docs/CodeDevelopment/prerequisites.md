@@ -50,7 +50,7 @@ the expectation is that between Project Mu and TianoCore Edk2 you could use any 
     --add Microsoft.VisualStudio.Component.Windows11SDK.22621 --add Microsoft.VisualStudio.Component.VC.Tools.ARM ^
     --add Microsoft.VisualStudio.Component.VC.Tools.ARM64
     ```
-    
+
 See component list here for more options. <https://docs.microsoft.com/en-us/visualstudio/install/workload-component-id-vs-build-tools?view=vs-2022>
 
 The `^` char is the line continuation char of cmd.exe. Simply remove them if you use previous command in PowerShell.
