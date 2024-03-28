@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.13">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.15">
     
     
       
@@ -13170,14 +13170,15 @@ the expectation is that between Project Mu and TianoCore Edk2 you could use any 
 </li>
 <li>
 <p>Install from cmd line with required features (this set will change over time).</p>
-<div class="highlight"><pre><span></span><code>C:\TEMP\vs_buildtools.exe --quiet --wait --norestart --nocache --installPath C:\BuildTools ^
+<div class="highlight"><pre><span></span><code>C:\TEMP\vs_buildtools.exe --passive --wait --norestart --nocache --installPath C:\BuildTools ^
 --add Microsoft.VisualStudio.Component.VC.CoreBuildTools --add Microsoft.VisualStudio.Component.VC.Tools.x86.x64 ^
---add Microsoft.VisualStudio.Component.Windows11SDK.22000 --add Microsoft.VisualStudio.Component.VC.Tools.ARM ^
+--add Microsoft.VisualStudio.Component.Windows11SDK.22621 --add Microsoft.VisualStudio.Component.VC.Tools.ARM ^
 --add Microsoft.VisualStudio.Component.VC.Tools.ARM64
 </code></pre></div>
 </li>
 </ol>
 <p>See component list here for more options. <a href="https://docs.microsoft.com/en-us/visualstudio/install/workload-component-id-vs-build-tools?view=vs-2022">https://docs.microsoft.com/en-us/visualstudio/install/workload-component-id-vs-build-tools?view=vs-2022</a></p>
+<p>The <code>^</code> char is the line continuation char of cmd.exe. Simply remove them if you use previous command in PowerShell.</p>
 <h3 id="visual-studio-2019">Visual Studio 2019<a class="headerlink" href="#visual-studio-2019" title="Permanent link">&para;</a></h3>
 <ol>
 <li>
@@ -13338,7 +13339,7 @@ Pip modules this allows each workspace to keep the versions in sync with the wor
     <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": "0.9.1"}</script>
     
     
-      <script src="../../assets/javascripts/bundle.c8d2eff1.min.js"></script>
+      <script src="../../assets/javascripts/bundle.bd41221c.min.js"></script>
       
         <script src="https://unpkg.com/mermaid@8.7.0/dist/mermaid.min.js"></script>
       
