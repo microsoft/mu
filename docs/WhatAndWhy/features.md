@@ -25,7 +25,8 @@ What major features does Project Mu bring to the table above/beyond EDK2?
   * [Rust build documentation](../CodeDevelopment/rust_build.md)
   * [Rust convention documentation](../CodeDevelopment/rust_documentation_conventions.md)
   * [Rust motivation documentation:](../WhatAndWhy/rust.md)
-
+* [Enhanced Memory Protection:](../WhatAndWhy/rust.md)
+l
 ### Features Coming Soon
 
 * Modern BIOS menu example (Surface inspired)
