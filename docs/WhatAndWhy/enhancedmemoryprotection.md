@@ -1,7 +1,5 @@
 # Enhanced UEFI Memory Protection
 
-**Project Mu serves as a reference implementation for Enhanced Memory Protections**
-
 ## Background
 
 While considerable attention has been devoted to hardware trust anchors and operating
@@ -26,6 +24,7 @@ compatibility mitigations (Compatibility Mode) to handle non-compliant
 modules during this transition period. It will take time for legacy code
 to be updated to adhere to these new requirements and our collective commitment
 to progress will pave the way to a more secure and resilient digital future.
+**Project Mu serves as a reference implementation for Enhanced Memory Protections.**
 
 ## Condensed Requirements List
 
@@ -103,8 +102,8 @@ requires loaded images to meet the following criteria:
 
 1. Section flags must not combine IMAGE_SCN_MEM_WRITE and IMAGE_SCN_MEM_EXECUTE for any
 given section.
-1. The PE image sections are aligned to page granularity.
-2. The PE image must not contain any self-modifying code.
+2. The PE image sections are aligned to page granularity.
+3. The PE image must not contain any self-modifying code.
 
 ## NX_COMPAT Characteristic
 
@@ -123,12 +122,12 @@ we are providing a definition for compatibility mode here. Errant modules and un
 faults blocking boot should enter compatibility mode which triggers the following
 deviations from the enhanced memory protection definition:
 
-1.	All new memory allocated will be readable, writable, and executable.  
-2.	All images loaded from the start of compatibility mode will no longer have
+1. All new memory allocated will be readable, writable, and executable.  
+2. All images loaded from the start of compatibility mode will no longer have
 restrictive access attributes applied to the memory ranges in which they are loaded.  
-3.	The Memory Attribute Protocol will be uninstalled.  
-4.	Page zero will be mapped.  
-5.	Legacy BIOS memory (the lower 640K range) will be mapped as readable, writable, and
+3. The Memory Attribute Protocol will be uninstalled.  
+4. Page zero will be mapped.  
+5. Legacy BIOS memory (the lower 640K range) will be mapped as readable, writable, and
 executable.
 
 ### A Note on User Notification of Compatibility Mode
