@@ -10,28 +10,28 @@
       
       
       
-        <link rel="canonical" href="https://microsoft.github.io/mu/dyn/mu_tiano_platforms/UefiDbgExt/readme/">
+        <link rel="canonical" href="https://microsoft.github.io/mu/WhatAndWhy/enhancedmemoryprotection/">
       
       
-        <link rel="prev" href="../../QemuPkg/Library/PlatformThemeLib/ReadMe/">
+        <link rel="prev" href="../rust/">
       
       
-        <link rel="next" href="../../../mu_tiano_plus/CONTRIBUTING/">
+        <link rel="next" href="../security/">
       
       
-      <link rel="icon" href="../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.15">
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
     
     
       
-        <title>Uefi Dbg Ext - Project Mu</title>
+        <title>Enhanced Memory Protection - Project Mu</title>
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.7e359304.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bcfcd587.min.css">
       
         
-        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -50,7 +50,7 @@
       
     
     
-    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#uefi-debugger-extension" class="md-skip">
+        <a href="#enhanced-uefi-memory-protection" class="md-skip">
           Skip to content
         </a>
       
@@ -94,9 +94,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../../.." title="Project Mu" class="md-header__button md-logo" aria-label="Project Mu" data-md-component="logo">
+    <a href="../.." title="Project Mu" class="md-header__button md-logo" aria-label="Project Mu" data-md-component="logo">
       
-  <img src="../../../../img/mu.png" alt="logo">
+  <img src="../../img/mu.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Uefi Dbg Ext
+              Enhanced Memory Protection
             
           </span>
         </div>
@@ -200,9 +200,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../.." title="Project Mu" class="md-nav__button md-logo" aria-label="Project Mu" data-md-component="logo">
+    <a href="../.." title="Project Mu" class="md-nav__button md-logo" aria-label="Project Mu" data-md-component="logo">
       
-  <img src="../../../../img/mu.png" alt="logo">
+  <img src="../../img/mu.png" alt="logo">
 
     </a>
     Project Mu
@@ -229,7 +229,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -246,17 +246,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -270,7 +272,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             What and Why
@@ -284,7 +286,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../WhatAndWhy/overview/" class="md-nav__link">
+      <a href="../overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -305,7 +307,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../WhatAndWhy/layout/" class="md-nav__link">
+      <a href="../layout/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -326,7 +328,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../WhatAndWhy/features/" class="md-nav__link">
+      <a href="../features/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -347,7 +349,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../WhatAndWhy/rust/" class="md-nav__link">
+      <a href="../rust/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -365,10 +367,215 @@
                 
   
   
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Enhanced Memory Protection
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Enhanced Memory Protection
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#background" class="md-nav__link">
+    <span class="md-ellipsis">
+      Background
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#condensed-requirements-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      Condensed Requirements List
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#runtime-configurable-protections" class="md-nav__link">
+    <span class="md-ellipsis">
+      Runtime Configurable Protections
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#memory-attribute-protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      Memory Attribute Protocol
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exception-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exception Handling
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#memory-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Memory Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Memory Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general-memory-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      General Memory Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="General Memory Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#special-memory-ranges" class="md-nav__link">
+    <span class="md-ellipsis">
+      Special Memory Ranges
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pe-loader" class="md-nav__link">
+    <span class="md-ellipsis">
+      PE Loader
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nx_compat-characteristic" class="md-nav__link">
+    <span class="md-ellipsis">
+      NX_COMPAT Characteristic
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compatibility-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compatibility Mode
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Compatibility Mode">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-note-on-user-notification-of-compatibility-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      A Note on User Notification of Compatibility Mode
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#closing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Closing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional Resources
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
   
   
     <li class="md-nav__item">
-      <a href="../../../../WhatAndWhy/security/" class="md-nav__link">
+      <a href="../security/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -431,7 +638,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Where/project_resources/" class="md-nav__link">
+      <a href="../../Where/project_resources/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -452,7 +659,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Where/external_resources/" class="md-nav__link">
+      <a href="../../Where/external_resources/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -515,7 +722,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../How/release_process/" class="md-nav__link">
+      <a href="../../How/release_process/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -536,7 +743,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../How/integration_checklist/" class="md-nav__link">
+      <a href="../../How/integration_checklist/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -557,7 +764,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../How/contributing/" class="md-nav__link">
+      <a href="../../How/contributing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -578,7 +785,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../How/using_project_mu/" class="md-nav__link">
+      <a href="../../How/using_project_mu/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -641,7 +848,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../DeveloperDocs/developer_docs/" class="md-nav__link">
+      <a href="../../DeveloperDocs/developer_docs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -662,7 +869,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../DeveloperDocs/build_community_docs/" class="md-nav__link">
+      <a href="../../DeveloperDocs/build_community_docs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -683,7 +890,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../DeveloperDocs/doc_sample_test/" class="md-nav__link">
+      <a href="../../DeveloperDocs/doc_sample_test/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -704,7 +911,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../DeveloperDocs/attribution/" class="md-nav__link">
+      <a href="../../DeveloperDocs/attribution/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -725,7 +932,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../DeveloperDocs/requirements/" class="md-nav__link">
+      <a href="../../DeveloperDocs/requirements/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -788,7 +995,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../CodeDevelopment/overview/" class="md-nav__link">
+      <a href="../../CodeDevelopment/overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -809,7 +1016,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../CodeDevelopment/prerequisites/" class="md-nav__link">
+      <a href="../../CodeDevelopment/prerequisites/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -830,7 +1037,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../CodeDevelopment/compile/" class="md-nav__link">
+      <a href="../../CodeDevelopment/compile/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -851,7 +1058,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../CodeDevelopment/test/" class="md-nav__link">
+      <a href="../../CodeDevelopment/test/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -872,7 +1079,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../CodeDevelopment/requirements/" class="md-nav__link">
+      <a href="../../CodeDevelopment/requirements/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -893,7 +1100,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../CodeDevelopment/rust_build/" class="md-nav__link">
+      <a href="../../CodeDevelopment/rust_build/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -914,7 +1121,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../CodeDevelopment/rust_documentation_conventions/" class="md-nav__link">
+      <a href="../../CodeDevelopment/rust_documentation_conventions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -942,7 +1149,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../faq/" class="md-nav__link">
+      <a href="../../faq/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -962,7 +1169,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../license/" class="md-nav__link">
+      <a href="../../license/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -979,19 +1186,17 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
         
           
           <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
@@ -1005,7 +1210,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_9">
             <span class="md-nav__icon md-icon"></span>
             Code Repositories
@@ -1089,7 +1294,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_basecore/Docs/feature_memory_protection/" class="md-nav__link">
+      <a href="../../dyn/mu_basecore/Docs/feature_memory_protection/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1110,7 +1315,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_basecore/Docs/rust_build/" class="md-nav__link">
+      <a href="../../dyn/mu_basecore/Docs/rust_build/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1139,7 +1344,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_basecore/CONTRIBUTING/" class="md-nav__link">
+      <a href="../../dyn/mu_basecore/CONTRIBUTING/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1160,7 +1365,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_basecore/RepoDetails/" class="md-nav__link">
+      <a href="../../dyn/mu_basecore/RepoDetails/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1181,7 +1386,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_basecore/SECURITY/" class="md-nav__link">
+      <a href="../../dyn/mu_basecore/SECURITY/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1202,7 +1407,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_basecore/github/pull_request_template/" class="md-nav__link">
+      <a href="../../dyn/mu_basecore/github/pull_request_template/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1293,7 +1498,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_basecore/pytool/Plugin/CharEncodingCheck/Readme/" class="md-nav__link">
+      <a href="../../dyn/mu_basecore/pytool/Plugin/CharEncodingCheck/Readme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1314,7 +1519,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_basecore/pytool/Plugin/CodeQL/Readme/" class="md-nav__link">
+      <a href="../../dyn/mu_basecore/pytool/Plugin/CodeQL/Readme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1335,7 +1540,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_basecore/pytool/Plugin/CompilerPlugin/Readme/" class="md-nav__link">
+      <a href="../../dyn/mu_basecore/pytool/Plugin/CompilerPlugin/Readme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1356,7 +1561,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_basecore/pytool/Plugin/DebugMacroCheck/Readme/" class="md-nav__link">
+      <a href="../../dyn/mu_basecore/pytool/Plugin/DebugMacroCheck/Readme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1377,7 +1582,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_basecore/pytool/Plugin/DependencyCheck/Readme/" class="md-nav__link">
+      <a href="../../dyn/mu_basecore/pytool/Plugin/DependencyCheck/Readme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1398,7 +1603,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_basecore/pytool/Plugin/DscCompleteCheck/Readme/" class="md-nav__link">
+      <a href="../../dyn/mu_basecore/pytool/Plugin/DscCompleteCheck/Readme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1419,7 +1624,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_basecore/pytool/Plugin/EccCheck/Readme/" class="md-nav__link">
+      <a href="../../dyn/mu_basecore/pytool/Plugin/EccCheck/Readme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1440,7 +1645,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_basecore/pytool/Plugin/GuidCheck/Readme/" class="md-nav__link">
+      <a href="../../dyn/mu_basecore/pytool/Plugin/GuidCheck/Readme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1461,7 +1666,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_basecore/pytool/Plugin/HostUnitTestCompilerPlugin/Readme/" class="md-nav__link">
+      <a href="../../dyn/mu_basecore/pytool/Plugin/HostUnitTestCompilerPlugin/Readme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1482,7 +1687,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_basecore/pytool/Plugin/HostUnitTestDscCompleteCheck/Readme/" class="md-nav__link">
+      <a href="../../dyn/mu_basecore/pytool/Plugin/HostUnitTestDscCompleteCheck/Readme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1503,7 +1708,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_basecore/pytool/Plugin/ImageValidation/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_basecore/pytool/Plugin/ImageValidation/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1524,7 +1729,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_basecore/pytool/Plugin/LibraryClassCheck/Readme/" class="md-nav__link">
+      <a href="../../dyn/mu_basecore/pytool/Plugin/LibraryClassCheck/Readme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1545,7 +1750,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_basecore/pytool/Plugin/LicenseCheck/Readme/" class="md-nav__link">
+      <a href="../../dyn/mu_basecore/pytool/Plugin/LicenseCheck/Readme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1566,7 +1771,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_basecore/pytool/Plugin/LineEndingCheck/Readme/" class="md-nav__link">
+      <a href="../../dyn/mu_basecore/pytool/Plugin/LineEndingCheck/Readme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1587,7 +1792,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_basecore/pytool/Plugin/MarkdownLintCheck/Readme/" class="md-nav__link">
+      <a href="../../dyn/mu_basecore/pytool/Plugin/MarkdownLintCheck/Readme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1608,7 +1813,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_basecore/pytool/Plugin/NestedPackageCheck/Readme/" class="md-nav__link">
+      <a href="../../dyn/mu_basecore/pytool/Plugin/NestedPackageCheck/Readme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1629,7 +1834,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_basecore/pytool/Plugin/RustHostUnitTestPlugin/Readme/" class="md-nav__link">
+      <a href="../../dyn/mu_basecore/pytool/Plugin/RustHostUnitTestPlugin/Readme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1650,7 +1855,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_basecore/pytool/Plugin/SpellCheck/Readme/" class="md-nav__link">
+      <a href="../../dyn/mu_basecore/pytool/Plugin/SpellCheck/Readme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1671,7 +1876,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_basecore/pytool/Plugin/UncrustifyCheck/Readme/" class="md-nav__link">
+      <a href="../../dyn/mu_basecore/pytool/Plugin/UncrustifyCheck/Readme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1743,7 +1948,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_basecore/BaseTools/Docs/feature_ver_spec/" class="md-nav__link">
+      <a href="../../dyn/mu_basecore/BaseTools/Docs/feature_ver_spec/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1799,7 +2004,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_basecore/BaseTools/NugetPublishing/Mu-Basetools/" class="md-nav__link">
+      <a href="../../dyn/mu_basecore/BaseTools/NugetPublishing/Mu-Basetools/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1820,7 +2025,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_basecore/BaseTools/NugetPublishing/Mu-Nasm/" class="md-nav__link">
+      <a href="../../dyn/mu_basecore/BaseTools/NugetPublishing/Mu-Nasm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1841,7 +2046,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_basecore/BaseTools/NugetPublishing/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_basecore/BaseTools/NugetPublishing/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1905,7 +2110,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_basecore/BaseTools/Plugin/FdSizeReport/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_basecore/BaseTools/Plugin/FdSizeReport/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1926,7 +2131,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_basecore/BaseTools/Plugin/OverrideValidation/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_basecore/BaseTools/Plugin/OverrideValidation/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1990,7 +2195,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_basecore/BaseTools/Scripts/PackageDocumentTools/Readme/" class="md-nav__link">
+      <a href="../../dyn/mu_basecore/BaseTools/Scripts/PackageDocumentTools/Readme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2089,7 +2294,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_basecore/BaseTools/Source/Python/" class="md-nav__link">
+      <a href="../../dyn/mu_basecore/BaseTools/Source/Python/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2110,7 +2315,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_basecore/BaseTools/Source/Python/FMMT/" class="md-nav__link">
+      <a href="../../dyn/mu_basecore/BaseTools/Source/Python/FMMT/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2131,7 +2336,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_basecore/BaseTools/Source/Python/Pkcs7Sign/Readme/" class="md-nav__link">
+      <a href="../../dyn/mu_basecore/BaseTools/Source/Python/Pkcs7Sign/Readme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2246,7 +2451,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_basecore/CryptoPkg/Readme/" class="md-nav__link">
+      <a href="../../dyn/mu_basecore/CryptoPkg/Readme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2267,7 +2472,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_basecore/CryptoPkg/Driver/readme/" class="md-nav__link">
+      <a href="../../dyn/mu_basecore/CryptoPkg/Driver/readme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2323,7 +2528,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_basecore/CryptoPkg/Library/BaseCryptLibOnProtocolPpi/readme/" class="md-nav__link">
+      <a href="../../dyn/mu_basecore/CryptoPkg/Library/BaseCryptLibOnProtocolPpi/readme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2473,7 +2678,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_basecore/MdeModulePkg/Library/DeviceStateLib/Readme/" class="md-nav__link">
+      <a href="../../dyn/mu_basecore/MdeModulePkg/Library/DeviceStateLib/Readme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2494,7 +2699,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_basecore/MdeModulePkg/Library/VariablePolicyLib/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_basecore/MdeModulePkg/Library/VariablePolicyLib/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2593,7 +2798,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_basecore/MdeModulePkg/Test/ShellTest/VariablePolicyFuncTestApp/Readme/" class="md-nav__link">
+      <a href="../../dyn/mu_basecore/MdeModulePkg/Test/ShellTest/VariablePolicyFuncTestApp/Readme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2751,7 +2956,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_basecore/MdePkg/Library/FltUsedLib/Readme/" class="md-nav__link">
+      <a href="../../dyn/mu_basecore/MdePkg/Library/FltUsedLib/Readme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2901,7 +3106,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_basecore/NetworkPkg/SharedNetworking/" class="md-nav__link">
+      <a href="../../dyn/mu_basecore/NetworkPkg/SharedNetworking/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2922,7 +3127,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_basecore/NetworkPkg/SharedNetworking/release_notes/" class="md-nav__link">
+      <a href="../../dyn/mu_basecore/NetworkPkg/SharedNetworking/release_notes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2943,7 +3148,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_basecore/NetworkPkg/SharedNetworking/SharedNetworking/" class="md-nav__link">
+      <a href="../../dyn/mu_basecore/NetworkPkg/SharedNetworking/SharedNetworking/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3058,7 +3263,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_basecore/PolicyServicePkg/" class="md-nav__link">
+      <a href="../../dyn/mu_basecore/PolicyServicePkg/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3079,7 +3284,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_basecore/PolicyServicePkg/Library/" class="md-nav__link">
+      <a href="../../dyn/mu_basecore/PolicyServicePkg/Library/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3135,7 +3340,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_basecore/PolicyServicePkg/Samples/PolicyDefinitions/" class="md-nav__link">
+      <a href="../../dyn/mu_basecore/PolicyServicePkg/Samples/PolicyDefinitions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3156,7 +3361,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_basecore/PolicyServicePkg/Samples/PolicyInterface/" class="md-nav__link">
+      <a href="../../dyn/mu_basecore/PolicyServicePkg/Samples/PolicyInterface/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3236,7 +3441,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_basecore/UnitTestFrameworkPkg/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_basecore/UnitTestFrameworkPkg/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3308,7 +3513,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_common_intel_min_platform/CONTRIBUTING/" class="md-nav__link">
+      <a href="../../dyn/mu_common_intel_min_platform/CONTRIBUTING/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3329,7 +3534,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_common_intel_min_platform/RepoDetails/" class="md-nav__link">
+      <a href="../../dyn/mu_common_intel_min_platform/RepoDetails/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3350,7 +3555,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_common_intel_min_platform/SECURITY/" class="md-nav__link">
+      <a href="../../dyn/mu_common_intel_min_platform/SECURITY/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3371,7 +3576,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_common_intel_min_platform/github/pull_request_template/" class="md-nav__link">
+      <a href="../../dyn/mu_common_intel_min_platform/github/pull_request_template/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3435,7 +3640,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_feature_config/breaking_changes/" class="md-nav__link">
+      <a href="../../dyn/mu_feature_config/breaking_changes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3456,7 +3661,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_feature_config/CONTRIBUTING/" class="md-nav__link">
+      <a href="../../dyn/mu_feature_config/CONTRIBUTING/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3477,7 +3682,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_feature_config/RepoDetails/" class="md-nav__link">
+      <a href="../../dyn/mu_feature_config/RepoDetails/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3498,7 +3703,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_feature_config/SECURITY/" class="md-nav__link">
+      <a href="../../dyn/mu_feature_config/SECURITY/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3519,7 +3724,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_feature_config/github/pull_request_template/" class="md-nav__link">
+      <a href="../../dyn/mu_feature_config/github/pull_request_template/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3610,7 +3815,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_feature_config/SetupDataPkg/Docs/ConfigurationFiles/ConfigurationFiles/" class="md-nav__link">
+      <a href="../../dyn/mu_feature_config/SetupDataPkg/Docs/ConfigurationFiles/ConfigurationFiles/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3631,7 +3836,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_feature_config/SetupDataPkg/Docs/Overview/Overview/" class="md-nav__link">
+      <a href="../../dyn/mu_feature_config/SetupDataPkg/Docs/Overview/Overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3652,7 +3857,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_feature_config/SetupDataPkg/Docs/PlatformIntegration/PlatformIntegrationSteps/" class="md-nav__link">
+      <a href="../../dyn/mu_feature_config/SetupDataPkg/Docs/PlatformIntegration/PlatformIntegrationSteps/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3673,7 +3878,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_feature_config/SetupDataPkg/Docs/Profiles/Overview/" class="md-nav__link">
+      <a href="../../dyn/mu_feature_config/SetupDataPkg/Docs/Profiles/Overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3753,7 +3958,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_feature_dfci/CODE_OF_CONDUCT/" class="md-nav__link">
+      <a href="../../dyn/mu_feature_dfci/CODE_OF_CONDUCT/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3774,7 +3979,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_feature_dfci/CONTRIBUTING/" class="md-nav__link">
+      <a href="../../dyn/mu_feature_dfci/CONTRIBUTING/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3795,7 +4000,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_feature_dfci/RepoDetails/" class="md-nav__link">
+      <a href="../../dyn/mu_feature_dfci/RepoDetails/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3816,7 +4021,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_feature_dfci/SECURITY/" class="md-nav__link">
+      <a href="../../dyn/mu_feature_dfci/SECURITY/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3837,7 +4042,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_feature_dfci/github/pull_request_template/" class="md-nav__link">
+      <a href="../../dyn/mu_feature_dfci/github/pull_request_template/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3928,7 +4133,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_feature_dfci/DfciPkg/Docs/Dfci_Feature/" class="md-nav__link">
+      <a href="../../dyn/mu_feature_dfci/DfciPkg/Docs/Dfci_Feature/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3949,7 +4154,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_feature_dfci/DfciPkg/Docs/Internals/DfciInternals/" class="md-nav__link">
+      <a href="../../dyn/mu_feature_dfci/DfciPkg/Docs/Internals/DfciInternals/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4005,7 +4210,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_feature_dfci/DfciPkg/Docs/PlatformIntegration/DfciDeviceIdSupportLib/" class="md-nav__link">
+      <a href="../../dyn/mu_feature_dfci/DfciPkg/Docs/PlatformIntegration/DfciDeviceIdSupportLib/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4026,7 +4231,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_feature_dfci/DfciPkg/Docs/PlatformIntegration/DfciGroups/" class="md-nav__link">
+      <a href="../../dyn/mu_feature_dfci/DfciPkg/Docs/PlatformIntegration/DfciGroups/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4047,7 +4252,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_feature_dfci/DfciPkg/Docs/PlatformIntegration/DfciSettingProviders/" class="md-nav__link">
+      <a href="../../dyn/mu_feature_dfci/DfciPkg/Docs/PlatformIntegration/DfciSettingProviders/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4068,7 +4273,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_feature_dfci/DfciPkg/Docs/PlatformIntegration/DfciUiSupportLib/" class="md-nav__link">
+      <a href="../../dyn/mu_feature_dfci/DfciPkg/Docs/PlatformIntegration/DfciUiSupportLib/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4089,7 +4294,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_feature_dfci/DfciPkg/Docs/PlatformIntegration/PlatformIntegrationOverview/" class="md-nav__link">
+      <a href="../../dyn/mu_feature_dfci/DfciPkg/Docs/PlatformIntegration/PlatformIntegrationOverview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4153,7 +4358,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_feature_dfci/DfciPkg/Docs/QemuQ35Pkg/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_feature_dfci/DfciPkg/Docs/QemuQ35Pkg/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4182,7 +4387,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_feature_dfci/DfciPkg/Docs/Scenarios/DfciScenarios/" class="md-nav__link">
+      <a href="../../dyn/mu_feature_dfci/DfciPkg/Docs/Scenarios/DfciScenarios/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4281,7 +4486,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_feature_dfci/DfciPkg/Application/DfciMenu/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_feature_dfci/DfciPkg/Application/DfciMenu/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4310,7 +4515,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_feature_dfci/DfciPkg/AuthManagerNull/" class="md-nav__link">
+      <a href="../../dyn/mu_feature_dfci/DfciPkg/AuthManagerNull/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4331,7 +4536,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_feature_dfci/DfciPkg/IdentityAndAuthManager/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_feature_dfci/DfciPkg/IdentityAndAuthManager/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4387,7 +4592,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_feature_dfci/DfciPkg/Library/DfciSampleProvider/readme/" class="md-nav__link">
+      <a href="../../dyn/mu_feature_dfci/DfciPkg/Library/DfciSampleProvider/readme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4451,7 +4656,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_feature_dfci/DfciPkg/UnitTests/DeviceIdTest/readme/" class="md-nav__link">
+      <a href="../../dyn/mu_feature_dfci/DfciPkg/UnitTests/DeviceIdTest/readme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4472,7 +4677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_feature_dfci/DfciPkg/UnitTests/DfciTests/readme/" class="md-nav__link">
+      <a href="../../dyn/mu_feature_dfci/DfciPkg/UnitTests/DfciTests/readme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4560,7 +4765,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_feature_ipmi/CONTRIBUTING/" class="md-nav__link">
+      <a href="../../dyn/mu_feature_ipmi/CONTRIBUTING/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4581,7 +4786,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_feature_ipmi/RepoDetails/" class="md-nav__link">
+      <a href="../../dyn/mu_feature_ipmi/RepoDetails/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4602,7 +4807,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_feature_ipmi/SECURITY/" class="md-nav__link">
+      <a href="../../dyn/mu_feature_ipmi/SECURITY/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4623,7 +4828,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_feature_ipmi/github/pull_request_template/" class="md-nav__link">
+      <a href="../../dyn/mu_feature_ipmi/github/pull_request_template/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4714,7 +4919,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_feature_ipmi/IpmiFeaturePkg/Docs/Ipmi_Boot_Options/" class="md-nav__link">
+      <a href="../../dyn/mu_feature_ipmi/IpmiFeaturePkg/Docs/Ipmi_Boot_Options/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4735,7 +4940,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_feature_ipmi/IpmiFeaturePkg/Docs/Ipmi_Feature/" class="md-nav__link">
+      <a href="../../dyn/mu_feature_ipmi/IpmiFeaturePkg/Docs/Ipmi_Feature/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4756,7 +4961,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_feature_ipmi/IpmiFeaturePkg/Docs/Ipmi_System_Event_Log/" class="md-nav__link">
+      <a href="../../dyn/mu_feature_ipmi/IpmiFeaturePkg/Docs/Ipmi_System_Event_Log/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4777,7 +4982,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_feature_ipmi/IpmiFeaturePkg/Docs/Ipmi_Watchdog/" class="md-nav__link">
+      <a href="../../dyn/mu_feature_ipmi/IpmiFeaturePkg/Docs/Ipmi_Watchdog/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4841,7 +5046,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_feature_ipmi/IpmiFeaturePkg/Readme/" class="md-nav__link">
+      <a href="../../dyn/mu_feature_ipmi/IpmiFeaturePkg/Readme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4862,7 +5067,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_feature_ipmi/IpmiFeaturePkg/IpmiPowerRestorePolicy/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_feature_ipmi/IpmiFeaturePkg/IpmiPowerRestorePolicy/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4883,7 +5088,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_feature_ipmi/IpmiFeaturePkg/IpmiSmbios/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_feature_ipmi/IpmiFeaturePkg/IpmiSmbios/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4939,7 +5144,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_feature_ipmi/IpmiFeaturePkg/Library/IpmiTransportLibSsif/Readme/" class="md-nav__link">
+      <a href="../../dyn/mu_feature_ipmi/IpmiFeaturePkg/Library/IpmiTransportLibSsif/Readme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4960,7 +5165,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_feature_ipmi/IpmiFeaturePkg/Library/MockIpmi/Readme/" class="md-nav__link">
+      <a href="../../dyn/mu_feature_ipmi/IpmiFeaturePkg/Library/MockIpmi/Readme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4989,7 +5194,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_feature_ipmi/IpmiFeaturePkg/Samples/Readme/" class="md-nav__link">
+      <a href="../../dyn/mu_feature_ipmi/IpmiFeaturePkg/Samples/Readme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5010,7 +5215,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_feature_ipmi/IpmiFeaturePkg/SpmiTable/Readme/" class="md-nav__link">
+      <a href="../../dyn/mu_feature_ipmi/IpmiFeaturePkg/SpmiTable/Readme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5090,7 +5295,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_feature_mm_supv/CONTRIBUTING/" class="md-nav__link">
+      <a href="../../dyn/mu_feature_mm_supv/CONTRIBUTING/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5111,7 +5316,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_feature_mm_supv/RepoDetails/" class="md-nav__link">
+      <a href="../../dyn/mu_feature_mm_supv/RepoDetails/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5132,7 +5337,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_feature_mm_supv/SECURITY/" class="md-nav__link">
+      <a href="../../dyn/mu_feature_mm_supv/SECURITY/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5153,7 +5358,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_feature_mm_supv/github/pull_request_template/" class="md-nav__link">
+      <a href="../../dyn/mu_feature_mm_supv/github/pull_request_template/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5244,7 +5449,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_feature_mm_supv/MmSupervisorPkg/Docs/MmSupervisor_Feature/" class="md-nav__link">
+      <a href="../../dyn/mu_feature_mm_supv/MmSupervisorPkg/Docs/MmSupervisor_Feature/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5265,7 +5470,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_feature_mm_supv/MmSupervisorPkg/Docs/MmSupervisorDesign/mm_supervisor_design/" class="md-nav__link">
+      <a href="../../dyn/mu_feature_mm_supv/MmSupervisorPkg/Docs/MmSupervisorDesign/mm_supervisor_design/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5321,7 +5526,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_feature_mm_supv/MmSupervisorPkg/Docs/PlatformIntegration/PlatformIntegrationSteps/" class="md-nav__link">
+      <a href="../../dyn/mu_feature_mm_supv/MmSupervisorPkg/Docs/PlatformIntegration/PlatformIntegrationSteps/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5342,7 +5547,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_feature_mm_supv/MmSupervisorPkg/Docs/PlatformIntegration/SoftwareComponentOverview/" class="md-nav__link">
+      <a href="../../dyn/mu_feature_mm_supv/MmSupervisorPkg/Docs/PlatformIntegration/SoftwareComponentOverview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5363,7 +5568,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_feature_mm_supv/MmSupervisorPkg/Docs/PlatformIntegration/SwitchingToDenyByDefault/" class="md-nav__link">
+      <a href="../../dyn/mu_feature_mm_supv/MmSupervisorPkg/Docs/PlatformIntegration/SwitchingToDenyByDefault/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5392,7 +5597,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_feature_mm_supv/MmSupervisorPkg/Docs/StandaloneMmOverview/standalone_mm_framework/" class="md-nav__link">
+      <a href="../../dyn/mu_feature_mm_supv/MmSupervisorPkg/Docs/StandaloneMmOverview/standalone_mm_framework/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5413,7 +5618,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_feature_mm_supv/MmSupervisorPkg/Docs/TraditionalSmmFramework/traditional_smm_framework/" class="md-nav__link">
+      <a href="../../dyn/mu_feature_mm_supv/MmSupervisorPkg/Docs/TraditionalSmmFramework/traditional_smm_framework/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5528,7 +5733,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_oem_sample/Docs/OemPkg/" class="md-nav__link">
+      <a href="../../dyn/mu_oem_sample/Docs/OemPkg/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5549,7 +5754,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_oem_sample/Docs/Repo_Details/" class="md-nav__link">
+      <a href="../../dyn/mu_oem_sample/Docs/Repo_Details/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5605,7 +5810,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_oem_sample/Docs/Frontpage_Includes/Frontpage_DSC_Include/" class="md-nav__link">
+      <a href="../../dyn/mu_oem_sample/Docs/Frontpage_Includes/Frontpage_DSC_Include/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5626,7 +5831,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_oem_sample/Docs/Frontpage_Includes/Frontpage_FDF_Include/" class="md-nav__link">
+      <a href="../../dyn/mu_oem_sample/Docs/Frontpage_Includes/Frontpage_FDF_Include/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5663,7 +5868,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_oem_sample/CONTRIBUTING/" class="md-nav__link">
+      <a href="../../dyn/mu_oem_sample/CONTRIBUTING/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5684,7 +5889,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_oem_sample/SECURITY/" class="md-nav__link">
+      <a href="../../dyn/mu_oem_sample/SECURITY/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5705,7 +5910,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_oem_sample/github/pull_request_template/" class="md-nav__link">
+      <a href="../../dyn/mu_oem_sample/github/pull_request_template/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5796,7 +6001,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_oem_sample/OemPkg/HelloUefi/Readme/" class="md-nav__link">
+      <a href="../../dyn/mu_oem_sample/OemPkg/HelloUefi/Readme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5876,7 +6081,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/CONTRIBUTING/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/CONTRIBUTING/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5897,7 +6102,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/RepoDetails/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/RepoDetails/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5918,7 +6123,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/SECURITY/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/SECURITY/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5939,7 +6144,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/github/pull_request_template/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/github/pull_request_template/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5995,7 +6200,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/AdvLoggerPkg/Docs/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/AdvLoggerPkg/Docs/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6051,7 +6256,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/AdvLoggerPkg/AdvancedFileLogger/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/AdvLoggerPkg/AdvancedFileLogger/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6072,7 +6277,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/AdvLoggerPkg/AdvancedSerialLogger/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/AdvLoggerPkg/AdvancedSerialLogger/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6128,7 +6333,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/AdvLoggerPkg/Application/DecodeUefiLog/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/AdvLoggerPkg/Application/DecodeUefiLog/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6192,7 +6397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/AdvLoggerPkg/UnitTests/LineParser/readme/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/AdvLoggerPkg/UnitTests/LineParser/readme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6272,7 +6477,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/HidPkg/Docs/Readme/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/HidPkg/Docs/Readme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6328,7 +6533,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/HidPkg/HidKeyboardDxe/HidKeyboardDxe/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/HidPkg/HidKeyboardDxe/HidKeyboardDxe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6349,7 +6554,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/HidPkg/HidMouseAbsolutePointerDxe/HidMouseAbsolutePointerDxe/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/HidPkg/HidMouseAbsolutePointerDxe/HidMouseAbsolutePointerDxe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6456,7 +6661,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/MfciPkg/Docs/Mfci_Feature/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/MfciPkg/Docs/Mfci_Feature/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6477,7 +6682,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/MfciPkg/Docs/Mfci_Integration_Guide/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/MfciPkg/Docs/Mfci_Integration_Guide/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6498,7 +6703,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/MfciPkg/Docs/Mfci_Structures/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/MfciPkg/Docs/Mfci_Structures/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6597,7 +6802,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/MfciPkg/Library/MfciDeviceIdSupportLibNull/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/MfciPkg/Library/MfciDeviceIdSupportLibNull/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6618,7 +6823,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/MfciPkg/Library/MfciDeviceIdSupportLibSmbios/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/MfciPkg/Library/MfciDeviceIdSupportLibSmbios/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6639,7 +6844,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/MfciPkg/Library/MfciRetrievePolicyLibNull/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/MfciPkg/Library/MfciRetrievePolicyLibNull/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6660,7 +6865,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/MfciPkg/Library/MfciRetrievePolicyLibViaHob/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/MfciPkg/Library/MfciRetrievePolicyLibViaHob/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6681,7 +6886,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/MfciPkg/Library/MfciRetrievePolicyLibViaVariable/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/MfciPkg/Library/MfciRetrievePolicyLibViaVariable/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6761,7 +6966,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/MsApplicationPkg/Docs/Readme/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/MsApplicationPkg/Docs/Readme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6817,7 +7022,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/MsApplicationPkg/SecureBootRecovery/Readme/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/MsApplicationPkg/SecureBootRecovery/Readme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6889,7 +7094,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/MsCorePkg/Docs/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/MsCorePkg/Docs/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6945,7 +7150,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/MsCorePkg/AcpiRGRT/feature_acpi_rgrt/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/MsCorePkg/AcpiRGRT/feature_acpi_rgrt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6966,7 +7171,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/MsCorePkg/CapsuleRuntimeDxe/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/MsCorePkg/CapsuleRuntimeDxe/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6987,7 +7192,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/MsCorePkg/CapsuleServicePei/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/MsCorePkg/CapsuleServicePei/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7008,7 +7213,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/MsCorePkg/CapsuleServiceProtocolDxe/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/MsCorePkg/CapsuleServiceProtocolDxe/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7029,7 +7234,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/MsCorePkg/CheckHardwareConnected/readme/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/MsCorePkg/CheckHardwareConnected/readme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7085,7 +7290,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/MsCorePkg/Core/GuidedSectionExtractPeim/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/MsCorePkg/Core/GuidedSectionExtractPeim/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7114,7 +7319,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/MsCorePkg/DebugFileLoggerII/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/MsCorePkg/DebugFileLoggerII/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7170,7 +7375,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/MsCorePkg/IncompatiblePciDevices/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/MsCorePkg/IncompatiblePciDevices/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7191,7 +7396,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/MsCorePkg/IncompatiblePciDevices/NoOptionRomsAllowed/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/MsCorePkg/IncompatiblePciDevices/NoOptionRomsAllowed/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7255,7 +7460,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/MsCorePkg/Library/DebugPortPei/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/MsCorePkg/Library/DebugPortPei/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7276,7 +7481,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/MsCorePkg/Library/DebugPortProtocolInstallLib/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/MsCorePkg/Library/DebugPortProtocolInstallLib/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7297,7 +7502,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/MsCorePkg/Library/DeviceBootManagerLibNull/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/MsCorePkg/Library/DeviceBootManagerLibNull/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7318,7 +7523,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/MsCorePkg/Library/DeviceSpecificBusInfoLibNull/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/MsCorePkg/Library/DeviceSpecificBusInfoLibNull/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7339,7 +7544,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/MsCorePkg/Library/DxeCapsulePersistenceLib/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/MsCorePkg/Library/DxeCapsulePersistenceLib/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7360,7 +7565,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/MsCorePkg/Library/DxeDebugLibRouter/Feature_DebugRouting_Readme/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/MsCorePkg/Library/DxeDebugLibRouter/Feature_DebugRouting_Readme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7381,7 +7586,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/MsCorePkg/Library/DxeIsCapsuleSupportedLib/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/MsCorePkg/Library/DxeIsCapsuleSupportedLib/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7402,7 +7607,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/MsCorePkg/Library/DxeQueueUefiVariableLib/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/MsCorePkg/Library/DxeQueueUefiVariableLib/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7423,7 +7628,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/MsCorePkg/Library/ExceptionPersistenceLibCmos/Readme/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/MsCorePkg/Library/ExceptionPersistenceLibCmos/Readme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7444,7 +7649,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/MsCorePkg/Library/JsonLiteParser/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/MsCorePkg/Library/JsonLiteParser/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7465,7 +7670,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/MsCorePkg/Library/MathLib/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/MsCorePkg/Library/MathLib/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7486,7 +7691,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/MsCorePkg/Library/MemoryProtectionExceptionHandlerLib/Readme/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/MsCorePkg/Library/MemoryProtectionExceptionHandlerLib/Readme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7507,7 +7712,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/MsCorePkg/Library/MemoryTypeInformationChangeLib/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/MsCorePkg/Library/MemoryTypeInformationChangeLib/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7528,7 +7733,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/MsCorePkg/Library/MuSecureBootKeySelectorLib/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/MsCorePkg/Library/MuSecureBootKeySelectorLib/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7549,7 +7754,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/MsCorePkg/Library/PasswordStoreLibNull/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/MsCorePkg/Library/PasswordStoreLibNull/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7570,7 +7775,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/MsCorePkg/Library/PeiDebugLib/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/MsCorePkg/Library/PeiDebugLib/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7591,7 +7796,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/MsCorePkg/Library/PlatformBootManagerLib/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/MsCorePkg/Library/PlatformBootManagerLib/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7612,7 +7817,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/MsCorePkg/Library/TpmSgNvIndexLib/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/MsCorePkg/Library/TpmSgNvIndexLib/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7641,7 +7846,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/MsCorePkg/MacAddressEmulationDxe/Readme/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/MsCorePkg/MacAddressEmulationDxe/Readme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7662,7 +7867,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/MsCorePkg/MuCryptoDxe/Readme/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/MsCorePkg/MuCryptoDxe/Readme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7683,7 +7888,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/MsCorePkg/MuVarPolicyFoundationDxe/Feature_MuVarPolicyFoundationDxe_Readme/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/MsCorePkg/MuVarPolicyFoundationDxe/Feature_MuVarPolicyFoundationDxe_Readme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7739,7 +7944,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/MsCorePkg/UnitTests/JsonTest/readme/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/MsCorePkg/UnitTests/JsonTest/readme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7760,7 +7965,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/MsCorePkg/UnitTests/MathLibUnitTest/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/MsCorePkg/UnitTests/MathLibUnitTest/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7824,7 +8029,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/MsCorePkg/Universal/StatusCodeHandler/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/MsCorePkg/Universal/StatusCodeHandler/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7904,7 +8109,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/MsGraphicsPkg/Docs/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/MsGraphicsPkg/Docs/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7995,7 +8200,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/MsGraphicsPkg/Application/BmpDisplay/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/MsGraphicsPkg/Application/BmpDisplay/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -8024,7 +8229,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/MsGraphicsPkg/DisplayEngineDxe/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/MsGraphicsPkg/DisplayEngineDxe/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -8045,7 +8250,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/MsGraphicsPkg/GopOverrideDxe/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/MsGraphicsPkg/GopOverrideDxe/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -8101,7 +8306,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/MsGraphicsPkg/Library/BaseUiProgressCircleLib/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/MsGraphicsPkg/Library/BaseUiProgressCircleLib/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -8122,7 +8327,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/MsGraphicsPkg/Library/BaseUiRectangleLib/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/MsGraphicsPkg/Library/BaseUiRectangleLib/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -8143,7 +8348,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/MsGraphicsPkg/Library/BootGraphicsLib/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/MsGraphicsPkg/Library/BootGraphicsLib/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -8164,7 +8369,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/MsGraphicsPkg/Library/BootGraphicsLibNull/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/MsGraphicsPkg/Library/BootGraphicsLibNull/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -8185,7 +8390,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/MsGraphicsPkg/Library/BootGraphicsProviderLibNull/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/MsGraphicsPkg/Library/BootGraphicsProviderLibNull/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -8206,7 +8411,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/MsGraphicsPkg/Library/ColorBarDisplayDeviceStateLib/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/MsGraphicsPkg/Library/ColorBarDisplayDeviceStateLib/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -8227,7 +8432,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/MsGraphicsPkg/Library/DisplayDeviceStateLibNull/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/MsGraphicsPkg/Library/DisplayDeviceStateLibNull/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -8248,7 +8453,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/MsGraphicsPkg/Library/FrameBufferMemDrawLib/Readme/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/MsGraphicsPkg/Library/FrameBufferMemDrawLib/Readme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -8269,7 +8474,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/MsGraphicsPkg/Library/MsColorTableLib/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/MsGraphicsPkg/Library/MsColorTableLib/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -8290,7 +8495,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/MsGraphicsPkg/Library/MsEarlyGraphicsLibNull/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/MsGraphicsPkg/Library/MsEarlyGraphicsLibNull/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -8311,7 +8516,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/MsGraphicsPkg/Library/MsUiThemeCopyLib/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/MsGraphicsPkg/Library/MsUiThemeCopyLib/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -8332,7 +8537,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/MsGraphicsPkg/Library/MsUiThemeLib/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/MsGraphicsPkg/Library/MsUiThemeLib/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -8353,7 +8558,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/MsGraphicsPkg/Library/QrEncoderLib/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/MsGraphicsPkg/Library/QrEncoderLib/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -8374,7 +8579,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/MsGraphicsPkg/Library/SamplePlatformThemeLib/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/MsGraphicsPkg/Library/SamplePlatformThemeLib/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -8395,7 +8600,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/MsGraphicsPkg/Library/SimpleUIToolKit/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/MsGraphicsPkg/Library/SimpleUIToolKit/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -8416,7 +8621,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/MsGraphicsPkg/Library/SwmDialogsLib/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/MsGraphicsPkg/Library/SwmDialogsLib/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -8445,7 +8650,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/MsGraphicsPkg/MsEarlyGraphics/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/MsGraphicsPkg/MsEarlyGraphics/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -8466,7 +8671,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/MsGraphicsPkg/MsUiTheme/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/MsGraphicsPkg/MsUiTheme/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -8487,7 +8692,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/MsGraphicsPkg/OnScreenKeyboardDxe/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/MsGraphicsPkg/OnScreenKeyboardDxe/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -8508,7 +8713,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/MsGraphicsPkg/PrintScreenLogger/Readme/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/MsGraphicsPkg/PrintScreenLogger/Readme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -8529,7 +8734,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/MsGraphicsPkg/RenderingEngineDxe/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/MsGraphicsPkg/RenderingEngineDxe/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -8550,7 +8755,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/MsGraphicsPkg/SimpleWindowManagerDxe/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/MsGraphicsPkg/SimpleWindowManagerDxe/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -8657,7 +8862,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/MsWheaPkg/readme/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/MsWheaPkg/readme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -8678,7 +8883,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/MsWheaPkg/HwhMenu/readme/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/MsWheaPkg/HwhMenu/readme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -8734,7 +8939,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/MsWheaPkg/Library/ParserRegistryLib/readme/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/MsWheaPkg/Library/ParserRegistryLib/readme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -8884,7 +9089,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/PcBdsPkg/Library/MsNetworkDependencyLib/readme/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/PcBdsPkg/Library/MsNetworkDependencyLib/readme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -9034,7 +9239,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/TpmTestingPkg/TpmReplayPei/Readme/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/TpmTestingPkg/TpmReplayPei/Readme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -9055,7 +9260,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/TpmTestingPkg/TpmReplayPei/Tool/TpmReplaySchema/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/TpmTestingPkg/TpmReplayPei/Tool/TpmReplaySchema/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -9170,7 +9375,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/UefiTestingPkg/Readme/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/UefiTestingPkg/Readme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -9261,7 +9466,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/UefiTestingPkg/AuditTests/DMAProtectionAudit/UEFI/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/UefiTestingPkg/AuditTests/DMAProtectionAudit/UEFI/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -9282,7 +9487,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/UefiTestingPkg/AuditTests/DMAProtectionAudit/Windows/Readme/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/UefiTestingPkg/AuditTests/DMAProtectionAudit/Windows/Readme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -9311,7 +9516,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/UefiTestingPkg/AuditTests/PagingAudit/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/UefiTestingPkg/AuditTests/PagingAudit/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -9332,7 +9537,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/UefiTestingPkg/AuditTests/UefiVarLockAudit/Readme/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/UefiTestingPkg/AuditTests/UefiVarLockAudit/Readme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -9396,7 +9601,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/UefiTestingPkg/FunctionalSystemTests/MemoryAttributeProtocolFuncTestApp/Readme/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/UefiTestingPkg/FunctionalSystemTests/MemoryAttributeProtocolFuncTestApp/Readme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -9417,7 +9622,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/UefiTestingPkg/FunctionalSystemTests/MemoryProtectionTest/Readme/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/UefiTestingPkg/FunctionalSystemTests/MemoryProtectionTest/Readme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -9438,7 +9643,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/UefiTestingPkg/FunctionalSystemTests/MpManagement/Readme/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/UefiTestingPkg/FunctionalSystemTests/MpManagement/Readme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -9459,7 +9664,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/UefiTestingPkg/FunctionalSystemTests/SmmPagingProtectionsTest/Readme/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/UefiTestingPkg/FunctionalSystemTests/SmmPagingProtectionsTest/Readme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -9539,7 +9744,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_plus/XmlSupportPkg/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_plus/XmlSupportPkg/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -9611,7 +9816,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_silicon_arm_tiano/CONTRIBUTING/" class="md-nav__link">
+      <a href="../../dyn/mu_silicon_arm_tiano/CONTRIBUTING/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -9632,7 +9837,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_silicon_arm_tiano/RepoDetails/" class="md-nav__link">
+      <a href="../../dyn/mu_silicon_arm_tiano/RepoDetails/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -9653,7 +9858,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_silicon_arm_tiano/SECURITY/" class="md-nav__link">
+      <a href="../../dyn/mu_silicon_arm_tiano/SECURITY/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -9674,7 +9879,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_silicon_arm_tiano/github/pull_request_template/" class="md-nav__link">
+      <a href="../../dyn/mu_silicon_arm_tiano/github/pull_request_template/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -9800,7 +10005,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_silicon_arm_tiano/ArmPlatformPkg/Drivers/HestMmErrorSources/Readme/" class="md-nav__link">
+      <a href="../../dyn/mu_silicon_arm_tiano/ArmPlatformPkg/Drivers/HestMmErrorSources/Readme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -9915,7 +10120,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_silicon_arm_tiano/ArmVirtPkg/PlatformCI/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_silicon_arm_tiano/ArmVirtPkg/PlatformCI/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -9987,7 +10192,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_silicon_arm_tiano/DynamicTablesPkg/Readme/" class="md-nav__link">
+      <a href="../../dyn/mu_silicon_arm_tiano/DynamicTablesPkg/Readme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -10059,7 +10264,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_silicon_intel_tiano/CONTRIBUTING/" class="md-nav__link">
+      <a href="../../dyn/mu_silicon_intel_tiano/CONTRIBUTING/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -10080,7 +10285,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_silicon_intel_tiano/RepoDetails/" class="md-nav__link">
+      <a href="../../dyn/mu_silicon_intel_tiano/RepoDetails/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -10101,7 +10306,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_silicon_intel_tiano/SECURITY/" class="md-nav__link">
+      <a href="../../dyn/mu_silicon_intel_tiano/SECURITY/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -10122,7 +10327,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_silicon_intel_tiano/github/pull_request_template/" class="md-nav__link">
+      <a href="../../dyn/mu_silicon_intel_tiano/github/pull_request_template/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -10213,7 +10418,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_silicon_intel_tiano/IntelFsp2Pkg/Readme/" class="md-nav__link">
+      <a href="../../dyn/mu_silicon_intel_tiano/IntelFsp2Pkg/Readme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -10304,7 +10509,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_silicon_intel_tiano/IntelFsp2Pkg/Tools/UserManuals/ConfigEditorUserManual/" class="md-nav__link">
+      <a href="../../dyn/mu_silicon_intel_tiano/IntelFsp2Pkg/Tools/UserManuals/ConfigEditorUserManual/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -10325,7 +10530,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_silicon_intel_tiano/IntelFsp2Pkg/Tools/UserManuals/FspDscBsf2YamlUserManual/" class="md-nav__link">
+      <a href="../../dyn/mu_silicon_intel_tiano/IntelFsp2Pkg/Tools/UserManuals/FspDscBsf2YamlUserManual/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -10346,7 +10551,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_silicon_intel_tiano/IntelFsp2Pkg/Tools/UserManuals/GenCfgOptUserManual/" class="md-nav__link">
+      <a href="../../dyn/mu_silicon_intel_tiano/IntelFsp2Pkg/Tools/UserManuals/GenCfgOptUserManual/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -10367,7 +10572,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_silicon_intel_tiano/IntelFsp2Pkg/Tools/UserManuals/PatchFvUserManual/" class="md-nav__link">
+      <a href="../../dyn/mu_silicon_intel_tiano/IntelFsp2Pkg/Tools/UserManuals/PatchFvUserManual/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -10388,7 +10593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_silicon_intel_tiano/IntelFsp2Pkg/Tools/UserManuals/SplitFspBinUserManual/" class="md-nav__link">
+      <a href="../../dyn/mu_silicon_intel_tiano/IntelFsp2Pkg/Tools/UserManuals/SplitFspBinUserManual/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -10476,7 +10681,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_silicon_intel_tiano/IntelFsp2WrapperPkg/Readme/" class="md-nav__link">
+      <a href="../../dyn/mu_silicon_intel_tiano/IntelFsp2WrapperPkg/Readme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -10645,7 +10850,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_silicon_intel_tiano/IntelSiliconPkg/Feature/Capsule/MicrocodeCapsulePdb/Readme/" class="md-nav__link">
+      <a href="../../dyn/mu_silicon_intel_tiano/IntelSiliconPkg/Feature/Capsule/MicrocodeCapsulePdb/Readme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -10666,7 +10871,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_silicon_intel_tiano/IntelSiliconPkg/Feature/Capsule/MicrocodeCapsuleTxt/Readme/" class="md-nav__link">
+      <a href="../../dyn/mu_silicon_intel_tiano/IntelSiliconPkg/Feature/Capsule/MicrocodeCapsuleTxt/Readme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -10724,19 +10929,17 @@
                 
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_11" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_11" >
         
           
           <label class="md-nav__link" for="__nav_9_11" id="__nav_9_11_label" tabindex="0">
@@ -10750,7 +10953,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_11_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_11_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_9_11">
             <span class="md-nav__icon md-icon"></span>
             mu tiano platforms
@@ -10764,7 +10967,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CONTRIBUTING/" class="md-nav__link">
+      <a href="../../dyn/mu_tiano_platforms/CONTRIBUTING/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -10785,7 +10988,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../RepoDetails/" class="md-nav__link">
+      <a href="../../dyn/mu_tiano_platforms/RepoDetails/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -10806,7 +11009,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../SECURITY/" class="md-nav__link">
+      <a href="../../dyn/mu_tiano_platforms/SECURITY/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -10827,7 +11030,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../github/pull_request_template/" class="md-nav__link">
+      <a href="../../dyn/mu_tiano_platforms/github/pull_request_template/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -10848,7 +11051,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../docs/BranchReadme_template/" class="md-nav__link">
+      <a href="../../dyn/mu_tiano_platforms/docs/BranchReadme_template/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -10974,7 +11177,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Platforms/Docs/Common/building/" class="md-nav__link">
+      <a href="../../dyn/mu_tiano_platforms/Platforms/Docs/Common/building/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -10995,7 +11198,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Platforms/Docs/Common/debugging/" class="md-nav__link">
+      <a href="../../dyn/mu_tiano_platforms/Platforms/Docs/Common/debugging/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -11051,7 +11254,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Platforms/Docs/Common/Features/feature_dfci/" class="md-nav__link">
+      <a href="../../dyn/mu_tiano_platforms/Platforms/Docs/Common/Features/feature_dfci/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -11072,7 +11275,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Platforms/Docs/Common/Features/feature_frontpage/" class="md-nav__link">
+      <a href="../../dyn/mu_tiano_platforms/Platforms/Docs/Common/Features/feature_frontpage/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -11093,7 +11296,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Platforms/Docs/Common/Features/feature_memoryprotection/" class="md-nav__link">
+      <a href="../../dyn/mu_tiano_platforms/Platforms/Docs/Common/Features/feature_memoryprotection/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -11114,7 +11317,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Platforms/Docs/Common/Features/feature_qemurunner/" class="md-nav__link">
+      <a href="../../dyn/mu_tiano_platforms/Platforms/Docs/Common/Features/feature_qemurunner/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -11135,7 +11338,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Platforms/Docs/Common/Features/feature_whea/" class="md-nav__link">
+      <a href="../../dyn/mu_tiano_platforms/Platforms/Docs/Common/Features/feature_whea/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -11156,7 +11359,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Platforms/Docs/Common/Features/platform_testing/" class="md-nav__link">
+      <a href="../../dyn/mu_tiano_platforms/Platforms/Docs/Common/Features/platform_testing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -11228,7 +11431,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Platforms/Docs/Q35/QemuQ35_ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_tiano_platforms/Platforms/Docs/Q35/QemuQ35_ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -11284,7 +11487,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Platforms/Docs/Q35/Features/feature_codeql/" class="md-nav__link">
+      <a href="../../dyn/mu_tiano_platforms/Platforms/Docs/Q35/Features/feature_codeql/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -11305,7 +11508,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Platforms/Docs/Q35/Features/feature_colorbar/" class="md-nav__link">
+      <a href="../../dyn/mu_tiano_platforms/Platforms/Docs/Q35/Features/feature_colorbar/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -11326,7 +11529,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Platforms/Docs/Q35/Features/feature_config/" class="md-nav__link">
+      <a href="../../dyn/mu_tiano_platforms/Platforms/Docs/Q35/Features/feature_config/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -11347,7 +11550,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Platforms/Docs/Q35/Features/feature_prm/" class="md-nav__link">
+      <a href="../../dyn/mu_tiano_platforms/Platforms/Docs/Q35/Features/feature_prm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -11368,7 +11571,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Platforms/Docs/Q35/Features/feature_tpm/" class="md-nav__link">
+      <a href="../../dyn/mu_tiano_platforms/Platforms/Docs/Q35/Features/feature_tpm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -11389,7 +11592,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Platforms/Docs/Q35/Features/feature_tpm_replay/" class="md-nav__link">
+      <a href="../../dyn/mu_tiano_platforms/Platforms/Docs/Q35/Features/feature_tpm_replay/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -11426,7 +11629,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Platforms/Docs/SBSA/QemuSbsa_ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_tiano_platforms/Platforms/Docs/SBSA/QemuSbsa_ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -11560,7 +11763,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Platforms/QemuQ35Pkg/Library/MsPlatformDevicesLibQemuQ35/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_tiano_platforms/Platforms/QemuQ35Pkg/Library/MsPlatformDevicesLibQemuQ35/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -11581,7 +11784,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Platforms/QemuQ35Pkg/Library/PlatformDebugLibIoPort/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_tiano_platforms/Platforms/QemuQ35Pkg/Library/PlatformDebugLibIoPort/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -11610,7 +11813,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Platforms/QemuQ35Pkg/QemuVideoDxe/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_tiano_platforms/Platforms/QemuQ35Pkg/QemuVideoDxe/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -11752,7 +11955,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Platforms/QemuSbsaPkg/Library/MsPlatformDevicesLibQemuSbsa/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_tiano_platforms/Platforms/QemuSbsaPkg/Library/MsPlatformDevicesLibQemuSbsa/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -11781,7 +11984,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Platforms/QemuSbsaPkg/QemuVideoDxe/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_tiano_platforms/Platforms/QemuSbsaPkg/QemuVideoDxe/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -11931,7 +12134,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../QemuPkg/Library/PlatformThemeLib/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_tiano_platforms/QemuPkg/Library/PlatformThemeLib/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -11963,112 +12166,6 @@
             
           </ul>
         </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Uefi Dbg Ext
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    Uefi Dbg Ext
-  </span>
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#compiling" class="md-nav__link">
-    <span class="md-ellipsis">
-      Compiling
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#installing-the-extension" class="md-nav__link">
-    <span class="md-ellipsis">
-      Installing the Extension
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#using-the-extension" class="md-nav__link">
-    <span class="md-ellipsis">
-      Using the Extension
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#design" class="md-nav__link">
-    <span class="md-ellipsis">
-      Design
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#creating-new-commands" class="md-nav__link">
-    <span class="md-ellipsis">
-      Creating new commands
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -12125,7 +12222,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_tiano_plus/CONTRIBUTING/" class="md-nav__link">
+      <a href="../../dyn/mu_tiano_plus/CONTRIBUTING/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -12146,7 +12243,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_tiano_plus/RepoDetails/" class="md-nav__link">
+      <a href="../../dyn/mu_tiano_plus/RepoDetails/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -12167,7 +12264,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_tiano_plus/SECURITY/" class="md-nav__link">
+      <a href="../../dyn/mu_tiano_plus/SECURITY/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -12188,7 +12285,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_tiano_plus/github/pull_request_template/" class="md-nav__link">
+      <a href="../../dyn/mu_tiano_plus/github/pull_request_template/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -12314,7 +12411,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_tiano_plus/EmbeddedPkg/Scripts/LauterbachT32/Readme/" class="md-nav__link">
+      <a href="../../dyn/mu_tiano_plus/EmbeddedPkg/Scripts/LauterbachT32/Readme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -12394,7 +12491,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_tiano_plus/FmpDevicePkg/Docs/FmpDevicePkg_ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_tiano_plus/FmpDevicePkg/Docs/FmpDevicePkg_ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -12450,7 +12547,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_tiano_plus/FmpDevicePkg/CapsuleUpdatePolicyDxe/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_tiano_plus/FmpDevicePkg/CapsuleUpdatePolicyDxe/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -12471,7 +12568,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_tiano_plus/FmpDevicePkg/FmpDxe/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_tiano_plus/FmpDevicePkg/FmpDxe/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -12527,7 +12624,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_tiano_plus/FmpDevicePkg/Library/CapsuleUpdatePolicyLibNull/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_tiano_plus/FmpDevicePkg/Library/CapsuleUpdatePolicyLibNull/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -12548,7 +12645,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_tiano_plus/FmpDevicePkg/Library/CapsuleUpdatePolicyLibOnProtocol/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_tiano_plus/FmpDevicePkg/Library/CapsuleUpdatePolicyLibOnProtocol/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -12569,7 +12666,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_tiano_plus/FmpDevicePkg/Library/FmpDependencyCheckLib/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_tiano_plus/FmpDevicePkg/Library/FmpDependencyCheckLib/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -12590,7 +12687,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_tiano_plus/FmpDevicePkg/Library/FmpDependencyCheckLibNull/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_tiano_plus/FmpDevicePkg/Library/FmpDependencyCheckLibNull/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -12611,7 +12708,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_tiano_plus/FmpDevicePkg/Library/FmpDependencyDeviceLibNull/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_tiano_plus/FmpDevicePkg/Library/FmpDependencyDeviceLibNull/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -12632,7 +12729,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_tiano_plus/FmpDevicePkg/Library/FmpDependencyLib/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_tiano_plus/FmpDevicePkg/Library/FmpDependencyLib/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -12653,7 +12750,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_tiano_plus/FmpDevicePkg/Library/FmpDeviceLibNull/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_tiano_plus/FmpDevicePkg/Library/FmpDeviceLibNull/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -12674,7 +12771,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_tiano_plus/FmpDevicePkg/Library/FmpPayloadHeaderLibV1/ReadMe/" class="md-nav__link">
+      <a href="../../dyn/mu_tiano_plus/FmpDevicePkg/Library/FmpPayloadHeaderLibV1/ReadMe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -12789,7 +12886,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_tiano_plus/PrmPkg/Readme/" class="md-nav__link">
+      <a href="../../dyn/mu_tiano_plus/PrmPkg/Readme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -12810,7 +12907,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mu_tiano_plus/PrmPkg/Samples/Readme/" class="md-nav__link">
+      <a href="../../dyn/mu_tiano_plus/PrmPkg/Samples/Readme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -12882,45 +12979,144 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#compiling" class="md-nav__link">
+  <a href="#background" class="md-nav__link">
     <span class="md-ellipsis">
-      Compiling
+      Background
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#installing-the-extension" class="md-nav__link">
+  <a href="#condensed-requirements-list" class="md-nav__link">
     <span class="md-ellipsis">
-      Installing the Extension
+      Condensed Requirements List
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#using-the-extension" class="md-nav__link">
+  <a href="#runtime-configurable-protections" class="md-nav__link">
     <span class="md-ellipsis">
-      Using the Extension
+      Runtime Configurable Protections
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#design" class="md-nav__link">
+  <a href="#memory-attribute-protocol" class="md-nav__link">
     <span class="md-ellipsis">
-      Design
+      Memory Attribute Protocol
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#creating-new-commands" class="md-nav__link">
+  <a href="#exception-handling" class="md-nav__link">
     <span class="md-ellipsis">
-      Creating new commands
+      Exception Handling
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#memory-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Memory Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Memory Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general-memory-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      General Memory Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="General Memory Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#special-memory-ranges" class="md-nav__link">
+    <span class="md-ellipsis">
+      Special Memory Ranges
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pe-loader" class="md-nav__link">
+    <span class="md-ellipsis">
+      PE Loader
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nx_compat-characteristic" class="md-nav__link">
+    <span class="md-ellipsis">
+      NX_COMPAT Characteristic
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compatibility-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compatibility Mode
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Compatibility Mode">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-note-on-user-notification-of-compatibility-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      A Note on User Notification of Compatibility Mode
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#closing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Closing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional Resources
     </span>
   </a>
   
@@ -12944,63 +13140,140 @@
   
 
 
-<h1 id="uefi-debugger-extension">UEFI Debugger Extension<a class="headerlink" href="#uefi-debugger-extension" title="Permanent link">&para;</a></h1>
-<p><a href="https://github.com/microsoft/mu_tiano_platforms/actions/workflows/Build-UefiExt.yaml"><img alt="Build UEFI Debug Extension" src="https://github.com/microsoft/mu_tiano_platforms/actions/workflows/Build-UefiExt.yaml/badge.svg" /></a></p>
-<p>This folder contains the source for the UEFI debugger extension. This provides
-functionality within windbg for debugging the UEFI environment. Using the UEFI
-extension requires that Windbgx has access to the symbol files for the target
-UEFI code.</p>
-<p>The most recent compiled version of this binary can be found as a build artifact
-in the <a href="https://github.com/microsoft/mu_tiano_platforms/actions/workflows/Build-UefiExt.yaml">debug extension workflow</a>.</p>
-<h2 id="compiling">Compiling<a class="headerlink" href="#compiling" title="Permanent link">&para;</a></h2>
-<p>Windbg debugger extensions need to be compiled with the Microsoft build tools.
-The easiest way to do this is to use the Developer Command Prompt that comes
-with the Visual Studio tools installation. In the command prompt, navigate to
-the folder and run "msbuild".</p>
-<div class="codehilite"><pre><span></span><code>msbuild -property:Configuration=Release -property:Platform=x64
-</code></pre></div>
-
-<p>The project can also be loaded and built in Visual Studio using the solution
-file. This project requires the Windows SDK and the Windows Driver Kit.</p>
-<h2 id="installing-the-extension">Installing the Extension<a class="headerlink" href="#installing-the-extension" title="Permanent link">&para;</a></h2>
-<p>Debugger extensions can be loaded into windbg several ways. First, by
-manually loading once already in windbg. This can be done with the .load
-command. Though this will not persist across windbg sessions.</p>
-<div class="codehilite"><pre><span></span><code><span class="o">.</span><span class="n">load</span><span class="w"> </span><span class="o">&lt;</span><span class="n">path</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">uefiext</span><span class="o">.</span><span class="n">dll</span><span class="o">&gt;</span>
-</code></pre></div>
-
-<p>The second is to place the DLL in the windbg application folder, or another
-place in windbg's extpath which can be enumerating using the .extpath command.
-This will make the extension available to all future windbg sessions.</p>
-<div class="codehilite"><pre><span></span><code>e.g. C:\Users\&lt;user&gt;\AppData\Local\dbg\UI
-</code></pre></div>
-
-<p>For more information about loading debugger extensions see the
-<a href="https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/loading-debugger-extension-dlls">Microsoft documentation page</a>.</p>
-<h2 id="using-the-extension">Using the Extension<a class="headerlink" href="#using-the-extension" title="Permanent link">&para;</a></h2>
-<p>Once the extension is loaded into windbg, you can use it by running any of its
-commands. To see its commands, use the help command to get started.</p>
-<div class="codehilite"><pre><span></span><code><span class="sx">!uefiext.help</span>
-</code></pre></div>
-
-<p>One particularly useful instruction will be the <code>!uefiext.findall</code> instruction
-to load the needed modules.</p>
-<h2 id="design">Design<a class="headerlink" href="#design" title="Permanent link">&para;</a></h2>
-<p>Windbg debug extensions allow for programmatic decoding and outputting of data
-from to debugger. The UEFI debug extension is designed to help
-finding, parsing, and changing data in the UEFI environment more accessible from
-the debugger.</p>
-<p>Because UEFI has various environments, SEC, DXE, MM, the extension has a concept
-of the current running environment. This can be manually set using <code>!uefiext.setenv</code>.
-This environment should be used to change the operation of various routines based
-on the current context. For example, enumerating the hobs or loaded modules is
-done differently in DXE then it is in MM. At the time of writing this, most functions
-are only implemented in DXE, but this environment should always be checked before
-accessing environment specific information.</p>
-<h2 id="creating-new-commands">Creating new commands<a class="headerlink" href="#creating-new-commands" title="Permanent link">&para;</a></h2>
-<p>New commands can be exported by added them to the exports in uefiext.def. New
-commands should also be added to the help command in uefiext.cpp. For reference
-on how to write debugger extension code, see the <a href="https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/debugger-engine-and-extension-apis">Microsoft API Docs</a>.</p>
+<h1 id="enhanced-uefi-memory-protection">Enhanced UEFI Memory Protection<a class="headerlink" href="#enhanced-uefi-memory-protection" title="Permanent link">&para;</a></h1>
+<h2 id="background">Background<a class="headerlink" href="#background" title="Permanent link">&para;</a></h2>
+<p>While considerable attention has been devoted to hardware trust anchors and operating
+system security, attackers have discovered that UEFI firmware is lacking basic memory
+protection that has been present in other system software for over a decade. Coupled
+with the inconsistency of security capabilities inherent to vendor firmware implementations,
+UEFI firmware has become an increasingly attractive system attack vector. Exploiting
+firmware vulnerabilities can be especially rewarding for an attacker because they can
+compromise hypervisor-based technologies such as Virtualization Based Security (VBS)
+and be used to establish boot kits that subvert antivirus and malware detection software
+in the operating system.</p>
+<p>In response to these security concerns, Microsoft is recommending all UEFI platform
+vendors implement strict memory protections (these may become a requirement in the
+future). This page describes the Enhanced Memory Protections that Microsoft is
+recommending UEFI vendors implement.</p>
+<p>These enhanced protections will cause some compatibility challenges, but the
+more consistent our ecosystem is, the faster it will be to get the extensible
+parts of our ecosystem aligned. The closing section in this document addresses
+compatibility mitigations (Compatibility Mode) to handle non-compliant
+modules during this transition period. It will take time for legacy code
+to be updated to adhere to these new requirements and our collective commitment
+to progress will pave the way to a more secure and resilient digital future.
+<strong>Project Mu serves as a reference implementation for Enhanced Memory Protections.</strong></p>
+<h2 id="condensed-requirements-list">Condensed Requirements List<a class="headerlink" href="#condensed-requirements-list" title="Permanent link">&para;</a></h2>
+<p>1: The UEFI 2.10 Memory Attribute Protocol must be produced.<br />
+2: No address range can be simultaneously readable, writable, and executable.<br />
+3: Unallocated memory must be marked EFI_MEMORY_RP.<br />
+4: Address space which is not present in the EFI memory map must cause a
+CPU fault if accessed.<br />
+5: Calls to EFI_BOOT_SERVICES.AllocatePages and EFI_BOOT_SERVICES.AllocatePool
+must return memory with the EFI_MEMORY_XP attribute.<br />
+6: Page 0 in physical system memory must be marked EFI_MEMORY_RP.<br />
+7: AP and BSP stacks must be marked EFI_MEMORY_XP.<br />
+8: AP and BSP stacks must have an EFI_MEMORY_RP page at the bottom to catch overflow.<br />
+9: MMIO ranges should be in the EFI memory map and marked EFI_MEMORY_XP.<br />
+10: Loaded image sections marked with the data characteristic should be EFI_MEMORY_XP.<br />
+11: Loaded image sections the code characteristic should be EFI_MEMORY_RO.<br />
+12: PE Loaders must check the NX_COMPAT flag of loaded images to determine
+compatibility with the above memory protection requirements.  </p>
+<h2 id="runtime-configurable-protections">Runtime Configurable Protections<a class="headerlink" href="#runtime-configurable-protections" title="Permanent link">&para;</a></h2>
+<p>To enable memory protection in consumer shipped devices, runtime
+configurability options need to be present to respond to edge cases
+and accommodate non-compliant option ROMs. It is up to the platform
+developer to determine what levers will be available and how faults are handled.</p>
+<h2 id="memory-attribute-protocol">Memory Attribute Protocol<a class="headerlink" href="#memory-attribute-protocol" title="Permanent link">&para;</a></h2>
+<p>A necessity for increasing the security posture is the availability of
+the Memory Attribute Protocol. Added in UEFI Spec 2.10, the protocol
+enables setting and getting EFI memory attributes in the UEFI environment.
+Project Mu hosts an example implementation of this protocol.</p>
+<h2 id="exception-handling">Exception Handling<a class="headerlink" href="#exception-handling" title="Permanent link">&para;</a></h2>
+<p>Increasing the security posture of UEFI implementations will increase the
+frequency of access violations. Exceptions should either cause a reset or
+transition the memory protection state into compatibility mode. Platform
+developers should also take care to ensure their exception handling logic
+provides enough data to distinguish between fault types and root cause
+failures. These access violations are often helpful for identifying programmer
+errors and rooting out critical bugs before they become CVEs.</p>
+<h2 id="memory-management">Memory Management<a class="headerlink" href="#memory-management" title="Permanent link">&para;</a></h2>
+<h3 id="general-memory-management">General Memory Management<a class="headerlink" href="#general-memory-management" title="Permanent link">&para;</a></h3>
+<p><img alt="Example Compliant Memory Range" src="../../img/memory_range.png" /></p>
+<p>At no point during boot should any addressable memory be readable, writable,
+and executable. To reach this heightened security bar, all unallocated memory
+should be marked EFI_MEMORY_RP. Addressable memory ranges which are not present
+in the EFI memory map should also be read-protected. When a module makes a
+call to allocate a buffer (even if that buffer is of type EfiBootServicesCode,
+EfiRuntimeServicesCode, or EfiLoaderCode), the returned page/pool must be
+non-executable. The module which called for the allocation will be expected
+to utilize the Memory Attribute Protocol to manipulate the attributes of the
+buffer to be either writable or executable but not both.</p>
+<h4 id="special-memory-ranges">Special Memory Ranges<a class="headerlink" href="#special-memory-ranges" title="Permanent link">&para;</a></h4>
+<ul>
+<li>UEFI must apply EFI_MEMORY_RP to the NULL page to help guard against NULL dereferences.</li>
+<li>AP and BSP stacks must be marked EFI_MEMORY_XP to prevent execution from the stack with
+  a page marked EFI_MEMORY_RP at the base of the stack to prevent stack overflow.</li>
+<li>MMIO ranges should be marked EFI_MEMORY_XP.</li>
+</ul>
+<h2 id="pe-loader">PE Loader<a class="headerlink" href="#pe-loader" title="Permanent link">&para;</a></h2>
+<p><img alt="Example of Loaded Image Ranges" src="../../img/loaded_images.png" /></p>
+<p>On loading and prior to execution of an EFI image, the PE loader must apply
+EFI_MEMORY_XP to sections marked with the data characteristic and EFI_MEMORY_RO
+to sections marked with the code characteristic. Applying these page protections
+requires loaded images to meet the following criteria:</p>
+<ol>
+<li>Section flags must not combine IMAGE_SCN_MEM_WRITE and IMAGE_SCN_MEM_EXECUTE for any
+given section.</li>
+<li>The PE image sections are aligned to page granularity.</li>
+<li>The PE image must not contain any self-modifying code.</li>
+</ol>
+<h2 id="nx_compat-characteristic">NX_COMPAT Characteristic<a class="headerlink" href="#nx_compat-characteristic" title="Permanent link">&para;</a></h2>
+<p>Many bootloaders and OPROMs will not have implemented support for enhanced protections on
+image memory, allocated buffers, and other memory ranges. To indicate support for enhanced
+protections, the PE/COFF IMAGE_DLLCHARACTERISTICS_NX_COMPAT DLL characteristic will be used.
+Modules with this characteristic are expected to be compliant with enhanced memory protection
+and should utilize the Memory Attribute Protocol to manipulate the attributes of memory they
+allocate. If a module is loaded without this characteristic, the platform should enter
+compatibility mode.</p>
+<h2 id="compatibility-mode">Compatibility Mode<a class="headerlink" href="#compatibility-mode" title="Permanent link">&para;</a></h2>
+<p>To provide a more consistent and predictable environment across UEFI implementations,
+we are providing a definition for compatibility mode here. Errant modules and unexpected
+faults blocking boot should enter compatibility mode which triggers the following
+deviations from the enhanced memory protection definition:</p>
+<ol>
+<li>All new memory allocated will be readable, writable, and executable.  </li>
+<li>All images loaded from the start of compatibility mode will no longer have
+restrictive access attributes applied to the memory ranges in which they are loaded.  </li>
+<li>The Memory Attribute Protocol will be uninstalled.  </li>
+<li>Page zero will be mapped.  </li>
+<li>Legacy BIOS memory (the lower 640K range) will be mapped as readable, writable, and
+executable.</li>
+</ol>
+<h3 id="a-note-on-user-notification-of-compatibility-mode">A Note on User Notification of Compatibility Mode<a class="headerlink" href="#a-note-on-user-notification-of-compatibility-mode" title="Permanent link">&para;</a></h3>
+<p>When a system is in compatibility mode, it is important that the user receives some
+notification during boot which could take the form of a dialogue box, color bar, or
+other visual indicator. At the start of this journey toward more strict memory
+protections, we believe how compatibility mode is visualized should be left up to the
+platform. In the future, platform developers should consider adding a TPM (Trusted
+Platform Module) measurement when the system enters compatibility mode to have platform
+enforcement of memory protections.</p>
+<h2 id="closing">Closing<a class="headerlink" href="#closing" title="Permanent link">&para;</a></h2>
+<p>It will take substantial work to update legacy code to adhere to these new security
+standards. These protection mitigations offer significant value to end users by
+heightening both real and perceived security, and to OEMs by reducing the number
+of issues in the future. As we push toward updating incompatible modules, OEMs
+should apply strict protections during product development which meet or exceed the
+standard outlined in this document to help catch programmer error and reduce the
+volume of unsafe firmware code entering the ecosystem. Microsoft is committed to
+this effort and is prepared to work with partners as we move toward a more
+secure UEFI ecosystem.</p>
+<h2 id="additional-resources">Additional Resources<a class="headerlink" href="#additional-resources" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://learn.microsoft.com/windows/win32/debug/pe-format">PE Format</a></li>
+<li><a href="https://learn.microsoft.com/windows-hardware/drivers/bringup/uefi-ca-memory-mitigation-requirements">Requirements for 3<sup>rd</sup> Party Signing</a></li>
+<li><a href="https://github.com/microsoft/mu_plus/tree/HEAD/UefiTestingPkg/AuditTests/PagingAudit">UEFI Paging Audit Tool</a></li>
+</ul>
 
 
 
@@ -13066,10 +13339,10 @@ on how to write debugger extension code, see the <a href="https://docs.microsoft
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../../..", "features": [], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": "0.9.1"}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": "0.9.1"}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.bd41221c.min.js"></script>
+      <script src="../../assets/javascripts/bundle.1e8ae164.min.js"></script>
       
         <script src="https://unpkg.com/mermaid@8.7.0/dist/mermaid.min.js"></script>
       
