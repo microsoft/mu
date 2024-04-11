@@ -161,6 +161,14 @@
         "VSTS",
         "wdksetup",
         "whitepaper",
-        "workspaces"
+        "workspaces",
+        "mitigations",
+        "MMIO",
+        "COMPAT",
+        "configurability",
+        "bootloaders",
+        "OPROMs",
+        "DLLCHARACTERISTICS",
+        "enhancedmemoryprotection"
     ]
 }

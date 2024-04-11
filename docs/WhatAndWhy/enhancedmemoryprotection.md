@@ -88,7 +88,7 @@ buffer to be either writable or executable but not both.
 
 * UEFI must apply EFI_MEMORY_RP to the NULL page to help guard against NULL dereferences.
 * AP and BSP stacks must be marked EFI_MEMORY_XP to prevent execution from the stack with
-* a page marked EFI_MEMORY_RP at the base of the stack to prevent stack overflow.
+  a page marked EFI_MEMORY_RP at the base of the stack to prevent stack overflow.
 * MMIO ranges should be marked EFI_MEMORY_XP.
 
 ## PE Loader
@@ -154,6 +154,6 @@ secure UEFI ecosystem.
 
 ## Additional Resources
 
-PE Format: PE Format - Win32 apps | Microsoft Learn
-Requirements for 3rd party signing: UEFI CA Memory Mitigation Requirements for Signing - Windows drivers | Microsoft Learn
-UEFI Test Tool: mu_plus/UefiTestingPkg/AuditTests/PagingAudit at release/202311 · microsoft/mu_plus (github.com)
+* [PE Format](https://learn.microsoft.com/windows/win32/debug/pe-format)
+* [Requirements for 3rd Party Signing](https://learn.microsoft.com/windows-hardware/drivers/bringup/uefi-ca-memory-mitigation-requirements)
+* [UEFI Paging Audit Tool](https://github.com/microsoft/mu_plus/tree/HEAD/UefiTestingPkg/AuditTests/PagingAudit)
