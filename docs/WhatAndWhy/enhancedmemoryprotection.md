@@ -30,17 +30,17 @@ to progress will pave the way to a more secure and resilient digital future.
 
 1: The UEFI 2.10 Memory Attribute Protocol must be produced.  
 2: No address range can be simultaneously readable, writable, and executable.  
-3: Unallocated memory must be marked EFI_MEMORY_RP.  
-4: Address space which is not present in the EFI memory map must cause a
-CPU fault if accessed.  
+3: Unallocated memory must be marked EFI_MEMORY_RP or be unmapped.  
+4: Address space which is not present in the Global Coherency Domain must cause a
+CPU fault if accessed. This is a future requirement.
 5: Calls to EFI_BOOT_SERVICES.AllocatePages and EFI_BOOT_SERVICES.AllocatePool
 must return memory with the EFI_MEMORY_XP attribute.  
-6: Page 0 in physical system memory must be marked EFI_MEMORY_RP.  
+6: Page 0 in physical system memory must be marked EFI_MEMORY_RP or be unmapped.  
 7: AP and BSP stacks must be marked EFI_MEMORY_XP.  
 8: AP and BSP stacks must have an EFI_MEMORY_RP page at the bottom to catch overflow.  
-9: MMIO ranges should be in the EFI memory map and marked EFI_MEMORY_XP.  
-10: Loaded image sections marked with the data characteristic should be EFI_MEMORY_XP.  
-11: Loaded image sections the code characteristic should be EFI_MEMORY_RO.  
+9: MMIO ranges must be marked EFI_MEMORY_XP.  
+10: Loaded image sections marked with the data characteristic must be EFI_MEMORY_XP.  
+11: Loaded image sections the code characteristic must be EFI_MEMORY_RO.  
 12: PE Loaders must check the NX_COMPAT flag of loaded images to determine
 compatibility with the above memory protection requirements.  
 
@@ -76,17 +76,18 @@ errors and rooting out critical bugs before they become CVEs.
 
 At no point during boot should any addressable memory be readable, writable,
 and executable. To reach this heightened security bar, all unallocated memory
-should be marked EFI_MEMORY_RP. Addressable memory ranges which are not present
-in the EFI memory map should also be read-protected. When a module makes a
-call to allocate a buffer (even if that buffer is of type EfiBootServicesCode,
-EfiRuntimeServicesCode, or EfiLoaderCode), the returned page/pool must be
-non-executable. The module which called for the allocation will be expected
-to utilize the Memory Attribute Protocol to manipulate the attributes of the
-buffer to be either writable or executable but not both.
+should be marked EFI_MEMORY_RP or be unmapped. Addressable memory ranges which
+are not present in the Global Coherency Domain should also be read-protected or
+unmapped. When a module makes a call to allocate a buffer (even if that buffer
+is of type EfiBootServicesCode, EfiRuntimeServicesCode, or EfiLoaderCode),
+the returned page/pool must be non-executable. The module which called for the
+allocation will be expected to utilize the Memory Attribute Protocol to
+manipulate the attributes of the buffer to be either writable or executable
+but not both.
 
 #### Special Memory Ranges
 
-* UEFI must apply EFI_MEMORY_RP to the NULL page to help guard against NULL dereferences.
+* UEFI must apply EFI_MEMORY_RP to the NULL page or don't map it to help guard against NULL dereferences.
 * AP and BSP stacks must be marked EFI_MEMORY_XP to prevent execution from the stack with
   a page marked EFI_MEMORY_RP at the base of the stack to prevent stack overflow.
 * MMIO ranges should be marked EFI_MEMORY_XP.
