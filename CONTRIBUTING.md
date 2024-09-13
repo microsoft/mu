@@ -75,7 +75,7 @@ Project Mu pull requests autopopulate a PR description from a template in most r
 
 2. **Remove** this line of instructions so the PR description shows cleanly in release notes:
 
-   `"For details on how to complete to complete these options and their meaning refer to [CONTRIBUTING.md](https://github.com/microsoft/mu/blob/HEAD/CONTRIBUTING.md)."`
+   `"For details on how to complete these options and their meaning refer to [CONTRIBUTING.md](https://github.com/microsoft/mu/blob/HEAD/CONTRIBUTING.md)."`
 
 3. For each checkbox in the PR description, **place an "x"** in between `[` and `]` if true. Example: `[x]`.
    _(you can also check items in the GitHub UI)_
