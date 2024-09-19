@@ -48,7 +48,8 @@ are testing out new functionality only present in the dev branch. Project Mu wil
 fixes to release branches as part of LTS (Long-Term Support) for at least the next two releases (though it may be
 longer based on community needs). Once LTS has ended, the releae branch will be archived following the process described
 [below](#post-lts-and-archiving). It is then a choice of the downstream consumer on when to upgrade release
-branches; this may be at a regular cadence or may stop after shipping a platform. For example. downstream consumers must
+branches; this may be at a regular cadence or may stop after shipping a platform. For example, downstream consumers must
+
 be aware that changing between release branches will introduce a set of breaking changes and new functionality, which
 must be reviewed and accommodated for in the platform by reviewing the release notes on GitHub for the new release
 branch (e.g. these are the [release notes](https://github.com/microsoft/mu_basecore/releases/tag/v2024050000.0.0) for
