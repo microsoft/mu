@@ -46,7 +46,7 @@ content is considered stable. Moving forward, only bug and security fixes will b
 order to maintain its stability. All downstream consumers should always consume from the release branch, unless they
 are testing out new functionality only present in the dev branch. Project Mu will continue back porting bug and security
 fixes to release branches as part of LTS (Long-Term Support) for at least the next two releases (though it may be
-longer based on community needs). Once LTS has ended, the releae branch will be archived following the process described
+longer based on community needs). Once LTS has ended, the release branch will be archived following the process described
 [below](#post-lts-and-archiving). It is then a choice of the downstream consumer on when to upgrade release
 branches; this may be at a regular cadence or may stop after shipping a platform. For example, downstream consumers must
 
