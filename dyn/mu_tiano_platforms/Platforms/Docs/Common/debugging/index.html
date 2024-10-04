@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.36">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.39">
     
     
       
@@ -28,7 +28,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.06209087.min.css">
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.8c3ca2c6.min.css">
       
         
         <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -13048,18 +13048,21 @@
 <h2 id="debugging-using-uefi-debugger">Debugging using UEFI debugger<a class="headerlink" href="#debugging-using-uefi-debugger" title="Permanent link">&para;</a></h2>
 <p>Both Q35 and SBSA are setup to debug debugged using the MU debugger package. for
 more details on using this debugger, see the <a href="https://github.com/microsoft/mu_feature_debugger/blob/main/DebuggerFeaturePkg/Readme.md">FeatureDebuggerPkg Readme</a>.</p>
-<p>By default the debugger is disabled, to enable you must both enable the debugger
-build flag to enable the source debug device state flag and specify a serial port
-TCP port.</p>
-<div class="highlight"><pre><span></span><code>stuart_build -c Platforms\QemuQ35Pkg\PlatformBuild.py BLD_*_DEBUGGER_ENABLED=TRUE SERIAL_PORT=5555 --flashrom
-</code></pre></div>
+<p>By default the debugger is enabled to break in on exceptions, but not to break in
+on an initial breakpoint. To enable the initial breakpoint in DXE, you must pass:
+<div class="highlight"><pre><span></span><code>stuart_build -c Platforms\QemuQ35Pkg\PlatformBuild.py BLD_*_DXE_DBG_BRK=TRUE --FlashRom
+</code></pre></div></p>
 <p>On Q35 this allows for debugging over a different port then the usual debug output
 because Q35 has a seperate serial port available to it. On SBSA the serial port
-will be shared with the logging output.</p>
-<p>Currently this will only enable the DXE debugger. The MM debugger must be manually
-enabled using the PcdForceEnableDebugger if the DebugAgent has been configured.
-By default, the DXE debugger will stall for 30 seconds on the initial breakpoint
-before attempting to continue execution.</p>
+will be shared with the logging output. As a result, on Q35, if <code>SERIAL_PORT=&lt;PORT&gt;</code>
+is not passed on the cmdline, a default serial port at 50001 will be created. On SBSA,
+no default port is set because it will prevent output from occuring on stdout, which
+makes even telling if an exception occurred difficult.</p>
+<p>Currently this will only enable the DXE debugger. The MM debugger will be added to Q35
+once it support supervised Standalone MM.</p>
+<p>When an exception occurs, the debugger will break in and wait for a debugger client to
+connect. This makes Q35 and SBSA very debuggable, because they will break in on
+exceptions always, meaning a reboot is not required.</p>
 <h2 id="debugging-using-qemu-gdb-server">Debugging using QEMU GDB Server<a class="headerlink" href="#debugging-using-qemu-gdb-server" title="Permanent link">&para;</a></h2>
 <p>QEMU has the ability to expose a GDB port for debugging. This can be leveraged
 several ways. To start enable the GDB server, add the following parameter when
@@ -13245,7 +13248,7 @@ this needs to be turned off to prevent garbage keystrokes.</li>
     <script id="__config" type="application/json">{"base": "../../../../../..", "features": [], "search": "../../../../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": "0.9.1"}</script>
     
     
-      <script src="../../../../../../assets/javascripts/bundle.56dfad97.min.js"></script>
+      <script src="../../../../../../assets/javascripts/bundle.525ec568.min.js"></script>
       
         <script src="https://unpkg.com/mermaid@8.7.0/dist/mermaid.min.js"></script>
       
