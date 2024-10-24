@@ -36,4 +36,4 @@ jobs:
       contents: read
       pull-requests: write
 
-    uses: microsoft/mu_devops/.github/workflows/Labeler.yml@v12.0.2
+    uses: microsoft/mu_devops/.github/workflows/Labeler.yml@v12.2.0

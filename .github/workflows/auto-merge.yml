@@ -32,5 +32,5 @@ jobs:
 
     if: |
       github.event.pull_request.user.login == 'dependabot[bot]' || github.event.pull_request.user.login == 'uefibot'
-    uses: microsoft/mu_devops/.github/workflows/AutoMerger.yml@v12.0.2
+    uses: microsoft/mu_devops/.github/workflows/AutoMerger.yml@v12.2.0
     secrets: inherit
