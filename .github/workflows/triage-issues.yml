@@ -23,4 +23,4 @@ jobs:
     permissions:
       issues: write
 
-    uses: microsoft/mu_devops/.github/workflows/IssueTriager.yml@v12.0.2
+    uses: microsoft/mu_devops/.github/workflows/IssueTriager.yml@v12.2.0
