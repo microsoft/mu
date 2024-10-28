@@ -29,4 +29,4 @@ jobs:
       issues: write
       pull-requests: write
 
-    uses: microsoft/mu_devops/.github/workflows/Stale.yml@v12.0.2
+    uses: microsoft/mu_devops/.github/workflows/Stale.yml@v12.2.0
