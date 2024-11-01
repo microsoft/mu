@@ -14,8 +14,14 @@
 
 # Maintenance: Keep labels organized in ascending alphabetical order - easier to scan, identify duplicates, etc.
 
+type:backport:
+  - '\s*-\s*\[\s*[x|X]\s*\] Backport to release branch\?'
+
 impact:breaking-change:
   - '\s*-\s*\[\s*[x|X]\s*\] Breaking change\?'
+
+type:documentation:
+  - '\s*-\s*\[\s*[x|X]\s*\] Includes documentation\?'
 
 impact:non-functional:
   - '\s*-\s*\[\s*(?![x|X])\s*\] Impacts functionality\?'
@@ -25,6 +31,3 @@ impact:security:
 
 impact:testing:
   - '\s*-\s*\[\s*[x|X]\s*\] Includes tests\?'
-
-type:documentation:
-  - '\s*-\s*\[\s*[x|X]\s*\] Includes documentation\?'
