@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
     
     
       
@@ -13001,7 +13001,7 @@ typically well above 1 million LOC and only goes up from there.  </p>
     id1 -.-&gt; id2</div>
 <p>Example of a build time/link dependency: DxeCore in the Basecore layer depends on the TimerLib interface.  TimerLib
 interface is defined in the same Basecore layer as DxeCore, so in this case a Basecore module is depending on
-a Basecore interface. This is allowed. <img alt="✔" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2714.svg" title=":heavy_check_mark:" /></p>
+a Basecore interface. This is allowed. <img alt="✔" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2714.svg" title=":heavy_check_mark:" /></p>
 <div class="mermaid">flowchart BT
   id1["DxeCore Module"]
   id2["TimerLib Interface"]
@@ -13010,7 +13010,7 @@ a Basecore interface. This is allowed. <img alt="✔" class="twemoji" src="https
 <p>To extend this example even more into construction details.  Often the logic of a library will be implemented in the
 silicon layer.  This means the code may vary based on which silicon is used in the product but because the interface
 is defined in the basecore layer this is allowed and working as designed.  The core module can be optimized
-and targeted for a specific silicon implementation.  <img alt="✔" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2714.svg" title=":heavy_check_mark:" /></p>
+and targeted for a specific silicon implementation.  <img alt="✔" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2714.svg" title=":heavy_check_mark:" /></p>
 <div class="mermaid">flowchart BT
   subgraph bc [Basecore]
     id1["DxeCore"]
@@ -13023,7 +13023,7 @@ and targeted for a specific silicon implementation.  <img alt="✔" class="twemo
   id3 --&gt;id2</div>
 <p>An example of an unacceptable/unsustainable dependency is if the core module starts to use the silicon layer
 directly. For example if a feature was introduced that used a silicon special widget in the DxeCore then
-this would fail our dependency checks.  <img alt="❌" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/274c.svg" title=":x:" /></p>
+this would fail our dependency checks.  <img alt="❌" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/274c.svg" title=":x:" /></p>
 <div class="mermaid">flowchart BT
   subgraph bc [Basecore]
     id1["DxeCore"]
