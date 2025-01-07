@@ -28,4 +28,4 @@ jobs:
     permissions:
       issues: write
 
-    uses: microsoft/mu_devops/.github/workflows/LabelSyncer.yml@v12.2.0
+    uses: microsoft/mu_devops/.github/workflows/LabelSyncer.yml@v12.4.0
