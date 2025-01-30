@@ -39,13 +39,17 @@ It is recommended to:
 
       \>`rustup component add rust-src --toolchain 1.73.0-x86_64-unknown-linux-gnu`
 
-5. Install `cargo make`
+5. [Install `cargo binstall`](https://github.com/cargo-bins/cargo-binstall?tab=readme-ov-file#installation)
 
-   \>`cargo install --force cargo-make`
+6. Install `cargo make`. The required version is found in the `rust-toolchain.toml` file at the root of any Project
+   Mu repository that contains rust code.
 
-6. Install `cargo tarpaulin`
+   \>`cargo binstall --force cargo-make --version 0.37.9`
 
-   \>`cargo install --force cargo-tarpaulin`
+7. Install `cargo tarpaulin`. The required version is found in the `rust-toolchain.toml` file at the root of any Project
+   Mu repository that contains rust code.
+
+   \>`cargo binstall --force cargo-tarpaulin --version 0.31.2`
 
 At this point, the essential Rust applications are installed, and a repo can begin to add and build Rust code.
 
