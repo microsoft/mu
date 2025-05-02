@@ -10,28 +10,28 @@
       
       
       
-        <link rel="canonical" href="https://microsoft.github.io/mu/dyn/mu_feature_mm_supv/MmSupervisorPkg/Docs/MmSupervisorDesign/mm_supervisor_design/">
+        <link rel="canonical" href="https://microsoft.github.io/mu/dyn/mu_feature_mm_supv/Docs/MmSupervisorDeveloperConsiderations/">
       
       
-        <link rel="prev" href="../../MmSupervisor_Feature/">
+        <link rel="prev" href="../MmSupervisorDesign/">
       
       
-        <link rel="next" href="../../PlatformIntegration/PlatformIntegrationSteps/">
+        <link rel="next" href="../Overview/">
       
       
-      <link rel="icon" href="../../../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.2">
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
     
     
       
-        <title>Mm Supervisor Design - Project Mu</title>
+        <title>Mm Supervisor Developer Considerations - Project Mu</title>
       
     
     
-      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.d7758b05.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.2afb09e1.min.css">
       
         
-        <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -50,7 +50,7 @@
       
     
     
-    <script>__md_scope=new URL("../../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#proposed-flow-of-mm-supervisor" class="md-skip">
+        <a href="#microsoft-mm-supervisor-developer-considerations" class="md-skip">
           Skip to content
         </a>
       
@@ -94,9 +94,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../../../../.." title="Project Mu" class="md-header__button md-logo" aria-label="Project Mu" data-md-component="logo">
+    <a href="../../../.." title="Project Mu" class="md-header__button md-logo" aria-label="Project Mu" data-md-component="logo">
       
-  <img src="../../../../../../img/mu.png" alt="logo">
+  <img src="../../../../img/mu.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Mm Supervisor Design
+              Mm Supervisor Developer Considerations
             
           </span>
         </div>
@@ -125,11 +125,13 @@
     
     
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
@@ -161,6 +163,7 @@
     </div>
   </div>
 </div>
+      
     
     
       <div class="md-header__source">
@@ -200,9 +203,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../../../.." title="Project Mu" class="md-nav__button md-logo" aria-label="Project Mu" data-md-component="logo">
+    <a href="../../../.." title="Project Mu" class="md-nav__button md-logo" aria-label="Project Mu" data-md-component="logo">
       
-  <img src="../../../../../../img/mu.png" alt="logo">
+  <img src="../../../../img/mu.png" alt="logo">
 
     </a>
     Project Mu
@@ -229,8 +232,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../.." class="md-nav__link">
+      <a href="../../../.." class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Home
@@ -253,6 +257,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -262,6 +267,7 @@
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     What and Why
@@ -286,8 +292,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../WhatAndWhy/overview/" class="md-nav__link">
+      <a href="../../../../WhatAndWhy/overview/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Overview
@@ -308,8 +315,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../WhatAndWhy/layout/" class="md-nav__link">
+      <a href="../../../../WhatAndWhy/layout/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Dependencies and Layout
@@ -330,8 +338,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../WhatAndWhy/features/" class="md-nav__link">
+      <a href="../../../../WhatAndWhy/features/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Features
@@ -352,8 +361,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../WhatAndWhy/rust/" class="md-nav__link">
+      <a href="../../../../WhatAndWhy/rust/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Rust
@@ -374,8 +384,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../WhatAndWhy/enhancedmemoryprotection/" class="md-nav__link">
+      <a href="../../../../WhatAndWhy/enhancedmemoryprotection/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Enhanced Memory Protection
@@ -396,8 +407,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../WhatAndWhy/security/" class="md-nav__link">
+      <a href="../../../../WhatAndWhy/security/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Security
@@ -428,6 +440,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -437,6 +450,7 @@
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Where
@@ -461,8 +475,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Where/project_resources/" class="md-nav__link">
+      <a href="../../../../Where/project_resources/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Project Resources
@@ -483,8 +498,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../Where/external_resources/" class="md-nav__link">
+      <a href="../../../../Where/external_resources/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     External Resources
@@ -515,6 +531,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -524,6 +541,7 @@
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     How
@@ -548,8 +566,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../How/release_process/" class="md-nav__link">
+      <a href="../../../../How/release_process/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Release Process
@@ -570,8 +589,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../How/integration_checklist/" class="md-nav__link">
+      <a href="../../../../How/integration_checklist/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Integration Checklist
@@ -592,8 +612,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../How/contributing/" class="md-nav__link">
+      <a href="../../../../How/contributing/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Contributing
@@ -614,8 +635,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../How/using_project_mu/" class="md-nav__link">
+      <a href="../../../../How/using_project_mu/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Using
@@ -646,6 +668,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -655,6 +678,7 @@
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Developing Docs
@@ -679,8 +703,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../DeveloperDocs/developer_docs/" class="md-nav__link">
+      <a href="../../../../DeveloperDocs/developer_docs/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Overview
@@ -701,8 +726,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../DeveloperDocs/build_community_docs/" class="md-nav__link">
+      <a href="../../../../DeveloperDocs/build_community_docs/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     How To Build
@@ -723,8 +749,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../DeveloperDocs/doc_sample_test/" class="md-nav__link">
+      <a href="../../../../DeveloperDocs/doc_sample_test/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Sample Syntax
@@ -745,8 +772,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../DeveloperDocs/attribution/" class="md-nav__link">
+      <a href="../../../../DeveloperDocs/attribution/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Doc Framework Attribution
@@ -767,8 +795,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../DeveloperDocs/requirements/" class="md-nav__link">
+      <a href="../../../../DeveloperDocs/requirements/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Documentation Requirements
@@ -799,6 +828,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -808,6 +838,7 @@
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Developing Code
@@ -832,8 +863,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../CodeDevelopment/overview/" class="md-nav__link">
+      <a href="../../../../CodeDevelopment/overview/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Overview
@@ -854,8 +886,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../CodeDevelopment/prerequisites/" class="md-nav__link">
+      <a href="../../../../CodeDevelopment/prerequisites/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Tools and Prerequisite
@@ -876,8 +909,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../CodeDevelopment/compile/" class="md-nav__link">
+      <a href="../../../../CodeDevelopment/compile/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Compiling
@@ -898,8 +932,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../CodeDevelopment/test/" class="md-nav__link">
+      <a href="../../../../CodeDevelopment/test/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Testing
@@ -920,8 +955,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../CodeDevelopment/requirements/" class="md-nav__link">
+      <a href="../../../../CodeDevelopment/requirements/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Code Requirements
@@ -942,8 +978,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../CodeDevelopment/rust_build/" class="md-nav__link">
+      <a href="../../../../CodeDevelopment/rust_build/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Rust Compiling and Testing
@@ -964,8 +1001,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../CodeDevelopment/rust_documentation_conventions/" class="md-nav__link">
+      <a href="../../../../CodeDevelopment/rust_documentation_conventions/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Rust Documentation Conventions
@@ -993,8 +1031,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../faq/" class="md-nav__link">
+      <a href="../../../../faq/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     FAQ
@@ -1014,8 +1053,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../license/" class="md-nav__link">
+      <a href="../../../../license/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     License
@@ -1040,6 +1080,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
@@ -1049,6 +1090,7 @@
           
           <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Code Repositories
@@ -1076,6 +1118,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -1085,6 +1128,7 @@
           
           <label class="md-nav__link" for="__nav_9_1" id="__nav_9_1_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     mu basecore
@@ -1112,6 +1156,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -1121,6 +1166,7 @@
           
           <label class="md-nav__link" for="__nav_9_1_1" id="__nav_9_1_1_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Package Overview
@@ -1145,8 +1191,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_basecore/Docs/feature_memory_protection/" class="md-nav__link">
+      <a href="../../../mu_basecore/Docs/feature_memory_protection/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     feature memory protection
@@ -1167,8 +1214,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_basecore/Docs/rust_build/" class="md-nav__link">
+      <a href="../../../mu_basecore/Docs/rust_build/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     rust build
@@ -1197,8 +1245,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_basecore/CONTRIBUTING/" class="md-nav__link">
+      <a href="../../../mu_basecore/CONTRIBUTING/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     CONTRIBUTING
@@ -1219,8 +1268,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_basecore/RepoDetails/" class="md-nav__link">
+      <a href="../../../mu_basecore/RepoDetails/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Repo Details
@@ -1241,8 +1291,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_basecore/SECURITY/" class="md-nav__link">
+      <a href="../../../mu_basecore/SECURITY/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     SECURITY
@@ -1263,8 +1314,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_basecore/github/pull_request_template/" class="md-nav__link">
+      <a href="../../../mu_basecore/github/pull_request_template/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     github
@@ -1288,6 +1340,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -1297,6 +1350,7 @@
           
           <label class="md-nav__link" for="__nav_9_1_6" id="__nav_9_1_6_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     pytool
@@ -1324,6 +1378,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -1333,6 +1388,7 @@
           
           <label class="md-nav__link" for="__nav_9_1_6_1" id="__nav_9_1_6_1_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Plugin
@@ -1357,8 +1413,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_basecore/pytool/Plugin/CharEncodingCheck/Readme/" class="md-nav__link">
+      <a href="../../../mu_basecore/pytool/Plugin/CharEncodingCheck/Readme/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Char Encoding Check
@@ -1379,8 +1436,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_basecore/pytool/Plugin/CodeQL/Readme/" class="md-nav__link">
+      <a href="../../../mu_basecore/pytool/Plugin/CodeQL/Readme/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Code QL
@@ -1401,8 +1459,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_basecore/pytool/Plugin/CompilerPlugin/Readme/" class="md-nav__link">
+      <a href="../../../mu_basecore/pytool/Plugin/CompilerPlugin/Readme/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Compiler Plugin
@@ -1423,8 +1482,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_basecore/pytool/Plugin/DebugMacroCheck/Readme/" class="md-nav__link">
+      <a href="../../../mu_basecore/pytool/Plugin/DebugMacroCheck/Readme/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Debug Macro Check
@@ -1445,8 +1505,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_basecore/pytool/Plugin/DependencyCheck/Readme/" class="md-nav__link">
+      <a href="../../../mu_basecore/pytool/Plugin/DependencyCheck/Readme/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Dependency Check
@@ -1467,8 +1528,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_basecore/pytool/Plugin/DscCompleteCheck/Readme/" class="md-nav__link">
+      <a href="../../../mu_basecore/pytool/Plugin/DscCompleteCheck/Readme/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Dsc Complete Check
@@ -1489,8 +1551,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_basecore/pytool/Plugin/EccCheck/Readme/" class="md-nav__link">
+      <a href="../../../mu_basecore/pytool/Plugin/EccCheck/Readme/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Ecc Check
@@ -1511,8 +1574,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_basecore/pytool/Plugin/GuidCheck/Readme/" class="md-nav__link">
+      <a href="../../../mu_basecore/pytool/Plugin/GuidCheck/Readme/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Guid Check
@@ -1533,8 +1597,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_basecore/pytool/Plugin/HostUnitTestCompilerPlugin/Readme/" class="md-nav__link">
+      <a href="../../../mu_basecore/pytool/Plugin/HostUnitTestCompilerPlugin/Readme/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Host Unit Test Compiler Plugin
@@ -1555,8 +1620,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_basecore/pytool/Plugin/HostUnitTestDscCompleteCheck/Readme/" class="md-nav__link">
+      <a href="../../../mu_basecore/pytool/Plugin/HostUnitTestDscCompleteCheck/Readme/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Host Unit Test Dsc Complete Check
@@ -1577,8 +1643,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_basecore/pytool/Plugin/ImageValidation/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_basecore/pytool/Plugin/ImageValidation/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Image Validation
@@ -1599,8 +1666,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_basecore/pytool/Plugin/LibraryClassCheck/Readme/" class="md-nav__link">
+      <a href="../../../mu_basecore/pytool/Plugin/LibraryClassCheck/Readme/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Library Class Check
@@ -1621,8 +1689,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_basecore/pytool/Plugin/LicenseCheck/Readme/" class="md-nav__link">
+      <a href="../../../mu_basecore/pytool/Plugin/LicenseCheck/Readme/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     License Check
@@ -1643,8 +1712,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_basecore/pytool/Plugin/LineEndingCheck/Readme/" class="md-nav__link">
+      <a href="../../../mu_basecore/pytool/Plugin/LineEndingCheck/Readme/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Line Ending Check
@@ -1665,8 +1735,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_basecore/pytool/Plugin/MarkdownLintCheck/Readme/" class="md-nav__link">
+      <a href="../../../mu_basecore/pytool/Plugin/MarkdownLintCheck/Readme/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Markdown Lint Check
@@ -1687,8 +1758,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_basecore/pytool/Plugin/NestedPackageCheck/Readme/" class="md-nav__link">
+      <a href="../../../mu_basecore/pytool/Plugin/NestedPackageCheck/Readme/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Nested Package Check
@@ -1709,8 +1781,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_basecore/pytool/Plugin/RustHostUnitTestPlugin/Readme/" class="md-nav__link">
+      <a href="../../../mu_basecore/pytool/Plugin/RustHostUnitTestPlugin/Readme/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Rust Host Unit Test Plugin
@@ -1731,8 +1804,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_basecore/pytool/Plugin/SpellCheck/Readme/" class="md-nav__link">
+      <a href="../../../mu_basecore/pytool/Plugin/SpellCheck/Readme/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Spell Check
@@ -1753,8 +1827,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_basecore/pytool/Plugin/UncrustifyCheck/Readme/" class="md-nav__link">
+      <a href="../../../mu_basecore/pytool/Plugin/UncrustifyCheck/Readme/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Uncrustify Check
@@ -1794,6 +1869,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -1803,6 +1879,7 @@
           
           <label class="md-nav__link" for="__nav_9_1_7" id="__nav_9_1_7_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Base Tools
@@ -1827,8 +1904,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_basecore/BaseTools/Docs/feature_ver_spec/" class="md-nav__link">
+      <a href="../../../mu_basecore/BaseTools/Docs/feature_ver_spec/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Package Overview
@@ -1852,6 +1930,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -1861,6 +1940,7 @@
           
           <label class="md-nav__link" for="__nav_9_1_7_2" id="__nav_9_1_7_2_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Nuget Publishing
@@ -1885,8 +1965,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_basecore/BaseTools/NugetPublishing/Mu-Basetools/" class="md-nav__link">
+      <a href="../../../mu_basecore/BaseTools/NugetPublishing/Mu-Basetools/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Mu-Basetools
@@ -1907,8 +1988,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_basecore/BaseTools/NugetPublishing/Mu-Nasm/" class="md-nav__link">
+      <a href="../../../mu_basecore/BaseTools/NugetPublishing/Mu-Nasm/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Mu-Nasm
@@ -1929,8 +2011,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_basecore/BaseTools/NugetPublishing/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_basecore/BaseTools/NugetPublishing/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Read Me
@@ -1962,6 +2045,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -1971,6 +2055,7 @@
           
           <label class="md-nav__link" for="__nav_9_1_7_3" id="__nav_9_1_7_3_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Plugin
@@ -1995,8 +2080,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_basecore/BaseTools/Plugin/FdSizeReport/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_basecore/BaseTools/Plugin/FdSizeReport/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Fd Size Report
@@ -2017,8 +2103,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_basecore/BaseTools/Plugin/OverrideValidation/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_basecore/BaseTools/Plugin/OverrideValidation/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Override Validation
@@ -2050,6 +2137,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -2059,6 +2147,7 @@
           
           <label class="md-nav__link" for="__nav_9_1_7_4" id="__nav_9_1_7_4_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Scripts
@@ -2083,8 +2172,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_basecore/BaseTools/Scripts/PackageDocumentTools/Readme/" class="md-nav__link">
+      <a href="../../../mu_basecore/BaseTools/Scripts/PackageDocumentTools/Readme/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Package Document Tools
@@ -2116,6 +2206,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -2125,6 +2216,7 @@
           
           <label class="md-nav__link" for="__nav_9_1_7_5" id="__nav_9_1_7_5_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Source
@@ -2152,6 +2244,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -2161,6 +2254,7 @@
           
           <label class="md-nav__link" for="__nav_9_1_7_5_1" id="__nav_9_1_7_5_1_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Python
@@ -2185,8 +2279,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_basecore/BaseTools/Source/Python/" class="md-nav__link">
+      <a href="../../../mu_basecore/BaseTools/Source/Python/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     README
@@ -2207,8 +2302,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_basecore/BaseTools/Source/Python/FMMT/" class="md-nav__link">
+      <a href="../../../mu_basecore/BaseTools/Source/Python/FMMT/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     FMMT
@@ -2229,8 +2325,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_basecore/BaseTools/Source/Python/Pkcs7Sign/Readme/" class="md-nav__link">
+      <a href="../../../mu_basecore/BaseTools/Source/Python/Pkcs7Sign/Readme/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Pkcs7Sign
@@ -2278,6 +2375,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -2287,6 +2385,7 @@
           
           <label class="md-nav__link" for="__nav_9_1_8" id="__nav_9_1_8_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Crypto Pkg
@@ -2314,6 +2413,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -2323,6 +2423,7 @@
           
           <label class="md-nav__link" for="__nav_9_1_8_1" id="__nav_9_1_8_1_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Modules
@@ -2347,8 +2448,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_basecore/CryptoPkg/Readme/" class="md-nav__link">
+      <a href="../../../mu_basecore/CryptoPkg/Readme/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Readme
@@ -2372,6 +2474,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -2381,6 +2484,7 @@
           
           <label class="md-nav__link" for="__nav_9_1_8_1_2" id="__nav_9_1_8_1_2_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Library
@@ -2405,8 +2509,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_basecore/CryptoPkg/Library/BaseCryptLibOnProtocolPpi/readme/" class="md-nav__link">
+      <a href="../../../mu_basecore/CryptoPkg/Library/BaseCryptLibOnProtocolPpi/readme/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Base Crypt Lib On Protocol Ppi
@@ -2454,6 +2559,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -2463,6 +2569,7 @@
           
           <label class="md-nav__link" for="__nav_9_1_9" id="__nav_9_1_9_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Mde Module Pkg
@@ -2490,6 +2597,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -2499,6 +2607,7 @@
           
           <label class="md-nav__link" for="__nav_9_1_9_1" id="__nav_9_1_9_1_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Modules
@@ -2526,6 +2635,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -2535,6 +2645,7 @@
           
           <label class="md-nav__link" for="__nav_9_1_9_1_1" id="__nav_9_1_9_1_1_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Library
@@ -2559,8 +2670,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_basecore/MdeModulePkg/Library/DeviceStateLib/Readme/" class="md-nav__link">
+      <a href="../../../mu_basecore/MdeModulePkg/Library/DeviceStateLib/Readme/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Device State Lib
@@ -2581,8 +2693,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_basecore/MdeModulePkg/Library/VariablePolicyLib/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_basecore/MdeModulePkg/Library/VariablePolicyLib/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Variable Policy Lib
@@ -2614,6 +2727,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -2623,6 +2737,7 @@
           
           <label class="md-nav__link" for="__nav_9_1_9_1_2" id="__nav_9_1_9_1_2_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Test
@@ -2650,6 +2765,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -2659,6 +2775,7 @@
           
           <label class="md-nav__link" for="__nav_9_1_9_1_2_1" id="__nav_9_1_9_1_2_1_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Shell Test
@@ -2683,8 +2800,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_basecore/MdeModulePkg/Test/ShellTest/VariablePolicyFuncTestApp/Readme/" class="md-nav__link">
+      <a href="../../../mu_basecore/MdeModulePkg/Test/ShellTest/VariablePolicyFuncTestApp/Readme/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Variable Policy Func Test App
@@ -2740,6 +2858,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -2749,6 +2868,7 @@
           
           <label class="md-nav__link" for="__nav_9_1_10" id="__nav_9_1_10_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Mde Pkg
@@ -2776,6 +2896,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -2785,6 +2906,7 @@
           
           <label class="md-nav__link" for="__nav_9_1_10_1" id="__nav_9_1_10_1_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Modules
@@ -2812,6 +2934,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -2821,6 +2944,7 @@
           
           <label class="md-nav__link" for="__nav_9_1_10_1_1" id="__nav_9_1_10_1_1_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Library
@@ -2845,8 +2969,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_basecore/MdePkg/Library/FltUsedLib/Readme/" class="md-nav__link">
+      <a href="../../../mu_basecore/MdePkg/Library/FltUsedLib/Readme/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Flt Used Lib
@@ -2894,6 +3019,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -2903,6 +3029,7 @@
           
           <label class="md-nav__link" for="__nav_9_1_11" id="__nav_9_1_11_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Network Pkg
@@ -2930,6 +3057,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -2939,6 +3067,7 @@
           
           <label class="md-nav__link" for="__nav_9_1_11_1" id="__nav_9_1_11_1_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Modules
@@ -2966,6 +3095,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -2975,6 +3105,7 @@
           
           <label class="md-nav__link" for="__nav_9_1_11_1_1" id="__nav_9_1_11_1_1_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Shared Networking
@@ -2999,8 +3130,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_basecore/NetworkPkg/SharedNetworking/" class="md-nav__link">
+      <a href="../../../mu_basecore/NetworkPkg/SharedNetworking/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     README
@@ -3021,8 +3153,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_basecore/NetworkPkg/SharedNetworking/release_notes/" class="md-nav__link">
+      <a href="../../../mu_basecore/NetworkPkg/SharedNetworking/release_notes/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     release notes
@@ -3043,8 +3176,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_basecore/NetworkPkg/SharedNetworking/SharedNetworking/" class="md-nav__link">
+      <a href="../../../mu_basecore/NetworkPkg/SharedNetworking/SharedNetworking/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Shared Networking
@@ -3092,6 +3226,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -3101,6 +3236,7 @@
           
           <label class="md-nav__link" for="__nav_9_1_12" id="__nav_9_1_12_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Policy Service Pkg
@@ -3128,6 +3264,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -3137,6 +3274,7 @@
           
           <label class="md-nav__link" for="__nav_9_1_12_1" id="__nav_9_1_12_1_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Modules
@@ -3161,8 +3299,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_basecore/PolicyServicePkg/" class="md-nav__link">
+      <a href="../../../mu_basecore/PolicyServicePkg/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     README
@@ -3183,8 +3322,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_basecore/PolicyServicePkg/Library/" class="md-nav__link">
+      <a href="../../../mu_basecore/PolicyServicePkg/Library/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Library
@@ -3208,6 +3348,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -3217,6 +3358,7 @@
           
           <label class="md-nav__link" for="__nav_9_1_12_1_3" id="__nav_9_1_12_1_3_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Samples
@@ -3241,8 +3383,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_basecore/PolicyServicePkg/Samples/PolicyDefinitions/" class="md-nav__link">
+      <a href="../../../mu_basecore/PolicyServicePkg/Samples/PolicyDefinitions/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Policy Definitions
@@ -3263,8 +3406,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_basecore/PolicyServicePkg/Samples/PolicyInterface/" class="md-nav__link">
+      <a href="../../../mu_basecore/PolicyServicePkg/Samples/PolicyInterface/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Policy Interface
@@ -3312,6 +3456,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -3321,6 +3466,7 @@
           
           <label class="md-nav__link" for="__nav_9_1_13" id="__nav_9_1_13_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Unit Test Framework Pkg
@@ -3345,8 +3491,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_basecore/UnitTestFrameworkPkg/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_basecore/UnitTestFrameworkPkg/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Modules
@@ -3386,6 +3533,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -3395,6 +3543,7 @@
           
           <label class="md-nav__link" for="__nav_9_2" id="__nav_9_2_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     mu common intel min platform
@@ -3419,8 +3568,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_common_intel_min_platform/CONTRIBUTING/" class="md-nav__link">
+      <a href="../../../mu_common_intel_min_platform/CONTRIBUTING/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     CONTRIBUTING
@@ -3441,8 +3591,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_common_intel_min_platform/RepoDetails/" class="md-nav__link">
+      <a href="../../../mu_common_intel_min_platform/RepoDetails/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Repo Details
@@ -3463,8 +3614,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_common_intel_min_platform/SECURITY/" class="md-nav__link">
+      <a href="../../../mu_common_intel_min_platform/SECURITY/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     SECURITY
@@ -3485,8 +3637,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_common_intel_min_platform/github/pull_request_template/" class="md-nav__link">
+      <a href="../../../mu_common_intel_min_platform/github/pull_request_template/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     github
@@ -3518,6 +3671,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -3527,6 +3681,7 @@
           
           <label class="md-nav__link" for="__nav_9_3" id="__nav_9_3_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     mu feature config
@@ -3551,8 +3706,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_feature_config/breaking_changes/" class="md-nav__link">
+      <a href="../../../mu_feature_config/breaking_changes/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     breaking changes
@@ -3573,8 +3729,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_feature_config/CONTRIBUTING/" class="md-nav__link">
+      <a href="../../../mu_feature_config/CONTRIBUTING/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     CONTRIBUTING
@@ -3595,8 +3752,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_feature_config/RepoDetails/" class="md-nav__link">
+      <a href="../../../mu_feature_config/RepoDetails/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Repo Details
@@ -3617,8 +3775,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_feature_config/SECURITY/" class="md-nav__link">
+      <a href="../../../mu_feature_config/SECURITY/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     SECURITY
@@ -3639,8 +3798,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_feature_config/github/pull_request_template/" class="md-nav__link">
+      <a href="../../../mu_feature_config/github/pull_request_template/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     github
@@ -3664,6 +3824,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -3673,6 +3834,7 @@
           
           <label class="md-nav__link" for="__nav_9_3_6" id="__nav_9_3_6_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Setup Data Pkg
@@ -3700,6 +3862,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -3709,6 +3872,7 @@
           
           <label class="md-nav__link" for="__nav_9_3_6_1" id="__nav_9_3_6_1_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Package Overview
@@ -3733,8 +3897,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_feature_config/SetupDataPkg/Docs/ConfigurationFiles/ConfigurationFiles/" class="md-nav__link">
+      <a href="../../../mu_feature_config/SetupDataPkg/Docs/ConfigurationFiles/ConfigurationFiles/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Configuration Files
@@ -3755,8 +3920,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_feature_config/SetupDataPkg/Docs/Overview/Overview/" class="md-nav__link">
+      <a href="../../../mu_feature_config/SetupDataPkg/Docs/Overview/Overview/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Overview
@@ -3777,8 +3943,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_feature_config/SetupDataPkg/Docs/PlatformIntegration/PlatformIntegrationSteps/" class="md-nav__link">
+      <a href="../../../mu_feature_config/SetupDataPkg/Docs/PlatformIntegration/PlatformIntegrationSteps/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Platform Integration
@@ -3799,8 +3966,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_feature_config/SetupDataPkg/Docs/Profiles/Overview/" class="md-nav__link">
+      <a href="../../../mu_feature_config/SetupDataPkg/Docs/Profiles/Overview/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Profiles
@@ -3848,6 +4016,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -3857,6 +4026,7 @@
           
           <label class="md-nav__link" for="__nav_9_4" id="__nav_9_4_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     mu feature dfci
@@ -3881,8 +4051,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_feature_dfci/CODE_OF_CONDUCT/" class="md-nav__link">
+      <a href="../../../mu_feature_dfci/CODE_OF_CONDUCT/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     CODE OF CONDUCT
@@ -3903,8 +4074,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_feature_dfci/CONTRIBUTING/" class="md-nav__link">
+      <a href="../../../mu_feature_dfci/CONTRIBUTING/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     CONTRIBUTING
@@ -3925,8 +4097,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_feature_dfci/RepoDetails/" class="md-nav__link">
+      <a href="../../../mu_feature_dfci/RepoDetails/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Repo Details
@@ -3947,8 +4120,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_feature_dfci/SECURITY/" class="md-nav__link">
+      <a href="../../../mu_feature_dfci/SECURITY/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     SECURITY
@@ -3969,8 +4143,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_feature_dfci/github/pull_request_template/" class="md-nav__link">
+      <a href="../../../mu_feature_dfci/github/pull_request_template/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     github
@@ -3994,6 +4169,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -4003,6 +4179,7 @@
           
           <label class="md-nav__link" for="__nav_9_4_6" id="__nav_9_4_6_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Dfci Pkg
@@ -4030,6 +4207,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -4039,6 +4217,7 @@
           
           <label class="md-nav__link" for="__nav_9_4_6_1" id="__nav_9_4_6_1_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Package Overview
@@ -4063,8 +4242,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_feature_dfci/DfciPkg/Docs/Dfci_Feature/" class="md-nav__link">
+      <a href="../../../mu_feature_dfci/DfciPkg/Docs/Dfci_Feature/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Dfci Feature
@@ -4085,8 +4265,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_feature_dfci/DfciPkg/Docs/Internals/DfciInternals/" class="md-nav__link">
+      <a href="../../../mu_feature_dfci/DfciPkg/Docs/Internals/DfciInternals/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Internals
@@ -4110,6 +4291,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -4119,6 +4301,7 @@
           
           <label class="md-nav__link" for="__nav_9_4_6_1_3" id="__nav_9_4_6_1_3_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Platform Integration
@@ -4143,8 +4326,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_feature_dfci/DfciPkg/Docs/PlatformIntegration/DfciDeviceIdSupportLib/" class="md-nav__link">
+      <a href="../../../mu_feature_dfci/DfciPkg/Docs/PlatformIntegration/DfciDeviceIdSupportLib/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Dfci Device Id Support Lib
@@ -4165,8 +4349,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_feature_dfci/DfciPkg/Docs/PlatformIntegration/DfciGroups/" class="md-nav__link">
+      <a href="../../../mu_feature_dfci/DfciPkg/Docs/PlatformIntegration/DfciGroups/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Dfci Groups
@@ -4187,8 +4372,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_feature_dfci/DfciPkg/Docs/PlatformIntegration/DfciSettingProviders/" class="md-nav__link">
+      <a href="../../../mu_feature_dfci/DfciPkg/Docs/PlatformIntegration/DfciSettingProviders/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Dfci Setting Providers
@@ -4209,8 +4395,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_feature_dfci/DfciPkg/Docs/PlatformIntegration/DfciUiSupportLib/" class="md-nav__link">
+      <a href="../../../mu_feature_dfci/DfciPkg/Docs/PlatformIntegration/DfciUiSupportLib/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Dfci Ui Support Lib
@@ -4231,8 +4418,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_feature_dfci/DfciPkg/Docs/PlatformIntegration/PlatformIntegrationOverview/" class="md-nav__link">
+      <a href="../../../mu_feature_dfci/DfciPkg/Docs/PlatformIntegration/PlatformIntegrationOverview/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Platform Integration Overview
@@ -4264,6 +4452,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -4273,6 +4462,7 @@
           
           <label class="md-nav__link" for="__nav_9_4_6_1_4" id="__nav_9_4_6_1_4_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Qemu Q35Pkg
@@ -4297,8 +4487,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_feature_dfci/DfciPkg/Docs/QemuQ35Pkg/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_feature_dfci/DfciPkg/Docs/QemuQ35Pkg/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Modules
@@ -4327,8 +4518,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_feature_dfci/DfciPkg/Docs/Scenarios/DfciScenarios/" class="md-nav__link">
+      <a href="../../../mu_feature_dfci/DfciPkg/Docs/Scenarios/DfciScenarios/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Scenarios
@@ -4360,6 +4552,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -4369,6 +4562,7 @@
           
           <label class="md-nav__link" for="__nav_9_4_6_2" id="__nav_9_4_6_2_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Modules
@@ -4396,6 +4590,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -4405,6 +4600,7 @@
           
           <label class="md-nav__link" for="__nav_9_4_6_2_1" id="__nav_9_4_6_2_1_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Application
@@ -4429,8 +4625,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_feature_dfci/DfciPkg/Application/DfciMenu/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_feature_dfci/DfciPkg/Application/DfciMenu/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Dfci Menu
@@ -4459,8 +4656,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_feature_dfci/DfciPkg/AuthManagerNull/" class="md-nav__link">
+      <a href="../../../mu_feature_dfci/DfciPkg/AuthManagerNull/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Auth Manager Null
@@ -4481,8 +4679,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_feature_dfci/DfciPkg/IdentityAndAuthManager/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_feature_dfci/DfciPkg/IdentityAndAuthManager/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Identity And Auth Manager
@@ -4506,6 +4705,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -4515,6 +4715,7 @@
           
           <label class="md-nav__link" for="__nav_9_4_6_2_4" id="__nav_9_4_6_2_4_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Library
@@ -4539,8 +4740,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_feature_dfci/DfciPkg/Library/DfciSampleProvider/readme/" class="md-nav__link">
+      <a href="../../../mu_feature_dfci/DfciPkg/Library/DfciSampleProvider/readme/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Dfci Sample Provider
@@ -4572,6 +4774,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -4581,6 +4784,7 @@
           
           <label class="md-nav__link" for="__nav_9_4_6_2_5" id="__nav_9_4_6_2_5_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Unit Tests
@@ -4605,8 +4809,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_feature_dfci/DfciPkg/UnitTests/DeviceIdTest/readme/" class="md-nav__link">
+      <a href="../../../mu_feature_dfci/DfciPkg/UnitTests/DeviceIdTest/readme/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Device Id Test
@@ -4627,8 +4832,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_feature_dfci/DfciPkg/UnitTests/DfciTests/readme/" class="md-nav__link">
+      <a href="../../../mu_feature_dfci/DfciPkg/UnitTests/DfciTests/readme/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Dfci Tests
@@ -4684,6 +4890,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -4693,6 +4900,7 @@
           
           <label class="md-nav__link" for="__nav_9_5" id="__nav_9_5_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     mu feature ipmi
@@ -4717,8 +4925,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_feature_ipmi/CONTRIBUTING/" class="md-nav__link">
+      <a href="../../../mu_feature_ipmi/CONTRIBUTING/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     CONTRIBUTING
@@ -4739,8 +4948,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_feature_ipmi/RepoDetails/" class="md-nav__link">
+      <a href="../../../mu_feature_ipmi/RepoDetails/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Repo Details
@@ -4761,8 +4971,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_feature_ipmi/SECURITY/" class="md-nav__link">
+      <a href="../../../mu_feature_ipmi/SECURITY/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     SECURITY
@@ -4783,8 +4994,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_feature_ipmi/github/pull_request_template/" class="md-nav__link">
+      <a href="../../../mu_feature_ipmi/github/pull_request_template/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     github
@@ -4808,6 +5020,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -4817,6 +5030,7 @@
           
           <label class="md-nav__link" for="__nav_9_5_5" id="__nav_9_5_5_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Ipmi Feature Pkg
@@ -4844,6 +5058,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -4853,6 +5068,7 @@
           
           <label class="md-nav__link" for="__nav_9_5_5_1" id="__nav_9_5_5_1_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Package Overview
@@ -4877,8 +5093,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_feature_ipmi/IpmiFeaturePkg/Docs/Ipmi_Boot_Options/" class="md-nav__link">
+      <a href="../../../mu_feature_ipmi/IpmiFeaturePkg/Docs/Ipmi_Boot_Options/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Ipmi Boot Options
@@ -4899,8 +5116,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_feature_ipmi/IpmiFeaturePkg/Docs/Ipmi_Feature/" class="md-nav__link">
+      <a href="../../../mu_feature_ipmi/IpmiFeaturePkg/Docs/Ipmi_Feature/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Ipmi Feature
@@ -4921,8 +5139,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_feature_ipmi/IpmiFeaturePkg/Docs/Ipmi_System_Event_Log/" class="md-nav__link">
+      <a href="../../../mu_feature_ipmi/IpmiFeaturePkg/Docs/Ipmi_System_Event_Log/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Ipmi System Event Log
@@ -4943,8 +5162,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_feature_ipmi/IpmiFeaturePkg/Docs/Ipmi_Watchdog/" class="md-nav__link">
+      <a href="../../../mu_feature_ipmi/IpmiFeaturePkg/Docs/Ipmi_Watchdog/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Ipmi Watchdog
@@ -4976,6 +5196,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -4985,6 +5206,7 @@
           
           <label class="md-nav__link" for="__nav_9_5_5_2" id="__nav_9_5_5_2_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Modules
@@ -5009,8 +5231,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_feature_ipmi/IpmiFeaturePkg/Readme/" class="md-nav__link">
+      <a href="../../../mu_feature_ipmi/IpmiFeaturePkg/Readme/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Readme
@@ -5031,8 +5254,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_feature_ipmi/IpmiFeaturePkg/IpmiPowerRestorePolicy/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_feature_ipmi/IpmiFeaturePkg/IpmiPowerRestorePolicy/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Ipmi Power Restore Policy
@@ -5053,8 +5277,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_feature_ipmi/IpmiFeaturePkg/IpmiSmbios/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_feature_ipmi/IpmiFeaturePkg/IpmiSmbios/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Ipmi Smbios
@@ -5078,6 +5303,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -5087,6 +5313,7 @@
           
           <label class="md-nav__link" for="__nav_9_5_5_2_4" id="__nav_9_5_5_2_4_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Library
@@ -5111,8 +5338,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_feature_ipmi/IpmiFeaturePkg/Library/IpmiTransportLibSsif/Readme/" class="md-nav__link">
+      <a href="../../../mu_feature_ipmi/IpmiFeaturePkg/Library/IpmiTransportLibSsif/Readme/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Ipmi Transport Lib Ssif
@@ -5133,8 +5361,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_feature_ipmi/IpmiFeaturePkg/Library/MockIpmi/Readme/" class="md-nav__link">
+      <a href="../../../mu_feature_ipmi/IpmiFeaturePkg/Library/MockIpmi/Readme/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Mock Ipmi
@@ -5163,8 +5392,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_feature_ipmi/IpmiFeaturePkg/Samples/Readme/" class="md-nav__link">
+      <a href="../../../mu_feature_ipmi/IpmiFeaturePkg/Samples/Readme/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Samples
@@ -5185,8 +5415,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_feature_ipmi/IpmiFeaturePkg/SpmiTable/Readme/" class="md-nav__link">
+      <a href="../../../mu_feature_ipmi/IpmiFeaturePkg/SpmiTable/Readme/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Spmi Table
@@ -5236,6 +5467,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
@@ -5245,6 +5477,7 @@
           
           <label class="md-nav__link" for="__nav_9_6" id="__nav_9_6_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     mu feature mm supv
@@ -5266,98 +5499,11 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../CONTRIBUTING/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    CONTRIBUTING
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../RepoDetails/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Repo Details
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../SECURITY/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    SECURITY
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../github/pull_request_template/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    github
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
   
+    
     
     
     
@@ -5366,49 +5512,12 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_6_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_6_1" checked>
         
           
-          <label class="md-nav__link" for="__nav_9_6_5" id="__nav_9_6_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_9_6_1" id="__nav_9_6_1_label" tabindex="0">
             
   
-  <span class="md-ellipsis">
-    Mm Supervisor Pkg
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_9_6_5_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_9_6_5">
-            <span class="md-nav__icon md-icon"></span>
-            Mm Supervisor Pkg
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_6_5_1" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_9_6_5_1" id="__nav_9_6_5_1_label" tabindex="0">
-            
   
   <span class="md-ellipsis">
     Package Overview
@@ -5419,8 +5528,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_9_6_5_1_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_9_6_5_1">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_9_6_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_9_6_1">
             <span class="md-nav__icon md-icon"></span>
             Package Overview
           </label>
@@ -5433,11 +5542,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../MmSupervisor_Feature/" class="md-nav__link">
+      <a href="../MmSupervisorDesign/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Mm Supervisor Feature
+    Mm Supervisor Design
     
   </span>
   
@@ -5467,8 +5577,9 @@
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
+  
   <span class="md-ellipsis">
-    Mm Supervisor Design
+    Mm Supervisor Developer Considerations
     
   </span>
   
@@ -5479,8 +5590,9 @@
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
+  
   <span class="md-ellipsis">
-    Mm Supervisor Design
+    Mm Supervisor Developer Considerations
     
   </span>
   
@@ -5503,83 +5615,35 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#objective" class="md-nav__link">
+  <a href="#mm-drivers-implementationconversion" class="md-nav__link">
     <span class="md-ellipsis">
-      Objective
+      MM Drivers Implementation/Conversion
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MM Drivers Implementation/Conversion">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#platform-specific-isolation-policy-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Platform Specific Isolation Policy Configuration
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#standalone-mm-hob-peim-creates-necessary-hobs-serving-as-placeholder" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#other-mm-supervisor-developer-docs" class="md-nav__link">
     <span class="md-ellipsis">
-      Standalone MM Hob (PEIM) Creates Necessary Hobs Serving as Placeholder
+      Other MM Supervisor Developer Docs
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#in-dxe-at-mm-ipl-entry-point" class="md-nav__link">
-    <span class="md-ellipsis">
-      In DXE, at MM IPL entry point
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#core-responsibility-by-mm-supervisor" class="md-nav__link">
-    <span class="md-ellipsis">
-      Core Responsibility By MM Supervisor
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#mm-foundation-isolation" class="md-nav__link">
-    <span class="md-ellipsis">
-      MM foundation isolation
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#individual-mmi-input-flow" class="md-nav__link">
-    <span class="md-ellipsis">
-      Individual MMI Input Flow
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#mm-core-driver-interface" class="md-nav__link">
-    <span class="md-ellipsis">
-      MM Core &lt;-&gt; Driver Interface
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#launch-mm-in-pei" class="md-nav__link">
-    <span class="md-ellipsis">
-      Launch MM in PEI
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#resources" class="md-nav__link">
-    <span class="md-ellipsis">
-      Resources
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -5598,6 +5662,199 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../Overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../StandaloneMm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Standalone Mm
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TraditionalAndStandaloneMm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Traditional And Standalone Mm
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TraditionalMm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Traditional Mm
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CONTRIBUTING/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CONTRIBUTING
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RepoDetails/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Repo Details
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SECURITY/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SECURITY
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../github/pull_request_template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    github
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
     
     
     
@@ -5606,11 +5863,88 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_6_5_1_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_6_6" >
         
           
-          <label class="md-nav__link" for="__nav_9_6_5_1_3" id="__nav_9_6_5_1_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_9_6_6" id="__nav_9_6_6_label" tabindex="0">
             
+  
+  
+  <span class="md-ellipsis">
+    Mm Supervisor Pkg
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_9_6_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_6_6">
+            <span class="md-nav__icon md-icon"></span>
+            Mm Supervisor Pkg
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_6_6_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_6_6_1" id="__nav_9_6_6_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Package Overview
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_9_6_6_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_6_6_1">
+            <span class="md-nav__icon md-icon"></span>
+            Package Overview
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_6_6_1_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_6_6_1_1" id="__nav_9_6_6_1_1_label" tabindex="0">
+            
+  
   
   <span class="md-ellipsis">
     Platform Integration
@@ -5621,8 +5955,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_9_6_5_1_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_9_6_5_1_3">
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_9_6_6_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_6_6_1_1">
             <span class="md-nav__icon md-icon"></span>
             Platform Integration
           </label>
@@ -5635,8 +5969,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../PlatformIntegration/PlatformIntegrationSteps/" class="md-nav__link">
+      <a href="../../MmSupervisorPkg/Docs/PlatformIntegration/PlatformIntegrationSteps/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Platform Integration Steps
@@ -5657,8 +5992,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../PlatformIntegration/SoftwareComponentOverview/" class="md-nav__link">
+      <a href="../../MmSupervisorPkg/Docs/PlatformIntegration/SoftwareComponentOverview/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Software Component Overview
@@ -5679,8 +6015,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../PlatformIntegration/SwitchingToDenyByDefault/" class="md-nav__link">
+      <a href="../../MmSupervisorPkg/Docs/PlatformIntegration/SwitchingToDenyByDefault/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Switching To Deny By Default
@@ -5702,50 +6039,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../StandaloneMmOverview/standalone_mm_framework/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Standalone Mm Overview
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../TraditionalSmmFramework/traditional_smm_framework/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Traditional Smm Framework
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -5768,6 +6061,7 @@
   
   
   
+    
     
     
     
@@ -5776,11 +6070,12 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_6_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_6_7" >
         
           
-          <label class="md-nav__link" for="__nav_9_6_6" id="__nav_9_6_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_9_6_7" id="__nav_9_6_7_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Sea Pkg
@@ -5791,8 +6086,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_9_6_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_9_6_6">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_9_6_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_6_7">
             <span class="md-nav__icon md-icon"></span>
             Sea Pkg
           </label>
@@ -5808,15 +6103,155 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_6_6_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_6_7_1" >
         
           
-          <label class="md-nav__link" for="__nav_9_6_6_1" id="__nav_9_6_6_1_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_9_6_7_1" id="__nav_9_6_7_1_label" tabindex="0">
             
+  
+  
+  <span class="md-ellipsis">
+    Package Overview
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_9_6_7_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_6_7_1">
+            <span class="md-nav__icon md-icon"></span>
+            Package Overview
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_6_7_1_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_6_7_1_1" id="__nav_9_6_7_1_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Platform Integration
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_9_6_7_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_6_7_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            Platform Integration
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SeaPkg/Docs/PlatformIntegration/PlatformIntegrationSteps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Platform Integration Steps
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SeaPkg/Docs/PlatformIntegration/SoftwareComponentOverview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Software Component Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_6_7_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_6_7_2" id="__nav_9_6_7_2_label" tabindex="0">
+            
+  
   
   <span class="md-ellipsis">
     Modules
@@ -5827,8 +6262,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_9_6_6_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_9_6_6_1">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_9_6_7_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_6_7_2">
             <span class="md-nav__icon md-icon"></span>
             Modules
           </label>
@@ -5844,15 +6279,17 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_6_6_1_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_6_7_2_1" >
         
           
-          <label class="md-nav__link" for="__nav_9_6_6_1_1" id="__nav_9_6_6_1_1_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_9_6_7_2_1" id="__nav_9_6_7_2_1_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Tests
@@ -5863,8 +6300,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_9_6_6_1_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_9_6_6_1_1">
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_9_6_7_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_6_7_2_1">
             <span class="md-nav__icon md-icon"></span>
             Tests
           </label>
@@ -5877,8 +6314,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../SeaPkg/Tests/ResponderValidationTest/readme/" class="md-nav__link">
+      <a href="../../SeaPkg/Tests/ResponderValidationTest/readme/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Responder Validation Test
@@ -5910,15 +6348,17 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_6_6_1_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_6_7_2_2" >
         
           
-          <label class="md-nav__link" for="__nav_9_6_6_1_2" id="__nav_9_6_6_1_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_9_6_7_2_2" id="__nav_9_6_7_2_2_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Tools
@@ -5929,8 +6369,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_9_6_6_1_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_9_6_6_1_2">
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_9_6_7_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_6_7_2_2">
             <span class="md-nav__icon md-icon"></span>
             Tools
           </label>
@@ -5946,15 +6386,17 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_6_6_1_2_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_6_7_2_2_1" >
         
           
-          <label class="md-nav__link" for="__nav_9_6_6_1_2_1" id="__nav_9_6_6_1_2_1_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_9_6_7_2_2_1" id="__nav_9_6_7_2_2_1_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Gen Sea Artifacts
@@ -5965,8 +6407,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="6" aria-labelledby="__nav_9_6_6_1_2_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_9_6_6_1_2_1">
+        <nav class="md-nav" data-md-level="6" aria-labelledby="__nav_9_6_7_2_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_6_7_2_2_1">
             <span class="md-nav__icon md-icon"></span>
             Gen Sea Artifacts
           </label>
@@ -5979,8 +6421,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../SeaPkg/Tools/GenSeaArtifacts/gen_aux/readme/" class="md-nav__link">
+      <a href="../../SeaPkg/Tools/GenSeaArtifacts/gen_aux/readme/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     gen aux
@@ -6044,6 +6487,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -6053,6 +6497,7 @@
           
           <label class="md-nav__link" for="__nav_9_7" id="__nav_9_7_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     mu oem sample
@@ -6080,6 +6525,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -6089,6 +6535,7 @@
           
           <label class="md-nav__link" for="__nav_9_7_1" id="__nav_9_7_1_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Package Overview
@@ -6113,8 +6560,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_oem_sample/Docs/OemPkg/" class="md-nav__link">
+      <a href="../../../mu_oem_sample/Docs/OemPkg/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Oem Pkg
@@ -6135,8 +6583,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_oem_sample/Docs/Repo_Details/" class="md-nav__link">
+      <a href="../../../mu_oem_sample/Docs/Repo_Details/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Repo Details
@@ -6160,6 +6609,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -6169,6 +6619,7 @@
           
           <label class="md-nav__link" for="__nav_9_7_1_3" id="__nav_9_7_1_3_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Frontpage Includes
@@ -6193,8 +6644,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_oem_sample/Docs/Frontpage_Includes/Frontpage_DSC_Include/" class="md-nav__link">
+      <a href="../../../mu_oem_sample/Docs/Frontpage_Includes/Frontpage_DSC_Include/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Frontpage DSC Include
@@ -6215,8 +6667,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_oem_sample/Docs/Frontpage_Includes/Frontpage_FDF_Include/" class="md-nav__link">
+      <a href="../../../mu_oem_sample/Docs/Frontpage_Includes/Frontpage_FDF_Include/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Frontpage FDF Include
@@ -6253,8 +6706,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_oem_sample/CONTRIBUTING/" class="md-nav__link">
+      <a href="../../../mu_oem_sample/CONTRIBUTING/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     CONTRIBUTING
@@ -6275,8 +6729,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_oem_sample/SECURITY/" class="md-nav__link">
+      <a href="../../../mu_oem_sample/SECURITY/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     SECURITY
@@ -6297,8 +6752,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_oem_sample/github/pull_request_template/" class="md-nav__link">
+      <a href="../../../mu_oem_sample/github/pull_request_template/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     github
@@ -6322,6 +6778,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -6331,6 +6788,7 @@
           
           <label class="md-nav__link" for="__nav_9_7_5" id="__nav_9_7_5_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Oem Pkg
@@ -6358,6 +6816,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -6367,6 +6826,7 @@
           
           <label class="md-nav__link" for="__nav_9_7_5_1" id="__nav_9_7_5_1_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Modules
@@ -6391,8 +6851,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_oem_sample/OemPkg/HelloUefi/Readme/" class="md-nav__link">
+      <a href="../../../mu_oem_sample/OemPkg/HelloUefi/Readme/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Hello Uefi
@@ -6440,6 +6901,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -6449,6 +6911,7 @@
           
           <label class="md-nav__link" for="__nav_9_8" id="__nav_9_8_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     mu plus
@@ -6473,8 +6936,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/CONTRIBUTING/" class="md-nav__link">
+      <a href="../../../mu_plus/CONTRIBUTING/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     CONTRIBUTING
@@ -6495,8 +6959,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/RepoDetails/" class="md-nav__link">
+      <a href="../../../mu_plus/RepoDetails/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Repo Details
@@ -6517,8 +6982,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/SECURITY/" class="md-nav__link">
+      <a href="../../../mu_plus/SECURITY/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     SECURITY
@@ -6539,8 +7005,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/github/pull_request_template/" class="md-nav__link">
+      <a href="../../../mu_plus/github/pull_request_template/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     github
@@ -6564,6 +7031,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -6573,6 +7041,7 @@
           
           <label class="md-nav__link" for="__nav_9_8_5" id="__nav_9_8_5_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Adv Logger Pkg
@@ -6597,8 +7066,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/AdvLoggerPkg/Docs/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_plus/AdvLoggerPkg/Docs/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Package Overview
@@ -6622,6 +7092,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -6631,6 +7102,7 @@
           
           <label class="md-nav__link" for="__nav_9_8_5_2" id="__nav_9_8_5_2_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Modules
@@ -6655,8 +7127,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/AdvLoggerPkg/AdvancedFileLogger/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_plus/AdvLoggerPkg/AdvancedFileLogger/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Advanced File Logger
@@ -6677,8 +7150,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/AdvLoggerPkg/AdvancedSerialLogger/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_plus/AdvLoggerPkg/AdvancedSerialLogger/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Advanced Serial Logger
@@ -6702,6 +7176,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -6711,6 +7186,7 @@
           
           <label class="md-nav__link" for="__nav_9_8_5_2_3" id="__nav_9_8_5_2_3_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Application
@@ -6735,8 +7211,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/AdvLoggerPkg/Application/DecodeUefiLog/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_plus/AdvLoggerPkg/Application/DecodeUefiLog/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Decode Uefi Log
@@ -6768,6 +7245,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -6777,6 +7255,7 @@
           
           <label class="md-nav__link" for="__nav_9_8_5_2_4" id="__nav_9_8_5_2_4_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Unit Tests
@@ -6801,8 +7280,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/AdvLoggerPkg/UnitTests/LineParser/readme/" class="md-nav__link">
+      <a href="../../../mu_plus/AdvLoggerPkg/UnitTests/LineParser/readme/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Line Parser
@@ -6850,6 +7330,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -6859,6 +7340,7 @@
           
           <label class="md-nav__link" for="__nav_9_8_6" id="__nav_9_8_6_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Hid Pkg
@@ -6883,8 +7365,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/HidPkg/Docs/Readme/" class="md-nav__link">
+      <a href="../../../mu_plus/HidPkg/Docs/Readme/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Package Overview
@@ -6908,6 +7391,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -6917,6 +7401,7 @@
           
           <label class="md-nav__link" for="__nav_9_8_6_2" id="__nav_9_8_6_2_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Modules
@@ -6941,8 +7426,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/HidPkg/HidKeyboardDxe/HidKeyboardDxe/" class="md-nav__link">
+      <a href="../../../mu_plus/HidPkg/HidKeyboardDxe/HidKeyboardDxe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Hid Keyboard Dxe
@@ -6963,8 +7449,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/HidPkg/HidMouseAbsolutePointerDxe/HidMouseAbsolutePointerDxe/" class="md-nav__link">
+      <a href="../../../mu_plus/HidPkg/HidMouseAbsolutePointerDxe/HidMouseAbsolutePointerDxe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Hid Mouse Absolute Pointer Dxe
@@ -7004,6 +7491,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -7013,6 +7501,7 @@
           
           <label class="md-nav__link" for="__nav_9_8_7" id="__nav_9_8_7_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Mfci Pkg
@@ -7040,6 +7529,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -7049,6 +7539,7 @@
           
           <label class="md-nav__link" for="__nav_9_8_7_1" id="__nav_9_8_7_1_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Package Overview
@@ -7073,8 +7564,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/MfciPkg/Docs/Mfci_Feature/" class="md-nav__link">
+      <a href="../../../mu_plus/MfciPkg/Docs/Mfci_Feature/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Mfci Feature
@@ -7095,8 +7587,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/MfciPkg/Docs/Mfci_Integration_Guide/" class="md-nav__link">
+      <a href="../../../mu_plus/MfciPkg/Docs/Mfci_Integration_Guide/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Mfci Integration Guide
@@ -7117,8 +7610,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/MfciPkg/Docs/Mfci_Structures/" class="md-nav__link">
+      <a href="../../../mu_plus/MfciPkg/Docs/Mfci_Structures/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Mfci Structures
@@ -7150,6 +7644,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -7159,6 +7654,7 @@
           
           <label class="md-nav__link" for="__nav_9_8_7_2" id="__nav_9_8_7_2_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Modules
@@ -7186,6 +7682,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -7195,6 +7692,7 @@
           
           <label class="md-nav__link" for="__nav_9_8_7_2_1" id="__nav_9_8_7_2_1_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Library
@@ -7219,8 +7717,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/MfciPkg/Library/MfciDeviceIdSupportLibNull/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_plus/MfciPkg/Library/MfciDeviceIdSupportLibNull/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Mfci Device Id Support Lib Null
@@ -7241,8 +7740,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/MfciPkg/Library/MfciDeviceIdSupportLibSmbios/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_plus/MfciPkg/Library/MfciDeviceIdSupportLibSmbios/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Mfci Device Id Support Lib Smbios
@@ -7263,8 +7763,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/MfciPkg/Library/MfciRetrievePolicyLibNull/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_plus/MfciPkg/Library/MfciRetrievePolicyLibNull/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Mfci Retrieve Policy Lib Null
@@ -7285,8 +7786,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/MfciPkg/Library/MfciRetrievePolicyLibViaHob/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_plus/MfciPkg/Library/MfciRetrievePolicyLibViaHob/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Mfci Retrieve Policy Lib Via Hob
@@ -7307,8 +7809,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/MfciPkg/Library/MfciRetrievePolicyLibViaVariable/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_plus/MfciPkg/Library/MfciRetrievePolicyLibViaVariable/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Mfci Retrieve Policy Lib Via Variable
@@ -7356,6 +7859,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -7365,6 +7869,7 @@
           
           <label class="md-nav__link" for="__nav_9_8_8" id="__nav_9_8_8_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Ms Application Pkg
@@ -7389,8 +7894,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/MsApplicationPkg/Docs/Readme/" class="md-nav__link">
+      <a href="../../../mu_plus/MsApplicationPkg/Docs/Readme/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Package Overview
@@ -7414,6 +7920,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -7423,6 +7930,7 @@
           
           <label class="md-nav__link" for="__nav_9_8_8_2" id="__nav_9_8_8_2_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Modules
@@ -7447,8 +7955,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/MsApplicationPkg/SecureBootRecovery/Readme/" class="md-nav__link">
+      <a href="../../../mu_plus/MsApplicationPkg/SecureBootRecovery/Readme/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Secure Boot Recovery
@@ -7488,6 +7997,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -7497,6 +8007,7 @@
           
           <label class="md-nav__link" for="__nav_9_8_9" id="__nav_9_8_9_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Ms Core Pkg
@@ -7521,8 +8032,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/MsCorePkg/Docs/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_plus/MsCorePkg/Docs/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Package Overview
@@ -7546,6 +8058,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -7555,6 +8068,7 @@
           
           <label class="md-nav__link" for="__nav_9_8_9_2" id="__nav_9_8_9_2_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Modules
@@ -7579,8 +8093,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/MsCorePkg/AcpiRGRT/feature_acpi_rgrt/" class="md-nav__link">
+      <a href="../../../mu_plus/MsCorePkg/AcpiRGRT/feature_acpi_rgrt/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Acpi RGRT
@@ -7601,8 +8116,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/MsCorePkg/CapsuleRuntimeDxe/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_plus/MsCorePkg/CapsuleRuntimeDxe/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Capsule Runtime Dxe
@@ -7623,8 +8139,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/MsCorePkg/CapsuleServicePei/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_plus/MsCorePkg/CapsuleServicePei/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Capsule Service Pei
@@ -7645,8 +8162,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/MsCorePkg/CapsuleServiceProtocolDxe/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_plus/MsCorePkg/CapsuleServiceProtocolDxe/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Capsule Service Protocol Dxe
@@ -7667,8 +8185,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/MsCorePkg/CheckHardwareConnected/readme/" class="md-nav__link">
+      <a href="../../../mu_plus/MsCorePkg/CheckHardwareConnected/readme/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Check Hardware Connected
@@ -7692,6 +8211,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -7701,6 +8221,7 @@
           
           <label class="md-nav__link" for="__nav_9_8_9_2_6" id="__nav_9_8_9_2_6_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Core
@@ -7725,8 +8246,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/MsCorePkg/Core/GuidedSectionExtractPeim/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_plus/MsCorePkg/Core/GuidedSectionExtractPeim/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Guided Section Extract Peim
@@ -7755,8 +8277,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/MsCorePkg/DebugFileLoggerII/" class="md-nav__link">
+      <a href="../../../mu_plus/MsCorePkg/DebugFileLoggerII/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Debug File Logger II
@@ -7780,6 +8303,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -7789,6 +8313,7 @@
           
           <label class="md-nav__link" for="__nav_9_8_9_2_8" id="__nav_9_8_9_2_8_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Incompatible Pci Devices
@@ -7813,8 +8338,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/MsCorePkg/IncompatiblePciDevices/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_plus/MsCorePkg/IncompatiblePciDevices/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Read Me
@@ -7835,8 +8361,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/MsCorePkg/IncompatiblePciDevices/NoOptionRomsAllowed/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_plus/MsCorePkg/IncompatiblePciDevices/NoOptionRomsAllowed/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     No Option Roms Allowed
@@ -7868,6 +8395,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -7877,6 +8405,7 @@
           
           <label class="md-nav__link" for="__nav_9_8_9_2_9" id="__nav_9_8_9_2_9_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Library
@@ -7901,8 +8430,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/MsCorePkg/Library/DebugPortPei/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_plus/MsCorePkg/Library/DebugPortPei/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Debug Port Pei
@@ -7923,8 +8453,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/MsCorePkg/Library/DebugPortProtocolInstallLib/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_plus/MsCorePkg/Library/DebugPortProtocolInstallLib/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Debug Port Protocol Install Lib
@@ -7945,8 +8476,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/MsCorePkg/Library/DeviceBootManagerLibNull/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_plus/MsCorePkg/Library/DeviceBootManagerLibNull/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Device Boot Manager Lib Null
@@ -7967,8 +8499,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/MsCorePkg/Library/DeviceSpecificBusInfoLibNull/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_plus/MsCorePkg/Library/DeviceSpecificBusInfoLibNull/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Device Specific Bus Info Lib Null
@@ -7989,8 +8522,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/MsCorePkg/Library/DxeCapsulePersistenceLib/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_plus/MsCorePkg/Library/DxeCapsulePersistenceLib/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Dxe Capsule Persistence Lib
@@ -8011,8 +8545,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/MsCorePkg/Library/DxeDebugLibRouter/Feature_DebugRouting_Readme/" class="md-nav__link">
+      <a href="../../../mu_plus/MsCorePkg/Library/DxeDebugLibRouter/Feature_DebugRouting_Readme/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Dxe Debug Lib Router
@@ -8033,8 +8568,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/MsCorePkg/Library/DxeIsCapsuleSupportedLib/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_plus/MsCorePkg/Library/DxeIsCapsuleSupportedLib/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Dxe Is Capsule Supported Lib
@@ -8055,8 +8591,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/MsCorePkg/Library/DxeQueueUefiVariableLib/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_plus/MsCorePkg/Library/DxeQueueUefiVariableLib/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Dxe Queue Uefi Variable Lib
@@ -8077,8 +8614,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/MsCorePkg/Library/ExceptionPersistenceLibCmos/Readme/" class="md-nav__link">
+      <a href="../../../mu_plus/MsCorePkg/Library/ExceptionPersistenceLibCmos/Readme/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Exception Persistence Lib Cmos
@@ -8099,8 +8637,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/MsCorePkg/Library/JsonLiteParser/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_plus/MsCorePkg/Library/JsonLiteParser/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Json Lite Parser
@@ -8121,8 +8660,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/MsCorePkg/Library/MathLib/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_plus/MsCorePkg/Library/MathLib/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Math Lib
@@ -8143,8 +8683,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/MsCorePkg/Library/MemoryProtectionExceptionHandlerLib/Readme/" class="md-nav__link">
+      <a href="../../../mu_plus/MsCorePkg/Library/MemoryProtectionExceptionHandlerLib/Readme/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Memory Protection Exception Handler Lib
@@ -8165,8 +8706,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/MsCorePkg/Library/MemoryTypeInformationChangeLib/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_plus/MsCorePkg/Library/MemoryTypeInformationChangeLib/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Memory Type Information Change Lib
@@ -8187,8 +8729,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/MsCorePkg/Library/MuSecureBootKeySelectorLib/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_plus/MsCorePkg/Library/MuSecureBootKeySelectorLib/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Mu Secure Boot Key Selector Lib
@@ -8209,8 +8752,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/MsCorePkg/Library/PasswordStoreLibNull/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_plus/MsCorePkg/Library/PasswordStoreLibNull/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Password Store Lib Null
@@ -8231,8 +8775,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/MsCorePkg/Library/PeiDebugLib/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_plus/MsCorePkg/Library/PeiDebugLib/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Pei Debug Lib
@@ -8253,8 +8798,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/MsCorePkg/Library/PlatformBootManagerLib/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_plus/MsCorePkg/Library/PlatformBootManagerLib/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Platform Boot Manager Lib
@@ -8275,8 +8821,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/MsCorePkg/Library/TpmSgNvIndexLib/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_plus/MsCorePkg/Library/TpmSgNvIndexLib/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Tpm Sg Nv Index Lib
@@ -8305,8 +8852,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/MsCorePkg/MacAddressEmulationDxe/Readme/" class="md-nav__link">
+      <a href="../../../mu_plus/MsCorePkg/MacAddressEmulationDxe/Readme/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Mac Address Emulation Dxe
@@ -8327,8 +8875,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/MsCorePkg/MuCryptoDxe/Readme/" class="md-nav__link">
+      <a href="../../../mu_plus/MsCorePkg/MuCryptoDxe/Readme/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Mu Crypto Dxe
@@ -8349,8 +8898,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/MsCorePkg/MuVarPolicyFoundationDxe/Feature_MuVarPolicyFoundationDxe_Readme/" class="md-nav__link">
+      <a href="../../../mu_plus/MsCorePkg/MuVarPolicyFoundationDxe/Feature_MuVarPolicyFoundationDxe_Readme/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Mu Var Policy Foundation Dxe
@@ -8374,6 +8924,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -8383,6 +8934,7 @@
           
           <label class="md-nav__link" for="__nav_9_8_9_2_13" id="__nav_9_8_9_2_13_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Unit Tests
@@ -8407,8 +8959,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/MsCorePkg/UnitTests/JsonTest/readme/" class="md-nav__link">
+      <a href="../../../mu_plus/MsCorePkg/UnitTests/JsonTest/readme/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Json Test
@@ -8429,8 +8982,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/MsCorePkg/UnitTests/MathLibUnitTest/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_plus/MsCorePkg/UnitTests/MathLibUnitTest/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Math Lib Unit Test
@@ -8462,6 +9016,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -8471,6 +9026,7 @@
           
           <label class="md-nav__link" for="__nav_9_8_9_2_14" id="__nav_9_8_9_2_14_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Universal
@@ -8495,8 +9051,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/MsCorePkg/Universal/StatusCodeHandler/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_plus/MsCorePkg/Universal/StatusCodeHandler/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Status Code Handler
@@ -8544,6 +9101,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -8553,6 +9111,7 @@
           
           <label class="md-nav__link" for="__nav_9_8_10" id="__nav_9_8_10_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Ms Graphics Pkg
@@ -8577,8 +9136,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/MsGraphicsPkg/Docs/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_plus/MsGraphicsPkg/Docs/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Package Overview
@@ -8602,6 +9162,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -8611,6 +9172,7 @@
           
           <label class="md-nav__link" for="__nav_9_8_10_2" id="__nav_9_8_10_2_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Modules
@@ -8638,6 +9200,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -8647,6 +9210,7 @@
           
           <label class="md-nav__link" for="__nav_9_8_10_2_1" id="__nav_9_8_10_2_1_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Application
@@ -8671,8 +9235,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/MsGraphicsPkg/Application/BmpDisplay/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_plus/MsGraphicsPkg/Application/BmpDisplay/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Bmp Display
@@ -8701,8 +9266,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/MsGraphicsPkg/DisplayEngineDxe/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_plus/MsGraphicsPkg/DisplayEngineDxe/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Display Engine Dxe
@@ -8723,8 +9289,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/MsGraphicsPkg/GopOverrideDxe/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_plus/MsGraphicsPkg/GopOverrideDxe/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Gop Override Dxe
@@ -8748,6 +9315,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -8757,6 +9325,7 @@
           
           <label class="md-nav__link" for="__nav_9_8_10_2_4" id="__nav_9_8_10_2_4_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Library
@@ -8781,8 +9350,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/MsGraphicsPkg/Library/BaseUiProgressCircleLib/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_plus/MsGraphicsPkg/Library/BaseUiProgressCircleLib/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Base Ui Progress Circle Lib
@@ -8803,8 +9373,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/MsGraphicsPkg/Library/BaseUiRectangleLib/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_plus/MsGraphicsPkg/Library/BaseUiRectangleLib/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Base Ui Rectangle Lib
@@ -8825,8 +9396,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/MsGraphicsPkg/Library/BootGraphicsLib/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_plus/MsGraphicsPkg/Library/BootGraphicsLib/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Boot Graphics Lib
@@ -8847,8 +9419,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/MsGraphicsPkg/Library/BootGraphicsLibNull/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_plus/MsGraphicsPkg/Library/BootGraphicsLibNull/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Boot Graphics Lib Null
@@ -8869,8 +9442,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/MsGraphicsPkg/Library/BootGraphicsProviderLibNull/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_plus/MsGraphicsPkg/Library/BootGraphicsProviderLibNull/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Boot Graphics Provider Lib Null
@@ -8891,8 +9465,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/MsGraphicsPkg/Library/ColorBarDisplayDeviceStateLib/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_plus/MsGraphicsPkg/Library/ColorBarDisplayDeviceStateLib/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Color Bar Display Device State Lib
@@ -8913,8 +9488,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/MsGraphicsPkg/Library/DisplayDeviceStateLibNull/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_plus/MsGraphicsPkg/Library/DisplayDeviceStateLibNull/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Display Device State Lib Null
@@ -8935,8 +9511,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/MsGraphicsPkg/Library/FrameBufferMemDrawLib/Readme/" class="md-nav__link">
+      <a href="../../../mu_plus/MsGraphicsPkg/Library/FrameBufferMemDrawLib/Readme/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Frame Buffer Mem Draw Lib
@@ -8957,8 +9534,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/MsGraphicsPkg/Library/MsColorTableLib/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_plus/MsGraphicsPkg/Library/MsColorTableLib/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Ms Color Table Lib
@@ -8979,8 +9557,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/MsGraphicsPkg/Library/MsEarlyGraphicsLibNull/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_plus/MsGraphicsPkg/Library/MsEarlyGraphicsLibNull/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Ms Early Graphics Lib Null
@@ -9001,8 +9580,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/MsGraphicsPkg/Library/MsUiThemeCopyLib/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_plus/MsGraphicsPkg/Library/MsUiThemeCopyLib/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Ms Ui Theme Copy Lib
@@ -9023,8 +9603,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/MsGraphicsPkg/Library/MsUiThemeLib/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_plus/MsGraphicsPkg/Library/MsUiThemeLib/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Ms Ui Theme Lib
@@ -9045,8 +9626,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/MsGraphicsPkg/Library/QrEncoderLib/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_plus/MsGraphicsPkg/Library/QrEncoderLib/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Qr Encoder Lib
@@ -9067,8 +9649,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/MsGraphicsPkg/Library/SamplePlatformThemeLib/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_plus/MsGraphicsPkg/Library/SamplePlatformThemeLib/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Sample Platform Theme Lib
@@ -9089,8 +9672,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/MsGraphicsPkg/Library/SimpleUIToolKit/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_plus/MsGraphicsPkg/Library/SimpleUIToolKit/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Simple UITool Kit
@@ -9111,8 +9695,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/MsGraphicsPkg/Library/SwmDialogsLib/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_plus/MsGraphicsPkg/Library/SwmDialogsLib/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Swm Dialogs Lib
@@ -9141,8 +9726,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/MsGraphicsPkg/MsEarlyGraphics/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_plus/MsGraphicsPkg/MsEarlyGraphics/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Ms Early Graphics
@@ -9163,8 +9749,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/MsGraphicsPkg/MsUiTheme/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_plus/MsGraphicsPkg/MsUiTheme/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Ms Ui Theme
@@ -9185,8 +9772,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/MsGraphicsPkg/OnScreenKeyboardDxe/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_plus/MsGraphicsPkg/OnScreenKeyboardDxe/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     On Screen Keyboard Dxe
@@ -9207,8 +9795,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/MsGraphicsPkg/PrintScreenLogger/Readme/" class="md-nav__link">
+      <a href="../../../mu_plus/MsGraphicsPkg/PrintScreenLogger/Readme/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Print Screen Logger
@@ -9229,8 +9818,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/MsGraphicsPkg/RenderingEngineDxe/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_plus/MsGraphicsPkg/RenderingEngineDxe/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Rendering Engine Dxe
@@ -9251,8 +9841,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/MsGraphicsPkg/SimpleWindowManagerDxe/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_plus/MsGraphicsPkg/SimpleWindowManagerDxe/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Simple Window Manager Dxe
@@ -9292,6 +9883,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -9301,6 +9893,7 @@
           
           <label class="md-nav__link" for="__nav_9_8_11" id="__nav_9_8_11_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Ms Whea Pkg
@@ -9328,6 +9921,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -9337,6 +9931,7 @@
           
           <label class="md-nav__link" for="__nav_9_8_11_1" id="__nav_9_8_11_1_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Modules
@@ -9361,8 +9956,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/MsWheaPkg/readme/" class="md-nav__link">
+      <a href="../../../mu_plus/MsWheaPkg/readme/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     readme
@@ -9383,8 +9979,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/MsWheaPkg/HwhMenu/readme/" class="md-nav__link">
+      <a href="../../../mu_plus/MsWheaPkg/HwhMenu/readme/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Hwh Menu
@@ -9408,6 +10005,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -9417,6 +10015,7 @@
           
           <label class="md-nav__link" for="__nav_9_8_11_1_3" id="__nav_9_8_11_1_3_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Library
@@ -9441,8 +10040,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/MsWheaPkg/Library/ParserRegistryLib/readme/" class="md-nav__link">
+      <a href="../../../mu_plus/MsWheaPkg/Library/ParserRegistryLib/readme/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Parser Registry Lib
@@ -9490,6 +10090,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -9499,6 +10100,7 @@
           
           <label class="md-nav__link" for="__nav_9_8_12" id="__nav_9_8_12_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Pc Bds Pkg
@@ -9526,6 +10128,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -9535,6 +10138,7 @@
           
           <label class="md-nav__link" for="__nav_9_8_12_1" id="__nav_9_8_12_1_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Modules
@@ -9562,6 +10166,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -9571,6 +10176,7 @@
           
           <label class="md-nav__link" for="__nav_9_8_12_1_1" id="__nav_9_8_12_1_1_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Library
@@ -9595,8 +10201,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/PcBdsPkg/Library/MsNetworkDependencyLib/readme/" class="md-nav__link">
+      <a href="../../../mu_plus/PcBdsPkg/Library/MsNetworkDependencyLib/readme/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Ms Network Dependency Lib
@@ -9644,6 +10251,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -9653,6 +10261,7 @@
           
           <label class="md-nav__link" for="__nav_9_8_13" id="__nav_9_8_13_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Tpm Testing Pkg
@@ -9680,6 +10289,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -9689,6 +10299,7 @@
           
           <label class="md-nav__link" for="__nav_9_8_13_1" id="__nav_9_8_13_1_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Modules
@@ -9716,6 +10327,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -9725,6 +10337,7 @@
           
           <label class="md-nav__link" for="__nav_9_8_13_1_1" id="__nav_9_8_13_1_1_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Tpm Replay Pei
@@ -9749,8 +10362,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/TpmTestingPkg/TpmReplayPei/Readme/" class="md-nav__link">
+      <a href="../../../mu_plus/TpmTestingPkg/TpmReplayPei/Readme/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Readme
@@ -9771,8 +10385,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/TpmTestingPkg/TpmReplayPei/Tool/TpmReplaySchema/" class="md-nav__link">
+      <a href="../../../mu_plus/TpmTestingPkg/TpmReplayPei/Tool/TpmReplaySchema/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Tool
@@ -9820,6 +10435,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -9829,6 +10445,7 @@
           
           <label class="md-nav__link" for="__nav_9_8_14" id="__nav_9_8_14_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Uefi Testing Pkg
@@ -9856,6 +10473,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -9865,6 +10483,7 @@
           
           <label class="md-nav__link" for="__nav_9_8_14_1" id="__nav_9_8_14_1_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Modules
@@ -9889,8 +10508,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/UefiTestingPkg/Readme/" class="md-nav__link">
+      <a href="../../../mu_plus/UefiTestingPkg/Readme/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Readme
@@ -9914,6 +10534,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -9923,6 +10544,7 @@
           
           <label class="md-nav__link" for="__nav_9_8_14_1_2" id="__nav_9_8_14_1_2_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Audit Tests
@@ -9950,6 +10572,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -9959,6 +10582,7 @@
           
           <label class="md-nav__link" for="__nav_9_8_14_1_2_1" id="__nav_9_8_14_1_2_1_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     DMAProtection Audit
@@ -9983,8 +10607,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/UefiTestingPkg/AuditTests/DMAProtectionAudit/UEFI/" class="md-nav__link">
+      <a href="../../../mu_plus/UefiTestingPkg/AuditTests/DMAProtectionAudit/UEFI/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     UEFI
@@ -10005,8 +10630,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/UefiTestingPkg/AuditTests/DMAProtectionAudit/Windows/Readme/" class="md-nav__link">
+      <a href="../../../mu_plus/UefiTestingPkg/AuditTests/DMAProtectionAudit/Windows/Readme/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Windows
@@ -10035,8 +10661,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/UefiTestingPkg/AuditTests/PagingAudit/" class="md-nav__link">
+      <a href="../../../mu_plus/UefiTestingPkg/AuditTests/PagingAudit/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Paging Audit
@@ -10057,8 +10684,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/UefiTestingPkg/AuditTests/UefiVarLockAudit/Readme/" class="md-nav__link">
+      <a href="../../../mu_plus/UefiTestingPkg/AuditTests/UefiVarLockAudit/Readme/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Uefi Var Lock Audit
@@ -10090,6 +10718,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -10099,6 +10728,7 @@
           
           <label class="md-nav__link" for="__nav_9_8_14_1_3" id="__nav_9_8_14_1_3_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Functional System Tests
@@ -10123,8 +10753,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/UefiTestingPkg/FunctionalSystemTests/MemoryAttributeProtocolFuncTestApp/Readme/" class="md-nav__link">
+      <a href="../../../mu_plus/UefiTestingPkg/FunctionalSystemTests/MemoryAttributeProtocolFuncTestApp/Readme/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Memory Attribute Protocol Func Test App
@@ -10145,8 +10776,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/UefiTestingPkg/FunctionalSystemTests/MemoryProtectionTest/Readme/" class="md-nav__link">
+      <a href="../../../mu_plus/UefiTestingPkg/FunctionalSystemTests/MemoryProtectionTest/Readme/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Memory Protection Test
@@ -10167,8 +10799,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/UefiTestingPkg/FunctionalSystemTests/MpManagement/Readme/" class="md-nav__link">
+      <a href="../../../mu_plus/UefiTestingPkg/FunctionalSystemTests/MpManagement/Readme/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Mp Management
@@ -10189,8 +10822,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/UefiTestingPkg/FunctionalSystemTests/SmmPagingProtectionsTest/Readme/" class="md-nav__link">
+      <a href="../../../mu_plus/UefiTestingPkg/FunctionalSystemTests/SmmPagingProtectionsTest/Readme/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Smm Paging Protections Test
@@ -10238,6 +10872,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -10247,6 +10882,7 @@
           
           <label class="md-nav__link" for="__nav_9_8_15" id="__nav_9_8_15_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Xml Support Pkg
@@ -10271,8 +10907,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_plus/XmlSupportPkg/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_plus/XmlSupportPkg/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Modules
@@ -10312,6 +10949,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -10321,6 +10959,7 @@
           
           <label class="md-nav__link" for="__nav_9_9" id="__nav_9_9_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     mu silicon arm tiano
@@ -10345,8 +10984,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_silicon_arm_tiano/CONTRIBUTING/" class="md-nav__link">
+      <a href="../../../mu_silicon_arm_tiano/CONTRIBUTING/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     CONTRIBUTING
@@ -10367,8 +11007,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_silicon_arm_tiano/RepoDetails/" class="md-nav__link">
+      <a href="../../../mu_silicon_arm_tiano/RepoDetails/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Repo Details
@@ -10389,8 +11030,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_silicon_arm_tiano/SECURITY/" class="md-nav__link">
+      <a href="../../../mu_silicon_arm_tiano/SECURITY/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     SECURITY
@@ -10411,8 +11053,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_silicon_arm_tiano/github/pull_request_template/" class="md-nav__link">
+      <a href="../../../mu_silicon_arm_tiano/github/pull_request_template/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     github
@@ -10436,6 +11079,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -10445,6 +11089,7 @@
           
           <label class="md-nav__link" for="__nav_9_9_5" id="__nav_9_9_5_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Arm Platform Pkg
@@ -10472,6 +11117,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -10481,6 +11127,7 @@
           
           <label class="md-nav__link" for="__nav_9_9_5_1" id="__nav_9_9_5_1_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Modules
@@ -10508,6 +11155,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -10517,6 +11165,7 @@
           
           <label class="md-nav__link" for="__nav_9_9_5_1_1" id="__nav_9_9_5_1_1_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Drivers
@@ -10541,8 +11190,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_silicon_arm_tiano/ArmPlatformPkg/Drivers/HestMmErrorSources/Readme/" class="md-nav__link">
+      <a href="../../../mu_silicon_arm_tiano/ArmPlatformPkg/Drivers/HestMmErrorSources/Readme/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Hest Mm Error Sources
@@ -10590,6 +11240,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -10599,6 +11250,7 @@
           
           <label class="md-nav__link" for="__nav_9_9_6" id="__nav_9_9_6_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Arm Virt Pkg
@@ -10626,6 +11278,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -10635,6 +11288,7 @@
           
           <label class="md-nav__link" for="__nav_9_9_6_1" id="__nav_9_9_6_1_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Modules
@@ -10659,8 +11313,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_silicon_arm_tiano/ArmVirtPkg/PlatformCI/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_silicon_arm_tiano/ArmVirtPkg/PlatformCI/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Platform CI
@@ -10700,6 +11355,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -10709,6 +11365,7 @@
           
           <label class="md-nav__link" for="__nav_9_9_7" id="__nav_9_9_7_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Dynamic Tables Pkg
@@ -10733,8 +11390,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_silicon_arm_tiano/DynamicTablesPkg/Readme/" class="md-nav__link">
+      <a href="../../../mu_silicon_arm_tiano/DynamicTablesPkg/Readme/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Modules
@@ -10774,6 +11432,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -10783,6 +11442,7 @@
           
           <label class="md-nav__link" for="__nav_9_10" id="__nav_9_10_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     mu silicon intel tiano
@@ -10807,8 +11467,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_silicon_intel_tiano/CONTRIBUTING/" class="md-nav__link">
+      <a href="../../../mu_silicon_intel_tiano/CONTRIBUTING/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     CONTRIBUTING
@@ -10829,8 +11490,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_silicon_intel_tiano/RepoDetails/" class="md-nav__link">
+      <a href="../../../mu_silicon_intel_tiano/RepoDetails/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Repo Details
@@ -10851,8 +11513,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_silicon_intel_tiano/SECURITY/" class="md-nav__link">
+      <a href="../../../mu_silicon_intel_tiano/SECURITY/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     SECURITY
@@ -10873,8 +11536,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_silicon_intel_tiano/github/pull_request_template/" class="md-nav__link">
+      <a href="../../../mu_silicon_intel_tiano/github/pull_request_template/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     github
@@ -10898,6 +11562,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -10907,6 +11572,7 @@
           
           <label class="md-nav__link" for="__nav_9_10_5" id="__nav_9_10_5_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Intel Fsp2Pkg
@@ -10934,6 +11600,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -10943,6 +11610,7 @@
           
           <label class="md-nav__link" for="__nav_9_10_5_1" id="__nav_9_10_5_1_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Modules
@@ -10967,8 +11635,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_silicon_intel_tiano/IntelFsp2Pkg/Readme/" class="md-nav__link">
+      <a href="../../../mu_silicon_intel_tiano/IntelFsp2Pkg/Readme/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Readme
@@ -10992,6 +11661,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -11001,6 +11671,7 @@
           
           <label class="md-nav__link" for="__nav_9_10_5_1_2" id="__nav_9_10_5_1_2_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Tools
@@ -11028,6 +11699,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -11037,6 +11709,7 @@
           
           <label class="md-nav__link" for="__nav_9_10_5_1_2_1" id="__nav_9_10_5_1_2_1_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     User Manuals
@@ -11061,8 +11734,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_silicon_intel_tiano/IntelFsp2Pkg/Tools/UserManuals/ConfigEditorUserManual/" class="md-nav__link">
+      <a href="../../../mu_silicon_intel_tiano/IntelFsp2Pkg/Tools/UserManuals/ConfigEditorUserManual/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Config Editor User Manual
@@ -11083,8 +11757,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_silicon_intel_tiano/IntelFsp2Pkg/Tools/UserManuals/FspDscBsf2YamlUserManual/" class="md-nav__link">
+      <a href="../../../mu_silicon_intel_tiano/IntelFsp2Pkg/Tools/UserManuals/FspDscBsf2YamlUserManual/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Fsp Dsc Bsf2Yaml User Manual
@@ -11105,8 +11780,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_silicon_intel_tiano/IntelFsp2Pkg/Tools/UserManuals/GenCfgOptUserManual/" class="md-nav__link">
+      <a href="../../../mu_silicon_intel_tiano/IntelFsp2Pkg/Tools/UserManuals/GenCfgOptUserManual/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Gen Cfg Opt User Manual
@@ -11127,8 +11803,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_silicon_intel_tiano/IntelFsp2Pkg/Tools/UserManuals/PatchFvUserManual/" class="md-nav__link">
+      <a href="../../../mu_silicon_intel_tiano/IntelFsp2Pkg/Tools/UserManuals/PatchFvUserManual/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Patch Fv User Manual
@@ -11149,8 +11826,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_silicon_intel_tiano/IntelFsp2Pkg/Tools/UserManuals/SplitFspBinUserManual/" class="md-nav__link">
+      <a href="../../../mu_silicon_intel_tiano/IntelFsp2Pkg/Tools/UserManuals/SplitFspBinUserManual/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Split Fsp Bin User Manual
@@ -11206,6 +11884,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -11215,6 +11894,7 @@
           
           <label class="md-nav__link" for="__nav_9_10_6" id="__nav_9_10_6_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Intel Fsp2Wrapper Pkg
@@ -11239,8 +11919,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_silicon_intel_tiano/IntelFsp2WrapperPkg/Readme/" class="md-nav__link">
+      <a href="../../../mu_silicon_intel_tiano/IntelFsp2WrapperPkg/Readme/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Modules
@@ -11272,6 +11953,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -11281,6 +11963,7 @@
           
           <label class="md-nav__link" for="__nav_9_10_7" id="__nav_9_10_7_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Intel Silicon Pkg
@@ -11308,6 +11991,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -11317,6 +12001,7 @@
           
           <label class="md-nav__link" for="__nav_9_10_7_1" id="__nav_9_10_7_1_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Modules
@@ -11344,6 +12029,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -11353,6 +12039,7 @@
           
           <label class="md-nav__link" for="__nav_9_10_7_1_1" id="__nav_9_10_7_1_1_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Feature
@@ -11380,6 +12067,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -11389,6 +12077,7 @@
           
           <label class="md-nav__link" for="__nav_9_10_7_1_1_1" id="__nav_9_10_7_1_1_1_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Capsule
@@ -11413,8 +12102,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_silicon_intel_tiano/IntelSiliconPkg/Feature/Capsule/MicrocodeCapsulePdb/Readme/" class="md-nav__link">
+      <a href="../../../mu_silicon_intel_tiano/IntelSiliconPkg/Feature/Capsule/MicrocodeCapsulePdb/Readme/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Microcode Capsule Pdb
@@ -11435,8 +12125,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_silicon_intel_tiano/IntelSiliconPkg/Feature/Capsule/MicrocodeCapsuleTxt/Readme/" class="md-nav__link">
+      <a href="../../../mu_silicon_intel_tiano/IntelSiliconPkg/Feature/Capsule/MicrocodeCapsuleTxt/Readme/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Microcode Capsule Txt
@@ -11500,6 +12191,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -11509,6 +12201,7 @@
           
           <label class="md-nav__link" for="__nav_9_11" id="__nav_9_11_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     mu tiano platforms
@@ -11533,8 +12226,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_tiano_platforms/CONTRIBUTING/" class="md-nav__link">
+      <a href="../../../mu_tiano_platforms/CONTRIBUTING/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     CONTRIBUTING
@@ -11555,8 +12249,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_tiano_platforms/RepoDetails/" class="md-nav__link">
+      <a href="../../../mu_tiano_platforms/RepoDetails/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Repo Details
@@ -11577,8 +12272,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_tiano_platforms/SECURITY/" class="md-nav__link">
+      <a href="../../../mu_tiano_platforms/SECURITY/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     SECURITY
@@ -11599,8 +12295,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_tiano_platforms/github/pull_request_template/" class="md-nav__link">
+      <a href="../../../mu_tiano_platforms/github/pull_request_template/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     github
@@ -11621,8 +12318,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_tiano_platforms/docs/BranchReadme_template/" class="md-nav__link">
+      <a href="../../../mu_tiano_platforms/docs/BranchReadme_template/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     docs
@@ -11646,6 +12344,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -11655,6 +12354,7 @@
           
           <label class="md-nav__link" for="__nav_9_11_6" id="__nav_9_11_6_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Platforms
@@ -11682,6 +12382,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -11691,6 +12392,7 @@
           
           <label class="md-nav__link" for="__nav_9_11_6_1" id="__nav_9_11_6_1_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Package Overview
@@ -11718,6 +12420,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -11727,6 +12430,7 @@
           
           <label class="md-nav__link" for="__nav_9_11_6_1_1" id="__nav_9_11_6_1_1_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Common
@@ -11751,8 +12455,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_tiano_platforms/Platforms/Docs/Common/building/" class="md-nav__link">
+      <a href="../../../mu_tiano_platforms/Platforms/Docs/Common/building/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     building
@@ -11773,8 +12478,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_tiano_platforms/Platforms/Docs/Common/debugging/" class="md-nav__link">
+      <a href="../../../mu_tiano_platforms/Platforms/Docs/Common/debugging/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     debugging
@@ -11798,6 +12504,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -11807,6 +12514,7 @@
           
           <label class="md-nav__link" for="__nav_9_11_6_1_1_3" id="__nav_9_11_6_1_1_3_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Features
@@ -11831,8 +12539,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_tiano_platforms/Platforms/Docs/Common/Features/feature_dfci/" class="md-nav__link">
+      <a href="../../../mu_tiano_platforms/Platforms/Docs/Common/Features/feature_dfci/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     feature dfci
@@ -11853,8 +12562,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_tiano_platforms/Platforms/Docs/Common/Features/feature_frontpage/" class="md-nav__link">
+      <a href="../../../mu_tiano_platforms/Platforms/Docs/Common/Features/feature_frontpage/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     feature frontpage
@@ -11875,8 +12585,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_tiano_platforms/Platforms/Docs/Common/Features/feature_memoryprotection/" class="md-nav__link">
+      <a href="../../../mu_tiano_platforms/Platforms/Docs/Common/Features/feature_memoryprotection/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     feature memoryprotection
@@ -11897,8 +12608,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_tiano_platforms/Platforms/Docs/Common/Features/feature_qemurunner/" class="md-nav__link">
+      <a href="../../../mu_tiano_platforms/Platforms/Docs/Common/Features/feature_qemurunner/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     feature qemurunner
@@ -11919,8 +12631,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_tiano_platforms/Platforms/Docs/Common/Features/feature_whea/" class="md-nav__link">
+      <a href="../../../mu_tiano_platforms/Platforms/Docs/Common/Features/feature_whea/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     feature whea
@@ -11941,8 +12654,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_tiano_platforms/Platforms/Docs/Common/Features/platform_testing/" class="md-nav__link">
+      <a href="../../../mu_tiano_platforms/Platforms/Docs/Common/Features/platform_testing/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     platform testing
@@ -11982,6 +12696,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -11991,6 +12706,7 @@
           
           <label class="md-nav__link" for="__nav_9_11_6_1_2" id="__nav_9_11_6_1_2_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Q35
@@ -12015,8 +12731,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_tiano_platforms/Platforms/Docs/Q35/QemuQ35_ReadMe/" class="md-nav__link">
+      <a href="../../../mu_tiano_platforms/Platforms/Docs/Q35/QemuQ35_ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Qemu Q35 Read Me
@@ -12040,6 +12757,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -12049,6 +12767,7 @@
           
           <label class="md-nav__link" for="__nav_9_11_6_1_2_2" id="__nav_9_11_6_1_2_2_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Features
@@ -12073,8 +12792,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_tiano_platforms/Platforms/Docs/Q35/Features/feature_codeql/" class="md-nav__link">
+      <a href="../../../mu_tiano_platforms/Platforms/Docs/Q35/Features/feature_codeql/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     feature codeql
@@ -12095,8 +12815,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_tiano_platforms/Platforms/Docs/Q35/Features/feature_colorbar/" class="md-nav__link">
+      <a href="../../../mu_tiano_platforms/Platforms/Docs/Q35/Features/feature_colorbar/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     feature colorbar
@@ -12117,8 +12838,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_tiano_platforms/Platforms/Docs/Q35/Features/feature_config/" class="md-nav__link">
+      <a href="../../../mu_tiano_platforms/Platforms/Docs/Q35/Features/feature_config/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     feature config
@@ -12139,8 +12861,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_tiano_platforms/Platforms/Docs/Q35/Features/feature_prm/" class="md-nav__link">
+      <a href="../../../mu_tiano_platforms/Platforms/Docs/Q35/Features/feature_prm/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     feature prm
@@ -12161,8 +12884,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_tiano_platforms/Platforms/Docs/Q35/Features/feature_tpm/" class="md-nav__link">
+      <a href="../../../mu_tiano_platforms/Platforms/Docs/Q35/Features/feature_tpm/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     feature tpm
@@ -12183,8 +12907,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_tiano_platforms/Platforms/Docs/Q35/Features/feature_tpm_replay/" class="md-nav__link">
+      <a href="../../../mu_tiano_platforms/Platforms/Docs/Q35/Features/feature_tpm_replay/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     feature tpm replay
@@ -12221,8 +12946,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_tiano_platforms/Platforms/Docs/SBSA/QemuSbsa_ReadMe/" class="md-nav__link">
+      <a href="../../../mu_tiano_platforms/Platforms/Docs/SBSA/QemuSbsa_ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     SBSA
@@ -12254,6 +12980,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -12263,6 +12990,7 @@
           
           <label class="md-nav__link" for="__nav_9_11_6_2" id="__nav_9_11_6_2_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Qemu Q35Pkg
@@ -12290,6 +13018,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -12299,6 +13028,7 @@
           
           <label class="md-nav__link" for="__nav_9_11_6_2_1" id="__nav_9_11_6_2_1_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Modules
@@ -12326,6 +13056,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -12335,6 +13066,7 @@
           
           <label class="md-nav__link" for="__nav_9_11_6_2_1_1" id="__nav_9_11_6_2_1_1_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Library
@@ -12359,8 +13091,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_tiano_platforms/Platforms/QemuQ35Pkg/Library/MsPlatformDevicesLibQemuQ35/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_tiano_platforms/Platforms/QemuQ35Pkg/Library/MsPlatformDevicesLibQemuQ35/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Ms Platform Devices Lib Qemu Q35
@@ -12381,8 +13114,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_tiano_platforms/Platforms/QemuQ35Pkg/Library/PlatformDebugLibIoPort/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_tiano_platforms/Platforms/QemuQ35Pkg/Library/PlatformDebugLibIoPort/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Platform Debug Lib Io Port
@@ -12411,8 +13145,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_tiano_platforms/Platforms/QemuQ35Pkg/QemuVideoDxe/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_tiano_platforms/Platforms/QemuQ35Pkg/QemuVideoDxe/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Qemu Video Dxe
@@ -12452,6 +13187,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -12461,6 +13197,7 @@
           
           <label class="md-nav__link" for="__nav_9_11_6_3" id="__nav_9_11_6_3_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Qemu Sbsa Pkg
@@ -12488,6 +13225,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -12497,6 +13235,7 @@
           
           <label class="md-nav__link" for="__nav_9_11_6_3_1" id="__nav_9_11_6_3_1_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Modules
@@ -12524,6 +13263,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -12533,6 +13273,7 @@
           
           <label class="md-nav__link" for="__nav_9_11_6_3_1_1" id="__nav_9_11_6_3_1_1_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Library
@@ -12557,8 +13298,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_tiano_platforms/Platforms/QemuSbsaPkg/Library/MsPlatformDevicesLibQemuSbsa/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_tiano_platforms/Platforms/QemuSbsaPkg/Library/MsPlatformDevicesLibQemuSbsa/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Ms Platform Devices Lib Qemu Sbsa
@@ -12587,8 +13329,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_tiano_platforms/Platforms/QemuSbsaPkg/QemuVideoDxe/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_tiano_platforms/Platforms/QemuSbsaPkg/QemuVideoDxe/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Qemu Video Dxe
@@ -12636,6 +13379,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -12645,6 +13389,7 @@
           
           <label class="md-nav__link" for="__nav_9_11_7" id="__nav_9_11_7_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Qemu Pkg
@@ -12672,6 +13417,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -12681,6 +13427,7 @@
           
           <label class="md-nav__link" for="__nav_9_11_7_1" id="__nav_9_11_7_1_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Modules
@@ -12708,6 +13455,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -12717,6 +13465,7 @@
           
           <label class="md-nav__link" for="__nav_9_11_7_1_1" id="__nav_9_11_7_1_1_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Library
@@ -12741,8 +13490,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_tiano_platforms/QemuPkg/Library/PlatformThemeLib/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_tiano_platforms/QemuPkg/Library/PlatformThemeLib/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Platform Theme Lib
@@ -12798,6 +13548,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -12807,6 +13558,7 @@
           
           <label class="md-nav__link" for="__nav_9_12" id="__nav_9_12_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     mu tiano plus
@@ -12831,8 +13583,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_tiano_plus/CONTRIBUTING/" class="md-nav__link">
+      <a href="../../../mu_tiano_plus/CONTRIBUTING/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     CONTRIBUTING
@@ -12853,8 +13606,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_tiano_plus/RepoDetails/" class="md-nav__link">
+      <a href="../../../mu_tiano_plus/RepoDetails/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Repo Details
@@ -12875,8 +13629,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_tiano_plus/SECURITY/" class="md-nav__link">
+      <a href="../../../mu_tiano_plus/SECURITY/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     SECURITY
@@ -12897,8 +13652,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_tiano_plus/github/pull_request_template/" class="md-nav__link">
+      <a href="../../../mu_tiano_plus/github/pull_request_template/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     github
@@ -12922,6 +13678,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -12931,6 +13688,7 @@
           
           <label class="md-nav__link" for="__nav_9_12_5" id="__nav_9_12_5_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Embedded Pkg
@@ -12958,6 +13716,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -12967,6 +13726,7 @@
           
           <label class="md-nav__link" for="__nav_9_12_5_1" id="__nav_9_12_5_1_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Modules
@@ -12994,6 +13754,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -13003,6 +13764,7 @@
           
           <label class="md-nav__link" for="__nav_9_12_5_1_1" id="__nav_9_12_5_1_1_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Scripts
@@ -13027,8 +13789,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_tiano_plus/EmbeddedPkg/Scripts/LauterbachT32/Readme/" class="md-nav__link">
+      <a href="../../../mu_tiano_plus/EmbeddedPkg/Scripts/LauterbachT32/Readme/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Lauterbach T32
@@ -13076,6 +13839,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -13085,6 +13849,7 @@
           
           <label class="md-nav__link" for="__nav_9_12_6" id="__nav_9_12_6_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Fmp Device Pkg
@@ -13109,8 +13874,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_tiano_plus/FmpDevicePkg/Docs/FmpDevicePkg_ReadMe/" class="md-nav__link">
+      <a href="../../../mu_tiano_plus/FmpDevicePkg/Docs/FmpDevicePkg_ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Package Overview
@@ -13134,6 +13900,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -13143,6 +13910,7 @@
           
           <label class="md-nav__link" for="__nav_9_12_6_2" id="__nav_9_12_6_2_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Modules
@@ -13167,8 +13935,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_tiano_plus/FmpDevicePkg/CapsuleUpdatePolicyDxe/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_tiano_plus/FmpDevicePkg/CapsuleUpdatePolicyDxe/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Capsule Update Policy Dxe
@@ -13189,8 +13958,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_tiano_plus/FmpDevicePkg/FmpDxe/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_tiano_plus/FmpDevicePkg/FmpDxe/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Fmp Dxe
@@ -13214,6 +13984,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -13223,6 +13994,7 @@
           
           <label class="md-nav__link" for="__nav_9_12_6_2_3" id="__nav_9_12_6_2_3_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Library
@@ -13247,8 +14019,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_tiano_plus/FmpDevicePkg/Library/CapsuleUpdatePolicyLibNull/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_tiano_plus/FmpDevicePkg/Library/CapsuleUpdatePolicyLibNull/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Capsule Update Policy Lib Null
@@ -13269,8 +14042,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_tiano_plus/FmpDevicePkg/Library/CapsuleUpdatePolicyLibOnProtocol/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_tiano_plus/FmpDevicePkg/Library/CapsuleUpdatePolicyLibOnProtocol/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Capsule Update Policy Lib On Protocol
@@ -13291,8 +14065,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_tiano_plus/FmpDevicePkg/Library/FmpDependencyCheckLib/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_tiano_plus/FmpDevicePkg/Library/FmpDependencyCheckLib/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Fmp Dependency Check Lib
@@ -13313,8 +14088,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_tiano_plus/FmpDevicePkg/Library/FmpDependencyCheckLibNull/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_tiano_plus/FmpDevicePkg/Library/FmpDependencyCheckLibNull/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Fmp Dependency Check Lib Null
@@ -13335,8 +14111,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_tiano_plus/FmpDevicePkg/Library/FmpDependencyDeviceLibNull/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_tiano_plus/FmpDevicePkg/Library/FmpDependencyDeviceLibNull/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Fmp Dependency Device Lib Null
@@ -13357,8 +14134,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_tiano_plus/FmpDevicePkg/Library/FmpDependencyLib/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_tiano_plus/FmpDevicePkg/Library/FmpDependencyLib/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Fmp Dependency Lib
@@ -13379,8 +14157,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_tiano_plus/FmpDevicePkg/Library/FmpDeviceLibNull/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_tiano_plus/FmpDevicePkg/Library/FmpDeviceLibNull/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Fmp Device Lib Null
@@ -13401,8 +14180,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_tiano_plus/FmpDevicePkg/Library/FmpPayloadHeaderLibV1/ReadMe/" class="md-nav__link">
+      <a href="../../../mu_tiano_plus/FmpDevicePkg/Library/FmpPayloadHeaderLibV1/ReadMe/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Fmp Payload Header Lib V1
@@ -13450,6 +14230,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -13459,6 +14240,7 @@
           
           <label class="md-nav__link" for="__nav_9_12_7" id="__nav_9_12_7_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Prm Pkg
@@ -13486,6 +14268,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -13495,6 +14278,7 @@
           
           <label class="md-nav__link" for="__nav_9_12_7_1" id="__nav_9_12_7_1_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Modules
@@ -13519,8 +14303,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_tiano_plus/PrmPkg/Readme/" class="md-nav__link">
+      <a href="../../../mu_tiano_plus/PrmPkg/Readme/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Readme
@@ -13541,8 +14326,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../mu_tiano_plus/PrmPkg/Samples/Readme/" class="md-nav__link">
+      <a href="../../../mu_tiano_plus/PrmPkg/Samples/Readme/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Samples
@@ -13614,83 +14400,35 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#objective" class="md-nav__link">
+  <a href="#mm-drivers-implementationconversion" class="md-nav__link">
     <span class="md-ellipsis">
-      Objective
+      MM Drivers Implementation/Conversion
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MM Drivers Implementation/Conversion">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#platform-specific-isolation-policy-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Platform Specific Isolation Policy Configuration
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#standalone-mm-hob-peim-creates-necessary-hobs-serving-as-placeholder" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#other-mm-supervisor-developer-docs" class="md-nav__link">
     <span class="md-ellipsis">
-      Standalone MM Hob (PEIM) Creates Necessary Hobs Serving as Placeholder
+      Other MM Supervisor Developer Docs
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#in-dxe-at-mm-ipl-entry-point" class="md-nav__link">
-    <span class="md-ellipsis">
-      In DXE, at MM IPL entry point
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#core-responsibility-by-mm-supervisor" class="md-nav__link">
-    <span class="md-ellipsis">
-      Core Responsibility By MM Supervisor
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#mm-foundation-isolation" class="md-nav__link">
-    <span class="md-ellipsis">
-      MM foundation isolation
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#individual-mmi-input-flow" class="md-nav__link">
-    <span class="md-ellipsis">
-      Individual MMI Input Flow
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#mm-core-driver-interface" class="md-nav__link">
-    <span class="md-ellipsis">
-      MM Core &lt;-&gt; Driver Interface
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#launch-mm-in-pei" class="md-nav__link">
-    <span class="md-ellipsis">
-      Launch MM in PEI
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#resources" class="md-nav__link">
-    <span class="md-ellipsis">
-      Resources
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -13713,168 +14451,54 @@
   
 
 
-<h1 id="proposed-flow-of-mm-supervisor">Proposed Flow of MM Supervisor<a class="headerlink" href="#proposed-flow-of-mm-supervisor" title="Permanent link">&para;</a></h1>
-<p>The proposed flow currently supports 2 platforms for development:</p>
+<h1 id="microsoft-mm-supervisor-developer-considerations">Microsoft MM Supervisor Developer Considerations<a class="headerlink" href="#microsoft-mm-supervisor-developer-considerations" title="Permanent link">&para;</a></h1>
+<p>The objective is to binary release MM Supervisor as core component. Thus ideally there should be platform DSC and FDF
+file change to include these entries into the UEFI code base for core capabilities.</p>
+<p>There are 4 essential drivers to be added to the device UEFI code base:</p>
 <ul>
-<li>OVMF Virtual Platform: Intel Q35 based virtual platform from Tianocore. It can be run on QEMU simulator</li>
-<li>AMD Renoir Reference Platform: AMD Renoir based CRB platform, requiring NDA with AMD</li>
+<li><code>StandaloneMmUnblockMem.efi</code></li>
+<li><code>PiSmmIpl.efi</code></li>
+<li><code>MmSupervisorCore.efi</code></li>
+<li><code>MmSupervisorRing3Broker.efi</code></li>
 </ul>
-<p><em>Note</em>: Please see Resources section for more links and tutorials</p>
-<h2 id="objective">Objective<a class="headerlink" href="#objective" title="Permanent link">&para;</a></h2>
-<p><img alt="Boot flow comparison between SMM and Standalone MM kernel" src="boot_flow_comparison.png" /></p>
+<p>One requirement is that both of the drivers above and other MM drivers should reside in the same firmware volume. In
+the current design, the MM Supervisor will not look for extra FVs once it has exited its entry point.</p>
+<h2 id="mm-drivers-implementationconversion">MM Drivers Implementation/Conversion<a class="headerlink" href="#mm-drivers-implementationconversion" title="Permanent link">&para;</a></h2>
+<p>This section targets the MM handler drivers of which module types are <code>DXE_SMM_DRIVER</code>. All <code>gSmst</code> table entries will have
+a one-to-one mapped field in <code>gMmst</code>. But there are still some limitations for currently existing MM handler drivers.</p>
+<p>Once the MM Supervisor is loaded, the data it can consumes must solely come from the HOB list, meaning SMM handlers
+drivers (type <code>DXE_SMM_DRIVER</code>) will not be able to consume the protocols, dependencies or event notification from
+DXE drivers unless relayed by a combination of one DXE driver communicate to a corresponding MMI handler.</p>
+<p>Due to the above reasons, there some functionalities that not present in the MM Supervisor environment:</p>
+<ol>
+<li>Dynamic PCD consumption</li>
+<li><code>gBS</code> services, i.e. memory allocation and free, get DXE memory map</li>
+<li><code>gDS</code> services, i.e. install or check configuration tables</li>
+<li>For MM drivers that needs to access non-MMRAM region, an explicit <code>MmUnblockMemoryRequest</code> call needs to be
+   invoked prior to its usage. Knowing the limitations listed below:<ul>
+<li>When installation of MM foundation occurs in DXE phase, the <code>MmUnblockMemoryRequest</code> will not be available from
+  the beginning in DXE until <code>gEfiMmBaseProtocolGuid</code> is installed. It is suggested to advance the unblock request
+  as early as PEI if necessary.</li>
+</ul>
+</li>
+<li>The <code>MmSupervisorRing3Broker</code> driver has to be the first user mode driver loaded, assuming all user mode drivers
+   rely on <code>gMmst</code>. Thus the libraries linked to this driver can neither have any dependency on <code>MmServicesTableLib</code>
+   nor attempt to access the <code>EFI_MM_SYSTEM_TABLE</code> passed in from library constructors.</li>
+</ol>
+<h3 id="platform-specific-isolation-policy-configuration">Platform Specific Isolation Policy Configuration<a class="headerlink" href="#platform-specific-isolation-policy-configuration" title="Permanent link">&para;</a></h3>
+<p>This section describes how a platform can choose to add or remove protected MSRs, IO, memory region and instruction
+execution (if supported) based on platform needs.</p>
+<p>There is a minimum requirement for SMM isolation policy published by Microsoft where each platform has to block certain
+MSR, IO and memory region accesses to meet the criteria for Level 3 Secured-core PC. So a platform has to fullfil these
+requirements.</p>
+<p>If platform has other resources would like to protect, i.e. proprietary MSR for special purpose, MMIO region for secure
+device, etc, platform can elect to add these entries to the corresponding section of MM Supervisor policy file.</p>
+<h3 id="other-mm-supervisor-developer-docs">Other MM Supervisor Developer Docs<a class="headerlink" href="#other-mm-supervisor-developer-docs" title="Permanent link">&para;</a></h3>
+<p>Refer to these documents for more technical details about integrating the MM Supervisor.</p>
 <ul>
-<li>MM foundation initialized early in the boot process and has isolated protocol and configuration table database</li>
-<li>MM supervisor mechanism holds separate service database</li>
-<li>MM drivers and handlers execute under user mode (CPL3)</li>
-<li>Binary release model</li>
-</ul>
-<h2 id="standalone-mm-hob-peim-creates-necessary-hobs-serving-as-placeholder">Standalone MM Hob (PEIM) Creates Necessary Hobs Serving as Placeholder<a class="headerlink" href="#standalone-mm-hob-peim-creates-necessary-hobs-serving-as-placeholder" title="Permanent link">&para;</a></h2>
-<ol>
-<li>EfiSystemTable</li>
-<li>MM Core private data</li>
-<li>ACPI communication buffer address</li>
-<li>TCG NVS address from Tpm ACPI table</li>
-<li>Memory Map for DXE environment</li>
-</ol>
-<h2 id="in-dxe-at-mm-ipl-entry-point">In DXE, at MM IPL entry point<a class="headerlink" href="#in-dxe-at-mm-ipl-entry-point" title="Permanent link">&para;</a></h2>
-<ol>
-<li>Populates Hobs 1 and 2 Prior to Loading MM Supervisor<ul>
-<li>Memory Map as of now is still populated only in ready to lock</li>
-<li>Hobs 3 and 4 are populated in their separate drivers during their loading</li>
-<li>TODO: the ideal process would be all these hob population can be moved to null library and IPL can stay out of it</li>
-</ul>
-</li>
-<li>Finds the largest available MMRAM region and copy MM Supervisor to this region and load it</li>
-<li>After MM Supervisor loading, close SMRAM to prevent SMRAM access</li>
-<li>Before publishing Supervisor communication, IPL should test communication to Supervisor to query Supervisor version
-and verify the returned version and patch level is non-zero AND meets other system requirements. Known limitations for GCC
-toolchain:<ul>
-<li><strong>Patch level information, which should be embedded into image version of built Pe/Coff header cannot be integrated
-when using GCC toolchain. User builds with GCC tools are welcome to reach out to <code>MsCoreUefi@microsoft.com</code> for
-technical discussion in that regards.</strong></li>
-<li><strong>Driver version embedded into subsystem version of Pe/Coff header is being parsed by objcopy when using GCC
-toolchain. This tool would parse input numeric strings with implicit base (i.e. strings beginning with 0s will be
-parsed as octal numbers). However, MSFT linker specifically only parse it as decimal numbers.</strong></li>
-</ul>
-</li>
-<li>Publish protocol to be used by DXE drivers for brokage pipeline</li>
-<li>Send brokage command to MM Supervisor to load the rest of MM drivers (this is done so that all drivers can be
-transitioned to CPL3 under MM environment instead of DXE environment)</li>
-</ol>
-<h2 id="core-responsibility-by-mm-supervisor">Core Responsibility By MM Supervisor<a class="headerlink" href="#core-responsibility-by-mm-supervisor" title="Permanent link">&para;</a></h2>
-<ol>
-<li>Provide memory service</li>
-<li>Provide protocol publication and notification</li>
-<li>Provide MMI handler register and unregister</li>
-<li>Provide gMmst table for usage</li>
-<li>Relocate MMI entry for x64 architecture</li>
-<li>Setup GDT, IDT, exception handlers for MMI environment</li>
-<li>Setup stack for each CPU in MMI environment</li>
-<li>Setup DXE to MM Supervisor brokage pipeline<ul>
-<li>This will be a MM Supervisor registered handler that run under CPL0 for DXE to demand special commands from MM
-Supervisor (i.e. dispatch MM drivers, query version or configuration information, fetch isolation policy)</li>
-<li>This will be provided as DXE_DRIVER type library API for consumption</li>
-</ul>
-</li>
-<li>Mark supervisor pages corresponds to data consumed by MM Supervisor as well as Supervisor code and lock MM control
-registers if applicable</li>
-<li>Return to DXE</li>
-</ol>
-<h2 id="mm-foundation-isolation">MM foundation isolation<a class="headerlink" href="#mm-foundation-isolation" title="Permanent link">&para;</a></h2>
-<ol>
-<li>Page table:<ul>
-<li>Once MM foundation sets up MMI environment, the foundation data and code needs to be marked as supervisor pages.</li>
-<li>More data allocated internally will also be marked as supervisor pages.</li>
-<li>Memory services from subsequent drivers will be marked as user pages.</li>
-<li>At ready to lock event, ring 0 GDT and IDT and page table itself will be patched to read only</li>
-</ul>
-</li>
-<li>Privilege level:<ul>
-<li>MM foundation will execute at CPL0 to access all data and code if allowed by page table</li>
-<li>Before loading MM drivers, core will update stack pointer in TSS and return address from call gate. Return far with
-target SS:RSP and CS:RIP</li>
-<li>After MM driver returns, call far will return to the original return address from call gate set up</li>
-<li>For MMI. Before dispatching each MMI handlers, if prior to ready to lock, core will update stack pointer in TSS and
-return address from call gate. Return far with target SS:RSP and CS:RIP. <em>Note: this will need to be in APHandler for
-APs and around MMI handler dispatching for BSP</em></li>
-<li>After MMI returns, call far will return to the original return address from call gate set up</li>
-</ul>
-</li>
-</ol>
-<p><img alt="Syscall flow illustration" src="isolated_smi_handler.png" /></p>
-<ol>
-<li>Syscall (see the flow chart) to enforce all services needs to execute under CPL0 from CPL3 must go through syscall interface:<ul>
-<li>Core services provided through gMmst provided under CPL3 will be a syscall shim, it implements most gMmst service
-by invoking syscall and have core service replay the request.</li>
-<li>Certain privileged instructions such as IO read/write, MSR read/write, and INT, WBI, HLT will be evaluated through
-policy gate before proceeding. An example defined by AMD for v1 SMM isolation can be found in <code>SmmSupervisorPkg</code>
-<a href="https://windowspartners.visualstudio.com/Partner_Amd_UEFI/_git/mu_mm_supv?path=%2FSmmSupervisorPkg%2FInclude%2FSmmSecurePolicy.h">here</a></li>
-<li>Telemetry records: when prohibited syscall occurs, core service will jump to preset variable service in Ring 3,
-write NV variable and long jump back to the point where Ring 3 is enforced.</li>
-</ul>
-</li>
-</ol>
-<h2 id="individual-mmi-input-flow">Individual MMI Input Flow<a class="headerlink" href="#individual-mmi-input-flow" title="Permanent link">&para;</a></h2>
-<ol>
-<li>At the MMI entry point, each core will setup their MSR of STARs to point to core syscall center in MM core. And
-restore MSR back before rsm from MMI.</li>
-<li>Each core will still go through SmiRendezvous flow. BSP will go all the way to MMI handler dispatcher and transition
-to Ring 3, then run the handler code in Ring 3. And then come back to Ring 0 upon returning.</li>
-<li>AP will wait at idle state, till notified that there are schedules in the queue. Before loading the function pointers,
-AP will transition to Ring 3 and then execute procedures in Ring 3. And then come back to Ring 0 upon returning.</li>
-<li>Prior to dispatching individual MMI handlers, MM supervisor will copy incoming communicate buffers into MMRAM region,
-marked with proper memory attributes (user vs. kernel). The copied buffers will be dispatched to MMI handlers.</li>
-<li>Note that when ring level changes, the stack switch will occur as well. Thus when setting up stack, the Ring 3 stack
-needs to be allocated separately.</li>
-</ol>
-<h2 id="mm-core-driver-interface">MM Core &lt;-&gt; Driver Interface<a class="headerlink" href="#mm-core-driver-interface" title="Permanent link">&para;</a></h2>
-<ol>
-<li>Between MM drivers and MM Supervisor, a shim driver will be loaded first to publish a shim gMmst, which will implement
-some of the real gMmst function through syscall request.<ul>
-<li>This driver will also manage protocol data base in Ring 3, meaning the entire protocol publication, notification,
-location will be under Ring 3 and application level. And there will be no protocol published from MM core.</li>
-<li>The driver will also need to refresh the content of table when there is potential to change the values in the table
-(number of configuration table entries, etc)</li>
-</ul>
-</li>
-<li>Also between MM drivers and MM Supervisor, syscall version of BaseLib, CpuLib and IoLib for MM EFI drivers. This will
-provide a direct interface to request privileged information from MM core.</li>
-<li>Between DXE drivers and MM Supervisor, a brokage pipeline (special MM handler) will be set up for information querying
-and driver dispatching</li>
-</ol>
-<h2 id="launch-mm-in-pei">Launch MM in PEI<a class="headerlink" href="#launch-mm-in-pei" title="Permanent link">&para;</a></h2>
-<ol>
-<li>At the entrypoint of MM PEI IPL, the PEIM will go over system prerequisites to make sure MM foundation is ready to settle.
-These requirements include designated MM communication buffers for both user and supervisor, MM control PPI to trigger MMI,
-MM access PPI to coalesce all available MMRAM regions and lock/close them once MM foundation is set.</li>
-<li>MM PEI IPL will iterate through all available MMRAMs and load the located MM core (supervisor in this case) into MMRAM.</li>
-<li>If the system operates PEI in 32-bit mode where as MM foundation needs to run in X64, MM PEI IPL will load a MM IPL X64
-relay module, which runs similar to the CapsuleX64.inf from MdeModulePkg. MM PEI IPL will cache system context then switch
-the operation mode to X64 to execute X64 relay module.<ul>
-<li>Although X64 relay module is a PEIM module in UEFI environment, but it does not have PEI services like other PEIMs</li>
-<li>MM core is loaded and relocated in normal PEI environment. X64 relay routine will only execute the core entrypoint
-with supplied hob start pointer.</li>
-</ul>
-</li>
-<li>After MM core foundation is setup, the system will, fist return to 32-bit mode with cached context information if applicable,
-close and lock all available MMRAM regions.</li>
-<li>MM PEI IPL initiate test communication to Supervisor by querying Supervisor version before proceeding.</li>
-<li>MM PEI IPL then install MM communicate and MM supervisor communicate PPIs for usage in the rest of PEI phase.</li>
-<li>Once DXE environment is launched, a MM DXE IPL that depends on MM control protocol will test communication to MM supervisor
-by querying supervisor version.<ul>
-<li>Entities that publish MM control protocol might need to avoid double-initialization</li>
-</ul>
-</li>
-<li>Once test communication is successful, MM DXE IPL will publish MM communicate and MM supervisor communicate protocols
-for further usage in UEFI DXE or runtime.</li>
-</ol>
-<h2 id="resources">Resources<a class="headerlink" href="#resources" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Project MU Repositories: <a href="https://github.com/topics/projectmu">https://github.com/topics/projectmu</a></li>
-<li>Standalone MM Specification: Vol. 4:
-Management Mode Core Interface, <a href="https://uefi.org/sites/default/files/resources/PI_Spec_1_7_A_final_May1.pdf">UEFI Platform Initialization (PI) Specification 1.7 A</a></li>
-<li>MU Q35 Platform: <a href="https://github.com/microsoft/mu_tiano_platforms">https://github.com/microsoft/mu_tiano_platforms</a></li>
-<li>QEMU Instructions: <a href="https://github.com/tianocore/edk2/blob/master/OvmfPkg/PlatformCI/ReadMe.md">https://github.com/tianocore/edk2/blob/master/OvmfPkg/PlatformCI/ReadMe.md</a></li>
+<li><a href="../../MmSupervisorPkg/Docs/PlatformIntegration/PlatformIntegrationSteps/">MM Supervisor Platform Integration Steps</a></li>
+<li><a href="../../MmSupervisorPkg/Docs/PlatformIntegration/SoftwareComponentOverview/">MM Supervisor Software Component Overview</a></li>
+<li><a href="../../MmSupervisorPkg/Docs/PlatformIntegration/SwitchingToDenyByDefault/">Using a Deny-by-Default MM Supervisor Policy</a></li>
 </ul>
 
 
@@ -13941,10 +14565,12 @@ Management Mode Core Interface, <a href="https://uefi.org/sites/default/files/re
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../../../../..", "features": [], "search": "../../../../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": "0.9.1"}</script>
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../..", "features": [], "search": "../../../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": "0.9.1"}</script>
     
     
-      <script src="../../../../../../assets/javascripts/bundle.f13b1293.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.c8b220af.min.js"></script>
       
         <script src="https://unpkg.com/mermaid@8.7.0/dist/mermaid.min.js"></script>
       
