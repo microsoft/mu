@@ -6518,27 +6518,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#autogen" class="md-nav__link">
-    <span class="md-ellipsis">
-      autogen
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#no_missing_rules" class="md-nav__link">
     <span class="md-ellipsis">
       no_missing_rules
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#excluded_symbols" class="md-nav__link">
-    <span class="md-ellipsis">
-      excluded_symbols
     </span>
   </a>
   
@@ -14651,27 +14633,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#autogen" class="md-nav__link">
-    <span class="md-ellipsis">
-      autogen
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#no_missing_rules" class="md-nav__link">
     <span class="md-ellipsis">
       no_missing_rules
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#excluded_symbols" class="md-nav__link">
-    <span class="md-ellipsis">
-      excluded_symbols
     </span>
   </a>
   
@@ -14718,6 +14682,9 @@
 <h1 id="auxiliary-file-generation-tool">Auxiliary File Generation Tool<a class="headerlink" href="#auxiliary-file-generation-tool" title="Permanent link">&para;</a></h1>
 <p>This tool generates the binary file used to verify the state of a module after execution and revert it to it's original
 state. Any rule specified in the configuration file will be 1. Reverted and 2. Verified (depending on the verification type).</p>
+<p><code>create-aux</code> -&gt; Consumes a configuration file to generate an auxiliary file.
+<code>create-config</code> -&gt; Creates a new config with 100% coverage, but all rules are <code>none</code>.
+<code>test-aux</code> -&gt; Tests if the aux file validation rules pass against a dumped efi image.</p>
 <h2 id="auxiliary-file-format">Auxiliary File Format<a class="headerlink" href="#auxiliary-file-format" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code>+--------------------------------------------+
 +  IMAGE_VALIDATION_DATA_HEADER
@@ -14757,21 +14724,16 @@ comes with the following standard options:</p>
 <span class="n">scope</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Optional[String]&#39;</span>
 <span class="n">symbol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Required[String]&#39;</span>
 <span class="n">field</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Optional[String]&#39;</span>
-<span class="n">array</span><span class="p">.</span><span class="n">index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Optional[Int]&#39;</span>
+<span class="n">array</span><span class="p">.</span><span class="n">index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Optional[Int]&#39;</span><span class="err">|</span><span class="s1">&#39;Optional[Array[Int;2]]&#39;</span>
 <span class="n">array</span><span class="p">.</span><span class="n">sentinel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Optional[Boolean]&#39;</span>
-<span class="n">offset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Optional[Int]&#39;</span>
-<span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Optional[Int]&#39;</span>
 <span class="n">validation</span><span class="p">.</span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Required[String]&#39;</span>
 </code></pre></div>
 <ul>
 <li><code>scope</code>: If specified, the rule is only applied when this scope is active. Otherwise it is always applied.</li>
 <li><code>symbol</code>: Determines the address and size for the rule</li>
 <li><code>field</code>: Updates the address and size to be that of the field, rather than the symbol itself.</li>
-<li><code>array.index</code>: Only apply the rule to the specified index of the array.</li>
+<li><code>array.index</code>: Only apply the rule to the specified index of the array, or inclusive range</li>
 <li><code>array.sentinel</code>: Apply content rule to only the final rule such that its content must be all zeros.</li>
-<li><code>offset</code>: Updates the address to <code>symbol.address + offset</code>. Offset can be negative. Providing an offset requires that the
-<code>size</code> is also provided, as the size can no longer be automatically calculated</li>
-<li><code>size</code>: Overrides the size calculated by <code>symbol</code> or <code>rule</code>.</li>
 <li><code>validation.type</code>: The type of validation to perform on this symbol. Different values may also require additional configuration
 settings in the <code>[[rule]]</code>.</li>
 </ul>
@@ -14819,21 +14781,11 @@ such as not being null.</p>
 <h3 id="config">config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
 <p>The below configuration options reside in a top level <code>[config]</code> section of the configuration file.</p>
 <div class="highlight"><pre><span></span><code><span class="k">[config]</span>
-<span class="n">autogen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span>
 <span class="n">no_missing_rules</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
-<span class="n">excluded_symbols</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;K&quot;</span><span class="p">]</span>
 </code></pre></div>
-<h4 id="autogen">autogen<a class="headerlink" href="#autogen" title="Permanent link">&para;</a></h4>
-<p><code>autogen = true/false</code> config option tells the tool if it should generate validation rules of type <code>None</code> for any symbol
-that does not currently have a rule created. Use <code>excluded_symbols</code> to prevent rules to be generated from certain
-symbols.</p>
 <h4 id="no_missing_rules">no_missing_rules<a class="headerlink" href="#no_missing_rules" title="Permanent link">&para;</a></h4>
 <p><code>no_missing_rules = true/false</code> config option tells the tool to stop processing if there is a symbol that does not
-currently have a rule created. Cannot be used with <code>autogen</code>. Use <code>excluded_symbols</code> to prevent the process from
-stopping if a rule is missing for that particular symbol.</p>
-<h4 id="excluded_symbols">excluded_symbols<a class="headerlink" href="#excluded_symbols" title="Permanent link">&para;</a></h4>
-<p><code>excluded_symbols = Optional[List[String]]</code> config option to always filter out these symbols from the aux file.
-Additionally ensures these symbols are ignored for the <code>no_missing_rules</code> and <code>autogen</code> flags</p>
+currently have a rule created.</p>
 <h2 id="adding-a-new-rule">Adding a new rule<a class="headerlink" href="#adding-a-new-rule" title="Permanent link">&para;</a></h2>
 <ol>
 <li>
