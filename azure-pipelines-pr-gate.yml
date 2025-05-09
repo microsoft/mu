@@ -2,7 +2,7 @@ workspace:
   clean: all
 
 pool:
-  vmImage: windows-2022
+  vmImage: windows-latest
 
 steps:
 - task: DeleteFiles@1
@@ -71,11 +71,9 @@ steps:
 
 # Publish Code Coverage Results
 # Publish Cobertura code coverage results
-- task: PublishCodeCoverageResults@1
+- task: PublishCodeCoverageResults@2
   inputs:
-    codeCoverageTool: 'cobertura' # Options: cobertura, jaCoCo
     summaryFileLocation: $(System.DefaultWorkingDirectory)/cov.xml
-    reportDirectory: $(System.DefaultWorkingDirectory)/cov_html
   condition: succeededOrFailed()
 
 - script: flake8 . > flake8.err.log
