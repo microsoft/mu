@@ -12581,6 +12581,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../../Common/Features/feature_tpm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    feature tpm
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../Common/Features/feature_whea/" class="md-nav__link">
         
   
@@ -12834,29 +12857,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Q35/Features/feature_tpm/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    feature tpm
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../Q35/Features/feature_tpm_replay/" class="md-nav__link">
         
   
@@ -12995,6 +12995,15 @@
   <a href="#mu-telemetry-whea-hwerrorrecord" class="md-nav__link">
     <span class="md-ellipsis">
       Mu Telemetry / WHEA / HwErrorRecord
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trusted-platform-module-tpm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trusted Platform Module (TPM)
     </span>
   </a>
   
@@ -14539,6 +14548,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#trusted-platform-module-tpm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trusted Platform Module (TPM)
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -14637,6 +14655,77 @@ designed to collect critical (platform defined) status codes, record them into a
 and then transfer them through the Microsoft WHEA pipeline.  From there an OEM can use Microsoft
 provided reports to check on in market device health.  *Some work still pending completion.</p>
 <p><a href="../../Common/Features/feature_whea/">Details</a></p>
+<h3 id="trusted-platform-module-tpm">Trusted Platform Module (TPM)<a class="headerlink" href="#trusted-platform-module-tpm" title="Permanent link">&para;</a></h3>
+<p>QEMU TPM emulation implements a TPM TIS hardware interface that follows the Trusted Computing Group's TCG PC Client
+Specific TPM Interface Specification (TIS) in addition to a TPM CRB interface that follows the TCG PC Client Platform
+TPM Profile (PTP) Specification. <code>QemuSbsaPkg</code> has support to include TPM drivers and connect to the software TPM
+socket interface. Usage is covered in the detailed feature readme.</p>
+<p><a href="../../Common/Features/feature_tpm/">Details</a></p>
+<p><em>Note</em>: QEMU TPM Emulation requires the change in QEMU source code to enable TPM support:</p>
+<div class="highlight"><pre><span></span><code><span class="gh">diff --git a/hw/arm/sbsa-ref.c b/hw/arm/sbsa-ref.c</span>
+<span class="gh">index e3195d5449..84bc7d9adb 100644</span>
+<span class="gd">--- a/hw/arm/sbsa-ref.c</span>
+<span class="gi">+++ b/hw/arm/sbsa-ref.c</span>
+<span class="gu">@@ -28,6 +28,8 @@</span>
+<span class="w"> </span>#include &quot;sysemu/numa.h&quot;
+<span class="w"> </span>#include &quot;sysemu/runstate.h&quot;
+<span class="w"> </span>#include &quot;sysemu/sysemu.h&quot;
+<span class="gi">+#include &quot;sysemu/tpm.h&quot;</span>
+<span class="gi">+#include &quot;sysemu/tpm_backend.h&quot;</span>
+<span class="w"> </span>#include &quot;exec/hwaddr.h&quot;
+<span class="w"> </span>#include &quot;kvm_arm.h&quot;
+<span class="w"> </span>#include &quot;hw/arm/boot.h&quot;
+<span class="gu">@@ -94,6 +96,7 @@ enum {</span>
+<span class="w"> </span>    SBSA_SECURE_MEM,
+<span class="w"> </span>    SBSA_AHCI,
+<span class="w"> </span>    SBSA_XHCI,
+<span class="gi">+    SBSA_TPM,</span>
+<span class="w"> </span>};
+
+<span class="w"> </span>struct SBSAMachineState {
+<span class="gu">@@ -132,6 +135,7 @@ static const MemMapEntry sbsa_ref_memmap[] = {</span>
+<span class="w"> </span>    /* Space here reserved for more SMMUs */
+<span class="w"> </span>    [SBSA_AHCI] =               { 0x60100000, 0x00010000 },
+<span class="w"> </span>    [SBSA_XHCI] =               { 0x60110000, 0x00010000 },
+<span class="gi">+    [SBSA_TPM] =                { 0x60120000, 0x00010000 },</span>
+<span class="w"> </span>    /* Space here reserved for other devices */
+<span class="w"> </span>    [SBSA_PCIE_PIO] =           { 0x7fff0000, 0x00010000 },
+<span class="w"> </span>    /* 32-bit address PCIE MMIO space */
+<span class="gu">@@ -629,6 +633,24 @@ static void create_smmu(const SBSAMachineState *sms, PCIBus *bus)</span>
+<span class="w"> </span>    }
+<span class="w"> </span>}
+
+<span class="gi">+static void create_tpm(SBSAMachineState *sbsa, PCIBus *bus)</span>
+<span class="gi">+{</span>
+<span class="gi">+    Error *errp = NULL;</span>
+<span class="gi">+    DeviceState *dev;</span>
+<span class="gi">+</span>
+<span class="gi">+    TPMBackend *be = qemu_find_tpm_be(&quot;tpm0&quot;);</span>
+<span class="gi">+    if (be == NULL) {</span>
+<span class="gi">+        error_report(&quot;Couldn&#39;t find tmp0 backend&quot;);</span>
+<span class="gi">+        return;</span>
+<span class="gi">+    }</span>
+<span class="gi">+</span>
+<span class="gi">+    dev = qdev_new(TYPE_TPM_TIS_SYSBUS);</span>
+<span class="gi">+    object_property_set_link(OBJECT(dev), &quot;tpmdev&quot;, OBJECT(be), &amp;errp);</span>
+<span class="gi">+    object_property_set_str(OBJECT(dev), &quot;tpmdev&quot;, be-&gt;id, &amp;errp);</span>
+<span class="gi">+    sysbus_realize_and_unref(SYS_BUS_DEVICE(dev), &amp;error_fatal);</span>
+<span class="gi">+    sysbus_mmio_map(SYS_BUS_DEVICE(dev), 0, sbsa_ref_memmap[SBSA_TPM].base);</span>
+<span class="gi">+}</span>
+<span class="gi">+</span>
+<span class="w"> </span>static void create_pcie(SBSAMachineState *sms)
+<span class="w"> </span>{
+<span class="w"> </span>    hwaddr base_ecam = sbsa_ref_memmap[SBSA_PCIE_ECAM].base;
+<span class="gu">@@ -686,6 +708,8 @@ static void create_pcie(SBSAMachineState *sms)</span>
+<span class="w"> </span>    pci_create_simple(pci-&gt;bus, -1, &quot;bochs-display&quot;);
+
+<span class="w"> </span>    create_smmu(sms, pci-&gt;bus);
+<span class="gi">+</span>
+<span class="gi">+    create_tpm(sms, pci-&gt;bus);</span>
+<span class="w"> </span>}
+
+<span class="w"> </span>static void *sbsa_ref_dtb(const struct arm_boot_info *binfo, int *fdt_size)
+</code></pre></div>
 <h2 id="mu-customized-components">Mu Customized Components<a class="headerlink" href="#mu-customized-components" title="Permanent link">&para;</a></h2>
 <h3 id="modules">Modules<a class="headerlink" href="#modules" title="Permanent link">&para;</a></h3>
 <table>
