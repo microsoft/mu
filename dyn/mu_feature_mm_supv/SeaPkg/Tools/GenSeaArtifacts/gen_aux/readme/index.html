@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../../../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
     
     
       
@@ -801,6 +801,29 @@
   
   <span class="md-ellipsis">
     Documentation Requirements
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../../DeveloperDocs/pulling_upstream_changes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cherry-Picking
     
   </span>
   
@@ -6497,6 +6520,15 @@
   <a href="#validation-type-pointer" class="md-nav__link">
     <span class="md-ellipsis">
       Validation Type: Pointer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validation-type-guid" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validation Type: Guid
     </span>
   </a>
   
@@ -14640,6 +14672,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#validation-type-guid" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validation Type: Guid
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -14750,6 +14791,9 @@ comes with the following standard options:</p>
 <span class="n">array</span><span class="p">.</span><span class="n">index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Optional[Int]&#39;</span><span class="err">|</span><span class="s1">&#39;Optional[Array[Int;2]]&#39;</span>
 <span class="n">array</span><span class="p">.</span><span class="n">sentinel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Optional[Boolean]&#39;</span>
 <span class="n">validation</span><span class="p">.</span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Required[String]&#39;</span>
+<span class="n">reviewed-by</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Optional[Array[String]]&#39;</span>
+<span class="n">last-reviewed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Optional[String]&#39;</span>
+<span class="n">remarks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Optional[String]&#39;</span>
 </code></pre></div>
 <ul>
 <li><code>scope</code>: If specified, the rule is only applied when this scope is active. Otherwise it is always applied.</li>
@@ -14759,6 +14803,10 @@ comes with the following standard options:</p>
 <li><code>array.sentinel</code>: Apply content rule to only the final rule such that its content must be all zeros.</li>
 <li><code>validation.type</code>: The type of validation to perform on this symbol. Different values may also require additional configuration
 settings in the <code>[[rule]]</code>.</li>
+<li><code>reviewed-by</code>: A list of reviewers using git sign-off format of <code>First Last &lt;email&gt;</code>. This value is passed through to
+the final report.</li>
+<li><code>last-reviewed</code>: The date this rule was last reviewed, with the format YYYY-MM-DD.</li>
+<li><code>remarks</code>: Additional context to this rule / symbol and why the validation type was selected.</li>
 </ul>
 <h4 id="validation-type-none">Validation Type: None<a class="headerlink" href="#validation-type-none" title="Permanent link">&para;</a></h4>
 <p>The None validation type tells the system to perform no verification on this symbol. This rule is available for symbols
@@ -14800,6 +14848,12 @@ at a specific address. <code>validation.reference</code> and <code>validation.ad
 such as not being null.</p>
 <div class="highlight"><pre><span></span><code><span class="n">validation</span><span class="p">.</span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;pointer&quot;</span>
 <span class="n">validation</span><span class="p">.</span><span class="n">in_mseg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="c1"># Default: false</span>
+</code></pre></div>
+<h4 id="validation-type-guid">Validation Type: Guid<a class="headerlink" href="#validation-type-guid" title="Permanent link">&para;</a></h4>
+<p>The guid validation type verifies that a symbol representing a guid is the expected guid value. Behind the scenes,
+this rule simply generates a <code>Content</code> rule of the bytes, but does the conversion for you.</p>
+<div class="highlight"><pre><span></span><code><span class="n">validation</span><span class="p">.</span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;guid&quot;</span>
+<span class="n">validation</span><span class="p">.</span><span class="n">guid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mh">0x0</span><span class="p">,</span><span class="w"> </span><span class="mh">0x0</span><span class="p">,</span><span class="w"> </span><span class="mh">0x0</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="mh">0x0</span><span class="p">,</span><span class="w"> </span><span class="mh">0x0</span><span class="p">,</span><span class="w"> </span><span class="mh">0x0</span><span class="p">,</span><span class="w"> </span><span class="mh">0x0</span><span class="p">,</span><span class="w"> </span><span class="mh">0x0</span><span class="p">,</span><span class="w"> </span><span class="mh">0x0</span><span class="p">,</span><span class="w"> </span><span class="mh">0x0</span><span class="p">,</span><span class="w"> </span><span class="mh">0x0</span><span class="p">]]</span>
 </code></pre></div>
 <h3 id="config">config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
 <p>The below configuration options reside in a top level <code>[config]</code> section of the configuration file.</p>
@@ -14894,7 +14948,7 @@ extra data that will be written to the header (other than the header itself).</p
       <script id="__config" type="application/json">{"base": "../../../../../../..", "features": [], "search": "../../../../../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": "0.9.1"}</script>
     
     
-      <script src="../../../../../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      <script src="../../../../../../../assets/javascripts/bundle.56ea9cef.min.js"></script>
       
         <script src="https://unpkg.com/mermaid@8.7.0/dist/mermaid.min.js"></script>
       

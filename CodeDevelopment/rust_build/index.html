@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
     
     
       
@@ -801,6 +801,29 @@
   
   <span class="md-ellipsis">
     Documentation Requirements
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DeveloperDocs/pulling_upstream_changes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cherry-Picking
     
   </span>
   
@@ -14570,17 +14593,17 @@ arguments.</p>
    Project Mu repository that contains Rust code.</p>
 </li>
 <li>
-<p><a href="https://github.com/microsoft/mu_tiano_platforms/blob/main/rust-toolchain.toml">Example</a>: <code>1.73.0 x86_64 toolchain</code></p>
+<p><a href="https://github.com/microsoft/mu_tiano_platforms/blob/main/rust-toolchain.toml">Example</a>: <code>1.85.0 x86_64 toolchain</code></p>
 </li>
 <li>
 <p>Windows:</p>
-<p>&gt;<code>rustup toolchain install 1.73.0-x86_64-pc-windows-msvc</code></p>
-<p>&gt;<code>rustup component add rust-src --toolchain 1.73.0-x86_64-pc-windows-msvc</code></p>
+<p>&gt;<code>rustup toolchain install 1.85.0-x86_64-pc-windows-msvc</code></p>
+<p>&gt;<code>rustup component add rust-src --toolchain 1.85.0-x86_64-pc-windows-msvc</code></p>
 </li>
 <li>
 <p>Linux:</p>
-<p>&gt;<code>rustup toolchain install 1.73.0-x86_64-unknown-linux-gnu</code></p>
-<p>&gt;<code>rustup component add rust-src --toolchain 1.73.0-x86_64-unknown-linux-gnu</code></p>
+<p>&gt;<code>rustup toolchain install 1.85.0-x86_64-unknown-linux-gnu</code></p>
+<p>&gt;<code>rustup component add rust-src --toolchain 1.85.0-x86_64-unknown-linux-gnu</code></p>
 </li>
 <li>
 <p><a href="https://github.com/cargo-bins/cargo-binstall?tab=readme-ov-file#installation">Install <code>cargo binstall</code></a></p>
@@ -14590,12 +14613,12 @@ arguments.</p>
    Mu repository that contains rust code.</p>
 </li>
 </ol>
-<p>&gt;<code>cargo binstall --force cargo-make --version 0.37.9</code></p>
+<p>&gt;<code>cargo binstall --force cargo-make --version 0.37.24</code></p>
 <ol>
 <li>Install <code>cargo tarpaulin</code>. The required version is found in the <code>rust-toolchain.toml</code> file at the root of any Project
    Mu repository that contains rust code.</li>
 </ol>
-<p>&gt;<code>cargo binstall --force cargo-tarpaulin --version 0.31.2</code></p>
+<p>&gt;<code>cargo binstall --force cargo-tarpaulin --version 0.31.5</code></p>
 <p>At this point, the essential Rust applications are installed, and a repo can begin to add and build Rust code.</p>
 <h2 id="important-build-and-config-files">Important Build and Config Files<a class="headerlink" href="#important-build-and-config-files" title="Permanent link">&para;</a></h2>
 <p>Currently, two files are provided in Project Mu repos that play an important role in the building and formatting of
@@ -14784,7 +14807,7 @@ be produced.</p>
       <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": "0.9.1"}</script>
     
     
-      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
       
         <script src="https://unpkg.com/mermaid@8.7.0/dist/mermaid.min.js"></script>
       

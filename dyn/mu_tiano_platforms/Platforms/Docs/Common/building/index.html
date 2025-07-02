@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
     
     
       
@@ -801,6 +801,29 @@
   
   <span class="md-ellipsis">
     Documentation Requirements
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../DeveloperDocs/pulling_upstream_changes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cherry-Picking
     
   </span>
   
@@ -14577,6 +14600,11 @@ On most Linux distros this requires an extra step for mono and nuget support.
 <li><code>TOOL_CHAIN_TAG</code> being the toolchain you want to build with, currently <code>VS2019</code>, <code>VS2022</code>, and <code>GCC5</code> are
   supported values. Q35 can be built with <code>GCC5</code>, <code>VS2019</code>, and <code>VS2022</code> toolchains. SBSA can be built with
   <code>GCC5</code>.</li>
+<li>NOTE: Building with GCC5 targeting AARCH64 requires the setup to export <code>GCC5_AARCH64_PREFIX</code>.
+  <code>GCC5_AARCH64_PREFIX</code> should contain the path and the prefix to the gcc/objcopy tools, and needs to
+  match the tool chain that is being used by the platform. The below example is for the gcc-aarch64-linux-gnu
+  tool chain, but other tool chains can be used.
+  As an example, <code>export GCC5_AARCH64_PREFIX=/usr/bin/aarch64-linux-gnu-</code></li>
 </ul>
 </li>
 <li>
@@ -14725,7 +14753,7 @@ command-line would be:</p>
       <script id="__config" type="application/json">{"base": "../../../../../..", "features": [], "search": "../../../../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": "0.9.1"}</script>
     
     
-      <script src="../../../../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      <script src="../../../../../../assets/javascripts/bundle.56ea9cef.min.js"></script>
       
         <script src="https://unpkg.com/mermaid@8.7.0/dist/mermaid.min.js"></script>
       
