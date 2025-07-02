@@ -72,6 +72,7 @@ nav:
     - Sample Syntax: "DeveloperDocs/doc_sample_test.md"
     - Doc Framework Attribution: "DeveloperDocs/attribution.md"
     - Documentation Requirements: "DeveloperDocs/requirements.md"
+    - Cherry-Picking: "DeveloperDocs/pulling_upstream_changes.md"
   - Developing Code:
     - Overview: "CodeDevelopment/overview.md"
     - Tools and Prerequisite: "CodeDevelopment/prerequisites.md"

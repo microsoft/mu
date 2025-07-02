@@ -25,31 +25,31 @@ It is recommended to:
 4. Install the desired Rust tool chain. The version is found in the `rust-toolchain.toml` file at the root of any
    Project Mu repository that contains Rust code.
 
-   - [Example](https://github.com/microsoft/mu_tiano_platforms/blob/main/rust-toolchain.toml): `1.73.0 x86_64 toolchain`
+   - [Example](https://github.com/microsoft/mu_tiano_platforms/blob/main/rust-toolchain.toml): `1.85.0 x86_64 toolchain`
 
    - Windows:
 
-      \>`rustup toolchain install 1.73.0-x86_64-pc-windows-msvc`
+      \>`rustup toolchain install 1.85.0-x86_64-pc-windows-msvc`
 
-      \>`rustup component add rust-src --toolchain 1.73.0-x86_64-pc-windows-msvc`
+      \>`rustup component add rust-src --toolchain 1.85.0-x86_64-pc-windows-msvc`
 
    - Linux:
 
-      \>`rustup toolchain install 1.73.0-x86_64-unknown-linux-gnu`
+      \>`rustup toolchain install 1.85.0-x86_64-unknown-linux-gnu`
 
-      \>`rustup component add rust-src --toolchain 1.73.0-x86_64-unknown-linux-gnu`
+      \>`rustup component add rust-src --toolchain 1.85.0-x86_64-unknown-linux-gnu`
 
 5. [Install `cargo binstall`](https://github.com/cargo-bins/cargo-binstall?tab=readme-ov-file#installation)
 
 6. Install `cargo make`. The required version is found in the `rust-toolchain.toml` file at the root of any Project
    Mu repository that contains rust code.
 
-   \>`cargo binstall --force cargo-make --version 0.37.9`
+   \>`cargo binstall --force cargo-make --version 0.37.24`
 
 7. Install `cargo tarpaulin`. The required version is found in the `rust-toolchain.toml` file at the root of any Project
    Mu repository that contains rust code.
 
-   \>`cargo binstall --force cargo-tarpaulin --version 0.31.2`
+   \>`cargo binstall --force cargo-tarpaulin --version 0.31.5`
 
 At this point, the essential Rust applications are installed, and a repo can begin to add and build Rust code.
 
