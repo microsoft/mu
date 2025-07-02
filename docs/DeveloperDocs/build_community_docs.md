@@ -1,9 +1,8 @@
 # Building Community Docs
 
 !!! info
-    Today this process has been validated for use on Windows 10. This setup process is expected to roughly the same on
-    other operating systems
-    and none of the actual documentation source or tools should have any OS dependency.
+    Today this process has been validated for use on Windows 11. This setup process is expected to roughly the same on
+    other operating systems and none of the actual documentation source or tools should have any OS dependency.
 
 ## Get the docs repository
 
@@ -15,8 +14,7 @@ git clone https://github.com/Microsoft/mu.git
 
 ## Install required tools
 
-1. Install python (Current suggested version is 3.7.x).  Current min requirement is python 3.4+.  Checkout python.org for
-   directions.
+1. Install python. Recommended version can be viewed on [mu_devops](https://github.com/microsoft/mu_devops/blob/main/.sync/Version.njk).
 2. Install pip.  Generally, this is done when installing python but can also be done as its own process.
    Details here <https://pip.pypa.io/en/stable/installing/#do-i-need-to-install-pip>
 3. Update pip.

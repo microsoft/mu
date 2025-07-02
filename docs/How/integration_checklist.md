@@ -64,7 +64,7 @@ For each repo, _refer to the Readme for any special maintenance instructions_.
 
 ### c) Clean the Rebase
 
-This is an optional -- though desireable -- step where we have the opportunity to squash small bugfixes, drop
+This is an optional -- though desirable -- step where we have the opportunity to squash small bugfixes, drop
 temporary/testing commits, update features with new testing requirements, and any other behavior that helps keep
 the history clean and readable.
 

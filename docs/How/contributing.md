@@ -26,7 +26,7 @@ sample driver that exposes the issue with steps to reproduce the problem is idea
 ### Reporting security issues and bugs
 
 Security issues and bugs should be reported privately, via email, to the Microsoft Security Response Center (MSRC)
-secure@microsoft.com. You should receive a response within 24 hours. If for some reason you do not, please follow up
+<secure@microsoft.com>. You should receive a response within 24 hours. If for some reason you do not, please follow up
 via email to ensure we received your original message. Further information, including the MSRC PGP key, can be found
 in the [Security TechCenter](https://technet.microsoft.com/en-us/security/ff852094.aspx).
 
@@ -59,6 +59,7 @@ That is it.  Thanks for contributing.
 1. [Code Development](../CodeDevelopment/overview.md)
 2. [Tests Development](../CodeDevelopment/test.md)
 3. [Documentation Development](../DeveloperDocs/developer_docs.md)
+4. [Cherry-Picking Changes](../DeveloperDocs/pulling_upstream_changes.md)
 
 ### Contributor License Agreement (CLA)
 
