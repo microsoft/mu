@@ -25,17 +25,21 @@ jobs:
   repo_cleanup:
     runs-on: ubuntu-latest
 
-    permissions:
-      pull-requests: write
-      issues: write
-
     steps:
+      - name: Generate Token
+        id: app-token
+        uses: actions/create-github-app-token@v2
+        with:
+          app-id: ${{ vars.MU_ACCESS_APP_ID }}
+          private-key: ${{ secrets.MU_ACCESS_APP_PRIVATE_KEY }}
+          owner: ${{ github.repository_owner }}
+
       - name: Get Repository Info
         run: echo "REPOSITORY_NAME=${GITHUB_REPOSITORY#*/}" >> $GITHUB_ENV
 
       - name: Prune Won't Fix Pull Requests
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
           REPOSITORY: ${{ env.REPOSITORY_NAME }}
         run: |
           gh api \
@@ -50,7 +54,7 @@ jobs:
 
       - name: Prune Won't Fix Issues
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
           REPOSITORY: ${{ env.REPOSITORY_NAME }}
         run: |
           gh api \

@@ -13,7 +13,7 @@
 name: Validate Pull Request Formatting
 
 on:
-  pull_request:
+  pull_request_target:
     types:
       - edited
       - opened
@@ -24,11 +24,15 @@ jobs:
   validate_pr:
     runs-on: ubuntu-latest
 
-    permissions:
-      contents: read
-      pull-requests: write
-
     steps:
+      - name: Generate Token
+        id: app-token
+        uses: actions/create-github-app-token@v2
+        with:
+          app-id: ${{ vars.MU_ACCESS_APP_ID }}
+          private-key: ${{ secrets.MU_ACCESS_APP_PRIVATE_KEY }}
+          owner: ${{ github.repository_owner }}
+
       - run: |
           prTitle="$(gh api graphql -F owner=$OWNER -F name=$REPO -F pr_number=$PR_NUMBER -f query='
             query($name: String!, $owner: String!, $pr_number: Int!) {
@@ -45,7 +49,7 @@ jobs:
           fi
 
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
           OWNER: ${{ github.repository_owner }}
           PR_NUMBER: ${{ github.event.number }}
           PR_URL: ${{ github.event.pull_request.html_url }}

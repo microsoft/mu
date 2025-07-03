@@ -21,7 +21,7 @@ on:
     types:
       - edited
       - opened
-  pull_request:
+  pull_request_target:
     types:
       - edited
       - opened
@@ -31,9 +31,5 @@ on:
 
 jobs:
   apply:
-
-    permissions:
-      contents: read
-      pull-requests: write
-
-    uses: microsoft/mu_devops/.github/workflows/Labeler.yml@v15.0.2
+    uses: microsoft/mu_devops/.github/workflows/Labeler.yml@v15.0.3
+    secrets: inherit
