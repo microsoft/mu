@@ -25,8 +25,5 @@ on:
 jobs:
   check:
 
-    permissions:
-      issues: write
-      pull-requests: write
-
-    uses: microsoft/mu_devops/.github/workflows/Stale.yml@v15.0.2
+    uses: microsoft/mu_devops/.github/workflows/Stale.yml@v15.0.3
+    secrets: inherit
