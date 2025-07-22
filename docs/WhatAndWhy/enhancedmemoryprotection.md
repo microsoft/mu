@@ -52,7 +52,7 @@ least one of EFI_MEMORY_XP, EFI_MEMORY_RO, or EFI_MEMORY_RP set.
 5: PE Loaders must check the NX_COMPAT flag of loaded images to determine
 compatibility with the above memory protection requirements.
 6: MMIO ranges must be marked EFI_MEMORY_XP.
-7: Unallocated memory must be marked EFI_MEMORY_RP.
+7: All DMA accesses must go through an IOMMU/SMMU.
 8: Address space which is not present in the Global Coherency Domain must cause a
 CPU fault if accessed.
 9: Calls to EFI_BOOT_SERVICES.AllocatePages and EFI_BOOT_SERVICES.AllocatePool
@@ -60,7 +60,7 @@ must return memory with the EFI_MEMORY_XP attribute.
 10: AP and BSP stacks must be marked EFI_MEMORY_XP.  
 11: AP and BSP stacks must have an EFI_MEMORY_RP page at the bottom to catch overflow.
 12: Page 0 in physical system memory must be marked EFI_MEMORY_RP.
-13: The UEFI 2.10 Memory Attribute Protocol must be produced.  
+13: The UEFI 2.10 Memory Attribute Protocol must be produced.
 
 ## Expanded Requirements List
 
@@ -93,20 +93,29 @@ Image code sections must be read and executed, but must not be writeable. This i
 R/W/X Regions requirement and prevents the same problem of bad actors editing a running drivers memory to cause it
 to execute malicious code.
 
+### PE Loaders Must Check the NX_COMPAT Flag for Compatibility
+
+Many bootloaders and OPROMs will not have implemented support for enhanced protections on
+image memory, allocated buffers, and other memory ranges. To indicate support for enhanced
+protections, the PE/COFF IMAGE_DLLCHARACTERISTICS_NX_COMPAT DLL characteristic will be used.
+Modules with this characteristic are expected to be compliant with enhanced memory protection
+and should utilize the Memory Attribute Protocol to manipulate the attributes of memory they
+allocate. If a module is loaded without this characteristic, the platform should enter
+[compatibility mode](#compatibility-mode) if the platform chooses to support compatibility
+mode.
+
 ### MMIO Ranges Must Be EFI_MEMORY_XP
 
 All devices connected to a system should be considered untrusted and must not be allowed to execute code. This is also
 a common attack vector for a bad actor to connect a compromised device and force the host system to execute malicious
 code from it.
 
-### Unallocated Memory Must Be EFI_MEMORY_RP
+### All DMA Accesses Must Go Through An IOMMU/SMMU
 
-This is a safety as well as security requirement. By marking unallocated memory EFI_MEMORY_RP, any access outside of
-legitimately allocated memory will cause a CPU fault, catching a large set of buffer under/overflows and use-after-free
-cases, which are both functional concerns as well as attack vectors.
-
-This adds a new potential crash to code that may have "just worked" before, but it allows a platform to discover the
-safety and security issues pre-production and enforces defined behavior where before there was undefined behavior.
+As noted above, all devices must be considered untrusted and should not have full access to a platform's memory. This
+has been the source of countless attacks. A hardware protection mechanism through the IOMMU/SMMU is required to limit
+what memory a device may access. The IOMMU/SMMU must be programmed with proper distinction between which memory a
+device is allowed to read only vs also have write access to.
 
 ### Memory Not in the GCD Must Cause a CPU Fault on Access
 
@@ -139,22 +148,17 @@ common attack vectors and common programming errors that require being caught du
 This also adds a new potential crash during execution in code that may have "just worked" before, but similarly allows
 these problems to be solved pre-production and enforces defined behavior instead of undefined.
 
+### Page 0 Must Be EFI_MEMORY_RP For Null Pointer Detection
+
+Null pointer dereferencing is a common class of bug in C programs. In order to catch these bugs, which can lead to
+safety and security issues, UEFI must mark page 0 as EFI_MEMORY_RP in order to cause faults when a NULL pointer is
+dereferenced.
+
 ### EFI Memory Attributes Protocol Must Be Installed
 
 The Memory Attributes Protocol, added in UEFI spec 2.10, provides a method for bootloaders to interact with UEFI's page
 tables before they create their own page tables. This allows them to enforce memory protections on their own images and
 allocations, closing further attack vectors.
-
-### PE Loaders Must Check the NX_COMPAT Flag for Compatibility
-
-Many bootloaders and OPROMs will not have implemented support for enhanced protections on
-image memory, allocated buffers, and other memory ranges. To indicate support for enhanced
-protections, the PE/COFF IMAGE_DLLCHARACTERISTICS_NX_COMPAT DLL characteristic will be used.
-Modules with this characteristic are expected to be compliant with enhanced memory protection
-and should utilize the Memory Attribute Protocol to manipulate the attributes of memory they
-allocate. If a module is loaded without this characteristic, the platform should enter
-[compatibility mode](#compatibility-mode) if the platform chooses to support compatibility
-mode.
 
 ![Example of Loaded Image Ranges](../img/loaded_images.png)
 
