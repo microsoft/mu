@@ -25,5 +25,5 @@ on:
 jobs:
   sync:
 
-    uses: microsoft/mu_devops/.github/workflows/LabelSyncer.yml@v15.0.3
+    uses: microsoft/mu_devops/.github/workflows/LabelSyncer.yml@v16.0.0
     secrets: inherit
