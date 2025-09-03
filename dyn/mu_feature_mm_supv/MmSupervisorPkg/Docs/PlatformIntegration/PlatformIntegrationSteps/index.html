@@ -14966,6 +14966,7 @@ flash drivers, SW MMI dispatcher drivers, etc.</p>
 <span class="w">  </span><span class="c1"># Note: This API will be removed from core soon, leave the empty shell here</span>
 <span class="w">  </span>SmmCpuPlatformHookLib<span class="p">|</span>UefiCpuPkg/Library/SmmCpuPlatformHookLibNull/SmmCpuPlatformHookLibNull.inf
 <span class="w">  </span>IhvMmSaveStateSupervisionLib<span class="p">|</span>MmSupervisorPkg/Library/IhvMmSaveStateSupervisionLib/IhvMmSaveStateSupervisionLib.inf
+<span class="w">  </span>MmSupervisorCoreInitLib<span class="p">|</span>MmSupervisorPkg/Library/BaseMmSupervisorCoreInitLibNull/BaseMmSupervisorCoreInitLibNull.inf
 
 <span class="o">[</span>LibraryClasses.X64.MM_STANDALONE<span class="o">]</span>
 <span class="w">  </span>DebugLib<span class="p">|</span>MdePkg/Library/BaseDebugLibSerialPort/BaseDebugLibSerialPort.inf
@@ -15011,7 +15012,9 @@ flash drivers, SW MMI dispatcher drivers, etc.</p>
 <span class="w">    </span>&lt;LibraryClasses&gt;
 <span class="w">      </span>NULL<span class="p">|</span>StandaloneMmPkg/Library/VariableMmDependency/VariableMmDependency.inf
 <span class="w">      </span><span class="c1"># Note: This library can be linked against any DXE_DRIVER or DXE_RUNTIME_DRIVER in the platform. It is an</span>
-<span class="w">      </span><span class="c1">#       optional library that publishes a UEFI variable with MM Supervisor information.</span>
+<span class="w">      </span><span class="c1">#       optional library that publishes a UEFI variable with MM Supervisor information. It requires that</span>
+<span class="w">      </span><span class="c1">#       an instance of gEdkiiVariablePolicyProtocolGuid (and gMmSupervisorCommunicationProtocolGuid) be</span>
+<span class="w">      </span><span class="c1">#       produced in order to publish the variable.</span>
 <span class="w">      </span>NULL<span class="p">|</span>MmSupervisorPkg/Library/DxeMmSupervisorVersionPublicationLib/DxeMmSupervisorVersionPublicationLib.inf
 <span class="w">  </span><span class="o">}</span>
 !endif
