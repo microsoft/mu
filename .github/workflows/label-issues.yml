@@ -31,5 +31,5 @@ on:
 
 jobs:
   apply:
-    uses: microsoft/mu_devops/.github/workflows/Labeler.yml@v16.0.0
+    uses: microsoft/mu_devops/.github/workflows/Labeler.yml@v17.0.0
     secrets: inherit
