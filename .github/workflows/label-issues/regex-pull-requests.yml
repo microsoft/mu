@@ -17,22 +17,6 @@ version: 1
 issues: False
 
 labels:
-  - label: type:backport
-    type: "pull_request"
-    body: '\s*\[\s*(x|X){1}\s*\]\s*Backport to release branch\?'
-
-  - label: type:backport
-    type: "pull_request"
-    authors: ["mu-automation[bot]"]
-    branch : "repo-sync/mu_devops/default"  
-    base-branch: "dev/20[0-9]{4}"
-
-  - label: type:backport
-    type: "pull_request"
-    authors: ["dependabot[bot]"]
-    branch : "dependabot/*"
-    base-branch: "dev/20[0-9]{4}"
-
   - label: impact:breaking-change
     type: "pull_request"
     body: '\s*\[\s*(x|X){1}\s*\]\s*Breaking\s*change\?'
