@@ -50,8 +50,8 @@ updates:
       time: "06:00"
     ignore:
       # Ignore dependencies that are synced from mu_devops
-      - dependency-name: "microsoft/mu_devops"
-      - dependency-name: "github/codeql-action"
+      - dependency-name: "microsoft/mu_devops*"
+      - dependency-name: "github/codeql-action*"
     commit-message:
       prefix: "GitHub Action"
     labels:
