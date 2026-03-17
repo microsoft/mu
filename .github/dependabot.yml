@@ -52,6 +52,10 @@ updates:
       # Ignore dependencies that are synced from mu_devops
       - dependency-name: "microsoft/mu_devops*"
       - dependency-name: "github/codeql-action*"
+    groups:
+      all-actions-dependencies:
+        patterns:
+          - "*"
     commit-message:
       prefix: "GitHub Action"
     labels:
@@ -66,6 +70,10 @@ updates:
       day: "wednesday"
       timezone: "America/Los_Angeles"
       time: "01:00"
+    groups:
+      all-pip-dependencies:
+        patterns:
+          - "*"
     commit-message:
       prefix: "pip"
     labels:
