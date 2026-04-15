@@ -27,7 +27,7 @@ jobs:
     steps:
       - name: Generate Token
         id: app-token
-        uses: actions/create-github-app-token@v2
+        uses: actions/create-github-app-token@v3
         with:
           app-id: ${{ vars.MU_ACCESS_APP_ID }}
           private-key: ${{ secrets.MU_ACCESS_APP_PRIVATE_KEY }}
@@ -41,10 +41,21 @@ jobs:
                   title
                 }
               }
-            }')"
+            }' --jq '.data.repository.pullRequest.title')"
+
+          comments="$(gh api "repos/${OWNER}/${REPO}/issues/${PR_NUMBER}/comments" --paginate --jq '.[].body')"
 
           if [[ "${prTitle}" == *"Personal/"* ]]; then
-            gh pr comment $PR_URL --body "⚠️ Please add a meaningful PR title (remove the 'Personal/' prefix from the title)."
+            if ! echo "${comments}" | grep -qF '<!-- pr-val-personal -->'; then
+              gh pr comment $PR_URL --body "<!-- pr-val-personal -->⚠️ Please add a meaningful PR title (remove the 'Personal/' prefix from the title)."
+            fi
+            echo 'VALIDATION_ERROR=true' >> $GITHUB_ENV
+          fi
+
+          if [[ "${prTitle}" == "Repo File Sync: synced file(s) with microsoft/mu_devops" ]]; then
+            if ! echo "${comments}" | grep -qF '<!-- pr-val-sync-title -->'; then
+              gh pr comment $PR_URL --body "<!-- pr-val-sync-title -->⚠️ Please add a meaningful PR title (update the default file sync title)."
+            fi
             echo 'VALIDATION_ERROR=true' >> $GITHUB_ENV
           fi
 
@@ -57,7 +68,7 @@ jobs:
 
       - name: Check for Validation Errors
         if: env.VALIDATION_ERROR
-        uses: actions/github-script@v8
+        uses: actions/github-script@v9
         with:
           script: |
             core.setFailed('PR Formatting Validation Check Failed!')
