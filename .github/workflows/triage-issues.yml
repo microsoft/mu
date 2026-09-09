@@ -20,5 +20,5 @@ on:
 jobs:
   triage:
 
-    uses: microsoft/mu_devops/.github/workflows/IssueTriager.yml@v18.0.7
+    uses: microsoft/mu_devops/.github/workflows/IssueTriager.yml@131433bb4f29d68250154cc66096f04c19fe3ee9 # v18.0.7
     secrets: inherit

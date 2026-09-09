@@ -29,5 +29,5 @@ jobs:
 
     if: |
       github.event.pull_request.user.login == 'dependabot[bot]' || github.event.pull_request.user.login == 'uefibot'
-    uses: microsoft/mu_devops/.github/workflows/AutoApprover.yml@v13.0.0
+    uses: microsoft/mu_devops/.github/workflows/AutoApprover.yml@200d5f66e5d4507d01a16c348e725a6dee043f3a # v13.0.0
     secrets: inherit
