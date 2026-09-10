@@ -5,10 +5,9 @@ This document will describe the base guidelines for setting up a Project MU repo
 1. You will need to install the [prerequisites tools](../CodeDevelopment/prerequisites.md)
 2. Determine how to layout your project and the content
      * Look at [layout](../WhatAndWhy/layout.md) to understand our recommended repository layout.
-     * You can also look at [ms-iot iMX8](https://github.com/ms-iot/MU_PLATFORM_NXP) for a real platform
-       implementation.
      * Check out our docs in our Project Mu Teams channel as we have presentations on OVMF and Intel
-       OpenKBL platforms.
+       OpenKBL platforms. You can also look at [QEMU Project MU Tiano Platforms](https://github.com/microsoft/mu_tiano_platforms) that builds to the open source
+       QEMU processor emulator. 
 
 ## Nomenclature
 
@@ -128,6 +127,6 @@ New_Platform_Repo/
 
 You will need to create PlatformBuild.py, Platform.dsc, and Platform.fdf. These files will go inside the platform
 folder, which will be `New_Platform_Repo/PlatformGroup/PlatformName`. The
-[ms-iot iMX8](https://github.com/ms-iot/MU_PLATFORM_NXP) repo can help you get started as a layout reference and
+[QEMU Project MU Tiano Platforms](https://github.com/microsoft/mu_tiano_platforms) repo can help you get started as a layout reference and
 can demonstrate the PlatformBuild file. More information about PlatformBuild can be found
 [here](../CodeDevelopment/compile/).
