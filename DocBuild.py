@@ -433,21 +433,22 @@ class DocBuild(object):
         return 0
 
     def MakeYml(self):
-        ymlbase = open(self.YmlFilePathBase, "r")
-        yamlout = open(self.YmlFilePathOut, 'w')
-        for line in ymlbase:
-            yamlout.write(line)
+        with open(self.YmlFilePathBase, "r") as ymlbase:
+            with open(self.YmlFilePathOut, 'w') as yamlout:
+                for line in ymlbase:
+                    yamlout.write(line)
 
-        # now parse as yaml
-        ymlbase.seek(0)
-        # yaml.load(f)
-        # IMPORTANT NOTE: This call to "unsafe_load()" is only acceptable because we control the yml file being loaded.
-        #                   Unsafe load is required to support some configuration options for pymdownx.
-        if "extra" in yaml.unsafe_load(ymlbase):
-            raise Exception(
-                "extra: member not allowed in mkdocs_base.yml.  Please add the contents to DocBuild constructor instead.  ")
-        ymlbase.close()
-        self.Yml = yamlout
+                # now parse as yaml
+                ymlbase.seek(0)
+                # yaml.load(f)
+                # IMPORTANT NOTE: This call to "unsafe_load()" is only acceptable because we control the yml file being loaded.
+                #                   Unsafe load is required to support some configuration options for pymdownx.
+                if "extra" in yaml.unsafe_load(ymlbase):
+                    raise Exception(
+                        "extra: member not allowed in mkdocs_base.yml.  Please add the contents to DocBuild constructor instead.  ")
+
+        # Re-open output YAML file for further use elsewhere; this handle will be closed in CloseYml.
+        self.Yml = open(self.YmlFilePathOut, 'a')
 
     def CloseYml(self):
         if self.Yml is not None:
