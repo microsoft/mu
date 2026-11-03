@@ -1,0 +1,51 @@
+# This workflow applies labels to pull requests after the "Apply Issue and PR Labels" workflow records the
+# pull request number, and to issues when they are opened or edited. It runs from the default branch with
+# access to secrets, which the pull_request workflow does not have.
+#
+# NOTE: This file is automatically synchronized from Mu DevOps. Update the original file there
+#       instead of the file in this repo.
+#
+# NOTE: This file uses a reusable workflow. Do not make changes to the file that should be made
+#       in the common/reusable workflow.
+#
+# - Mu DevOps Repo: https://github.com/microsoft/mu_devops
+# - File Sync Settings: https://github.com/microsoft/mu_devops/blob/main/.sync/Files.yml
+#
+# Copyright (c) Microsoft Corporation.
+# SPDX-License-Identifier: BSD-2-Clause-Patent
+#
+
+name: Apply Issue and PR Labels Post
+
+on:
+  issues:
+    types:
+      - edited
+      - opened
+  workflow_run:
+    workflows: ["Apply Issue and PR Labels"]
+    types: ["completed"]
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: label-issues-post-${{ github.event_name == 'issues' && format('issue-{0}', github.event.issue.number) || github.event.workflow_run.head_sha }}
+  cancel-in-progress: true
+
+
+jobs:
+  apply:
+    if: |
+      github.event_name == 'issues' ||
+      (github.event.workflow_run.conclusion == 'success' &&
+      github.event.workflow_run.event == 'pull_request')
+    uses: microsoft/mu_devops/.github/workflows/Labeler.yml@9720bedf20a0e78a93b79f9d43a7bbfc2be38a62 # v18.0.10
+    with:
+      app-id: ${{ vars.MU_ACCESS_APP_ID }}
+      head-sha: ${{ github.event.workflow_run.head_sha }}
+      triggering-run-id: ${{ github.event.workflow_run.id || 0 }}
+    secrets:
+      private-key: ${{ secrets.MU_ACCESS_APP_PRIVATE_KEY }}
+
