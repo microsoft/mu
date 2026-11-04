@@ -1,0 +1,42 @@
+# This workflow posts pull request formatting comments after the "Validate Pull Request Formatting"
+# workflow completes. It runs from the default branch with access to secrets, which the pull_request
+# workflow does not have.
+#
+# NOTE: This file is automatically synchronized from Mu DevOps. Update the original file there
+#       instead of the file in this repo.
+#
+# NOTE: This file uses a reusable workflow. Do not make changes to the file that should be made
+#       in the common/reusable workflow.
+#
+# - Mu DevOps Repo: https://github.com/microsoft/mu_devops
+# - File Sync Settings: https://github.com/microsoft/mu_devops/blob/main/.sync/Files.yml
+#
+# Copyright (c) Microsoft Corporation.
+# SPDX-License-Identifier: BSD-2-Clause-Patent
+#
+
+name: Validate Pull Request Formatting Post
+
+on:
+  workflow_run:
+    workflows: ["Validate Pull Request Formatting"]
+    types: ["completed"]
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  post_comments:
+    # The metadata artifact is only uploaded when the title check fails.
+    if: |
+      github.event.workflow_run.event == 'pull_request' &&
+      github.event.workflow_run.conclusion == 'failure'
+    uses: microsoft/mu_devops/.github/workflows/PullRequestFormattingValidatorPost.yml@9720bedf20a0e78a93b79f9d43a7bbfc2be38a62 # v18.0.10
+    with:
+      app-id: ${{ vars.MU_ACCESS_APP_ID }}
+      head-sha: ${{ github.event.workflow_run.head_sha }}
+      triggering-run-id: ${{ github.event.workflow_run.id }}
+    secrets:
+      private-key: ${{ secrets.MU_ACCESS_APP_PRIVATE_KEY }}
+

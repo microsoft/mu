@@ -1,5 +1,8 @@
 # This workflow validates basic pull request formatting requirements are met.
 #
+# The title check runs without secrets. When it fails, the pull request number is uploaded so the
+# "Validate Pull Request Formatting Post" workflow can post a comment.
+#
 # NOTE: This file is automatically synchronized from Mu DevOps. Update the original file there
 #       instead of the file in this repo.
 #
@@ -13,62 +16,61 @@
 name: Validate Pull Request Formatting
 
 on:
-  pull_request_target:
+  pull_request:
     types:
       - edited
       - opened
       - reopened
       - synchronize
 
+permissions:
+  contents: read
+
 jobs:
   validate_pr:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Generate Token
-        id: app-token
-        uses: actions/create-github-app-token@64ab729a6294000f5aa4a4bc0b73d1f32bc45510 # v3
-        with:
-          app-id: ${{ vars.MU_ACCESS_APP_ID }}
-          private-key: ${{ secrets.MU_ACCESS_APP_PRIVATE_KEY }}
-          owner: ${{ github.repository_owner }}
-
-      - run: |
-          prTitle="$(gh api graphql -F owner=$OWNER -F name=$REPO -F pr_number=$PR_NUMBER -f query='
-            query($name: String!, $owner: String!, $pr_number: Int!) {
-              repository(owner: $owner, name: $name) {
-                pullRequest(number: $pr_number) {
-                  title
-                }
-              }
-            }' --jq '.data.repository.pullRequest.title')"
-
-          comments="$(gh api "repos/${OWNER}/${REPO}/issues/${PR_NUMBER}/comments" --paginate --jq '.[].body')"
-
-          if [[ "${prTitle}" == *"Personal/"* ]]; then
-            if ! echo "${comments}" | grep -qF '<!-- pr-val-personal -->'; then
-              gh pr comment $PR_URL --body "<!-- pr-val-personal -->⚠️ Please add a meaningful PR title (remove the 'Personal/' prefix from the title)."
-            fi
-            echo 'VALIDATION_ERROR=true' >> $GITHUB_ENV
-          fi
-
-          if [[ "${prTitle}" == "Repo File Sync: synced file(s) with microsoft/mu_devops" ]]; then
-            if ! echo "${comments}" | grep -qF '<!-- pr-val-sync-title -->'; then
-              gh pr comment $PR_URL --body "<!-- pr-val-sync-title -->⚠️ Please add a meaningful PR title (update the default file sync title)."
-            fi
-            echo 'VALIDATION_ERROR=true' >> $GITHUB_ENV
-          fi
-
+      - name: Validate Pull Request Title
+        id: validate
         env:
-          GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
-          OWNER: ${{ github.repository_owner }}
-          PR_NUMBER: ${{ github.event.number }}
-          PR_URL: ${{ github.event.pull_request.html_url }}
-          REPO: ${{ github.event.repository.name }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          PR_TITLE: ${{ github.event.pull_request.title }}
+        run: |
+          personal_prefix=false
+          default_sync_title=false
+
+          if [[ "${PR_TITLE,,}" == *"personal/"* ]]; then
+            echo "::error::Please add a meaningful PR title (remove the 'Personal/' prefix from the title)."
+            personal_prefix=true
+          fi
+
+          if [[ "${PR_TITLE}" == "Repo File Sync: synced file(s) with microsoft/mu_devops" ]]; then
+            echo "::error::Please add a meaningful PR title (update the default file sync title)."
+            default_sync_title=true
+          fi
+
+          violation=false
+          if [[ "${personal_prefix}" == "true" || "${default_sync_title}" == "true" ]]; then
+            violation=true
+            mkdir metadata
+            printf '{"pr_number": %s, "personal_prefix": %s, "default_sync_title": %s}\n' \
+              "${PR_NUMBER}" "${personal_prefix}" "${default_sync_title}" > metadata/pr-metadata.json
+          fi
+
+          echo "violation=${violation}" >> "$GITHUB_OUTPUT"
+
+      - name: Upload PR Metadata
+        if: steps.validate.outputs.violation == 'true'
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: pr-formatting-metadata
+          path: metadata/pr-metadata.json
+          overwrite: true
+          retention-days: 5
 
       - name: Check for Validation Errors
-        if: env.VALIDATION_ERROR
-        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9
-        with:
-          script: |
-            core.setFailed('PR Formatting Validation Check Failed!')
+        if: steps.validate.outputs.violation == 'true'
+        run: |
+          echo "::error::PR Formatting Validation Check Failed!"
+          exit 1
